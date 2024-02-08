@@ -20,9 +20,17 @@ export const pathnames = {
     en: "/about",
     pt: "/sobre"
   },
-  "/services": {
-    en: "/services",
-    pt: "/serviços"
+  "/portfolio": {
+    en: "/portfolio",
+    pt: "/portfolio"
+  },
+  "/contacts": {
+    en: "/contacts",
+    pt: "/contactos"
+  },
+  "/skills": {
+    en: "/skills",
+    pt: "/proficiência"
   }
 } satisfies Pathnames<typeof locales>;
 

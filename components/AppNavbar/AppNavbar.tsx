@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslations } from "next-intl";
 import LanguageSelector from "../LanguageSelector";
+import Image from "next/image";
 
 const AppNavbar = () => {
   const [show, setShow] = useState(false);
@@ -19,7 +20,16 @@ const AppNavbar = () => {
     <Navbar expand="lg" fixed="top" className={styles.nav}>
       <Navbar.Brand as={Link} href="/">
         <div className={styles.logo}>
-          <div id="personal_picture" />
+          <div id="personal_picture" className={styles.avatarWrapper}>
+            <Image
+              src="/images/profile_avatar.jpg"
+              alt="Personal Picture"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center center"
+              className={styles.avatarImage}
+            />
+          </div>
           <h1>AR</h1>
           <p> {t("brand_label")}</p>
         </div>

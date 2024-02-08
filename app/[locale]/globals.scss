@@ -16,13 +16,18 @@
   --padding-root-y: 0 var(--padding-y);
 
   --page-max-width: 1600px;
-
-  --background: rgb(254, 254, 246);
 }
 
 body {
-  background: var(--background);
+  background: $dark;
   font-family: var(--font-sans);
+}
+
+p,
+a {
+  font-weight: 300;
+  font-size: var(--fs-m);
+  white-space: break-spaces;
 }
 
 @layer utilities {
@@ -30,31 +35,3 @@ body {
     text-wrap: balance;
   }
 }
-/* .offcanvas .offcanvas-end .show .offcanvas-toggling {
-  background-color: $light-grey !important;
-  max-width: 320px;
-
-  a {
-    color: $dark;
-    opacity: 0.8;
-    font-weight: 400;
-    font-size: var(--fs-l);
-    text-align: end;
-    justify-content: end;
-    font-family: Italiana !important;
-    transition: 0.4s ease;
-    background-image: none;
-    &:hover {
-      color: $yellow;
-      opacity: 1;
-      letter-spacing: 4px;
-    }
-  }
-
-  .btn-close {
-    transform: scale(0.7);
-  }
-}
-.offcanvasHeader {
-  justify-content: end;
-} */
