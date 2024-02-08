@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
+import AppNavbar from "@/components/AppNavbar/AppNavbar";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+import { jost } from "@/assets/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,13 +13,22 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children
+  children,
+  params: { locale }
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const messages = useMessages();
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang={locale} className={jost.variable}>
+      <body className={inter.className}>
+        <NextIntlClientProvider messages={messages}>
+          <AppNavbar />
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

@@ -1,29 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "assets/styles/mixins";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --fs-xxl: clamp(3.5rem, 10vw, 5rem);
+  --fs-xl: clamp(2.8rem, 10vw, 5rem);
+  --fs-xl-l: clamp(1.8rem, 5vw, 3.2rem);
+  --fs-l: clamp(1.8rem, 5vw, 2.5rem);
+  --fs-l-s: clamp(1.5rem, 5vw, 2rem);
+  --fs-m: clamp(1rem, 10vw, 1.1rem);
+  --fs-s: clamp(0.8rem, 10vw, 0.8rem);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --padding-y: clamp(20px, 5vw, 70px);
+  --padding-root-y: 0 var(--padding-y);
+
+  --page-max-width: 1600px;
+
+  --background: rgb(254, 254, 246);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background);
+  font-family: var(--font-sans);
 }
 
 @layer utilities {
@@ -31,3 +30,31 @@ body {
     text-wrap: balance;
   }
 }
+/* .offcanvas .offcanvas-end .show .offcanvas-toggling {
+  background-color: $light-grey !important;
+  max-width: 320px;
+
+  a {
+    color: $dark;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: var(--fs-l);
+    text-align: end;
+    justify-content: end;
+    font-family: Italiana !important;
+    transition: 0.4s ease;
+    background-image: none;
+    &:hover {
+      color: $yellow;
+      opacity: 1;
+      letter-spacing: 4px;
+    }
+  }
+
+  .btn-close {
+    transform: scale(0.7);
+  }
+}
+.offcanvasHeader {
+  justify-content: end;
+} */

@@ -1,0 +1,81 @@
+@import "assets/styles/mixins";
+
+.nav {
+  top: 0px;
+  padding: 15px var(--padding-y);
+  background-color: $dark;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+  h1,
+  p,
+  a {
+    color: $white;
+  }
+
+  button[aria-controls="offcanvas-container"] {
+    border: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  div[id="personal_picture"] {
+    background: url("../../assets/images/profile_avatar.jpg") center center
+      no-repeat;
+    background-size: cover !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  h1,
+  p {
+    margin: 0;
+  }
+  h1 {
+    font-family: Rozha;
+    font-weight: bold;
+    font-size: 32px;
+    margin-left: 15px;
+  }
+  p {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: flex;
+      height: 1px;
+      width: 50px;
+      background: white;
+      margin: 0 10px;
+    }
+  }
+}
+
+//Offcanvas
+
+.offcanvas {
+  background-color: $dark;
+  color: $white;
+
+  a {
+    font-weight: 300;
+    transition: 0.4s ease;
+    background-image: none;
+  }
+
+  a:not(:last-child) {
+    @include hover_underline($white);
+  }
+}
+
+//Responsive
+@media only screen and (max-width: $breaking-point-sm) {
+  .logo {
+    p {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../fonts/fonts";
+@import "./variables";
+@import "./mixins";
+
+* {
+  font-family: Jost, sans-serif;
+}
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+h1,
+h2 {
+  font-family: Blacker;
+}
+p,
+a {
+  font-weight: 300;
+  font-size: var(--fs-m);
+  white-space: break-spaces;
+}
+a {
+  color: $white;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+  }
+}
+
+// Vertical timeline
+.vertical-timeline-element-icon {
+  box-shadow: none;
+}

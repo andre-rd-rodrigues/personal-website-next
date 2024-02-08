@@ -1,316 +1,156 @@
 {
-  "pages": {
-    "homepage": {
-      "subtitle": "Medicina Geral e Familiar",
-      "practice": {
-        "title": "Áreas de Atuação",
-        "subtitle": "A minha prática gira em torno da confiança, da ética e do empenhamento. Especializada em direito internacional, direito de cidadania e direito societário, apresento resultados com cuidado e precisão. O seu aliado legal para uma viagem sem problemas através das complexidades da paisagem legal. Explore o poder da advocacia legal comigo."
-      },
-      "about": {
-        "title": "Ajudando a superar e aliviar o fardo jurídico.",
-        "subtitle": "Sobre mim",
-        "description": "O meu nome é Bárbara Barbizani de Carvalho, tenho uma matriz de atuação orientada para o cliente, na qual confiança, ética e compromisso permanecem como fundamentais na criação de relacionamentos comerciais duradouros.\n Só aceito casos quando detenho nível de conhecimento e experiência para prestar um serviço tempestivo e de excelência. Atuo localmente com uma mentalidade global, especializada em empresas e cidadãos portugueses, brasileiros e chineses.\n Trabalho em conjunto com empresas e indivíduos com uma mentalidade de parceria, alinhada com os seus objetivos e otimização de valor nos seus problemas e disputas jurídicas.\n Procuro que os clientes sintam um elevado grau de segurança de que fizeram a escolha certa na nossa parceiria e respeitar o seu tempo.\n Crio um processo coerente que permite não apenas entregar resultados de excelência técnica, mas também fazê-lo de forma rápida e robusta.",
-        "extraInfo": [
-          {
-            "title": "Experiência",
-            "value": 10
-          },
-          {
-            "title": "Casos",
-            "value": 100
-          },
-          {
-            "title": "Clientes",
-            "value": 128
-          }
-        ]
-      },
-      "hero1": {
-        "title": "Uma abordagem cuidadosa, comprometida e digna da advocacia.",
-        "description": "Como sua parceira jurídica, forneço soluções personalizadas que protegem os seus interesses e orientam para decisões informadas. Vamos trabalhar juntos para encontrar clareza em questões legais. Marque uma sessão hoje e dê o primeiro passo para a paz de espírito."
-      },
-      "contacts": {
-        "title": "Entre em Contato para Consultoria Especializada",
-        "subtitle": "Contatos",
-        "description": "Esteja você navegando por questões legais complexas ou apenas buscando orientação, estou aqui para ajudar. Vamos embarcar juntos nesta jornada - seus assuntos legais merecem a atenção e a experiência que ofereço. Entre em contato hoje e experimente a consultoria personalizada que coloca suas necessidades em primeiro lugar. Suas preocupações são importantes, e estou comprometido em fornecer o aconselhamento especializado que você merece. Aguardo seu contato para atender às suas necessidades legais com cuidado e precisão."
-      }
-    },
-    "about": {
-      "title": "Sobre",
-      "title2": "Ajudando-o a superar e aliviar o fardo legal.",
-      "description": "Além de consultoria jurídica e disputas em tribunal para cidadãos e empresas, criou o departamento jurídico do Grupo Abraito em Portugal. Residente em Portugal nos últimos 10 anos, mas nascida no Brasil, defendeu em ambos os países, detendo um alto entendimento das suas diferenças legais, culturais e sistémicas.\nMestre em Ciências Jurídicas e Laborais – Universidade de Direito de Lisboa.\nEspecialista avançada em Direito Comercial e do Trabalho pela Faculdade de Direito da Universidade de Lisboa. Advogada e consultora jurídica, Membro da Ordem dos Advogados Portugueses. Membro da Ordem dos Advogados do Brasil. Pesquisadora académico com vários artigos e livros publicados, destacando-se a publicação em Direito Constitucional «[Ir]Redutibilidade Salarial e Princípio da Proibição do Retrocesso», em 2017.\n\nORDEM DOS ADVOGADOS DE PORTUGAL No 52419L\n\nORDEM DOS ADVOGADOS DO BRASIL / PR No 63348",
-      "hero": {
-        "title": "Empowering You Through Expert Legal Services and Consulting",
-        "description": "I'm dedicated to providing expert advice and comprehensive consulting services tailored to your unique needs. Whether you're facing intricate legal challenges or simply seeking guidance, I am here to assist you. My commitment is to safeguard your interests and guide you towards well-informed decisions, ensuring you receive the highest level of professional expertise. Explore the range of services."
-      }
-    },
-    "practiceAreas": {
-      "title": "Áreas de Atuação",
-      "citizens": "Cidadãos",
-      "companies": "Empresas"
-    },
-    "contacts": {
-      "title": "Contactos",
-      "formTitle": "Envie uma mensagem direta.",
-      "formDescription": "Se tiver dúvidas, precisar de ajuda ou apenas quiser estabelecer contacto, enviar uma mensagem direta é uma forma simples de entrar em contacto comigo. Basta clicar no botão 'Enviar mensagem' abaixo e partilhar as suas ideias, preocupações ou questões. Valorizo a sua comunicação e estou empenhado em fornecer-lhe uma resposta rápida e útil.",
-      "title2": "Conexão para compreensão.",
-      "description": "Os assuntos jurídicos exigem uma comunicação rápida e fiável. Se tiver dúvidas, precisar de assistência jurídica ou quiser marcar uma consulta, estou aqui para o ajudar. Sinta-se à vontade para entrar em contacto através dos seguintes canais: ",
-      "links": [
-        {
-          "description": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
-          "icon": "mdi:location",
-          "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
-        },
-        {
-          "description": "+351 211 956 606",
-          "href": "tel:+351211956606",
-          "icon": "mingcute:phone-fill"
-        },
-        {
-          "description": "Bárbara Barbizani - +351 916 690 609",
-          "href": "https://wa.me/916690609",
-          "icon": "mingcute:whatsapp-fill"
-        },
-        {
-          "description": "barbara.caiado@caiadolaw.com",
-          "href": "mailto: barbara.caiado@caiadolaw.com",
-          "icon": "ic:baseline-email"
-        }
-      ]
-    }
+  "navbar": {
+    "portfolio": "Portfólio",
+    "about": "Sobre",
+    "contacts": "Contactos",
+    "blog": "Blog",
+    "brand_label": "Programação"
   },
-  "components": {
-    "navbar": {
-      "links": [
-        {
-          "name": "Sobre",
-          "href": "/sobre"
-        },
-        {
-          "name": "Serviços",
-          "href": "/serviços"
-        },
-        {
-          "name": "Contatos",
-          "href": "/contactos"
-        }
-      ]
-    },
-    "practiceAreas": [
-      {
-        "title": "Direito Internacional Privado",
-        "description": "Especialização em processos de emigração, Vistos Gold em Portugal, nacionalidade portuguesa e brasileira, regularização e trabalho em Portugal e no Brasil, pesquisa de documentos, tradução e certificação de documentos estrangeiros, reconhecimento de sentença estrangeira, regularização de património, heranças e transferência de propriedade, recursos judiciais contra decisões administrativas.",
-        "imageUrl": "https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito Imobiliário",
-        "description": "Especialização em Due Diligence Imobiliária, elaboração e conferência de contratos de compra e venda, conflitos de procurações falsas, violação do dever fiduciário, mitigação de riscos de arrendamento, representação em assembleias e fiscalização de propriedades em propriedade plural, licença de utilização, licenciamento junto às câmaras, recursos judiciais contra decisões administrativas, representação judicial em conflitos de propriedade como arrendamento, despejo, esbulho, reivindicação de propriedade, restituição de posse e usucapião.",
-        "imageUrl": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1596&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito Fiscal",
-        "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto rendimento, tributação transnacional, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, saída definitiva do Brasil, residente não-habitual, recursos judiciais contra execuções fiscais.",
-        "imageUrl": "https://images.unsplash.com/photo-1604156425963-9be03f86a428?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito Laboral",
-        "description": "Especialização em aconselhamento contratual e negociação de condições de trabalho, consultoria e negociação em caso de despedimentos, cálculos laborais de benefícios e indemnizações, comunicações em caso de desligamento e licenças com ou sem vencimento, contencioso laboral e patrocínio judicial.",
-        "imageUrl": "https://images.unsplash.com/photo-1620433042638-c9a00b98637c?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito de Família",
-        "description": "Especialização em elaboração de pacto antenupcial, acompanhamento e representação em casamentos entre cônjuges estrangeiros, casamento por procuração, transcrição de casamento ocorrido no estrangeiro, homologação e reconhecimento de união de facto, elaboração de contratos de união de facto, divórcio consensual e litigioso, conferência de divórcio, regulação de poder paternal, representação judicial em processos de alienação parental e sequestro internacional de crianças, representação judicial em processos de inventário e partilha.",
-        "imageUrl": "https://images.unsplash.com/photo-1620433042631-3df212941910?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito Civil",
-        "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
-        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito Civil em Geral",
-        "description": "Especialização em elaboração e conferência de contratos, cobrança de dívidas, representação judicial em processos de cobrança de dívidas, representação judicial em processos contra seguradoras, representação judicial em processos contra cia aérea.",
-        "imageUrl": "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Citizens"
-      },
-      {
-        "title": "Direito do Trabalho & Sindicatos",
-        "description": "Especialização em elaboração e análise de contratos de trabalho, como despedir corretamente, aconselhamento, cálculos e negociação, consultoria em subcontratação, consultoria em obrigações acessórias da empresa para com os funcionários, resolução de litígios trabalhistas, representação judicial e negociações.",
-        "imageUrl": "https://images.unsplash.com/photo-1556484687-30636164638b?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Company"
-      },
-      {
-        "title": "Direito Civil",
-        "description": "Especialização em elaboração e entendimento de contratos, validação de condições, regras e cláusulas dos negócios jurídicos comerciais em geral, empreitadas, propriedade intelectual, direitos de autor e conflitos oriundos de negócios eletrónicos e produção de software sob medida, insolvência e inadimplência, responsabilidade civil e responsabilidade societária, representação em processos judiciais.",
-        "imageUrl": "https://images.unsplash.com/photo-1530469525856-cf37954301f7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Company"
-      },
-      {
-        "title": "Direito Comercial",
-        "description": "Especialização em criação e registo de empresa, assembleias, cessões, fusões, fechamento e venda de sociedade comerciais, licenciamento de atividades, regime de joint-venture, aderência a regulação em vigor, mitigação de riscos legais, contratos de franchise.",
-        "imageUrl": "https://images.unsplash.com/photo-1542908371-3d8e22825a4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Company"
-      },
-      {
-        "title": "Propriedade Intelectual",
-        "description": "Especialização em registo e proteção de marcas e patentes, contratos de licenciamento e royalties, patentes e modelos de utilidade, comercialização e transferência de IP, disputas e avaliação de IP, representação judicial em conflitos de propriedade industrial e direito de autor.",
-        "imageUrl": "https://images.unsplash.com/photo-1593444285553-28163240e3f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Company"
-      },
-      {
-        "title": "Consultoria Fiscal",
-        "description": "Especialização em otimização tributária, planeamento financeiro, obrigações fiscais, declaração de imposto de rendimento coletivo, tributação transnacional, dividendos, aconselhamento acerca de residência fiscal e regimes de dupla-tributação, recursos judiciais contra execuções fiscais.",
-        "imageUrl": "https://images.unsplash.com/photo-1554224155-a1487473ffd9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "type": "Company"
-      }
-    ],
-    "testimonials": {
-      "title": "O Que Meus Clientes Experienciaram",
-      "subtitle": "Depoimentos",
-      "feedback": [
-        {
-          "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://images.unsplash.com/photo-1673623702948-082634e585e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D"
-        },
-        {
-          "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://plus.unsplash.com/premium_photo-1700575181270-87f37b2ebb4f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        {
-          "author": "André Rodrigues",
-          "feedback": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molestie pellentesque urna libero velit porta. Velit pellentesque hac gravida pellentesque est semper. Duis lectus gravida ultricies eleifend in pharetra faucibus orci sem. Proin ac a cursus praesent. Malesuada risus amet nunc posuere rhoncus accumsan congue id dolor. Convallis maecenas sed in pellentesque. Diam tristique semper mauris dolor amet. Dolor elit nunc et purus quam amet laoreet eu risus.",
-          "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        }
-      ]
-    },
-    "articles": {
-      "title": "Artigos Publicados",
-      "subtitle": "Notícias",
-      "articles": [
-        {
-          "imageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Desconsideração da Personalidade Jurídica na Sociedade por Quotas",
-          "description": "O recurso à desconsideração da personalidade jurídica, deve ser moderado como um penduluum mobile para que seja um recurso verdadeiramente credível, racional e justo do modelo econômico-social, atuando como mitigador dos desvios sistémicos e indutor de confiança no funcionamento econômico, mas com critérios transparentes, analiticamente determináveis e formalmente expressos, dispensando a ambiguidade que a arbitrariedade pode causar. Se assim for, ao invés de gerar o aniquilamento da personalidade jurídica, este recurso aprimora- rá o instituto coletivo, através da prossecução tão-somente de fins sociais lícitos, impedindo o desvio de finalidade das figuras societárias.",
-          "href": ""
-        },
-        {
-          "imageUrl": "https://images.unsplash.com/photo-1619418602850-35ad20aa1700?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Alteração Código Trabalho 2009",
-          "description": "Não obstante pese a pessoalidade e a importância deste elemento na situação individual laboral, pois o trabalho não existe, o que existe são pessoas que trabalham, o trabalho é, do ângulo econômico das empresas, um fator de produção, que deve ser atrativo para que possa ser procurado. Não significa isso que o trabalho possa ser levado a todo custo na lógica de otimização absoluta da competitividade e empregabilidade, mas sim que em qualquer conjuntura econômica ele deverá sempre assumir lugar cativo.",
-          "href": ""
-        },
-        {
-          "imageUrl": "https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Margens do juiz frente as restrições ao direito fundamental a retribuição",
-          "description": "Como Direito Fundamental, a garantia retributiva é um trunfo contra a maioria política e, deste modo, atua como uma armadura face as intervenções que afetem o grau de concretização a ela subjacente, pois as concretizações legislativas diminuem o grau de abstração e generalidade da norma, e aumentam a margem de controle do juiz perante uma restrição, por meio da integração do conteúdo realizado à garantia fundamental.",
-          "href": ""
-        },
-        {
-          "imageUrl": "https://images.unsplash.com/photo-1494888427482-242d32babc0b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "title": "Redutibilidade Salarial e Proibição do Retrocesso",
-          "description": "Munida de coragem e de ousadia científicas, a autora propõe uma desconstrução do princípio da proibição do retrocesso – que não há de ser um princípio absoluto, até porque o Direito não é uma ciência que trabalha com o absoluto como regra –para o enquadrar no devido lugar reduzindo-o ao sentido que lhe é próprio na escala dos valores das instituições jurídico-laborais. E assim, na medida da constatação de sua ineficácia prática, faz a ponte com a jusracionalidade para evidenciar a incongruência dogmática que subjaz ao predito princípio.",
-          "href": ""
-        }
-      ]
-    },
-    "faqs": {
-      "title": "Perguntas Frequentes",
-      "questions": [
-        {
-          "question": "Advogado de Educação e Consultoria",
-          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
-        },
-        {
-          "question": "Advogado de Educação e Consultoria",
-          "answer": "Lorem ipsum dolor sit amet consecter Commodo pulvinar molestie pellentesque urna libero"
-        }
-      ]
-    },
-    "footer": {
-      "description": "Lorem ipsum dolor sit amet consectetur. Commodo pulvinar molesti.",
-      "links": [
-        {
-          "name": "Sobre",
-          "href": "/about",
-          "subLinks": [
-            {
-              "name": "Página",
-              "href": "/about"
-            },
-            {
-              "name": "Percurso",
-              "href": "/about#journey"
-            },
-            {
-              "name": "Artigos",
-              "href": "/about#articles"
-            }
-          ]
-        },
-        {
-          "name": "Áreas de Atuação",
-          "href": "/practice-areas",
-          "subLinks": [
-            {
-              "name": "Todas",
-              "href": "/practice-areas"
-            },
-            {
-              "name": "Cidadãos",
-              "href": "/practice-areas#citizens"
-            },
-            {
-              "name": "Empresas",
-              "href": "/practice-areas#companies"
-            }
-          ]
-        },
-        {
-          "name": "Contatos",
 
-          "subLinks": [
-            {
-              "name": "Rua Alvaro Velho, 2D, 2830-327 Barreiro",
-              "icon": "mdi:location",
-              "href": "https://maps.app.goo.gl/3uHBdwxH8aqrWCp76"
-            },
-            {
-              "name": "+351 211 956 606",
-              "href": "tel:+351211956606",
-              "icon": "mingcute:phone-fill"
-            },
-            {
-              "name": "barbara.caiado@caiadolaw.com",
-              "href": "mailto: barbara.caiado@caiadolaw.com",
-              "icon": "ic:baseline-email"
-            }
-          ]
+  "homepage": {
+    "subtitle": "Produção de websites, apps e conteúdo digital",
+    "cta": "Portfólio"
+  },
+
+  "portfolio": {
+    "title": "Portfólio"
+  },
+
+  "websites_category_page": {
+    "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que gostes tanto quanto eu gostei de os fazer :)"
+  },
+
+  "apps_category_page": {
+    "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)"
+  },
+
+  "about_page": {
+    "title": "Web developer apaixonado por inovação",
+    "services_separator": "Aumenta a visibilidade do teu negócio",
+    "services": {
+      "title": "Serviços",
+      "main": {
+        "design": {
+          "title": "Design",
+          "description": "Terás um design exclusivo e cativante, adaptado à tua área de negócio."
+        },
+        "programming": {
+          "title": "Programação",
+          "description": "Programação e implementação com domínio à tua escolha."
+        },
+        "seo": {
+          "title": "Optimização de SEO",
+          "description": "Queremos que o teu novo website apareça no topo das pesquisas, portanto tens incluída a optimização de SEO."
+        },
+        "metrics": {
+          "title": "Métricas e Campanhas",
+          "description": "Terás acesso a relatórios completos sobre quem visita o teu website e a realizar campanhas online!"
         }
-      ]
+      },
+
+      "extra": {
+        "branding": {
+          "title": "Branding",
+          "description": "Gostarias também de criar ou recriar a imagem da tua marca? Sem problema! Por um valor apelativo, incluímos branding no pacote."
+        }
+      }
     },
-    "buttons": {
-      "contact": "Contacto",
-      "see more": "Saber mais",
-      "read more": "Ler mais",
-      "services": "Serviços",
-      "fill form": "Enviar Mensagem",
-      "appointment": "Marcar consulta"
+    "about_me": {
+      "title": "Sobre mim",
+      "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
+    },
+    "experience": {
+      "title": "Experiência",
+
+      "web_basics": "Criação de optimização de projetos através dos web basics (HTML, CSS, and SASS) e frameworks modernas de JavaScript como React.js, React Native, Next JS, Typescript e advanced state-management tais como Redux and React Context;",
+      "web_advanced": "Desenvolvimento e criação de API's com Node JS, conectando bases de dados em MongoDB e Docker para consumo local através de RESTfull API requests.",
+      "business": "Planeamento, desenvolvimento e implementação de estratégias de UX/UI e Front-End de forma a aumentar a eficácia, eficiência e sustentabilidade do negócio;",
+      "arquitecture": "Experiente em microserviços e event-driven architecture para desenvolver e manter features, bem como proatividade e ownership no processo de  desenvolvimento desde o design, code review e implementação;",
+      "responsive": "Standardização e adaptação de projetos para mobile-first mantendo as melhores práticas de UX/UI, com recurso a web responsive libraries tais como Bootstrap, Tailwind CSS, media queries e responsive layouts;",
+      "seo": "Experiente na optimização de SEO, com recurso a técnicas como pre-rendering, server-side rendering, utilização de keywords e indexação de páginas para maximizar o volume de trafego vindo dos motores de busca;",
+      "analytics": "Experiente na utilização de ferramentas avançadas de analytics, como Google Analytics e Insights, na configuração e optimização dos parâmetros garantindo a escabilidade e as melhores práticas;",
+      "testing": "Experiência com unit testing, E2E testing e performance testing, com Jest, React Testing Library, Cypress e DevTools."
+    },
+    "education": "Formação"
+  },
+
+  "skills_page": {
+    "soft_skills": "A Arte e o comportamento humano sempre foram parte integrante da minha vida. As minhas outras paixões, como o teatro, a música e a Psicologia, permitiram-me desenvolver competências versáteis que contribuem grandemente para a minha saúde mental, social e física, revelando-se uma significativa vantagem no contexto organizacional, sendo elas a criatividade, inteligência emocional, empatia, relação interpessoal, pensamento crítico, resolução de conflitos e/ou de problemas e a comunicação assertiva."
+  },
+
+  "contacts_page": {
+    "title": "Contactos",
+    "email": "Vamos conversar",
+    "social": "rede social"
+  },
+
+  "testimonials": {
+    "title": "Testemunhos calorosos",
+    "lets_talk": {
+      "title": "O teu pode ser o próximo",
+      "cta": "vamos conversar"
+    },
+    "pedro": {
+      "details": "Empresário",
+      "review": "O André desenvolveu um trabalho de branding para o meu negócio e tanto o processo como o resultado, foram excelentes! Recomendo vivamente o seu trabalho."
+    },
+
+    "sofia": {
+      "details": "Coordenação - Unidade de Saúde",
+      "review": "O trabalho desenvolvido pelo André superou as nossas expectativas! A sua empatia e criatividade conquistaram-nos na primeira reunião e desde esse dia que fomos continuamente surpreendidos pela positiva. Agora contamos com ele nas próximas edições do RIMA!"
+    },
+
+    "ana": {
+      "details": "Product Designer",
+      "review": "Tive o prazer de trabalhar com o André testemunhando a sua experiência como progamador. No ambiente dinâmico de uma startup em fase inicial, trabalhando com uma equipa de design e produto, o André não só prosperou como foi um apoio inabalável para a nossa equipa. As suas qualidades humanas e a sua atenção aos detalhes são uma benção na nossa indústria e estou confiante de que ele será bem sucedido em qualquer desafio que se lhe apresente!"
+    },
+
+    "anaJardim": {
+      "details": "Psicóloga",
+      "review": "O André desenhou e criou o meu website profissional. Aumentei o número de clientes graças ao seu trabalho, a sua linha estética minimalista reflete o que eu pretendia na perfeição. A sua empatia e profissionalismo foram constantes durante todo o processo. Recomendo vivamente o seu trabalho. Muito obrigada André!"
+    },
+    "vlad": {
+      "details": "Web Developer",
+      "review": "Tive o prazer de colaborar com o André e fiquei impressionado com as suas excepcionais capacidades de comunicação e com a sua notável capacidade de compreender temas complexos com facilidade. A natureza proactiva do André para exceder as expectativas não é apenas um testemunho da sua ética de trabalho, mas também uma vantagem significativa para toda a nossa equipa."
+    },
+
+    "rafa": {
+      "details": "Developer",
+      "review": "O André desenvolveu o meu website IT Studios. O seu design moderno e minimalista, com especial atenção à experiência do utilizador tornou o website bem intuitivo. Não podia estar mais satisfeito com o resultado final. Se quer criar um website apelativo e funcional, o André é a pessoa certa."
+    },
+    "ahmad": {
+      "details": "Software Developer",
+      "review": "O André é o tipo de programador que qualquer equipa teria sorte em ter. A sua combinação de conhecimentos técnicos, trabalho de equipa e capacidade de simplificar ideias complexas é rara. Recomendo-o para qualquer função de design e programação."
+    },
+
+    "doart": {
+      "details": "Artista",
+      "review": "Quero dar um agradecimento especial ao André pelo trabalho desenvolvido! Se tiverem oportunidade, visitem a sua página e vejam os seus trabalhos incríveis, valem muito a pena 💪"
+    },
+    "patricia": {
+      "details": "Artista",
+      "review": "O André desenvolve um trabalho espectacular! É um grande talento."
     }
   },
 
-  "metadata": {
-    "homeTitle": "Bárbara Barbizani - Advocacia e Consultoria Jurídica",
-    "aboutTitle": "Sobre Mim - Bárbara Barbizani",
-    "contactsTitle": "Contatos - Bárbara Barbizani",
-    "practiceTitle": "Áreas de Atuação - Bárbara Barbizani",
-    "description": "Bárbara Barbizani de Carvalho - Advogacia e Consultoria Jurídica. Comprometida com valores centrados no cliente, como confiança, ética e dedicação. Trato casos seletivamente, garantindo um serviço rápido e de excelência. Especializada em direito português, brasileiro e chinês, colaboro com uma mentalidade de parceria, otimizando o valor legal."
+  "404": {
+    "title": "Página não encontrada",
+    "description": "A página que procuras pode ter sido removida ou o link inserido não corresponde a nenhuma página existente.",
+    "cta": "VOLTAR"
+  },
+
+  "contacts": {
+    "banner": {
+      "title": "Posso dar vida aos teus projetos. vamos conversar?",
+      "cta": "enviar mensagem"
+    }
+  },
+
+  "experience": {
+    "paytrix": "A entrada na Paytrix na sua fase inicial proporcionou-me uma oportunidade única de ter um impacto significativo em vários sectores da empresa. As minhas principais contribuições incluíram o aumento da fiabilidade do software através da integração de testes Cypress, o que acelerou a nossa pipeline e tempo de entrega, poupando cerca de 6 horas por dia de custos à empresa. Desempenhei um papel ativo no estabelecimento da documentação de boas práticas e regras de programção, elevando substancialmente a qualidade e a consistência. Além disso, desenvolvi várias ferramentas de automação que simplificaram o setup do projeto e a criação de dados financeiros. Liderar a nossa equipa foi outro ponto alto para mim, onde fomentei o trabalho em equipa e sincronizei esforços entre os departamentos de produto, back-end e design, atingindo os nossos objectivos colectivos.",
+    "pipedrive": "Na Pipedrive, tive a oportunidade de usar microsserviços e arquitetura orientada a eventos de forma eficaz, aprimorando um recurso de automação crucial que contribuiu significativamente para o crescimento e lucro da empresa. A tech stack inclui React, TypeScript, Node, Docker, React Testing Library e Cypress. Isto não só levou a melhorias notáveis na qualidade do código, mas também reforçou a fiabilidade através de testes extensivos. A participação em hackathons e projectos estratégicos de equipa, em colaboração com parceiros, permitiu-me contribuir para o brainstorming e o desenvolvimento de funcionalidades essenciais. Estes esforços foram fundamentais para garantir uma vantagem competitiva substancial no mercado.",
+    "sky": "Como parte da equipa de frontend da Sky, trabalhei diretamente no serviço de streaming da NBC Universal, o Peacock (Skyshowtime na Europa). COntribuí para uma plataforma global escalável com milhões de visualizações mensais, assumindo a responsabilidade pelo processo de desenvolvimento, participando ativamente de discussões com produto, fazendo improvements na qualidade, segurança e desempenho da plataforma.",
+    "wise": "Na minha função inicial como Lead Front-End Developer & UX/UI Designer, tive a incrível oportunidade de construir uma plataforma de lotaria online, desde o início, chamada Lotto Jade. Como parte da equipa fundadora da nossa empresa, desempenhei um papel crucial na definição da nossa abordagem ao desenvolvimento de soluções. Nesta qualidade, comuniquei frequentemente com as partes interessadas e os clientes, conduzindo demonstrações e discussões que realçavam os valores e os objectivos estratégicos da nossa empresa. Este envolvimento foi vital para garantir que as nossas soluções técnicas não só eram inovadoras, como também estavam estreitamente alinhadas com as necessidades dos clientes e as tendências do mercado, fomentando relações fortes e preparando o terreno para exceder as expectativas em cada momento.",
+    "freelance": "Como freelancer, implementei soluções digitais para várias empresas, sendo responsável por todo o processo, desde a conceção até à implementação, oferecendo projeção no mercado através de orientação personalizada e soluções centradas no cliente, adaptadas às necessidades do negócio. Padronizei os resultados utilizando uma abordagem e estratégia de vanguarda, responsiva e mobile-first, alinhada com as tendências actuais do mercado e as expectativas dos utilizadores. Frequentemente, faço avaliações completas de designs de UX e UI para viabilidade técnica, optimização de SEO e branding."
   }
 }

@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 type Props = {
   children: ReactNode;
