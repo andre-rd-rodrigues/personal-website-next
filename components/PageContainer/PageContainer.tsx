@@ -13,7 +13,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
   className
 }) => {
   return (
-    <div className={`${styles.container} ${className}`}>
+    <main className={`${styles.container} ${className}`}>
       <motion.div
         variants={containerVariant as Variants} // Add type assertion for variants
         whileInView="visible"
@@ -22,7 +22,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
       >
         {children}
       </motion.div>
-    </div>
+    </main>
   );
 };
 
