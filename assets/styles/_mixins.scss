@@ -66,17 +66,6 @@ $breaking-point-xxs: 330px;
   }
 }
 
-//page
-@mixin page_container {
-  padding: 120px var(--padding-y) 100px;
-  min-height: 95vh;
-
-  //Responsive
-  @media only screen and (max-width: $breaking-point-md) {
-    padding: 130px var(--padding-y);
-  }
-}
-
 @mixin date_category_container {
   display: flex;
   justify-content: space-between;

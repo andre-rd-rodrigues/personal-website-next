@@ -5,10 +5,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import styles from "./experiencetimeline.module.scss";
 import Image from "next/image";
-import { LINKEDIN } from "@/contants/social_media.constants";
+
 import { useTranslations } from "next-intl";
 import { fadeInVariant, motion } from "@/motion/motionVariants";
 import { experienceTimeline } from "@/data/info.data";
+import CONTACTS from "@/constants/contacts.constants";
 
 const ExperienceTimeline = () => {
   const t = useTranslations("about_page");
@@ -46,7 +47,9 @@ const ExperienceTimeline = () => {
                   objectFit="cover"
                 />
               }
-              onTimelineElementClick={() => window.open(LINKEDIN, "_blank")}
+              onTimelineElementClick={() =>
+                window.open(CONTACTS.LINKEDIN, "_blank")
+              }
             >
               <h4>{company}</h4>
               <h5>{role}</h5>

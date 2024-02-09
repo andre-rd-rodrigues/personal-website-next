@@ -13,9 +13,7 @@ import ContactBanner from "@/components/ContactBanner/ContactBanner";
 
 const TechStack = lazy(() => import("@/components/TechStack"));
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = () => {
   const t = useTranslations("about_page");
 
   return (

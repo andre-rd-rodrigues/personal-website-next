@@ -1,10 +1,13 @@
 @import "assets/styles/mixins";
 
 .container {
-  @include page_container;
-}
-
-.wrapper {
+  padding: 120px var(--padding-y) 100px;
+  min-height: 95vh;
   max-width: var(--page-max-width);
   margin: auto;
+
+  //Responsive
+  @media only screen and (max-width: $breaking-point-md) {
+    padding: 130px var(--padding-y);
+  }
 }

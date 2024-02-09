@@ -13,16 +13,14 @@ const PageContainer: React.FC<PageContainerProps> = ({
   className
 }) => {
   return (
-    <main className={`${styles.container} ${className}`}>
-      <motion.div
-        variants={containerVariant as Variants} // Add type assertion for variants
-        whileInView="visible"
-        initial="hidden"
-        className={styles.wrapper}
-      >
-        {children}
-      </motion.div>
-    </main>
+    <motion.main
+      variants={containerVariant as Variants} // Add type assertion for variants
+      whileInView="visible"
+      initial="hidden"
+      className={`${styles.container} ${className}`}
+    >
+      {children}
+    </motion.main>
   );
 };
 

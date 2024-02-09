@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid";
 
-const social_media = [
+const CONTACTS = [
   { label: "facebook", ref: "https://www.facebook.com/andrerodrigoweb" },
   {
     label: "instagram",
@@ -378,7 +378,7 @@ const techStack = [
 ];
 export {
   experienceTimeline,
-  social_media,
+  CONTACTS,
   works_categories,
   categories,
   projects,
