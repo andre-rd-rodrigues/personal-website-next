@@ -1,0 +1,45 @@
+@import "assets/styles/mixins";
+
+.section {
+  margin: 100px 0 160px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 70px;
+  align-items: center;
+}
+
+.techSection {
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+
+  div {
+    position: relative;
+    width: inherit;
+    height: inherit;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+//Responsive
+
+@media only screen and (max-width: $breaking-point-md) {
+  .section {
+    margin: 50px 0;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  .techSection {
+    margin-bottom: 90px;
+  }
+}

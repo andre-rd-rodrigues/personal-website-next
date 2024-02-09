@@ -1,0 +1,10 @@
+@import "assets/styles/mixins";
+
+.container {
+  @include page_container;
+}
+
+.wrapper {
+  max-width: var(--page-max-width);
+  margin: auto;
+}

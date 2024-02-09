@@ -265,14 +265,14 @@ const experienceTimeline = [
     duration: "2023 - Now",
     role: "Web Developer",
     experience: "experience.paytrix",
-    img_url: process.env.PUBLIC_URL + "/images/companies/paytrix.jpeg"
+    img_url: "/images/companies/paytrix.jpeg"
   },
   {
     company: "Pipedrive",
     duration: "2022 - 2023 \u2022 11 months",
     role: "Web Developer",
     experience: "experience.pipedrive",
-    img_url: process.env.PUBLIC_URL + "/images/companies/pipedrive.jpeg"
+    img_url: "/images/companies/pipedrive.jpeg"
   },
 
   {
@@ -280,14 +280,14 @@ const experienceTimeline = [
     duration: "2022 \u2022 5 months",
     role: "Frontend Developer",
     experience: "experience.sky",
-    img_url: process.env.PUBLIC_URL + "/images/companies/sky.jpeg"
+    img_url: "/images/companies/sky.jpeg"
   },
   {
     company: "Wise Sparrow",
     duration: "2021 - 2022 \u2022 1 year",
     role: "Lead Frontend Developer",
     experience: "experience.wise",
-    img_url: process.env.PUBLIC_URL + "/images/companies/wise.jpeg"
+    img_url: "/images/companies/wise.jpeg"
   },
 
   {
@@ -295,85 +295,85 @@ const experienceTimeline = [
     role: "Web Developer & UX/UI Designer",
     duration: "2020 - 2021 \u2022 1 year",
     experience: "experience.freelance",
-    img_url: process.env.PUBLIC_URL + "/images/companies/freelance.jpeg"
+    img_url: "/images/companies/freelance.jpeg"
   }
 ];
 
 const techStack = [
   {
     label: "JavaScript",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/js.png"
+    img_src: "/images/technologies/js.png"
   },
   {
     label: "TypeScript",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/ts.png"
+    img_src: "/images/technologies/ts.png"
   },
 
   {
     label: "ReactJs",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/react.png"
+    img_src: "/images/technologies/react.png"
   },
   {
     label: "React Native",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/react.png"
+    img_src: "/images/technologies/react.png"
   },
   {
     label: "NodeJs",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/node.png"
+    img_src: "/images/technologies/node.png"
   },
   {
     label: "NextJs",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/next.png"
+    img_src: "/images/technologies/next.png"
   },
   {
     label: "Jest",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/jest.png"
+    img_src: "/images/technologies/jest.png"
   },
   {
     label: "RTL",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/rtl.png"
+    img_src: "/images/technologies/rtl.png"
   },
   {
     label: "Cypress",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/cypress.png"
+    img_src: "/images/technologies/cypress.png"
   },
 
   {
     label: "HTML",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/html.png"
+    img_src: "/images/technologies/html.png"
   },
 
   {
     label: "CSS",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/css.png"
+    img_src: "/images/technologies/css.png"
   },
   {
     label: "Git",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/git.png"
+    img_src: "/images/technologies/git.png"
   },
   {
     label: "Bash",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/bash.png"
+    img_src: "/images/technologies/bash.png"
   },
   {
     label: "Docker",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/docker.png"
+    img_src: "/images/technologies/docker.png"
   },
   {
     label: "RESTful API",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/rest.png"
+    img_src: "/images/technologies/rest.png"
   },
   {
     label: "Databases",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/db.png"
+    img_src: "/images/technologies/db.png"
   },
   {
     label: "Google Analytics",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/analytics.png"
+    img_src: "/images/technologies/analytics.png"
   },
   {
     label: "Open AI",
-    img_src: process.env.PUBLIC_URL + "/images/technologies/openai.png"
+    img_src: "/images/technologies/openai.png"
   }
 ];
 export {

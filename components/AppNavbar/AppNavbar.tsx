@@ -5,11 +5,11 @@ import { Nav, Navbar, Offcanvas } from "react-bootstrap";
 
 import styles from "./appnavbar.module.scss";
 
-import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useTranslations } from "next-intl";
 import LanguageSelector from "../LanguageSelector";
 import Image from "next/image";
+import { Link } from "@/navigation";
 
 const AppNavbar = () => {
   const [show, setShow] = useState(false);

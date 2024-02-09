@@ -1,0 +1,144 @@
+@import "assets/styles/mixins";
+
+.container {
+  h1 {
+    font-family: var(--font-blacker);
+    font-size: var(--fs-xxl);
+    max-width: 80vw;
+  }
+}
+
+@include title_transparent;
+
+.section {
+  margin: 60px 0;
+  p {
+    max-width: 600px;
+  }
+  h2 {
+    margin-bottom: 30px;
+    font-family: Jost, sans-serif;
+    text-transform: uppercase;
+  }
+  p,
+  h2,
+  li {
+    font-size: var(--fs-m);
+  }
+
+  li {
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+}
+
+//Services
+.services {
+  h2 {
+    &:last-of-type {
+      margin-top: 50px;
+    }
+  }
+  h3 {
+    font-family: Italiana;
+    font-size: 1.8rem;
+  }
+}
+.serviceCol {
+  display: flex;
+  justify-content: center;
+}
+
+//About
+.aboutTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: dotted;
+    text-decoration-color: rgba(255, 255, 255, 0.747);
+    text-decoration-line: underline;
+    transition: 0.3s ease;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+//Education
+.educationContainer {
+  margin-top: 50px;
+  ul {
+    list-style: none;
+
+    li {
+      margin: 20px 0;
+      position: relative;
+
+      //Dot
+      &::after {
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        content: "";
+        background-color: white;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+    }
+  }
+  a {
+    color: inherit;
+  }
+}
+
+// Image
+.profileImageContainer {
+  position: relative;
+}
+
+.downloadCVContainer {
+  text-align: end;
+}
+
+//Responsive
+@media only screen and (max-width: $breaking-point-md) {
+  .about {
+    text-align: start;
+  }
+  .aboutTextContainer {
+    align-items: flex-start;
+    order: 2;
+    margin-top: 50px !important;
+  }
+  .educationContainer {
+    //Dot
+    ul li::after {
+      position: absolute;
+      top: 10px;
+      left: -30px;
+      content: "";
+      background-color: white;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+  .profileImage {
+    min-width: 100%;
+    min-height: 300px;
+    background-position: 0 -20vw;
+  }
+
+  .serviceCol {
+    display: flex;
+    justify-content: center;
+  }
+
+  .downloadCVContainer {
+    text-align: center;
+  }
+}
