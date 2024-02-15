@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.scss";
 import AppNavbar from "@/components/AppNavbar/AppNavbar";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import { blacker, jost } from "@/assets/fonts";
+import { blacker, italiana, jost, moniqa } from "@/assets/fonts";
 
 export const metadata: Metadata = {
   title: "André Rodrigo",
@@ -20,7 +20,10 @@ export default function RootLayout({
   const messages = useMessages();
 
   return (
-    <html lang={locale} className={`${jost.variable} ${blacker.variable}`}>
+    <html
+      lang={locale}
+      className={`${jost.variable} ${blacker.variable} ${italiana.variable} ${moniqa.variable}`}
+    >
       <body className="min-h-screen">
         <NextIntlClientProvider messages={messages}>
           <AppNavbar />

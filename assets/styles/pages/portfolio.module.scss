@@ -1,0 +1,9 @@
+@import "assets/styles/mixins";
+
+.container {
+  h1 {
+    font-size: var(--fs-xxl);
+    margin-bottom: 50px;
+    font-family: Italiana;
+  }
+}

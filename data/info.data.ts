@@ -15,13 +15,13 @@ const CONTACTS = [
 const works_categories = [
   {
     name: "Websites",
-    order: "01",
-    src: process.env.PUBLIC_URL + "/images/worksHomepage/websites.jpg"
+
+    src: "/images/worksHomepage/websites.jpg"
   },
   {
     name: "Apps",
-    order: "02",
-    src: process.env.PUBLIC_URL + "/images/worksHomepage/apps.jpg"
+
+    src: "/images/worksHomepage/apps.jpg"
   } /* ,
    {
     name: "Editorial",
@@ -142,64 +142,56 @@ const categories = {
 
 const testimonials = [
   {
-    id: uuid(),
-    review: "testimonials.sofia.review",
+    review: "sofia.review",
     picture_path: "/images/testimonials/sofia.jpg",
     client_name: "Sofia Pimenta",
-    client_details: "testimonials.sofia.details",
+    client_details: "sofia.details",
     project_link: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
   },
   {
-    id: uuid(),
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/anaJardim.jpg",
+    picture_path: "/images/testimonials/anaJardim.jpg",
     client_name: "Ana Jardim",
-    review: "testimonials.anaJardim.review",
-    client_details: "testimonials.anaJardim.details",
+    review: "anaJardim.review",
+    client_details: "anaJardim.details",
     project_link: "https://www.acarolinajardim.com"
   },
   {
-    id: uuid(),
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/ferreira.jpg",
+    picture_path: "/images/testimonials/ferreira.jpg",
     client_name: "Pedro Ferreira",
-    review: "testimonials.pedro.review",
-    client_details: "testimonials.pedro.details",
+    review: "pedro.review",
+    client_details: "pedro.details",
     project_link: "https://www.instagram.com/p/CS7ZtNVDXr8/"
   },
   {
-    id: uuid(),
-    review: "testimonials.rafa.review",
-    client_details: "testimonials.rafa.details",
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/rafa.jpg",
+    review: "rafa.review",
+    client_details: "rafa.details",
+    picture_path: "/images/testimonials/rafa.jpg",
     client_name: "Rafael Pereira",
     project_link: "https://www.itstudios.eu"
   },
   {
-    id: uuid(),
-    review: "testimonials.ana.review",
+    review: "ana.review",
     picture_path: "/images/testimonials/ana.jpg",
     client_name: "Ana Rodrigues",
-    client_details: "testimonials.ana.details"
+    client_details: "ana.details"
   },
   {
-    id: uuid(),
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/vlad.jpeg",
+    picture_path: "/images/testimonials/vlad.jpeg",
     client_name: "Vladislav Sorokin",
-    review: "testimonials.vlad.review",
-    client_details: "testimonials.vlad.details"
+    review: "vlad.review",
+    client_details: "vlad.details"
   },
   {
-    id: uuid(),
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/ahmad.jpeg",
+    picture_path: "/images/testimonials/ahmad.jpeg",
     client_name: "Ahmad Rami",
-    review: "testimonials.ahmad.review",
-    client_details: "testimonials.ahmad.details"
+    review: "ahmad.review",
+    client_details: "ahmad.details"
   },
   {
-    id: uuid(),
-    review: "testimonials.doart.review",
-    client_details: "testimonials.doart.details",
+    review: "doart.review",
+    client_details: "doart.details",
     client_name: "Duarte Mata",
-    picture_path: process.env.PUBLIC_URL + "/images/testimonials/doart.jpg",
+    picture_path: "/images/testimonials/doart.jpg",
     project_link: "https://www.instagram.com/p/CDE5gqVAii8/"
   }
 ];

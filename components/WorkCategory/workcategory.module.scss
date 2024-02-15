@@ -1,0 +1,38 @@
+@import "assets/styles/mixins";
+
+.container {
+  position: relative;
+  width: 100%;
+  max-height: 350px !important;
+}
+
+.text {
+  display: flex;
+  align-items: baseline;
+  margin-left: 8px;
+
+  & p {
+    font-family: var(--font-moniqa);
+    font-style: italic;
+    font-size: var(--fs-xl);
+    color: $yellow;
+  }
+  & h3 {
+    font-family: var(--font-moniqa);
+    font-size: var(--fs-l);
+    margin-left: 10px;
+    letter-spacing: 1.5px;
+  }
+}
+
+//Responsive
+@media only screen and (min-width: $breaking-point-lg) {
+  .text {
+    transform: translateY(-40px);
+  }
+}
+@media only screen and (max-width: $breaking-point-md) {
+  .text {
+    transform: translateY(-20px);
+  }
+}

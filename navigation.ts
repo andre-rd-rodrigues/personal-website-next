@@ -24,6 +24,14 @@ export const pathnames = {
     en: "/portfolio",
     pt: "/portfolio"
   },
+  "/portfolio/websites": {
+    en: "/portfolio/websites",
+    pt: "/portfolio/websites"
+  },
+  "/portfolio/apps": {
+    en: "/portfolio/apps",
+    pt: "/portfolio/apps"
+  },
   "/contacts": {
     en: "/contacts",
     pt: "/contactos"
