@@ -26,99 +26,85 @@ const works_categories = [
    {
     name: "Editorial",
     order: "03",
-    src: process.env.PUBLIC_URL + "images/worksHomepage/editorial.png"
+    src: "images/worksHomepage/editorial.png"
   } */
 ];
 
 const projects = {
   apps: [
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/apps/giggle.png",
+      src: "/images/apps/giggle.png",
       label: "Giggle!",
       ref: "https://play.google.com/store/apps/details?id=com.itstudios.giggle&hl=pt_PT&gl=US"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/apps/randombox.png",
+      src: "/images/apps/randombox.png",
       label: "Random Box - Coming soon",
-      ref: null
+      ref: undefined
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/apps/coolmind.png",
+      src: "/images/apps/coolmind.png",
       label: "Coolmind - Coming soon",
-      ref: null
+      ref: undefined
     }
   ],
 
   websites: [
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/itstudios.jpg",
+      src: "/images/websites/itstudios.jpg",
       label: "IT Studios",
-      ref: "https://itstudios.eu/"
+      ref: "https://itstudios.netlify.app/"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/primetravel.png",
+      src: "/images/websites/primetravel.png",
       label: "PrimeTravel",
       ref: "https://primetravel-162f2.web.app/"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/cdeff.png",
+      src: "/images/websites/cdeff.png",
       label: "CDEFF",
       ref: "https://www.cdeff.com/"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/carolina.png",
+      src: "/images/websites/carolina.png",
       label: "Carolina Jardim",
       ref: "https://acarolinajardim.com"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/curiosity.png",
+      src: "/images/websites/curiosity.png",
       label: "Curiosity Gem",
-      ref: "https://curiositygem-90guvx8v2-andre-rd-rodrigues.vercel.app/"
+      ref: "https://blog.andrerodrigo.com"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/barber.png",
+      src: "/images/websites/barber.png",
       label: "Barber Studio",
       ref: "https://strong-cheesecake-3a87ea.netlify.app/"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/rima.jpg",
+      src: "/images/websites/rima.jpg",
       label: "RIMA",
       ref: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
     },
 
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/memory.jpg",
+      src: "/images/websites/memory.jpg",
       label: "Memory Game",
       ref: "https://andre-rd-rodrigues.github.io/memory-game/#/"
     },
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/woode.jpg",
+      src: "/images/websites/woode.jpg",
       label: "Woode",
       ref: "https://andre-rd-rodrigues.github.io/woodework"
     },
 
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/novawalks.jpg",
+      src: "/images/websites/novawalks.jpg",
       label: "Novawalks",
       ref: "https://novawalks.vercel.app/"
     },
 
     {
-      id: uuid(),
-      src: process.env.PUBLIC_URL + "/images/websites/arquitech.jpg",
+      src: "/images/websites/arquitech.jpg",
       label: "Architecture",
       ref: "https://andre-rd-rodrigues.github.io/architech"
     }
@@ -127,13 +113,11 @@ const projects = {
 
 const categories = {
   apps: {
-    id: uuid(),
     title: "Apps",
     description: `apps_category_page.description`,
     projects: projects["apps"]
   },
   websites: {
-    id: uuid(),
     title: "Websites",
     description: "websites_category_page.description",
     projects: projects["websites"]

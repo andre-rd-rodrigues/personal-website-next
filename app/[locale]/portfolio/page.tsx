@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
-import {
-  containerVariant,
-  fadeInVariant,
-  motion
-} from "@/motion/motionVariants";
+import { fadeInVariant, motion } from "@/motion/motionVariants";
 
 import PageContainer from "@/components/PageContainer/PageContainer";
 import WorkCategory from "@/components/WorkCategory/WorkCategory";
