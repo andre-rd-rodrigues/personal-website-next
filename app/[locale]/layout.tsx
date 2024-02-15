@@ -4,6 +4,7 @@ import "./globals.scss";
 import AppNavbar from "@/components/AppNavbar/AppNavbar";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { blacker, italiana, jost, moniqa } from "@/assets/fonts";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "André Rodrigo",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <AppNavbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
