@@ -9,7 +9,7 @@ import FOOTER_LINKS from "@/constants/footer.constants";
 const Footer = () => {
   return (
     <footer className={styles.container}>
-      <div className="flex gap-2">
+      <div className="flex">
         {FOOTER_LINKS.map(({ icon, href }, i) => (
           <a href={href} className="app-icon" key={i} target="_blank">
             <Icon fontSize={21} icon={icon} />

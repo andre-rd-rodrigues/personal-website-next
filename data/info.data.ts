@@ -180,7 +180,7 @@ const testimonials = [
   }
 ];
 
-const homepage_gallery = () => {
+const get_homepage_gallery = () => {
   const gallery = [];
 
   for (let i = 1; i <= 11; i++) {
@@ -361,5 +361,5 @@ export {
   testimonials,
   services,
   techStack,
-  homepage_gallery
+  get_homepage_gallery
 };

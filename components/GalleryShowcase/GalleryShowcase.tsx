@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 import styles from "./gallery.module.scss";
 import { fadeInVariant, motion } from "@/motion/motionVariants";
-import { homepage_gallery } from "@/data/info.data";
+import { get_homepage_gallery } from "@/data/info.data";
 
 interface GalleryShowcaseProps {
   children: ReactNode;
 }
 
 const GalleryShowcase: React.FC<GalleryShowcaseProps> = ({ children }) => {
-  const images = homepage_gallery();
+  const images = get_homepage_gallery();
 
   return (
     <motion.div
