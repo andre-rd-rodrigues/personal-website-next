@@ -14,26 +14,22 @@ export default function Home() {
   return (
     <main className={styles.homepage}>
       <GalleryShowcase>
-        <div className={styles.title}>
-          <h1>Andre Rodrigo</h1>
-          <motion.div
-            variants={homepageDelayVariant}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.p variants={fadeInVariant}>{t("subtitle")}</motion.p>
-            <motion.div variants={fadeInVariant}>
-              <AppLink href="/portfolio" label={t("cta")} />|
-              <PopupButton
-                id="wTr5ba0e"
-                size={60}
-                className={styles.formButton}
-              >
-                {t("form.button")}
-              </PopupButton>
-            </motion.div>
+        <motion.div
+          variants={homepageDelayVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.title}
+        >
+          <motion.h1 variants={fadeInVariant}>Andre Rodrigo</motion.h1>
+
+          <motion.p variants={fadeInVariant}>{t("subtitle")}</motion.p>
+          <motion.div variants={fadeInVariant}>
+            <AppLink href="/portfolio" label={t("cta")} />|
+            <PopupButton id="wTr5ba0e" size={60} className={styles.formButton}>
+              {t("form.button")}
+            </PopupButton>
           </motion.div>
-        </div>
+        </motion.div>
       </GalleryShowcase>
     </main>
   );

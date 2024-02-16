@@ -15,6 +15,13 @@
   button[aria-controls="offcanvas-container"] {
     border: none;
   }
+
+  a[class="nav-link active"] {
+    color: white !important;
+    background-image: white !important;
+    background-position: 100% 100% !important; /*OR bottom right*/
+    background-size: 100% 2px !important;
+  }
 }
 
 .logo {
