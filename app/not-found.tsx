@@ -1,10 +1,21 @@
+import { Locale } from "@/locale.types";
+import { locales } from "@/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 
-// Render the default Next.js 404 page when a route
-// is requested that doesn't match the middleware and
-// therefore doesn't have a locale associated with it.
+type Props = {
+  params: {
+    locale: Locale;
+  };
+};
 
-export default function NotFound() {
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default function NotFound({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   return (
     <div>
       <h2>Not Found</h2>

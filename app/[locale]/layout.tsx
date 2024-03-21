@@ -5,14 +5,19 @@ import { blacker, italiana, jost, moniqa } from "@/assets/fonts";
 
 import Footer from "@/components/Footer/Footer";
 import { getMetadata } from "@/metadata/metadata.utils";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { MetadataProps } from "@/metadata/types";
+import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({
-  params
+  params: { locale }
 }: MetadataProps): Promise<Metadata> {
-  const { locale } = params;
-  return getMetadata(locale, "home");
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return getMetadata({
+    title: t("homeTitle"),
+    description: t("description")
+  });
 }
 
 const RootLayout = ({

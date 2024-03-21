@@ -45,7 +45,7 @@ const Testimonials = () => {
       </motion.div>
       <div className={styles.letsTalk}>
         <p>{t("lets_talk.title")}</p>
-        <AppLink label={t("lets_talk.cta")} href="/contact" />
+        <AppLink label={t("lets_talk.cta")} href="/contacts" />
       </div>
     </motion.div>
   );

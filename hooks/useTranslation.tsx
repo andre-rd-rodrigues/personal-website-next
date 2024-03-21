@@ -12,6 +12,7 @@ const useTranslation = () => {
     const keys = key.split(".");
 
     // Use reduce to traverse the nested object
+    // eslint-disable-next-line
     const result = keys.reduce((obj: any, currentKey: any) => {
       return obj && obj[currentKey] !== "undefined"
         ? obj[currentKey]

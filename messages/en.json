@@ -143,5 +143,13 @@
       "title": "Let's connect and turn your vision into reality",
       "cta": "Send a message"
     }
+  },
+  "metadata": {
+    "homeTitle": "André Rodrigo • Web Development and Design",
+    "aboutTitle": "About • André Rodrigo",
+    "portfolioTitle": "Portfolio • André Rodrigo",
+    "contactsTitle": "Contacts • André Rodrigo",
+    "skillsTitle": "Skills • André Rodrigo",
+    "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

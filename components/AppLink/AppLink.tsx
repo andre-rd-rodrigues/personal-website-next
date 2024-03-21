@@ -2,9 +2,19 @@ import React from "react";
 import styles from "./applink.module.scss";
 import { Link } from "@/navigation";
 
+type LinkHref =
+  | "/"
+  | "/blog"
+  | "/about"
+  | "/portfolio"
+  | "/portfolio/websites"
+  | "/portfolio/apps"
+  | "/contacts"
+  | "/skills";
+
 interface AppLinkProps {
   label: string;
-  href: any;
+  href: LinkHref;
 }
 
 const AppLink: React.FC<AppLinkProps> = ({ label, href }) => {

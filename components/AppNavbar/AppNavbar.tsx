@@ -66,7 +66,7 @@ const AppNavbar = () => {
               Skills
             </Nav.Link>
 
-            <Nav.Link as={Link} href="/contact">
+            <Nav.Link as={Link} href="/contacts">
               {t("contacts")}
             </Nav.Link>
 

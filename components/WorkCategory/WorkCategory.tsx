@@ -13,7 +13,11 @@ interface Props {
 const WorkCategory = ({ category, order, src }: Props) => {
   return (
     <Link
-      href={`/portfolio/${category.toLowerCase()}`}
+      href={
+        `/portfolio/${category.toLowerCase()}` as
+          | "/portfolio/websites"
+          | "/portfolio/apps"
+      }
       className={styles.container}
     >
       <ImageZoomEffect height="40vw" maxHeight="300px" src={src} />

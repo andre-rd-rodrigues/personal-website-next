@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 import CONTACTS from "@/constants/contacts.constants";
 import { fadeInVariant } from "@/motion/motionVariants";
 
-const Contact = () => {
+const Contacts = () => {
   const t = useTranslations("contacts_page");
 
   const spacing = {
@@ -79,4 +79,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contacts;
