@@ -1,7 +1,7 @@
 import { Locale } from "@/locale.types";
 import { locales } from "@/navigation";
 import { unstable_setRequestLocale } from "next-intl/server";
-import Link from "next/link";
+import Error from "next/error";
 
 type Props = {
   params: {
@@ -18,9 +18,7 @@ export default function NotFound({ params: { locale } }: Props) {
 
   return (
     <div>
-      <h2>Not Found</h2>
-      <p>Could not find requested resource</p>
-      <Link href="/">Return Home</Link>
+      <Error statusCode={404} />
     </div>
   );
 }
