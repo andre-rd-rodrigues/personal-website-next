@@ -8,7 +8,7 @@ import { fadeInVariant, homepageDelayVariant } from "@/motion/motionVariants";
 import { PopupButton } from "@typeform/embed-react";
 import { motion } from "framer-motion";
 
-export default function Home() {
+const Home = () => {
   const t = useTranslations("homepage");
 
   return (
@@ -33,4 +33,6 @@ export default function Home() {
       </GalleryShowcase>
     </main>
   );
-}
+};
+
+export default Home;

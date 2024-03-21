@@ -38,7 +38,7 @@ export const pathnames = {
   },
   "/skills": {
     en: "/skills",
-    pt: "/proficiência"
+    pt: "/skills"
   }
 } satisfies Pathnames<typeof locales>;
 
