@@ -9,6 +9,8 @@ import { Metadata } from "next";
 import { MetadataProps } from "@/metadata/types";
 import { getTranslations } from "next-intl/server";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export async function generateMetadata({
   params: { locale }
@@ -40,6 +42,8 @@ const RootLayout = ({
           <AppNavbar />
           {children}
           <Footer />
+          <Analytics />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
