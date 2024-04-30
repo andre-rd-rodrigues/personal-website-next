@@ -50,9 +50,9 @@ const projects = {
 
   websites: [
     {
-      src: "/images/websites/itstudios.jpg",
-      label: "IT Studios",
-      ref: "https://itstudios.netlify.app/"
+      src: "/images/websites/cdeff.png",
+      label: "CDEFF",
+      ref: "https://www.cdeff.com/"
     },
     {
       src: "/images/websites/primetravel.png",
@@ -60,9 +60,9 @@ const projects = {
       ref: "https://primetravel-162f2.web.app/"
     },
     {
-      src: "/images/websites/cdeff.png",
-      label: "CDEFF",
-      ref: "https://www.cdeff.com/"
+      src: "/images/websites/bb.png",
+      label: "Bárbara Lawyer",
+      ref: "https://www.barbizanicarvalholaw.com/"
     },
     {
       src: "/images/websites/carolina.png",
@@ -74,34 +74,27 @@ const projects = {
       label: "Curiosity Gem",
       ref: "https://blog.andrerodrigo.com"
     },
+
     {
       src: "/images/websites/barber.png",
       label: "Barber Studio",
       ref: "https://strong-cheesecake-3a87ea.netlify.app/"
     },
     {
-      src: "/images/websites/rima.jpg",
-      label: "RIMA",
-      ref: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
+      src: "/images/websites/itstudios.jpg",
+      label: "IT Studios",
+      ref: "https://itstudios.netlify.app/"
     },
-
     {
       src: "/images/websites/memory.jpg",
       label: "Memory Game",
       ref: "https://andre-rd-rodrigues.github.io/memory-game/#/"
     },
     {
-      src: "/images/websites/woode.jpg",
-      label: "Woode",
-      ref: "https://andre-rd-rodrigues.github.io/woodework"
+      src: "/images/websites/rima.jpg",
+      label: "RIMA",
+      ref: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
     },
-
-    {
-      src: "/images/websites/novawalks.jpg",
-      label: "Novawalks",
-      ref: "https://novawalks.vercel.app/"
-    },
-
     {
       src: "/images/websites/arquitech.jpg",
       label: "Architecture",
