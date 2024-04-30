@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.andrerodrigo.com
+
+# Sitemaps
+Sitemap: https://www.andrerodrigo.com/sitemap.xml

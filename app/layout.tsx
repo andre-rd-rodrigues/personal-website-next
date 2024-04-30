@@ -1,9 +1,6 @@
-import { ReactNode } from "react";
-import { NextIntlClientProvider, useMessages } from "next-intl";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { locales } from "@/navigation";
-import { unstable_setRequestLocale } from "next-intl/server";
 import { Locale } from "@/locale.types";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
@@ -12,18 +9,6 @@ type Props = {
   };
 };
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export default function RootLayout({ children, params: { locale } }: Props) {
-  unstable_setRequestLocale(locale);
-
-  const messages = useMessages();
-
-  return (
-    <NextIntlClientProvider messages={messages}>
-      {children}
-    </NextIntlClientProvider>
-  );
+export default function RootLayout({ children }: Props) {
+  return children;
 }

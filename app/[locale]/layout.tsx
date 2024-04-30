@@ -8,6 +8,7 @@ import { getMetadata } from "@/metadata/metadata.utils";
 import { Metadata } from "next";
 import { MetadataProps } from "@/metadata/types";
 import { getTranslations } from "next-intl/server";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 export async function generateMetadata({
   params: { locale }
@@ -27,15 +28,19 @@ const RootLayout = ({
   children: React.ReactNode;
   params: { locale: string };
 }>) => {
+  const messages = useMessages();
+
   return (
     <html
       lang={locale}
       className={`${jost.variable} ${blacker.variable} ${italiana.variable} ${moniqa.variable}`}
     >
       <body className="min-h-screen">
-        <AppNavbar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <AppNavbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
