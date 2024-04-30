@@ -58,6 +58,9 @@ const AppNavbar = () => {
             <Nav.Link as={Link} href="/portfolio">
               {t("portfolio")}
             </Nav.Link>
+            <Nav.Link as={Link} href="/portfolio/#testimonials">
+              {t("testimonials")}
+            </Nav.Link>
 
             <Nav.Link as={Link} href="/about">
               {t("about")}

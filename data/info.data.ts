@@ -16,12 +16,12 @@ const works_categories = [
   {
     name: "Websites",
 
-    src: "/images/worksHomepage/websites.jpg"
+    src: "/images/worksHomepage/websites.png"
   },
   {
     name: "Apps",
 
-    src: "/images/worksHomepage/apps.jpg"
+    src: "/images/worksHomepage/apps.png"
   },
   {
     name: "Editorial",
