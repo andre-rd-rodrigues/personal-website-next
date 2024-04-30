@@ -24,7 +24,7 @@ const Portfolio = () => {
             {works_categories.map(({ name, src }, index) => (
               <Col lg={4} md={4} sm={12} key={index}>
                 <WorkCategory
-                  category={name as "Websites" | "Apps"}
+                  category={name as "Websites" | "Apps" | "Editorial"}
                   order={index + 1}
                   src={src}
                 />

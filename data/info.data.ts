@@ -22,12 +22,11 @@ const works_categories = [
     name: "Apps",
 
     src: "/images/worksHomepage/apps.jpg"
-  } /* ,
-   {
+  },
+  {
     name: "Editorial",
-    order: "03",
-    src: "images/worksHomepage/editorial.png"
-  } */
+    src: "/images/worksHomepage/editorial.png"
+  }
 ];
 
 const projects = {

@@ -5,21 +5,22 @@ import styles from "./workcategory.module.scss";
 import { Link } from "@/navigation";
 
 interface Props {
-  category: "Websites" | "Apps";
+  category: "Websites" | "Apps" | "Editorial";
   order: number;
   src: string;
 }
 
 const WorkCategory = ({ category, order, src }: Props) => {
-  return (
-    <Link
-      href={
-        `/portfolio/${category.toLowerCase()}` as
+  const categoryLink =
+    category === "Editorial"
+      ? "https://www.blog.andrerodrigo.com"
+      : (`/portfolio/${category.toLowerCase()}` as
           | "/portfolio/websites"
-          | "/portfolio/apps"
-      }
-      className={styles.container}
-    >
+          | "/portfolio/apps");
+
+  return (
+    //@ts-expect-error blog pathname is not defined
+    <Link href={categoryLink} className={styles.container}>
       <ImageZoomEffect height="40vw" maxHeight="300px" src={src} />
       <div className={styles.text}>
         <p>0{order}</p>
