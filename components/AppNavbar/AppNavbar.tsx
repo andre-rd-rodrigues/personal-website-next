@@ -10,9 +10,11 @@ import { useTranslations } from "next-intl";
 import LanguageSelector from "../LanguageSelector";
 import Image from "next/image";
 import { Link } from "@/navigation";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const AppNavbar = () => {
   const [show, setShow] = useState(false);
+  const isMobile = useIsMobile(991);
 
   const t = useTranslations("navbar");
 
@@ -42,7 +44,7 @@ const AppNavbar = () => {
       </Navbar.Toggle>
 
       <Navbar.Offcanvas
-        className={styles.offcanvas}
+        className={`${styles.offcanvas} ${isMobile ? "offcanvas-custom" : ""}`}
         show={show}
         responsive="lg"
         onHide={() => setShow(false)}

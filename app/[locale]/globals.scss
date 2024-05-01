@@ -31,6 +31,16 @@ a {
   white-space: break-spaces;
 }
 
+.offcanvas-custom {
+  width: 200px !important;
+  text-align: end;
+  font-size: var(--fs-m);
+  opacity: 1 !important;
+  a {
+    margin: 10px !important;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
