@@ -35,8 +35,8 @@ const Websites = () => {
         animate="visible"
         className={styles.showCaseContainer}
       >
-        {projects.map(({ src, label, ref }, i) => (
-          <ProjectDisplay href={ref} src={src} label={label} key={i} />
+        {projects.map((project, i) => (
+          <ProjectDisplay key={i} {...project} />
         ))}
       </motion.div>
 

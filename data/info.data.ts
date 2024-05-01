@@ -50,55 +50,141 @@ const projects = {
 
   websites: [
     {
-      src: "/images/websites/cdeff.png",
+      imgSrc: "/images/websites/cdeff.png",
+      logo: "https://www.cdeff.com/_next/image?url=%2Fimages%2Flogo.png&w=96&q=75",
       label: "CDEFF",
-      ref: "https://www.cdeff.com/"
+      description: "websites_category_page.projects.CDEFF",
+      techStack: {
+        frontend: ["Next.js", "HTML5", "CSS3", "SCSS", "TailwindCSS"],
+        database: ["Notion"]
+      },
+      href: {
+        website: "https://www.cdeff.com/",
+        github: "https://github.com/andre-rd-rodrigues/cdeff"
+      }
     },
     {
-      src: "/images/websites/primetravel.png",
+      imgSrc: "/images/websites/primetravel.png",
+      logo: "https://primetravel-162f2.web.app/assets/logo.png",
       label: "PrimeTravel",
-      ref: "https://primetravel-162f2.web.app/"
+      description: "websites_category_page.projects.PrimeTravel",
+      techStack: {
+        frontend: [
+          "React",
+          "Typescript",
+          "HTML5",
+          "CSS3",
+          "SCSS",
+          "TailwindCSS"
+        ],
+        backend: ["Firebase"],
+        database: ["Realtime Database"]
+      },
+      href: {
+        website: "https://primetravel-162f2.web.app/",
+        github: "https://github.com/andre-rd-rodrigues/primetravel-app"
+      }
     },
     {
-      src: "/images/websites/bb.png",
+      imgSrc: "/images/websites/bb.png",
       label: "Bárbara Lawyer",
-      ref: "https://www.barbizanicarvalholaw.com/"
+      logo: "https://barbara-website.vercel.app/_next/image?url=%2Fimg%2Flogo_gold.png&w=1920&q=75",
+      description: "websites_category_page.projects.Bárbara",
+      techStack: {
+        frontend: ["Next.js", "HTML5", "CSS3", "SCSS", "TailwindCSS"]
+      },
+      href: {
+        website: "https://www.barbizanicarvalholaw.com/",
+        github: "https://github.com/andre-rd-rodrigues/bb-website"
+      }
     },
     {
-      src: "/images/websites/carolina.png",
+      imgSrc: "/images/websites/carolina.png",
       label: "Carolina Jardim",
-      ref: "https://acarolinajardim.com"
+      description: "websites_category_page.projects.carolina",
+      logo: "https://acarolinajardim.com/images/logo.png",
+      techStack: {
+        frontend: ["HTML5", "CSS3", "JavaScript"]
+      },
+      href: {
+        website: "https://acarolinajardim.com",
+        github: "https://github.com/andre-rd-rodrigues/acarolinajardim"
+      }
     },
     {
-      src: "/images/websites/curiosity.png",
+      imgSrc: "/images/websites/curiosity.png",
       label: "Curiosity Gem",
-      ref: "https://blog.andrerodrigo.com"
+      description: "websites_category_page.projects.Curiosity",
+      logo: "https://cdn.iconscout.com/icon/free/png-512/free-diamond-gems-crystal-jewellery-cubic-44620.png?f=webp&w=256",
+      techStack: {
+        frontend: ["Next.js", "GraphQL", "HTML5", "CSS3", "SCSS"],
+        database: ["Hygraph"]
+      },
+      href: {
+        website: "https://blog.andrerodrigo.com",
+        github: "https://github.com/andre-rd-rodrigues/curiositygem"
+      }
     },
-
     {
-      src: "/images/websites/barber.png",
+      imgSrc: "/images/websites/barber.png",
       label: "Barber Studio",
-      ref: "https://strong-cheesecake-3a87ea.netlify.app/"
+      description: "websites_category_page.projects.Curiosity",
+      logo: "https://strong-cheesecake-3a87ea.netlify.app/_astro/logo_ZhciW0.png",
+      techStack: {
+        frontend: ["Astro", "Javascript", "HTML5", "TailwindCSS"]
+      },
+      href: {
+        website: "https://strong-cheesecake-3a87ea.netlify.app/",
+        github: "https://github.com/andre-rd-rodrigues/barberstudio"
+      }
     },
     {
-      src: "/images/websites/itstudios.jpg",
+      imgSrc: "/images/websites/itstudios.jpg",
       label: "IT Studios",
-      ref: "https://itstudios.netlify.app/"
+      description: "websites_category_page.projects.it",
+      techStack: {
+        frontend: ["HTML5", "CSS3", "JavaScript"]
+      },
+      href: {
+        website: "https://itstudios.netlify.app/",
+        github: "https://github.com/andre-rd-rodrigues/it-studios"
+      }
     },
     {
-      src: "/images/websites/memory.jpg",
+      imgSrc: "/images/websites/memory.jpg",
       label: "Memory Game",
-      ref: "https://andre-rd-rodrigues.github.io/memory-game/#/"
+      description: "websites_category_page.projects.Memory",
+      techStack: {
+        frontend: ["React", "HTML5", "CSS3", "JavaScript"]
+      },
+      href: {
+        website: "https://andre-rd-rodrigues.github.io/memory-game/#/",
+        github: "https://github.com/andre-rd-rodrigues/memory-game"
+      }
     },
     {
-      src: "/images/websites/rima.jpg",
+      imgSrc: "/images/websites/rima.jpg",
       label: "RIMA",
-      ref: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
+      description: "websites_category_page.projects.RIMA",
+      techStack: {
+        frontend: ["Next.js", "HTML5", "CSS3", "Javascript"]
+      },
+      href: {
+        website: "https://kaleidoscopic-cheesecake-db7480.netlify.app/",
+        github: "https://github.com/andre-rd-rodrigues/rima"
+      }
     },
     {
-      src: "/images/websites/arquitech.jpg",
+      imgSrc: "/images/websites/arquitech.jpg",
       label: "Architecture",
-      ref: "https://andre-rd-rodrigues.github.io/architech"
+      description: "websites_category_page.projects.Architecture",
+      techStack: {
+        frontend: ["HTML5", "CSS3", "JavaScript"]
+      },
+      href: {
+        website: "https://andre-rd-rodrigues.github.io/architech",
+        github: "https://github.com/andre-rd-rodrigues/architech"
+      }
     }
   ]
 };
