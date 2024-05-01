@@ -109,18 +109,17 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
             <Icon icon="mdi:github" fontSize={25} className="mr-5" />
           </a>
 
-          {website ||
-            (app && (
-              <a
-                href={website || app}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-1 font-normal hover:text-custom-yellow transition-all duration-100 ease-in"
-              >
-                {website ? "Website" : "App"}
-                <Icon icon="majesticons:open" />
-              </a>
-            ))}
+          {(website || app) && (
+            <a
+              href={website || app}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 font-normal hover:text-custom-yellow transition-all duration-100 ease-in"
+            >
+              {website ? "Website" : "App"}
+              <Icon icon="majesticons:open" />
+            </a>
+          )}
         </ModalFooter>
       </Modal>
     </>
