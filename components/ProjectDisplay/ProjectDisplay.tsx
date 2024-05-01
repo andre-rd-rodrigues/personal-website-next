@@ -69,6 +69,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
               width={50}
               height={30}
               className="m-auto"
+              priority
             />
           )}
 
