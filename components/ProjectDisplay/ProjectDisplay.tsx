@@ -17,7 +17,8 @@ interface ProjectDisplayProps {
     database?: string[];
   };
   href: {
-    website: string;
+    app?: string;
+    website?: string;
     github: string;
   };
 }
@@ -32,7 +33,8 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
 }) => {
   const t = useTranslations();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { website, github } = href;
+
+  const { github, website, app } = href;
 
   return (
     <>
@@ -106,15 +108,18 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
             <Icon icon="mdi:github" fontSize={25} className="mr-5" />
           </a>
 
-          <a
-            href={website}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1 font-normal hover:text-custom-yellow transition-all duration-100 ease-in"
-          >
-            Website
-            <Icon icon="majesticons:open" />
-          </a>
+          {website ||
+            (app && (
+              <a
+                href={website || app}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 font-normal hover:text-custom-yellow transition-all duration-100 ease-in"
+              >
+                {website ? "Website" : "App"}
+                <Icon icon="majesticons:open" />
+              </a>
+            ))}
         </ModalFooter>
       </Modal>
     </>

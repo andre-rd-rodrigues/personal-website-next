@@ -37,7 +37,12 @@
   },
 
   "apps_category_page": {
-    "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)"
+    "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)",
+    "projects": {
+      "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha 😁",
+      "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento! 🎲",
+      "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez! 😊"
+    }
   },
 
   "about_page": {

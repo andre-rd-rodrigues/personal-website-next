@@ -32,22 +32,40 @@ const works_categories = [
 const projects = {
   apps: [
     {
-      src: "/images/apps/giggle.png",
+      imgSrc: "/images/apps/giggle.png",
       label: "Giggle!",
-      ref: "https://play.google.com/store/apps/details?id=com.itstudios.giggle&hl=pt_PT&gl=US"
+      description: "apps_category_page.projects.giggle",
+      techStack: {
+        frontend: ["React Native", "Expo"]
+      },
+      href: {
+        app: "https://play.google.com/store/apps/details?id=com.itstudios.giggle&hl=pt_PT&gl=US",
+        github: "https://github.com/IT-Studios/giggle"
+      }
     },
     {
-      src: "/images/apps/randombox.png",
+      imgSrc: "/images/apps/randombox.png",
       label: "Random Box - Coming soon",
-      ref: undefined
+      description: "apps_category_page.projects.randombox",
+      techStack: {
+        frontend: ["React Native", "Expo"]
+      },
+      href: {
+        github: "https://github.com/IT-Studios/randombox"
+      }
     },
     {
-      src: "/images/apps/coolmind.png",
+      imgSrc: "/images/apps/coolmind.png",
       label: "Coolmind - Coming soon",
-      ref: undefined
+      description: "apps_category_page.projects.coolmind",
+      techStack: {
+        frontend: ["React Native", "Expo"]
+      },
+      href: {
+        github: "https://github.com/andre-rd-rodrigues/coolmind"
+      }
     }
   ],
-
   websites: [
     {
       imgSrc: "/images/websites/cdeff.png",

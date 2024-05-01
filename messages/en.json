@@ -37,7 +37,12 @@
   },
 
   "apps_category_page": {
-    "description": "I am excited to showcase some of my personal projects specifically focused on mobile apps! As technology continues to advance, mobile devices have become an essential part of our daily lives, and developing mobile apps has become an increasingly important skill in the tech industry.\nHere you'll find some of my mobile apps projects, where I've utilized modern technologies and frameworks such as React Native.\nSo, take a look around, and please feel free to contact me if you have any questions or feedback. Thank you for visiting!"
+    "description": "I am excited to showcase some of my personal projects specifically focused on mobile apps! As technology continues to advance, mobile devices have become an essential part of our daily lives, and developing mobile apps has become an increasingly important skill in the tech industry.\nHere you'll find some of my mobile apps projects, where I've utilized modern technologies and frameworks such as React Native.\nSo, take a look around, and please feel free to contact me if you have any questions or feedback. Thank you for visiting!",
+    "projects": {
+      "giggle": "Need a good laugh? Giggle! has got you covered! Dive into a world of endless laughter with our hilarious collection of jokes, puns, and funny stories. Whether you're feeling down or just in need of a pick-me-up, Giggle! is here to brighten your day and leave you smiling from ear to ear. Get ready to LOL your way through the day! 😂",
+      "randombox": "Get ready for a whirlwind of excitement with Random Box! It's the ultimate challenge generator that brings a new thrill to your fingertips every day. From crazy dares to quirky tasks, you never know what surprise awaits inside the box! Gather your friends and embark on an adventure filled with laughter, spontaneity, and endless fun. Stay tuned for the grand unveiling! 🎲",
+      "coolmind": "Welcome to Coolmind, your ultimate companion for positive vibes and a healthy mindset! Say goodbye to stress and negativity as Coolmind guides you through uplifting exercises, gratitude practices, and mindfulness techniques. Harness the power of positivity and unleash your inner joy! Get ready to transform your mind, one smile at a time! 😊"
+    }
   },
 
   "about_page": {
