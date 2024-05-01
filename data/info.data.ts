@@ -89,14 +89,15 @@ const projects = {
       techStack: {
         frontend: [
           "React",
-          "Typescript",
+          "Vite.js",
           "HTML5",
           "CSS3",
           "SCSS",
-          "TailwindCSS"
+          "TailwindCSS",
+          "Firebase Authentication"
         ],
         backend: ["Firebase"],
-        database: ["Realtime Database"]
+        database: ["Realtime Database", "Firebase Storage"]
       },
       href: {
         website: "https://primetravel-162f2.web.app/",
