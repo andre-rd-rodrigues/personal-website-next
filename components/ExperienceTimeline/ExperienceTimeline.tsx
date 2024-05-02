@@ -39,7 +39,7 @@ const ExperienceTimeline = () => {
       className={styles.container}
     >
       <h2>{t("experience.title")}</h2>
-      <VerticalTimeline animate={false}>
+      <VerticalTimeline>
         {experienceTimeline.map(
           ({ company, duration, role, experience, img_url }) => (
             <VerticalTimelineElement
