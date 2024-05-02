@@ -6,10 +6,10 @@
     margin-bottom: 54px;
   }
 
-  h4,
   h5 {
     font-size: large;
   }
+
   p {
     font-weight: 300 !important;
     font-size: var(--fs-m);
@@ -19,4 +19,11 @@
 
 .date {
   font-weight: 400 !important;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

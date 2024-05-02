@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -9,10 +10,26 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { fadeInVariant, motion } from "@/motion/motionVariants";
 import { experienceTimeline } from "@/data/info.data";
-import CONTACTS from "@/constants/contacts.constants";
+import useIsMobile from "@/hooks/useIsMobile";
 
 const ExperienceTimeline = () => {
   const t = useTranslations("about_page");
+  const isMobile = useIsMobile(991);
+
+  const [expandedElements, setExpandedElements] = useState<string[]>([]);
+
+  const toggleExpand = (company: string) => {
+    if (expandedElements.includes(company)) {
+      setExpandedElements(expandedElements.filter((el) => el !== company));
+    } else {
+      setExpandedElements([...expandedElements, company]);
+    }
+  };
+
+  const isExpanded = (company: string) => {
+    return expandedElements.includes(company);
+  };
+
   return (
     <motion.div
       variants={fadeInVariant}
@@ -31,8 +48,7 @@ const ExperienceTimeline = () => {
               date={duration}
               contentStyle={{
                 background: "none",
-                borderRadius: "0",
-                cursor: "pointer"
+                borderRadius: "0"
               }}
               contentArrowStyle={{
                 borderRight: "none"
@@ -47,13 +63,24 @@ const ExperienceTimeline = () => {
                   objectFit="cover"
                 />
               }
-              onTimelineElementClick={() =>
-                window.open(CONTACTS.LINKEDIN, "_blank")
-              }
             >
-              <h4>{company}</h4>
-              <h5>{role}</h5>
-              <p>{t(experience)}</p>
+              <h5 className="mb-2 ">{company}</h5>
+              <h4 className="opacity-75 font-normal">{role}</h4>
+              <p
+                className={`${
+                  isMobile && !isExpanded(company) ? styles.truncate : ""
+                }`}
+              >
+                {t(experience)}
+              </p>
+              {isMobile && (
+                <div
+                  className="mt-2 text-end cursor-pointer"
+                  onClick={() => toggleExpand(company)}
+                >
+                  {isExpanded(company) ? "See less" : "See more"}
+                </div>
+              )}
             </VerticalTimelineElement>
           )
         )}
