@@ -334,11 +334,20 @@ const services = {
 
 const experienceTimeline = [
   {
-    company: "Paytrix",
-    duration: "2023 - Now",
+    company: "Probely",
+    duration: "2024 - Now",
+    role: "Web Developer",
+    experience: "experience.probely",
+    img_url:
+      "https://www.portugalventures.pt/wp-content/uploads/2020/08/Portfolio_Probely_300x300px.png"
+  },
+  {
+    company: "Navro",
+    duration: "2023 - 2024",
     role: "Web Developer",
     experience: "experience.paytrix",
-    img_url: "/images/companies/paytrix.jpeg"
+    img_url:
+      "https://media.licdn.com/dms/image/D4E0BAQHydI4vy3ywsQ/company-logo_200_200/0/1707470402207/paytrix_logo?e=2147483647&v=beta&t=q3pIN3sDQA5RFV61R5F1CawX_WH1lADnV5PeGSoXxTo"
   },
   {
     company: "Pipedrive",
