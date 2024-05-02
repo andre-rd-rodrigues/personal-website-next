@@ -7,8 +7,8 @@
   }
   h1 {
     font-size: var(--fs-xxl);
-    margin-bottom: 40px;
     font-family: var(--font-blacker);
+    margin-bottom: 30px;
   }
 }
 
@@ -55,6 +55,7 @@
   }
   .imgCol {
     margin-bottom: 40px;
+    min-height: 150px;
   }
 
   .softSkillsCol {
