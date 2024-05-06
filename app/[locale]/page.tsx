@@ -7,6 +7,7 @@ import GalleryShowcase from "@/components/GalleryShowcase/GalleryShowcase";
 import { fadeInVariant, homepageDelayVariant } from "@/motion/motionVariants";
 import { PopupButton } from "@typeform/embed-react";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 const Home = () => {
   const t = useTranslations("homepage");
@@ -25,7 +26,12 @@ const Home = () => {
           <motion.p variants={fadeInVariant}>{t("subtitle")}</motion.p>
           <motion.div variants={fadeInVariant}>
             <AppLink href="/portfolio" label={t("cta")} />|
-            <PopupButton id="wTr5ba0e" size={60} className={styles.formButton}>
+            <PopupButton
+              id="wTr5ba0e"
+              size={60}
+              className={styles.formButton}
+              onClick={() => track("homepage_contact_click")}
+            >
               {t("form.button")}
             </PopupButton>
           </motion.div>

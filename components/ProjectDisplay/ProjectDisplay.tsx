@@ -4,7 +4,8 @@ import styles from "./projectdisplay.module.scss";
 import { Modal, ModalBody, ModalFooter } from "react-bootstrap";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { track } from "@vercel/analytics";
 
 interface ProjectDisplayProps {
   imgSrc: string;
@@ -33,15 +34,22 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
 }) => {
   const t = useTranslations();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const locale = useLocale();
 
   const { github, website, app } = href;
 
+  const handleOpenProjectModal = () => {
+    setIsModalOpen((prevState) => !prevState);
+
+    track("Project clicked", {
+      project: label,
+      locale
+    });
+  };
+
   return (
     <>
-      <div
-        className={styles.container}
-        onClick={() => setIsModalOpen((prevState) => !prevState)}
-      >
+      <div className={styles.container} onClick={handleOpenProjectModal}>
         <ImageZoomEffect overlay height="100%" width="100%" src={imgSrc}>
           <h4>{label}</h4>
         </ImageZoomEffect>
@@ -101,6 +109,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
         </ModalBody>
         <ModalFooter className="bg-dark">
           <a
+            onClick={() =>
+              track("Project github clicked", {
+                project: label,
+                locale
+              })
+            }
             href={github}
             target="_blank"
             rel="noreferrer"
@@ -111,6 +125,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
 
           {(website || app) && (
             <a
+              onClick={() =>
+                track("Project opened", {
+                  project: label,
+                  locale
+                })
+              }
               href={website || app}
               target="_blank"
               rel="noreferrer"
