@@ -32,8 +32,8 @@ const AppNavbar = () => {
               className={styles.avatarImage}
             />
           </div>
-          <h1>AR</h1>
-          <p> {t("brand_label")}</p>
+          <span className={styles.title}>AR</span>
+          <p>{t("brand_label")}</p>
         </div>
       </Navbar.Brand>
       <Navbar.Toggle
