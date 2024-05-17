@@ -8,7 +8,13 @@ export const getMetadata = (options: Metadata): Metadata => {
     openGraph: {
       title: options.title!,
       description: options.description!,
-      images: ["/images/opengraph-image.png"]
+      images: [
+        {
+          url: "https://i.postimg.cc/nM8ThXPW/preview.png",
+          width: 800,
+          height: 600
+        }
+      ]
     },
     ...options
   };
