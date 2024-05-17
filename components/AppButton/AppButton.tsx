@@ -11,7 +11,11 @@ const AppButton: FC<AppButtonProps> = ({ label, downloadCV, className }) => {
   if (downloadCV) {
     return (
       <div className={className}>
-        <a className={styles.container} href="/assets/docs/cv.pdf" download>
+        <a
+          className={styles.container}
+          href="/docs/cv.pdf"
+          download="André_Rodrigues_CV.pdf"
+        >
           DOWNLOAD CV
         </a>
       </div>

@@ -6,7 +6,7 @@ export const getMetadata = (options: Metadata): Metadata => {
     description: options.description,
     icons: ["/favicon.ico"],
     openGraph: {
-      images: ["/images/preview.png"]
+      images: "/images/preview.png"
     },
     ...options
   };
