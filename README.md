@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👨🏽‍💻 Website - André Rodrigues
 
-## Getting Started
+Welcome to andre-website, a modern and responsive web application built with Next.js! This project showcases essential pages such as About, Contacts, and Portfolio, where I display my web and mobile projects.
 
-First, run the development server:
+**Website:** https://www.andrerodrigo.com
+**Blog:** https://www.blog.andrerodrigo.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📂 Project Structure
+
+Here is a brief overview of the project's structure:
+
+```
+plaintextCopiar código
+/your-project
+│
+├── /app
+│   ├── /[locale]
+│   │   ├── [...not_found]
+│   │   ├── /about
+│   │   ├── /contacts
+│   │   ├── /portfolio
+│   │   │   ├── /apps
+│   │   │   ├── /websites
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── /skills
+│   │   ├── globals.scss
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── not-found.tsx
+│   │   └── sitemap.ts
+│
+├── /assets
+│
+├── /components
+│   ├── /AppButton
+│   ├── /AppHead
+│   ├── /AppLink
+│   ├── /AppNavbar
+│   ├── /ContactBanner
+│   ├── /ExperienceTimeline
+│   ├── /Footer
+│   ├── /GalleryShowcase
+│   ├── /ImageZoomEffect
+│   ├── /LanguageSelector
+│   ├── /PageContainer
+│   ├── /ProjectDisplay
+│   ├── /TechStack
+│   ├── /Testimonials
+│   └── /WorkCategory
+│
+├── /constants
+│
+├── /data
+│
+├── /helpers
+│
+├── /hooks
+│
+├── /messages
+│
+├── /metadata
+│   ├── index.ts
+│   └── metadata-utils.ts
+│
+├── package.json
+├── README.md
+└── next.config.js
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home**: The landing page with an introduction and links to other sections.
+- **About**: Information about me and my background.
+- **Contact**: A page with a form to reach out to me.
+- **Portfolio**: A showcase of my web and mobile projects, including subcategories for apps and websites.
+- **Skills**: Details about my technical skills.
+- **Not Found**: Custom 404 error page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📦 Key Libraries
 
-## Learn More
+Here are some of the key libraries used in this project:
 
-To learn more about Next.js, take a look at the following resources:
+- **@iconify/react**: For a wide range of icons.
+- **@typeform/embed-react**: For embedding Typeform forms.
+- **@vercel/analytics**: Analytics integration with Vercel.
+- **bootstrap**: For responsive design.
+- **framer-motion**: For animations.
+- **next-intl**: For internationalization support.
+- **next-seo**: For SEO management.
+- **react-bootstrap**: Bootstrap components for React.
+- **react-slick**: For carousels and sliders.
+- **react-vertical-timeline-component**: For creating vertical timelines.
+- **sass**: For styling.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `dev`: Runs the development server.
+- `build`: Builds the application for production.
+- `start`: Starts the production server.
+- `lint`: Runs the linter.
+- `prod`: Builds and starts the production server.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Enjoy exploring my website and discovering my projects!
