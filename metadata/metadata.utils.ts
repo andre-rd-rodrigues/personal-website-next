@@ -1,10 +1,18 @@
+import { WEBSITE_DOMAIN_URL } from "@/constants/common.constants";
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 export const getMetadata = (options: Metadata): Metadata => {
+  const headersList = headers();
+  const pathname = headersList.get("x-invoke-path") || "";
+
   return {
     title: options.title,
     description: options.description,
     icons: ["/favicon.ico"],
+    alternates: {
+      canonical: `${WEBSITE_DOMAIN_URL}/${pathname}`
+    },
     openGraph: {
       title: options.title!,
       description: options.description!,
@@ -16,6 +24,7 @@ export const getMetadata = (options: Metadata): Metadata => {
           height: 630
         }
       ],
+
       ...options.openGraph
     },
     ...options
