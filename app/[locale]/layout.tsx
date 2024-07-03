@@ -12,6 +12,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Analytics from "@/components/Analytics";
+import AnalyticsBanner from "@/components/AnalyticsBanner";
 
 export async function generateMetadata({
   params: { locale }
@@ -53,6 +54,7 @@ const RootLayout = ({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AppNavbar />
           {children}
+          <AnalyticsBanner />
           <Footer />
 
           {/* Metrics */}
