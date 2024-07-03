@@ -4,8 +4,9 @@ import styles from "./projectdisplay.module.scss";
 import { Modal, ModalBody, ModalFooter } from "react-bootstrap";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
-import { track } from "@vercel/analytics";
+import { useTranslations } from "next-intl";
+import ReactGA from "react-ga4";
+import { EventActions, EventCategories } from "@/constants/analytics.constants";
 
 interface ProjectDisplayProps {
   imgSrc: string;
@@ -34,16 +35,16 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
 }) => {
   const t = useTranslations();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const locale = useLocale();
 
   const { github, website, app } = href;
 
   const handleOpenProjectModal = () => {
     setIsModalOpen((prevState) => !prevState);
 
-    track("Project clicked", {
-      project: label,
-      locale
+    ReactGA.event({
+      category: EventCategories.USER_INTERACTION,
+      action: EventActions.OPEN_PROJECT_DETAILS_MODAL,
+      label
     });
   };
 
@@ -110,9 +111,10 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
         <ModalFooter className="bg-dark">
           <a
             onClick={() =>
-              track("Project github clicked", {
-                project: label,
-                locale
+              ReactGA.event({
+                category: EventCategories.USER_INTERACTION,
+                action: EventActions.OPEN_PROJECT_GITHUB,
+                label
               })
             }
             href={github}
@@ -126,9 +128,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
           {(website || app) && (
             <a
               onClick={() =>
-                track("Project opened", {
-                  project: label,
-                  locale
+                ReactGA.event({
+                  category: EventCategories.USER_INTERACTION,
+                  action: app
+                    ? EventActions.OPEN_PROJECT_APP
+                    : EventActions.OPEN_PROJECT_WEBSITE,
+                  label
                 })
               }
               href={website || app}

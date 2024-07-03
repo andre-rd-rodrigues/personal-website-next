@@ -7,7 +7,12 @@ import GalleryShowcase from "@/components/GalleryShowcase/GalleryShowcase";
 import { fadeInVariant, homepageDelayVariant } from "@/motion/motionVariants";
 import { PopupButton } from "@typeform/embed-react";
 import { motion } from "framer-motion";
-import { track } from "@vercel/analytics";
+import ReactGA from "react-ga4";
+import {
+  EventActions,
+  EventCategories,
+  EventLabels
+} from "@/constants/analytics.constants";
 
 const Home = () => {
   const t = useTranslations("homepage");
@@ -30,7 +35,13 @@ const Home = () => {
               id="wTr5ba0e"
               size={60}
               className={styles.formButton}
-              onClick={() => track("homepage_contact_click")}
+              onClick={() =>
+                ReactGA.event({
+                  category: EventCategories.USER_INTERACTION,
+                  action: EventActions.OPEN_CONTACT_TYPEFORM,
+                  label: EventLabels.CONTACT_FORM_BUTTON
+                })
+              }
             >
               {t("form.button")}
             </PopupButton>
