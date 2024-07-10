@@ -21,10 +21,7 @@ export async function generateMetadata({
 
   return getMetadata({
     title: t("homeTitle"),
-    description: t("description"),
-    openGraph: {
-      locale
-    }
+    description: t("description")
   });
 }
 

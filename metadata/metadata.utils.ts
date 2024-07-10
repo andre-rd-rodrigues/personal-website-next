@@ -23,10 +23,7 @@ export const getMetadata = (options: Metadata): Metadata => {
           width: 1200,
           height: 630
         }
-      ],
-
-      ...options.openGraph
-    },
-    ...options
+      ]
+    }
   };
 };
