@@ -6,6 +6,9 @@
   background-color: $dark;
   justify-content: space-between;
   font-family: var(--font-sans);
+  background-color: #191919c6;
+  backdrop-filter: blur(5px);
+
   .title,
   p,
   a {
