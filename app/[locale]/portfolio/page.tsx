@@ -1,5 +1,9 @@
 "use client";
-import { fadeInVariant, motion } from "@/motion/motionVariants";
+import {
+  fadeInSlideInVariant,
+  fadeInVariant,
+  motion
+} from "@/motion/motionVariants";
 
 import PageContainer from "@/components/PageContainer/PageContainer";
 import WorkCategory from "@/components/WorkCategory/WorkCategory";
@@ -22,7 +26,7 @@ const Portfolio = () => {
           {works_categories.map(({ name, src }, index) => (
             <Col lg={4} md={4} sm={12} key={index}>
               <motion.div
-                variants={fadeInVariant}
+                variants={fadeInSlideInVariant}
                 className={styles.worksCategories}
               >
                 <WorkCategory
