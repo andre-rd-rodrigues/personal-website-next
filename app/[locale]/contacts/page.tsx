@@ -8,7 +8,12 @@ import styles from "@/assets/styles/pages/contact.module.scss";
 import PageContainer from "@/components/PageContainer/PageContainer";
 import { useTranslations } from "next-intl";
 import CONTACTS from "@/constants/contacts.constants";
-import { fadeInVariant } from "@/motion/motionVariants";
+import {
+  containerVariant,
+  fadeInSlideLeftVariant,
+  fadeInVariant,
+  rotateScaleVariant
+} from "@/motion/motionVariants";
 
 const Contacts = () => {
   const t = useTranslations("contacts_page");
@@ -26,11 +31,7 @@ const Contacts = () => {
           <h1>{t("title")}</h1>
         </Col>
         <Col className={styles.col} {...spacing}>
-          <motion.div
-            animate="visible"
-            initial="hidden"
-            variants={fadeInVariant}
-          >
+          <motion.div variants={fadeInVariant}>
             <h3>{t("email")}</h3>
             <a
               id="contact_email"
@@ -43,33 +44,28 @@ const Contacts = () => {
           </motion.div>
         </Col>
         <Col className={styles.col} {...spacing}>
-          <motion.div
-            animate="visible"
-            initial="hidden"
-            variants={fadeInVariant}
-            className={styles.social}
-          >
+          <motion.div variants={containerVariant} className={styles.social}>
             <h3>{t("social")}</h3>
             <div>
               <ul>
-                <li>
+                <motion.li variants={rotateScaleVariant}>
                   <a href={CONTACTS.LINKTREE} target="_blank" rel="noreferrer">
                     <Icon
                       icon="simple-icons:linktree"
                       className={styles.social_icon}
                     />
                   </a>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={rotateScaleVariant}>
                   <a href={CONTACTS.INSTAGRAM} target="_blank" rel="noreferrer">
                     <Icon icon="mdi:instagram" className={styles.social_icon} />
                   </a>
-                </li>
-                <li>
+                </motion.li>
+                <motion.li variants={rotateScaleVariant}>
                   <a href={CONTACTS.LINKEDIN} target="_blank" rel="noreferrer">
                     <Icon icon="mdi:linkedin" className={styles.social_icon} />
                   </a>
-                </li>
+                </motion.li>
               </ul>
             </div>
           </motion.div>

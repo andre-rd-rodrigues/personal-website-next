@@ -163,6 +163,12 @@
       "cta": "Send a message"
     }
   },
+
+  "analytics_banner": {
+    "description": "This website uses Google Analytics to understand human interaction. Therefore, by continuing to use this website, you consent to the use of cookies to track and analyze your usage.",
+    "accept": "I agree"
+  },
+
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",
     "aboutTitle": "About • André Rodrigo",

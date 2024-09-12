@@ -7,7 +7,7 @@ const containerVariant = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1
     }
   }
 };
@@ -51,6 +51,57 @@ const fadeInVariant = {
   }
 };
 
+const fadeInSlideInVariant = {
+  hidden: {
+    opacity: 0,
+    y: -50
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      duration: 1.5,
+      bounce: 0.5
+    }
+  }
+};
+
+const fadeInSlideLeftVariant = {
+  hidden: {
+    opacity: 0,
+    x: -50
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      duration: 1,
+      bounce: 0.4,
+      ease: ""
+    }
+  }
+};
+
+const rotateScaleVariant = {
+  hidden: {
+    opacity: 0,
+    scale: 0.3,
+    rotate: 200
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
 export {
   containerVariant,
   fadeInVariant,
@@ -58,5 +109,8 @@ export {
   useScroll,
   homepageDelayVariant,
   workPageHeaderContent,
-  useTransform
+  useTransform,
+  fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
+  rotateScaleVariant
 };

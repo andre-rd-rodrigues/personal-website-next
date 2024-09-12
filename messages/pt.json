@@ -157,6 +157,11 @@
     "cta": "VOLTAR"
   },
 
+  "analytics_banner": {
+    "description": "Este website utiliza cookies para garantir a melhor experiência de navegação. Ao continuar a navegar, concordas com a política de cookies.",
+    "accept": "Concordo"
+  },
+
   "contacts": {
     "banner": {
       "title": "Posso dar vida aos teus projetos. vamos conversar?",
