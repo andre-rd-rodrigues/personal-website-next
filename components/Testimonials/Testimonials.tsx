@@ -1,29 +1,29 @@
-import React, { ReactNode } from "react";
-import { Icon } from "@iconify/react";
+import React, { ReactNode } from 'react';
+import { Icon } from '@iconify/react';
 import {
   containerVariant,
   fadeInVariant,
   getAttentionVariant,
-  motion
-} from "@/motion/motionVariants";
+  motion,
+} from '@/motion/motionVariants';
 
-import { testimonials_sider } from "@/helpers/slider.settings";
-import Slider from "react-slick";
+import { testimonials_sider } from '@/helpers/slider.settings';
+import Slider from 'react-slick';
 
-import styles from "./testimonials.module.scss";
-import AppLink from "../AppLink";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { testimonials } from "@/data/info.data";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import styles from './testimonials.module.scss';
+import AppLink from '../AppLink';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { testimonials } from '@/data/info.data';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Testimonials = () => {
-  const t = useTranslations("testimonials");
+  const t = useTranslations('testimonials');
 
   const settings = {
     ...testimonials_sider,
-    dotsClass: `${styles.dots} slick-dots`
+    dotsClass: `${styles.dots} slick-dots`,
   };
 
   return (
@@ -33,7 +33,7 @@ const Testimonials = () => {
       whileInView="visible"
       className={styles.container}
     >
-      <motion.h1 variants={fadeInVariant}>{t("title")}</motion.h1>
+      <motion.h1 variants={fadeInVariant}>{t('title')}</motion.h1>
       <motion.div variants={fadeInVariant}>
         <Slider {...settings}>
           {testimonials.map((item, index) => (
@@ -42,7 +42,7 @@ const Testimonials = () => {
         </Slider>
       </motion.div>
       <div className={styles.letsTalk}>
-        <p>{t("lets_talk.title")}</p>
+        <p>{t('lets_talk.title')}</p>
         <motion.div
           variants={getAttentionVariant}
           initial="animate"
@@ -50,7 +50,7 @@ const Testimonials = () => {
           whileHover="hover"
           className="mt-3"
         >
-          <AppLink label={t("lets_talk.cta")} href="/contacts" />
+          <AppLink label={t('lets_talk.cta')} href="/contacts" />
         </motion.div>
       </div>
     </motion.div>
@@ -74,7 +74,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   picture_path,
   review,
   project_link,
-  t
+  t,
 }) => (
   <div id="testimonials" className={styles.testimonialContainer}>
     <a href={project_link} rel="noreferrer" target="_blank">
@@ -85,7 +85,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
           <h5>{client_name}</h5>
           <p>{t(client_details)}</p>
         </div>
-        <div className="relative overflow-hidden w-28 h-28">
+        <div className="relative h-28 w-28 overflow-hidden">
           <Image
             src={picture_path}
             alt="Personal Picture"

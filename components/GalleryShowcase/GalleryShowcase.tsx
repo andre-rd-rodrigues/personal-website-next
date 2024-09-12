@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
-import styles from "./gallery.module.scss";
-import { fadeInVariant, motion } from "@/motion/motionVariants";
-import { get_homepage_gallery } from "@/data/info.data";
+import React, { ReactNode } from 'react';
+import styles from './gallery.module.scss';
+import { fadeInVariant, motion } from '@/motion/motionVariants';
+import { get_homepage_gallery } from '@/data/info.data';
 
 interface GalleryShowcaseProps {
   children: ReactNode;
@@ -23,7 +23,7 @@ const GalleryShowcase: React.FC<GalleryShowcaseProps> = ({ children }) => {
             <div
               key={index}
               style={{
-                backgroundImage: `linear-gradient(#21212170, #21212170), url(${src})`
+                backgroundImage: `linear-gradient(#21212170, #21212170), url(${src})`,
               }}
             />
           ))}

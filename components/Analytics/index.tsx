@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import ReactGA from "react-ga4";
+import { useEffect } from 'react';
+import ReactGA from 'react-ga4';
 
 const Analytics = () => {
   useEffect(() => {

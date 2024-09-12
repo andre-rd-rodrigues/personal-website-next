@@ -1,5 +1,5 @@
-import React, { ReactNode, CSSProperties, useEffect, useState } from "react";
-import styles from "./imagezoomeffect.module.scss";
+import React, { ReactNode, CSSProperties, useEffect, useState } from 'react';
+import styles from './imagezoomeffect.module.scss';
 
 interface ImageZoomEffectProps {
   src: string;
@@ -14,11 +14,11 @@ interface ImageZoomEffectProps {
 const ImageZoomEffect: React.FC<ImageZoomEffectProps> = ({
   src,
   style,
-  height = "100%",
-  width = "100%",
+  height = '100%',
+  width = '100%',
   children,
   overlay,
-  maxHeight
+  maxHeight,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -30,11 +30,11 @@ const ImageZoomEffect: React.FC<ImageZoomEffectProps> = ({
 
     handleResize(); // Check initially
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // Clean up event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -46,7 +46,7 @@ const ImageZoomEffect: React.FC<ImageZoomEffectProps> = ({
       <div
         className={`${styles.image} ${overlay && styles.overlay}`}
         style={{
-          backgroundImage: `url(${src})`
+          backgroundImage: `url(${src})`,
         }}
       />
       <div className={styles.children}>{children}</div>

@@ -1,22 +1,22 @@
-"use client";
-import { useState } from "react";
+'use client';
+import { useState } from 'react';
 /* import LanguageSelector from "components/LanguageSelector/LanguageSelector"; */
-import { Nav, Navbar, Offcanvas } from "react-bootstrap";
+import { Nav, Navbar, Offcanvas } from 'react-bootstrap';
 
-import styles from "./appnavbar.module.scss";
+import styles from './appnavbar.module.scss';
 
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { useTranslations } from "next-intl";
-import LanguageSelector from "../LanguageSelector";
-import Image from "next/image";
-import { Link } from "@/navigation";
-import useIsMobile from "@/hooks/useIsMobile";
+import { Icon } from '@iconify/react/dist/iconify.js';
+import { useTranslations } from 'next-intl';
+import LanguageSelector from '../LanguageSelector';
+import Image from 'next/image';
+import { Link } from '@/navigation';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const AppNavbar = () => {
   const [show, setShow] = useState(false);
   const isMobile = useIsMobile(991);
 
-  const t = useTranslations("navbar");
+  const t = useTranslations('navbar');
 
   return (
     <Navbar expand="lg" fixed="top" className={styles.nav}>
@@ -33,7 +33,7 @@ const AppNavbar = () => {
             />
           </div>
           <span className={styles.title}>AR</span>
-          <p>{t("brand_label")}</p>
+          <p>{t('brand_label')}</p>
         </div>
       </Navbar.Brand>
       <Navbar.Toggle
@@ -44,7 +44,7 @@ const AppNavbar = () => {
       </Navbar.Toggle>
 
       <Navbar.Offcanvas
-        className={`${styles.offcanvas} ${isMobile ? "offcanvas-custom" : ""}`}
+        className={`${styles.offcanvas} ${isMobile ? 'offcanvas-custom' : ''}`}
         show={show}
         responsive="lg"
         onHide={() => setShow(false)}
@@ -58,25 +58,25 @@ const AppNavbar = () => {
             className={styles.offcanvasLinks}
           >
             <Nav.Link as={Link} href="/portfolio">
-              {t("portfolio")}
+              {t('portfolio')}
             </Nav.Link>
             <Nav.Link as={Link} href="/portfolio/#testimonials">
-              {t("testimonials")}
+              {t('testimonials')}
             </Nav.Link>
 
             <Nav.Link as={Link} href="/about">
-              {t("about")}
+              {t('about')}
             </Nav.Link>
             <Nav.Link as={Link} href="/skills">
               Skills
             </Nav.Link>
 
             <Nav.Link as={Link} href="/contacts">
-              {t("contacts")}
+              {t('contacts')}
             </Nav.Link>
 
             <Nav.Link href="https://www.blog.andrerodrigo.com">
-              {t("blog")}
+              {t('blog')}
             </Nav.Link>
 
             <LanguageSelector />

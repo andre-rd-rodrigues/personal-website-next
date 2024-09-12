@@ -1,8 +1,8 @@
-import { useLocale } from "next-intl";
-import styles from "./language.module.scss";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { usePathname, useRouter } from "@/navigation";
-import { ChangeEvent } from "react";
+import { useLocale } from 'next-intl';
+import styles from './language.module.scss';
+import { Icon } from '@iconify/react/dist/iconify.js';
+import { usePathname, useRouter } from '@/navigation';
+import { ChangeEvent } from 'react';
 
 const LanguageSelector = () => {
   const locale = useLocale();

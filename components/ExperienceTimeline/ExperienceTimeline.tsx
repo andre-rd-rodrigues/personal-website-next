@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   VerticalTimeline,
-  VerticalTimelineElement
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import styles from "./experiencetimeline.module.scss";
-import Image from "next/image";
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import styles from './experiencetimeline.module.scss';
+import Image from 'next/image';
 
-import { useTranslations } from "next-intl";
-import { fadeInVariant, motion } from "@/motion/motionVariants";
-import { experienceTimeline } from "@/data/info.data";
-import useIsMobile from "@/hooks/useIsMobile";
+import { useTranslations } from 'next-intl';
+import { fadeInVariant, motion } from '@/motion/motionVariants';
+import { experienceTimeline } from '@/data/info.data';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const ExperienceTimeline = () => {
-  const t = useTranslations("about_page");
+  const t = useTranslations('about_page');
   const isMobile = useIsMobile(991);
 
   const [expandedElements, setExpandedElements] = useState<string[]>([]);
@@ -38,7 +38,7 @@ const ExperienceTimeline = () => {
       viewport={{ once: true }}
       className={styles.container}
     >
-      <h2>{t("experience.title")}</h2>
+      <h2>{t('experience.title')}</h2>
       <VerticalTimeline>
         {experienceTimeline.map(
           ({ company, duration, role, experience, img_url }) => (
@@ -47,14 +47,14 @@ const ExperienceTimeline = () => {
               className="vertical-timeline-element--work"
               date={duration}
               contentStyle={{
-                background: "none",
-                borderRadius: "0"
+                background: 'none',
+                borderRadius: '0',
               }}
               contentArrowStyle={{
-                borderRight: "none"
+                borderRight: 'none',
               }}
               dateClassName={styles.date}
-              iconStyle={{ overflow: "hidden" }}
+              iconStyle={{ overflow: 'hidden' }}
               icon={
                 <Image
                   src={img_url}
@@ -64,25 +64,25 @@ const ExperienceTimeline = () => {
                 />
               }
             >
-              <h5 className="mb-2 ">{company}</h5>
-              <h4 className="opacity-75 font-normal">{role}</h4>
+              <h5 className="mb-2">{company}</h5>
+              <h4 className="font-normal opacity-75">{role}</h4>
               <p
                 className={`${
-                  isMobile && !isExpanded(company) ? styles.truncate : ""
+                  isMobile && !isExpanded(company) ? styles.truncate : ''
                 }`}
               >
                 {t(experience)}
               </p>
               {isMobile && (
                 <div
-                  className="mt-2 text-end cursor-pointer"
+                  className="mt-2 cursor-pointer text-end"
                   onClick={() => toggleExpand(company)}
                 >
-                  {isExpanded(company) ? "See less" : "See more"}
+                  {isExpanded(company) ? 'See less' : 'See more'}
                 </div>
               )}
             </VerticalTimelineElement>
-          )
+          ),
         )}
       </VerticalTimeline>
     </motion.div>

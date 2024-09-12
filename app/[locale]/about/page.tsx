@@ -1,25 +1,25 @@
-"use client";
-import PageContainer from "@/components/PageContainer/PageContainer";
-import { fadeInVariant, motion } from "@/motion/motionVariants";
-import { useTranslations } from "next-intl";
-import React, { Suspense, lazy } from "react";
+'use client';
+import PageContainer from '@/components/PageContainer/PageContainer';
+import { fadeInVariant, motion } from '@/motion/motionVariants';
+import { useTranslations } from 'next-intl';
+import React, { Suspense, lazy } from 'react';
 
-import styles from "@/assets/styles/pages/about.module.scss";
-import { Col, Row } from "react-bootstrap";
-import Image from "next/image";
-import ExperienceTimeline from "@/components/ExperienceTimeline/ExperienceTimeline";
-import Button from "@/components/AppButton";
-import ContactBanner from "@/components/ContactBanner/ContactBanner";
+import styles from '@/assets/styles/pages/about.module.scss';
+import { Col, Row } from 'react-bootstrap';
+import Image from 'next/image';
+import ExperienceTimeline from '@/components/ExperienceTimeline/ExperienceTimeline';
+import Button from '@/components/AppButton';
+import ContactBanner from '@/components/ContactBanner/ContactBanner';
 
-const TechStack = lazy(() => import("@/components/TechStack"));
+const TechStack = lazy(() => import('@/components/TechStack'));
 
 const About = () => {
-  const t = useTranslations("about_page");
+  const t = useTranslations('about_page');
 
   return (
     <PageContainer>
       <div className={styles.container}>
-        <h1>{t("title")}</h1>
+        <h1>{t('title')}</h1>
 
         {/*   About me */}
         <motion.div
@@ -32,10 +32,10 @@ const About = () => {
             <Col lg={6} md={6} sm={12} className={styles.aboutTextContainer}>
               <div>
                 <motion.h2 variants={fadeInVariant}>
-                  {t("about_me.title")}
+                  {t('about_me.title')}
                 </motion.h2>
                 <motion.p variants={fadeInVariant}>
-                  {t("about_me.description")} 🎯
+                  {t('about_me.description')} 🎯
                 </motion.p>
               </div>
             </Col>

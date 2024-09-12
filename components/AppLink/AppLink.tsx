@@ -1,16 +1,16 @@
-import React from "react";
-import styles from "./applink.module.scss";
-import { Link } from "@/navigation";
+import React from 'react';
+import styles from './applink.module.scss';
+import { Link } from '@/navigation';
 
 type LinkHref =
-  | "/"
-  | "/blog"
-  | "/about"
-  | "/portfolio"
-  | "/portfolio/websites"
-  | "/portfolio/apps"
-  | "/contacts"
-  | "/skills";
+  | '/'
+  | '/blog'
+  | '/about'
+  | '/portfolio'
+  | '/portfolio/websites'
+  | '/portfolio/apps'
+  | '/contacts'
+  | '/skills';
 
 interface AppLinkProps {
   label: string;
@@ -19,7 +19,7 @@ interface AppLinkProps {
 
 const AppLink: React.FC<AppLinkProps> = ({ label, href }) => {
   const getStyle = () => {
-    if (label.toLowerCase() === "read now") {
+    if (label.toLowerCase() === 'read now') {
       return `${styles.appLink} ${styles.readNow}`;
     }
 

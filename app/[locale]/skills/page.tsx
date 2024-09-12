@@ -1,17 +1,17 @@
-"use client";
-import PageContainer from "@/components/PageContainer/PageContainer";
-import { useTranslations } from "next-intl";
-import React from "react";
-import styles from "@/assets/styles/pages/skills.module.scss";
-import { Col, Row } from "react-bootstrap";
+'use client';
+import PageContainer from '@/components/PageContainer/PageContainer';
+import { useTranslations } from 'next-intl';
+import React from 'react';
+import styles from '@/assets/styles/pages/skills.module.scss';
+import { Col, Row } from 'react-bootstrap';
 import {
   containerVariant,
   fadeInSlideLeftVariant,
   fadeInVariant,
-  motion
-} from "@/motion/motionVariants";
-import Button from "@/components/AppButton";
-import Image from "next/image";
+  motion,
+} from '@/motion/motionVariants';
+import Button from '@/components/AppButton';
+import Image from 'next/image';
 
 const Skills = () => {
   const t = useTranslations();
@@ -102,7 +102,7 @@ const Skills = () => {
           <Col sm={12} md={12} lg={6} className={styles.softSkillsCol}>
             <motion.h2 variants={fadeInSlideLeftVariant}>Soft skills</motion.h2>
             <motion.p variants={fadeInSlideLeftVariant}>
-              {t("skills_page.soft_skills")}
+              {t('skills_page.soft_skills')}
             </motion.p>
           </Col>
           <Col sm={12} md={12} lg={6} className={styles.softSkillsImgCol}>

@@ -1,6 +1,6 @@
-import { Locale } from "@/locale.types";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { ReactNode } from "react";
+import { Locale } from '@/locale.types';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;

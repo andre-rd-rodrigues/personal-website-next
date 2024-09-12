@@ -1,26 +1,26 @@
 export const HEAD_ROUTES = {
-  "/": {
-    title: "homeTitle" // These are keys for your translation files
+  '/': {
+    title: 'homeTitle', // These are keys for your translation files
   },
-  "/about": {
-    title: "aboutTitle"
+  '/about': {
+    title: 'aboutTitle',
   },
-  "/sobre": {
-    title: "aboutTitle"
+  '/sobre': {
+    title: 'aboutTitle',
   },
-  "/portfolio": {
-    title: "portfolioTitle"
+  '/portfolio': {
+    title: 'portfolioTitle',
   },
-  "/portfólio": {
-    title: "portfolioTitle"
+  '/portfólio': {
+    title: 'portfolioTitle',
   },
-  "/contacts": {
-    title: "contactsTitle"
+  '/contacts': {
+    title: 'contactsTitle',
   },
-  "/contactos": {
-    title: "contactsTitle"
+  '/contactos': {
+    title: 'contactsTitle',
   },
-  "/skills": {
-    title: "skillsTitle"
-  }
+  '/skills': {
+    title: 'skillsTitle',
+  },
 };

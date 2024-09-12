@@ -1,7 +1,7 @@
-import React, { ReactNode } from "react";
-import { motion, Variants } from "framer-motion";
-import styles from "./pagecontainer.module.scss";
-import { containerVariant } from "@/motion/motionVariants";
+import React, { ReactNode } from 'react';
+import { motion, Variants } from 'framer-motion';
+import styles from './pagecontainer.module.scss';
+import { containerVariant } from '@/motion/motionVariants';
 
 interface PageContainerProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ interface PageContainerProps {
 
 const PageContainer: React.FC<PageContainerProps> = ({
   children,
-  className
+  className,
 }) => {
   return (
     <motion.main

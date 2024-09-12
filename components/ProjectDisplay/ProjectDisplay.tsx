@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import ImageZoomEffect from "@/components/ImageZoomEffect/ImageZoomEffect";
-import styles from "./projectdisplay.module.scss";
-import { Modal, ModalBody, ModalFooter } from "react-bootstrap";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import ReactGA from "react-ga4";
-import { EventActions, EventCategories } from "@/constants/analytics.constants";
+import React, { useState } from 'react';
+import ImageZoomEffect from '@/components/ImageZoomEffect/ImageZoomEffect';
+import styles from './projectdisplay.module.scss';
+import { Modal, ModalBody, ModalFooter } from 'react-bootstrap';
+import { Icon } from '@iconify/react/dist/iconify.js';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import ReactGA from 'react-ga4';
+import { EventActions, EventCategories } from '@/constants/analytics.constants';
 
 interface ProjectDisplayProps {
   imgSrc: string;
@@ -31,7 +31,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   description,
   techStack,
   href,
-  logo
+  logo,
 }) => {
   const t = useTranslations();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,7 +44,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
     ReactGA.event({
       category: EventCategories.USER_INTERACTION,
       action: EventActions.OPEN_PROJECT_DETAILS_MODAL,
-      label
+      label,
     });
   };
 
@@ -65,7 +65,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
         size="lg"
       >
         <div
-          className="flex justify-end bg-dark p-3 cursor-pointer hover:text-custom-yellow"
+          className="flex cursor-pointer justify-end bg-dark p-3 hover:text-custom-yellow"
           onClick={() => setIsModalOpen(false)}
         >
           <Icon icon="material-symbols-light:close" fontSize={22} />
@@ -82,28 +82,28 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
             />
           )}
 
-          <h4 className="text-center text-5xl mt-3 mb-8">{label}</h4>
+          <h4 className="mb-8 mt-3 text-center text-5xl">{label}</h4>
           <p>{t(description)}</p>
           <hr className="my-7" />
-          <p className="font-medium text-xl mb-4 flex gap-2">
+          <p className="mb-4 flex gap-2 text-xl font-medium">
             <Icon icon="radix-icons:stack" className="mt-1" />
             Tech Stack
           </p>
           <ul className="font-light">
-            <li className="mr-4 mb-2">
-              <span className="font-medium">Frontend:</span>{" "}
-              {techStack.frontend.join(", ")}
+            <li className="mb-2 mr-4">
+              <span className="font-medium">Frontend:</span>{' '}
+              {techStack.frontend.join(', ')}
             </li>
             {techStack?.backend && (
-              <li className="mr-4 mb-2">
-                <span className="font-medium">Backend:</span>{" "}
-                {techStack?.backend.join(", ")}
+              <li className="mb-2 mr-4">
+                <span className="font-medium">Backend:</span>{' '}
+                {techStack?.backend.join(', ')}
               </li>
             )}
             {techStack?.database && (
-              <li className="mr-4 mb-2">
-                <span className="font-medium">Database:</span>{" "}
-                {techStack?.database.join(", ")}
+              <li className="mb-2 mr-4">
+                <span className="font-medium">Database:</span>{' '}
+                {techStack?.database.join(', ')}
               </li>
             )}
           </ul>
@@ -114,13 +114,13 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
               ReactGA.event({
                 category: EventCategories.USER_INTERACTION,
                 action: EventActions.OPEN_PROJECT_GITHUB,
-                label
+                label,
               })
             }
             href={github}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-custom-yellow transition-all duration-100 ease-in"
+            className="transition-all duration-100 ease-in hover:text-custom-yellow"
           >
             <Icon icon="mdi:github" fontSize={25} className="mr-5" />
           </a>
@@ -133,15 +133,15 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
                   action: app
                     ? EventActions.OPEN_PROJECT_APP
                     : EventActions.OPEN_PROJECT_WEBSITE,
-                  label
+                  label,
                 })
               }
               href={website || app}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 font-normal hover:text-custom-yellow transition-all duration-100 ease-in"
+              className="flex items-center gap-1 font-normal transition-all duration-100 ease-in hover:text-custom-yellow"
             >
-              {website ? "Website" : "App"}
+              {website ? 'Website' : 'App'}
               <Icon icon="majesticons:open" />
             </a>
           )}

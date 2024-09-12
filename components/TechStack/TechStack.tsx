@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./techstack.module.scss";
-import Image from "next/image";
-import { techStack } from "@/data/info.data";
+import styles from './techstack.module.scss';
+import Image from 'next/image';
+import { techStack } from '@/data/info.data';
 
 const TechStack = () => {
   return (

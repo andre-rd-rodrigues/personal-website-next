@@ -1,33 +1,33 @@
-import AppNavbar from "@/components/AppNavbar/AppNavbar";
-import "./globals.scss";
+import AppNavbar from '@/components/AppNavbar/AppNavbar';
+import './globals.scss';
 
-import { blacker, italiana, jost, moniqa } from "@/assets/fonts";
+import { blacker, italiana, jost, moniqa } from '@/assets/fonts';
 
-import Footer from "@/components/Footer/Footer";
-import { getMetadata } from "@/metadata/metadata.utils";
-import { Metadata } from "next";
-import { MetadataProps } from "@/metadata/types";
-import { getTranslations } from "next-intl/server";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import Footer from '@/components/Footer/Footer';
+import { getMetadata } from '@/metadata/metadata.utils';
+import { Metadata } from 'next';
+import { MetadataProps } from '@/metadata/types';
+import { getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import Analytics from "@/components/Analytics";
-import AnalyticsBanner from "@/components/AnalyticsBanner";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import Analytics from '@/components/Analytics';
+import AnalyticsBanner from '@/components/AnalyticsBanner';
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: MetadataProps): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return getMetadata({
-    title: t("homeTitle"),
-    description: t("description")
+    title: t('homeTitle'),
+    description: t('description'),
   });
 }
 
 const RootLayout = ({
   children,
-  params: { locale }
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };

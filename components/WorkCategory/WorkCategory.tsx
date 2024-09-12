@@ -1,22 +1,22 @@
-import React from "react";
-import ImageZoomEffect from "@/components/ImageZoomEffect/ImageZoomEffect";
-import { motion, useScroll, useTransform } from "framer-motion";
-import styles from "./workcategory.module.scss";
-import { Link } from "@/navigation";
+import React from 'react';
+import ImageZoomEffect from '@/components/ImageZoomEffect/ImageZoomEffect';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import styles from './workcategory.module.scss';
+import { Link } from '@/navigation';
 
 interface Props {
-  category: "Websites" | "Apps" | "Editorial";
+  category: 'Websites' | 'Apps' | 'Editorial';
   order: number;
   src: string;
 }
 
 const WorkCategory = ({ category, order, src }: Props) => {
   const categoryLink =
-    category === "Editorial"
-      ? "https://www.blog.andrerodrigo.com"
+    category === 'Editorial'
+      ? 'https://www.blog.andrerodrigo.com'
       : (`/portfolio/${category.toLowerCase()}` as
-          | "/portfolio/websites"
-          | "/portfolio/apps");
+          | '/portfolio/websites'
+          | '/portfolio/apps');
 
   const { scrollY } = useScroll();
 
@@ -28,7 +28,7 @@ const WorkCategory = ({ category, order, src }: Props) => {
       <ImageZoomEffect height="40vw" maxHeight="300px" src={src} />
       <motion.div
         style={{
-          y: yPosUp
+          y: yPosUp,
         }}
         className={styles.text}
       >

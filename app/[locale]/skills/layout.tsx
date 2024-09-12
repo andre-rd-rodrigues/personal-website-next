@@ -1,17 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { ReactNode } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ReactNode } from 'react';
 
-import { Metadata, MetadataProps, getMetadata } from "@/metadata";
-import { getTranslations } from "next-intl/server";
+import { Metadata, MetadataProps, getMetadata } from '@/metadata';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
-  params: { locale }
+  params: { locale },
 }: MetadataProps): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return getMetadata({
-    title: t("skillsTitle"),
-    description: t("description")
+    title: t('skillsTitle'),
+    description: t('description'),
   });
 }
 

@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import styles from "./appbutton.module.scss";
+import React, { FC } from 'react';
+import styles from './appbutton.module.scss';
 
 interface AppButtonProps {
   label?: string;

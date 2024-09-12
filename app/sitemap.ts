@@ -1,6 +1,6 @@
-import { locales, pathnames } from "@/navigation";
-import { MetadataRoute } from "next";
-const host = "https://www.andrerodrigo.com";
+import { locales, pathnames } from '@/navigation';
+import { MetadataRoute } from 'next';
+const host = 'https://www.andrerodrigo.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   function getUrl(pathname: string, locale: string) {
@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     //@ts-expect-error expected
     const path = localePath || pathnames[pathname] || pathname;
 
-    return `${host}/${locale}${path === "/" ? "" : path}`;
+    return `${host}/${locale}${path === '/' ? '' : path}`;
   }
 
   return Object.keys(pathnames).flatMap((pathname) => {
@@ -18,9 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       alternates: {
         languages: Object.fromEntries(
-          locales.map((loc) => [loc, getUrl(pathname, loc)])
-        )
-      }
+          locales.map((loc) => [loc, getUrl(pathname, loc)]),
+        ),
+      },
     }));
   });
 }
