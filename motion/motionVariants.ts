@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const containerVariant = {
   hidden: {
@@ -34,7 +34,7 @@ const workPageHeaderContent = {
     opacity: 1,
     transition: {
       duration: 1.2,
-      delay: 1.3
+      delay: 0.2
     }
   }
 };
@@ -55,6 +55,8 @@ export {
   containerVariant,
   fadeInVariant,
   motion,
+  useScroll,
   homepageDelayVariant,
-  workPageHeaderContent
+  workPageHeaderContent,
+  useTransform
 };

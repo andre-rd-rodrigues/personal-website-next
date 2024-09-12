@@ -29,16 +29,18 @@ const Websites = () => {
         </motion.p>
       </header>
 
-      <motion.div
-        variants={workPageHeaderContent}
-        initial="hidden"
-        animate="visible"
-        className={styles.showCaseContainer}
-      >
+      <div className={styles.showCaseContainer}>
         {projects.map((project, i) => (
-          <ProjectDisplay key={i} {...project} />
+          <motion.div
+            variants={workPageHeaderContent}
+            initial="hidden"
+            animate="visible"
+            key={i}
+          >
+            <ProjectDisplay key={i} {...project} />
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Next category button */}
       <Link href={`/portfolio/apps`} className={styles.nextCategoryContainer}>
