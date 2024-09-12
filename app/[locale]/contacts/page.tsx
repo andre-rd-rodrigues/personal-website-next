@@ -1,19 +1,17 @@
 "use client";
-import React from "react";
+import styles from "@/assets/styles/pages/contact.module.scss";
 import { Icon } from "@iconify/react";
 import { motion } from "framer-motion";
 import { Col, Row } from "react-bootstrap";
-import styles from "@/assets/styles/pages/contact.module.scss";
 
 import PageContainer from "@/components/PageContainer/PageContainer";
-import { useTranslations } from "next-intl";
 import CONTACTS from "@/constants/contacts.constants";
 import {
   containerVariant,
-  fadeInSlideLeftVariant,
   fadeInVariant,
   rotateScaleVariant
 } from "@/motion/motionVariants";
+import { useTranslations } from "next-intl";
 
 const Contacts = () => {
   const t = useTranslations("contacts_page");
@@ -48,7 +46,7 @@ const Contacts = () => {
             <h3>{t("social")}</h3>
             <div>
               <ul>
-                <motion.li variants={rotateScaleVariant}>
+                <motion.li variants={rotateScaleVariant} whileHover="hover">
                   <a href={CONTACTS.LINKTREE} target="_blank" rel="noreferrer">
                     <Icon
                       icon="simple-icons:linktree"
@@ -56,12 +54,12 @@ const Contacts = () => {
                     />
                   </a>
                 </motion.li>
-                <motion.li variants={rotateScaleVariant}>
+                <motion.li variants={rotateScaleVariant} whileHover="hover">
                   <a href={CONTACTS.INSTAGRAM} target="_blank" rel="noreferrer">
                     <Icon icon="mdi:instagram" className={styles.social_icon} />
                   </a>
                 </motion.li>
-                <motion.li variants={rotateScaleVariant}>
+                <motion.li variants={rotateScaleVariant} whileHover="hover">
                   <a href={CONTACTS.LINKEDIN} target="_blank" rel="noreferrer">
                     <Icon icon="mdi:linkedin" className={styles.social_icon} />
                   </a>

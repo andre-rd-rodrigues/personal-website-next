@@ -99,6 +99,45 @@ const rotateScaleVariant = {
       duration: 0.8,
       ease: "easeOut"
     }
+  },
+  hover: {
+    rotate: 360,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut"
+    }
+  }
+};
+
+const slowRotateVariant = {
+  rotate: [0, 360], // Rotate from 0 to 360 degrees
+  transition: {
+    duration: 8, // Duration of one full rotation (in seconds)
+    ease: "linear", // Linear easing to ensure constant speed
+    repeat: Infinity // Infinite loop for continuous rotation
+  }
+};
+
+const scaleSpringVariant = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8 // Start slightly smaller
+  },
+  visible: {
+    opacity: 1,
+    scale: 1, // Scale to normal size
+    transition: {
+      type: "spring",
+      stiffness: 200, // Controls the spring tightness
+      damping: 20 // Controls the bounce of the spring
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.8, // Scale down on exit
+    transition: {
+      duration: 0.4 // Smooth exit duration
+    }
   }
 };
 
@@ -112,5 +151,7 @@ export {
   useTransform,
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
-  rotateScaleVariant
+  rotateScaleVariant,
+  slowRotateVariant,
+  scaleSpringVariant
 };
