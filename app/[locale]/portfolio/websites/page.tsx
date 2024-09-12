@@ -1,18 +1,18 @@
-"use client";
-import PageContainer from "@/components/PageContainer/PageContainer";
-import React from "react";
+'use client';
+import PageContainer from '@/components/PageContainer/PageContainer';
+import React from 'react';
 import {
   containerVariant,
   fadeInSlideInVariant,
   motion,
-  workPageHeaderContent
-} from "@/motion/motionVariants";
-import styles from "@/assets/styles/pages/portfoliocategorypage.module.scss";
-import { categories, projects as projects_data } from "@/data/info.data";
-import { useTranslations } from "next-intl";
-import ProjectDisplay from "@/components/ProjectDisplay/ProjectDisplay";
-import { Link } from "@/navigation";
-import { Icon } from "@iconify/react";
+  workPageHeaderContent,
+} from '@/motion/motionVariants';
+import styles from '@/assets/styles/pages/portfoliocategorypage.module.scss';
+import { categories, projects as projects_data } from '@/data/info.data';
+import { useTranslations } from 'next-intl';
+import ProjectDisplay from '@/components/ProjectDisplay/ProjectDisplay';
+import { Link } from '@/navigation';
+import { Icon } from '@iconify/react';
 
 const Websites = () => {
   const t = useTranslations();
