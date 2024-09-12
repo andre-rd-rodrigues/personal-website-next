@@ -7,9 +7,10 @@
   padding: 15px var(--padding-y);
   color: $white;
   font-size: var(--fs-m);
+  z-index: 100;
   a {
     position: relative;
-    @include hover_underline($white);
+    margin: 0 14px;
   }
   div {
     font-weight: 300;

@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import {
   containerVariant,
   fadeInVariant,
+  getAttentionVariant,
   motion
 } from "@/motion/motionVariants";
 
@@ -30,12 +31,9 @@ const Testimonials = () => {
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
       className={styles.container}
     >
-      <motion.div variants={fadeInVariant}>
-        <h1>{t("title")}</h1>
-      </motion.div>
+      <motion.h1 variants={fadeInVariant}>{t("title")}</motion.h1>
       <motion.div variants={fadeInVariant}>
         <Slider {...settings}>
           {testimonials.map((item, index) => (
@@ -45,7 +43,15 @@ const Testimonials = () => {
       </motion.div>
       <div className={styles.letsTalk}>
         <p>{t("lets_talk.title")}</p>
-        <AppLink label={t("lets_talk.cta")} href="/contacts" />
+        <motion.div
+          variants={getAttentionVariant}
+          initial="animate"
+          animate="animate"
+          whileHover="hover"
+          className="mt-3"
+        >
+          <AppLink label={t("lets_talk.cta")} href="/contacts" />
+        </motion.div>
       </div>
     </motion.div>
   );

@@ -110,48 +110,78 @@ const rotateScaleVariant = {
 };
 
 const slowRotateVariant = {
-  rotate: [0, 360], // Rotate from 0 to 360 degrees
+  rotate: [0, 360],
   transition: {
-    duration: 8, // Duration of one full rotation (in seconds)
-    ease: "linear", // Linear easing to ensure constant speed
-    repeat: Infinity // Infinite loop for continuous rotation
+    duration: 8,
+    ease: "linear",
+    repeat: Infinity
   }
 };
 
 const scaleSpringVariant = {
   hidden: {
     opacity: 0,
-    scale: 0.8 // Start slightly smaller
+    scale: 0.8
   },
   visible: {
     opacity: 1,
-    scale: 1, // Scale to normal size
+    scale: 1,
     transition: {
       type: "spring",
-      stiffness: 200, // Controls the spring tightness
-      damping: 20 // Controls the bounce of the spring
+      stiffness: 200,
+      damping: 20
     }
   },
   exit: {
     opacity: 0,
-    scale: 0.8, // Scale down on exit
+    scale: 0.8,
     transition: {
-      duration: 0.4 // Smooth exit duration
+      duration: 0.4
+    }
+  }
+};
+
+const getAttentionVariant = {
+  animate: {
+    y: [0, -10, 0],
+    rotate: [0, 5, -5, 0],
+    transition: {
+      y: {
+        repeat: Infinity,
+        duration: 0.6,
+        ease: "easeInOut",
+        repeatDelay: 1
+      },
+      rotate: {
+        repeat: Infinity,
+        duration: 0.6,
+        ease: "easeInOut",
+        repeatDelay: 1
+      }
+    }
+  },
+  hover: {
+    y: 0,
+    rotate: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut"
     }
   }
 };
 
 export {
   containerVariant,
-  fadeInVariant,
-  motion,
-  useScroll,
-  homepageDelayVariant,
-  workPageHeaderContent,
-  useTransform,
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
+  fadeInVariant,
+  getAttentionVariant,
+  homepageDelayVariant,
+  motion,
   rotateScaleVariant,
+  scaleSpringVariant,
   slowRotateVariant,
-  scaleSpringVariant
+  useScroll,
+  useTransform,
+  workPageHeaderContent
 };
