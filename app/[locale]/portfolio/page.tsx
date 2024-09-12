@@ -1,9 +1,5 @@
 "use client";
-import {
-  fadeInSlideInVariant,
-  fadeInVariant,
-  motion
-} from "@/motion/motionVariants";
+import { fadeInSlideInVariant, motion } from "@/motion/motionVariants";
 
 import PageContainer from "@/components/PageContainer/PageContainer";
 import WorkCategory from "@/components/WorkCategory/WorkCategory";
