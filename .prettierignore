@@ -1,0 +1,13 @@
+dist
+node_modules
+.next
+build
+scripts
+.next
+.cache
+package-lock.json
+public
+node_modules
+next-env.d.ts
+next.config.ts
+yarn.lock
