@@ -41,7 +41,7 @@ const ImageZoomEffect: React.FC<ImageZoomEffectProps> = ({
   return (
     <div
       style={{ ...style, height, width, maxHeight }}
-      className={`${isMobile ? styles.wrapperMobile : styles.wrapper}`}
+      className={`${isMobile ? styles.wrapperMobile : styles.wrapper} rounded-lg`}
     >
       <div
         className={`${styles.image} ${overlay && styles.overlay}`}

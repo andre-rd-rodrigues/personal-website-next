@@ -20,7 +20,7 @@ const WorkCategory = ({ category, order, src }: Props) => {
 
   const { scrollY } = useScroll();
 
-  const yPosUp = useTransform(scrollY, [0, 500], [0, -50]); // Moves elements upwards on scroll
+  const yPosUp = useTransform(scrollY, [0, 500], [0, -70]); // Moves elements upwards on scroll
 
   return (
     //@ts-expect-error blog pathname is not defined

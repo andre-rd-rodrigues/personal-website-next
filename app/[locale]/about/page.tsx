@@ -43,7 +43,7 @@ const About = () => {
               <Image
                 src="/images/profile.png"
                 alt="André Rodrigues - Web Developer"
-                className="mx-auto"
+                className="mx-auto rounded-lg"
                 width={330}
                 height={0}
               />

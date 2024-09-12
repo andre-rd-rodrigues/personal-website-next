@@ -45,7 +45,6 @@ const Testimonials = () => {
         <p>{t('lets_talk.title')}</p>
         <motion.div
           variants={getAttentionVariant}
-          initial="animate"
           animate="animate"
           whileHover="hover"
           className="mt-3"
