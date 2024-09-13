@@ -1,5 +1,5 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
-.container {
-  @include button($yellow);
+.btn {
+  @include button();
 }

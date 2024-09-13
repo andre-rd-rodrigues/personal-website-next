@@ -53,14 +53,13 @@ const About = () => {
           {/* Experience */}
           <div className={styles.section}>
             <ExperienceTimeline />
+            <Button downloadCV className="mt-5 text-center" />
           </div>
 
           {/* Tech stack */}
           <Suspense fallback={<p>Loading...</p>}>
             <div className={styles.section}>{<TechStack />}</div>
           </Suspense>
-
-          <Button downloadCV className="text-end" />
         </motion.div>
 
         <ContactBanner />

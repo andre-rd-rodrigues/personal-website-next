@@ -1,5 +1,5 @@
 //Colors
-$dark: #1c1c1c;
+$dark: #161616;
 $grey: #a6a6a6;
 $light-grey: #f3f3f3;
 $white: #ffffff;
@@ -17,19 +17,48 @@ $breaking-point-xs: 380px;
 $breaking-point-xxs: 330px;
 
 //Shapes
-@mixin button($color) {
-  background: linear-gradient($color 0 0) right / var(--p, 0) no-repeat;
-  transition: 0.4s, background-position 0s;
-  text-transform: uppercase;
-  border: 1px solid $color;
-  padding: 0.4rem 1.5rem;
-  color: $color;
-  letter-spacing: 2px;
+@mixin button() {
+  padding: 15px 30px;
+  border: none;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #6f8af6, #6e54f0);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: var(--fs-m);
 
-  &:hover {
+  &::before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    border-radius: 30px;
+    background-color: #000000c1;
+    z-index: -1;
+    transition: 200ms;
+  }
+  &::after {
+    content: attr(data);
+    font-size: 16px;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 200ms;
+  }
+  &:hover::before {
+    opacity: 0%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  &:hover::after {
     color: white;
-    --p: 100%;
-    background-position: left;
   }
 }
 
@@ -49,7 +78,9 @@ $breaking-point-xxs: 330px;
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 2px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s,
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s,
     letter-spacing 0.3s;
   &:hover {
     color: $color;

@@ -1,4 +1,4 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   text-align: center;
@@ -9,9 +9,10 @@
     font-family: Jost, sans-serif;
     text-transform: uppercase;
     font-size: var(--fs-m);
+    font-family: var(--font-jost);
   }
 }
 
 .button {
-  @include button($yellow);
+  @include button();
 }

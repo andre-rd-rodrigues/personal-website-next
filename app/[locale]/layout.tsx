@@ -5,14 +5,15 @@ import { blacker, italiana, jost, moniqa } from '@/assets/fonts';
 
 import Footer from '@/components/Footer/Footer';
 import { getMetadata } from '@/metadata/metadata.utils';
-import { Metadata } from 'next';
 import { MetadataProps } from '@/metadata/types';
-import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import Analytics from '@/components/Analytics';
 import AnalyticsBanner from '@/components/AnalyticsBanner';
+import BgAnimation from '@/components/BgAnimation';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export async function generateMetadata({
   params: { locale },
@@ -59,6 +60,7 @@ const RootLayout = ({
           <Analytics />
         </NextIntlClientProvider>
       </body>
+      <BgAnimation />
     </html>
   );
 };

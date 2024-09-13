@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 :root {
   --fs-xxl: clamp(3.5rem, 10vw, 5rem);
@@ -34,6 +34,10 @@ a {
 h1 {
   font-family: var(--font-italiana) !important;
 }
+h2 {
+  font-family: var(--fs-jost) !important;
+}
+
 .offcanvas-custom {
   width: 200px !important;
   text-align: end;

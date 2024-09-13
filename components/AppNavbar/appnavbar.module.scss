@@ -1,26 +1,28 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .nav {
-  top: 0px;
-  padding: 15px var(--padding-y);
+  padding: 6px 10px;
   background-color: $dark;
   justify-content: space-between;
   font-family: var(--font-sans);
-  background-color: #191919c6;
-  backdrop-filter: blur(5px);
+  background-color: #191919a9;
+  backdrop-filter: blur(10px);
   animation: slideFadeIn 0.8s ease-in-out forwards;
+  border-radius: 70px;
+  scale: 0.9;
 
   .title,
   p,
   a {
     color: $white;
+    text-transform: uppercase;
   }
 
-  button[aria-controls="offcanvas-container"] {
+  button[aria-controls='offcanvas-container'] {
     border: none;
   }
 
-  a[class="nav-link active"] {
+  a[class='nav-link active'] {
     color: white !important;
     background-image: white !important;
     background-position: 100% 100% !important; /*OR bottom right*/
@@ -31,8 +33,8 @@
 .logo {
   display: flex;
   align-items: center;
-  div[id="personal_picture"] {
-    background: url("/images/profile_avatar.jpg") center center no-repeat;
+  div[id='personal_picture'] {
+    background: url('/images/profile_avatar.jpg') center center no-repeat;
     background-size: cover !important;
     width: 50px;
     height: 50px;
@@ -54,7 +56,7 @@
     display: flex;
     align-items: center;
     &::before {
-      content: "";
+      content: '';
       display: flex;
       height: 1px;
       width: 50px;
@@ -106,7 +108,7 @@
 
 @keyframes slideFadeIn {
   0% {
-    top: -100px; /* Off the screen */
+    top: -150px; /* Off the screen */
     opacity: 0; /* Fully transparent */
   }
   100% {
