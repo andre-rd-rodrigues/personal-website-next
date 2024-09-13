@@ -18,6 +18,7 @@ $breaking-point-xxs: 330px;
 
 //Shapes
 @mixin button() {
+  width: 100%;
   padding: 15px 30px;
   border: none;
   outline: none;
@@ -30,6 +31,15 @@ $breaking-point-xxs: 330px;
   font-weight: 300;
   cursor: pointer;
   font-size: var(--fs-m);
+
+  svg {
+    transition: 0.5s var(--ease-smooth);
+  }
+  &:hover {
+    svg {
+      transform: translateX(-10px);
+    }
+  }
 
   &::before {
     content: '';
@@ -50,7 +60,7 @@ $breaking-point-xxs: 330px;
     color: transparent;
     transition: 200ms;
   }
-  &:hover::before {
+  /*  &:hover::before {
     opacity: 0%;
     top: 0px;
     right: 0px;
@@ -59,7 +69,7 @@ $breaking-point-xxs: 330px;
   }
   &:hover::after {
     color: white;
-  }
+  } */
 }
 
 @mixin read_button {

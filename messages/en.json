@@ -17,7 +17,13 @@
   },
 
   "portfolio": {
-    "title": "Portfolio"
+    "title": "Portfolio",
+
+    "categories": {
+      "websites": "Cutting-edge website designs that blend innovation with user-centric solutions to boost engagement and business growth.",
+      "apps": "Apps offering seamless user experiences across devices with optimal performance and reliability.",
+      "editorial": "My personal thought-provoking space, that challenges me into inspire new ideas, and provide insights into trending topics."
+    }
   },
 
   "websites_category_page": {

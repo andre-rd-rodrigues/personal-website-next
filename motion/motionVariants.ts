@@ -54,15 +54,14 @@ const fadeInVariant = {
 const fadeInSlideInVariant = {
   hidden: {
     opacity: 0,
-    y: -50,
+    y: 60,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
-      duration: 1.5,
-      bounce: 0.5,
+      duration: 1,
+      ease: [0.35, 0, 0, 1], // ease-smooth
     },
   },
 };

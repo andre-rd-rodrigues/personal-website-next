@@ -21,7 +21,7 @@ const ContactBanner = () => {
         <Icon
           fontSize={20}
           icon="streamline:mail-send-email-message"
-          className="d-inline mr-3 -translate-y-0.5"
+          className="d-inline mr-3"
         />
 
         {t('banner.cta')}

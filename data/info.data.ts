@@ -12,20 +12,16 @@ const CONTACTS = [
   },
 ];
 
-const works_categories = [
+const WORK_CATEGORIES = [
   {
     name: 'Websites',
-
-    src: '/images/worksHomepage/websites.png',
+    description: 'categories.websites',
+    src: '/images/portfolio/websites.png',
   },
   {
     name: 'Apps',
-
-    src: '/images/worksHomepage/apps.png',
-  },
-  {
-    name: 'Editorial',
-    src: '/images/worksHomepage/editorial.png',
+    description: 'categories.apps',
+    src: '/images/portfolio/apps.png',
   },
 ];
 
@@ -468,7 +464,7 @@ const techStack = [
 export {
   experienceTimeline,
   CONTACTS,
-  works_categories,
+  WORK_CATEGORIES,
   categories,
   projects,
   testimonials,

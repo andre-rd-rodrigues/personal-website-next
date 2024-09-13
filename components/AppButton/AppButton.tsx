@@ -1,14 +1,24 @@
+import { Icon } from '@iconify/react';
 import { FC } from 'react';
 import styles from './appbutton.module.scss';
-import { Icon } from '@iconify/react';
 
 interface AppButtonProps {
   label?: string;
   downloadCV?: boolean;
   className?: string;
+  icon?: {
+    icon: string;
+    fontSize?: number;
+    className?: string;
+  };
 }
 
-const AppButton: FC<AppButtonProps> = ({ label, downloadCV, className }) => {
+const AppButton: FC<AppButtonProps> = ({
+  label,
+  downloadCV,
+  className,
+  icon,
+}) => {
   if (downloadCV) {
     return (
       <div className={className}>
@@ -29,7 +39,10 @@ const AppButton: FC<AppButtonProps> = ({ label, downloadCV, className }) => {
   }
   return (
     <div className={styles.container}>
-      <button className={styles.btn}>{label}</button>
+      <button className={styles.btn}>
+        {icon && <Icon {...icon} />}
+        {label}
+      </button>
     </div>
   );
 };

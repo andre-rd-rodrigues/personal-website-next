@@ -16,6 +16,8 @@
   --padding-root-y: 0 var(--padding-y);
 
   --page-max-width: 1600px;
+
+  --ease-smooth: cubic-bezier(0.35, 0, 0, 1);
 }
 
 body {
@@ -26,7 +28,7 @@ body {
 
 p,
 a {
-  font-weight: 300;
+  font-weight: 200;
   font-size: var(--fs-m);
   white-space: break-spaces;
 }
@@ -35,7 +37,8 @@ h1 {
   font-family: var(--font-italiana) !important;
 }
 h2 {
-  font-family: var(--fs-jost) !important;
+  font-family: var(--fs-sans) !important;
+  font-weight: 300;
 }
 
 .offcanvas-custom {
