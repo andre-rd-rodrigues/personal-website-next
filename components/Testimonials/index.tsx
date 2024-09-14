@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
-import { Icon } from '@iconify/react';
+
 import {
   containerVariant,
+  fadeInSlideInVariant,
   fadeInVariant,
   getAttentionVariant,
   motion,
@@ -14,9 +15,10 @@ import styles from './testimonials.module.scss';
 import AppLink from '../AppLink';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { testimonials } from '@/data/info.data';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import SectionTitle from '../SectionTitle';
+import { TESTIMONIALS } from './testimonials.constants';
 
 const Testimonials = () => {
   const t = useTranslations('testimonials');
@@ -33,10 +35,10 @@ const Testimonials = () => {
       whileInView="visible"
       className={styles.container}
     >
-      <motion.h1 variants={fadeInVariant}>{t('title')}</motion.h1>
+      <SectionTitle title={t('title')} />
       <motion.div variants={fadeInVariant}>
         <Slider {...settings}>
-          {testimonials.map((item, index) => (
+          {TESTIMONIALS.map((item, index) => (
             <Testimonial t={t} key={index} {...item} />
           ))}
         </Slider>
@@ -63,7 +65,6 @@ interface TestimonialProps {
   client_details: string;
   picture_path: string;
   review: string;
-  project_link?: string;
   t: (text: string) => ReactNode;
 }
 
@@ -72,19 +73,21 @@ const Testimonial: React.FC<TestimonialProps> = ({
   client_details,
   picture_path,
   review,
-  project_link,
   t,
 }) => (
-  <div id="testimonials" className={styles.testimonialContainer}>
-    <a href={project_link} rel="noreferrer" target="_blank">
-      <Icon icon="ri:double-quotes-l" className={styles.quotation} />
+  <motion.div
+    variants={fadeInSlideInVariant}
+    id="testimonials"
+    className={`${styles.testimonialContainer} border-1 rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-8 backdrop-blur-[40px]`}
+  >
+    <div className="d-flex h-full flex-col justify-between">
       <p className={styles.testimonialReview}>{t(review)}</p>
       <div className={styles.testimonialClientContainer}>
         <div>
-          <h5>{client_name}</h5>
-          <p>{t(client_details)}</p>
+          <h5 className="text-xl font-extralight">{client_name}</h5>
+          <p className="text-sm">{t(client_details)}</p>
         </div>
-        <div className="relative h-28 w-28 overflow-hidden">
+        <div className="relative mt-4 h-20 w-20 overflow-hidden">
           <Image
             src={picture_path}
             alt="Personal Picture"
@@ -95,6 +98,6 @@ const Testimonial: React.FC<TestimonialProps> = ({
           />
         </div>
       </div>
-    </a>
-  </div>
+    </div>
+  </motion.div>
 );

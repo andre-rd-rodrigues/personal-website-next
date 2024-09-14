@@ -5,7 +5,7 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "brand_label": "Web Developer",
-    "testimonials": "Testimonials"
+    "testimonials": "testimonials"
   },
 
   "homepage": {
@@ -111,49 +111,52 @@
   },
 
   "testimonials": {
-    "title": "Warm-hearted testimonials",
+    "title": "testimonials",
     "lets_talk": {
       "title": "Yours can be next!",
       "cta": "lets talk"
     },
-    "pedro": {
-      "details": "Entrepreneur",
-      "review": "André developed excellent branding work for my business, both the process and the result were outstanding! I highly recommend his work."
+    "cdeff": {
+      "details": "Sports Club",
+      "review": "André developed our website and we are very pleased with the final result! The design is modern and appealing, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. We definitely recommend his work!"
+    },
+    "barbara": {
+      "details": "Lawyer",
+      "review": "André developed my website and I couldn't be happier with the result! The design is modern and professional, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. His work comes with my highest recommendation!"
     },
     "sofia": {
-      "details": "Doctor",
-      "review": "The work developed by André exceeded our expectations! His empathy and creativity won us over in the first meeting and since then we've been continuously positively surprised. Now we count on him for future RIMA editions!"
+      "details": "Coordinator | Doctor",
+      "review": "André created a website for our General and Family Medicine Interns Meeting and it exceeded our expectations! His empathy and creativity won us over in the first meeting and since then we've been continuously positively surprised. Now we count on him for future RIMA editions!"
     },
-
     "ana": {
       "details": "Product Designer",
       "review": "I had the pleasure of working with André, witnessing his expertise as a Frontend Engineer. In the dynamic setting of an early-stage startup, working with a compact design team, André not only thrived but was an unwavering support to our team. His human qualities and attention to detail is a gem in our industry, and I'm confident he'll succeed in any challenge ahead!"
     },
-
+    "nkem": {
+      "details": "Software Engineer",
+      "review": "I had the privilege of working with André as part of a Frontend development team, and he is a great person to work with. He stands out for his commitment and exceptional problem solving skills. André always goes above and beyond, with a positive attitude that inspired the team and pushed us to meet our targets!"
+    },
     "anaJardim": {
       "details": "Psychologist",
       "review": "I'm so grateful for André Rodrigues' exceptional work on my psychology website. His care for my vision and professional expertise shine through the minimalist design. A true collaborator who brought my perspectives to life seamlessly. Thank you, André!"
     },
+
     "vlad": {
-      "details": "Web Developer",
+      "details": "Senior Developer",
       "review": "I’ve had the pleasure of collaborating with Andre Rodrigues and I am continually impressed by his exceptional communication skills and remarkable ability to grasp complex topics with ease. Andre’s proactive nature to exceed expectations is not just a testament to his work ethic, but also a significant advantage for our entire team."
     },
     "rafa": {
-      "details": "Web Developer",
+      "details": "Software Engineering Manager",
       "review": "André developed my website, IT Studios. His modern and minimalist design, with special attention to the user experience, made the website highly intuitive. I couldn't be more pleased with the final result. If you want to create an appealing and functional website, I highly recommend his work!"
     },
     "ahmad": {
-      "details": "Web Developer",
-      "review": "Andre is the kind of programmer any team would be lucky to have. His combination of technical know-how, teamwork, and a knack for simplifying complex ideas is rare. I would recommend him for any frontend development role."
+      "details": "Software Engineering Manager",
+      "review": "Working with Andre as his team lead was a real pleasure. He's a standout developer, with curiosity, bringing automation and always up for new challenges with great analysis skills to ensure longevity. His combination of technical know-how, teamwork, and a knack for simplifying complex ideas is rare. I would recommend him for any frontend development role."
     },
 
     "doart": {
       "details": "Artist",
-      "review": "I want to give a special thank you to André for the work he has done! If you have the opportunity, visit his page and see his amazing work, it's definitely worth it."
-    },
-    "patricia": {
-      "details": "Artist",
-      "review": "André develops spectacular work! He is a great talent."
+      "review": "I want to give a special thank you to André for the work he has done on my album cover and logo! Make sure to check out his website to view his incredible portfolio — you won't be disappointed!"
     }
   },
 

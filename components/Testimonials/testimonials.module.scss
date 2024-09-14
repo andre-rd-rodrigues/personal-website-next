@@ -1,11 +1,4 @@
-@import "assets/styles/mixins";
-
-.container {
-  h1 {
-    margin-bottom: 0 !important;
-  }
-}
-@include title_transparent;
+@import 'assets/styles/mixins';
 
 .dots {
   bottom: -50px;
@@ -13,19 +6,16 @@
   li button::before {
     color: white !important;
   }
-  li[class="slick-active"] button::before {
+  li[class='slick-active'] button::before {
     color: white !important;
   }
 }
 
 //Testimonial
 .testimonialContainer {
-  margin: auto;
-  padding: 50px 60px;
-  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
   max-width: 600px;
-  text-align: justify;
-  @include hover_scale(1.05, 0.3s);
 }
 
 .testimonialClientContainer {
@@ -42,11 +32,6 @@
   }
 }
 
-.quotation {
-  color: $yellow;
-  font-size: var(--fs-xl-l);
-  transform: translateX(-45px);
-}
 .letsTalk {
   margin-top: 30px;
   text-align: center;

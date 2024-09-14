@@ -2,7 +2,7 @@ export const testimonials_sider = {
   speed: 1500,
   autoplaySpeed: 7000,
   autoplay: true,
-  className: "center",
+  className: 'center',
   infinite: true,
   draggable: true,
   dots: false,
@@ -14,8 +14,8 @@ export const testimonials_sider = {
       settings: {
         slidesToShow: 1,
         arrows: false,
-        autoplaySpeed: 9000
-      }
-    }
-  ]
+        autoplaySpeed: 9000,
+      },
+    },
+  ],
 };

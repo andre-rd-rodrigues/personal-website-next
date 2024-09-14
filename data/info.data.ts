@@ -217,69 +217,6 @@ const categories = {
   },
 };
 
-const testimonials = [
-  {
-    review: 'cdeff.review',
-    picture_path: '/images/testimonials/cdeff.jpg',
-    client_name: 'Clube Desportivo Escola Francisco Franco',
-    client_details: 'cdeff.details',
-    project_link: 'https://www.cdeff.com',
-  },
-  {
-    picture_path: '/images/testimonials/anaJardim.jpg',
-    client_name: 'Ana Jardim',
-    review: 'anaJardim.review',
-    client_details: 'anaJardim.details',
-    project_link: 'https://www.acarolinajardim.com',
-  },
-  {
-    review: 'sofia.review',
-    picture_path: '/images/testimonials/sofia.jpg',
-    client_name: 'Sofia Pimenta',
-    client_details: 'sofia.details',
-    project_link: 'https://kaleidoscopic-cheesecake-db7480.netlify.app/',
-  },
-  {
-    picture_path: '/images/testimonials/ferreira.jpg',
-    client_name: 'Pedro Ferreira',
-    review: 'pedro.review',
-    client_details: 'pedro.details',
-    project_link: 'https://www.instagram.com/p/CS7ZtNVDXr8/',
-  },
-  {
-    review: 'rafa.review',
-    client_details: 'rafa.details',
-    picture_path: '/images/testimonials/rafa.jpg',
-    client_name: 'Rafael Pereira',
-    project_link: 'https://www.itstudios.eu',
-  },
-  {
-    review: 'ana.review',
-    picture_path: '/images/testimonials/ana.jpg',
-    client_name: 'Ana Rodrigues',
-    client_details: 'ana.details',
-  },
-  {
-    picture_path: '/images/testimonials/vlad.jpeg',
-    client_name: 'Vladislav Sorokin',
-    review: 'vlad.review',
-    client_details: 'vlad.details',
-  },
-  {
-    picture_path: '/images/testimonials/ahmad.jpeg',
-    client_name: 'Ahmad Rami',
-    review: 'ahmad.review',
-    client_details: 'ahmad.details',
-  },
-  {
-    review: 'doart.review',
-    client_details: 'doart.details',
-    client_name: 'Duarte Mata',
-    picture_path: '/images/testimonials/doart.jpg',
-    project_link: 'https://www.instagram.com/p/CDE5gqVAii8/',
-  },
-];
-
 const get_homepage_gallery = () => {
   const gallery = [];
 
@@ -467,7 +404,6 @@ export {
   WORK_CATEGORIES,
   categories,
   projects,
-  testimonials,
   services,
   techStack,
   get_homepage_gallery,

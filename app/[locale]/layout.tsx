@@ -14,6 +14,7 @@ import Analytics from '@/components/Analytics';
 import AnalyticsBanner from '@/components/AnalyticsBanner';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import BgAnimation from '@/components/BgAnimation';
 
 export async function generateMetadata({
   params: { locale },
@@ -60,7 +61,7 @@ const RootLayout = ({
           <Analytics />
         </NextIntlClientProvider>
       </body>
-      {/* <BgAnimation /> */}
+      <BgAnimation />
     </html>
   );
 };

@@ -12,6 +12,7 @@ import { Col, Row } from 'react-bootstrap';
 import { Link } from '@/navigation';
 import SectionTitle from '@/components/SectionTitle';
 import HeroSection from '@/components/Hero';
+import Testimonials from '@/components/Testimonials';
 
 const Portfolio = () => {
   const t = useTranslations('portfolio');
@@ -27,9 +28,9 @@ const Portfolio = () => {
     <PageContainer>
       <SectionTitle title={t('title')} />
 
-      <Row className="mb-12">
+      <Row>
         {WORK_CATEGORIES.map(({ name, description, src }, index) => (
-          <Col lg={6} md={6} sm={12} key={index} className="mb-4">
+          <Col lg={6} md={6} sm={12} key={index} className="mb-0 sm:mb-4">
             <motion.div variants={fadeInSlideInVariant} className="h-full">
               <Card
                 title={name}
@@ -65,9 +66,10 @@ const Portfolio = () => {
             the pain out of your workforce payments with Navro.
           </p>
         }
+        className="my-12"
       />
-      <SectionTitle title={'Testimonials'} />
-      {/*    <Testimonials /> */}
+
+      <Testimonials />
     </PageContainer>
   );
 };

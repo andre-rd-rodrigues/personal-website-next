@@ -108,14 +108,18 @@
   },
 
   "testimonials": {
-    "title": "Testemunhos calorosos",
+    "title": "Testemunhos",
     "lets_talk": {
       "title": "O teu pode ser o próximo",
       "cta": "vamos conversar"
     },
-    "pedro": {
-      "details": "Empresário",
-      "review": "O André desenvolveu um trabalho de branding para o meu negócio e tanto o processo como o resultado, foram excelentes! Recomendo vivamente o seu trabalho."
+    "cdeff": {
+      "details": "Clube Desportivo",
+      "review": "O André desenvolveu o nosso website e estamos muito satisfeitos com o resultado final. O design é moderno e apelativo, a navegação é intuitiva e o website é responsivo. O André é um excelente profissional, muito dedicado e atento aos detalhes. Recomendamos o seu trabalho!"
+    },
+    "barbara": {
+      "details": "Advogada",
+      "review": "O André desenvolveu o meu website profissional. Aumentei o número de clientes graças ao seu trabalho, a sua linha estética minimalista reflete o que eu pretendia na perfeição. A sua empatia e profissionalismo foram constantes durante todo o processo. Recomendo vivamente o seu trabalho. Muito obrigada André!"
     },
 
     "sofia": {
@@ -138,21 +142,17 @@
     },
 
     "rafa": {
-      "details": "Developer",
+      "details": "Manager de Engenharia de Software",
       "review": "O André desenvolveu o meu website IT Studios. O seu design moderno e minimalista, com especial atenção à experiência do utilizador tornou o website bem intuitivo. Não podia estar mais satisfeito com o resultado final. Se quer criar um website apelativo e funcional, o André é a pessoa certa."
     },
     "ahmad": {
-      "details": "Software Developer",
-      "review": "O André é o tipo de programador que qualquer equipa teria sorte em ter. A sua combinação de conhecimentos técnicos, trabalho de equipa e capacidade de simplificar ideias complexas é rara. Recomendo-o para qualquer função de design e programação."
+      "details": "Manager de Engenharia de Software",
+      "review": "Trabalhar com o André como líder de equipa foi um verdadeiro prazer. É um programador notável, com curiosidade, que traz automação e está sempre pronto para novos desafios, com grandes capacidades de análise para garantir a longevidade das soluções. A sua combinação de conhecimentos técnicos, trabalho de equipa e capacidade de simplificar ideias complexas é rara. Recomendo-o para qualquer função de desenvolvimento de software."
     },
 
     "doart": {
       "details": "Artista",
-      "review": "Quero dar um agradecimento especial ao André pelo trabalho desenvolvido! Se tiverem oportunidade, visitem a sua página e vejam os seus trabalhos incríveis, valem muito a pena 💪"
-    },
-    "patricia": {
-      "details": "Artista",
-      "review": "O André desenvolve um trabalho espectacular! É um grande talento."
+      "review": "Quero dar um agradecimento especial ao André pelo trabalho desenvolvido! Se tiverem oportunidade, visitem a sua página e vejam os seus trabalhos incríveis, valem muito a pena!"
     }
   },
 
