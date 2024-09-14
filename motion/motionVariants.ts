@@ -75,10 +75,8 @@ const fadeInSlideLeftVariant = {
     opacity: 1,
     x: 0,
     transition: {
-      type: 'spring',
       duration: 1,
-      bounce: 0.4,
-      ease: '',
+      ease: [0.35, 0, 0, 1],
     },
   },
 };
@@ -169,6 +167,26 @@ const getAttentionVariant = {
   },
 };
 
+const underlineSlideInVariant = {
+  hidden: {
+    width: '0%',
+    opacity: 0.5,
+    transition: {
+      duration: 1,
+      ease: [0.35, 0, 0, 1],
+    },
+  },
+  visible: {
+    width: '100%',
+    opacity: 0.5,
+    transition: {
+      duration: 1,
+      ease: [0.35, 0, 0, 1],
+      delay: 0.3,
+    },
+  },
+};
+
 export {
   containerVariant,
   fadeInSlideInVariant,
@@ -183,4 +201,5 @@ export {
   useScroll,
   useTransform,
   workPageHeaderContent,
+  underlineSlideInVariant,
 };

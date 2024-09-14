@@ -12,7 +12,7 @@ import { getTranslations } from 'next-intl/server';
 
 import Analytics from '@/components/Analytics';
 import AnalyticsBanner from '@/components/AnalyticsBanner';
-import BgAnimation from '@/components/BgAnimation';
+
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export async function generateMetadata({
@@ -60,7 +60,7 @@ const RootLayout = ({
           <Analytics />
         </NextIntlClientProvider>
       </body>
-      <BgAnimation />
+      {/* <BgAnimation /> */}
     </html>
   );
 };

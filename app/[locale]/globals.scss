@@ -22,7 +22,6 @@
 
 body {
   background: $dark;
-  font-family: var(--font-sans);
   color: white;
 }
 
@@ -34,7 +33,7 @@ a {
 }
 
 h1 {
-  font-family: var(--font-italiana) !important;
+  /*   font-family: var(--font-italiana) !important; */
 }
 h2 {
   font-family: var(--fs-sans) !important;
