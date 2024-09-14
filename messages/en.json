@@ -58,7 +58,8 @@
   },
 
   "about_page": {
-    "title": "Web developer passionate about innovation",
+    "heroTitle": "You’ve got to start with the customer experience and work back toward the technology, not the other way around.",
+    "heroDescription": "- Steve Jobs, Co-Founder of Apple",
     "services_separator": "Increase your business discoverability",
     "services": {
       "title": "Services",
@@ -92,7 +93,7 @@
 
     "about_me": {
       "title": "About me",
-      "description": "Ever since I decided to make my passion for technology a professional career, I have been fully dedicated to the development of digital projects and the acquisition of new knowledge, in order to add competitive value in the creation of digital solutions.\nMy attention to detail, creative vision of the world and meticulous nature are the main contributions of my identity to the development and implementation of custom solutions. Throughout my career, I have developed projects for various sectors and I am mainly dedicated to creating websites, web apps, and branding.\nMy primary goal is to establish quick and long-lasting solutions, relationships, and assist in developing and implementing high-quality products."
+      "description": "I love this quote by Steve Jobs. This idea has guided me since the day I turned my passion for technology into my career path. I'm all in when it comes to building digital projects and constantly learning new things to keep pushing the envelope, but its so easy to forget the user in the process. That's why I'm big on the little things, dreaming up creative ways to view the world, and diving deep into the details, so I can craft tailor-made solutions that have a true impact on the user experience.\nOver the years, I've had the privilege to work across various industries with truly amazing people, focusing primarily on designing websites, developing web apps, and shaping brands. More than anything, my aim is to build lasting and meaningful relationships while help bringing visions to life with top-notch products that truly make a difference."
     },
     "experience": {
       "title": "EXPERIENCE",

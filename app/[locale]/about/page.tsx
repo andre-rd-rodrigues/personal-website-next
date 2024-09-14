@@ -5,11 +5,12 @@ import { useTranslations } from 'next-intl';
 import React, { Suspense, lazy } from 'react';
 
 import styles from '@/assets/styles/pages/about.module.scss';
-import { Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
 import ExperienceTimeline from '@/components/ExperienceTimeline/ExperienceTimeline';
 import Button from '@/components/AppButton';
 import ContactBanner from '@/components/ContactBanner/ContactBanner';
+import HeroSection from '@/components/Hero';
+import SectionTitle from '@/components/SectionTitle';
 
 const TechStack = lazy(() => import('@/components/TechStack'));
 
@@ -18,38 +19,33 @@ const About = () => {
 
   return (
     <PageContainer>
-      <div className={styles.container}>
-        <h1>{t('title')}</h1>
+      <HeroSection
+        title={t('heroTitle')}
+        subtitle={<p>{t('heroDescription')}</p>}
+      />
 
+      <SectionTitle title={t('about_me.title')} color="primary" tag="h2" />
+      <div className={styles.container}>
         {/*   About me */}
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
           whileInView="visible"
-          className={styles.section}
+          className="mb-5"
         >
-          <Row>
-            <Col lg={6} md={6} sm={12} className={styles.aboutTextContainer}>
-              <div>
-                <motion.h2 variants={fadeInVariant}>
-                  {t('about_me.title')}
-                </motion.h2>
-                <motion.p variants={fadeInVariant}>
-                  {t('about_me.description')} 🎯
-                </motion.p>
-              </div>
-            </Col>
-            <Col lg={6} md={6} sm={12} className={styles.profileImageContainer}>
-              <Image
-                src="/images/profile.png"
-                alt="André Rodrigues - Web Developer"
-                className="mx-auto rounded-lg"
-                width={330}
-                height={0}
-              />
-            </Col>
-          </Row>
+          <motion.p variants={fadeInVariant} className="mb-12">
+            {t('about_me.description')}
+          </motion.p>
 
+          <div className="relative h-80 w-full">
+            <Image
+              src="/images/profile-extend.png"
+              alt="André Rodrigues - Web Developer"
+              className="rounded-lg"
+              objectFit="cover"
+              layout="fill"
+            />
+          </div>
           {/* Experience */}
           <div className={styles.section}>
             <ExperienceTimeline />
