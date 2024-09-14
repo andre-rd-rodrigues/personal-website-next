@@ -2,7 +2,7 @@
 
 .nav {
   padding: 6px 10px;
-  background-color: $dark;
+  background-color: color(dark);
   justify-content: space-between;
   background-color: #191919a9;
   backdrop-filter: blur(10px);
@@ -13,7 +13,7 @@
   .title,
   p,
   a {
-    color: $white;
+    color: color(white);
     text-transform: uppercase;
   }
 
@@ -82,8 +82,8 @@
 //Offcanvas
 
 .offcanvas {
-  background-color: $dark;
-  color: $white;
+  background-color: color(dark);
+  color: color(white);
 
   a {
     font-weight: 300;
@@ -92,7 +92,7 @@
   }
 
   a:not(:last-child) {
-    @include hover_underline($white);
+    @include hover_underline(color(white));
   }
 }
 

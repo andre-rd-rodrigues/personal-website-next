@@ -1,11 +1,11 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   display: flex;
   justify-content: space-between;
-  background-color: $dark;
+  background-color: color(dark);
   padding: 15px var(--padding-y);
-  color: $white;
+  color: color(white);
   font-size: var(--fs-m);
   z-index: 100;
   a {
@@ -15,7 +15,7 @@
   div {
     font-weight: 300;
   }
-  div[id="footer-copyright"] {
+  div[id='footer-copyright'] {
     font-size: var(--fs-s);
   }
 }
@@ -25,7 +25,7 @@
   .container {
     flex-wrap: wrap;
     justify-content: center;
-    div[id="footer-social-media"] {
+    div[id='footer-social-media'] {
       margin-bottom: 10px;
     }
   }

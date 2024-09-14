@@ -14,19 +14,19 @@ const CONTACTS = [
 
 const WORK_CATEGORIES = [
   {
-    name: 'Websites',
+    name: 'Web',
     description: 'categories.websites',
-    src: '/images/portfolio/websites.png',
+    src: '/images/portfolio/web.png',
   },
   {
-    name: 'Apps',
+    name: 'Mobile',
     description: 'categories.apps',
-    src: '/images/portfolio/apps.png',
+    src: '/images/portfolio/mobile.png',
   },
 ];
 
-const projects = {
-  apps: [
+const PROJECTS = {
+  mobile: [
     {
       imgSrc: '/images/apps/giggle.png',
       label: 'Giggle!',
@@ -62,7 +62,7 @@ const projects = {
       },
     },
   ],
-  websites: [
+  web: [
     {
       imgSrc: '/images/websites/cdeff.png',
       logo: 'https://www.cdeff.com/_next/image?url=%2Fimages%2Flogo.png&w=96&q=75',
@@ -202,19 +202,6 @@ const projects = {
       },
     },
   ],
-};
-
-const categories = {
-  apps: {
-    title: 'Apps',
-    description: `apps_category_page.description`,
-    projects: projects['apps'],
-  },
-  websites: {
-    title: 'Websites',
-    description: 'websites_category_page.description',
-    projects: projects['websites'],
-  },
 };
 
 const get_homepage_gallery = () => {
@@ -402,8 +389,7 @@ export {
   experienceTimeline,
   CONTACTS,
   WORK_CATEGORIES,
-  categories,
-  projects,
+  PROJECTS,
   services,
   techStack,
   get_homepage_gallery,

@@ -1,11 +1,14 @@
 //Colors
-$dark: #161616;
-$grey: #a6a6a6;
-$light-grey: #f3f3f3;
-$white: #ffffff;
-$yellow: #ffca6c;
-$grey-yellow: #edeee9;
-$salmon: #f18073;
+$colors: (
+  primary: #ff56cd,
+  secondary: #8b5afe,
+  white: #ffffff,
+  dark: #161616,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 
 //Sizes
 $breaking-point-xxl: 1400px;
@@ -25,7 +28,7 @@ $breaking-point-xxs: 330px;
   position: relative;
   z-index: 1;
   border-radius: 30px;
-  background: linear-gradient(to bottom, #6f8af6, #6e54f0);
+  background: linear-gradient(to bottom, #6f8af6, color(secondary));
   cursor: pointer;
   backdrop-filter: blur(10px);
   font-weight: 300;
@@ -60,21 +63,11 @@ $breaking-point-xxs: 330px;
     color: transparent;
     transition: 200ms;
   }
-  /*  &:hover::before {
-    opacity: 0%;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-  }
-  &:hover::after {
-    color: white;
-  } */
 }
 
 @mixin read_button {
-  color: $dark;
-  @include hover_underline($dark);
+  color: color(dark);
+  @include hover_underline(color(dark));
   margin: 0;
   font-size: 0.9rem;
   font-weight: 400;
@@ -150,11 +143,7 @@ $breaking-point-xxs: 330px;
 }
 //Exports
 :export {
-  dark: $dark;
-  grey: $grey;
-  grey-yellow: $grey-yellow;
-  light-grey: $light-grey;
-  white: $white;
-  yellow: $yellow;
+  dark: color(dark);
+  white: color(white);
   mobile_breaking_point: $breaking-point-sm;
 }

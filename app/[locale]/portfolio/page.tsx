@@ -21,8 +21,8 @@ const Portfolio = () => {
     category === 'Editorial'
       ? 'https://www.blog.andrerodrigo.com'
       : (`/portfolio/${category.toLowerCase()}` as
-          | '/portfolio/websites'
-          | '/portfolio/apps');
+          | '/portfolio/web'
+          | '/portfolio/mobile');
 
   return (
     <PageContainer>

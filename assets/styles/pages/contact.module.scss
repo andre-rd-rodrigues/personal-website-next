@@ -1,4 +1,4 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   display: flex;
@@ -14,13 +14,13 @@
     letter-spacing: 1.4px;
     margin-bottom: 15px;
   }
-  a[id="contact_email"] {
-    color: $yellow;
+  a[id='contact_email'] {
+    color: color(primary);
     &:hover {
-      color: $white;
+      color: color(white);
     }
   }
-  div[class="row"] {
+  div[class='row'] {
     width: 100%;
   }
 

@@ -62,7 +62,7 @@
     text-decoration-line: underline;
     transition: 0.3s ease;
     &:hover {
-      color: $yellow;
+      color: color(primary);
     }
   }
 }

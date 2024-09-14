@@ -18,10 +18,15 @@
   --page-max-width: 1600px;
 
   --ease-smooth: cubic-bezier(0.35, 0, 0, 1);
+
+  --color-primary: #ff56cd;
+  --color-primary-dark: #6e54f0;
+  --color-white: #ffffff;
+  --color-dark: #161616;
 }
 
 body {
-  background: $dark;
+  background: color(dark);
   color: white;
 }
 
@@ -32,9 +37,6 @@ a {
   white-space: break-spaces;
 }
 
-h1 {
-  /*   font-family: var(--font-italiana) !important; */
-}
 h2 {
   font-family: var(--fs-sans) !important;
   font-weight: 300;

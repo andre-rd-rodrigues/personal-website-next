@@ -7,8 +7,8 @@ type LinkHref =
   | '/blog'
   | '/about'
   | '/portfolio'
-  | '/portfolio/websites'
-  | '/portfolio/apps'
+  | '/portfolio/web'
+  | '/portfolio/mobile'
   | '/contacts'
   | '/skills';
 

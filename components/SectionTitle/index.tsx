@@ -7,22 +7,30 @@ import React from 'react';
 
 interface SectionTitleProps {
   title: string;
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  tag?: keyof JSX.IntrinsicElements;
+  color?: 'white' | 'primary';
 }
 
-const SectionTitle: React.FC<SectionTitleProps> = ({ title, tag = 'h1' }) => {
-  const Tag = tag;
+const SectionTitle: React.FC<SectionTitleProps> = ({
+  title,
+  tag = 'h1',
+  color = 'white',
+}) => {
+  const Tag = tag as keyof JSX.IntrinsicElements;
 
   return (
-    <div className="relative mb-5 text-white">
+    <div className="relative mb-5">
       <motion.div variants={fadeInSlideLeftVariant}>
-        <Tag className="text-uppercase pb-2 text-xl font-thin tracking-wider">
+        <Tag
+          className={`text-uppercase pb-2 text-xl font-thin tracking-wider`}
+          style={{ color: `var(--color-${color})` }}
+        >
           {title}
         </Tag>
       </motion.div>
       <motion.div
-        className="absolute bottom-0 left-0 bg-white"
-        style={{ opacity: 0.5, height: 1 }}
+        className="absolute bottom-0 left-0"
+        style={{ height: 1, backgroundColor: `var(--color-${color})` }}
         variants={underlineSlideInVariant}
         initial="hidden"
         whileInView="visible"

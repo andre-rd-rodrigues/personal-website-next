@@ -1,8 +1,8 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   position: relative;
-  color: $white;
+  color: color(white);
   display: flex;
   align-items: center;
   margin-left: 17px;
@@ -22,7 +22,7 @@
     color: dark;
     margin-top: 30px;
     margin-right: 10px;
-    color: $dark;
+    color: color(dark);
     select {
       right: -10px;
     }

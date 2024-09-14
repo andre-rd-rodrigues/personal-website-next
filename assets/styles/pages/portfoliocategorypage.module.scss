@@ -1,20 +1,7 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   min-height: 100vh;
-}
-
-.header {
-  margin-bottom: 80px;
-  & h1 {
-    font-size: var(--fs-xl);
-    margin-bottom: 24px;
-    font-family: Italiana;
-  }
-  & p {
-    font-size: var(--fs-m);
-    text-align: justify;
-  }
 }
 
 //Gallery
