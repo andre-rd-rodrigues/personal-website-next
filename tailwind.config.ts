@@ -20,6 +20,7 @@ const config: Config = {
         cyan: '#00BFC8',
         dark: '#2f333a',
         orange: '#FD7959',
+        pink: '#ff56cd',
       },
     },
   },

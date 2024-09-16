@@ -29,16 +29,4 @@ const moniqa = localFont({
   variable: '--font-moniqa',
 });
 
-const rozha = localFont({
-  src: './rozha-one-regular.woff2',
-  display: 'block',
-  variable: '--font-rozha',
-});
-
-const italiana = localFont({
-  src: './italiana.woff2',
-  display: 'block',
-  variable: '--font-italiana',
-});
-
-export { jost, blacker, moniqa, rozha, italiana };
+export { jost, blacker, moniqa };

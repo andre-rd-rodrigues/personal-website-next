@@ -1,7 +1,7 @@
 import AppNavbar from '@/components/AppNavbar/AppNavbar';
 import './globals.scss';
 
-import { blacker, italiana, jost, moniqa } from '@/assets/fonts';
+import { blacker, jost, moniqa } from '@/assets/fonts';
 
 import Footer from '@/components/Footer/Footer';
 import { getMetadata } from '@/metadata/metadata.utils';
@@ -39,7 +39,7 @@ const RootLayout = ({
   return (
     <html
       lang={locale}
-      className={`${jost.variable} ${blacker.variable} ${italiana.variable} ${moniqa.variable}`}
+      className={`${jost.variable} ${blacker.variable} ${moniqa.variable}`}
     >
       <head>
         <link
