@@ -5,7 +5,7 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "brand_label": "Web Developer",
-    "testimonials": "testimonials"
+    "testimonials": "Testimonials"
   },
 
   "homepage": {
@@ -96,9 +96,13 @@
     },
     "experience": {
       "title": "Build lasting and meaningful relationships",
-      "description": "Throughout my career, I've been privileged to contribute to a range of impactful projects across several leading companies, each offering unique challenges and learning opportunities. Currently, at Probely, I refined their cybersecurity products with intuitive features using React & TypeScript, enhancing user satisfaction and product efficiency. My roles at Navro and Pipedrive allowed me to deeply engage in software reliability and system optimization, implementing robust solutions and comprehensive testing regimes that elevated operational performance.\nAt NBCUniversal's Peacock, I took pride in ensuring a seamless streaming experience for millions of users worldwide, contributing to a scalable and responsive service. My journey at Wise was particularly rewarding, as I led the development of an online lottery platform from the ground up, aligning our technical solutions closely with client needs and market demands. This role not only challenged my skills but also deepened my appreciation for collaborative solution development.",
+      "description": "Throughout my career, I've been privileged to contribute to a range of impactful projects across several leading companies, each offering unique challenges and learning opportunities. Currently, at Probely, I refined their cybersecurity products with intuitive features using React & TypeScript, enhancing user satisfaction and product efficiency.\nMy roles at Navro and Pipedrive allowed me to deeply engage in software reliability and system optimization, implementing robust solutions and comprehensive testing regimes that elevated operational performance.\nAt NBCUniversal's Peacock, I took pride in ensuring a seamless streaming experience for millions of users worldwide, contributing to a scalable and responsive service.\nMy journey at Wise was particularly rewarding, as I led the development of an online lottery platform from the ground up, aligning our technical solutions closely with client needs and market demands. This role not only challenged my skills but also deepened my appreciation for collaborative solution development.",
       "projects": "Projects in different sectors",
       "years": "Years of experience"
+    },
+    "contact": {
+      "title": "Get in touch",
+      "description": "Whether you have a project in mind or just want to discuss potential opportunities, don't hesitate to get in touch. I'm always excited to connect with new people and explore how we can work together."
     }
   },
 
@@ -179,7 +183,12 @@
     "description": "This website uses Google Analytics to understand human interaction. Therefore, by continuing to use this website, you consent to the use of cookies to track and analyze your usage.",
     "accept": "I agree"
   },
-
+  "buttons": {
+    "read_more": "Read more",
+    "see_more": "See more",
+    "contact": "Contact",
+    "send_message": "Send message"
+  },
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",
     "aboutTitle": "About • André Rodrigo",

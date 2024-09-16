@@ -22,7 +22,7 @@ const Web = () => {
 
   return (
     <PageContainer className={styles.container}>
-      <HeroSection
+      <HeroSection.Text
         title={t('heroTitle')}
         subtitle={<p>{t('heroDescription')}</p>}
       />

@@ -56,7 +56,7 @@ const Portfolio = () => {
         ))}
       </Row>
 
-      <HeroSection
+      <HeroSection.Text
         title={
           'Helping you seamlessly hire and pay individuals all around the world.'
         }

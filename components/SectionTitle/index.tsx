@@ -14,7 +14,7 @@ interface SectionTitleProps {
 const SectionTitle: React.FC<SectionTitleProps> = ({
   title,
   tag = 'h1',
-  color = 'white',
+  color = 'primary',
 }) => {
   const Tag = tag as keyof JSX.IntrinsicElements;
 

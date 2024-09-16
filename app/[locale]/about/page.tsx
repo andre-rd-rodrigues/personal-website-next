@@ -14,106 +14,124 @@ import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
 
-import { CountUp } from 'use-count-up';
-import { useInView } from 'react-intersection-observer';
 import styles from '@/assets/styles/pages/about.module.scss';
+import AppButton from '@/components/AppButton';
+import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
+import { PopupButton } from '@typeform/embed-react';
+import { useInView } from 'react-intersection-observer';
+import { CountUp } from 'use-count-up';
 
 const About = () => {
   const t = useTranslations('about_page');
+  const t_buttons = useTranslations('buttons');
   const [counterRef, counterInView] = useInView();
 
   return (
     <PageContainer>
-      <HeroSection
+      <HeroSection.Text
         title={t('heroTitle')}
         subtitle={<p>{t('heroDescription')}</p>}
       />
 
-      <SectionTitle title={t('about_me.title')} color="primary" tag="h2" />
-
       {/*   About me */}
-      <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="visible"
-        className="md:24 mb-24"
-      >
-        <motion.p variants={fadeInVariant} className="mb-12">
-          {t('about_me.description')}
-        </motion.p>
-
+      <Section>
+        <SectionTitle title={t('about_me.title')} color="primary" tag="h2" />
         <motion.div
-          variants={fadeInSlideInVariant}
-          className="relative h-96 w-full"
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="md:24 mb-24"
         >
-          <Image
-            src="/images/profile-extend.png"
-            alt="André Rodrigues - Web Developer"
-            className="rounded-lg"
-            objectFit="cover"
-            layout="fill"
-          />
+          <motion.p variants={fadeInVariant} className="mb-12">
+            {t('about_me.description')}
+          </motion.p>
+          <motion.div
+            variants={fadeInSlideInVariant}
+            className="relative h-96 w-full"
+          >
+            <Image
+              src="/images/profile-extend.png"
+              alt="André Rodrigues - Web Developer"
+              className="rounded-lg"
+              objectFit="cover"
+              layout="fill"
+            />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </Section>
 
       {/* Companies */}
       <TrustedCompanies />
 
       {/* About */}
 
-      <Row>
-        <Col sm={12} md={4} lg={4}>
-          <div className="flex h-full justify-center">
-            <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
-              {/* Years of experience */}
-              <div>
-                <p
-                  ref={counterRef}
-                  className={`${styles.counter} text-8xl font-thin text-purple-500`}
-                >
-                  {'+'}{' '}
-                  <CountUp isCounting={counterInView} end={4} duration={3} />
-                </p>
-                <p className="mt-3">{t('experience.years')}</p>
-              </div>
-              {/* Projects */}
-              <div>
-                <p
-                  ref={counterRef}
-                  className={`${styles.counter} text-8xl font-thin text-purple-500`}
-                >
-                  {'+'}{' '}
-                  <CountUp isCounting={counterInView} end={15} duration={3} />
-                </p>
-                <p className="mt-3">{t('experience.projects')}</p>
+      <Section>
+        <Row>
+          <Col sm={12} md={4} lg={4}>
+            <div className="flex h-full justify-center">
+              <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
+                {/* Years of experience */}
+                <div>
+                  <p
+                    ref={counterRef}
+                    className={`${styles.counter} text-8xl font-thin text-purple-500`}
+                  >
+                    {'+'}{' '}
+                    <CountUp isCounting={counterInView} end={4} duration={3} />
+                  </p>
+                  <p className="mt-3">{t('experience.years')}</p>
+                </div>
+                {/* Projects */}
+                <div>
+                  <p
+                    ref={counterRef}
+                    className={`${styles.counter} text-8xl font-thin text-purple-500`}
+                  >
+                    {'+'}{' '}
+                    <CountUp isCounting={counterInView} end={15} duration={3} />
+                  </p>
+                  <p className="mt-3">{t('experience.projects')}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Col>
+          </Col>
+          <Col sm={12} md={8} lg={8}>
+            <motion.h3
+              variants={fadeInSlideLeftVariant}
+              initial="hidden"
+              whileInView="visible"
+              className="mb-5 text-6xl font-extralight"
+            >
+              {t('experience.title')}
+            </motion.h3>
+            <motion.p
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+            >
+              {t('experience.description')}
+            </motion.p>
+            {/* TODO: Add linkedin icon */}
+          </Col>
+        </Row>
+      </Section>
 
-        <Col sm={12} md={8} lg={8}>
-          <motion.h3
-            variants={fadeInSlideLeftVariant}
-            initial="hidden"
-            whileInView="visible"
-            className="mb-5 text-6xl font-extralight"
-          >
-            {t('experience.title')}
-          </motion.h3>
-          <motion.p
-            variants={fadeInVariant}
-            initial="hidden"
-            whileInView="visible"
-          >
-            {t('experience.description')}
-          </motion.p>
-          {/* TODO: Add linkedin icon */}
-        </Col>
-      </Row>
-
-      {/*  */}
-      {/*  <ContactBanner /> */}
+      {/* Contact */}
+      <Section>
+        <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
+        <HeroSection.Cta
+          text={t('contact.description')}
+          cta={
+            <PopupButton id="wTr5ba0e" size={60}>
+              <AppButton
+                icon={{ icon: 'streamline:mail-send-email-message' }}
+                label={t_buttons('send_message')}
+              />
+            </PopupButton>
+          }
+        />
+      </Section>
     </PageContainer>
   );
 };

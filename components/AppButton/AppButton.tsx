@@ -38,12 +38,10 @@ const AppButton: FC<AppButtonProps> = ({
     );
   }
   return (
-    <div className={styles.container}>
-      <button className={styles.btn}>
-        {icon && <Icon {...icon} />}
-        {label}
-      </button>
-    </div>
+    <button className={styles.btn}>
+      {icon && <Icon {...icon} />}
+      {label}
+    </button>
   );
 };
 
