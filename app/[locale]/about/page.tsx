@@ -17,6 +17,7 @@ import { Col, Row } from 'react-bootstrap';
 import { CountUp } from 'use-count-up';
 import { useInView } from 'react-intersection-observer';
 import styles from '@/assets/styles/pages/about.module.scss';
+import TrustedCompanies from '@/components/TrustedCompanies';
 
 const About = () => {
   const t = useTranslations('about_page');
@@ -56,8 +57,11 @@ const About = () => {
         </motion.div>
       </motion.div>
 
-      {/* Experience */}
-      {/* TODO: Add Trusted by X companies */}
+      {/* Companies */}
+      <TrustedCompanies />
+
+      {/* About */}
+
       <Row>
         <Col sm={12} md={4} lg={4}>
           <div className="flex h-full justify-center">
@@ -107,6 +111,8 @@ const About = () => {
           {/* TODO: Add linkedin icon */}
         </Col>
       </Row>
+
+      {/*  */}
       {/*  <ContactBanner /> */}
     </PageContainer>
   );

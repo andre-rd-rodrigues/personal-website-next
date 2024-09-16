@@ -1,0 +1,33 @@
+.container {
+  /*  overflow: hidden; */
+  position: relative;
+  width: 100%;
+  margin: 120px 0;
+}
+
+.companies {
+  position: relative;
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .companies {
+    gap: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .companies {
+    justify-content: space-between;
+  }
+}

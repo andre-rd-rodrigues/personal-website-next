@@ -259,55 +259,6 @@ const services = {
   ],
 };
 
-const experienceTimeline = [
-  {
-    company: 'Probely',
-    duration: '2024 - Now',
-    role: 'Web Developer',
-    experience: 'experience.probely',
-    img_url:
-      'https://www.portugalventures.pt/wp-content/uploads/2020/08/Portfolio_Probely_300x300px.png',
-  },
-  {
-    company: 'Navro',
-    duration: '2023 - 2024',
-    role: 'Web Developer',
-    experience: 'experience.paytrix',
-    img_url:
-      'https://media.licdn.com/dms/image/D4E0BAQHydI4vy3ywsQ/company-logo_200_200/0/1707470402207/paytrix_logo?e=2147483647&v=beta&t=q3pIN3sDQA5RFV61R5F1CawX_WH1lADnV5PeGSoXxTo',
-  },
-  {
-    company: 'Pipedrive',
-    duration: '2022 - 2023 \u2022 11 months',
-    role: 'Web Developer',
-    experience: 'experience.pipedrive',
-    img_url: '/images/companies/pipedrive.jpeg',
-  },
-
-  {
-    company: 'Sky',
-    duration: '2022 \u2022 5 months',
-    role: 'Frontend Developer',
-    experience: 'experience.sky',
-    img_url: '/images/companies/sky.jpeg',
-  },
-  {
-    company: 'Wise Sparrow',
-    duration: '2021 - 2022 \u2022 1 year',
-    role: 'Lead Frontend Developer',
-    experience: 'experience.wise',
-    img_url: '/images/companies/wise.jpeg',
-  },
-
-  {
-    company: 'Freelance',
-    role: 'Web Developer & UX/UI Designer',
-    duration: '2020 - 2021 \u2022 1 year',
-    experience: 'experience.freelance',
-    img_url: '/images/companies/freelance.jpeg',
-  },
-];
-
 const techStack = [
   {
     label: 'JavaScript',
@@ -385,8 +336,8 @@ const techStack = [
     img_src: '/images/technologies/openai.png',
   },
 ];
+
 export {
-  experienceTimeline,
   CONTACTS,
   WORK_CATEGORIES,
   PROJECTS,
