@@ -31,7 +31,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/apps/giggle.png',
       label: 'Giggle!',
-      description: 'apps_category_page.projects.giggle',
+      description: 'mobile.projects.giggle',
       techStack: {
         frontend: ['React Native', 'Expo'],
       },
@@ -43,7 +43,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/apps/randombox.png',
       label: 'Random Box - Coming soon',
-      description: 'apps_category_page.projects.randombox',
+      description: 'mobile.projects.randombox',
       techStack: {
         frontend: ['React Native', 'Expo'],
       },
@@ -54,7 +54,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/apps/coolmind.png',
       label: 'Coolmind - Coming soon',
-      description: 'apps_category_page.projects.coolmind',
+      description: 'mobile.projects.coolmind',
       techStack: {
         frontend: ['React Native', 'Expo'],
       },
@@ -66,9 +66,9 @@ const PROJECTS = {
   web: [
     {
       imgSrc: '/images/websites/cdeff.png',
-      logo: 'https://www.cdeff.com/_next/image?url=%2Fimages%2Flogo.png&w=96&q=75',
+
       label: 'CDEFF',
-      description: 'websites_category_page.projects.CDEFF',
+      description: 'web.projects.CDEFF',
       techStack: {
         frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
         database: ['Notion'],
@@ -80,9 +80,9 @@ const PROJECTS = {
     },
     {
       imgSrc: '/images/websites/primetravel.png',
-      logo: 'https://primetravel-162f2.web.app/assets/logo.png',
+
       label: 'PrimeTravel',
-      description: 'websites_category_page.projects.PrimeTravel',
+      description: 'web.projects.PrimeTravel',
       techStack: {
         frontend: [
           'React',
@@ -104,8 +104,8 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/bb.png',
       label: 'Bárbara Lawyer',
-      logo: 'https://barbara-website.vercel.app/_next/image?url=%2Fimg%2Flogo_gold.png&w=1920&q=75',
-      description: 'websites_category_page.projects.Bárbara',
+
+      description: 'web.projects.Bárbara',
       techStack: {
         frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
       },
@@ -117,8 +117,8 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/carolina.png',
       label: 'Carolina Jardim',
-      description: 'websites_category_page.projects.carolina',
-      logo: 'https://acarolinajardim.com/images/logo.png',
+      description: 'web.projects.carolina',
+
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },
@@ -130,8 +130,8 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/curiosity.png',
       label: 'Curiosity Gem',
-      description: 'websites_category_page.projects.Curiosity',
-      logo: 'https://cdn.iconscout.com/icon/free/png-512/free-diamond-gems-crystal-jewellery-cubic-44620.png?f=webp&w=256',
+      description: 'web.projects.Curiosity',
+
       techStack: {
         frontend: ['Next.js', 'GraphQL', 'HTML5', 'CSS3', 'SCSS'],
         database: ['Hygraph'],
@@ -144,8 +144,8 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/barber.png',
       label: 'Barber Studio',
-      description: 'websites_category_page.projects.Curiosity',
-      logo: 'https://strong-cheesecake-3a87ea.netlify.app/_astro/logo_ZhciW0.png',
+      description: 'web.projects.Curiosity',
+
       techStack: {
         frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
       },
@@ -157,7 +157,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/itstudios.jpg',
       label: 'IT Studios',
-      description: 'websites_category_page.projects.it',
+      description: 'web.projects.it',
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },
@@ -169,7 +169,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/memory.jpg',
       label: 'Memory Game',
-      description: 'websites_category_page.projects.Memory',
+      description: 'web.projects.Memory',
       techStack: {
         frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
       },
@@ -181,7 +181,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/rima.jpg',
       label: 'RIMA',
-      description: 'websites_category_page.projects.RIMA',
+      description: 'web.projects.RIMA',
       techStack: {
         frontend: ['Next.js', 'HTML5', 'CSS3', 'Javascript'],
       },
@@ -193,7 +193,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/arquitech.jpg',
       label: 'Architecture',
-      description: 'websites_category_page.projects.Architecture',
+      description: 'web.projects.Architecture',
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },

@@ -25,7 +25,7 @@
     }
   },
 
-  "websites_category_page": {
+  "web": {
     "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que gostes tanto quanto eu gostei de os fazer :)",
     "projects": {
       "CDEFF": "Bem-vindo ao projeto do Clube Desportivo Francisco Franco! Marca grandes pontos com o primeiro website de um clube desportivo local na Ilha da Madeira. Explora as últimas atualizações sobre as atividades do clube, descobre artigos informativos no blog e encontra informações detalhadas sobre os torneios. É mais do que apenas um website, é o teu guia definitivo para tudo relacionado com este clube! 🏆",

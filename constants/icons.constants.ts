@@ -5,6 +5,8 @@ const ICONS = {
   linktree: 'ph:linktree-logo',
   instagram: 'ph:instagram-logo-light',
   arrow: 'guidance:left-arrow',
+  git: 'akar-icons:github-fill',
+  open: 'majesticons:open',
 };
 
 export default ICONS;
