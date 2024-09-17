@@ -338,20 +338,26 @@ const techStack = [
   },
 ];
 
-const skillsData: ChartData<'radar'> = {
+const skillsDataFE: ChartData<'radar'> = {
   labels: [
-    'Eating',
-    'Drinking',
-    'Sleeping',
-    'Designing',
-    'Coding',
-    'Cycling',
-    'Running',
+    'HTML5',
+    'CSS3',
+    'SASS',
+    'JavaScript',
+    'React.js',
+    'React Native',
+    'Next.js',
+    'React Testing Library',
+    'Jest',
+    'Cypress',
+    'UI Libraries',
+    'Tailwind CSS',
+    'SEO',
   ],
   datasets: [
     {
-      label: 'Front-end',
-      data: [6, 9, 9, 8, 5, 5, 4],
+      label: 'Front-end Development',
+      data: [10, 10, 10, 10, 10, 8, 10, 10, 8, 9, 10, 10, 9],
       fill: true,
       backgroundColor: 'rgba(255, 86, 205, 0.2)',
       borderColor: 'rgba(255, 86, 205, 1)',
@@ -360,9 +366,24 @@ const skillsData: ChartData<'radar'> = {
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgba(255, 86, 205, 1)',
     },
+  ],
+};
+const skillsDataBE: ChartData<'radar'> = {
+  labels: [
+    'RESTful APIs',
+    'Node.js',
+    'GraphQL',
+    'MongoDB',
+    'PostgreSQL',
+    'Docker',
+    'CI/CD Pipelines',
+    'Python',
+    'Git',
+  ],
+  datasets: [
     {
-      label: 'Back-end',
-      data: [1, 6, 7, 2, 4, 8, 4],
+      label: 'Back-end & Infrastructure',
+      data: [6, 8, 7, 5, 3, 7, 7, 4, 10],
       fill: true,
       backgroundColor: 'rgba(34, 202, 236, 0.2)',
       borderColor: 'rgba(34, 202, 236, 1)',
@@ -381,5 +402,6 @@ export {
   services,
   techStack,
   get_homepage_gallery,
-  skillsData,
+  skillsDataFE,
+  skillsDataBE,
 };

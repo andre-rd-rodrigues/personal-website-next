@@ -7,7 +7,8 @@ import HeroSection from '@/components/Hero';
 import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import RadarChart from '@/components/RadarChart';
-import { skillsData } from '@/data/info.data';
+import { skillsDataFE, skillsDataBE } from '@/data/info.data';
+import { Col, Row } from 'react-bootstrap';
 
 const Skills = () => {
   const t = useTranslations('skills');
@@ -24,7 +25,14 @@ const Skills = () => {
       />
       <Section>
         <SectionTitle title={t('title')} color="primary" tag="h2" />
-        <RadarChart data={skillsData} />
+        <Row>
+          <Col sm={12} md={6}>
+            <RadarChart data={skillsDataFE} />
+          </Col>
+          <Col sm={12} md={6}>
+            <RadarChart data={skillsDataBE} />
+          </Col>
+        </Row>
       </Section>
     </PageContainer>
   );

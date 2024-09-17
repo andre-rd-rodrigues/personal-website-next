@@ -18,8 +18,17 @@ const Radar = dynamic(
 const options: ChartOptions<'radar'> = {
   scales: {
     r: {
+      grid: {
+        display: true,
+        color: 'rgba(255, 255, 255, 0.1)',
+        lineWidth: 1,
+        circular: true,
+      },
       angleLines: {
-        display: false,
+        display: true,
+        color: 'rgba(255, 255, 255, 0.1)',
+        lineWidth: 1,
+        borderDash: [5, 5],
       },
       suggestedMin: 0,
       suggestedMax: 10,
@@ -48,7 +57,7 @@ const options: ChartOptions<'radar'> = {
 
 const RadarChart = ({ data }: { data: ChartData<'radar'> }) => {
   return (
-    <div style={{ height: '700px' }}>
+    <div className="mb-5 w-full">
       <Radar data={data} options={options} />
     </div>
   );
