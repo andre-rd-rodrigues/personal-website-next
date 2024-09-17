@@ -6,6 +6,8 @@ import { useTranslations } from 'next-intl';
 import HeroSection from '@/components/Hero';
 import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
+import RadarChart from '@/components/RadarChart';
+import { skillsData } from '@/data/info.data';
 
 const Skills = () => {
   const t = useTranslations('skills');
@@ -22,6 +24,7 @@ const Skills = () => {
       />
       <Section>
         <SectionTitle title={t('title')} color="primary" tag="h2" />
+        <RadarChart data={skillsData} />
       </Section>
     </PageContainer>
   );

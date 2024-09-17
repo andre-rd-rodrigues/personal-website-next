@@ -1,3 +1,4 @@
+import { ChartData } from 'chart.js';
 import { v4 as uuid } from 'uuid';
 
 const CONTACTS = [
@@ -337,6 +338,42 @@ const techStack = [
   },
 ];
 
+const skillsData: ChartData<'radar'> = {
+  labels: [
+    'Eating',
+    'Drinking',
+    'Sleeping',
+    'Designing',
+    'Coding',
+    'Cycling',
+    'Running',
+  ],
+  datasets: [
+    {
+      label: 'Front-end',
+      data: [6, 9, 9, 8, 5, 5, 4],
+      fill: true,
+      backgroundColor: 'rgba(255, 86, 205, 0.2)',
+      borderColor: 'rgba(255, 86, 205, 1)',
+      pointBackgroundColor: 'rgba(255, 86, 205, 1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255, 86, 205, 1)',
+    },
+    {
+      label: 'Back-end',
+      data: [1, 6, 7, 2, 4, 8, 4],
+      fill: true,
+      backgroundColor: 'rgba(34, 202, 236, 0.2)',
+      borderColor: 'rgba(34, 202, 236, 1)',
+      pointBackgroundColor: 'rgba(34, 202, 236, 1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(34, 202, 236, 1)',
+    },
+  ],
+};
+
 export {
   CONTACTS,
   WORK_CATEGORIES,
@@ -344,4 +381,5 @@ export {
   services,
   techStack,
   get_homepage_gallery,
+  skillsData,
 };
