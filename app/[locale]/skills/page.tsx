@@ -10,8 +10,9 @@ import {
   fadeInVariant,
   motion,
 } from '@/motion/motionVariants';
-import Button from '@/components/AppButton';
+
 import Image from 'next/image';
+import AppButton from '@/components/AppButton';
 
 const Skills = () => {
   const t = useTranslations();
@@ -115,7 +116,7 @@ const Skills = () => {
           </Col>
         </Row>
       </motion.div>
-      <Button downloadCV className="text-center" />
+      <AppButton.Button downloadCV className="text-center" />
     </PageContainer>
   );
 };

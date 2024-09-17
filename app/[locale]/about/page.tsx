@@ -15,12 +15,15 @@ import Image from 'next/image';
 import { Col, Row } from 'react-bootstrap';
 
 import styles from '@/assets/styles/pages/about.module.scss';
-import AppButton from '@/components/AppButton';
+
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import { PopupButton } from '@typeform/embed-react';
 import { useInView } from 'react-intersection-observer';
 import { CountUp } from 'use-count-up';
+import AppButton from '@/components/AppButton';
+import { Link } from '@/navigation';
+import CONTACTS from '@/constants/contacts.constants';
 
 const About = () => {
   const t = useTranslations('about_page');
@@ -113,7 +116,21 @@ const About = () => {
             >
               {t('experience.description')}
             </motion.p>
-            {/* TODO: Add linkedin icon */}
+
+            <motion.div
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+              className="mt-4 flex items-end justify-end gap-3"
+            >
+              <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
+                <AppButton.Icon icon="mingcute:download-3-line" />
+              </a>
+
+              <Link href={CONTACTS.LINKEDIN} target="_">
+                <AppButton.Icon icon="flowbite:linkedin-solid" />
+              </Link>
+            </motion.div>
           </Col>
         </Row>
       </Section>
@@ -125,7 +142,7 @@ const About = () => {
           text={t('contact.description')}
           cta={
             <PopupButton id="wTr5ba0e" size={60}>
-              <AppButton
+              <AppButton.Button
                 icon={{ icon: 'streamline:mail-send-email-message' }}
                 label={t_buttons('send_message')}
               />

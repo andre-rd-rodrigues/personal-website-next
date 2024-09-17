@@ -39,7 +39,7 @@ const Portfolio = () => {
                 footer={
                   // @ts-expect-error blog pathname is not defined
                   <Link href={getCategoryPageLink(name)}>
-                    <AppButton
+                    <AppButton.Button
                       className="w-full"
                       label="Explore"
                       icon={{

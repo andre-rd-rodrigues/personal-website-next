@@ -33,7 +33,7 @@ plaintextCopiar código
 ├── /assets
 │
 ├── /components
-│   ├── /AppButton
+│   ├── /AppButton.Button
 │   ├── /AppHead
 │   ├── /AppLink
 │   ├── /AppNavbar
