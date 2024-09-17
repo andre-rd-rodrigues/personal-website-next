@@ -4,24 +4,26 @@ import {
   containerVariant,
   fadeInSlideInVariant,
   fadeInVariant,
-  getAttentionVariant,
   motion,
 } from '@/motion/motionVariants';
 
 import { testimonials_sider } from '@/helpers/slider.settings';
 import Slider from 'react-slick';
 
-import styles from './testimonials.module.scss';
-import AppLink from '../AppLink';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
 import SectionTitle from '../SectionTitle';
 import { TESTIMONIALS } from './testimonials.constants';
+import styles from './testimonials.module.scss';
+import { PopupButton } from '@typeform/embed-react';
+import AppButton from '../AppButton';
+import ICONS from '@/constants/icons.constants';
 
 const Testimonials = () => {
   const t = useTranslations('testimonials');
+  const t_buttons = useTranslations('buttons');
 
   const settings = {
     ...testimonials_sider,
@@ -43,17 +45,19 @@ const Testimonials = () => {
           ))}
         </Slider>
       </motion.div>
-      <div className={styles.letsTalk}>
-        <p>{t('lets_talk.title')}</p>
-        <motion.div
-          variants={getAttentionVariant}
-          animate="animate"
-          whileHover="hover"
-          className="mt-3"
-        >
-          <AppLink label={t('lets_talk.cta')} href="/contacts" />
-        </motion.div>
-      </div>
+      <motion.div
+        variants={fadeInSlideInVariant}
+        initial="hidden"
+        whileInView="visible"
+        className="mt-5 text-center"
+      >
+        <PopupButton id="wTr5ba0e" size={70}>
+          <AppButton.Button
+            icon={ICONS.sendEmail}
+            label={t_buttons('send_message')}
+          />
+        </PopupButton>
+      </motion.div>
     </motion.div>
   );
 };
