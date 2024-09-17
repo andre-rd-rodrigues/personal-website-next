@@ -10,6 +10,9 @@ interface HeroSectionProps {
   title: string;
   subtitle: ReactNode;
   className?: string;
+  options?: {
+    subtitleDelay?: number;
+  };
 }
 
 // Hero Text Section
@@ -17,6 +20,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
   className,
+  options,
 }) => {
   return (
     <div className={`text-white md:p-20 ${className}`}>
@@ -29,7 +33,11 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
         className="md:w-4/5"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: [0.35, 0, 0, 1], delay: 3 }}
+        transition={{
+          duration: 1,
+          ease: [0.35, 0, 0, 1],
+          delay: options?.subtitleDelay || 3,
+        }}
       >
         {subtitle}
       </motion.div>

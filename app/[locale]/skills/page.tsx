@@ -1,27 +1,34 @@
 'use client';
+import styles from '@/assets/styles/pages/skills.module.scss';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import { useTranslations } from 'next-intl';
-import React from 'react';
-import styles from '@/assets/styles/pages/skills.module.scss';
-import { Col, Row } from 'react-bootstrap';
-import {
-  containerVariant,
-  fadeInSlideLeftVariant,
-  fadeInVariant,
-  motion,
-} from '@/motion/motionVariants';
 
-import Image from 'next/image';
-import AppButton from '@/components/AppButton';
+import HeroSection from '@/components/Hero';
+import Section from '@/components/Section';
+import SectionTitle from '@/components/SectionTitle';
 
 const Skills = () => {
-  const t = useTranslations();
+  const t = useTranslations('skills');
 
   return (
     <PageContainer className={styles.container}>
-      <h1>Skills</h1>
+      <HeroSection.Text
+        title={t('heroTitle')}
+        subtitle={<p>{t('heroDescription')}</p>}
+        className="pb-0"
+        options={{
+          subtitleDelay: 0.8,
+        }}
+      />
+      <Section>
+        <SectionTitle title={t('title')} color="primary" tag="h2" />
+      </Section>
+    </PageContainer>
+  );
+};
 
-      <motion.div
+export default Skills;
+/* <motion.div
         variants={containerVariant}
         initial="hidden"
         whileInView="visible"
@@ -115,10 +122,4 @@ const Skills = () => {
             />
           </Col>
         </Row>
-      </motion.div>
-      <AppButton.Button downloadCV className="text-center" />
-    </PageContainer>
-  );
-};
-
-export default Skills;
+      </motion.div> */
