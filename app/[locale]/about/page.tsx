@@ -28,7 +28,6 @@ import CONTACTS from '@/constants/contacts.constants';
 const About = () => {
   const t = useTranslations('about_page');
   const t_buttons = useTranslations('buttons');
-  const [counterRef, counterInView] = useInView();
 
   return (
     <PageContainer>
@@ -75,28 +74,8 @@ const About = () => {
           <Col sm={12} md={4} lg={4}>
             <div className="flex h-full justify-center">
               <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
-                {/* Years of experience */}
-                <div>
-                  <p
-                    ref={counterRef}
-                    className={`${styles.counter} text-8xl font-thin text-purple-500`}
-                  >
-                    {'+'}{' '}
-                    <CountUp isCounting={counterInView} end={4} duration={3} />
-                  </p>
-                  <p className="mt-3">{t('experience.years')}</p>
-                </div>
-                {/* Projects */}
-                <div>
-                  <p
-                    ref={counterRef}
-                    className={`${styles.counter} text-8xl font-thin text-purple-500`}
-                  >
-                    {'+'}{' '}
-                    <CountUp isCounting={counterInView} end={15} duration={3} />
-                  </p>
-                  <p className="mt-3">{t('experience.projects')}</p>
-                </div>
+                <InfoCounter label={t('experience.years')} end={4} />
+                <InfoCounter label={t('experience.projects')} end={15} />
               </div>
             </div>
           </Col>
@@ -155,3 +134,18 @@ const About = () => {
 };
 
 export default About;
+
+const InfoCounter = ({ label, end }: { label: string; end: number }) => {
+  const [counterRef, counterInView] = useInView();
+  return (
+    <div>
+      <p
+        ref={counterRef}
+        className={`${styles.counter} text-8xl font-thin text-purple-500`}
+      >
+        {'+'} <CountUp isCounting={counterInView} end={end} duration={3} />
+      </p>
+      <p className="mt-3">{label}</p>
+    </div>
+  );
+};
