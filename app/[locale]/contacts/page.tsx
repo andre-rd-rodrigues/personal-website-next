@@ -1,15 +1,15 @@
 'use client';
 import styles from '@/assets/styles/pages/contact.module.scss';
-import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import { Col, Row } from 'react-bootstrap';
 
+import AppButton from '@/components/AppButton';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import CONTACTS from '@/constants/contacts.constants';
 import {
   containerVariant,
+  fadeInSlideLeftVariant,
   fadeInVariant,
-  rotateScaleVariant,
 } from '@/motion/motionVariants';
 import { useTranslations } from 'next-intl';
 
@@ -26,7 +26,7 @@ const Contacts = () => {
     <PageContainer className={styles.container}>
       <Row>
         <Col className={styles.col} {...spacing}>
-          <h1>{t('title')}</h1>
+          <h1 className="text-extralight">{t('title')}</h1>
         </Col>
         <Col className={styles.col} {...spacing}>
           <motion.div variants={fadeInVariant}>
@@ -42,30 +42,52 @@ const Contacts = () => {
           </motion.div>
         </Col>
         <Col className={styles.col} {...spacing}>
-          <motion.div variants={containerVariant} className={styles.social}>
-            <h3>{t('social')}</h3>
-            <div>
-              <ul>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.LINKTREE} target="_blank" rel="noreferrer">
-                    <Icon
-                      icon="simple-icons:linktree"
-                      className={styles.social_icon}
-                    />
-                  </a>
-                </motion.li>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.INSTAGRAM} target="_blank" rel="noreferrer">
-                    <Icon icon="mdi:instagram" className={styles.social_icon} />
-                  </a>
-                </motion.li>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.LINKEDIN} target="_blank" rel="noreferrer">
-                    <Icon icon="mdi:linkedin" className={styles.social_icon} />
-                  </a>
-                </motion.li>
-              </ul>
-            </div>
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            className={styles.social}
+          >
+            <motion.h3 variants={fadeInSlideLeftVariant}>
+              {t('social')}
+            </motion.h3>
+
+            <motion.ul
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <li>
+                <motion.a
+                  variants={fadeInVariant}
+                  href={CONTACTS.LINKTREE}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AppButton.Icon icon="simple-icons:linktree" />
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  variants={fadeInVariant}
+                  href={CONTACTS.INSTAGRAM}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AppButton.Icon icon="mdi:instagram" />
+                </motion.a>
+              </li>
+              <li>
+                <motion.a
+                  variants={fadeInVariant}
+                  href={CONTACTS.LINKEDIN}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <AppButton.Icon icon="mdi:linkedin" />
+                </motion.a>
+              </li>
+            </motion.ul>
           </motion.div>
         </Col>
       </Row>

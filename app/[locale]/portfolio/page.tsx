@@ -67,6 +67,9 @@ const Portfolio = () => {
           </p>
         }
         className="my-12"
+        options={{
+          subtitleDelay: 2,
+        }}
       />
 
       <Testimonials />

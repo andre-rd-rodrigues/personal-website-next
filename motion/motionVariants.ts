@@ -83,25 +83,25 @@ const fadeInSlideLeftVariant = {
 
 const rotateScaleVariant = {
   hidden: {
-    opacity: 0,
-    scale: 0.3,
-    rotate: 200,
+    scale: 0.2,
+    rotate: 50,
   },
   visible: {
-    opacity: 1,
     scale: 1,
     rotate: 0,
+
     transition: {
       type: 'spring',
-      duration: 0.8,
-      ease: 'easeOut',
+      duration: 0.9,
+      ease: 'linear',
     },
   },
   hover: {
     rotate: 360,
     transition: {
-      duration: 0.2,
-      ease: 'easeInOut',
+      duration: 8,
+      ease: 'linear',
+      repeat: Infinity,
     },
   },
 };

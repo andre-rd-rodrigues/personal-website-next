@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-/* import LanguageSelector from "components/LanguageSelector/LanguageSelector"; */
+
 import { Nav, Navbar, Offcanvas } from 'react-bootstrap';
 
 import styles from './appnavbar.module.scss';

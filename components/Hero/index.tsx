@@ -30,7 +30,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
       />
 
       <motion.div
-        className="md:w-4/5"
+        className="md:w-3/5"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{

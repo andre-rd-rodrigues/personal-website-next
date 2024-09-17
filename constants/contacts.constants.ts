@@ -1,10 +1,10 @@
 const CONTACTS = {
-  LINKEDIN: "https://www.linkedin.com/in/andr%C3%A9-rodrigues-4b4a9b188/",
-  FACEBOOK: "https://www.facebook.com/andrerodrigoweb",
-  INSTAGRAM: "https://www.instagram.com/andre.webstudio/",
-  GITHUB: "https://github.com/andre-rd-rodrigues",
-  LINKTREE: "https://linktr.ee/andre.webstudio",
-  EMAIL: "andrerodrigo.web@gmail.com"
+  LINKEDIN: 'https://www.linkedin.com/in/andr%C3%A9-rodrigues-4b4a9b188/',
+  FACEBOOK: 'https://www.facebook.com/andrerodrigoweb',
+  INSTAGRAM: 'https://www.instagram.com/andre.rodrigo0/',
+  GITHUB: 'https://github.com/andre-rd-rodrigues',
+  LINKTREE: 'https://linktr.ee/andre.webstudio',
+  EMAIL: 'andrerodrigo.web@gmail.com',
 };
 
 export default CONTACTS;
