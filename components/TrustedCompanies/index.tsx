@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import {
   containerVariant,
   fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
 } from '@/motion/motionVariants';
 import Section from '../Section';
 
@@ -12,9 +13,14 @@ const TrustedCompanies = () => {
   return (
     <Section>
       <div className={styles.container}>
-        <h2 className="text-uppercase text-l mb-4 text-center font-thin tracking-wider text-pink">
+        <motion.h2
+          variants={fadeInSlideLeftVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="text-uppercase text-l mb-4 text-center font-thin tracking-wider text-pink"
+        >
           Trusted by companies at
-        </h2>
+        </motion.h2>
         <motion.div
           variants={containerVariant}
           initial="hidden"

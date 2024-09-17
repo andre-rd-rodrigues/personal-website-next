@@ -32,6 +32,7 @@ const About = () => {
       <HeroSection.Text
         title={t('heroTitle')}
         subtitle={<p>{t('heroDescription')}</p>}
+        className="pb-0"
       />
 
       {/*   About me */}
@@ -118,7 +119,7 @@ const About = () => {
       </Section>
 
       {/* Contact */}
-      <Section>
+      <Section className="mb-0">
         <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
         <HeroSection.Cta
           text={t('contact.description')}
