@@ -24,11 +24,7 @@ const Button: FC<AppButtonProps> = ({ label, downloadCV, className, icon }) => {
           href="/docs/cv.pdf"
           download="André_Rodrigues_CV.pdf"
         >
-          <Icon
-            fontSize={30}
-            icon="material-symbols-light:download-sharp"
-            className="d-inline mr-2 -translate-y-0.5"
-          />
+          <Icon fontSize={25} icon="mingcute:download-3-line" />
           Download CV
         </a>
       </div>
