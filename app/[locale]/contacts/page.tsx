@@ -12,6 +12,7 @@ import {
   fadeInVariant,
 } from '@/motion/motionVariants';
 import { useTranslations } from 'next-intl';
+import ICONS from '@/constants/icons.constants';
 
 const Contacts = () => {
   const t = useTranslations('contacts_page');
@@ -64,7 +65,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon="simple-icons:linktree" />
+                  <AppButton.Icon icon={ICONS.linktree} />
                 </motion.a>
               </li>
               <li>
@@ -74,7 +75,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon="mdi:instagram" />
+                  <AppButton.Icon icon={ICONS.instagram} />
                 </motion.a>
               </li>
               <li>
@@ -84,7 +85,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon="mdi:linkedin" />
+                  <AppButton.Icon icon={ICONS.linkedin} />
                 </motion.a>
               </li>
             </motion.ul>

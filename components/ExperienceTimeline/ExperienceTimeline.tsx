@@ -14,7 +14,7 @@ import { experienceTimeline } from '@/data/info.data';
 import useIsMobile from '@/hooks/useIsMobile';
 
 const ExperienceTimeline = () => {
-  const t = useTranslations('about_page');
+  const t = useTranslations('about');
   const isMobile = useIsMobile(991);
 
   const [expandedElements, setExpandedElements] = useState<string[]>([]);

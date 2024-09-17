@@ -221,34 +221,34 @@ const services = {
   main: [
     {
       id: uuid(),
-      title: 'about_page.services.main.design.title',
-      description: 'about_page.services.main.design.description',
+      title: 'about.services.main.design.title',
+      description: 'about.services.main.design.description',
       icon: 'ph:pencil-thin',
     },
     {
       id: uuid(),
-      title: 'about_page.services.main.programming.title',
-      description: 'about_page.services.main.programming.description',
+      title: 'about.services.main.programming.title',
+      description: 'about.services.main.programming.description',
       icon: 'bytesize:code',
     },
     {
       id: uuid(),
-      title: 'about_page.services.main.seo.title',
-      description: 'about_page.services.main.seo.description',
+      title: 'about.services.main.seo.title',
+      description: 'about.services.main.seo.description',
       icon: 'clarity:world-line',
     },
     {
       id: uuid(),
-      title: 'about_page.services.main.metrics.title',
-      description: 'about_page.services.main.metrics.description',
+      title: 'about.services.main.metrics.title',
+      description: 'about.services.main.metrics.description',
       icon: 'fluent:megaphone-loud-16-regular',
     },
   ],
   extra: [
     {
       id: uuid(),
-      title: 'about_page.services.extra.branding.title',
-      description: 'about_page.services.extra.branding.description',
+      title: 'about.services.extra.branding.title',
+      description: 'about.services.extra.branding.description',
       icon: 'ph:paint-brush-light',
     },
     {

@@ -23,6 +23,11 @@
       "websites": "Cutting-edge website designs that blend innovation with user-centric solutions to boost engagement and business growth.",
       "apps": "Apps offering seamless user experiences across devices with optimal performance and reliability.",
       "editorial": "My personal thought-provoking space, that challenges me into inspire new ideas, and provide insights into trending topics."
+    },
+
+    "heroSection": {
+      "title": "Helping you seamlessly build online solutions",
+      "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and bring your vision to life."
     }
   },
   "projects": {
@@ -57,8 +62,8 @@
     }
   },
 
-  "about_page": {
-    "heroTitle": "You’ve got to start with the customer experience and work back toward the technology, not the other way around.",
+  "about": {
+    "heroTitle": "You’ve got to start with the customer experience and work back towards the technology.",
     "heroDescription": "- Steve Jobs, Co-Founder of Apple",
 
     "services": {
@@ -110,7 +115,7 @@
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
     "title": "overview",
-    "soft_skills": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
+    "description": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
   },
 
   "contacts_page": {
@@ -190,7 +195,8 @@
     "read_more": "Read more",
     "see_more": "See more",
     "contact": "Contact",
-    "send_message": "Send message"
+    "send_message": "Send message",
+    "explore": "Explore"
   },
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",

@@ -22,11 +22,13 @@ import { PopupButton } from '@typeform/embed-react';
 import { useInView } from 'react-intersection-observer';
 import { CountUp } from 'use-count-up';
 import AppButton from '@/components/AppButton';
-import { Link } from '@/navigation';
+
 import CONTACTS from '@/constants/contacts.constants';
+import Link from 'next/link';
+import ICONS from '@/constants/icons.constants';
 
 const About = () => {
-  const t = useTranslations('about_page');
+  const t = useTranslations('about');
   const t_buttons = useTranslations('buttons');
 
   return (
@@ -68,7 +70,6 @@ const About = () => {
       <TrustedCompanies />
 
       {/* About */}
-
       <Section>
         <Row>
           <Col sm={12} md={4} lg={4}>
@@ -103,11 +104,11 @@ const About = () => {
               className="mt-4 flex items-end justify-end gap-3"
             >
               <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
-                <AppButton.Icon icon="mingcute:download-3-line" />
+                <AppButton.Icon icon={ICONS.download} />
               </a>
 
               <Link href={CONTACTS.LINKEDIN} target="_">
-                <AppButton.Icon icon="flowbite:linkedin-solid" />
+                <AppButton.Icon icon={ICONS.linkedin} />
               </Link>
             </motion.div>
           </Col>
@@ -122,7 +123,7 @@ const About = () => {
           cta={
             <PopupButton id="wTr5ba0e" size={60}>
               <AppButton.Button
-                icon={{ icon: 'streamline:mail-send-email-message' }}
+                icon={ICONS.sendEmail}
                 label={t_buttons('send_message')}
               />
             </PopupButton>

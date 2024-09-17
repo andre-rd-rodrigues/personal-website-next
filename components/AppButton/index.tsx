@@ -1,58 +1,42 @@
 import { Icon } from '@iconify/react';
 import { FC } from 'react';
-import styles from './appbutton.module.scss';
-import { motion } from 'framer-motion';
-import { rotateScaleVariant } from '@/motion/motionVariants';
 
 interface AppButtonProps {
   label?: string;
-  downloadCV?: boolean;
   className?: string;
-  icon?: {
-    icon: string;
-    fontSize?: number;
-    className?: string;
-  };
+  icon?: string;
+  fullWidth?: boolean;
 }
 
-const Button: FC<AppButtonProps> = ({ label, downloadCV, className, icon }) => {
-  if (downloadCV) {
-    return (
-      <div className={className}>
-        <a
-          className={styles.btn}
-          href="/docs/cv.pdf"
-          download="André_Rodrigues_CV.pdf"
-        >
-          <Icon fontSize={25} icon="mingcute:download-3-line" />
-          Download CV
-        </a>
-      </div>
-    );
-  }
+const Button: FC<AppButtonProps> = ({ label, icon, fullWidth }) => {
   return (
-    <button className={styles.btn}>
-      {icon && <Icon {...icon} />}
-      {label}
+    <button
+      style={{ width: fullWidth ? '100%' : 'auto' }}
+      className="relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+    >
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff56cd_0%,#393BB2_50%,#ff56cd_100%)]" />
+      <span
+        className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full bg-gray-900 p-3 font-light text-white backdrop-blur-3xl"
+        style={{
+          fontFamily: 'var(--font-sans)',
+          width: fullWidth ? '100%' : 'auto',
+        }}
+      >
+        {icon && <Icon icon={icon} />}
+        {label}
+      </span>
     </button>
   );
 };
 
-const ButtonIcon = ({
-  icon,
-  className,
-}: {
-  icon: string;
-  className?: string;
-}) => {
+const ButtonIcon = ({ icon }: { icon: string }) => {
   return (
-    <motion.button
-      variants={rotateScaleVariant}
-      whileHover="hover"
-      className={`${styles.btn_no_hover} ${className} gap-0 p-3`}
-    >
-      <Icon icon={icon} fontSize={25} />
-    </motion.button>
+    <button className="relative inline-flex w-full overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff56cd_0%,#393BB2_50%,#ff56cd_100%)]" />
+      <span className="inline-flex w-full cursor-pointer items-center justify-center rounded-full bg-gray-900 p-3 text-white backdrop-blur-3xl">
+        <Icon icon={icon} fontSize={25} />
+      </span>
+    </button>
   );
 };
 

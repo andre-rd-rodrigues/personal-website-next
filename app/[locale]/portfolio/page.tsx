@@ -9,13 +9,16 @@ import Card from '@/components/Card';
 import { WORK_CATEGORIES } from '@/data/info.data';
 import { useTranslations } from 'next-intl';
 import { Col, Row } from 'react-bootstrap';
-import { Link } from '@/navigation';
+
 import SectionTitle from '@/components/SectionTitle';
 import HeroSection from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
+import ICONS from '@/constants/icons.constants';
+import Link from 'next/link';
 
 const Portfolio = () => {
   const t = useTranslations('portfolio');
+  const t_button = useTranslations('buttons');
 
   const getCategoryPageLink = (category: string) =>
     category === 'Editorial'
@@ -37,16 +40,12 @@ const Portfolio = () => {
                 description={t(description)}
                 imageUrl={src}
                 footer={
-                  // @ts-expect-error blog pathname is not defined
                   <Link href={getCategoryPageLink(name)}>
                     <AppButton.Button
                       className="w-full"
-                      label="Explore"
-                      icon={{
-                        icon: 'guidance:left-arrow',
-                        fontSize: 25,
-                        className: 'd-inline mr-4',
-                      }}
+                      label={t_button('explore')}
+                      icon={ICONS.arrow}
+                      fullWidth
                     />
                   </Link>
                 }
@@ -57,13 +56,10 @@ const Portfolio = () => {
       </Row>
 
       <HeroSection.Text
-        title={
-          'Helping you seamlessly hire and pay individuals all around the world.'
-        }
+        title={t('heroSection.title')}
         subtitle={
           <p className="text-lg font-extralight md:text-xl">
-            With so many workforce’s now borderless, payments must be too. Take
-            the pain out of your workforce payments with Navro.
+            {t('heroSection.description')}
           </p>
         }
         className="my-12"

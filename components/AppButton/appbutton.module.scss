@@ -1,13 +1,8 @@
 @import 'assets/styles/mixins';
 
 .btn {
-  @include button();
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-.btn_no_hover {
-  @include button_no_hover();
 }

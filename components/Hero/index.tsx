@@ -26,7 +26,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
     <div className={`text-white md:p-20 ${className}`}>
       <AnimatedText.Fade
         text={title}
-        className="mb-4 text-5xl font-extralight md:mb-12 md:w-4/5 md:text-7xl"
+        className="mb-4 text-5xl font-extralight md:mb-12 md:w-5/6 md:text-7xl"
       />
 
       <motion.div
@@ -36,7 +36,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
         transition={{
           duration: 1,
           ease: [0.35, 0, 0, 1],
-          delay: options?.subtitleDelay || 3,
+          delay: options?.subtitleDelay || 2,
         }}
       >
         {subtitle}

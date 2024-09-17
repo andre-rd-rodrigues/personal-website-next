@@ -35,7 +35,7 @@ const Skills = () => {
           whileInView="visible"
           initial="hidden"
         >
-          {t('soft_skills')}
+          {t('description')}
         </motion.p>
       </Section>
       <Row>
@@ -47,7 +47,9 @@ const Skills = () => {
         </Col>
       </Row>
       <div className="flex items-end justify-end gap-3">
-        <AppButton.Button downloadCV />
+        <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
+          <AppButton.Icon icon="mingcute:download-3-line" />
+        </a>
         <Link href={CONTACTS.LINKEDIN} target="_">
           <AppButton.Icon icon="flowbite:linkedin-solid" />
         </Link>
