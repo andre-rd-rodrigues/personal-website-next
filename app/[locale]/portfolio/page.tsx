@@ -8,7 +8,6 @@ import Card from '@/components/Card';
 
 import { WORK_CATEGORIES } from '@/data/info.data';
 import { useTranslations } from 'next-intl';
-import { Col, Row } from 'react-bootstrap';
 
 import SectionTitle from '@/components/SectionTitle';
 import HeroSection from '@/components/Hero';
@@ -31,9 +30,12 @@ const Portfolio = () => {
     <PageContainer>
       <SectionTitle title={t('title')} />
 
-      <Row>
-        {WORK_CATEGORIES.map(({ name, description, src }, index) => (
-          <Col lg={6} md={6} sm={12} key={index} className="mb-0 sm:mb-4">
+      <div className="grid items-baseline gap-6 md:grid-cols-12">
+        {WORK_CATEGORIES.map(({ name, description, src }, i) => (
+          <div
+            className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-6"
+            key={i}
+          >
             <motion.div variants={fadeInSlideInVariant} className="h-full">
               <Card
                 title={name}
@@ -51,9 +53,9 @@ const Portfolio = () => {
                 }
               />
             </motion.div>
-          </Col>
+          </div>
         ))}
-      </Row>
+      </div>
 
       <HeroSection.Text
         title={t('heroSection.title')}

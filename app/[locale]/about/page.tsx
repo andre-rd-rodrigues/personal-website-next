@@ -12,20 +12,19 @@ import { useTranslations } from 'next-intl';
 import HeroSection from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
-import { Col, Row } from 'react-bootstrap';
 
 import styles from '@/assets/styles/pages/about.module.scss';
 
+import AppButton from '@/components/AppButton';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import { PopupButton } from '@typeform/embed-react';
 import { useInView } from 'react-intersection-observer';
 import { CountUp } from 'use-count-up';
-import AppButton from '@/components/AppButton';
 
 import CONTACTS from '@/constants/contacts.constants';
-import Link from 'next/link';
 import ICONS from '@/constants/icons.constants';
+import Link from 'next/link';
 
 const About = () => {
   const t = useTranslations('about');
@@ -71,16 +70,14 @@ const About = () => {
 
       {/* About */}
       <Section>
-        <Row>
-          <Col sm={12} md={4} lg={4}>
-            <div className="flex h-full justify-center">
-              <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
-                <InfoCounter label={t('experience.years')} end={4} />
-                <InfoCounter label={t('experience.projects')} end={15} />
-              </div>
+        <div className="grid gap-6 md:grid-cols-12">
+          <div className="col-span-12 flex h-full justify-center sm:col-span-4">
+            <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
+              <InfoCounter label={t('experience.years')} end={4} />
+              <InfoCounter label={t('experience.projects')} end={15} />
             </div>
-          </Col>
-          <Col sm={12} md={8} lg={8}>
+          </div>
+          <div className="col-span-12 sm:col-span-8">
             <motion.h3
               variants={fadeInSlideLeftVariant}
               initial="hidden"
@@ -96,7 +93,6 @@ const About = () => {
             >
               {t('experience.description')}
             </motion.p>
-
             <motion.div
               variants={containerVariant}
               initial="hidden"
@@ -106,13 +102,12 @@ const About = () => {
               <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
                 <AppButton.Icon icon={ICONS.download} />
               </a>
-
               <Link href={CONTACTS.LINKEDIN} target="_">
                 <AppButton.Icon icon={ICONS.linkedin} />
               </Link>
             </motion.div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Section>
 
       {/* Contact */}

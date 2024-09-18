@@ -1,35 +1,28 @@
 'use client';
 import styles from '@/assets/styles/pages/contact.module.scss';
 import { motion } from 'framer-motion';
-import { Col, Row } from 'react-bootstrap';
 
 import AppButton from '@/components/AppButton';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import CONTACTS from '@/constants/contacts.constants';
+import ICONS from '@/constants/icons.constants';
 import {
   containerVariant,
   fadeInSlideLeftVariant,
   fadeInVariant,
 } from '@/motion/motionVariants';
 import { useTranslations } from 'next-intl';
-import ICONS from '@/constants/icons.constants';
 
 const Contacts = () => {
   const t = useTranslations('contacts_page');
 
-  const spacing = {
-    lg: 4,
-    md: 4,
-    sm: 12,
-  };
-
   return (
     <PageContainer className={styles.container}>
-      <Row>
-        <Col className={styles.col} {...spacing}>
+      <div className="grid items-baseline gap-6 md:grid-cols-12">
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
           <h1 className="text-extralight">{t('title')}</h1>
-        </Col>
-        <Col className={styles.col} {...spacing}>
+        </div>
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
           <motion.div variants={fadeInVariant}>
             <h3>{t('email')}</h3>
             <a
@@ -41,8 +34,8 @@ const Contacts = () => {
               {CONTACTS.EMAIL}
             </a>
           </motion.div>
-        </Col>
-        <Col className={styles.col} {...spacing}>
+        </div>
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
           <motion.div
             variants={containerVariant}
             initial="hidden"
@@ -90,8 +83,8 @@ const Contacts = () => {
               </li>
             </motion.ul>
           </motion.div>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </PageContainer>
   );
 };

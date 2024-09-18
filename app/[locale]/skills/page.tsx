@@ -8,7 +8,6 @@ import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import RadarChart from '@/components/RadarChart';
 import { skillsDataFE, skillsDataBE } from '@/data/info.data';
-import { Col, Row } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { fadeInSlideLeftVariant } from '@/motion/motionVariants';
 import AppButton from '@/components/AppButton';
@@ -39,14 +38,14 @@ const Skills = () => {
           {t('description')}
         </motion.p>
       </Section>
-      <Row>
-        <Col sm={12} md={6}>
+      <div className="grid items-baseline gap-6 md:grid-cols-12">
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-6">
           <RadarChart data={skillsDataFE} />
-        </Col>
-        <Col sm={12} md={6}>
+        </div>
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-6">
           <RadarChart data={skillsDataBE} />
-        </Col>
-      </Row>
+        </div>
+      </div>
       <div className="flex items-end justify-end gap-3">
         <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
           <AppButton.Icon icon={ICONS.download} />
