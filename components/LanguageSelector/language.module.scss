@@ -14,21 +14,3 @@
     opacity: 0;
   }
 }
-
-//Responsive
-@media only screen and (max-width: $breaking-point-lg) {
-  .container {
-    justify-content: end;
-    color: dark;
-    margin-top: 30px;
-    margin-right: 10px;
-    color: color(dark);
-    select {
-      right: -10px;
-    }
-    svg {
-      width: 40px;
-      height: 40px;
-    }
-  }
-}

@@ -1,90 +1,116 @@
 'use client';
-import { useState } from 'react';
-
-import { Nav, Navbar, Offcanvas } from 'react-bootstrap';
-
-import styles from './appnavbar.module.scss';
-
-import { Icon } from '@iconify/react/dist/iconify.js';
-import { useTranslations } from 'next-intl';
-import LanguageSelector from '../LanguageSelector';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Icon } from '@iconify/react';
+import ICONS from '@/constants/icons.constants';
 import { Link } from '@/navigation';
-import useIsMobile from '@/hooks/useIsMobile';
+import LanguageSelector from '../LanguageSelector';
 
-const AppNavbar = () => {
-  const [show, setShow] = useState(false);
-  const isMobile = useIsMobile(991);
+const navItems = [
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/about', label: 'About' },
+  { href: '/skills', label: 'Skills' },
+  { href: '/contacts', label: 'Contacts' },
+  { href: 'https://www.blog.andrerodrigo.com', label: 'Blog' },
+];
 
-  const t = useTranslations('navbar');
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
-    <Navbar expand="lg" fixed="top" className={styles.nav}>
-      <Navbar.Brand as={Link} href="/">
-        <div className={styles.logo}>
-          <div id="personal_picture" className={styles.avatarWrapper}>
-            <Image
-              src="/images/profile_avatar.jpg"
-              alt="Personal Picture"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-              className={styles.avatarImage}
-            />
+    <nav className="fixed left-4 right-4 top-4 z-50">
+      <div className="border-1 relative h-full rounded-full border-gray-800 bg-dark bg-opacity-50 shadow-lg backdrop-blur-[20px]">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className="relative mr-2 h-10 w-10 overflow-hidden rounded-full">
+                  <Image
+                    src="/images/logo.png"
+                    alt="AR"
+                    width={40}
+                    height={40}
+                    className="object-cover"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-center">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    /* @ts-expect-error href does not have the type */
+                    href={item.href}
+                    className={`rounded-md px-3 py-2 text-sm font-normal ${
+                      pathname === item.href
+                        ? 'text-white'
+                        : 'text-gray-300 hover:text-white'
+                    } transition-colors duration-300`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <LanguageSelector />
+              </div>
+            </div>
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              >
+                <span className="sr-only">Open main menu</span>
+                <Icon
+                  icon={ICONS.menu}
+                  className="block h-6 w-6"
+                  aria-hidden="true"
+                />
+              </button>
+            </div>
           </div>
-          <span className={styles.title}>AR</span>
-          <p>{t('brand_label')}</p>
         </div>
-      </Navbar.Brand>
-      <Navbar.Toggle
-        aria-controls="offcanvas-container"
-        onClick={() => setShow(true)}
-      >
-        <Icon icon="material-symbols-light:menu" color="white" fontSize={35} />
-      </Navbar.Toggle>
+      </div>
 
-      <Navbar.Offcanvas
-        className={`${styles.offcanvas} ${isMobile ? 'offcanvas-custom' : ''}`}
-        show={show}
-        responsive="lg"
-        onHide={() => setShow(false)}
-        aria-labelledby="offcanvas-container"
-        placement="end"
-      >
-        <Offcanvas.Header closeButton />
-        <Offcanvas.Body>
-          <Nav
-            onSelect={() => setShow(false)}
-            className={styles.offcanvasLinks}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="mt-2 md:hidden"
           >
-            <Nav.Link as={Link} href="/portfolio">
-              {t('portfolio')}
-            </Nav.Link>
-            <Nav.Link as={Link} href="/portfolio/#testimonials">
-              {t('testimonials')}
-            </Nav.Link>
-
-            <Nav.Link as={Link} href="/about">
-              {t('about')}
-            </Nav.Link>
-            <Nav.Link as={Link} href="/skills">
-              Skills
-            </Nav.Link>
-
-            <Nav.Link as={Link} href="/contacts">
-              {t('contacts')}
-            </Nav.Link>
-
-            <Nav.Link href="https://www.blog.andrerodrigo.com">
-              {t('blog')}
-            </Nav.Link>
-
-            <LanguageSelector />
-          </Nav>
-        </Offcanvas.Body>
-      </Navbar.Offcanvas>
-    </Navbar>
+            <div className="border-1 rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 shadow-lg backdrop-blur-[20px]">
+              <div className="space-y-1 px-2 py-4 sm:px-3">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    /* @ts-expect-error href does not have the type */
+                    href={item.href}
+                    className={`block rounded-md px-3 py-2 text-right font-extralight ${
+                      pathname === item.href
+                        ? 'text-white'
+                        : 'text-gray-300 hover:text-white'
+                    } transition-colors duration-300`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <LanguageSelector className="flex justify-end" />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
-};
-
-export default AppNavbar;
+}

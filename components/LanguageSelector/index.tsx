@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { usePathname, useRouter } from '@/navigation';
 import { ChangeEvent } from 'react';
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ className }: { className?: string }) => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -15,7 +15,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <Icon icon="ph:globe-thin" fontSize={30} color="white" />
       <select onChange={handleChangeLanguage} value={locale}>
         <option value="en">English</option>

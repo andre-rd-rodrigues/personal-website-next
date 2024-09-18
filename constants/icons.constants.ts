@@ -8,6 +8,7 @@ const ICONS = {
   git: 'akar-icons:github-fill',
   open: 'majesticons:open',
   facebook: 'ri:facebook-line',
+  menu: 'ri:menu-line',
 };
 
 export default ICONS;
