@@ -10,7 +10,7 @@ import RadarChart from '@/components/RadarChart';
 import { skillsDataFE, skillsDataBE } from '@/data/info.data';
 import { motion } from 'framer-motion';
 import { fadeInSlideLeftVariant } from '@/motion/motionVariants';
-import AppButton from '@/components/AppButton';
+import Button from '@/components/Button';
 import CONTACTS from '@/constants/contacts.constants';
 import Link from 'next/link';
 import ICONS from '@/constants/icons.constants';
@@ -48,10 +48,10 @@ const Skills = () => {
       </div>
       <div className="flex items-end justify-end gap-3">
         <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
-          <AppButton.Icon icon={ICONS.download} />
+          <Button.Icon icon={ICONS.download} />
         </a>
         <Link href={CONTACTS.LINKEDIN} target="_">
-          <AppButton.Icon icon={ICONS.linkedin} />
+          <Button.Icon icon={ICONS.linkedin} />
         </Link>
       </div>
     </PageContainer>

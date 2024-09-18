@@ -6,7 +6,7 @@ import styles from './footer.module.scss';
 import FOOTER_LINKS from '@/constants/footer.constants';
 import { motion } from 'framer-motion';
 import { containerVariant } from '@/motion/motionVariants';
-import AppButton from '../AppButton';
+import Button from '../Button';
 
 const Footer = () => {
   return (
@@ -25,7 +25,7 @@ const Footer = () => {
             rel="noreferrer"
             style={{ transform: 'scale(0.7)' }}
           >
-            <AppButton.Icon icon={icon} />
+            <Button.Icon icon={icon} />
           </a>
         ))}
       </div>

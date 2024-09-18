@@ -18,7 +18,7 @@ import SectionTitle from '../SectionTitle';
 import { TESTIMONIALS } from './testimonials.constants';
 import styles from './testimonials.module.scss';
 import { PopupButton } from '@typeform/embed-react';
-import AppButton from '../AppButton';
+import Button from '../Button';
 import ICONS from '@/constants/icons.constants';
 
 const Testimonials = () => {
@@ -52,7 +52,7 @@ const Testimonials = () => {
         className="mt-5 text-center"
       >
         <PopupButton id="wTr5ba0e" size={70}>
-          <AppButton.Button
+          <Button.Text
             icon={ICONS.sendEmail}
             label={t_buttons('send_message')}
           />

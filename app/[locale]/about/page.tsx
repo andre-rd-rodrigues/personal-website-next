@@ -15,7 +15,7 @@ import Image from 'next/image';
 
 import styles from '@/assets/styles/pages/about.module.scss';
 
-import AppButton from '@/components/AppButton';
+import Button from '@/components/Button';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import { PopupButton } from '@typeform/embed-react';
@@ -100,10 +100,10 @@ const About = () => {
               className="mt-4 flex items-end justify-end gap-3"
             >
               <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
-                <AppButton.Icon icon={ICONS.download} />
+                <Button.Icon icon={ICONS.download} />
               </a>
               <Link href={CONTACTS.LINKEDIN} target="_">
-                <AppButton.Icon icon={ICONS.linkedin} />
+                <Button.Icon icon={ICONS.linkedin} />
               </Link>
             </motion.div>
           </div>
@@ -117,7 +117,7 @@ const About = () => {
           text={t('contact.description')}
           cta={
             <PopupButton id="wTr5ba0e" size={60}>
-              <AppButton.Button
+              <Button.Text
                 icon={ICONS.sendEmail}
                 label={t_buttons('send_message')}
               />

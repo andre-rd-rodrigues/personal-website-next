@@ -2,7 +2,7 @@
 import styles from '@/assets/styles/pages/contact.module.scss';
 import { motion } from 'framer-motion';
 
-import AppButton from '@/components/AppButton';
+import Button from '@/components/Button';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
@@ -58,7 +58,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon={ICONS.linktree} />
+                  <Button.Icon icon={ICONS.linktree} />
                 </motion.a>
               </li>
               <li>
@@ -68,7 +68,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon={ICONS.instagram} />
+                  <Button.Icon icon={ICONS.instagram} />
                 </motion.a>
               </li>
               <li>
@@ -78,7 +78,7 @@ const Contacts = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <AppButton.Icon icon={ICONS.linkedin} />
+                  <Button.Icon icon={ICONS.linkedin} />
                 </motion.a>
               </li>
             </motion.ul>

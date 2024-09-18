@@ -1,14 +1,14 @@
 import { Icon } from '@iconify/react';
 import { FC } from 'react';
 
-interface AppButtonProps {
+interface ButtonProps {
   label?: string;
   className?: string;
   icon?: string;
   fullWidth?: boolean;
 }
 
-const Button: FC<AppButtonProps> = ({ label, icon, fullWidth }) => {
+const ButtonWithText: FC<ButtonProps> = ({ label, icon, fullWidth }) => {
   return (
     <button
       style={{ width: fullWidth ? '100%' : 'auto' }}
@@ -46,9 +46,9 @@ const ButtonIcon = ({
   );
 };
 
-const AppButton = {
-  Button,
+const Button = {
+  Text: ButtonWithText,
   Icon: ButtonIcon,
 };
 
-export default AppButton;
+export default Button;

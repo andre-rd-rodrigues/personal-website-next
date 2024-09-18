@@ -3,7 +3,7 @@ import { fadeInSlideInVariant, motion } from '@/motion/motionVariants';
 
 import PageContainer from '@/components/PageContainer/PageContainer';
 
-import AppButton from '@/components/AppButton';
+import Button from '@/components/Button';
 import Card from '@/components/Card';
 
 import { WORK_CATEGORIES } from '@/data/info.data';
@@ -43,7 +43,7 @@ const Portfolio = () => {
                 imageUrl={src}
                 footer={
                   <Link href={getCategoryPageLink(name)}>
-                    <AppButton.Button
+                    <Button.Text
                       className="w-full"
                       label={t_button('explore')}
                       icon={ICONS.arrow}

@@ -33,10 +33,10 @@ plaintextCopiar código
 ├── /assets
 │
 ├── /components
-│   ├── /AppButton.Button
+│   ├── /Button.Text
 │   ├── /AppHead
 │   ├── /AppLink
-│   ├── /AppNavbar
+│   ├── /Navbar
 │   ├── /ContactBanner
 │   ├── /ExperienceTimeline
 │   ├── /Footer

@@ -7,7 +7,7 @@ import ICONS from '@/constants/icons.constants';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslations } from 'next-intl';
 import ReactGA from 'react-ga4';
-import AppButton from '../AppButton';
+import Button from '../Button';
 import Modal from '../Modal';
 
 interface ProjectDisplayProps {
@@ -102,7 +102,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
             target="_blank"
             rel="noreferrer"
           >
-            <AppButton.Icon icon={ICONS.git} />
+            <Button.Icon icon={ICONS.git} />
           </a>
           {(website || app) && (
             <a
@@ -121,7 +121,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
               rel="noreferrer"
               className="flex items-center gap-1 font-normal transition-all duration-100 ease-in hover:text-custom-yellow"
             >
-              <AppButton.Icon icon={ICONS.open} />
+              <Button.Icon icon={ICONS.open} />
             </a>
           )}
         </div>

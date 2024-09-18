@@ -1,4 +1,4 @@
-import AppNavbar from '@/components/AppNavbar/AppNavbar';
+import Navbar from '@/components/Navbar/Navbar';
 import './globals.scss';
 
 import { blacker, jost, moniqa } from '@/assets/fonts';
@@ -51,7 +51,7 @@ const RootLayout = ({
       </head>
       <body className="min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <AppNavbar />
+          <Navbar />
           {children}
           <AnalyticsBanner />
           <Footer />

@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
       <h2 className="my-5 text-5xl font-light">{title}</h2>
       <div className="flex flex-col justify-between">
         <p>{description}</p>
-        <div className="mt-4 w-full">{footer}</div>
+        <div className="mt-7 w-full">{footer}</div>
       </div>
     </div>
   );
