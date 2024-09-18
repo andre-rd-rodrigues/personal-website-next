@@ -89,7 +89,6 @@ Here are some of the key libraries used in this project:
 - **framer-motion**: For animations.
 - **next-intl**: For internationalization support.
 - **next-seo**: For SEO management.
-- **react-bootstrap**: Bootstrap components for React.
 - **react-slick**: For carousels and sliders.
 - **react-vertical-timeline-component**: For creating vertical timelines.
 - **sass**: For styling.
