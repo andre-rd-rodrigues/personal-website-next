@@ -59,7 +59,10 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
 
       {/* Modal */}
       <Modal onHide={() => setIsModalOpen(false)} show={isModalOpen}>
-        <h4 className="mb-8 mt-3 text-5xl font-extralight">{label}</h4>
+        <h4 className="mb-8 mt-3 bg-[linear-gradient(259deg,#2729ff_60%,#ff56cd_100%)] bg-clip-text text-5xl font-extralight text-transparent">
+          {label}
+        </h4>
+
         <p>{t(description)}</p>
         <hr className="my-7 text-pink" />
         <p className="mb-4 flex gap-2 text-xl font-medium">
