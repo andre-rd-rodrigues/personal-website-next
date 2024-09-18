@@ -1,3 +1,5 @@
+@import 'assets/styles/mixins';
+
 .container {
   width: 100%;
   height: 100vh;
@@ -17,4 +19,11 @@
     backdrop-filter: blur(4px);
     filter: brightness(0.8);
   }
+}
+
+.hideWaterMark {
+  width: 100vw;
+  height: 30px;
+  background-color: color(dark);
+  transform: translateY(-20px);
 }
