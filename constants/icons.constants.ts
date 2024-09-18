@@ -7,6 +7,7 @@ const ICONS = {
   arrow: 'guidance:left-arrow',
   git: 'akar-icons:github-fill',
   open: 'majesticons:open',
+  facebook: 'ri:facebook-line',
 };
 
 export default ICONS;

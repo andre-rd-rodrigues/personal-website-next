@@ -14,6 +14,7 @@ import { fadeInSlideLeftVariant } from '@/motion/motionVariants';
 import AppButton from '@/components/AppButton';
 import CONTACTS from '@/constants/contacts.constants';
 import Link from 'next/link';
+import ICONS from '@/constants/icons.constants';
 
 const Skills = () => {
   const t = useTranslations('skills');
@@ -48,10 +49,10 @@ const Skills = () => {
       </Row>
       <div className="flex items-end justify-end gap-3">
         <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
-          <AppButton.Icon icon="mingcute:download-3-line" />
+          <AppButton.Icon icon={ICONS.download} />
         </a>
         <Link href={CONTACTS.LINKEDIN} target="_">
-          <AppButton.Icon icon="flowbite:linkedin-solid" />
+          <AppButton.Icon icon={ICONS.linkedin} />
         </Link>
       </div>
     </PageContainer>

@@ -2,10 +2,11 @@
 import React from 'react';
 
 import styles from './footer.module.scss';
-import { Icon } from '@iconify/react';
+
 import FOOTER_LINKS from '@/constants/footer.constants';
 import { motion } from 'framer-motion';
-import { containerVariant, rotateScaleVariant } from '@/motion/motionVariants';
+import { containerVariant } from '@/motion/motionVariants';
+import AppButton from '../AppButton';
 
 const Footer = () => {
   return (
@@ -17,20 +18,20 @@ const Footer = () => {
     >
       <div className="flex">
         {FOOTER_LINKS.map(({ icon, href }, i) => (
-          <motion.a
-            variants={rotateScaleVariant}
-            whileInView="visible"
-            whileHover="hover"
-            initial="hidden"
+          <a
             href={href}
             key={i}
             target="_blank"
+            rel="noreferrer"
+            style={{ transform: 'scale(0.7)' }}
           >
-            <Icon fontSize={21} icon={icon} />
-          </motion.a>
+            <AppButton.Icon icon={icon} />
+          </a>
         ))}
       </div>
-      <div id="footer-copyright">&#169; 2022 by André Rodrigo</div>
+      <div className="mb-0 flex items-center gap-2 text-sm font-extralight">
+        &#169; 2022 by <span className="text-pink">André Rodrigo</span>
+      </div>
     </motion.footer>
   );
 };

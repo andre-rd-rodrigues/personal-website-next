@@ -81,31 +81,6 @@ const fadeInSlideLeftVariant = {
   },
 };
 
-const rotateScaleVariant = {
-  hidden: {
-    scale: 0.2,
-    rotate: 50,
-  },
-  visible: {
-    scale: 1,
-    rotate: 0,
-
-    transition: {
-      type: 'spring',
-      duration: 0.9,
-      ease: 'linear',
-    },
-  },
-  hover: {
-    rotate: 360,
-    transition: {
-      duration: 8,
-      ease: 'linear',
-      repeat: Infinity,
-    },
-  },
-};
-
 const slowRotateVariant = {
   rotate: [0, 360],
   transition: {
@@ -195,7 +170,6 @@ export {
   getAttentionVariant,
   homepageDelayVariant,
   motion,
-  rotateScaleVariant,
   scaleSpringVariant,
   slowRotateVariant,
   useScroll,

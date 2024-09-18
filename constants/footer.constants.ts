@@ -1,19 +1,20 @@
-import CONTACTS from "./contacts.constants";
+import CONTACTS from './contacts.constants';
+import ICONS from './icons.constants';
 
 const FOOTER_LINKS = [
-  { icon: "uit:facebook-f", href: CONTACTS.FACEBOOK },
+  { icon: ICONS.facebook, href: CONTACTS.FACEBOOK },
   {
-    icon: "ph:instagram-logo-thin",
-    href: CONTACTS.INSTAGRAM
+    icon: ICONS.instagram,
+    href: CONTACTS.INSTAGRAM,
   },
   {
-    icon: "uit:linkedin-alt",
-    href: CONTACTS.LINKEDIN
+    icon: ICONS.linkedin,
+    href: CONTACTS.LINKEDIN,
   },
   {
-    icon: "arcticons:linktree-alt",
-    href: CONTACTS.LINKTREE
-  }
+    icon: ICONS.linktree,
+    href: CONTACTS.LINKTREE,
+  },
 ];
 
 export default FOOTER_LINKS;
