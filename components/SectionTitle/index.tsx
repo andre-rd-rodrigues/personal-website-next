@@ -22,7 +22,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
     <div className="relative mb-5">
       <motion.div variants={fadeInSlideLeftVariant}>
         <Tag
-          className={`text-uppercase pb-2 text-xl font-thin tracking-wider`}
+          className={`pb-2 text-xl font-thin uppercase tracking-wider`}
           style={{ color: `var(--color-${color})` }}
         >
           {title}

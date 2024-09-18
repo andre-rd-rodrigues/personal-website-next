@@ -61,7 +61,7 @@ const RootLayout = ({
           <Analytics />
         </NextIntlClientProvider>
       </body>
-      {/*  <BgAnimation /> */}
+      <BgAnimation />
     </html>
   );
 };

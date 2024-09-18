@@ -14,6 +14,7 @@ import HeroSection from '@/components/Hero';
 import Testimonials from '@/components/Testimonials';
 import ICONS from '@/constants/icons.constants';
 import { Link } from '@/navigation';
+import { AuroraBackground } from '@/components/ui/aurora-background';
 
 const Portfolio = () => {
   const t = useTranslations('portfolio');

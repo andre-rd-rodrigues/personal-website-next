@@ -10,7 +10,6 @@ import LanguageSelector from '../LanguageSelector';
 
 const navItems = [
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/testimonials', label: 'Testimonials' },
   { href: '/about', label: 'About' },
   { href: '/skills', label: 'Skills' },
   { href: '/contacts', label: 'Contacts' },

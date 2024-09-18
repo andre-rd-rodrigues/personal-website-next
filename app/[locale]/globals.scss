@@ -25,9 +25,12 @@
   --color-dark: #161616;
 }
 
+* {
+  color: white;
+}
+
 body {
   background: color(dark);
-  color: white;
 }
 
 nav {
