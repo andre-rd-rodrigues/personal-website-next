@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Underline } from '../ui/underline';
 
 interface FadeProps {
   text: string;
   className?: string;
+  letter?: boolean;
+  underline?: boolean;
 }
 
-const Fade = ({ text, className }: FadeProps) => {
+const Fade = ({ text, className, letter, underline }: FadeProps) => {
   const words = text.split(' ');
+  const letters = text.split('');
+  const data = letter ? letters : words;
 
   return (
-    <div className={className}>
-      {words.map((word, index) => (
+    <div className={`${className}`}>
+      {data.map((word, index) => (
         <motion.span
           key={`${word}-${index}`}
           initial={{
@@ -21,7 +26,7 @@ const Fade = ({ text, className }: FadeProps) => {
             opacity: 1,
           }}
           transition={{
-            duration: 1.5,
+            duration: 2,
             delay: index * 0.13,
             ease: [0.35, 0, 0, 1],
           }}
@@ -30,6 +35,7 @@ const Fade = ({ text, className }: FadeProps) => {
           {word}
         </motion.span>
       ))}
+      {underline && <Underline />}
     </div>
   );
 };

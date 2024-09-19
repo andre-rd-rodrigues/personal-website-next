@@ -16,7 +16,7 @@ const ButtonWithText: FC<ButtonProps> = ({ label, icon, fullWidth }) => {
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#ff56cd_0%,#393BB2_50%,#ff56cd_100%)]" />
       <span
-        className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full bg-gray-900 p-3 font-light text-white backdrop-blur-3xl"
+        className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full bg-gray-900 p-3 px-5 font-light text-white backdrop-blur-3xl"
         style={{
           fontFamily: 'var(--font-sans)',
           width: fullWidth ? '100%' : 'auto',

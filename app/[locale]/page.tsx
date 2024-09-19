@@ -2,25 +2,33 @@
 import { useTranslations } from 'next-intl';
 
 import styles from '@/assets/styles/pages/homepage.module.scss';
-import AppLink from '@/components/AppLink/AppLink';
 
-import { fadeInVariant, homepageDelayVariant } from '@/motion/motionVariants';
-import { PopupButton } from '@typeform/embed-react';
-import { motion } from 'framer-motion';
-import ReactGA from 'react-ga4';
+import AnimatedText from '@/components/AnimatedText';
+import Button from '@/components/Button';
+import SectionTitle from '@/components/SectionTitle';
+import { AuroraBackground } from '@/components/ui/aurora-background';
+import { HeroParallax } from '@/components/ui/hero-parallax';
 import {
   EventActions,
   EventCategories,
   EventLabels,
 } from '@/constants/analytics.constants';
-import { AuroraBackground } from '@/components/ui/aurora-background';
-import { HeroParallax } from '@/components/ui/hero-parallax';
-import PageContainer from '@/components/PageContainer/PageContainer';
-import SectionTitle from '@/components/SectionTitle';
-import Section from '@/components/Section';
+import ICONS from '@/constants/icons.constants';
+import {
+  containerVariant,
+  fadeInSlideInVariant,
+  fadeInVariant,
+} from '@/motion/motionVariants';
+import { Link } from '@/navigation';
+import { PopupButton } from '@typeform/embed-react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import ReactGA from 'react-ga4';
 
 const Home = () => {
   const t = useTranslations('homepage');
+  const t_buttons = useTranslations('buttons');
+
   const products = [
     {
       title: 'Moonbeam',
@@ -80,41 +88,68 @@ const Home = () => {
     },
   ];
   return (
-    <AuroraBackground>
-      <motion.div
-        variants={homepageDelayVariant}
-        initial="hidden"
-        animate="visible"
-        className={`${styles.title} flex h-[80vh] flex-col items-center justify-center`}
-      >
-        <motion.h1 variants={fadeInVariant} className="mt-20 font-extralight">
-          André Rodrigo
-        </motion.h1>
-
-        <motion.p variants={fadeInVariant}>{t('subtitle')}</motion.p>
-        <motion.div variants={fadeInVariant} className="mt-12">
-          <AppLink href="/portfolio" label={t('cta')} />|
-          <PopupButton
-            id="wTr5ba0e"
-            size={60}
-            className={styles.formButton}
-            onClick={() =>
-              ReactGA.event({
-                category: EventCategories.USER_INTERACTION,
-                action: EventActions.OPEN_CONTACT_TYPEFORM,
-                label: EventLabels.CONTACT_FORM_BUTTON,
-              })
-            }
+    <>
+      <AuroraBackground className="relative">
+        <div className="relative z-10 grid h-[80vh] grid-cols-1 gap-6 overflow-hidden px-7 sm:mx-12 md:grid-cols-12">
+          {/* Title */}
+          <div
+            className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
           >
-            {t('form.button')}
-          </PopupButton>
-        </motion.div>
-      </motion.div>
+            <AnimatedText.Fade
+              className="py-3 text-5xl font-semibold sm:text-7xl"
+              text="André Rodrigo"
+              underline
+            />
 
+            <motion.p variants={fadeInVariant} className="mt-5 opacity-70">
+              {t('subtitle')}
+            </motion.p>
+            <motion.div variants={containerVariant} className="mt-8 flex gap-3">
+              <motion.span variants={fadeInSlideInVariant}>
+                <Link href="/portfolio">
+                  <Button.Text label={t('cta')} icon={ICONS.arrow} />
+                </Link>
+              </motion.span>
+              <motion.span variants={fadeInSlideInVariant}>
+                <PopupButton
+                  id="wTr5ba0e"
+                  size={60}
+                  onClick={() =>
+                    ReactGA.event({
+                      category: EventCategories.USER_INTERACTION,
+                      action: EventActions.OPEN_CONTACT_TYPEFORM,
+                      label: EventLabels.CONTACT_FORM_BUTTON,
+                    })
+                  }
+                >
+                  <Button.Text
+                    icon={ICONS.sendEmail}
+                    label={t_buttons('contact')}
+                  />
+                </PopupButton>
+              </motion.span>
+            </motion.div>
+          </div>
+        </div>
+        {/* Profile */}
+        <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
+          <motion.span
+            variants={fadeInVariant}
+            initial="hidden"
+            animate="visible"
+          >
+            <Image
+              src="/images/profile.png"
+              alt="André Rodrigo - Software Engineer"
+              objectFit="contain"
+              layout="fill"
+            />
+          </motion.span>
+        </div>
+      </AuroraBackground>
       <SectionTitle title="Expertise" />
-
       <HeroParallax products={products} />
-    </AuroraBackground>
+    </>
   );
 };
 
