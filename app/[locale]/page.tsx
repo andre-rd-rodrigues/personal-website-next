@@ -5,6 +5,7 @@ import styles from '@/assets/styles/pages/homepage.module.scss';
 
 import AnimatedText from '@/components/AnimatedText';
 import Button from '@/components/Button';
+import Card from '@/components/Card';
 import SectionTitle from '@/components/SectionTitle';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { HeroParallax } from '@/components/ui/hero-parallax';
@@ -14,6 +15,7 @@ import {
   EventLabels,
 } from '@/constants/analytics.constants';
 import ICONS from '@/constants/icons.constants';
+import { EXPERTISE } from '@/data/info.data';
 import {
   containerVariant,
   fadeInSlideInVariant,
@@ -26,8 +28,7 @@ import Image from 'next/image';
 import ReactGA from 'react-ga4';
 
 const Home = () => {
-  const t = useTranslations('homepage');
-  const t_buttons = useTranslations('buttons');
+  const t = useTranslations();
 
   const products = [
     {
@@ -90,7 +91,7 @@ const Home = () => {
   return (
     <>
       <AuroraBackground className="relative">
-        <div className="relative z-10 grid h-[80vh] grid-cols-1 gap-6 overflow-hidden px-7 sm:mx-12 md:grid-cols-12">
+        <div className="relative z-10 grid h-[80vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 md:grid-cols-12">
           {/* Title */}
           <div
             className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
@@ -102,12 +103,12 @@ const Home = () => {
             />
 
             <motion.p variants={fadeInVariant} className="mt-5 opacity-70">
-              {t('subtitle')}
+              {t('homepage.subtitle')}
             </motion.p>
             <motion.div variants={containerVariant} className="mt-8 flex gap-3">
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio">
-                  <Button.Text label={t('cta')} icon={ICONS.arrow} />
+                  <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
                 </Link>
               </motion.span>
               <motion.span variants={fadeInSlideInVariant}>
@@ -124,7 +125,7 @@ const Home = () => {
                 >
                   <Button.Text
                     icon={ICONS.sendEmail}
-                    label={t_buttons('contact')}
+                    label={t('buttons.contact')}
                   />
                 </PopupButton>
               </motion.span>
@@ -147,7 +148,31 @@ const Home = () => {
           </motion.span>
         </div>
       </AuroraBackground>
-      <SectionTitle title="Expertise" />
+
+      {/* Expertise */}
+      <div className="mx-auto my-12 max-w-7xl px-5 md:my-20">
+        <SectionTitle title="Expertise" />
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="grid items-baseline gap-6 md:grid-cols-12"
+        >
+          {EXPERTISE.map(({ name, description, src }, i) => (
+            <motion.div
+              variants={fadeInSlideInVariant}
+              className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
+              key={i}
+            >
+              <Card
+                title={name}
+                description={t('portfolio.' + description)}
+                imageUrl={src}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
       <HeroParallax products={products} />
     </>
   );

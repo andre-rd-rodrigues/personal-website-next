@@ -23,7 +23,7 @@ export const Underline = ({ className }: { className?: string }) => {
         display: 'block',
       }}
       className={cn(
-        `relative z-0 h-[2px] w-full rounded-lg bg-gradient-to-r from-[#00ffe1ac] to-[#6954f000]`,
+        `relative z-0 h-[2px] w-full rounded-lg bg-gradient-to-r from-[#00ffe1cb] to-[#6954f000]`,
         className,
       )}
     />

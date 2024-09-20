@@ -26,6 +26,15 @@ const WORK_CATEGORIES = [
   },
 ];
 
+export const EXPERTISE = [
+  ...WORK_CATEGORIES,
+  {
+    name: 'Design',
+    description: 'categories.design',
+    src: '/images/portfolio/design.png',
+  },
+];
+
 const PROJECTS = {
   mobile: [
     {
