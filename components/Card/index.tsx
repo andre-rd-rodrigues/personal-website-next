@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({
           <CardItem
             as="h3"
             translateZ="70"
-            className="my-5 text-5xl font-light"
+            className="my-5 text-4xl font-light"
           >
             {title}
           </CardItem>

@@ -2,23 +2,29 @@
 import { useTranslations } from 'next-intl';
 
 import styles from '@/assets/styles/pages/homepage.module.scss';
-
 import AnimatedText from '@/components/AnimatedText';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import HeroSection from '@/components/Hero';
+import InfoCounter from '@/components/InfoCounter';
 import SectionTitle from '@/components/SectionTitle';
+import { TESTIMONIALS } from '@/components/Testimonials/testimonials.constants';
+import TrustedCompanies from '@/components/TrustedCompanies';
 import { AuroraBackground } from '@/components/ui/aurora-background';
+import { FlipWords } from '@/components/ui/flip-words';
 import { HeroParallax } from '@/components/ui/hero-parallax';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import {
   EventActions,
   EventCategories,
   EventLabels,
 } from '@/constants/analytics.constants';
 import ICONS from '@/constants/icons.constants';
-import { EXPERTISE } from '@/data/info.data';
+import { EXPERTISE, PROJECTS } from '@/data/info.data';
 import {
   containerVariant,
   fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
   fadeInVariant,
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
@@ -26,68 +32,13 @@ import { PopupButton } from '@typeform/embed-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import ReactGA from 'react-ga4';
+import Section from '@/components/Section';
+import CONTACTS from '@/constants/contacts.constants';
+import Container from '@/components/Container';
 
 const Home = () => {
   const t = useTranslations();
 
-  const products = [
-    {
-      title: 'Moonbeam',
-      link: 'https://gomoonbeam.com',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
-    },
-    {
-      title: 'Cursor',
-      link: 'https://cursor.so',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/cursor.png',
-    },
-    {
-      title: 'Rogue',
-      link: 'https://userogue.com',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/rogue.png',
-    },
-
-    {
-      title: 'Editorially',
-      link: 'https://editorially.org',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/editorially.png',
-    },
-    {
-      title: 'Editrix AI',
-      link: 'https://editrix.ai',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/editrix.png',
-    },
-    {
-      title: 'Pixel Perfect',
-      link: 'https://app.pixelperfect.quest',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
-    },
-
-    {
-      title: 'Algochurn',
-      link: 'https://algochurn.com',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
-    },
-    {
-      title: 'Aceternity UI',
-      link: 'https://ui.aceternity.com',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
-    },
-    {
-      title: 'Tailwind Master Kit',
-      link: 'https://tailwindmasterkit.com',
-      thumbnail:
-        'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
-    },
-  ];
   return (
     <>
       <AuroraBackground className="relative">
@@ -124,7 +75,7 @@ const Home = () => {
                   }
                 >
                   <Button.Text
-                    icon={ICONS.sendEmail}
+                    icon={ICONS.message}
                     label={t('buttons.contact')}
                   />
                 </PopupButton>
@@ -149,14 +100,63 @@ const Home = () => {
         </div>
       </AuroraBackground>
 
-      {/* Expertise */}
-      <div className="mx-auto my-12 max-w-7xl px-5 md:my-20">
+      <Container>
+        {/* About Me */}
+        <Section className="md:my-56">
+          <div className="grid gap-6 md:grid-cols-12">
+            <div className="col-span-12 flex h-full justify-center sm:col-span-5">
+              <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
+                <InfoCounter label={t('about.experience.years')} end={4} />
+                <InfoCounter label={t('about.experience.projects')} end={15} />
+              </div>
+            </div>
+            <div className="col-span-12 sm:col-span-7">
+              <motion.h3
+                variants={fadeInSlideLeftVariant}
+                initial="hidden"
+                whileInView="visible"
+                className="mb-10 text-6xl font-extralight"
+              >
+                {t('homepage.about.title')}
+              </motion.h3>
+              <motion.p
+                variants={fadeInVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
+                {t('homepage.about.description')}
+              </motion.p>
+              <motion.div
+                variants={containerVariant}
+                initial="hidden"
+                whileInView="visible"
+                className="mt-4 flex items-end justify-end gap-3"
+              >
+                <motion.span variants={fadeInSlideInVariant}>
+                  <Link href={CONTACTS.LINKEDIN} target="_">
+                    <Button.Icon icon={ICONS.linkedin} />
+                  </Link>
+                </motion.span>
+                <motion.span variants={fadeInSlideInVariant}>
+                  <Link href="/about">
+                    <Button.Text
+                      label={t('buttons.see_more')}
+                      icon={ICONS.arrow}
+                    />
+                  </Link>
+                </motion.span>
+              </motion.div>
+            </div>
+          </div>
+        </Section>
+
+        {/* Expertise */}
         <SectionTitle title="Expertise" />
         <motion.div
           variants={containerVariant}
           initial="hidden"
           whileInView="visible"
-          className="grid items-baseline gap-6 md:grid-cols-12"
+          className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
         >
           {EXPERTISE.map(({ name, description, src }, i) => (
             <motion.div
@@ -172,8 +172,86 @@ const Home = () => {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-      <HeroParallax products={products} />
+        <motion.div
+          variants={fadeInSlideLeftVariant}
+          whileInView="visible"
+          initial="hidden"
+          className="mt-6 text-center"
+        >
+          <Link href="/skills">
+            <Button.Text
+              className="w-full"
+              label={t('buttons.skills')}
+              icon={ICONS.arrow}
+            />
+          </Link>
+        </motion.div>
+      </Container>
+
+      {/* Portfolio */}
+      <HeroParallax products={PROJECTS.homepage} />
+      <motion.div
+        variants={fadeInSlideInVariant}
+        whileInView="visible"
+        initial="hidden"
+        className="mt-6 text-center"
+      >
+        <Link href="/portfolio">
+          <Button.Text
+            className="w-full"
+            label={t('buttons.see_more')}
+            icon={ICONS.arrow}
+          />
+        </Link>
+      </motion.div>
+
+      <Container>
+        {/* Trusted By */}
+        <Section className="md:my-56">
+          <TrustedCompanies />
+        </Section>
+        <Section className="md:my-56">
+          <HeroSection.FlipWords className="mb-56">
+            <>
+              Innovating
+              <FlipWords words={['modern', 'user-focused', 'engaging']} />
+              <br />
+              applications tailored to your needs.
+            </>
+          </HeroSection.FlipWords>
+        </Section>
+
+        {/* Testimonials */}
+        <Section className="md:my-56">
+          <SectionTitle title={t('testimonials.title')} />
+          <InfiniteMovingCards items={TESTIMONIALS} />
+        </Section>
+
+        {/* Contacts */}
+        <Section className="md:my-56">
+          <HeroSection.Cta
+            text={t('homepage.contact.description')}
+            cta={
+              <PopupButton
+                id="wTr5ba0e"
+                size={60}
+                onClick={() =>
+                  ReactGA.event({
+                    category: EventCategories.USER_INTERACTION,
+                    action: EventActions.OPEN_CONTACT_TYPEFORM,
+                    label: EventLabels.CONTACT_FORM_BUTTON,
+                  })
+                }
+              >
+                <Button.Text
+                  icon={ICONS.message}
+                  label={t('buttons.send_message')}
+                />
+              </PopupButton>
+            }
+          />
+        </Section>
+      </Container>
     </>
   );
 };

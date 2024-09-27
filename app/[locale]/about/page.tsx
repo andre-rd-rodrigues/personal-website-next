@@ -13,18 +13,15 @@ import HeroSection from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
 
-import styles from '@/assets/styles/pages/about.module.scss';
-
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import { PopupButton } from '@typeform/embed-react';
-import { useInView } from 'react-intersection-observer';
-import { CountUp } from 'use-count-up';
 
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import Link from 'next/link';
+import InfoCounter from '@/components/InfoCounter';
 
 const About = () => {
   const t = useTranslations('about');
@@ -118,7 +115,7 @@ const About = () => {
           cta={
             <PopupButton id="wTr5ba0e" size={60}>
               <Button.Text
-                icon={ICONS.sendEmail}
+                icon={ICONS.message}
                 label={t_buttons('send_message')}
               />
             </PopupButton>
@@ -130,18 +127,3 @@ const About = () => {
 };
 
 export default About;
-
-const InfoCounter = ({ label, end }: { label: string; end: number }) => {
-  const [counterRef, counterInView] = useInView();
-  return (
-    <div>
-      <p
-        ref={counterRef}
-        className={`${styles.counter} text-8xl font-thin text-purple-500`}
-      >
-        {'+'} <CountUp isCounting={counterInView} end={end} duration={3} />
-      </p>
-      <p className="mt-3">{label}</p>
-    </div>
-  );
-};

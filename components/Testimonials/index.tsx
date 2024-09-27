@@ -52,10 +52,7 @@ const Testimonials = () => {
         className="mt-5 text-center"
       >
         <PopupButton id="wTr5ba0e" size={70}>
-          <Button.Text
-            icon={ICONS.sendEmail}
-            label={t_buttons('send_message')}
-          />
+          <Button.Text icon={ICONS.message} label={t_buttons('send_message')} />
         </PopupButton>
       </motion.div>
     </motion.div>

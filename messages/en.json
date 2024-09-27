@@ -13,6 +13,13 @@
     "cta": "Portfolio",
     "form": {
       "button": "Contact"
+    },
+    "about": {
+      "title": "About me",
+      "description": "Hi there,\nI'm thrilled to have you here! I hope you're doing great. My name is André Rodrigues and I'm a software engineer and designer for over 4 years. From the moment I turned my passion for technology into a career, I've been dedicated to building digital projects that push the boundaries while keeping the user at the heart of everything I do. I’m all about the details—crafting creative, tailor-made solutions that truly enhance the user experience.\nOver the years, I’ve worked with incredible people across various industries, designing websites, developing web apps, and shaping brands. My goal? To build meaningful relationships and bring visions to life with impactful, top-tier products.\nFeel free to explore more about my path and projects, and don't hesitate to reach out. I'm always eager to connect and explore how we can collaborate. Let's chat!"
+    },
+    "contact": {
+      "description": "I'm always eager to connect with new people and explore how we can collaborate. Let's get in touch!"
     }
   },
 
@@ -20,7 +27,7 @@
     "title": "Portfolio",
 
     "categories": {
-      "websites": "Cutting-edge website designs that blend innovation with user-centric solutions to boost engagement and business growth.",
+      "websites": "Cutting-edge websites and web apps that blend innovation with user-centric solutions to boost engagement and business growth.",
       "apps": "Apps offering seamless user experiences across devices with optimal performance and reliability.",
       "design": "Designs that captivate and inspire, setting the stage for a memorable and engaging user journey."
     },
@@ -39,14 +46,16 @@
         "title": "Projects",
         "CDEFF": "Welcome to the Francisco Franco Sports Club project! Score big with the first website of a local sports club in Madeira Island. Dive into the latest updates on club activities, explore insightful blog articles, and find detailed information on tournaments. It's more than just a website; it's your ultimate playbook for all things sports-related! ",
         "PrimeTravel": "Check out PrimeTravel, the ultimate travel agency sidekick! It's not just a tool; it's a showcase of top-notch Fullstack Developer skills, designed to wow recruiters and managers. Think of it as your personal assistant for running your travel biz like a breeze. So, if you're in the travel game and craving an easier life, PrimeTravel's your golden ticket to success!",
-        "Bárbara": "Dive into Barbara Lawyer's website, a testament to professionalism and empathy. It's not just about legal prowess; it's a digital handshake that says, 'I understand.' With sleek design and intuitive navigation, this site speaks volumes. Plus, it's packed with SEO magic and analytics to ensure it reaches those who need it most. ",
-        "carolina": "Step into serenity with Carolina Jardim's website. Designed with empathy at its core, it's more than just a digital space; it's a calming sanctuary. From soothing colors to seamless navigation, every element whispers reassurance. And behind the scenes, powerful analytics and SEO wizardry ensure it touches hearts far and wide. ",
-        "Curiosity": "Welcome to Curiosity Gem, where every click leads to discovery. This isn't your average blog; it's a treasure trove of tech, finance, and career insights. With features like filtering, searching, and a handy CMS, it's a reader's paradise. Plus, with analytics and SEO mojo under the hood, it's bound to make waves in the digital realm. ",
-        "Barber": "Ready for a cut above the rest? Barber Studio's website is more than just a showcase; it's a canvas for barbering mastery. From crisp designs to dynamic portfolios, it's a nod to skill and style. And with analytics and SEO smarts, it's primed to attract the sharpest clients in town. ",
+        "bb": "Dive into Barbara Lawyer's website, a testament to professionalism and empathy. It's not just about legal prowess; it's a digital handshake that says, 'I understand.' With sleek design and intuitive navigation, this site speaks volumes. Plus, it's packed with SEO magic and analytics to ensure it reaches those who need it most.",
+        "carolina": "Step into serenity with Carolina Jardim's website. Designed with empathy at its core, it's more than just a digital space; it's a calming sanctuary. From soothing colors to seamless navigation, every element whispers reassurance. And behind the scenes, powerful analytics and SEO wizardry ensure it touches hearts far and wide.",
+        "blog": "Welcome to my personal blog, where every click leads to discovery. This isn't your average blog; it's a treasure trove of tech, finance, and career insights. With features like filtering, searching, and a handy CMS, it's a reader's paradise. Plus, with analytics and SEO mojo under the hood, it's bound to make waves in the digital realm.",
+        "barber": "Ready for a cut above the rest? Barber Studio's website is more than just a showcase; it's a canvas for barbering mastery. From crisp designs to dynamic portfolios, it's a nod to skill and style. And with analytics and SEO smarts, it's primed to attract the sharpest clients in town. ",
         "it": "Step into the digital playground of IT Studios. This isn't your run-of-the-mill company site; it's a showcase of innovation and creativity. From sleek app displays to client testimonials, it's a testament to tech prowess. And with analytics and SEO finesse, it's sure to catch the eye of both recruiters and potential partners. ",
         "Memory": "Get ready to exercise your brain with the Memory Game web app. Whether you're challenging friends or battling the computer, fun awaits. With scoreboards, multiplayer options, and slick design, it's a gaming experience like no other. Plus, with analytics and SEO superpowers, it's set to dominate the online gaming scene. ",
-        "RIMA": "Join the medical minds of RIMA on their digital journey. From intern camaraderie to event details, this website has it all. With a diverse organizing committee and a passion for continuity, it's a testament to collaboration. And with analytics and SEO prowess, it's sure to draw in eager participants from far and wide. ",
-        "Architecture": "Welcome to the Architecture Showcase, where every design speaks volumes. This isn't just a website; it's a minimalist masterpiece. From sleek portfolios to project highlights, it's a feast for the eyes. And with analytics and SEO optimization, it's poised to elevate architects to new heights of recognition. "
+        "pipedrive": "Pipedrive is an Estonian cloud-based software as a service company. It is the developer of the web application and mobile app Pipedrive, a sales customer relationship management tool. The company has more than 1,000 employees in its eight offices across Europe and two offices in the US.",
+        "navro": "Navro helps businesses navigate their growth into foreign markets by providing them with access to the best payments infrastructure around the world through one contract and one API.",
+        "sky": "Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group.",
+        "probely": "Probely is a web application and API vulnerability scanner for agile teams. Automate Security Testing by adding Probely into your SDLC and CI/CD pipelines."
       }
     },
     "mobile": {
@@ -118,7 +127,7 @@
     "description": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
   },
 
-  "contacts_page": {
+  "contacts": {
     "title": "Get in touch!",
     "email": "let's chat",
     "social": "social network"
@@ -180,13 +189,6 @@
     "cta": "GO BACK"
   },
 
-  "contacts": {
-    "banner": {
-      "title": "Let's connect and turn your vision into reality",
-      "cta": "Send a message"
-    }
-  },
-
   "analytics_banner": {
     "description": "This website uses Google Analytics to understand human interaction. Therefore, by continuing to use this website, you consent to the use of cookies to track and analyze your usage.",
     "accept": "I agree"
@@ -196,7 +198,9 @@
     "see_more": "See more",
     "contact": "Contact",
     "send_message": "Send message",
-    "explore": "Explore"
+    "explore": "Explore",
+    "about": "About",
+    "skills": "Skills"
   },
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",

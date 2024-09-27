@@ -14,14 +14,16 @@ export const HeroParallax = ({
   products,
 }: {
   products: {
-    title: string;
-    link: string;
-    thumbnail: string;
+    label: string;
+    href: {
+      website: string;
+    };
+    imgSrc: string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+  /*   const thirdRow = products.slice(10, 15); */
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -57,7 +59,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[210vh] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[2100px] flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -72,27 +74,26 @@ export const HeroParallax = ({
         <motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
           {firstRow.map((product) => (
             <ProductCard
-              product={product}
+              product={{
+                title: product.label,
+                link: product.href.website,
+                thumbnail: product.imgSrc,
+              }}
               translate={translateX}
-              key={product.title}
+              key={product.label}
             />
           ))}
         </motion.div>
         <motion.div className="mb-20 flex flex-row space-x-20">
           {secondRow.map((product) => (
             <ProductCard
-              product={product}
+              product={{
+                title: product.label,
+                link: product.href.website,
+                thumbnail: product.imgSrc,
+              }}
               translate={translateXReverse}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-20 space-x-reverse">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
+              key={product.label}
             />
           ))}
         </motion.div>
@@ -104,13 +105,12 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-      <h1 className="text-2xl font-bold md:text-7xl dark:text-white">
-        Crafting Innovative Web <br /> and Mobile Solutions
-      </h1>
+      <h3 className="text-2xl font-extralight md:text-7xl">
+        Delivering impactful <br /> solutions to elevate your brand.
+      </h3>
       <p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
-        I build beautiful products with the latest technologies and frameworks.
-        As a passionate developer and designer, I’m driven by a love for
-        crafting exceptional digital experiences.
+        Take a look at the projects I’ve brought to life—each one crafted using
+        the latest technologies and frameworks.
       </p>
     </div>
   );
@@ -136,7 +136,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product relative h-96 w-[30rem] flex-shrink-0"
+      className="group/product relative h-96 w-[35rem] flex-shrink-0"
     >
       <Link
         href={product.link}
@@ -144,13 +144,12 @@ export const ProductCard = ({
       >
         <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
-          className="absolute inset-0 h-full w-full object-cover object-left-top"
+          className="absolute inset-0 h-full w-full object-cover"
           alt={product.title}
+          layout="fill"
         />
       </Link>
-      <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-80"></div>
+      <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-30"></div>
       <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100">
         {product.title}
       </h2>

@@ -14,7 +14,7 @@ import {
 import { useTranslations } from 'next-intl';
 
 const Contacts = () => {
-  const t = useTranslations('contacts_page');
+  const t = useTranslations('contacts');
 
   return (
     <PageContainer className={styles.container}>

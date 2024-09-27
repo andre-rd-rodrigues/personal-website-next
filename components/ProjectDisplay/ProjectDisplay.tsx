@@ -64,9 +64,9 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
         </h4>
 
         <p>{t(description)}</p>
-        <hr className="my-7 text-pink" />
+        <hr className="my-7" />
         <p className="mb-4 flex gap-2 text-xl font-medium">
-          <Icon icon="radix-icons:stack" className="mt-1 text-pink" />
+          <Icon icon="radix-icons:stack" className="mt-1" />
           Tech Stack
         </p>
         <ul className="font-light">
@@ -87,7 +87,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
             </li>
           )}
         </ul>
-        <hr className="my-7 text-pink" />
+        <hr className="text-pink my-7" />
         <div className="flex items-end justify-end">
           <a
             style={{ transform: 'scale(0.8)' }}
@@ -119,7 +119,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
               href={website || app}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 font-normal transition-all duration-100 ease-in hover:text-custom-yellow"
+              className="hover:text-custom-yellow flex items-center gap-1 font-normal transition-all duration-100 ease-in"
             >
               <Button.Icon icon={ICONS.open} />
             </a>

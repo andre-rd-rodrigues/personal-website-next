@@ -74,6 +74,108 @@ const PROJECTS = {
   ],
   web: [
     {
+      imgSrc: '/images/websites/pipedrive.jpg',
+      label: 'Pipedrive',
+      description: 'web.projects.pipedrive',
+      techStack: {
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'React',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Data Dog',
+          'Docker',
+          'Kubernetes',
+          'Microservices',
+          'Event Driven Architecture',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.pipedrive.com',
+      },
+    },
+    {
+      imgSrc: '/images/websites/navro.png',
+      label: 'Navro',
+      description: 'web.projects.navro',
+      techStack: {
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'AWS',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.navro.io',
+      },
+    },
+    {
+      imgSrc: '/images/websites/probely.png',
+      label: 'Probely',
+      description: 'web.projects.probely',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.probely.com',
+      },
+    },
+    {
+      imgSrc: '/images/websites/sky.webp',
+      label: 'Sky | Peacock',
+      description: 'web.projects.sky',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.peacocktv.com',
+      },
+    },
+
+    {
+      imgSrc: '/images/websites/bb.png',
+      label: 'Bárbara Lawyer',
+
+      description: 'web.projects.bb',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://www.barbizanicarvalholaw.com/',
+        github: 'https://github.com/andre-rd-rodrigues/bb-website',
+      },
+    },
+    {
       imgSrc: '/images/websites/cdeff.png',
 
       label: 'CDEFF',
@@ -111,19 +213,6 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/bb.png',
-      label: 'Bárbara Lawyer',
-
-      description: 'web.projects.Bárbara',
-      techStack: {
-        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
-      },
-      href: {
-        website: 'https://www.barbizanicarvalholaw.com/',
-        github: 'https://github.com/andre-rd-rodrigues/bb-website',
-      },
-    },
-    {
       imgSrc: '/images/websites/carolina.png',
       label: 'Carolina Jardim',
       description: 'web.projects.carolina',
@@ -138,8 +227,8 @@ const PROJECTS = {
     },
     {
       imgSrc: '/images/websites/curiosity.png',
-      label: 'Curiosity Gem',
-      description: 'web.projects.Curiosity',
+      label: 'Personal Blog',
+      description: 'web.projects.blog',
 
       techStack: {
         frontend: ['Next.js', 'GraphQL', 'HTML5', 'CSS3', 'SCSS'],
@@ -153,7 +242,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/barber.png',
       label: 'Barber Studio',
-      description: 'web.projects.Curiosity',
+      description: 'web.projects.barber',
 
       techStack: {
         frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
@@ -187,28 +276,161 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/memory-game',
       },
     },
+  ],
+  homepage: [
     {
-      imgSrc: '/images/websites/rima.jpg',
-      label: 'RIMA',
-      description: 'web.projects.RIMA',
+      imgSrc: '/images/websites/pipedrive.jpg',
+      label: 'Pipedrive',
+      description: 'web.projects.pipedrive',
       techStack: {
-        frontend: ['Next.js', 'HTML5', 'CSS3', 'Javascript'],
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'React',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Data Dog',
+          'Docker',
+          'Kubernetes',
+          'Microservices',
+          'Event Driven Architecture',
+          'RESTful API',
+        ],
       },
       href: {
-        website: 'https://kaleidoscopic-cheesecake-db7480.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/rima',
+        website: 'https://www.pipedrive.com',
       },
     },
     {
-      imgSrc: '/images/websites/arquitech.jpg',
-      label: 'Architecture',
-      description: 'web.projects.Architecture',
+      imgSrc: '/images/websites/navro.png',
+      label: 'Navro',
+      description: 'web.projects.navro',
+      techStack: {
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'AWS',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.navro.io',
+      },
+    },
+    {
+      imgSrc: '/images/websites/probely.png',
+      label: 'Probely',
+      description: 'web.projects.probely',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.probely.com',
+      },
+    },
+    {
+      imgSrc: '/images/websites/sky.webp',
+      label: 'Sky | Peacock',
+      description: 'web.projects.sky',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.peacocktv.com',
+      },
+    },
+
+    {
+      imgSrc: '/images/websites/cdeff.png',
+
+      label: 'CDEFF',
+      description: 'web.projects.CDEFF',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+        database: ['Notion'],
+      },
+      href: {
+        website: 'https://www.cdeff.com/',
+        github: 'https://github.com/andre-rd-rodrigues/cdeff',
+      },
+    },
+    {
+      imgSrc: '/images/websites/carolina.png',
+      label: 'Carolina Jardim',
+      description: 'web.projects.carolina',
+
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },
       href: {
-        website: 'https://andre-rd-rodrigues.github.io/architech',
-        github: 'https://github.com/andre-rd-rodrigues/architech',
+        website: 'https://acarolinajardim.com',
+        github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
+      },
+    },
+    {
+      imgSrc: '/images/websites/barber.png',
+      label: 'Barber Studio',
+      description: 'web.projects.barber',
+
+      techStack: {
+        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
+      },
+    },
+    {
+      imgSrc: '/images/websites/bb.png',
+      label: 'Bárbara Lawyer',
+
+      description: 'web.projects.bb',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://www.barbizanicarvalholaw.com/',
+        github: 'https://github.com/andre-rd-rodrigues/bb-website',
+      },
+    },
+
+    {
+      imgSrc: '/images/websites/itstudios.jpg',
+      label: 'IT Studios',
+      description: 'web.projects.it',
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://itstudios.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/it-studios',
       },
     },
   ],

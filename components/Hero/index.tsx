@@ -68,9 +68,28 @@ const HeroCtaSection: React.FC<{
   );
 };
 
+type FlipWordsProps = {
+  children: ReactNode;
+  className?: string;
+};
+
+export function HeroFlipWords({ children, className }: FlipWordsProps) {
+  return (
+    <motion.div
+      variants={containerVariant}
+      initial="hidden"
+      whileInView="visible"
+      className={`border-1 relative flex h-full items-center rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-[40px] md:px-12 md:py-20 ${className}`}
+    >
+      <div className="mx-auto text-5xl font-extralight">{children}</div>
+    </motion.div>
+  );
+}
+
 const HeroSection = {
   Text: HeroTextSection,
   Cta: HeroCtaSection,
+  FlipWords: HeroFlipWords,
 };
 
 export default HeroSection;

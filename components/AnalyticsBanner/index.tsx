@@ -5,6 +5,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import { useTranslations } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { scaleSpringVariant, slowRotateVariant } from '@/motion/motionVariants';
+import Button from '../Button';
 
 const AnalyticsBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +35,7 @@ const AnalyticsBanner = () => {
           animate="visible"
           exit="exit"
           whileInView="visible"
-          className="fixed bottom-0 right-0 z-10 max-w-md rounded-lg bg-black bg-opacity-50 p-4 text-white backdrop-blur-sm"
+          className="bg-dark fixed bottom-0 right-0 z-10 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
         >
           <div className="flex items-center gap-2">
             <motion.span animate={slowRotateVariant}>
@@ -43,13 +44,8 @@ const AnalyticsBanner = () => {
             <h2 className="text-lg font-bold">Cookies</h2>
           </div>
           <p className="mt-2 text-sm">{t('description')}</p>
-          <div className="text-end">
-            <button
-              className="mt-4 rounded bg-white px-4 py-2 text-black transition duration-300 hover:opacity-50"
-              onClick={handleClose}
-            >
-              {t('accept')}
-            </button>
+          <div className="mt-5 text-end">
+            <Button.Text label={t('accept')} onClick={handleClose} />
           </div>
         </motion.div>
       )}

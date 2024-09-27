@@ -7,38 +7,40 @@ import {
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
 } from '@/motion/motionVariants';
-import Section from '../Section';
 
-const TrustedCompanies = () => {
+type Props = {
+  className?: string;
+};
+
+const TrustedCompanies = ({ className }: Props) => {
   return (
-    <Section>
-      <div className={styles.container}>
-        <motion.h2
-          variants={fadeInSlideLeftVariant}
-          initial="hidden"
-          whileInView="visible"
-          className="text-uppercase text-l mb-4 text-center font-thin tracking-wider text-pink"
-        >
-          Trusted by companies at
-        </motion.h2>
-        <motion.div
-          variants={containerVariant}
-          initial="hidden"
-          whileInView="visible"
-          className={styles.companies}
-        >
-          {COMPANIES.map((company) => (
-            <motion.img
-              variants={fadeInSlideInVariant}
-              key={company.name}
-              src={company.logo}
-              alt={`${company.name} logo`}
-              className={styles.logo}
-            />
-          ))}
-        </motion.div>
-      </div>
-    </Section>
+    <div className={`${styles.container} ${className}`}>
+      <motion.h2
+        variants={fadeInSlideLeftVariant}
+        initial="hidden"
+        whileInView="visible"
+        className="text-l text-pink mb-4 text-center font-thin uppercase tracking-wider"
+        style={{ color: `var(--color-primary)` }}
+      >
+        Trusted by companies at
+      </motion.h2>
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        className={styles.companies}
+      >
+        {COMPANIES.map((company) => (
+          <motion.img
+            variants={fadeInSlideInVariant}
+            key={company.name}
+            src={company.logo}
+            alt={`${company.name} logo`}
+            className={styles.logo}
+          />
+        ))}
+      </motion.div>
+    </div>
   );
 };
 
