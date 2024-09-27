@@ -24,11 +24,9 @@ const Portfolio = () => {
   const t_testimonials = useTranslations('testimonials');
 
   const getCategoryPageLink = (category: string) =>
-    category === 'Editorial'
-      ? 'https://www.blog.andrerodrigo.com'
-      : (`/portfolio/${category.toLowerCase()}` as
-          | '/portfolio/web'
-          | '/portfolio/mobile');
+    `/portfolio/${category.toLowerCase()}` as
+      | '/portfolio/web'
+      | '/portfolio/mobile';
 
   return (
     <PageContainer>
