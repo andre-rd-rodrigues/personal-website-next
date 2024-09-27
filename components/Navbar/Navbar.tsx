@@ -33,7 +33,7 @@ export default function Navbar() {
               <Link href="/" className="flex items-center">
                 <div className="relative mr-2 h-10 w-10 overflow-hidden rounded-full">
                   <Image
-                    src="/images/logo.png"
+                    src="/images/logo.webp"
                     alt="AR"
                     width={40}
                     height={40}

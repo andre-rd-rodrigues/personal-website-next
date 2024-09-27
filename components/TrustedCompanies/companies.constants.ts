@@ -1,13 +1,13 @@
 const COMPANIES = [
-  { name: 'Wise Sparrow', logo: '/images/companies/wise.png' },
-  { name: 'Navro', logo: '/images/companies/navro.png' },
-  { name: 'Pipedrive', logo: '/images/companies/pipedrive.png' },
+  { name: 'Wise Sparrow', logo: '/images/companies/wise.webp' },
+  { name: 'Navro', logo: '/images/companies/navro.webp' },
+  { name: 'Pipedrive', logo: '/images/companies/pipedrive.webp' },
   {
     name: 'NBC',
-    logo: '/images/companies/nbc.png',
+    logo: '/images/companies/nbc.webp',
   },
-  { name: 'Sky', logo: '/images/companies/sky.png' },
-  { name: 'Probely', logo: '/images/companies/probely.png' },
+  { name: 'Sky', logo: '/images/companies/sky.webp' },
+  { name: 'Probely', logo: '/images/companies/probely.webp' },
 ];
 
 export default COMPANIES;

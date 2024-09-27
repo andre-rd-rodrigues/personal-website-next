@@ -9,6 +9,7 @@ import {
 } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export const HeroParallax = ({
   products,
@@ -103,14 +104,12 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const t = useTranslations('portfolio_parallax');
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-      <h2 className="text-2xl font-extralight md:text-7xl">
-        Delivering impactful <br /> solutions to elevate your brand
-      </h2>
+      <p className="text-2xl font-extralight md:text-6xl">{t('title')}</p>
       <p className="mt-8 max-w-2xl text-base md:text-xl dark:text-neutral-200">
-        Take a look at the projects I’ve brought to life—each one crafted using
-        the latest technologies and frameworks.
+        {t('description')}
       </p>
     </div>
   );
@@ -140,6 +139,7 @@ export const ProductCard = ({
     >
       <Link
         href={product.link}
+        target="_blank"
         className="block group-hover/product:shadow-2xl"
       >
         <Image

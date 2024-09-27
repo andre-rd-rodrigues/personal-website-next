@@ -51,7 +51,7 @@ const About = () => {
             className="relative h-96 w-full"
           >
             <Image
-              src="/images/profile-extend.png"
+              src="/images/profile-extend.webp"
               alt="André Rodrigues - Web Developer"
               className="rounded-lg"
               objectFit="cover"

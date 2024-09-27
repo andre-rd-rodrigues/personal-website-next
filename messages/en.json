@@ -196,6 +196,10 @@
     "description": "This website uses Google Analytics to understand human interaction. Therefore, by continuing to use this website, you consent to the use of cookies to track and analyze your usage.",
     "accept": "I agree"
   },
+  "portfolio_parallax": {
+    "title": "Delivering impactful\nsolutions to elevate your brand",
+    "description": "Take a look at the projects I’ve brought to life—each one crafted using the latest technologies and frameworks."
+  },
   "buttons": {
     "read_more": "Read more",
     "see_more": "See more",

@@ -1,22 +1,20 @@
 const TESTIMONIALS = [
   {
     review: 'cdeff.review',
-    picture_path:
-      'https://www.cdeff.com/_next/image?url=%2Fimages%2Flogo.png&w=96&q=75',
+    picture_path: '/images/testimonials/cdeff.webp',
     client_name: 'CDEFF Sports Club',
     client_details: 'cdeff.details',
     project_link: 'https://www.cdeff.com',
   },
   {
-    picture_path: '/images/testimonials/anaJardim.jpg',
+    picture_path: '/images/testimonials/anaJardim.webp',
     client_name: 'Ana Jardim',
     review: 'anaJardim.review',
     client_details: 'anaJardim.details',
     project_link: 'https://www.acarolinajardim.com',
   },
   {
-    picture_path:
-      'https://www.barbizanicarvalholaw.com/_next/image?url=%2Fimg%2Fbb.jpg&w=3840&q=75',
+    picture_path: '/images/testimonials/bb.webp',
     client_name: 'Bárbara Barbizani',
     review: 'barbara.review',
     client_details: 'barbara.details',
@@ -33,30 +31,30 @@ const TESTIMONIALS = [
   {
     review: 'rafa.review',
     client_details: 'rafa.details',
-    picture_path: '/images/testimonials/rafa.jpg',
+    picture_path: '/images/testimonials/rafa.webp',
     client_name: 'Rafael Pereira',
     project_link: 'https://www.itstudios.eu',
   },
   {
     review: 'ana.review',
-    picture_path: '/images/testimonials/ana.jpg',
+    picture_path: '/images/testimonials/ana.webp',
     client_name: 'Ana Rodrigues',
     client_details: 'ana.details',
   },
   {
     review: 'nkem.review',
-    picture_path: '/images/testimonials/nkem.jpg',
+    picture_path: '/images/testimonials/nkem.webp',
     client_name: 'Nkemjika Ohanyere',
     client_details: 'nkem.details',
   },
   {
-    picture_path: '/images/testimonials/vlad.jpeg',
+    picture_path: '/images/testimonials/vlad.webp',
     client_name: 'Vladislav Sorokin',
     review: 'vlad.review',
     client_details: 'vlad.details',
   },
   {
-    picture_path: '/images/testimonials/ahmad.jpeg',
+    picture_path: '/images/testimonials/ahmad.webp',
     client_name: 'Ahmad Rami',
     review: 'ahmad.review',
     client_details: 'ahmad.details',
@@ -65,7 +63,7 @@ const TESTIMONIALS = [
     review: 'doart.review',
     client_details: 'doart.details',
     client_name: 'Duarte Mata',
-    picture_path: '/images/testimonials/doart.jpg',
+    picture_path: '/images/testimonials/doart.webp',
     project_link: 'https://www.instagram.com/p/CDE5gqVAii8/',
   },
 ];

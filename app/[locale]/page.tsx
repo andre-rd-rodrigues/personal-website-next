@@ -78,7 +78,7 @@ const Home = () => {
             animate="visible"
           >
             <Image
-              src="/images/profile.png"
+              src="/images/profile.webp"
               alt="André Rodrigo - Software Engineer"
               objectFit="contain"
               layout="fill"

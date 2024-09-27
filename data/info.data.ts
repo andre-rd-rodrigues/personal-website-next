@@ -17,12 +17,12 @@ const WORK_CATEGORIES = [
   {
     name: 'Web',
     description: 'categories.websites',
-    src: '/images/portfolio/web.png',
+    src: '/images/portfolio/web.webp',
   },
   {
     name: 'Mobile',
     description: 'categories.apps',
-    src: '/images/portfolio/mobile.png',
+    src: '/images/portfolio/mobile.webp',
   },
 ];
 
@@ -31,14 +31,14 @@ export const EXPERTISE = [
   {
     name: 'Design',
     description: 'categories.design',
-    src: '/images/portfolio/design.png',
+    src: '/images/portfolio/design.webp',
   },
 ];
 
 const PROJECTS = {
   mobile: [
     {
-      imgSrc: '/images/apps/giggle.png',
+      imgSrc: '/images/apps/giggle.webp',
       label: 'Giggle!',
       description: 'mobile.projects.giggle',
       techStack: {
@@ -50,7 +50,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/apps/randombox.png',
+      imgSrc: '/images/apps/randombox.webp',
       label: 'Random Box - Coming soon',
       description: 'mobile.projects.randombox',
       techStack: {
@@ -61,7 +61,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/apps/coolmind.png',
+      imgSrc: '/images/apps/coolmind.webp',
       label: 'Coolmind - Coming soon',
       description: 'mobile.projects.coolmind',
       techStack: {
@@ -74,7 +74,7 @@ const PROJECTS = {
   ],
   web: [
     {
-      imgSrc: '/images/websites/pipedrive.jpg',
+      imgSrc: '/images/websites/pipedrive.webp',
       label: 'Pipedrive',
       description: 'web.projects.pipedrive',
       techStack: {
@@ -99,7 +99,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/navro.png',
+      imgSrc: '/images/websites/navro.webp',
       label: 'Navro',
       description: 'web.projects.navro',
       techStack: {
@@ -116,11 +116,11 @@ const PROJECTS = {
         ],
       },
       href: {
-        website: 'https://www.navro.io',
+        website: 'https://www.navro.com',
       },
     },
     {
-      imgSrc: '/images/websites/probely.png',
+      imgSrc: '/images/websites/probely.webp',
       label: 'Probely',
       description: 'web.projects.probely',
       techStack: {
@@ -163,7 +163,7 @@ const PROJECTS = {
     },
 
     {
-      imgSrc: '/images/websites/bb.png',
+      imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Lawyer',
 
       description: 'web.projects.bb',
@@ -176,7 +176,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/cdeff.png',
+      imgSrc: '/images/websites/cdeff.webp',
 
       label: 'CDEFF',
       description: 'web.projects.CDEFF',
@@ -190,7 +190,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/primetravel.png',
+      imgSrc: '/images/websites/primetravel.webp',
 
       label: 'PrimeTravel',
       description: 'web.projects.PrimeTravel',
@@ -213,7 +213,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/carolina.png',
+      imgSrc: '/images/websites/carolina.webp',
       label: 'Carolina Jardim',
       description: 'web.projects.carolina',
 
@@ -226,7 +226,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/curiosity.png',
+      imgSrc: '/images/websites/curiosity.webp',
       label: 'Personal Blog',
       description: 'web.projects.blog',
 
@@ -240,7 +240,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/barber.png',
+      imgSrc: '/images/websites/barber.webp',
       label: 'Barber Studio',
       description: 'web.projects.barber',
 
@@ -253,7 +253,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/itstudios.jpg',
+      imgSrc: '/images/websites/itstudios.webp',
       label: 'IT Studios',
       description: 'web.projects.it',
       techStack: {
@@ -265,7 +265,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/memory.jpg',
+      imgSrc: '/images/websites/memory.webp',
       label: 'Memory Game',
       description: 'web.projects.Memory',
       techStack: {
@@ -279,7 +279,7 @@ const PROJECTS = {
   ],
   homepage: [
     {
-      imgSrc: '/images/websites/pipedrive.jpg',
+      imgSrc: '/images/websites/pipedrive.webp',
       label: 'Pipedrive',
       description: 'web.projects.pipedrive',
       techStack: {
@@ -304,7 +304,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/navro.png',
+      imgSrc: '/images/websites/navro.webp',
       label: 'Navro',
       description: 'web.projects.navro',
       techStack: {
@@ -325,7 +325,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/probely.png',
+      imgSrc: '/images/websites/probely.webp',
       label: 'Probely',
       description: 'web.projects.probely',
       techStack: {
@@ -368,7 +368,7 @@ const PROJECTS = {
     },
 
     {
-      imgSrc: '/images/websites/cdeff.png',
+      imgSrc: '/images/websites/cdeff.webp',
 
       label: 'CDEFF',
       description: 'web.projects.CDEFF',
@@ -382,7 +382,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/carolina.png',
+      imgSrc: '/images/websites/carolina.webp',
       label: 'Carolina Jardim',
       description: 'web.projects.carolina',
 
@@ -395,7 +395,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/barber.png',
+      imgSrc: '/images/websites/barber.webp',
       label: 'Barber Studio',
       description: 'web.projects.barber',
 
@@ -408,7 +408,7 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/bb.png',
+      imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Lawyer',
 
       description: 'web.projects.bb',
@@ -422,7 +422,7 @@ const PROJECTS = {
     },
 
     {
-      imgSrc: '/images/websites/itstudios.jpg',
+      imgSrc: '/images/websites/itstudios.webp',
       label: 'IT Studios',
       description: 'web.projects.it',
       techStack: {
@@ -440,10 +440,10 @@ const get_homepage_gallery = () => {
   const gallery = [];
 
   for (let i = 1; i <= 11; i++) {
-    gallery.push(`/images/homepageGallery/${i}.jpg`);
+    gallery.push(`/images/homepageGallery/${i}.webp`);
   }
-  gallery.push(`/images/homepageGallery/2.jpg`);
-  gallery.push(`/images/homepageGallery/3.jpg`);
+  gallery.push(`/images/homepageGallery/2.webp`);
+  gallery.push(`/images/homepageGallery/3.webp`);
 
   return gallery;
 };
@@ -494,78 +494,78 @@ const services = {
 const techStack = [
   {
     label: 'JavaScript',
-    img_src: '/images/technologies/js.png',
+    img_src: '/images/technologies/js.webp',
   },
   {
     label: 'TypeScript',
-    img_src: '/images/technologies/ts.png',
+    img_src: '/images/technologies/ts.webp',
   },
 
   {
     label: 'ReactJs',
-    img_src: '/images/technologies/react.png',
+    img_src: '/images/technologies/react.webp',
   },
   {
     label: 'React Native',
-    img_src: '/images/technologies/react.png',
+    img_src: '/images/technologies/react.webp',
   },
   {
     label: 'NodeJs',
-    img_src: '/images/technologies/node.png',
+    img_src: '/images/technologies/node.webp',
   },
   {
     label: 'NextJs',
-    img_src: '/images/technologies/next.png',
+    img_src: '/images/technologies/next.webp',
   },
   {
     label: 'Jest',
-    img_src: '/images/technologies/jest.png',
+    img_src: '/images/technologies/jest.webp',
   },
   {
     label: 'RTL',
-    img_src: '/images/technologies/rtl.png',
+    img_src: '/images/technologies/rtl.webp',
   },
   {
     label: 'Cypress',
-    img_src: '/images/technologies/cypress.png',
+    img_src: '/images/technologies/cypress.webp',
   },
 
   {
     label: 'HTML',
-    img_src: '/images/technologies/html.png',
+    img_src: '/images/technologies/html.webp',
   },
 
   {
     label: 'CSS',
-    img_src: '/images/technologies/css.png',
+    img_src: '/images/technologies/css.webp',
   },
   {
     label: 'Git',
-    img_src: '/images/technologies/git.png',
+    img_src: '/images/technologies/git.webp',
   },
   {
     label: 'Bash',
-    img_src: '/images/technologies/bash.png',
+    img_src: '/images/technologies/bash.webp',
   },
   {
     label: 'Docker',
-    img_src: '/images/technologies/docker.png',
+    img_src: '/images/technologies/docker.webp',
   },
   {
     label: 'RESTful API',
-    img_src: '/images/technologies/rest.png',
+    img_src: '/images/technologies/rest.webp',
   },
   {
     label: 'Databases',
-    img_src: '/images/technologies/db.png',
+    img_src: '/images/technologies/db.webp',
   },
   {
     label: 'Google Analytics',
-    img_src: '/images/technologies/analytics.png',
+    img_src: '/images/technologies/analytics.webp',
   },
   {
     label: 'Open AI',
-    img_src: '/images/technologies/openai.png',
+    img_src: '/images/technologies/openai.webp',
   },
 ];
 
