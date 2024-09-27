@@ -41,22 +41,29 @@ const Home = () => {
 
   return (
     <>
+      {/* Title */}
       <AuroraBackground className="relative">
         <div className="relative z-10 grid h-[80vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 md:grid-cols-12">
-          {/* Title */}
-          <div
+          <motion.div
+            variants={containerVariant}
+            whileInView="visible"
+            initial="hidden"
             className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
           >
+            <h1 className="hidden">André Rodrigo</h1>
             <AnimatedText.Fade
-              className="py-3 text-5xl font-semibold sm:text-7xl"
+              className="py-3 text-5xl sm:text-[80px]"
               text="André Rodrigo"
               underline
             />
 
-            <motion.p variants={fadeInVariant} className="mt-5 opacity-70">
+            <motion.p
+              variants={fadeInSlideLeftVariant}
+              className="mt-5 opacity-70"
+            >
               {t('homepage.subtitle')}
             </motion.p>
-            <motion.div variants={containerVariant} className="mt-8 flex gap-3">
+            <div className="mt-8 flex gap-3">
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio">
                   <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
@@ -80,8 +87,8 @@ const Home = () => {
                   />
                 </PopupButton>
               </motion.span>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
         {/* Profile */}
         <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">

@@ -30,7 +30,11 @@ const Fade = ({ text, className, letter, underline }: FadeProps) => {
             delay: index * 0.13,
             ease: [0.35, 0, 0, 1],
           }}
-          style={{ display: 'inline-block', marginRight: '0.25em' }}
+          style={{
+            display: 'inline-block',
+            marginRight: '0.25em',
+            fontFamily: 'var(--font-sans)',
+          }}
         >
           {word}
         </motion.span>
