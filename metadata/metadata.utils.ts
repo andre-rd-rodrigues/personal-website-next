@@ -9,7 +9,26 @@ export const getMetadata = (options: Metadata): Metadata => {
   return {
     title: options.title,
     description: options.description,
-    icons: ['/favicon.ico'],
+    icons: [
+      { url: '/images/favicon/favicon-16x16.png', sizes: '16x16', rel: 'icon' },
+      { url: '/images/favicon/favicon-32x32.png', sizes: '32x32', rel: 'icon' },
+      {
+        url: '/images/favicon/apple-touch-icon.png',
+        sizes: '180x180',
+        rel: 'apple-touch-icon',
+      },
+      {
+        url: '/images/favicon/android-chrome-192x192.png',
+        sizes: '192x192',
+        rel: 'icon',
+      },
+      {
+        url: '/images/favicon/android-chrome-512x512.png',
+        sizes: '512x512',
+        rel: 'icon',
+      },
+      { url: '/images/favicon/favicon.ico', rel: 'shortcut icon' },
+    ],
     alternates: {
       canonical: `${WEBSITE_DOMAIN_URL}/${pathname}`,
     },
