@@ -8,18 +8,18 @@ import Card from '@/components/Card';
 import HeroSection from '@/components/Hero';
 import InfoCounter from '@/components/InfoCounter';
 import SectionTitle from '@/components/SectionTitle';
-import { TESTIMONIALS } from '@/components/Testimonials/testimonials.constants';
+
+import Container from '@/components/Container';
+import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
+import TypeformPopup from '@/components/TypeformPopup';
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FlipWords } from '@/components/ui/flip-words';
 import { HeroParallax } from '@/components/ui/hero-parallax';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import {
-  EventActions,
-  EventCategories,
-  EventLabels,
-} from '@/constants/analytics.constants';
+import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
+import TESTIMONIALS from '@/constants/testimonials.constants';
 import { EXPERTISE, PROJECTS } from '@/data/info.data';
 import {
   containerVariant,
@@ -28,13 +28,8 @@ import {
   fadeInVariant,
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
-import { PopupButton } from '@typeform/embed-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import ReactGA from 'react-ga4';
-import Section from '@/components/Section';
-import CONTACTS from '@/constants/contacts.constants';
-import Container from '@/components/Container';
 
 const Home = () => {
   const t = useTranslations();
@@ -50,7 +45,7 @@ const Home = () => {
             initial="hidden"
             className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
           >
-            <h1 className="hidden">André Rodrigo</h1>
+            <h1 className="absolute opacity-0">André Rodrigo</h1>
             <AnimatedText.Fade
               className="py-3 text-5xl sm:text-[80px]"
               text="André Rodrigo"
@@ -70,22 +65,7 @@ const Home = () => {
                 </Link>
               </motion.span>
               <motion.span variants={fadeInSlideInVariant}>
-                <PopupButton
-                  id="wTr5ba0e"
-                  size={60}
-                  onClick={() =>
-                    ReactGA.event({
-                      category: EventCategories.USER_INTERACTION,
-                      action: EventActions.OPEN_CONTACT_TYPEFORM,
-                      label: EventLabels.CONTACT_FORM_BUTTON,
-                    })
-                  }
-                >
-                  <Button.Text
-                    icon={ICONS.message}
-                    label={t('buttons.contact')}
-                  />
-                </PopupButton>
+                <TypeformPopup />
               </motion.span>
             </div>
           </motion.div>
@@ -118,14 +98,14 @@ const Home = () => {
               </div>
             </div>
             <div className="col-span-12 sm:col-span-7">
-              <motion.h3
+              <motion.h2
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
                 className="mb-10 text-6xl font-extralight"
               >
                 {t('homepage.about.title')}
-              </motion.h3>
+              </motion.h2>
               <motion.p
                 variants={fadeInVariant}
                 initial="hidden"
@@ -158,7 +138,7 @@ const Home = () => {
         </Section>
 
         {/* Expertise */}
-        <SectionTitle title="Expertise" />
+        <SectionTitle tag="h2" title="Expertise" />
         <motion.div
           variants={containerVariant}
           initial="hidden"
@@ -230,7 +210,7 @@ const Home = () => {
 
         {/* Testimonials */}
         <Section className="md:my-56">
-          <SectionTitle title={t('testimonials.title')} />
+          <SectionTitle tag="h2" title={t('testimonials.title')} />
           <InfiniteMovingCards items={TESTIMONIALS} />
         </Section>
 
@@ -238,24 +218,7 @@ const Home = () => {
         <Section className="md:my-56">
           <HeroSection.Cta
             text={t('homepage.contact.description')}
-            cta={
-              <PopupButton
-                id="wTr5ba0e"
-                size={60}
-                onClick={() =>
-                  ReactGA.event({
-                    category: EventCategories.USER_INTERACTION,
-                    action: EventActions.OPEN_CONTACT_TYPEFORM,
-                    label: EventLabels.CONTACT_FORM_BUTTON,
-                  })
-                }
-              >
-                <Button.Text
-                  icon={ICONS.message}
-                  label={t('buttons.send_message')}
-                />
-              </PopupButton>
-            }
+            cta={<TypeformPopup />}
           />
         </Section>
       </Container>

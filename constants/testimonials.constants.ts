@@ -1,4 +1,4 @@
-export const TESTIMONIALS = [
+const TESTIMONIALS = [
   {
     review: 'cdeff.review',
     picture_path:
@@ -69,3 +69,5 @@ export const TESTIMONIALS = [
     project_link: 'https://www.instagram.com/p/CDE5gqVAii8/',
   },
 ];
+
+export default TESTIMONIALS;

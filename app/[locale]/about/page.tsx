@@ -16,16 +16,15 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
-import { PopupButton } from '@typeform/embed-react';
 
+import InfoCounter from '@/components/InfoCounter';
+import TypeformPopup from '@/components/TypeformPopup';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import Link from 'next/link';
-import InfoCounter from '@/components/InfoCounter';
 
 const About = () => {
   const t = useTranslations('about');
-  const t_buttons = useTranslations('buttons');
 
   return (
     <PageContainer>
@@ -63,7 +62,9 @@ const About = () => {
       </Section>
 
       {/* Companies */}
-      <TrustedCompanies />
+      <Section>
+        <TrustedCompanies />
+      </Section>
 
       {/* About */}
       <Section>
@@ -108,18 +109,11 @@ const About = () => {
       </Section>
 
       {/* Contact */}
-      <Section className="mb-0">
+      <Section className="mb-0 md:mb-0">
         <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
         <HeroSection.Cta
           text={t('contact.description')}
-          cta={
-            <PopupButton id="wTr5ba0e" size={60}>
-              <Button.Text
-                icon={ICONS.message}
-                label={t_buttons('send_message')}
-              />
-            </PopupButton>
-          }
+          cta={<TypeformPopup />}
         />
       </Section>
     </PageContainer>

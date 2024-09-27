@@ -23,7 +23,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
   options,
 }) => {
   return (
-    <div className={`text-white md:p-20 ${className}`}>
+    <div className={`text-white md:px-20 ${className}`}>
       <AnimatedText.Fade
         text={title}
         className="mb-4 text-5xl font-extralight md:mb-12 md:w-5/6 md:text-7xl"
@@ -59,7 +59,7 @@ const HeroCtaSection: React.FC<{
     >
       <AnimatedText.Fade
         text={text}
-        className="mb-5 text-center text-4xl font-extralight"
+        className="mb-8 text-center text-4xl font-extralight"
       />
       <motion.div variants={fadeInSlideLeftVariant} className="text-center">
         {cta}
