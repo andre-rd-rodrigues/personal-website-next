@@ -6,7 +6,7 @@ type Props = {
 };
 
 function Section({ children, className }: Props) {
-  return <div className={`my-20 md:my-56 ${className}`}>{children}</div>;
+  return <div className={`my-28 md:my-56 ${className}`}>{children}</div>;
 }
 
 export default Section;

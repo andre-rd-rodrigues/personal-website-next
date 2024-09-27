@@ -1,3 +1,5 @@
+@import 'assets/styles/mixins';
+
 .container {
   img {
     filter: grayscale(100%);
@@ -5,6 +7,14 @@
   }
 
   &:hover {
+    img {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+@media only screen and (max-width: $breaking-point-sm) {
+  .container {
     img {
       filter: grayscale(0%);
     }

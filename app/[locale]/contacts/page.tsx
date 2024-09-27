@@ -18,7 +18,7 @@ const Contacts = () => {
 
   return (
     <PageContainer className={styles.container}>
-      <div className="grid items-baseline gap-6 md:grid-cols-12">
+      <div className="grid items-baseline gap-7 md:grid-cols-12">
         <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
           <h1 className="text-extralight">{t('title')}</h1>
         </div>
