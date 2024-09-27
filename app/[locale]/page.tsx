@@ -120,9 +120,9 @@ const Home = () => {
                 className="mt-4 flex items-end justify-end gap-3"
               >
                 <motion.span variants={fadeInSlideInVariant}>
-                  <Link href={CONTACTS.LINKEDIN} target="_">
+                  <a href={CONTACTS.LINKEDIN} target="_">
                     <Button.Icon icon={ICONS.linkedin} />
-                  </Link>
+                  </a>
                 </motion.span>
                 <motion.span variants={fadeInSlideInVariant}>
                   <Link href="/about">
