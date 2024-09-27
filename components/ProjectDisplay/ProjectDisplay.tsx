@@ -23,7 +23,7 @@ interface ProjectDisplayProps {
   href: {
     app?: string;
     website?: string;
-    github: string;
+    github?: string;
   };
 }
 
@@ -89,21 +89,23 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
         </ul>
         <hr className="text-pink my-7" />
         <div className="flex items-end justify-end">
-          <a
-            style={{ transform: 'scale(0.8)' }}
-            onClick={() =>
-              ReactGA.event({
-                category: EventCategories.USER_INTERACTION,
-                action: EventActions.OPEN_PROJECT_GITHUB,
-                label,
-              })
-            }
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Button.Icon icon={ICONS.git} />
-          </a>
+          {github && (
+            <a
+              style={{ transform: 'scale(0.8)' }}
+              onClick={() =>
+                ReactGA.event({
+                  category: EventCategories.USER_INTERACTION,
+                  action: EventActions.OPEN_PROJECT_GITHUB,
+                  label,
+                })
+              }
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button.Icon icon={ICONS.git} />
+            </a>
+          )}
           {(website || app) && (
             <a
               style={{ transform: 'scale(0.8)' }}
