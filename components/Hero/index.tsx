@@ -81,7 +81,9 @@ export function HeroFlipWords({ children, className }: FlipWordsProps) {
       whileInView="visible"
       className={`border-1 relative flex h-full items-center rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-[40px] md:px-12 md:py-20 ${className}`}
     >
-      <div className="mx-auto text-5xl font-extralight">{children}</div>
+      <div className="mx-auto text-center text-4xl font-extralight sm:text-start">
+        {children}
+      </div>
     </motion.div>
   );
 }

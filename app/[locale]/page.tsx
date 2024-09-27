@@ -38,7 +38,7 @@ const Home = () => {
     <>
       {/* Title */}
       <AuroraBackground className="relative">
-        <div className="relative z-10 grid h-[80vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 md:grid-cols-12">
+        <div className="relative z-10 grid h-[100vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 sm:h-[80vh] md:grid-cols-12">
           <motion.div
             variants={containerVariant}
             whileInView="visible"
@@ -102,7 +102,7 @@ const Home = () => {
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
-                className="mb-10 text-6xl font-extralight"
+                className="mb-10 text-center text-6xl font-extralight sm:text-start"
               >
                 {t('homepage.about.title')}
               </motion.h2>
