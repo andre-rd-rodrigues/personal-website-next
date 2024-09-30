@@ -70,7 +70,7 @@ const About = () => {
       <Section>
         <div className="grid gap-6 md:grid-cols-12">
           <div className="col-span-12 flex h-full justify-center sm:col-span-4">
-            <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
+            <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
               <InfoCounter label={t('experience.years')} end={4} />
               <InfoCounter label={t('experience.projects')} end={15} />
             </div>
