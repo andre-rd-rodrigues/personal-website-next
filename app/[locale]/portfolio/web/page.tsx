@@ -3,6 +3,7 @@ import styles from '@/assets/styles/pages/portfoliocategorypage.module.scss';
 import HeroSection from '@/components/Hero';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import ProjectDisplay from '@/components/ProjectDisplay/ProjectDisplay';
+import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
 import { PROJECTS } from '@/data/info.data';
 import {
@@ -27,16 +28,18 @@ const Web = () => {
         subtitle={<p>{t('heroDescription')}</p>}
       />
 
-      <div className="mb-16">
-        <SectionTitle title="Overview" color="primary" />
-        <motion.p
-          variants={workPageHeaderContent}
-          initial="hidden"
-          animate="visible"
-        >
-          {t('description')}
-        </motion.p>
-      </div>
+      <Section>
+        <div className="mb-16">
+          <SectionTitle title="Overview" color="primary" />
+          <motion.p
+            variants={workPageHeaderContent}
+            initial="hidden"
+            animate="visible"
+          >
+            {t('description')}
+          </motion.p>
+        </div>
+      </Section>
 
       <motion.div
         variants={containerVariant}

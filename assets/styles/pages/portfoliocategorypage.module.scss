@@ -2,6 +2,7 @@
 
 .container {
   min-height: 100vh;
+  position: relative;
 }
 
 //Gallery
@@ -50,7 +51,7 @@
 //Responsive
 @media only screen and (max-width: $breaking-point-md) {
   .showCaseContainer {
-    justify-items: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 }
