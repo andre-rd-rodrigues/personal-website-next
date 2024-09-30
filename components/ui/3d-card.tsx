@@ -1,5 +1,6 @@
 'use client';
 
+import useIsMobile from '@/hooks/useIsMobile';
 import { cn } from '@/lib/utils';
 import React, {
   createContext,
@@ -116,8 +117,11 @@ export const CardItem = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    if (isMobile) return;
+
     handleAnimations();
   }, [isMouseEntered]);
 

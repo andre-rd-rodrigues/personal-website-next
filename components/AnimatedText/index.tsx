@@ -26,7 +26,7 @@ const Fade = ({ text, className, letter, underline }: FadeProps) => {
             opacity: 1,
           }}
           transition={{
-            duration: 2,
+            duration: 1.5,
             delay: index * 0.13,
             ease: [0.35, 0, 0, 1],
           }}
