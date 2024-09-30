@@ -22,7 +22,7 @@
   --color-primary: #ff56cd;
   --color-primary-dark: #6e54f0;
   --color-white: #ffffff;
-  --color-dark: #161616;
+  --color-dark: #111111;
 }
 
 * {
@@ -67,5 +67,11 @@ h2 {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: #111111;
   }
 }
