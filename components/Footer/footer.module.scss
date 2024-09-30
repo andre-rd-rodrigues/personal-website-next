@@ -3,6 +3,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   background-color: color(dark);
   padding: 15px var(--padding-y);
   color: color(white);

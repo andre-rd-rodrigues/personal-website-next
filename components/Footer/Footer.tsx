@@ -29,7 +29,7 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <div className="mb-0 flex items-center gap-2 text-sm font-extralight">
+      <div className="mb-0 flex items-center gap-1 text-sm font-extralight">
         &#169; 2022 by <span className="text-pink">André Rodrigo</span>
       </div>
     </motion.footer>

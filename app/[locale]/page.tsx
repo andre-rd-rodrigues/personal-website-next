@@ -92,7 +92,7 @@ const Home = () => {
         <Section className="md:my-56">
           <div className="grid gap-6 md:grid-cols-12">
             <div className="col-span-12 flex h-full justify-center sm:col-span-5">
-              <div className="mb-24 flex flex-col justify-center gap-11 sm:mb-0">
+              <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
                 <InfoCounter label={t('about.experience.years')} end={4} />
                 <InfoCounter label={t('about.experience.projects')} end={15} />
               </div>
@@ -194,11 +194,11 @@ const Home = () => {
 
       <Container>
         {/* Trusted By */}
-        <Section className="md:my-56">
+        <Section>
           <TrustedCompanies />
         </Section>
-        <Section className="md:my-56">
-          <HeroSection.FlipWords className="mb-56">
+        <Section>
+          <HeroSection.FlipWords>
             <>
               Innovating
               <FlipWords words={['modern', 'user-focused', 'engaging']} />
