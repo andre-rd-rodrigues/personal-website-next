@@ -15,6 +15,7 @@ import { Link } from '@/navigation';
 import { Icon } from '@iconify/react';
 import HeroSection from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
+import Section from '@/components/Section';
 
 const Mobile = () => {
   const t = useTranslations('projects.mobile');
@@ -27,18 +28,18 @@ const Mobile = () => {
         title={t('heroTitle')}
         subtitle={<p>{t('heroDescription')}</p>}
       />
-
-      <div className="mb-16">
-        <SectionTitle title="Overview" color="primary" />
-        <motion.p
-          variants={workPageHeaderContent}
-          initial="hidden"
-          animate="visible"
-        >
-          {t('description')}
-        </motion.p>
-      </div>
-
+      <Section>
+        <div className="mb-16">
+          <SectionTitle title="Overview" color="primary" />
+          <motion.p
+            variants={workPageHeaderContent}
+            initial="hidden"
+            animate="visible"
+          >
+            {t('description')}
+          </motion.p>
+        </div>
+      </Section>
       <motion.div
         variants={containerVariant}
         initial="hidden"
