@@ -19,10 +19,10 @@ const Contacts = () => {
   return (
     <PageContainer className={styles.container}>
       <div className="grid items-baseline gap-7 md:grid-cols-12">
-        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
+        <div className="col-span-12 flex justify-center sm:col-span-12 md:col-span-4">
           <h1 className="text-extralight">{t('title')}</h1>
         </div>
-        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
+        <div className="col-span-12 flex justify-center sm:col-span-12 md:col-span-4">
           <motion.div variants={fadeInVariant}>
             <h3>{t('email')}</h3>
             <a
@@ -35,7 +35,7 @@ const Contacts = () => {
             </a>
           </motion.div>
         </div>
-        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4">
+        <div className="col-span-12 flex justify-center sm:col-span-12 md:col-span-4">
           <motion.div
             variants={containerVariant}
             initial="hidden"
