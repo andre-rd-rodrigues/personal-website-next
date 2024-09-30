@@ -34,7 +34,10 @@ const Card: React.FC<CardProps> = ({
           <CardItem
             as="h3"
             translateZ="70"
-            className="my-5 w-full text-center text-4xl font-extralight sm:text-start"
+            className="my-5 w-full text-center text-4xl font-light sm:text-start"
+            style={{
+              fontFamily: 'var(--font-jost)',
+            }}
           >
             {title}
           </CardItem>

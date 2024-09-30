@@ -25,7 +25,7 @@ const ButtonWithText: FC<ButtonProps> = ({
       <span
         className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full bg-gray-900 p-3 px-5 font-light text-white backdrop-blur-3xl"
         style={{
-          fontFamily: 'var(--font-sans)',
+          fontFamily: 'var(--font-jost)',
           width: fullWidth ? '100%' : 'auto',
         }}
       >

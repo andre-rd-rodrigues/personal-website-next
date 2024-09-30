@@ -107,7 +107,14 @@ export const Header = () => {
   const t = useTranslations('portfolio_parallax');
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4 py-20 md:py-40">
-      <p className="text-4xl font-extralight md:text-6xl">{t('title')}</p>
+      <p
+        style={{
+          fontFamily: 'var(--font-jost)',
+        }}
+        className="text-4xl font-light md:text-6xl"
+      >
+        {t('title')}
+      </p>
       <p className="mt-8 max-w-2xl md:text-xl">{t('description')}</p>
     </div>
   );

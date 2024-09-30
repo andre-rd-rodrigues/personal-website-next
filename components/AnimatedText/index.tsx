@@ -33,7 +33,7 @@ const Fade = ({ text, className, letter, underline }: FadeProps) => {
           style={{
             display: 'inline-block',
             marginRight: '0.25em',
-            fontFamily: 'var(--font-sans)',
+            fontFamily: 'var(--font-jost)',
           }}
         >
           {word}

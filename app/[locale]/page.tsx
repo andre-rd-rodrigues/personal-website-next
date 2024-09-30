@@ -30,6 +30,7 @@ import {
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Compare } from '@/components/ui/compare';
 
 const Home = () => {
   const t = useTranslations();
@@ -138,41 +139,48 @@ const Home = () => {
         </Section>
 
         {/* Expertise */}
-        <SectionTitle tag="h2" title="Expertise" />
-        <motion.div
-          variants={containerVariant}
-          initial="hidden"
-          whileInView="visible"
-          className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
-        >
-          {EXPERTISE.map(({ name, description, src }, i) => (
-            <motion.div
-              variants={fadeInSlideInVariant}
-              className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
-              key={i}
-            >
-              <Card
-                title={name}
-                description={t('portfolio.' + description)}
-                imageUrl={src}
+        <Section>
+          <SectionTitle tag="h2" title="Expertise" />
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
+          >
+            {EXPERTISE.map(({ name, description, src }, i) => (
+              <motion.div
+                variants={fadeInSlideInVariant}
+                className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
+                key={i}
+              >
+                <Card
+                  title={name}
+                  description={t('portfolio.' + description)}
+                  imageUrl={src}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            className="mt-6 text-center"
+          >
+            <Link href="/skills">
+              <Button.Text
+                className="w-full"
+                label={t('buttons.skills')}
+                icon={ICONS.arrow}
               />
-            </motion.div>
-          ))}
-        </motion.div>
-        <motion.div
-          variants={fadeInSlideLeftVariant}
-          whileInView="visible"
-          initial="hidden"
-          className="mt-6 text-center"
-        >
-          <Link href="/skills">
-            <Button.Text
-              className="w-full"
-              label={t('buttons.skills')}
-              icon={ICONS.arrow}
-            />
-          </Link>
-        </motion.div>
+            </Link>
+          </motion.div>
+        </Section>
+
+        {/* Trusted By */}
+        <Section>
+          <TrustedCompanies />
+        </Section>
       </Container>
 
       {/* Portfolio */}
@@ -193,19 +201,36 @@ const Home = () => {
       </motion.div>
 
       <Container>
-        {/* Trusted By */}
+        {/*  */}
         <Section>
-          <TrustedCompanies />
-        </Section>
-        <Section>
-          <HeroSection.FlipWords>
-            <>
-              Innovating
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            className="mx-auto mb-12 sm:mb-20"
+          >
+            <h2 className="text-4xl font-extralight md:text-6xl">
+              Rebranding with{' '}
               <FlipWords words={['modern', 'user-focused', 'engaging']} />
               <br />
-              applications tailored to your needs.
-            </>
-          </HeroSection.FlipWords>
+              solutions tailored to your needs.
+            </h2>
+          </motion.div>
+          <motion.div
+            variants={fadeInSlideInVariant}
+            whileInView="visible"
+            initial="hidden"
+            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-[40px] sm:h-[500px] sm:w-4/5"
+          >
+            <Compare
+              firstImage="/images/websites/bb_before.webp"
+              secondImage="/images/websites/bb_after.webp"
+              firstImageClassName="object-cover object-left-top w-full"
+              secondImageClassName="object-cover  w-full"
+              className="h-full w-full rounded-[22px] md:rounded-lg"
+              slideMode="drag"
+            />
+          </motion.div>
         </Section>
 
         {/* Testimonials */}

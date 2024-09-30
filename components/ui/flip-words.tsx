@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 1200,
   className,
 }: {
   words: string[];
@@ -15,7 +15,6 @@ export const FlipWords = ({
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
     const word = words[words.indexOf(currentWord) + 1] || words[0];
     setCurrentWord(word);
@@ -57,10 +56,7 @@ export const FlipWords = ({
           scale: 2,
           position: 'absolute',
         }}
-        className={cn(
-          'relative z-10 inline-block px-2 text-left text-neutral-900 dark:text-neutral-100',
-          className,
-        )}
+        className={cn('relative z-10 inline-block', className)}
         key={currentWord}
       >
         {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
