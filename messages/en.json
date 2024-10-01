@@ -5,7 +5,8 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "brand_label": "Web Developer",
-    "testimonials": "Testimonials"
+    "testimonials": "Testimonials",
+    "skills": "Skills"
   },
 
   "homepage": {
@@ -20,6 +21,11 @@
     },
     "contact": {
       "description": "I'm always eager to connect with new people and explore how we can collaborate. Let's get in touch!"
+    },
+    "flipWords": {
+      "part1": "Rebranding with",
+      "part2": "solutions tailored to your needs.",
+      "words": ["modern", "user-focused", "engaging"]
     }
   },
 
@@ -48,18 +54,29 @@
       "description": "I have always strived to create websites that are not only aesthetically pleasing but also intuitive and user-friendly. I believe that the integration of modern technologies and frameworks has allowed me to achieve this goal while also enhancing the performance of the websites that I develop.\nIn this section, you'll find personal and client projects where I've utilized a range of modern technologies such as React, Redux, Next JS, Web basics, Figma, Sketch and Affinity to create visually stunning and functionally-rich websites.\nI hope that you will enjoy the websites as much as I enjoyed developing them!",
       "projects": {
         "title": "Projects",
-        "CDEFF": "Welcome to the Francisco Franco Sports Club project! Score big with the first website of a local sports club in Madeira Island. Dive into the latest updates on club activities, explore insightful blog articles, and find detailed information on tournaments. It's more than just a website; it's your ultimate playbook for all things sports-related! ",
-        "PrimeTravel": "Check out PrimeTravel, the ultimate travel agency sidekick! It's not just a tool; it's a showcase of top-notch Fullstack Developer skills, designed to wow recruiters and managers. Think of it as your personal assistant for running your travel biz like a breeze. So, if you're in the travel game and craving an easier life, PrimeTravel's your golden ticket to success!",
-        "bb": "Dive into Barbara Lawyer's website, a testament to professionalism and empathy. It's not just about legal prowess; it's a digital handshake that says, 'I understand.' With sleek design and intuitive navigation, this site speaks volumes. Plus, it's packed with SEO magic and analytics to ensure it reaches those who need it most.",
-        "carolina": "Step into serenity with Carolina Jardim's website. Designed with empathy at its core, it's more than just a digital space; it's a calming sanctuary. From soothing colors to seamless navigation, every element whispers reassurance. And behind the scenes, powerful analytics and SEO wizardry ensure it touches hearts far and wide.",
-        "blog": "Welcome to my personal blog, where every click leads to discovery. This isn't your average blog; it's a treasure trove of tech, finance, and career insights. With features like filtering, searching, and a handy CMS, it's a reader's paradise. Plus, with analytics and SEO mojo under the hood, it's bound to make waves in the digital realm.",
-        "barber": "Ready for a cut above the rest? Barber Studio's website is more than just a showcase; it's a canvas for barbering mastery. From crisp designs to dynamic portfolios, it's a nod to skill and style. And with analytics and SEO smarts, it's primed to attract the sharpest clients in town. ",
-        "it": "Step into the digital playground of IT Studios. This isn't your run-of-the-mill company site; it's a showcase of innovation and creativity. From sleek app displays to client testimonials, it's a testament to tech prowess. And with analytics and SEO finesse, it's sure to catch the eye of both recruiters and potential partners. ",
-        "Memory": "Get ready to exercise your brain with the Memory Game web app. Whether you're challenging friends or battling the computer, fun awaits. With scoreboards, multiplayer options, and slick design, it's a gaming experience like no other. Plus, with analytics and SEO superpowers, it's set to dominate the online gaming scene. ",
-        "pipedrive": "Pipedrive is an Estonian cloud-based software as a service company. It is the developer of the web application and mobile app Pipedrive, a sales customer relationship management tool. The company has more than 1,000 employees in its eight offices across Europe and two offices in the US.",
-        "navro": "Navro helps businesses navigate their growth into foreign markets by providing them with access to the best payments infrastructure around the world through one contract and one API.",
-        "sky": "Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group.",
-        "probely": "Probely is a web application and API vulnerability scanner for agile teams. Automate Security Testing by adding Probely into your SDLC and CI/CD pipelines."
+        "CDEFF": "The Francisco Franco Sports Club website offers sports enthusiasts in Madeira Island a comprehensive platform with updates on club activities, insightful articles, and tournament details. It combines high performance with a user-friendly experience, delivering a superior online sports interaction.",
+
+        "PrimeTravel": "PrimeTravel, my personal project, showcases my Fullstack Developer skills through an advanced travel agency management tool. This initiative features an optimized, intuitive design to demonstrate effective travel business operations in a real-world application.",
+
+        "bb": "The website for Dr. Barbara Barbizani, designed for a lawyer, merges professional legal insight with an empathetic user interface. It provides a seamless experience, offering legal support with a personal touch and ensuring high online visibility through optimized SEO strategies.",
+
+        "carolina": "Developed for a clinical psychologist, Dr. Carolina Jardim's website serves as a peaceful digital sanctuary. It features a calming user interface designed to engage visitors effectively, backed by robust analytics to broaden its reach and influence.",
+
+        "blog": "My personal blog acts as a vibrant platform where I share insights into technology, finance, and career development. Equipped with advanced functionalities like search and filtering, it serves as a resource for readers seeking professional growth.",
+
+        "barber": "Barber Studio's website, a client draft project, showcases modern barbering artistry. It features a sleek design that reflects the precision of barbering, supported by strategic SEO to enhance its market presence and attract discerning clients.",
+
+        "it": "IT Studios' website, crafted for a client, is designed to attract potential partners and clients by highlighting creative solutions and services through engaging content and strategic SEO.",
+
+        "Memory": "Prepare to enhance your cognitive skills with the Memory Game web app, a thrilling challenge against friends or the computer. This app features a sophisticated design with multiplayer options and a scoreboard to track your victories.",
+
+        "pipedrive": "At Pipedrive, a leading Estonian cloud-based SaaS company, I enhanced their CRM Automation tool as a Software Engineer. Leveraging React, TypeScript, Docker, Node and other technologies, I contributed to optimizing the user interface of their web and mobile applications, supporting a global team across multiple offices.",
+
+        "navro": "While working with Navro, I utilized my front-end development skills in React and Next.js to help businesses seamlessly expand into foreign markets. My work focused on improving the user interface of their global payments infrastructure, management tasks and building internal automation tools, providing a unified API experience through modern web technologies.",
+
+        "sky": "At Peacock, NBCUniversal Media Group's streaming service, I applied my expertise in React and TypeScript to enhance viewer interfaces. My role involved front-end development that supports the delivery of diverse, on-demand content, optimizing user experiences in a competitive streaming landscape.",
+
+        "probely": "With Probely, I integrated security testing into development pipelines as a Front End Developer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs."
       }
     },
     "mobile": {
@@ -119,6 +136,7 @@
       "years": "Years of experience"
     },
     "contact": {
+      "title": "Schedule a meeting",
       "description": "Want to know more about my journey or discuss a potential project? I'd love to hear from you! Let's chat."
     }
   },
@@ -200,6 +218,10 @@
   "portfolio_parallax": {
     "title": "Delivering impactful\nsolutions to elevate your brand",
     "description": "Take a look at the projects I’ve brought to life—each one crafted using the latest technologies and frameworks."
+  },
+
+  "trusted": {
+    "title": "Trusted by companies"
   },
 
   "buttons": {

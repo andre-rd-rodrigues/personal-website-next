@@ -7,18 +7,21 @@ import { Icon } from '@iconify/react';
 import ICONS from '@/constants/icons.constants';
 import { Link } from '@/navigation';
 import LanguageSelector from '../LanguageSelector';
+import { useTranslations } from 'next-intl';
 
 const navItems = [
-  { href: '/portfolio', label: 'Portfolio' },
-  { href: '/about', label: 'About' },
-  { href: '/skills', label: 'Skills' },
-  { href: '/contacts', label: 'Contacts' },
-  { href: 'https://www.blog.andrerodrigo.com', label: 'Blog' },
+  { href: '/portfolio', label: 'portfolio' },
+  { href: '/about', label: 'about' },
+  { href: '/skills', label: 'skills' },
+  { href: '/contacts', label: 'contacts' },
+  { href: 'https://www.blog.andrerodrigo.com', label: 'blog' },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+
+  const t = useTranslations('navbar');
 
   const pathname = usePathname();
 
@@ -70,7 +73,7 @@ export default function Navbar() {
                         : 'text-gray-300 hover:text-white'
                     } transition-colors duration-300`}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 ))}
                 <LanguageSelector />

@@ -8,11 +8,15 @@ import {
   fadeInSlideLeftVariant,
 } from '@/motion/motionVariants';
 
+import { useTranslations } from 'next-intl';
+
 type Props = {
   className?: string;
 };
 
 const TrustedCompanies = ({ className }: Props) => {
+  const t = useTranslations('trusted');
+
   return (
     <div className={`${styles.container} ${className}`}>
       <motion.h2
@@ -22,7 +26,7 @@ const TrustedCompanies = ({ className }: Props) => {
         className="text-pink mb-4 text-center text-xl font-extralight uppercase tracking-wider"
         style={{ color: `var(--color-primary)` }}
       >
-        Trusted by companies at
+        {t('title')}
       </motion.h2>
       <motion.div
         variants={containerVariant}

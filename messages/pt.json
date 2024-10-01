@@ -5,7 +5,8 @@
     "contacts": "Contactos",
     "blog": "Blog",
     "brand_label": "Programação",
-    "testimonials": "Testemunhos"
+    "testimonials": "Testemunhos",
+    "skills": "Skills"
   },
 
   "homepage": {
@@ -19,7 +20,12 @@
       "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
     },
     "contact": {
-      "description": "Estou sempre disponível para conhecer novas pessoas e perceber como posso acrescentar valor. Se precisas de ajuda com um projeto ou apenas queres dizer olá, não hesites em entrar em contacto!"
+      "description": "Tem um projeto em mente? Posso ajudar a concretizá-lo. Marque uma sessão sem compromisso aqui."
+    },
+    "flipWords": {
+      "part1": "Rebranding",
+      "part2": "personalizado ao seu negócio.",
+      "words": ["moderno", "user-focused", "engaging"]
     }
   },
 
@@ -40,24 +46,37 @@
       "description": "Tem um projeto em mente? Adoraria saber como posso ajudar. Vamos conversar!"
     }
   },
+
   "projects": {
     "web": {
       "heroTitle": "A Internet está a tornar-se a praça da aldeia global do amanhã.",
       "heroDescription": "- Bill Gates, Microsoft Co-founder",
-      "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que gostes tanto quanto eu gostei de os fazer :)",
+      "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que goste tanto quanto eu gostei de os fazer :)",
       "projects": {
-        "CDEFF": "Bem-vindo ao projeto do Clube Desportivo Francisco Franco! Marca grandes pontos com o primeiro website de um clube desportivo local na Ilha da Madeira. Explora as últimas atualizações sobre as atividades do clube, descobre artigos informativos no blog e encontra informações detalhadas sobre os torneios. É mais do que apenas um website, é o teu guia definitivo para tudo relacionado com este clube! 🏆",
-        "PrimeTravel": "Dá uma vista de olhos ao PrimeTravel, o companheiro supremo das agências de viagens! Imagina-o como o assistente pessoal para gerir uma empresa de viagens sem esforço. Não é apenas uma ferramenta, é uma montra das minhas habilidades de Fullstack Developer desenhado para impressionar recruiters e managers 😁",
-        "bb": "Mergulha no website da Dra. Bárbara Carvalho, um testemunho do seu profissionalismo e empatia nos processos legais. Não se trata apenas de perícia jurídica, é um aperto de mão digital que transmite: 'Eu compreendo'. Com um design elegante e navegação intuitiva, este site permite conhecer melhor esta fantástica profissional. Além disso, está repleto de magia SEO e análise de métricas para garantir que chega a quem mais precisa. 👩‍⚖️",
-        "carolina": "Encontra a serenidade com o website da Dra. Carolina Jardim. Desenhado em torno da empatia e tranquilidade, permite ao utilizador encontrar mais informação sobre a Dra. Carolina. Com cores e navegação suaves, cada elemento digital transmite tranquilidade. E nos bastidores, poderosas análises de métricas e magia SEO garantem que toca no coração de todos. 🌿",
-        "blog": "Bem-vindo ao Curiosity Gem, onde cada clique leva à descoberta. Este não é um blog comum, é um cofre de tesouros de tecnologia, finanças e insights de carreira. Com recursos como filtragem, pesquisa e um CMS útil, é o paraíso do leitor. Além disso, com integração de métricas e SEO sob o capô, está destinado a causar impacto no reino digital. 🔍",
-        "Barber": "Preparado para um corte acima dos demais? O website do Barber Studio é mais do que apenas uma vitrine, é uma tela para a maestria em barbear. Desde designs nítidos até portfólios dinâmicos, é um apelo à habilidade e estilo. E com a integração de métricas e SEO, está pronto para atrair os clientes mais exigentes da cidade. 💈",
-        "it": "Entra no parque de diversões digital da IT Studios. Este não é o típico site de empresa, é uma vitrine de inovação e criatividade. Desde exibições de aplicativos elegantes até testemunhos de clientes, é um testemunho da perícia tecnológica. Com integração de métricas e SEO, capta a atenção tanto de recrutadores quanto de potenciais parceiros. 🚀",
-        "Memory": "Prepara-te para exercitar o cérebro com a aplicação web Memory Game. Quer estejas a desafiar amigos ou o computador, a diversão aguarda-te! Com placares, opções multiplayer e design elegante, é uma experiência de jogo como nenhuma outra. Preparada(o) para dominar a cena de jogos online. 🧠",
-        "pipedrive": "Pipedrive is an Estonian cloud-based software as a service company. It is the developer of the web application and mobile app Pipedrive, a sales customer relationship management tool. The company has more than 1,000 employees in its eight offices across Europe and two offices in the US.",
-        "navro": "Navro helps businesses navigate their growth into foreign markets by providing them with access to the best payments infrastructure around the world through one contract and one API.",
-        "sky": "Peacock is an American over-the-top subscription streaming service owned and operated by Peacock TV, LLC, a subsidiary of NBCUniversal Media Group.",
-        "probely": "Probely is a web application and API vulnerability scanner for agile teams. Automate Security Testing by adding Probely into your SDLC and CI/CD pipelines."
+        "title": "Projetos",
+        "CDEFF": "O site do Clube Desportivo Francisco Franco, desenvolvido para um cliente, oferece aos entusiastas do desporto na Ilha da Madeira uma plataforma abrangente com atualizações sobre as atividades do clube, artigos informativos e detalhes de torneios. Combina alto desempenho com uma experiência amigável, proporcionando uma interação desportiva online intuitiva.",
+
+        "PrimeTravel": "PrimeTravel, um projeto pessoal, demonstra as minhas habilidades de Fullstack Developer através de uma ferramenta avançada de gestão de agências de viagens. Esta iniciativa possui um design otimizado e intuitivo para demonstrar operações de negócios de viagens eficazes em uma aplicação real.",
+
+        "bb": "O site da Dra. Barbara Barbizani, é um rebranding focada na apresentação dos serviços e assuntos legais através de uma interface empática e intuitiva. Oferece uma experiência fluída, proporcionando apoio jurídico com um toque pessoal e garantindo alta visibilidade online através de estratégias de SEO.",
+
+        "carolina": "Desenvolvido para uma Psicóloga, o site da Dra. Carolina Jardim promove uma experiência digitial aproximada ao ambiente de sessão terapeutica. Possui uma interface calma, pensada para envolver os clientes e apoiada nas métricas para ampliar o seu alcance no panorama digital.",
+
+        "blog": "O meu blog pessoal atua como uma plataforma vibrante onde partilho insights sobre tecnologia, finanças e desenvolvimento de carreira. Equipado com funcionalidades avançadas como pesquisa e filtragem, serve como um recurso para leitores que buscam crescimento profissional.",
+
+        "barber": "O site do Barber Studio, um projeto para cliente, exibe a arte moderna da barbearia. Possui um design elegante que reflete a precisão da barbearia, suportado por SEO estratégico para melhorar a sua presença no mercado e atrair clientes.",
+
+        "it": "O site da IT Studios, criado para um cliente, é projetado para atrair potenciais parceiros e clientes, destacando soluções criativas e serviços através de conteúdo envolvente e SEO estratégico.",
+
+        "Memory": "A aplicação Memory Game serviu para testar a minhas capacidades no sector do gaming. Promove desafios emocionantes contra amigos ou o computador. Esta aplicação apresenta um design sofisticado com opções multijogador e um placar para rastrear as vitórias.",
+
+        "pipedrive": "Na Pipedrive, uma empresa líder de SaaS na Estônia, trabalhei na feature mais usada, a de automação como Engenheiro de Software. Utilizando React, TypeScript, Docker, Node e outras tecnologias, contribuí para otimizar a interface do usuário, apoiando uma equipa internacional em Lisboa.",
+
+        "navro": "Enquanto trabalhava com a Navro, utilizei minhas habilidades de desenvolvimento front-end em React e Next.js para ajudar a empresa a expandir o seu produto nos mercados estrangeiros. O meu trabalho focou-se na criação de novos interfaces e infraestrutura de pagamentos, tarefas de gestão e construção de ferramentas internas de automação.",
+
+        "sky": "No projeto Peacock, serviço de streaming da NBCUniversal Media Group, apliquei minha experiência em React e TypeScript para melhorar a interface, performance e viabilidade do produto.",
+
+        "probely": "Na Probely, enquanto Software Engineer implementei novas soluções e features, com recurso a React, TypeScript, Next.js e outras tecnologias, de forma a garantir a pesquisa de vulnerabilidades e elevar os padrões de segurança das aplicações web e APIs de centenas de empresas."
       }
     },
 
@@ -66,15 +85,15 @@
       "heroDescription": "- Sundar Pichai, Google CEO",
       "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)",
       "projects": {
-        "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha 😁",
-        "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento! 🎲",
-        "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez! 😊"
+        "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha.",
+        "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento!",
+        "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez!"
       }
     }
   },
 
   "about": {
-    "heroTitle": "É necessário começar pela experiência do utilizador e só depois pensar na solução.",
+    "heroTitle": "É necessário começar pela experiência do utilizador e só depois pensar na tecnologia.",
     "heroDescription": "- Steve Jobs, Apple Co-Founder",
 
     "services": {
@@ -116,6 +135,7 @@
       "years": "Anos de experiência"
     },
     "contact": {
+      "title": "marque a sua sessão",
       "description": "Quer saber mais sobre o meu percuso ou discutir algum projeto? Vamos conversar!"
     }
   },
@@ -192,9 +212,14 @@
     "description": "Este website utiliza cookies para garantir a melhor experiência de navegação. Ao continuar a navegar, concordas com a política de cookies.",
     "accept": "Concordo"
   },
+
   "portfolio_parallax": {
-    "title": "Desenvolvendo soluções\ninovadoras para elevar a tua marca",
-    "description": "Explora os projetos que desenvolvi para diferentes setores e descobre como posso ajudar a transformar a tua ideia em realidade."
+    "title": "Desenvolvendo soluções\ninovadoras para elevar a sua marca",
+    "description": "Explore os projetos que desenvolvi nos diferentes setores e descubra como posso ajudar a transformar a sua ideia em realidade."
+  },
+
+  "trusted": {
+    "title": "Colaborações"
   },
 
   "buttons": {
@@ -206,6 +231,7 @@
     "about": "Sobre",
     "skills": "Skills"
   },
+
   "metadata": {
     "homeTitle": "André Rodrigo • Soluções Web",
     "aboutTitle": "Sobre • André Rodrigo",

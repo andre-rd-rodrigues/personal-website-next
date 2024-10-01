@@ -31,9 +31,11 @@ import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Compare } from '@/components/ui/compare';
+import useTranslation from '@/hooks/useTranslation';
 
 const Home = () => {
   const t = useTranslations();
+  const { getTranslationsArray } = useTranslation();
 
   return (
     <>
@@ -210,10 +212,12 @@ const Home = () => {
             className="mx-auto mb-12 sm:mb-20"
           >
             <h2 className="text-4xl font-extralight md:text-6xl">
-              Rebranding with{' '}
-              <FlipWords words={['modern', 'user-focused', 'engaging']} />
+              {t('homepage.flipWords.part1')}{' '}
+              <FlipWords
+                words={getTranslationsArray('homepage.flipWords.words')}
+              />
               <br />
-              solutions tailored to your needs.
+              {t('homepage.flipWords.part2')}
             </h2>
           </motion.div>
           <motion.div
