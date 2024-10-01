@@ -13,18 +13,33 @@
     "cta": "Portfólio",
     "form": {
       "button": "Contactar"
+    },
+    "about": {
+      "title": "Sobre mim",
+      "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
+    },
+    "contact": {
+      "description": "Estou sempre disponível para conhecer novas pessoas e perceber como posso acrescentar valor. Se precisas de ajuda com um projeto ou apenas queres dizer olá, não hesites em entrar em contacto!"
     }
   },
 
   "portfolio": {
     "title": "Portfólio",
+
     "categories": {
-      "websites": "Cutting-edge website designs that blend innovation with user-centric solutions to boost engagement and business growth.",
-      "apps": "Apps offering seamless user experiences across devices with optimal performance and reliability.",
-      "editorial": "My personal thought-provoking space, that challenges me into inspire new ideas, and provide insights into trending topics."
+      "websites": "Websites e aplicações web modernas que combinam a inovação com experiência centradas no utilizador.",
+      "apps": "Aplicações que oferecem uma experiência suave, transversal aos vários sistemas operativos e centrada na performance.",
+      "design": "Designs cativantes para criar uma experiência memorável, personalizada às necessidades do seu negócio."
+    },
+
+    "heroSection": {
+      "title": "Guiar na criação de soluções digitais eficazes",
+      "description": "As inúmeras opções disponíveis fazem-no sentir-se sobrecarregado? O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade e a dar vida à sua visão."
+    },
+    "contact": {
+      "description": "Tem um projeto em mente? Adoraria saber como posso ajudar. Vamos conversar!"
     }
   },
-
   "web": {
     "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que gostes tanto quanto eu gostei de os fazer :)",
     "projects": {
@@ -51,8 +66,9 @@
   },
 
   "about": {
-    "title": "Web developer apaixonado por inovação",
-    "services_separator": "Aumenta a visibilidade do teu negócio",
+    "heroTitle": "É necessário começar pela experiência do utilizador e só depois pensar na solução.",
+    "heroDescription": "- Steve Jobs, Apple Co-Founder",
+
     "services": {
       "title": "Serviços",
       "main": {
@@ -86,25 +102,27 @@
       "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
     },
     "experience": {
-      "title": "Experiência",
-      "probely": "A Probely é uma empresa proeminente no setor da cibersegurança em Portugal. Como developer, criei funcionalidades apelativas ao utilizador com recurso a React e TypeScript, contribuí para a melhoria e capacidades do produtom aumentando a satisfação dos clientes. Implementei atualizações estratégicas em bases de código legadas, priorizando a simplicidade e eficiência para otimizar o desempenho operacional na nossa base de código. Criei documentação para standards de código e melhorei a estabilidade da suíte de testes com Cypress. Isso resultou em melhorias tangíveis na qualidade do código e na resiliência do sistema, levando a notáveis economias de tempo e recursos. Analisei funcionalidades de cibersegurança e aprimorei projetos internos usando Python e Django.",
-      "paytrix": "A entrada na Navro na sua fase inicial proporcionou-me uma oportunidade única de ter um impacto significativo em vários sectores da empresa. As minhas principais contribuições incluíram o aumento da fiabilidade do software através da integração de testes Cypress, o que acelerou a nossa pipeline e tempo de entrega, poupando cerca de 6 horas por dia de custos à empresa. Desempenhei um papel ativo no estabelecimento da documentação de boas práticas e regras de programção, elevando substancialmente a qualidade e a consistência. Além disso, desenvolvi várias ferramentas de automação que simplificaram o setup do projeto e a criação de dados financeiros. Liderar a nossa equipa foi outro ponto alto para mim, onde fomentei o trabalho em equipa e sincronizei esforços entre os departamentos de produto, back-end e design, atingindo os nossos objectivos colectivos.",
-      "pipedrive": "Na Pipedrive, tive a oportunidade de usar microsserviços e arquitetura orientada a eventos de forma eficaz, aprimorando um recurso de automação crucial que contribuiu significativamente para o crescimento e lucro da empresa. A tech stack inclui React, TypeScript, Node, Docker, React Testing Library e Cypress. Isto não só levou a melhorias notáveis na qualidade do código, mas também reforçou a fiabilidade através de testes extensivos. A participação em hackathons e projectos estratégicos de equipa, em colaboração com parceiros, permitiu-me contribuir para o brainstorming e o desenvolvimento de funcionalidades essenciais. Estes esforços foram fundamentais para garantir uma vantagem competitiva substancial no mercado.",
-      "sky": "Como parte da equipa de frontend da Sky, trabalhei diretamente no serviço de streaming da NBC Universal, o Peacock (Skyshowtime na Europa). COntribuí para uma plataforma global escalável com milhões de visualizações mensais, assumindo a responsabilidade pelo processo de desenvolvimento, participando ativamente de discussões com produto, fazendo improvements na qualidade, segurança e desempenho da plataforma.",
-      "wise": "Na minha função inicial como Lead Front-End Developer & UX/UI Designer, tive a incrível oportunidade de construir uma plataforma de lotaria online, desde o início, chamada Lotto Jade. Como parte da equipa fundadora da nossa empresa, desempenhei um papel crucial na definição da nossa abordagem ao desenvolvimento de soluções. Nesta qualidade, comuniquei frequentemente com as partes interessadas e os clientes, conduzindo demonstrações e discussões que realçavam os valores e os objectivos estratégicos da nossa empresa. Este envolvimento foi vital para garantir que as nossas soluções técnicas não só eram inovadoras, como também estavam estreitamente alinhadas com as necessidades dos clientes e as tendências do mercado, fomentando relações fortes e preparando o terreno para exceder as expectativas em cada momento.",
-      "freelance": "Como freelancer, implementei soluções digitais para várias empresas, sendo responsável por todo o processo, desde a conceção até à implementação, oferecendo projeção no mercado através de orientação personalizada e soluções centradas no cliente, adaptadas às necessidades do negócio. Padronizei os resultados utilizando uma abordagem e estratégia de vanguarda, responsiva e mobile-first, alinhada com as tendências actuais do mercado e as expectativas dos utilizadores. Frequentemente, faço avaliações completas de designs de UX e UI para viabilidade técnica, optimização de SEO e branding."
+      "title": "O segredo está na relação humana",
+      "description": "Ao longo da minha carreira, tive o privilégio de contribuir para uma série de projectos impactantes em várias empresas líderes, cada um oferecendo desafios únicos e oportunidades de aprendizagem. Atualmente, na Probely, aperfeiçoei os seus produtos de cibersegurança com funcionalidades intuitivas utilizando React e TypeScript, aumentando a satisfação do utilizador e a eficiência do produto.\nAs minhas funções na Navro e na Pipedrive permitiram-me envolver-me profundamente na fiabilidade do software e na otimização do sistema, implementando soluções robustas e regimes de teste abrangentes que elevaram o desempenho operacional. \nNa NBCUniversal's Peacock, orgulhei-me de assegurar uma experiência de streaming sem falhas para milhões de utilizadores em todo o mundo, contribuindo para um serviço escalável e com capacidade de resposta.\nA minha jornada na Wise foi particularmente gratificante, uma vez que liderei o desenvolvimento de uma plataforma de lotaria online desde o início, alinhando as nossas soluções técnicas com as necessidades do cliente e as exigências do mercado. Esta função não só desafiou a minha capacidade de liderança técnica, como também aprofundou o meu gosto pelo desenvolvimento de soluções em colaboração.",
+      "projects": "Projetos em diferentes setores",
+      "years": "Anos de experiência"
     },
-    "education": "Formação"
+    "contact": {
+      "description": "Quer saber mais sobre o meu percuso ou discutir algum projeto? Vamos conversar!"
+    }
   },
 
-  "skills_page": {
-    "soft_skills": "A Arte e o comportamento humano sempre foram parte integrante da minha vida. As minhas outras paixões, como o teatro, a música e a Psicologia, permitiram-me desenvolver competências versáteis que contribuem grandemente para a minha saúde mental, social e física, revelando-se uma significativa vantagem no contexto organizacional, sendo elas a criatividade, inteligência emocional, empatia, relação interpessoal, pensamento crítico, resolução de conflitos e/ou de problemas e a comunicação assertiva."
+  "skills": {
+    "heroTitle": "O conhecimento é o olho do desejo e o piloto da alma.",
+    "heroDescription": "- Will Durant",
+    "title": "introdução",
+    "description": "As artes e o comportamento humano sempre foram uma grande parte da minha vida. As minhas outras paixões, como o teatro, a música e a psicologia, moldaram profundamente o meu crescimento emocional e profissional, enriquecendo as minhas capacidades de comunicação e de trabalho em equipa.\nOs gráficos aqui apresentados destacam a minha experiência em desenvolvimento e infra-estruturas front-end e back-end. No entanto, isto é apenas um vislumbre das minhas capacidades. Também tenho experiência noutros tópicos como microserviços e arquitetura orientada a eventos, webpack entre outros. Estou sempre ansioso por aprender e adaptar-me a novas tecnologias, portanto este é apenas o início da minha jornada."
   },
 
   "contacts": {
-    "title": "Contactos",
-    "email": "Vamos conversar",
-    "social": "rede social"
+    "title": "Vamos conversar?",
+    "email": "email",
+    "social": "redes sociais"
   },
 
   "testimonials": {
@@ -166,12 +184,19 @@
     "description": "Este website utiliza cookies para garantir a melhor experiência de navegação. Ao continuar a navegar, concordas com a política de cookies.",
     "accept": "Concordo"
   },
+  "portfolio_parallax": {
+    "title": "Desenvolvendo soluções\ninovadoras para elevar a tua marca",
+    "description": "Explora os projetos que desenvolvi para diferentes setores e descobre como posso ajudar a transformar a tua ideia em realidade."
+  },
 
-  "contacts": {
-    "banner": {
-      "title": "Posso dar vida aos teus projetos. vamos conversar?",
-      "cta": "enviar mensagem"
-    }
+  "buttons": {
+    "read_more": "Ler mais",
+    "see_more": "Ver mais",
+    "contact": "Contactar",
+    "send_message": "Enviar mensagem",
+    "explore": "Explorar",
+    "about": "Sobre",
+    "skills": "Skills"
   },
   "metadata": {
     "homeTitle": "André Rodrigo • Soluções Web",
