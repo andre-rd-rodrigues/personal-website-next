@@ -23,23 +23,23 @@ const Web = () => {
 
   return (
     <PageContainer className={styles.container}>
-      <HeroSection.Text
-        title={t('heroTitle')}
-        subtitle={<p>{t('heroDescription')}</p>}
-      />
-
       <Section>
-        <div className="mb-16">
-          <SectionTitle title="Overview" color="primary" />
-          <motion.p
-            variants={workPageHeaderContent}
-            initial="hidden"
-            animate="visible"
-          >
-            {t('description')}
-          </motion.p>
-        </div>
+        <HeroSection.Text
+          title={t('heroTitle')}
+          subtitle={<p>{t('heroDescription')}</p>}
+        />
       </Section>
+
+      <div className="mb-16">
+        <SectionTitle title="Overview" color="primary" />
+        <motion.p
+          variants={workPageHeaderContent}
+          initial="hidden"
+          animate="visible"
+        >
+          {t('description')}
+        </motion.p>
+      </div>
 
       <motion.div
         variants={containerVariant}
