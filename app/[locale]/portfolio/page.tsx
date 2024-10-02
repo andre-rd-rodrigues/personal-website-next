@@ -61,6 +61,7 @@ const Portfolio = () => {
 
       <Section>
         <HeroSection.Text
+          textClassName="font-light"
           title={t('heroSection.title')}
           subtitle={
             <p className="text-lg font-extralight md:text-xl">

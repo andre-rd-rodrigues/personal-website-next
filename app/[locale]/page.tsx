@@ -73,6 +73,7 @@ const Home = () => {
             </div>
           </motion.div>
         </div>
+
         {/* Profile */}
         <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
           <motion.span
@@ -105,7 +106,7 @@ const Home = () => {
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
-                className="mb-10 text-center text-6xl font-extralight sm:text-start"
+                className="mb-10 text-center text-6xl sm:text-start"
               >
                 {t('homepage.about.title')}
               </motion.h2>
@@ -209,7 +210,7 @@ const Home = () => {
             variants={fadeInSlideLeftVariant}
             whileInView="visible"
             initial="hidden"
-            className="mx-auto mb-12 sm:mb-20"
+            className="mb-4 text-5xl md:mb-12 md:w-5/6 md:text-7xl"
           >
             <h2 className="text-4xl md:text-6xl">
               {t('homepage.rebrand_hero.title')}
@@ -221,7 +222,7 @@ const Home = () => {
                 )}
               />
             </h2>
-            <p className="mt-8 max-w-3xl md:text-xl">
+            <p className="mt-8 md:w-3/5 md:text-xl">
               {t('homepage.rebrand_hero.description')}
             </p>
           </motion.div>

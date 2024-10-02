@@ -10,6 +10,7 @@ interface HeroSectionProps {
   title: string;
   subtitle: ReactNode;
   className?: string;
+  textClassName?: string;
   options?: {
     subtitleDelay?: number;
   };
@@ -20,13 +21,14 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
   title,
   subtitle,
   className,
+  textClassName,
   options,
 }) => {
   return (
     <div className={`text-white md:px-20 ${className}`}>
       <AnimatedText.Fade
         text={title}
-        className="mb-4 text-5xl font-extralight md:mb-12 md:w-5/6 md:text-7xl"
+        className={`mb-4 text-5xl font-extralight md:mb-12 md:w-5/6 md:text-7xl ${textClassName}`}
       />
 
       <motion.div
