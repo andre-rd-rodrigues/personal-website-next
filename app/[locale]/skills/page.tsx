@@ -20,14 +20,17 @@ const Skills = () => {
 
   return (
     <PageContainer className={styles.container}>
-      <HeroSection.Text
-        title={t('heroTitle')}
-        subtitle={<p>{t('heroDescription')}</p>}
-        className="pb-0"
-        options={{
-          subtitleDelay: 0.8,
-        }}
-      />
+      <Section>
+        <HeroSection.Text
+          title={t('heroTitle')}
+          subtitle={<p>{t('heroDescription')}</p>}
+          className="pb-0"
+          options={{
+            subtitleDelay: 0.8,
+          }}
+        />
+      </Section>
+
       <Section>
         <SectionTitle title={t('title')} color="primary" tag="h2" />
         <motion.p

@@ -28,11 +28,13 @@ const About = () => {
 
   return (
     <PageContainer>
-      <HeroSection.Text
-        title={t('heroTitle')}
-        subtitle={<p>{t('heroDescription')}</p>}
-        className="pb-0"
-      />
+      <Section>
+        <HeroSection.Text
+          title={t('heroTitle')}
+          subtitle={<p>{t('heroDescription')}</p>}
+          className="pb-0"
+        />
+      </Section>
 
       {/*   About me */}
       <Section>

@@ -44,8 +44,8 @@
     },
 
     "heroSection": {
-      "title": "Guiar na criação de soluções digitais eficazes",
-      "description": "As inúmeras opções disponíveis fazem-no sentir-se sobrecarregado? O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade e a dar vida à sua visão."
+      "title": "Consultoria na criação de soluções digitais",
+      "description": "Com as inúmeras opções de soluções online, é comum sentir-se afundado em dúvidas. O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade para que possa sentir segurança nas suas decisões."
     },
     "contact": {
       "description": "Não sabe por onde começar? Marque já e tenha uma sessão de consultoria grátis."
@@ -153,9 +153,10 @@
   },
 
   "contacts": {
-    "title": "Vamos conversar?",
+    "title": "Vamos\nconversar?",
     "email": "email",
-    "social": "redes sociais"
+    "social": "redes sociais",
+    "reachOut": "contactar"
   },
 
   "testimonials": {

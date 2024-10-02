@@ -45,7 +45,7 @@
 
     "heroSection": {
       "title": "Helping you seamlessly build online solutions",
-      "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and bring your vision to life."
+      "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and create long-lasting solutions for your business."
     },
     "contact": {
       "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
@@ -156,7 +156,8 @@
   "contacts": {
     "title": "Get in touch!",
     "email": "let's chat",
-    "social": "social network"
+    "social": "social network",
+    "reachOut": "reach out"
   },
 
   "testimonials": {
