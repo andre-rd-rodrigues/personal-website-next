@@ -1,8 +1,6 @@
 import React from 'react';
 
-type Props = {};
-
-function BlogPost({}: Props) {
+function BlogPost() {
   return <div>BlogPost</div>;
 }
 
