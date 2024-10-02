@@ -10,22 +10,27 @@
   },
 
   "homepage": {
-    "subtitle": "Produção de websites, apps e conteúdo digital",
+    "subtitle": "Criação de websites, apps e rebranding",
     "cta": "Portfólio",
     "form": {
       "button": "Contactar"
     },
     "about": {
       "title": "Sobre mim",
-      "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
+      "description": "O meu nome é André Rodrigo, sou Engenheiro de Software há 4 anos e dedico-me inteiramente ao desenvolvimento de soluções digitais como websites, apps e rebranding. Colaborei com várias empresas internacionais, ajudando-as na criação de ferramentas digitais que aumentaram o seu valor de mercado e a captação de novos clientes, entre elas a NBC Universal, Pipedrive, Navro entre outras.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são parte da minha identidade e são também os principais contributos para o sucesso das soluções.\nO meu objectivo primordial é o de ajudar ativamente as pequenas e médias empresas a alcançarem mais clientes, formar laços duradouros e aumentar os parâmetros de qualidade do produto."
     },
+
+    "rebrand_hero": {
+      "title": "Destaque-se da concorrência",
+      "description": "Com um novo website, os meus clientes tiveram um aumento de 300% na interação com os seus clientes.",
+      "flipWords": {
+        "part1": "com um website",
+        "words": ["moderno", "profissional", "intuitivo"]
+      }
+    },
+
     "contact": {
-      "description": "Tem um projeto em mente? Posso ajudar a concretizá-lo. Marque uma sessão sem compromisso aqui."
-    },
-    "flipWords": {
-      "part1": "Rebranding",
-      "part2": "personalizado ao seu negócio.",
-      "words": ["moderno", "user-focused", "engaging"]
+      "description": "Tem um projeto em mente? Marque já e tenha uma sessão de consultoria grátis."
     }
   },
 
@@ -33,9 +38,9 @@
     "title": "Portfólio",
 
     "categories": {
-      "websites": "Websites e aplicações web modernas que combinam a inovação com experiência centradas no utilizador.",
-      "apps": "Aplicações que oferecem uma experiência suave, transversal aos vários sistemas operativos e centrada na performance.",
-      "design": "Designs cativantes para criar uma experiência memorável, personalizada às necessidades do seu negócio."
+      "websites": "Criação de websites modernos, com SEO para atrair mais clientes e aumentar as suas vendas.",
+      "apps": "Criação de aplicações para telemóvel, para que possa estar no bolso dos clientes 24h/7.",
+      "design": "Designs inovadores e únicos para destacá-lo da concorrência."
     },
 
     "heroSection": {
@@ -43,7 +48,7 @@
       "description": "As inúmeras opções disponíveis fazem-no sentir-se sobrecarregado? O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade e a dar vida à sua visão."
     },
     "contact": {
-      "description": "Tem um projeto em mente? Adoraria saber como posso ajudar. Vamos conversar!"
+      "description": "Não sabe por onde começar? Marque já e tenha uma sessão de consultoria grátis."
     }
   },
 
@@ -214,8 +219,8 @@
   },
 
   "portfolio_parallax": {
-    "title": "Desenvolvendo soluções\ninovadoras para elevar a sua marca",
-    "description": "Explore os projetos que desenvolvi nos diferentes setores e descubra como posso ajudar a transformar a sua ideia em realidade."
+    "title": "Desenvolvendo soluções\npara os desafios do seu negócio",
+    "description": "Cada projeto é centrado na resolução dos desafios específicos do negócio. Estas soluções personalizadas impulsionaram o crescimento e a inovação de várias empresas. O seu pode ser o próximo."
   },
 
   "trusted": {
@@ -229,7 +234,8 @@
     "send_message": "Enviar mensagem",
     "explore": "Explorar",
     "about": "Sobre",
-    "skills": "Skills"
+    "skills": "Skills",
+    "schedule": "Agendar"
   },
 
   "metadata": {
@@ -238,6 +244,7 @@
     "portfolioTitle": "Portfólio • André Rodrigo",
     "contactsTitle": "Contactos • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
-    "description": "Transformar ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
+    "blogTitle": "Blog • André Rodrigo",
+    "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
   }
 }

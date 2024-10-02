@@ -164,7 +164,7 @@ const PROJECTS = {
 
     {
       imgSrc: '/images/websites/bb.webp',
-      label: 'Bárbara Lawyer',
+      label: 'Bárbara Barbizani',
 
       description: 'web.projects.bb',
       techStack: {
@@ -409,7 +409,7 @@ const PROJECTS = {
     },
     {
       imgSrc: '/images/websites/bb.webp',
-      label: 'Bárbara Lawyer',
+      label: 'Bárbara Barbizani',
 
       description: 'web.projects.bb',
       techStack: {

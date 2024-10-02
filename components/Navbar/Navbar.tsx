@@ -14,7 +14,7 @@ const navItems = [
   { href: '/about', label: 'about' },
   { href: '/skills', label: 'skills' },
   { href: '/contacts', label: 'contacts' },
-  { href: 'https://www.blog.andrerodrigo.com', label: 'blog' },
+  { href: '/blog', label: 'blog' },
 ];
 
 export default function Navbar() {

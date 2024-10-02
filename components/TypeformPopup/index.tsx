@@ -7,14 +7,18 @@ import Button from '../Button';
 
 type Props = {
   label?: string;
+  icon?: (typeof ICONS)[keyof typeof ICONS];
 };
 
-const TypeformPopup = ({ label = 'send_message' }: Props) => {
+const TypeformPopup = ({
+  label = 'send_message',
+  icon = ICONS.message,
+}: Props) => {
   const t = useTranslations('buttons');
 
   return (
     <PopupButton id={TYPEFORM_ID} size={70}>
-      <Button.Text icon={ICONS.message} label={t(label)} />
+      <Button.Text icon={icon} label={t(label)} />
     </PopupButton>
   );
 };

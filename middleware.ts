@@ -1,24 +1,24 @@
-import createMiddleware from "next-intl/middleware";
-import { locales, localePrefix, pathnames } from "./navigation";
-import { NextRequest, NextResponse } from "next/server";
+import createMiddleware from 'next-intl/middleware';
+import { locales, localePrefix, pathnames } from './navigation';
+import { NextRequest, NextResponse } from 'next/server';
 
 function setUrlHeaderMiddleware(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
   const pathname = request.nextUrl.pathname;
-  requestHeaders.set("x-url", pathname);
+  requestHeaders.set('x-url', pathname);
 
   return NextResponse.next({
     request: {
-      headers: requestHeaders
-    }
+      headers: requestHeaders,
+    },
   });
 }
 
 const intlMiddleware = createMiddleware({
-  defaultLocale: "pt",
+  defaultLocale: 'pt',
   localePrefix,
   locales,
-  pathnames
+  pathnames,
 });
 
 // Combine middlewares
@@ -38,11 +38,11 @@ export default async function middleware(request: NextRequest) {
   return new NextResponse(intlResponse.body, {
     headers: combinedHeaders,
     status: intlResponse.status,
-    statusText: intlResponse.statusText
+    statusText: intlResponse.statusText,
   });
 }
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(pt|en)/:path*"]
+  matcher: ['/', '/(pt|en)/:path*'],
 };

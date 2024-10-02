@@ -203,7 +203,7 @@ const Home = () => {
       </motion.div>
 
       <Container>
-        {/*  */}
+        {/* Rebranding hero */}
         <Section>
           <motion.div
             variants={fadeInSlideLeftVariant}
@@ -211,14 +211,19 @@ const Home = () => {
             initial="hidden"
             className="mx-auto mb-12 sm:mb-20"
           >
-            <h2 className="text-4xl font-extralight md:text-6xl">
-              {t('homepage.flipWords.part1')}{' '}
-              <FlipWords
-                words={getTranslationsArray('homepage.flipWords.words')}
-              />
+            <h2 className="text-4xl md:text-6xl">
+              {t('homepage.rebrand_hero.title')}
               <br />
-              {t('homepage.flipWords.part2')}
+              {t('homepage.rebrand_hero.flipWords.part1')}{' '}
+              <FlipWords
+                words={getTranslationsArray(
+                  'homepage.rebrand_hero.flipWords.words',
+                )}
+              />
             </h2>
+            <p className="mt-8 max-w-3xl md:text-xl">
+              {t('homepage.rebrand_hero.description')}
+            </p>
           </motion.div>
           <motion.div
             variants={fadeInSlideInVariant}
@@ -247,7 +252,7 @@ const Home = () => {
         <Section className="md:my-56">
           <HeroSection.Cta
             text={t('homepage.contact.description')}
-            cta={<TypeformPopup />}
+            cta={<TypeformPopup label="schedule" icon={ICONS.calendar} />}
           />
         </Section>
       </Container>

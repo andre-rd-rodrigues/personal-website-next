@@ -17,15 +17,20 @@
     },
     "about": {
       "title": "About me",
-      "description": "Hi there,\nI'm thrilled to have you here! I hope you're doing great. My name is André Rodrigues and I'm a software engineer and designer for over 4 years. From the moment I turned my passion for technology into a career, I've been dedicated to building digital projects that push the boundaries while keeping the user at the heart of everything I do. I’m all about the details—crafting creative, tailor-made solutions that truly enhance the user experience.\nOver the years, I’ve worked with incredible people across various industries, designing websites, developing web apps, and shaping brands. My goal? To build meaningful relationships and bring visions to life with impactful, top-tier products.\nFeel free to explore more about my path and projects, and don't hesitate to reach out. I'm always eager to connect and explore how we can collaborate. Let's chat!"
+      "description": "Hi there!\nMy name is André Rodrigues and I'm a Software Engineer and designer for over 4 years. From the moment I turned my passion for technology into a career, I've been dedicated to building digital projects that push the boundaries while keeping the user at the heart of everything I do. I’m all about the details—crafting creative, tailor-made solutions that truly enhance the user experience.\nOver the years, I’ve worked with incredible people across various industries, designing websites, developing web apps, and shaping brands. My goal? To build meaningful relationships and bring visions to life with impactful, top-tier products.\nFeel free to explore more about my path and projects, and don't hesitate to reach out. I'm always eager to connect and explore how we can collaborate."
     },
+
+    "rebrand_hero": {
+      "title": "Stand out from the competition",
+      "description": "With a new website, my clients experienced a 300% increase in customer interactions. Stand out from the competition.",
+      "flipWords": {
+        "part1": "by making your website",
+        "words": ["modern", "user-focused", "engaging"]
+      }
+    },
+
     "contact": {
-      "description": "I'm always eager to connect with new people and explore how we can collaborate. Let's get in touch!"
-    },
-    "flipWords": {
-      "part1": "Rebranding with",
-      "part2": "solutions tailored to your needs.",
-      "words": ["modern", "user-focused", "engaging"]
+      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
     }
   },
 
@@ -33,9 +38,9 @@
     "title": "Portfolio",
 
     "categories": {
-      "websites": "Cutting-edge websites and web apps that blend innovation with user-centric solutions to boost engagement and business growth.",
-      "apps": "Apps offering seamless user experiences across devices with optimal performance and reliability.",
-      "design": "Designs that captivate and inspire, setting the stage for a memorable and engaging user journey."
+      "websites": "Creation of modern websites to attract more customers and boost your sales.",
+      "apps": "Development of mobile apps so you can be in your customers' pockets 24/7.",
+      "design": "Innovative and unique designs to help you stand out from the competition."
     },
 
     "heroSection": {
@@ -43,7 +48,7 @@
       "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and bring your vision to life."
     },
     "contact": {
-      "description": "Got a project in mind? I'd love to hear about it! Let's chat."
+      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
     }
   },
 
@@ -231,7 +236,8 @@
     "send_message": "Send message",
     "explore": "Explore",
     "about": "About",
-    "skills": "Skills"
+    "skills": "Skills",
+    "schedule": "Schedule"
   },
 
   "metadata": {
@@ -240,6 +246,7 @@
     "portfolioTitle": "Portfolio • André Rodrigo",
     "contactsTitle": "Contacts • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
+    "blogTitle": "Blog",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

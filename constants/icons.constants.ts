@@ -9,6 +9,7 @@ const ICONS = {
   open: 'majesticons:open',
   facebook: 'ri:facebook-line',
   menu: 'ri:menu-line',
+  calendar: 'clarity:calendar-line',
 };
 
 export default ICONS;
