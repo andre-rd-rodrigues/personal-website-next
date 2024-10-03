@@ -35,7 +35,7 @@ const Blog: NextPage<Post> = () => {
       {data?.posts && (
         <div className="flex flex-wrap justify-center gap-5">
           {data?.posts.map((post, i) => (
-            <div className="max-w-[700px]" key={i}>
+            <div className="max-w-full lg:max-w-[700px]" key={i}>
               <BlogCard post={post} />
             </div>
           ))}
