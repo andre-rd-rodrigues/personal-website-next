@@ -234,7 +234,7 @@
   },
 
   "buttons": {
-    "read_more": "Ler mais",
+    "readMore": "Ler mais",
     "see_more": "Ver mais",
     "contact": "Contactar",
     "send_message": "Enviar mensagem",
