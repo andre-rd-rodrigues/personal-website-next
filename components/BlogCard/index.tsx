@@ -51,7 +51,8 @@ const BlogCard = ({ post }: { post: Post }) => {
               {description}
             </CardItem>
             <CardItem translateZ="60" className="mt-7 w-full text-right">
-              <Link href="/blog" as={`/blog/${slug}`}>
+              {/*  @ts-expect-error href does not have the type  */}
+              <Link href={`/blog/${slug}`}>
                 <Button.Text icon={ICONS.arrow} label={t('readMore')} />
               </Link>
             </CardItem>

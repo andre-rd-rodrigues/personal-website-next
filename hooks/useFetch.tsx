@@ -10,7 +10,10 @@ type FetchState<T> = {
 };
 
 // Custom hook for fetching data from GraphQL
-function useFetch<T>(query: string): FetchState<T> {
+function useFetch<T>(
+  query: string,
+  params?: object | undefined,
+): FetchState<T> {
   const [state, setState] = useState<FetchState<T>>({
     data: null,
     loading: true,
@@ -22,7 +25,7 @@ function useFetch<T>(query: string): FetchState<T> {
 
     async function fetchData() {
       try {
-        const data = await graphcms.request<T>(query);
+        const data = await graphcms.request<T>(query, params);
         setState({ data, loading: false, error: null });
       } catch (error: unknown) {
         console.error(error);

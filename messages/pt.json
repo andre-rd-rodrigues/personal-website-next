@@ -241,7 +241,13 @@
     "explore": "Explorar",
     "about": "Sobre",
     "skills": "Skills",
-    "schedule": "Agendar"
+    "schedule": "Agendar",
+    "goBack": "Voltar"
+  },
+
+  "error": {
+    "title": "Upss um erro inesperado...",
+    "description": "Um erro inesperado aconteceu. Por favor tenta novamente mais tarde. Se o problema persistir, por favor contacta-me."
   },
 
   "metadata": {

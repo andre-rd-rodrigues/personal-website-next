@@ -238,9 +238,13 @@
     "explore": "Explore",
     "about": "About",
     "skills": "Skills",
-    "schedule": "Schedule"
+    "schedule": "Schedule",
+    "goBack": "Go back"
   },
-
+  "error": {
+    "title": "Upss something went wrong...",
+    "description": "An unexpected issue happened. Please try reloading the page or returning to the previous screen. If the problem persists, contact me for assistance."
+  },
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",
     "aboutTitle": "About • André Rodrigo",
