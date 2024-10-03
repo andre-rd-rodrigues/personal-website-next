@@ -15,7 +15,7 @@ const BlogCard = ({ post }: { post: Post }) => {
 
   return (
     <div
-      className={`border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
+      className={`rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
     >
       <CardContainer className="inter-var">
         <CardBody className="group/card border-1 relative h-auto w-auto rounded-lg p-8 md:p-12 md:text-left">

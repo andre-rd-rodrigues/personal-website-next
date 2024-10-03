@@ -54,9 +54,31 @@ const PostCard = () => {
   );
 };
 
+const BlogMainArticleCard = () => {
+  return (
+    <div className="animate-pulse">
+      <div className="group/card border-1 relative flex h-full w-full flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
+        <div className="w-1/2">
+          <div className="mb-3 h-4 w-full rounded bg-gray-200"></div>
+          <div className="mb-7 h-16 w-full rounded bg-gray-200"></div>
+          <div className="mt-7 h-4 w-full rounded bg-gray-200"></div>
+          <div className="mt-3 h-3 w-full rounded bg-gray-200"></div>
+          <div className="mt-3 h-3 w-full rounded bg-gray-200"></div>
+          <div className="flex justify-end">
+            <div className="mt-4 h-12 w-36 rounded-full bg-gray-200 px-5"></div>
+          </div>
+        </div>
+
+        <div className="relative min-h-48 w-1/2 rounded-md bg-gray-200 sm:min-h-full"></div>
+      </div>
+    </div>
+  );
+};
+
 const Skeleton = {
   Post,
   PostCard,
+  MainPost: BlogMainArticleCard,
 };
 
 export default Skeleton;

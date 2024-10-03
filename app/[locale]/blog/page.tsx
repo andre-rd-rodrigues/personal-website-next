@@ -10,9 +10,11 @@ import { motion } from 'framer-motion';
 import {
   containerVariant,
   fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
   fadeInVariant,
 } from '@/motion/motionVariants';
 import ErrorGeneric from '@/components/ErrorGeneric';
+import BlogMainArticleCard from '@/components/BlogMainArticleCard';
 
 export type Post = {
   id: string;
@@ -38,16 +40,39 @@ const Blog: NextPage<Post> = () => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLES_CARD_QUERY);
   const mockedPosts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+  const mainArticle = data?.posts.filter((post) => post.isTopPick)[0];
+
   return (
     <Container className="max-w-full px-0">
       {error && <ErrorGeneric />}
 
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariant}
-        className="flex flex-wrap justify-center gap-5"
-      >
+      {/* Main Article */}
+      <AnimatePresence>
+        {loading && (
+          <motion.div
+            initial="visible"
+            exit="hidden"
+            variants={fadeInVariant}
+            className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
+          >
+            <Skeleton.MainPost />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {!!mainArticle && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInSlideLeftVariant}
+          className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
+        >
+          <BlogMainArticleCard post={mainArticle} />
+        </motion.div>
+      )}
+
+      <div className="flex flex-wrap justify-center gap-5">
+        {/* Loading */}
         <AnimatePresence>
           {loading &&
             mockedPosts.map((i) => (
@@ -63,16 +88,23 @@ const Blog: NextPage<Post> = () => {
             ))}
         </AnimatePresence>
 
-        {data?.posts.map((post, i) => (
-          <motion.div
-            variants={fadeInSlideInVariant}
-            className="max-w-full lg:max-w-[700px]"
-            key={i}
-          >
-            <BlogCard post={post} />
-          </motion.div>
-        ))}
-      </motion.div>
+        {/* Posts */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariant}
+        >
+          {data?.posts.map((post, i) => (
+            <motion.div
+              variants={fadeInSlideInVariant}
+              className="max-w-full lg:max-w-[700px]"
+              key={i}
+            >
+              <BlogCard post={post} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </Container>
   );
 };
