@@ -19,7 +19,7 @@ const BlogMainArticleCard = ({ post }: Props) => {
       className={`rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
     >
       <div>
-        <div className="group/card border-1 relative flex h-full w-full flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
+        <div className="group/card border-1 relative flex flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
           <div>
             <div className="flex gap-5 text-pink-500">
               <p className="text-sm font-normal uppercase text-pink-500">

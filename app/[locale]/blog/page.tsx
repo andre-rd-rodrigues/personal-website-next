@@ -4,7 +4,6 @@ import BlogCard from '@/components/BlogCard';
 import Container from '@/components/Container';
 import Skeleton from '@/components/Skeletons/indext';
 import useFetch from '@/hooks/useFetch';
-import { AnimatePresence } from 'framer-motion';
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
 import {
@@ -46,20 +45,6 @@ const Blog: NextPage<Post> = () => {
     <Container className="max-w-full px-0">
       {error && <ErrorGeneric />}
 
-      {/* Main Article */}
-      <AnimatePresence>
-        {loading && (
-          <motion.div
-            initial="visible"
-            exit="hidden"
-            variants={fadeInVariant}
-            className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
-          >
-            <Skeleton.MainPost />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {!!mainArticle && (
         <motion.div
           initial="hidden"
@@ -71,40 +56,51 @@ const Blog: NextPage<Post> = () => {
         </motion.div>
       )}
 
-      <div className="flex flex-wrap justify-center gap-5">
-        {/* Loading */}
-        <AnimatePresence>
-          {loading &&
-            mockedPosts.map((i) => (
-              <motion.div
-                key={i}
-                initial="visible"
-                variants={fadeInVariant}
-                exit="hidden"
-                className="max-w-full lg:max-w-[700px]"
-              >
-                <Skeleton.PostCard />
-              </motion.div>
-            ))}
-        </AnimatePresence>
+      {/* Main Article */}
 
-        {/* Posts */}
+      {loading && (
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariant}
+          initial="visible"
+          exit="hidden"
+          variants={fadeInVariant}
+          className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
         >
-          {data?.posts.map((post, i) => (
+          <Skeleton.MainPost />
+        </motion.div>
+      )}
+
+      <motion.div
+        initial="visible"
+        animate="visible"
+        variants={containerVariant}
+        className="flex flex-wrap justify-center gap-5"
+      >
+        {/* Loading */}
+
+        {loading &&
+          mockedPosts.map((i) => (
             <motion.div
-              variants={fadeInSlideInVariant}
-              className="max-w-full lg:max-w-[700px]"
               key={i}
+              initial="visible"
+              variants={fadeInVariant}
+              exit="hidden"
+              className="max-w-full lg:max-w-[700px]"
             >
-              <BlogCard post={post} />
+              <Skeleton.PostCard />
             </motion.div>
           ))}
-        </motion.div>
-      </div>
+
+        {/* Posts */}
+        {data?.posts.map((post, i) => (
+          <motion.div
+            variants={fadeInSlideInVariant}
+            className="max-w-full lg:max-w-[700px]"
+            key={i}
+          >
+            <BlogCard post={post} />
+          </motion.div>
+        ))}
+      </motion.div>
     </Container>
   );
 };
