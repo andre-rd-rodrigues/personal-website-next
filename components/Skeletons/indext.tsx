@@ -31,7 +31,27 @@ const Post = () => {
 };
 
 const PostCard = () => {
-  return <div>Skeletons</div>;
+  return (
+    <motion.div
+      variants={fadeInVariant}
+      exit="hidden"
+      className="w-full max-w-full animate-pulse px-6 md:w-[700px]"
+    >
+      {/* Image */}
+      <div className="mt-4 h-40 rounded-xl bg-gray-200"></div>
+      {/* Main Title */}
+      <div className="mt-4 h-16 rounded-xl bg-gray-200"></div>
+      {/* Text */}
+      <div className="mt-4 h-5 rounded-xl bg-gray-200 px-5"></div>
+      <div className="mt-4 h-5 rounded-xl bg-gray-200 px-5"></div>
+      <div className="mt-4 h-5 rounded-xl bg-gray-200 px-5"></div>
+
+      {/* Button */}
+      <div className="flex justify-end">
+        <div className="mt-4 h-12 w-36 rounded-full bg-gray-200 px-5"></div>
+      </div>
+    </motion.div>
+  );
 };
 
 const Skeleton = {
