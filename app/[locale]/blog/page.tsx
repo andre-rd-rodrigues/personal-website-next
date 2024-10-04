@@ -15,6 +15,8 @@ import {
 import ErrorGeneric from '@/components/ErrorGeneric';
 import BlogMainArticleCard from '@/components/BlogMainArticleCard';
 
+const MOCK_POSTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 export type Post = {
   id: string;
   title: string;
@@ -37,7 +39,6 @@ type PostsData = {
 
 const Blog: NextPage<Post> = () => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLES_CARD_QUERY);
-  const mockedPosts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   const mainArticle = data?.posts.filter((post) => post.isTopPick)[0];
 
@@ -78,7 +79,7 @@ const Blog: NextPage<Post> = () => {
         {/* Loading */}
 
         {loading &&
-          mockedPosts.map((i) => (
+          MOCK_POSTS.map((i) => (
             <motion.div
               key={i}
               initial="visible"
