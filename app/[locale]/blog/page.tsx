@@ -37,7 +37,7 @@ type PostsData = {
   posts: Post[];
 };
 
-const Blog: NextPage<Post> = () => {
+const Blog: NextPage = () => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLES_CARD_QUERY);
 
   const mainArticle = data?.posts.filter((post) => post.isTopPick)[0];
