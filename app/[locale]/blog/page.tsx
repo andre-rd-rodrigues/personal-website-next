@@ -43,7 +43,7 @@ const Blog: NextPage = () => {
   const mainArticle = data?.posts.filter((post) => post.isTopPick)[0];
 
   return (
-    <Container className="max-w-full px-0">
+    <Container className="min-h-[95vh] max-w-full px-0">
       {error && <ErrorGeneric />}
 
       {!!mainArticle && (
