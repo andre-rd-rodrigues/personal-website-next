@@ -1,18 +1,29 @@
 import { ReactNode } from 'react';
 
 import { Metadata, MetadataProps, getMetadata } from '@/metadata';
-import { getTranslations } from 'next-intl/server';
+import { ARTICLE_QUERY, graphcms } from '@/api/graphQL/main';
+import { Post } from '../page';
 
 export async function generateMetadata({
-  params: { locale },
-}: MetadataProps): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'metadata' });
+  params: { slug },
+}: MetadataProps): Promise<Metadata | undefined> {
+  async function fetchData() {
+    try {
+      const data: { post: Post } = await graphcms.request(ARTICLE_QUERY, {
+        slug,
+      });
 
-  /* TODO: change this to match CMS */
-  return getMetadata({
-    title: t('aboutTitle'),
-    description: t('description'),
-  });
+      return getMetadata({
+        title: data?.post.title,
+        description: data?.post.description,
+        src: data?.post.coverPhoto.url,
+      });
+    } catch (error: unknown) {
+      console.error(error);
+    }
+  }
+
+  return fetchData();
 }
 
 type Props = {

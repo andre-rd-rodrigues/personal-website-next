@@ -41,6 +41,7 @@
   ul {
     font-weight: 300;
     list-style: inherit;
+    color: white;
   }
   li {
     font-size: var(--fs-m);
@@ -55,6 +56,24 @@
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  ol {
+    list-style: decimal;
+  }
+
+  // Base styles for the code container
+  code {
+    background-color: #282a36; // Dark background for contrast
+    color: #f8f8f2;
+    border-radius: 8px;
+    /* padding: 1rem; */
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95em;
+
+    // Ensure long lines of code can be scrolled horizontally
+    white-space: nowrap;
   }
 }
 

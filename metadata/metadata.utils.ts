@@ -2,7 +2,7 @@ import { WEBSITE_DOMAIN_URL } from '@/constants/common.constants';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 
-export const getMetadata = (options: Metadata): Metadata => {
+export const getMetadata = (options: Metadata & { src?: string }): Metadata => {
   const headersList = headers();
   const pathname = headersList.get('x-invoke-path') || '';
 
@@ -46,7 +46,7 @@ export const getMetadata = (options: Metadata): Metadata => {
       type: 'website',
       images: [
         {
-          url: 'https://i.postimg.cc/nM8ThXPW/preview.webp',
+          url: options?.src || 'https://i.postimg.cc/nM8ThXPW/preview.webp',
           width: 1200,
           height: 630,
         },
