@@ -15,6 +15,7 @@ import Skeleton from '@/components/Skeletons/indext';
 import { AnimatePresence, motion } from 'framer-motion';
 import { fadeInVariant } from '@/motion/motionVariants';
 import ErrorGeneric from '@/components/ErrorGeneric';
+import { IMAGE_DATA_BLUR_URL } from '@/constants/common.constants';
 
 type PostsData = {
   post: Post;
@@ -42,7 +43,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
     <Container>
       <AnimatePresence> {loading && <Skeleton.Post />}</AnimatePresence>
       {error && <ErrorGeneric />}
-      {data?.post && (
+      {post && (
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
@@ -60,10 +61,13 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
             <h1 className="my-12 text-5xl">{title}</h1>
             <div className={styles.headerImage}>
               <Image
-                src={coverPhoto?.url}
+                src={coverPhoto?.url || ''}
+                alt={title || 'André Rodrigo'}
                 layout="fill"
                 objectFit="cover"
                 className="rounded-lg"
+                placeholder="blur"
+                blurDataURL={IMAGE_DATA_BLUR_URL}
               />
             </div>
             <div className="mt-4 flex justify-between">
