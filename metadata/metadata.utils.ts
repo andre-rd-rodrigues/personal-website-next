@@ -46,7 +46,9 @@ export const getMetadata = (options: Metadata & { src?: string }): Metadata => {
       type: 'website',
       images: [
         {
-          url: options?.src || 'https://i.postimg.cc/nM8ThXPW/preview.webp',
+          url:
+            options?.src ||
+            'https://i.postimg.cc/kXyC26Dr/opengraph-image.webp',
           width: 1200,
           height: 630,
         },
