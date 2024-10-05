@@ -33,10 +33,10 @@ plaintextCopiar código
 ├── /assets
 │
 ├── /components
-│   ├── /AppButton
+│   ├── /Button.Text
 │   ├── /AppHead
 │   ├── /AppLink
-│   ├── /AppNavbar
+│   ├── /Navbar
 │   ├── /ContactBanner
 │   ├── /ExperienceTimeline
 │   ├── /Footer
@@ -85,11 +85,9 @@ Here are some of the key libraries used in this project:
 - **@iconify/react**: For a wide range of icons.
 - **@typeform/embed-react**: For embedding Typeform forms.
 - **react-ga4**: Analytics integration with Google.
-- **bootstrap**: For responsive design.
 - **framer-motion**: For animations.
 - **next-intl**: For internationalization support.
 - **next-seo**: For SEO management.
-- **react-bootstrap**: Bootstrap components for React.
 - **react-slick**: For carousels and sliders.
 - **react-vertical-timeline-component**: For creating vertical timelines.
 - **sass**: For styling.

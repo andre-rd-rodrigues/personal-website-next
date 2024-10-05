@@ -1,45 +1,48 @@
 import {
   createLocalizedPathnamesNavigation,
-  Pathnames
-} from "next-intl/navigation";
+  Pathnames,
+} from 'next-intl/navigation';
 
-export const locales = ["en", "pt"] as const;
-export const localePrefix = "always"; // Default
+export const locales = ['en', 'pt'] as const;
+export const localePrefix = 'always'; // Default
 
 // The `pathnames` object holds pairs of internal
 // and external paths, separated by locale.
 export const pathnames = {
   // If all locales use the same pathname, a
   // single external path can be provided.
-  "/": "/",
-  "/blog": "/blog",
+  '/': '/',
+  '/blog': {
+    en: '/blog',
+    pt: '/blog',
+  },
 
   // If locales use different paths, you can
   // specify each external path per locale.
-  "/about": {
-    en: "/about",
-    pt: "/sobre"
+  '/about': {
+    en: '/about',
+    pt: '/sobre',
   },
-  "/portfolio": {
-    en: "/portfolio",
-    pt: "/portfolio"
+  '/portfolio': {
+    en: '/portfolio',
+    pt: '/portfolio',
   },
-  "/portfolio/websites": {
-    en: "/portfolio/websites",
-    pt: "/portfolio/websites"
+  '/portfolio/web': {
+    en: '/portfolio/web',
+    pt: '/portfolio/web',
   },
-  "/portfolio/apps": {
-    en: "/portfolio/apps",
-    pt: "/portfolio/apps"
+  '/portfolio/mobile': {
+    en: '/portfolio/mobile',
+    pt: '/portfolio/mobile',
   },
-  "/contacts": {
-    en: "/contacts",
-    pt: "/contactos"
+  '/contacts': {
+    en: '/contacts',
+    pt: '/contactos',
   },
-  "/skills": {
-    en: "/skills",
-    pt: "/skills"
-  }
+  '/skills': {
+    en: '/skills',
+    pt: '/skills',
+  },
 } satisfies Pathnames<typeof locales>;
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

@@ -1,5 +1,5 @@
 import { Locale } from '@/locale.types';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { ReactNode } from 'react';
 
 type Props = {

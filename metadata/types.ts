@@ -1,12 +1,12 @@
-import { Locale } from "@/locale.types";
+import { Locale } from '@/locale.types';
 
 export type MetadataProps = {
-  params: { locale: Locale };
+  params: { locale: Locale; slug?: string };
 };
 
 export type MetadataPage =
-  | "home"
-  | "about"
-  | "portfolio"
-  | "contacts"
-  | "skills";
+  | 'home'
+  | 'about'
+  | 'portfolio'
+  | 'contacts'
+  | 'skills';

@@ -1,8 +1,9 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .wrapper {
   overflow: hidden;
   width: 100%;
+
   &:hover {
     .image {
       background-color: antiquewhite;
@@ -16,6 +17,7 @@
   }
 }
 .image {
+  border-radius: 10px;
   position: relative;
   @include hover_scale(1.1, 0.4s);
   width: 100%;
@@ -28,7 +30,7 @@
 .overlay {
   &::before {
     transition: 0.4s ease;
-    content: "";
+    content: '';
     opacity: 0;
     height: 100%;
     width: 100%;

@@ -1,35 +1,37 @@
 'use client';
 import styles from '@/assets/styles/pages/contact.module.scss';
-import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
-import { Col, Row } from 'react-bootstrap';
 
+import Button from '@/components/Button';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import CONTACTS from '@/constants/contacts.constants';
+import ICONS from '@/constants/icons.constants';
 import {
   containerVariant,
-  fadeInVariant,
-  rotateScaleVariant,
+  fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
 } from '@/motion/motionVariants';
 import { useTranslations } from 'next-intl';
+import TypeformPopup from '@/components/TypeformPopup';
 
 const Contacts = () => {
-  const t = useTranslations('contacts_page');
-
-  const spacing = {
-    lg: 4,
-    md: 4,
-    sm: 12,
-  };
+  const t = useTranslations('contacts');
 
   return (
     <PageContainer className={styles.container}>
-      <Row>
-        <Col className={styles.col} {...spacing}>
-          <h1>{t('title')}</h1>
-        </Col>
-        <Col className={styles.col} {...spacing}>
-          <motion.div variants={fadeInVariant}>
+      <div className="flex flex-wrap items-center justify-center gap-10 text-center sm:flex-nowrap sm:justify-start sm:gap-40 sm:text-start">
+        <div className="">
+          <h1 className="absolute text-5xl font-extralight opacity-0 sm:text-7xl">
+            {t('title')}
+          </h1>
+          <p className="text-6xl font-extralight md:text-8xl">{t('title')}</p>
+        </div>
+
+        <motion.div
+          variants={containerVariant}
+          className="flex flex-col gap-10"
+        >
+          <motion.div variants={fadeInSlideLeftVariant}>
             <h3>{t('email')}</h3>
             <a
               id="contact_email"
@@ -40,35 +42,47 @@ const Contacts = () => {
               {CONTACTS.EMAIL}
             </a>
           </motion.div>
-        </Col>
-        <Col className={styles.col} {...spacing}>
-          <motion.div variants={containerVariant} className={styles.social}>
-            <h3>{t('social')}</h3>
-            <div>
-              <ul>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.LINKTREE} target="_blank" rel="noreferrer">
-                    <Icon
-                      icon="simple-icons:linktree"
-                      className={styles.social_icon}
-                    />
-                  </a>
-                </motion.li>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.INSTAGRAM} target="_blank" rel="noreferrer">
-                    <Icon icon="mdi:instagram" className={styles.social_icon} />
-                  </a>
-                </motion.li>
-                <motion.li variants={rotateScaleVariant} whileHover="hover">
-                  <a href={CONTACTS.LINKEDIN} target="_blank" rel="noreferrer">
-                    <Icon icon="mdi:linkedin" className={styles.social_icon} />
-                  </a>
-                </motion.li>
-              </ul>
-            </div>
+
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            className={styles.social}
+          >
+            <motion.h3 variants={fadeInSlideLeftVariant}>
+              {t('social')}
+            </motion.h3>
+            <motion.ul
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+            >
+              <li>
+                <a href={CONTACTS.LINKTREE} target="_blank" rel="noreferrer">
+                  <Button.Icon icon={ICONS.linktree} />
+                </a>
+              </li>
+              <li>
+                <a href={CONTACTS.INSTAGRAM} target="_blank" rel="noreferrer">
+                  <Button.Icon icon={ICONS.instagram} />
+                </a>
+              </li>
+              <li>
+                <a href={CONTACTS.LINKEDIN} target="_blank" rel="noreferrer">
+                  <Button.Icon icon={ICONS.linkedin} />
+                </a>
+              </li>
+            </motion.ul>
           </motion.div>
-        </Col>
-      </Row>
+
+          <motion.div variants={fadeInSlideLeftVariant}>
+            <motion.h3 variants={fadeInSlideLeftVariant}>
+              {t('reachOut')}
+            </motion.h3>
+            <motion.div variants={fadeInSlideInVariant}>
+              <TypeformPopup />
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
     </PageContainer>
   );
 };

@@ -1,18 +1,20 @@
-import AppNavbar from '@/components/AppNavbar/AppNavbar';
+import Navbar from '@/components/Navbar/Navbar';
 import './globals.scss';
 
-import { blacker, italiana, jost, moniqa } from '@/assets/fonts';
+import { blacker, jost, moniqa } from '@/assets/fonts';
 
 import Footer from '@/components/Footer/Footer';
 import { getMetadata } from '@/metadata/metadata.utils';
-import { Metadata } from 'next';
 import { MetadataProps } from '@/metadata/types';
-import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import Analytics from '@/components/Analytics';
 import AnalyticsBanner from '@/components/AnalyticsBanner';
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import BgAnimation from '@/components/BgAnimation';
 
 export async function generateMetadata({
   params: { locale },
@@ -37,7 +39,7 @@ const RootLayout = ({
   return (
     <html
       lang={locale}
-      className={`${jost.variable} ${blacker.variable} ${italiana.variable} ${moniqa.variable}`}
+      className={`${jost.variable} ${blacker.variable} ${moniqa.variable}`}
     >
       <head>
         <link
@@ -49,7 +51,7 @@ const RootLayout = ({
       </head>
       <body className="min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <AppNavbar />
+          <Navbar />
           {children}
           <AnalyticsBanner />
           <Footer />
@@ -59,6 +61,7 @@ const RootLayout = ({
           <Analytics />
         </NextIntlClientProvider>
       </body>
+      <BgAnimation />
     </html>
   );
 };

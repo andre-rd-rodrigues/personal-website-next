@@ -1,70 +1,123 @@
 'use client';
 import PageContainer from '@/components/PageContainer/PageContainer';
-import { fadeInVariant, motion } from '@/motion/motionVariants';
+import {
+  containerVariant,
+  fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
+  fadeInVariant,
+  motion,
+} from '@/motion/motionVariants';
 import { useTranslations } from 'next-intl';
-import React, { Suspense, lazy } from 'react';
 
-import styles from '@/assets/styles/pages/about.module.scss';
-import { Col, Row } from 'react-bootstrap';
+import HeroSection from '@/components/Hero';
+import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
-import ExperienceTimeline from '@/components/ExperienceTimeline/ExperienceTimeline';
-import Button from '@/components/AppButton';
-import ContactBanner from '@/components/ContactBanner/ContactBanner';
 
-const TechStack = lazy(() => import('@/components/TechStack'));
+import Button from '@/components/Button';
+import Section from '@/components/Section';
+import TrustedCompanies from '@/components/TrustedCompanies';
+
+import InfoCounter from '@/components/InfoCounter';
+import TypeformPopup from '@/components/TypeformPopup';
+import CONTACTS from '@/constants/contacts.constants';
+import ICONS from '@/constants/icons.constants';
+import Link from 'next/link';
 
 const About = () => {
-  const t = useTranslations('about_page');
+  const t = useTranslations('about');
 
   return (
     <PageContainer>
-      <div className={styles.container}>
-        <h1>{t('title')}</h1>
+      <Section>
+        <HeroSection.Text
+          title={t('heroTitle')}
+          subtitle={<p>{t('heroDescription')}</p>}
+          className="pb-0"
+        />
+      </Section>
 
-        {/*   About me */}
+      {/*   About me */}
+      <Section>
+        <SectionTitle title={t('about_me.title')} color="primary" tag="h2" />
         <motion.div
-          variants={fadeInVariant}
+          variants={containerVariant}
           initial="hidden"
           whileInView="visible"
-          className={styles.section}
+          className="md:24 mb-24"
         >
-          <Row>
-            <Col lg={6} md={6} sm={12} className={styles.aboutTextContainer}>
-              <div>
-                <motion.h2 variants={fadeInVariant}>
-                  {t('about_me.title')}
-                </motion.h2>
-                <motion.p variants={fadeInVariant}>
-                  {t('about_me.description')} 🎯
-                </motion.p>
-              </div>
-            </Col>
-            <Col lg={6} md={6} sm={12} className={styles.profileImageContainer}>
-              <Image
-                src="/images/profile.png"
-                alt="André Rodrigues - Web Developer"
-                className="mx-auto rounded-lg"
-                width={330}
-                height={0}
-              />
-            </Col>
-          </Row>
-
-          {/* Experience */}
-          <div className={styles.section}>
-            <ExperienceTimeline />
-          </div>
-
-          {/* Tech stack */}
-          <Suspense fallback={<p>Loading...</p>}>
-            <div className={styles.section}>{<TechStack />}</div>
-          </Suspense>
-
-          <Button downloadCV className="text-end" />
+          <motion.p variants={fadeInVariant} className="mb-12">
+            {t('about_me.description')}
+          </motion.p>
+          <motion.div
+            variants={fadeInSlideInVariant}
+            className="relative h-96 w-full"
+          >
+            <Image
+              src="/images/profile-extend.webp"
+              alt="André Rodrigues - Web Developer"
+              className="rounded-lg"
+              objectFit="cover"
+              layout="fill"
+            />
+          </motion.div>
         </motion.div>
+      </Section>
 
-        <ContactBanner />
-      </div>
+      {/* Companies */}
+      <Section>
+        <TrustedCompanies />
+      </Section>
+
+      {/* About */}
+      <Section>
+        <div className="grid gap-6 md:grid-cols-12">
+          <div className="col-span-12 flex h-full justify-center sm:col-span-4">
+            <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
+              <InfoCounter label={t('experience.years')} end={4} />
+              <InfoCounter label={t('experience.projects')} end={15} />
+            </div>
+          </div>
+          <div className="col-span-12 sm:col-span-8">
+            <motion.h3
+              variants={fadeInSlideLeftVariant}
+              initial="hidden"
+              whileInView="visible"
+              className="mb-5 text-6xl font-extralight"
+            >
+              {t('experience.title')}
+            </motion.h3>
+            <motion.p
+              variants={fadeInVariant}
+              initial="hidden"
+              whileInView="visible"
+            >
+              {t('experience.description')}
+            </motion.p>
+            <motion.div
+              variants={containerVariant}
+              initial="hidden"
+              whileInView="visible"
+              className="mt-4 flex items-end justify-end gap-3"
+            >
+              <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
+                <Button.Icon icon={ICONS.download} />
+              </a>
+              <Link href={CONTACTS.LINKEDIN} target="_">
+                <Button.Icon icon={ICONS.linkedin} />
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Contact */}
+      <Section className="mb-0 md:mb-0">
+        <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
+        <HeroSection.Cta
+          text={t('contact.description')}
+          cta={<TypeformPopup />}
+        />
+      </Section>
     </PageContainer>
   );
 };

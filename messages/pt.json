@@ -5,49 +5,102 @@
     "contacts": "Contactos",
     "blog": "Blog",
     "brand_label": "Programação",
-    "testimonials": "Testemunhos"
+    "testimonials": "Testemunhos",
+    "skills": "Skills"
   },
 
   "homepage": {
-    "subtitle": "Produção de websites, apps e conteúdo digital",
+    "subtitle": "Criação de websites, apps e rebranding",
     "cta": "Portfólio",
     "form": {
       "button": "Contactar"
+    },
+    "about": {
+      "title": "Sobre mim",
+      "description": "O meu nome é André Rodrigo, sou Engenheiro de Software há 4 anos e dedico-me inteiramente ao desenvolvimento de soluções digitais como websites, apps e rebranding. Colaborei com várias empresas internacionais, ajudando-as na criação de ferramentas digitais que aumentaram o seu valor de mercado e a captação de novos clientes, entre elas a NBC Universal, Pipedrive, Navro entre outras.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são parte da minha identidade e são também os principais contributos para o sucesso das soluções.\nO meu objectivo primordial é o de ajudar ativamente as pequenas e médias empresas a alcançarem mais clientes, formar laços duradouros e aumentar os parâmetros de qualidade do produto."
+    },
+
+    "rebrand_hero": {
+      "title": "Destaque-se da concorrência",
+      "description": "Com um novo website, os meus clientes tiveram um aumento de 300% na interação com os seus clientes.",
+      "flipWords": {
+        "part1": "com um website",
+        "words": ["moderno", "profissional", "intuitivo"]
+      }
+    },
+
+    "contact": {
+      "description": "Tem um projeto em mente? Marque já e tenha uma sessão de consultoria grátis."
     }
   },
 
   "portfolio": {
-    "title": "Portfólio"
-  },
+    "title": "Portfólio",
 
-  "websites_category_page": {
-    "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que gostes tanto quanto eu gostei de os fazer :)",
-    "projects": {
-      "CDEFF": "Bem-vindo ao projeto do Clube Desportivo Francisco Franco! Marca grandes pontos com o primeiro website de um clube desportivo local na Ilha da Madeira. Explora as últimas atualizações sobre as atividades do clube, descobre artigos informativos no blog e encontra informações detalhadas sobre os torneios. É mais do que apenas um website, é o teu guia definitivo para tudo relacionado com este clube! 🏆",
-      "PrimeTravel": "Dá uma vista de olhos ao PrimeTravel, o companheiro supremo das agências de viagens! Imagina-o como o assistente pessoal para gerir uma empresa de viagens sem esforço. Não é apenas uma ferramenta, é uma montra das minhas habilidades de Fullstack Developer desenhado para impressionar recruiters e managers 😁",
-      "Bárbara": "Mergulha no website da Dra. Bárbara Carvalho, um testemunho do seu profissionalismo e empatia nos processos legais. Não se trata apenas de perícia jurídica, é um aperto de mão digital que transmite: 'Eu compreendo'. Com um design elegante e navegação intuitiva, este site permite conhecer melhor esta fantástica profissional. Além disso, está repleto de magia SEO e análise de métricas para garantir que chega a quem mais precisa. 👩‍⚖️",
-      "carolina": "Encontra a serenidade com o website da Dra. Carolina Jardim. Desenhado em torno da empatia e tranquilidade, permite ao utilizador encontrar mais informação sobre a Dra. Carolina. Com cores e navegação suaves, cada elemento digital transmite tranquilidade. E nos bastidores, poderosas análises de métricas e magia SEO garantem que toca no coração de todos. 🌿",
-      "Curiosity": "Bem-vindo ao Curiosity Gem, onde cada clique leva à descoberta. Este não é um blog comum, é um cofre de tesouros de tecnologia, finanças e insights de carreira. Com recursos como filtragem, pesquisa e um CMS útil, é o paraíso do leitor. Além disso, com integração de métricas e SEO sob o capô, está destinado a causar impacto no reino digital. 🔍",
-      "Barber": "Preparado para um corte acima dos demais? O website do Barber Studio é mais do que apenas uma vitrine, é uma tela para a maestria em barbear. Desde designs nítidos até portfólios dinâmicos, é um apelo à habilidade e estilo. E com a integração de métricas e SEO, está pronto para atrair os clientes mais exigentes da cidade. 💈",
-      "it": "Entra no parque de diversões digital da IT Studios. Este não é o típico site de empresa, é uma vitrine de inovação e criatividade. Desde exibições de aplicativos elegantes até testemunhos de clientes, é um testemunho da perícia tecnológica. Com integração de métricas e SEO, capta a atenção tanto de recrutadores quanto de potenciais parceiros. 🚀",
-      "Memory": "Prepara-te para exercitar o cérebro com a aplicação web Memory Game. Quer estejas a desafiar amigos ou o computador, a diversão aguarda-te! Com placares, opções multiplayer e design elegante, é uma experiência de jogo como nenhuma outra. Preparada(o) para dominar a cena de jogos online. 🧠",
-      "RIMA": "Junta-te às mentes médicas do RIMA na sua jornada digital. Desde camaradagem entre internos até detalhes de eventos, este website tem tudo. Com um comité organizador diversificado e uma paixão pela continuidade, é um testemunho da colaboração. E com perícia das métricas e SEO, foi um sucesso em atrair participantes ávidos de todos os cantos do país! 🩺",
-      "Architecture": "Bem-vindo ao Architecture Showcase, onde cada design fala volumes. Este não é apenas um website, é uma obra-prima minimalista. Desde portfólios elegantes até destaques de projetos, é um festim para os olhos. E com otimização em análises e SEO, está preparado para elevar os arquitetos a novos patamares de reconhecimento. 🏗️"
+    "categories": {
+      "websites": "Criação de websites modernos, com SEO para atrair mais clientes e aumentar as suas vendas.",
+      "apps": "Criação de aplicações para telemóvel, para que possa estar no bolso dos clientes 24h/7.",
+      "design": "Designs inovadores e únicos para destacá-lo da concorrência."
+    },
+
+    "heroSection": {
+      "title": "Consultoria na criação de soluções digitais",
+      "description": "Com as inúmeras opções de soluções online, é comum sentir-se afundado em dúvidas. O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade para que possa sentir segurança nas suas decisões."
+    },
+    "contact": {
+      "description": "Não sabe por onde começar? Marque já e tenha uma sessão de consultoria grátis."
     }
   },
 
-  "apps_category_page": {
-    "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)",
-    "projects": {
-      "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha 😁",
-      "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento! 🎲",
-      "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez! 😊"
+  "projects": {
+    "web": {
+      "heroTitle": "A Internet está a tornar-se a praça da aldeia global do amanhã.",
+      "heroDescription": "- Bill Gates, Microsoft Co-founder",
+      "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que goste tanto quanto eu gostei de os fazer :)",
+      "projects": {
+        "title": "Projetos",
+        "CDEFF": "O site do Clube Desportivo Francisco Franco, desenvolvido para um cliente, oferece aos entusiastas do desporto na Ilha da Madeira uma plataforma abrangente com atualizações sobre as atividades do clube, artigos informativos e detalhes de torneios. Combina alto desempenho com uma experiência amigável, proporcionando uma interação desportiva online intuitiva.",
+
+        "PrimeTravel": "PrimeTravel, um projeto pessoal, demonstra as minhas habilidades de Fullstack Developer através de uma ferramenta avançada de gestão de agências de viagens. Esta iniciativa possui um design otimizado e intuitivo para demonstrar operações de negócios de viagens eficazes em uma aplicação real.",
+
+        "bb": "O site da Dra. Barbara Barbizani, é um rebranding focada na apresentação dos serviços e assuntos legais através de uma interface empática e intuitiva. Oferece uma experiência fluída, proporcionando apoio jurídico com um toque pessoal e garantindo alta visibilidade online através de estratégias de SEO.",
+
+        "carolina": "Desenvolvido para uma Psicóloga, o site da Dra. Carolina Jardim promove uma experiência digitial aproximada ao ambiente de sessão terapeutica. Possui uma interface calma, pensada para envolver os clientes e apoiada nas métricas para ampliar o seu alcance no panorama digital.",
+
+        "blog": "O meu blog pessoal atua como uma plataforma vibrante onde partilho insights sobre tecnologia, finanças e desenvolvimento de carreira. Equipado com funcionalidades avançadas como pesquisa e filtragem, serve como um recurso para leitores que buscam crescimento profissional.",
+
+        "barber": "O site do Barber Studio, um projeto para cliente, exibe a arte moderna da barbearia. Possui um design elegante que reflete a precisão da barbearia, suportado por SEO estratégico para melhorar a sua presença no mercado e atrair clientes.",
+
+        "it": "O site da IT Studios, criado para um cliente, é projetado para atrair potenciais parceiros e clientes, destacando soluções criativas e serviços através de conteúdo envolvente e SEO estratégico.",
+
+        "Memory": "A aplicação Memory Game serviu para testar a minhas capacidades no sector do gaming. Promove desafios emocionantes contra amigos ou o computador. Esta aplicação apresenta um design sofisticado com opções multijogador e um placar para rastrear as vitórias.",
+
+        "pipedrive": "Na Pipedrive, uma empresa líder de SaaS na Estônia, trabalhei na feature mais usada, a de automação como Engenheiro de Software. Utilizando React, TypeScript, Docker, Node e outras tecnologias, contribuí para otimizar a interface do usuário, apoiando uma equipa internacional em Lisboa.",
+
+        "navro": "Enquanto trabalhava com a Navro, utilizei minhas habilidades de desenvolvimento front-end em React e Next.js para ajudar a empresa a expandir o seu produto nos mercados estrangeiros. O meu trabalho focou-se na criação de novos interfaces e infraestrutura de pagamentos, tarefas de gestão e construção de ferramentas internas de automação.",
+
+        "sky": "No projeto Peacock, serviço de streaming da NBCUniversal Media Group, apliquei minha experiência em React e TypeScript para melhorar a interface, performance e viabilidade do produto.",
+
+        "probely": "Na Probely, enquanto Software Engineer implementei novas soluções e features, com recurso a React, TypeScript, Next.js e outras tecnologias, de forma a garantir a pesquisa de vulnerabilidades e elevar os padrões de segurança das aplicações web e APIs de centenas de empresas."
+      }
+    },
+
+    "mobile": {
+      "heroTitle": "O telemóvel acabará por ser a forma de fornecer a maioria dos serviços.",
+      "heroDescription": "- Sundar Pichai, Google CEO",
+      "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)",
+      "projects": {
+        "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha.",
+        "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento!",
+        "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez!"
+      }
     }
   },
 
-  "about_page": {
-    "title": "Web developer apaixonado por inovação",
-    "services_separator": "Aumenta a visibilidade do teu negócio",
+  "about": {
+    "heroTitle": "É necessário começar pela experiência do utilizador e só depois pensar na tecnologia.",
+    "heroDescription": "- Steve Jobs, Apple Co-Founder",
+
     "services": {
       "title": "Serviços",
       "main": {
@@ -81,36 +134,44 @@
       "description": "Desde o dia em que decidi tornar a minha paixão pela tecnologia numa carreira profissional, dedico-me inteiramente ao desenvolvimento de projetos digitais e à aquisição de novos conhecimentos, de forma a acrescentar valor competitivo na criação de soluções digitais.\nA minha atenção aos detalhes, visão criativa do mundo e natureza meticulosa são os principais contributos da minha identidade para o desenvolvimento e implementação de soluções personalizadas. Ao longo da minha carreira desenvolvi projetos para diversos sectores e dedico-me essencialmente à criação de websites, web apps e branding.\nO meu objectivo primordial é o de contribuir ativamente na criação de soluções e relações duradoras, com foco nos parâmetros de qualidade do produto."
     },
     "experience": {
-      "title": "Experiência",
-      "probely": "A Probely é uma empresa proeminente no setor da cibersegurança em Portugal. Como developer, criei funcionalidades apelativas ao utilizador com recurso a React e TypeScript, contribuí para a melhoria e capacidades do produtom aumentando a satisfação dos clientes. Implementei atualizações estratégicas em bases de código legadas, priorizando a simplicidade e eficiência para otimizar o desempenho operacional na nossa base de código. Criei documentação para standards de código e melhorei a estabilidade da suíte de testes com Cypress. Isso resultou em melhorias tangíveis na qualidade do código e na resiliência do sistema, levando a notáveis economias de tempo e recursos. Analisei funcionalidades de cibersegurança e aprimorei projetos internos usando Python e Django.",
-      "paytrix": "A entrada na Navro na sua fase inicial proporcionou-me uma oportunidade única de ter um impacto significativo em vários sectores da empresa. As minhas principais contribuições incluíram o aumento da fiabilidade do software através da integração de testes Cypress, o que acelerou a nossa pipeline e tempo de entrega, poupando cerca de 6 horas por dia de custos à empresa. Desempenhei um papel ativo no estabelecimento da documentação de boas práticas e regras de programção, elevando substancialmente a qualidade e a consistência. Além disso, desenvolvi várias ferramentas de automação que simplificaram o setup do projeto e a criação de dados financeiros. Liderar a nossa equipa foi outro ponto alto para mim, onde fomentei o trabalho em equipa e sincronizei esforços entre os departamentos de produto, back-end e design, atingindo os nossos objectivos colectivos.",
-      "pipedrive": "Na Pipedrive, tive a oportunidade de usar microsserviços e arquitetura orientada a eventos de forma eficaz, aprimorando um recurso de automação crucial que contribuiu significativamente para o crescimento e lucro da empresa. A tech stack inclui React, TypeScript, Node, Docker, React Testing Library e Cypress. Isto não só levou a melhorias notáveis na qualidade do código, mas também reforçou a fiabilidade através de testes extensivos. A participação em hackathons e projectos estratégicos de equipa, em colaboração com parceiros, permitiu-me contribuir para o brainstorming e o desenvolvimento de funcionalidades essenciais. Estes esforços foram fundamentais para garantir uma vantagem competitiva substancial no mercado.",
-      "sky": "Como parte da equipa de frontend da Sky, trabalhei diretamente no serviço de streaming da NBC Universal, o Peacock (Skyshowtime na Europa). COntribuí para uma plataforma global escalável com milhões de visualizações mensais, assumindo a responsabilidade pelo processo de desenvolvimento, participando ativamente de discussões com produto, fazendo improvements na qualidade, segurança e desempenho da plataforma.",
-      "wise": "Na minha função inicial como Lead Front-End Developer & UX/UI Designer, tive a incrível oportunidade de construir uma plataforma de lotaria online, desde o início, chamada Lotto Jade. Como parte da equipa fundadora da nossa empresa, desempenhei um papel crucial na definição da nossa abordagem ao desenvolvimento de soluções. Nesta qualidade, comuniquei frequentemente com as partes interessadas e os clientes, conduzindo demonstrações e discussões que realçavam os valores e os objectivos estratégicos da nossa empresa. Este envolvimento foi vital para garantir que as nossas soluções técnicas não só eram inovadoras, como também estavam estreitamente alinhadas com as necessidades dos clientes e as tendências do mercado, fomentando relações fortes e preparando o terreno para exceder as expectativas em cada momento.",
-      "freelance": "Como freelancer, implementei soluções digitais para várias empresas, sendo responsável por todo o processo, desde a conceção até à implementação, oferecendo projeção no mercado através de orientação personalizada e soluções centradas no cliente, adaptadas às necessidades do negócio. Padronizei os resultados utilizando uma abordagem e estratégia de vanguarda, responsiva e mobile-first, alinhada com as tendências actuais do mercado e as expectativas dos utilizadores. Frequentemente, faço avaliações completas de designs de UX e UI para viabilidade técnica, optimização de SEO e branding."
+      "title": "O segredo está na relação humana",
+      "description": "Ao longo da minha carreira, tive o privilégio de contribuir para uma série de projectos impactantes em várias empresas líderes, cada um oferecendo desafios únicos e oportunidades de aprendizagem. Atualmente, na Probely, aperfeiçoei os seus produtos de cibersegurança com funcionalidades intuitivas utilizando React e TypeScript, aumentando a satisfação do utilizador e a eficiência do produto.\nAs minhas funções na Navro e na Pipedrive permitiram-me envolver-me profundamente na fiabilidade do software e na otimização do sistema, implementando soluções robustas e regimes de teste abrangentes que elevaram o desempenho operacional. \nNa NBCUniversal's Peacock, orgulhei-me de assegurar uma experiência de streaming sem falhas para milhões de utilizadores em todo o mundo, contribuindo para um serviço escalável e com capacidade de resposta.\nA minha jornada na Wise foi particularmente gratificante, uma vez que liderei o desenvolvimento de uma plataforma de lotaria online desde o início, alinhando as nossas soluções técnicas com as necessidades do cliente e as exigências do mercado. Esta função não só desafiou a minha capacidade de liderança técnica, como também aprofundou o meu gosto pelo desenvolvimento de soluções em colaboração.",
+      "projects": "Projetos em diferentes setores",
+      "years": "Anos de experiência"
     },
-    "education": "Formação"
+    "contact": {
+      "title": "marque a sua sessão",
+      "description": "Quer saber mais sobre o meu percuso ou discutir algum projeto? Vamos conversar!"
+    }
   },
 
-  "skills_page": {
-    "soft_skills": "A Arte e o comportamento humano sempre foram parte integrante da minha vida. As minhas outras paixões, como o teatro, a música e a Psicologia, permitiram-me desenvolver competências versáteis que contribuem grandemente para a minha saúde mental, social e física, revelando-se uma significativa vantagem no contexto organizacional, sendo elas a criatividade, inteligência emocional, empatia, relação interpessoal, pensamento crítico, resolução de conflitos e/ou de problemas e a comunicação assertiva."
+  "skills": {
+    "heroTitle": "O conhecimento é o olho do desejo e o piloto da alma.",
+    "heroDescription": "- Will Durant",
+    "title": "introdução",
+    "description": "As artes e o comportamento humano sempre foram uma grande parte da minha vida. As minhas outras paixões, como o teatro, a música e a psicologia, moldaram profundamente o meu crescimento emocional e profissional, enriquecendo as minhas capacidades de comunicação e de trabalho em equipa.\nOs gráficos aqui apresentados destacam a minha experiência em desenvolvimento e infra-estruturas front-end e back-end. No entanto, isto é apenas um vislumbre das minhas capacidades. Também tenho experiência noutros tópicos como microserviços e arquitetura orientada a eventos, webpack entre outros. Estou sempre ansioso por aprender e adaptar-me a novas tecnologias, portanto este é apenas o início da minha jornada."
   },
 
-  "contacts_page": {
-    "title": "Contactos",
-    "email": "Vamos conversar",
-    "social": "rede social"
+  "contacts": {
+    "title": "Vamos\nconversar?",
+    "email": "email",
+    "social": "redes sociais",
+    "reachOut": "contactar"
   },
 
   "testimonials": {
-    "title": "Testemunhos calorosos",
+    "title": "Testemunhos",
     "lets_talk": {
       "title": "O teu pode ser o próximo",
       "cta": "vamos conversar"
     },
-    "pedro": {
-      "details": "Empresário",
-      "review": "O André desenvolveu um trabalho de branding para o meu negócio e tanto o processo como o resultado, foram excelentes! Recomendo vivamente o seu trabalho."
+    "cdeff": {
+      "details": "Clube Desportivo",
+      "review": "O André desenvolveu o nosso website e estamos muito satisfeitos com o resultado final. O design é moderno e apelativo, a navegação é intuitiva e o website é responsivo. O André é um excelente profissional, muito dedicado e atento aos detalhes. Recomendamos o seu trabalho!"
+    },
+    "barbara": {
+      "details": "Advogada",
+      "review": "O André desenvolveu o meu website profissional. Aumentei o número de clientes graças ao seu trabalho, a sua linha estética minimalista reflete o que eu pretendia na perfeição. A sua empatia e profissionalismo foram constantes durante todo o processo. Recomendo vivamente o seu trabalho. Muito obrigada André!"
     },
 
     "sofia": {
@@ -123,6 +184,11 @@
       "review": "Tive o prazer de trabalhar com o André testemunhando a sua experiência como progamador. No ambiente dinâmico de uma startup em fase inicial, trabalhando com uma equipa de design e produto, o André não só prosperou como foi um apoio inabalável para a nossa equipa. As suas qualidades humanas e a sua atenção aos detalhes são uma benção na nossa indústria e estou confiante de que ele será bem sucedido em qualquer desafio que se lhe apresente!"
     },
 
+    "nkem": {
+      "details": "Web Developer",
+      "review": "Tive o privilégio de trabalhar com o André como parte de uma equipe de desenvolvimento Frontend, e ele é uma pessoa excelente para se trabalhar. Ele se destaca pelo seu comprometimento e habilidades excepcionais de resolução de problemas. O André sempre vai além, com uma atitude positiva que inspirou a equipe e nos motivou a alcançar nossas metas!"
+    },
+
     "anaJardim": {
       "details": "Psicóloga",
       "review": "O André desenhou e criou o meu website profissional. Aumentei o número de clientes graças ao seu trabalho, a sua linha estética minimalista reflete o que eu pretendia na perfeição. A sua empatia e profissionalismo foram constantes durante todo o processo. Recomendo vivamente o seu trabalho. Muito obrigada André!"
@@ -133,21 +199,17 @@
     },
 
     "rafa": {
-      "details": "Developer",
+      "details": "Manager de Engenharia de Software",
       "review": "O André desenvolveu o meu website IT Studios. O seu design moderno e minimalista, com especial atenção à experiência do utilizador tornou o website bem intuitivo. Não podia estar mais satisfeito com o resultado final. Se quer criar um website apelativo e funcional, o André é a pessoa certa."
     },
     "ahmad": {
-      "details": "Software Developer",
-      "review": "O André é o tipo de programador que qualquer equipa teria sorte em ter. A sua combinação de conhecimentos técnicos, trabalho de equipa e capacidade de simplificar ideias complexas é rara. Recomendo-o para qualquer função de design e programação."
+      "details": "Manager de Engenharia de Software",
+      "review": "Trabalhar com o André como líder de equipa foi um verdadeiro prazer. É um programador notável, com curiosidade, que traz automação e está sempre pronto para novos desafios, com grandes capacidades de análise para garantir a longevidade das soluções. A sua combinação de conhecimentos técnicos, trabalho de equipa e capacidade de simplificar ideias complexas é rara. Recomendo-o para qualquer função de desenvolvimento de software."
     },
 
     "doart": {
       "details": "Artista",
-      "review": "Quero dar um agradecimento especial ao André pelo trabalho desenvolvido! Se tiverem oportunidade, visitem a sua página e vejam os seus trabalhos incríveis, valem muito a pena 💪"
-    },
-    "patricia": {
-      "details": "Artista",
-      "review": "O André desenvolve um trabalho espectacular! É um grande talento."
+      "review": "Quero dar um agradecimento especial ao André pelo trabalho desenvolvido! Se tiverem oportunidade, visitem a sua página e vejam os seus trabalhos incríveis, valem muito a pena!"
     }
   },
 
@@ -162,18 +224,39 @@
     "accept": "Concordo"
   },
 
-  "contacts": {
-    "banner": {
-      "title": "Posso dar vida aos teus projetos. vamos conversar?",
-      "cta": "enviar mensagem"
-    }
+  "portfolio_parallax": {
+    "title": "Desenvolvendo soluções\npara os desafios do seu negócio",
+    "description": "Cada projeto é centrado na resolução dos desafios específicos do negócio. Estas soluções personalizadas impulsionaram o crescimento e a inovação de várias empresas. O seu pode ser o próximo."
   },
+
+  "trusted": {
+    "title": "Colaborações"
+  },
+
+  "buttons": {
+    "readMore": "Ler mais",
+    "see_more": "Ver mais",
+    "contact": "Contactar",
+    "send_message": "Enviar mensagem",
+    "explore": "Explorar",
+    "about": "Sobre",
+    "skills": "Skills",
+    "schedule": "Agendar",
+    "goBack": "Voltar"
+  },
+
+  "error": {
+    "title": "Upss um erro inesperado...",
+    "description": "Um erro inesperado aconteceu. Por favor tenta novamente mais tarde. Se o problema persistir, por favor contacta-me."
+  },
+
   "metadata": {
     "homeTitle": "André Rodrigo • Soluções Web",
     "aboutTitle": "Sobre • André Rodrigo",
     "portfolioTitle": "Portfólio • André Rodrigo",
     "contactsTitle": "Contactos • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
-    "description": "Transformar ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
+    "blogTitle": "Blog • André Rodrigo",
+    "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
   }
 }

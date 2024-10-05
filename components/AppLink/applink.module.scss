@@ -1,4 +1,4 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .appLink {
   position: relative;
@@ -6,7 +6,7 @@
   letter-spacing: 3px;
   color: white;
   font-weight: 400;
-  @include hover_underline($white);
+  @include hover_underline(color(white));
   &:hover {
     letter-spacing: 6px;
   }

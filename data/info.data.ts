@@ -1,290 +1,449 @@
-import { v4 as uuid } from "uuid";
+import { ChartData } from 'chart.js';
+import { v4 as uuid } from 'uuid';
 
 const CONTACTS = [
-  { label: "facebook", ref: "https://www.facebook.com/andrerodrigoweb" },
+  { label: 'facebook', ref: 'https://www.facebook.com/andrerodrigoweb' },
   {
-    label: "instagram",
-    ref: "https://www.instagram.com/andre.creativedesign/"
+    label: 'instagram',
+    ref: 'https://www.instagram.com/andre.creativedesign/',
   },
   {
-    label: "linkedin",
-    ref: "https://www.linkedin.com/in/andr%C3%A9-rodrigues-4b4a9b188/"
-  }
+    label: 'linkedin',
+    ref: 'https://www.linkedin.com/in/andr%C3%A9-rodrigues-4b4a9b188/',
+  },
 ];
 
-const works_categories = [
+const WORK_CATEGORIES = [
   {
-    name: "Websites",
-
-    src: "/images/worksHomepage/websites.png"
+    name: 'Web',
+    description: 'categories.websites',
+    src: '/images/portfolio/web.webp',
   },
   {
-    name: "Apps",
-
-    src: "/images/worksHomepage/apps.png"
+    name: 'Mobile',
+    description: 'categories.apps',
+    src: '/images/portfolio/mobile.webp',
   },
-  {
-    name: "Editorial",
-    src: "/images/worksHomepage/editorial.png"
-  }
 ];
 
-const projects = {
-  apps: [
+export const EXPERTISE = [
+  ...WORK_CATEGORIES,
+  {
+    name: 'Design',
+    description: 'categories.design',
+    src: '/images/portfolio/design.webp',
+  },
+];
+
+const PROJECTS = {
+  mobile: [
     {
-      imgSrc: "/images/apps/giggle.png",
-      label: "Giggle!",
-      description: "apps_category_page.projects.giggle",
+      imgSrc: '/images/apps/giggle.webp',
+      label: 'Giggle!',
+      description: 'mobile.projects.giggle',
       techStack: {
-        frontend: ["React Native", "Expo"]
+        frontend: ['React Native', 'Expo'],
       },
       href: {
-        app: "https://play.google.com/store/apps/details?id=com.itstudios.giggle&hl=pt_PT&gl=US",
-        github: "https://github.com/IT-Studios/giggle"
-      }
+        app: 'https://play.google.com/store/apps/details?id=com.itstudios.giggle&hl=pt_PT&gl=US',
+        github: 'https://github.com/IT-Studios/giggle',
+      },
     },
     {
-      imgSrc: "/images/apps/randombox.png",
-      label: "Random Box - Coming soon",
-      description: "apps_category_page.projects.randombox",
+      imgSrc: '/images/apps/randombox.webp',
+      label: 'Random Box - Coming soon',
+      description: 'mobile.projects.randombox',
       techStack: {
-        frontend: ["React Native", "Expo"]
+        frontend: ['React Native', 'Expo'],
       },
       href: {
-        github: "https://github.com/IT-Studios/randombox"
-      }
+        github: 'https://github.com/IT-Studios/randombox',
+      },
     },
     {
-      imgSrc: "/images/apps/coolmind.png",
-      label: "Coolmind - Coming soon",
-      description: "apps_category_page.projects.coolmind",
+      imgSrc: '/images/apps/coolmind.webp',
+      label: 'Coolmind - Coming soon',
+      description: 'mobile.projects.coolmind',
       techStack: {
-        frontend: ["React Native", "Expo"]
+        frontend: ['React Native', 'Expo'],
       },
       href: {
-        github: "https://github.com/andre-rd-rodrigues/coolmind"
-      }
-    }
+        github: 'https://github.com/andre-rd-rodrigues/coolmind',
+      },
+    },
   ],
-  websites: [
+  web: [
     {
-      imgSrc: "/images/websites/cdeff.png",
-      logo: "https://www.cdeff.com/_next/image?url=%2Fimages%2Flogo.png&w=96&q=75",
-      label: "CDEFF",
-      description: "websites_category_page.projects.CDEFF",
-      techStack: {
-        frontend: ["Next.js", "HTML5", "CSS3", "SCSS", "TailwindCSS"],
-        database: ["Notion"]
-      },
-      href: {
-        website: "https://www.cdeff.com/",
-        github: "https://github.com/andre-rd-rodrigues/cdeff"
-      }
-    },
-    {
-      imgSrc: "/images/websites/primetravel.png",
-      logo: "https://primetravel-162f2.web.app/assets/logo.png",
-      label: "PrimeTravel",
-      description: "websites_category_page.projects.PrimeTravel",
+      imgSrc: '/images/websites/pipedrive.webp',
+      label: 'Pipedrive',
+      description: 'web.projects.pipedrive',
       techStack: {
         frontend: [
-          "React",
-          "Vite.js",
-          "HTML5",
-          "CSS3",
-          "SCSS",
-          "TailwindCSS",
-          "Firebase Authentication"
+          'JavaScript',
+          'Typescript',
+          'React',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Data Dog',
+          'Docker',
+          'Kubernetes',
+          'Microservices',
+          'Event Driven Architecture',
+          'RESTful API',
         ],
-        backend: ["Firebase"],
-        database: ["Realtime Database", "Firebase Storage"]
       },
       href: {
-        website: "https://primetravel-162f2.web.app/",
-        github: "https://github.com/andre-rd-rodrigues/primetravel-app"
-      }
+        website: 'https://www.pipedrive.com',
+      },
     },
     {
-      imgSrc: "/images/websites/bb.png",
-      label: "Bárbara Lawyer",
-      logo: "https://barbara-website.vercel.app/_next/image?url=%2Fimg%2Flogo_gold.png&w=1920&q=75",
-      description: "websites_category_page.projects.Bárbara",
+      imgSrc: '/images/websites/navro.webp',
+      label: 'Navro',
+      description: 'web.projects.navro',
       techStack: {
-        frontend: ["Next.js", "HTML5", "CSS3", "SCSS", "TailwindCSS"]
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'AWS',
+          'RESTful API',
+        ],
       },
       href: {
-        website: "https://www.barbizanicarvalholaw.com/",
-        github: "https://github.com/andre-rd-rodrigues/bb-website"
-      }
+        website: 'https://www.navro.com',
+      },
     },
     {
-      imgSrc: "/images/websites/carolina.png",
-      label: "Carolina Jardim",
-      description: "websites_category_page.projects.carolina",
-      logo: "https://acarolinajardim.com/images/logo.png",
+      imgSrc: '/images/websites/probely.webp',
+      label: 'Probely',
+      description: 'web.projects.probely',
       techStack: {
-        frontend: ["HTML5", "CSS3", "JavaScript"]
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
       },
       href: {
-        website: "https://acarolinajardim.com",
-        github: "https://github.com/andre-rd-rodrigues/acarolinajardim"
-      }
+        website: 'https://www.probely.com',
+      },
     },
     {
-      imgSrc: "/images/websites/curiosity.png",
-      label: "Curiosity Gem",
-      description: "websites_category_page.projects.Curiosity",
-      logo: "https://cdn.iconscout.com/icon/free/png-512/free-diamond-gems-crystal-jewellery-cubic-44620.png?f=webp&w=256",
+      imgSrc: '/images/websites/sky.webp',
+      label: 'Sky | Peacock',
+      description: 'web.projects.sky',
       techStack: {
-        frontend: ["Next.js", "GraphQL", "HTML5", "CSS3", "SCSS"],
-        database: ["Hygraph"]
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
       },
       href: {
-        website: "https://blog.andrerodrigo.com",
-        github: "https://github.com/andre-rd-rodrigues/curiositygem"
-      }
+        website: 'https://www.peacocktv.com',
+      },
     },
-    {
-      imgSrc: "/images/websites/barber.png",
-      label: "Barber Studio",
-      description: "websites_category_page.projects.Curiosity",
-      logo: "https://strong-cheesecake-3a87ea.netlify.app/_astro/logo_ZhciW0.png",
-      techStack: {
-        frontend: ["Astro", "Javascript", "HTML5", "TailwindCSS"]
-      },
-      href: {
-        website: "https://strong-cheesecake-3a87ea.netlify.app/",
-        github: "https://github.com/andre-rd-rodrigues/barberstudio"
-      }
-    },
-    {
-      imgSrc: "/images/websites/itstudios.jpg",
-      label: "IT Studios",
-      description: "websites_category_page.projects.it",
-      techStack: {
-        frontend: ["HTML5", "CSS3", "JavaScript"]
-      },
-      href: {
-        website: "https://itstudios.netlify.app/",
-        github: "https://github.com/andre-rd-rodrigues/it-studios"
-      }
-    },
-    {
-      imgSrc: "/images/websites/memory.jpg",
-      label: "Memory Game",
-      description: "websites_category_page.projects.Memory",
-      techStack: {
-        frontend: ["React", "HTML5", "CSS3", "JavaScript"]
-      },
-      href: {
-        website: "https://andre-rd-rodrigues.github.io/memory-game/#/",
-        github: "https://github.com/andre-rd-rodrigues/memory-game"
-      }
-    },
-    {
-      imgSrc: "/images/websites/rima.jpg",
-      label: "RIMA",
-      description: "websites_category_page.projects.RIMA",
-      techStack: {
-        frontend: ["Next.js", "HTML5", "CSS3", "Javascript"]
-      },
-      href: {
-        website: "https://kaleidoscopic-cheesecake-db7480.netlify.app/",
-        github: "https://github.com/andre-rd-rodrigues/rima"
-      }
-    },
-    {
-      imgSrc: "/images/websites/arquitech.jpg",
-      label: "Architecture",
-      description: "websites_category_page.projects.Architecture",
-      techStack: {
-        frontend: ["HTML5", "CSS3", "JavaScript"]
-      },
-      href: {
-        website: "https://andre-rd-rodrigues.github.io/architech",
-        github: "https://github.com/andre-rd-rodrigues/architech"
-      }
-    }
-  ]
-};
 
-const categories = {
-  apps: {
-    title: "Apps",
-    description: `apps_category_page.description`,
-    projects: projects["apps"]
-  },
-  websites: {
-    title: "Websites",
-    description: "websites_category_page.description",
-    projects: projects["websites"]
-  }
-};
+    {
+      imgSrc: '/images/websites/bb.webp',
+      label: 'Bárbara Barbizani',
 
-const testimonials = [
-  {
-    review: "sofia.review",
-    picture_path: "/images/testimonials/sofia.jpg",
-    client_name: "Sofia Pimenta",
-    client_details: "sofia.details",
-    project_link: "https://kaleidoscopic-cheesecake-db7480.netlify.app/"
-  },
-  {
-    picture_path: "/images/testimonials/anaJardim.jpg",
-    client_name: "Ana Jardim",
-    review: "anaJardim.review",
-    client_details: "anaJardim.details",
-    project_link: "https://www.acarolinajardim.com"
-  },
-  {
-    picture_path: "/images/testimonials/ferreira.jpg",
-    client_name: "Pedro Ferreira",
-    review: "pedro.review",
-    client_details: "pedro.details",
-    project_link: "https://www.instagram.com/p/CS7ZtNVDXr8/"
-  },
-  {
-    review: "rafa.review",
-    client_details: "rafa.details",
-    picture_path: "/images/testimonials/rafa.jpg",
-    client_name: "Rafael Pereira",
-    project_link: "https://www.itstudios.eu"
-  },
-  {
-    review: "ana.review",
-    picture_path: "/images/testimonials/ana.jpg",
-    client_name: "Ana Rodrigues",
-    client_details: "ana.details"
-  },
-  {
-    picture_path: "/images/testimonials/vlad.jpeg",
-    client_name: "Vladislav Sorokin",
-    review: "vlad.review",
-    client_details: "vlad.details"
-  },
-  {
-    picture_path: "/images/testimonials/ahmad.jpeg",
-    client_name: "Ahmad Rami",
-    review: "ahmad.review",
-    client_details: "ahmad.details"
-  },
-  {
-    review: "doart.review",
-    client_details: "doart.details",
-    client_name: "Duarte Mata",
-    picture_path: "/images/testimonials/doart.jpg",
-    project_link: "https://www.instagram.com/p/CDE5gqVAii8/"
-  }
-];
+      description: 'web.projects.bb',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://www.barbizanicarvalholaw.com/',
+        github: 'https://github.com/andre-rd-rodrigues/bb-website',
+      },
+    },
+    {
+      imgSrc: '/images/websites/cdeff.webp',
+
+      label: 'CDEFF',
+      description: 'web.projects.CDEFF',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+        database: ['Notion'],
+      },
+      href: {
+        website: 'https://www.cdeff.com/',
+        github: 'https://github.com/andre-rd-rodrigues/cdeff',
+      },
+    },
+    {
+      imgSrc: '/images/websites/primetravel.webp',
+
+      label: 'PrimeTravel',
+      description: 'web.projects.PrimeTravel',
+      techStack: {
+        frontend: [
+          'React',
+          'Vite.js',
+          'HTML5',
+          'CSS3',
+          'SCSS',
+          'TailwindCSS',
+          'Firebase Authentication',
+        ],
+        backend: ['Firebase'],
+        database: ['Realtime Database', 'Firebase Storage'],
+      },
+      href: {
+        website: 'https://primetravel-162f2.web.app/',
+        github: 'https://github.com/andre-rd-rodrigues/primetravel-app',
+      },
+    },
+    {
+      imgSrc: '/images/websites/carolina.webp',
+      label: 'Carolina Jardim',
+      description: 'web.projects.carolina',
+
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://acarolinajardim.com',
+        github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
+      },
+    },
+    {
+      imgSrc: '/images/websites/curiosity.webp',
+      label: 'Personal Blog',
+      description: 'web.projects.blog',
+
+      techStack: {
+        frontend: ['Next.js', 'GraphQL', 'HTML5', 'CSS3', 'SCSS'],
+        database: ['Hygraph'],
+      },
+      href: {
+        website: 'https://blog.andrerodrigo.com',
+        github: 'https://github.com/andre-rd-rodrigues/curiositygem',
+      },
+    },
+    {
+      imgSrc: '/images/websites/barber.webp',
+      label: 'Barber Studio',
+      description: 'web.projects.barber',
+
+      techStack: {
+        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
+      },
+    },
+    {
+      imgSrc: '/images/websites/itstudios.webp',
+      label: 'IT Studios',
+      description: 'web.projects.it',
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://itstudios.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/it-studios',
+      },
+    },
+    {
+      imgSrc: '/images/websites/memory.webp',
+      label: 'Memory Game',
+      description: 'web.projects.Memory',
+      techStack: {
+        frontend: ['React', 'HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://andre-rd-rodrigues.github.io/memory-game/#/',
+        github: 'https://github.com/andre-rd-rodrigues/memory-game',
+      },
+    },
+  ],
+  homepage: [
+    {
+      imgSrc: '/images/websites/pipedrive.webp',
+      label: 'Pipedrive',
+      description: 'web.projects.pipedrive',
+      techStack: {
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'React',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Data Dog',
+          'Docker',
+          'Kubernetes',
+          'Microservices',
+          'Event Driven Architecture',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.pipedrive.com',
+      },
+    },
+    {
+      imgSrc: '/images/websites/navro.webp',
+      label: 'Navro',
+      description: 'web.projects.navro',
+      techStack: {
+        frontend: [
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'React Testing Library',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'AWS',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.navro.io',
+      },
+    },
+    {
+      imgSrc: '/images/websites/probely.webp',
+      label: 'Probely',
+      description: 'web.projects.probely',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.probely.com',
+      },
+    },
+    {
+      imgSrc: '/images/websites/sky.webp',
+      label: 'Sky | Peacock',
+      description: 'web.projects.sky',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+          'Node',
+          'Vercel',
+          'RESTful API',
+        ],
+      },
+      href: {
+        website: 'https://www.peacocktv.com',
+      },
+    },
+
+    {
+      imgSrc: '/images/websites/cdeff.webp',
+
+      label: 'CDEFF',
+      description: 'web.projects.CDEFF',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+        database: ['Notion'],
+      },
+      href: {
+        website: 'https://www.cdeff.com/',
+        github: 'https://github.com/andre-rd-rodrigues/cdeff',
+      },
+    },
+    {
+      imgSrc: '/images/websites/carolina.webp',
+      label: 'Carolina Jardim',
+      description: 'web.projects.carolina',
+
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://acarolinajardim.com',
+        github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
+      },
+    },
+    {
+      imgSrc: '/images/websites/barber.webp',
+      label: 'Barber Studio',
+      description: 'web.projects.barber',
+
+      techStack: {
+        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
+      },
+    },
+    {
+      imgSrc: '/images/websites/bb.webp',
+      label: 'Bárbara Barbizani',
+
+      description: 'web.projects.bb',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://www.barbizanicarvalholaw.com/',
+        github: 'https://github.com/andre-rd-rodrigues/bb-website',
+      },
+    },
+
+    {
+      imgSrc: '/images/websites/itstudios.webp',
+      label: 'IT Studios',
+      description: 'web.projects.it',
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://itstudios.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/it-studios',
+      },
+    },
+  ],
+};
 
 const get_homepage_gallery = () => {
   const gallery = [];
 
   for (let i = 1; i <= 11; i++) {
-    gallery.push(`/images/homepageGallery/${i}.jpg`);
+    gallery.push(`/images/homepageGallery/${i}.webp`);
   }
-  gallery.push(`/images/homepageGallery/2.jpg`);
-  gallery.push(`/images/homepageGallery/3.jpg`);
+  gallery.push(`/images/homepageGallery/2.webp`);
+  gallery.push(`/images/homepageGallery/3.webp`);
 
   return gallery;
 };
@@ -293,179 +452,187 @@ const services = {
   main: [
     {
       id: uuid(),
-      title: "about_page.services.main.design.title",
-      description: "about_page.services.main.design.description",
-      icon: "ph:pencil-thin"
+      title: 'about.services.main.design.title',
+      description: 'about.services.main.design.description',
+      icon: 'ph:pencil-thin',
     },
     {
       id: uuid(),
-      title: "about_page.services.main.programming.title",
-      description: "about_page.services.main.programming.description",
-      icon: "bytesize:code"
+      title: 'about.services.main.programming.title',
+      description: 'about.services.main.programming.description',
+      icon: 'bytesize:code',
     },
     {
       id: uuid(),
-      title: "about_page.services.main.seo.title",
-      description: "about_page.services.main.seo.description",
-      icon: "clarity:world-line"
+      title: 'about.services.main.seo.title',
+      description: 'about.services.main.seo.description',
+      icon: 'clarity:world-line',
     },
     {
       id: uuid(),
-      title: "about_page.services.main.metrics.title",
-      description: "about_page.services.main.metrics.description",
-      icon: "fluent:megaphone-loud-16-regular"
-    }
+      title: 'about.services.main.metrics.title',
+      description: 'about.services.main.metrics.description',
+      icon: 'fluent:megaphone-loud-16-regular',
+    },
   ],
   extra: [
     {
       id: uuid(),
-      title: "about_page.services.extra.branding.title",
-      description: "about_page.services.extra.branding.description",
-      icon: "ph:paint-brush-light"
+      title: 'about.services.extra.branding.title',
+      description: 'about.services.extra.branding.description',
+      icon: 'ph:paint-brush-light',
     },
     {
       id: uuid(),
-      title: "",
-      description: "",
-      icon: ""
-    }
-  ]
+      title: '',
+      description: '',
+      icon: '',
+    },
+  ],
 };
-
-const experienceTimeline = [
-  {
-    company: "Probely",
-    duration: "2024 - Now",
-    role: "Web Developer",
-    experience: "experience.probely",
-    img_url:
-      "https://www.portugalventures.pt/wp-content/uploads/2020/08/Portfolio_Probely_300x300px.png"
-  },
-  {
-    company: "Navro",
-    duration: "2023 - 2024",
-    role: "Web Developer",
-    experience: "experience.paytrix",
-    img_url:
-      "https://media.licdn.com/dms/image/D4E0BAQHydI4vy3ywsQ/company-logo_200_200/0/1707470402207/paytrix_logo?e=2147483647&v=beta&t=q3pIN3sDQA5RFV61R5F1CawX_WH1lADnV5PeGSoXxTo"
-  },
-  {
-    company: "Pipedrive",
-    duration: "2022 - 2023 \u2022 11 months",
-    role: "Web Developer",
-    experience: "experience.pipedrive",
-    img_url: "/images/companies/pipedrive.jpeg"
-  },
-
-  {
-    company: "Sky",
-    duration: "2022 \u2022 5 months",
-    role: "Frontend Developer",
-    experience: "experience.sky",
-    img_url: "/images/companies/sky.jpeg"
-  },
-  {
-    company: "Wise Sparrow",
-    duration: "2021 - 2022 \u2022 1 year",
-    role: "Lead Frontend Developer",
-    experience: "experience.wise",
-    img_url: "/images/companies/wise.jpeg"
-  },
-
-  {
-    company: "Freelance",
-    role: "Web Developer & UX/UI Designer",
-    duration: "2020 - 2021 \u2022 1 year",
-    experience: "experience.freelance",
-    img_url: "/images/companies/freelance.jpeg"
-  }
-];
 
 const techStack = [
   {
-    label: "JavaScript",
-    img_src: "/images/technologies/js.png"
+    label: 'JavaScript',
+    img_src: '/images/technologies/js.webp',
   },
   {
-    label: "TypeScript",
-    img_src: "/images/technologies/ts.png"
-  },
-
-  {
-    label: "ReactJs",
-    img_src: "/images/technologies/react.png"
-  },
-  {
-    label: "React Native",
-    img_src: "/images/technologies/react.png"
-  },
-  {
-    label: "NodeJs",
-    img_src: "/images/technologies/node.png"
-  },
-  {
-    label: "NextJs",
-    img_src: "/images/technologies/next.png"
-  },
-  {
-    label: "Jest",
-    img_src: "/images/technologies/jest.png"
-  },
-  {
-    label: "RTL",
-    img_src: "/images/technologies/rtl.png"
-  },
-  {
-    label: "Cypress",
-    img_src: "/images/technologies/cypress.png"
+    label: 'TypeScript',
+    img_src: '/images/technologies/ts.webp',
   },
 
   {
-    label: "HTML",
-    img_src: "/images/technologies/html.png"
+    label: 'ReactJs',
+    img_src: '/images/technologies/react.webp',
+  },
+  {
+    label: 'React Native',
+    img_src: '/images/technologies/react.webp',
+  },
+  {
+    label: 'NodeJs',
+    img_src: '/images/technologies/node.webp',
+  },
+  {
+    label: 'NextJs',
+    img_src: '/images/technologies/next.webp',
+  },
+  {
+    label: 'Jest',
+    img_src: '/images/technologies/jest.webp',
+  },
+  {
+    label: 'RTL',
+    img_src: '/images/technologies/rtl.webp',
+  },
+  {
+    label: 'Cypress',
+    img_src: '/images/technologies/cypress.webp',
   },
 
   {
-    label: "CSS",
-    img_src: "/images/technologies/css.png"
+    label: 'HTML',
+    img_src: '/images/technologies/html.webp',
+  },
+
+  {
+    label: 'CSS',
+    img_src: '/images/technologies/css.webp',
   },
   {
-    label: "Git",
-    img_src: "/images/technologies/git.png"
+    label: 'Git',
+    img_src: '/images/technologies/git.webp',
   },
   {
-    label: "Bash",
-    img_src: "/images/technologies/bash.png"
+    label: 'Bash',
+    img_src: '/images/technologies/bash.webp',
   },
   {
-    label: "Docker",
-    img_src: "/images/technologies/docker.png"
+    label: 'Docker',
+    img_src: '/images/technologies/docker.webp',
   },
   {
-    label: "RESTful API",
-    img_src: "/images/technologies/rest.png"
+    label: 'RESTful API',
+    img_src: '/images/technologies/rest.webp',
   },
   {
-    label: "Databases",
-    img_src: "/images/technologies/db.png"
+    label: 'Databases',
+    img_src: '/images/technologies/db.webp',
   },
   {
-    label: "Google Analytics",
-    img_src: "/images/technologies/analytics.png"
+    label: 'Google Analytics',
+    img_src: '/images/technologies/analytics.webp',
   },
   {
-    label: "Open AI",
-    img_src: "/images/technologies/openai.png"
-  }
+    label: 'Open AI',
+    img_src: '/images/technologies/openai.webp',
+  },
 ];
+
+const skillsDataFE: ChartData<'radar'> = {
+  labels: [
+    'HTML5',
+    'CSS3',
+    'SASS',
+    'JavaScript',
+    'React.js',
+    'React Native',
+    'Next.js',
+    'React Testing Library',
+    'Jest',
+    'Cypress',
+    'UI Libraries',
+    'Tailwind CSS',
+    'SEO',
+  ],
+  datasets: [
+    {
+      label: 'Front-end Development',
+      data: [10, 10, 10, 10, 10, 8, 10, 10, 8, 9, 10, 10, 9],
+      fill: true,
+      backgroundColor: 'rgba(255, 86, 205, 0.2)',
+      borderColor: 'rgba(255, 86, 205, 1)',
+      pointBackgroundColor: 'rgba(255, 86, 205, 1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255, 86, 205, 1)',
+    },
+  ],
+};
+const skillsDataBE: ChartData<'radar'> = {
+  labels: [
+    'RESTful APIs',
+    'Node.js',
+    'GraphQL',
+    'MongoDB',
+    'PostgreSQL',
+    'Docker',
+    'CI/CD Pipelines',
+    'Python',
+    'Git',
+  ],
+  datasets: [
+    {
+      label: 'Back-end & Infrastructure',
+      data: [6, 8, 7, 5, 3, 7, 7, 4, 10],
+      fill: true,
+      backgroundColor: 'rgba(34, 202, 236, 0.2)',
+      borderColor: 'rgba(34, 202, 236, 1)',
+      pointBackgroundColor: 'rgba(34, 202, 236, 1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(34, 202, 236, 1)',
+    },
+  ],
+};
+
 export {
-  experienceTimeline,
   CONTACTS,
-  works_categories,
-  categories,
-  projects,
-  testimonials,
+  WORK_CATEGORIES,
+  PROJECTS,
   services,
   techStack,
-  get_homepage_gallery
+  get_homepage_gallery,
+  skillsDataFE,
+  skillsDataBE,
 };

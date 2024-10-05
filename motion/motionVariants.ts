@@ -7,7 +7,7 @@ const containerVariant = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -54,15 +54,14 @@ const fadeInVariant = {
 const fadeInSlideInVariant = {
   hidden: {
     opacity: 0,
-    y: -50,
+    y: 60,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
-      duration: 1.5,
-      bounce: 0.5,
+      duration: 1,
+      ease: [0.35, 0, 0, 1], // ease-smooth
     },
   },
 };
@@ -76,35 +75,8 @@ const fadeInSlideLeftVariant = {
     opacity: 1,
     x: 0,
     transition: {
-      type: 'spring',
       duration: 1,
-      bounce: 0.4,
-      ease: '',
-    },
-  },
-};
-
-const rotateScaleVariant = {
-  hidden: {
-    opacity: 0,
-    scale: 0.3,
-    rotate: 200,
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    rotate: 0,
-    transition: {
-      type: 'spring',
-      duration: 0.8,
-      ease: 'easeOut',
-    },
-  },
-  hover: {
-    rotate: 360,
-    transition: {
-      duration: 0.2,
-      ease: 'easeInOut',
+      ease: [0.35, 0, 0, 1],
     },
   },
 };
@@ -170,6 +142,26 @@ const getAttentionVariant = {
   },
 };
 
+const underlineSlideInVariant = {
+  hidden: {
+    width: '0%',
+    opacity: 0.5,
+    transition: {
+      duration: 1,
+      ease: [0.35, 0, 0, 1],
+    },
+  },
+  visible: {
+    width: '100%',
+    opacity: 0.5,
+    transition: {
+      duration: 1,
+      ease: [0.35, 0, 0, 1],
+      delay: 0.3,
+    },
+  },
+};
+
 export {
   containerVariant,
   fadeInSlideInVariant,
@@ -178,10 +170,10 @@ export {
   getAttentionVariant,
   homepageDelayVariant,
   motion,
-  rotateScaleVariant,
   scaleSpringVariant,
   slowRotateVariant,
   useScroll,
   useTransform,
   workPageHeaderContent,
+  underlineSlideInVariant,
 };

@@ -1,8 +1,8 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   position: relative;
-  color: $white;
+  color: color(white);
   display: flex;
   align-items: center;
   margin-left: 17px;
@@ -12,23 +12,5 @@
     top: 6px;
     right: -60px;
     opacity: 0;
-  }
-}
-
-//Responsive
-@media only screen and (max-width: $breaking-point-lg) {
-  .container {
-    justify-content: end;
-    color: dark;
-    margin-top: 30px;
-    margin-right: 10px;
-    color: $dark;
-    select {
-      right: -10px;
-    }
-    svg {
-      width: 40px;
-      height: 40px;
-    }
   }
 }

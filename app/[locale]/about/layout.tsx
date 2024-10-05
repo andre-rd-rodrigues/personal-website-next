@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { ReactNode } from 'react';
 
 import { Metadata, MetadataProps, getMetadata } from '@/metadata';

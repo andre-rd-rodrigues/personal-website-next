@@ -5,7 +5,8 @@
     "contacts": "Contacts",
     "blog": "Blog",
     "brand_label": "Web Developer",
-    "testimonials": "Testimonials"
+    "testimonials": "Testimonials",
+    "skills": "Skills"
   },
 
   "homepage": {
@@ -13,41 +14,93 @@
     "cta": "Portfolio",
     "form": {
       "button": "Contact"
+    },
+    "about": {
+      "title": "About me",
+      "description": "Hi there!\nMy name is André Rodrigues and I'm a Software Engineer and designer for over 4 years. From the moment I turned my passion for technology into a career, I've been dedicated to building digital projects that push the boundaries while keeping the user at the heart of everything I do. I’m all about the details—crafting creative, tailor-made solutions that truly enhance the user experience.\nOver the years, I’ve worked with incredible people across various industries, designing websites, developing web apps, and shaping brands. My goal? To build meaningful relationships and bring visions to life with impactful, top-tier products.\nFeel free to explore more about my path and projects, and don't hesitate to reach out. I'm always eager to connect and explore how we can collaborate."
+    },
+
+    "rebrand_hero": {
+      "title": "Stand out from the competition",
+      "description": "With a new website, my clients experienced a 300% increase in customer interactions. Stand out from the competition.",
+      "flipWords": {
+        "part1": "by making your website",
+        "words": ["modern", "user-focused", "engaging"]
+      }
+    },
+
+    "contact": {
+      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
     }
   },
 
   "portfolio": {
-    "title": "Portfolio"
-  },
+    "title": "Portfolio",
 
-  "websites_category_page": {
-    "description": "I have always strived to create websites that are not only aesthetically pleasing but also intuitive and user-friendly. I believe that the integration of modern technologies and frameworks has allowed me to achieve this goal while also enhancing the performance of the websites that I develop.\nIn this section, you'll find personal and client projects where I've utilized a range of modern technologies such as React, Redux, Next JS, Web basics, Figma, Sketch and Affinity to create visually stunning and functionally-rich websites.\nI hope that you will enjoy the websites as much as I enjoyed developing them!",
-    "projects": {
-      "CDEFF": "Welcome to the Francisco Franco Sports Club project! Score big with the first website of a local sports club in Madeira Island. Dive into the latest updates on club activities, explore insightful blog articles, and find detailed information on tournaments. It's more than just a website; it's your ultimate playbook for all things sports-related! 🏆",
-      "PrimeTravel": "Check out PrimeTravel, the ultimate travel agency sidekick! It's not just a tool; it's a showcase of top-notch Fullstack Developer skills, designed to wow recruiters and managers 😁 Think of it as your personal assistant for running your travel biz like a breeze. So, if you're in the travel game and craving an easier life, PrimeTravel's your golden ticket to success!",
-      "Bárbara": "Dive into Barbara Lawyer's website, a testament to professionalism and empathy. It's not just about legal prowess; it's a digital handshake that says, 'I understand.' With sleek design and intuitive navigation, this site speaks volumes. Plus, it's packed with SEO magic and analytics to ensure it reaches those who need it most. 👩‍⚖️",
-      "carolina": "Step into serenity with Carolina Jardim's website. Designed with empathy at its core, it's more than just a digital space; it's a calming sanctuary. From soothing colors to seamless navigation, every element whispers reassurance. And behind the scenes, powerful analytics and SEO wizardry ensure it touches hearts far and wide. 🌿",
-      "Curiosity": "Welcome to Curiosity Gem, where every click leads to discovery. This isn't your average blog; it's a treasure trove of tech, finance, and career insights. With features like filtering, searching, and a handy CMS, it's a reader's paradise. Plus, with analytics and SEO mojo under the hood, it's bound to make waves in the digital realm. 🔍",
-      "Barber": "Ready for a cut above the rest? Barber Studio's website is more than just a showcase; it's a canvas for barbering mastery. From crisp designs to dynamic portfolios, it's a nod to skill and style. And with analytics and SEO smarts, it's primed to attract the sharpest clients in town. 💈",
-      "it": "Step into the digital playground of IT Studios. This isn't your run-of-the-mill company site; it's a showcase of innovation and creativity. From sleek app displays to client testimonials, it's a testament to tech prowess. And with analytics and SEO finesse, it's sure to catch the eye of both recruiters and potential partners. 🚀",
-      "Memory": "Get ready to exercise your brain with the Memory Game web app. Whether you're challenging friends or battling the computer, fun awaits. With scoreboards, multiplayer options, and slick design, it's a gaming experience like no other. Plus, with analytics and SEO superpowers, it's set to dominate the online gaming scene. 🧠",
-      "RIMA": "Join the medical minds of RIMA on their digital journey. From intern camaraderie to event details, this website has it all. With a diverse organizing committee and a passion for continuity, it's a testament to collaboration. And with analytics and SEO prowess, it's sure to draw in eager participants from far and wide. 🩺",
-      "Architecture": "Welcome to the Architecture Showcase, where every design speaks volumes. This isn't just a website; it's a minimalist masterpiece. From sleek portfolios to project highlights, it's a feast for the eyes. And with analytics and SEO optimization, it's poised to elevate architects to new heights of recognition. 🏗️"
+    "categories": {
+      "websites": "Creation of modern websites to attract more customers and boost your sales.",
+      "apps": "Development of mobile apps so you can be in your customers' pockets 24/7.",
+      "design": "Innovative and unique designs to help you stand out from the competition."
+    },
+
+    "heroSection": {
+      "title": "Helping you seamlessly build online solutions",
+      "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and create long-lasting solutions for your business."
+    },
+    "contact": {
+      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
     }
   },
 
-  "apps_category_page": {
-    "description": "I am excited to showcase some of my personal projects specifically focused on mobile apps! As technology continues to advance, mobile devices have become an essential part of our daily lives, and developing mobile apps has become an increasingly important skill in the tech industry.\nHere you'll find some of my mobile apps projects, where I've utilized modern technologies and frameworks such as React Native.\nSo, take a look around, and please feel free to contact me if you have any questions or feedback. Thank you for visiting!",
-    "projects": {
-      "giggle": "Need a good laugh? Giggle! has got you covered! Dive into a world of endless laughter with our hilarious collection of jokes, puns, and funny stories. Whether you're feeling down or just in need of a pick-me-up, Giggle! is here to brighten your day and leave you smiling from ear to ear. Get ready to LOL your way through the day! 😂",
-      "randombox": "Get ready for a whirlwind of excitement with Random Box! It's the ultimate challenge generator that brings a new thrill to your fingertips every day. From crazy dares to quirky tasks, you never know what surprise awaits inside the box! Gather your friends and embark on an adventure filled with laughter, spontaneity, and endless fun. Stay tuned for the grand unveiling! 🎲",
-      "coolmind": "Welcome to Coolmind, your ultimate companion for positive vibes and a healthy mindset! Say goodbye to stress and negativity as Coolmind guides you through uplifting exercises, gratitude practices, and mindfulness techniques. Harness the power of positivity and unleash your inner joy! Get ready to transform your mind, one smile at a time! 😊"
+  "projects": {
+    "web": {
+      "heroTitle": "The Internet is becoming the town square for the global village of tomorrow.",
+      "heroDescription": "- Bill Gates, Co-founder of Microsoft",
+      "description": "I have always strived to create websites that are not only aesthetically pleasing but also intuitive and user-friendly. I believe that the integration of modern technologies and frameworks has allowed me to achieve this goal while also enhancing the performance of the websites that I develop.\nIn this section, you'll find personal and client projects where I've utilized a range of modern technologies such as React, Redux, Next JS, Web basics, Figma, Sketch and Affinity to create visually stunning and functionally-rich websites.\nI hope that you will enjoy the websites as much as I enjoyed developing them!",
+      "projects": {
+        "title": "Projects",
+        "CDEFF": "The Francisco Franco Sports Club website offers sports enthusiasts in Madeira Island a comprehensive platform with updates on club activities, insightful articles, and tournament details. It combines high performance with a user-friendly experience, delivering a superior online sports interaction.",
+
+        "PrimeTravel": "PrimeTravel, my personal project, showcases my Fullstack Developer skills through an advanced travel agency management tool. This initiative features an optimized, intuitive design to demonstrate effective travel business operations in a real-world application.",
+
+        "bb": "The website for Dr. Barbara Barbizani, designed for a lawyer, merges professional legal insight with an empathetic user interface. It provides a seamless experience, offering legal support with a personal touch and ensuring high online visibility through optimized SEO strategies.",
+
+        "carolina": "Developed for a clinical psychologist, Dr. Carolina Jardim's website serves as a peaceful digital sanctuary. It features a calming user interface designed to engage visitors effectively, backed by robust analytics to broaden its reach and influence.",
+
+        "blog": "My personal blog acts as a vibrant platform where I share insights into technology, finance, and career development. Equipped with advanced functionalities like search and filtering, it serves as a resource for readers seeking professional growth.",
+
+        "barber": "Barber Studio's website, a client draft project, showcases modern barbering artistry. It features a sleek design that reflects the precision of barbering, supported by strategic SEO to enhance its market presence and attract discerning clients.",
+
+        "it": "IT Studios' website, crafted for a client, is designed to attract potential partners and clients by highlighting creative solutions and services through engaging content and strategic SEO.",
+
+        "Memory": "Prepare to enhance your cognitive skills with the Memory Game web app, a thrilling challenge against friends or the computer. This app features a sophisticated design with multiplayer options and a scoreboard to track your victories.",
+
+        "pipedrive": "At Pipedrive, a leading Estonian cloud-based SaaS company, I enhanced their CRM Automation tool as a Software Engineer. Leveraging React, TypeScript, Docker, Node and other technologies, I contributed to optimizing the user interface of their web and mobile applications, supporting a global team across multiple offices.",
+
+        "navro": "While working with Navro, I utilized my front-end development skills in React and Next.js to help businesses seamlessly expand into foreign markets. My work focused on improving the user interface of their global payments infrastructure, management tasks and building internal automation tools, providing a unified API experience through modern web technologies.",
+
+        "sky": "At Peacock, NBCUniversal Media Group's streaming service, I applied my expertise in React and TypeScript to enhance viewer interfaces. My role involved front-end development that supports the delivery of diverse, on-demand content, optimizing user experiences in a competitive streaming landscape.",
+
+        "probely": "With Probely, I integrated security testing into development pipelines as a Front End Developer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs."
+      }
+    },
+    "mobile": {
+      "heroTitle": "Mobile will ultimately be the way you provision most of your services.",
+      "heroDescription": "- Sundar Pichai, CEO of Google",
+      "description": "I am excited to showcase some of my personal projects specifically focused on mobile apps! As technology continues to advance, mobile devices have become an essential part of our daily lives, and developing mobile apps has become an increasingly important skill in the tech industry.\nHere you'll find some of my mobile apps projects, where I've utilized modern technologies and frameworks such as React Native.\nSo, take a look around, and please feel free to contact me if you have any questions or feedback. Thank you for visiting!",
+      "projects": {
+        "title": "Projects",
+        "giggle": "Need a good laugh? Giggle! has got you covered! Dive into a world of endless laughter with our hilarious collection of jokes, puns, and funny stories. Whether you're feeling down or just in need of a pick-me-up, Giggle! is here to brighten your day and leave you smiling from ear to ear. Get ready to LOL your way through the day! ",
+        "randombox": "Get ready for a whirlwind of excitement with Random Box! It's the ultimate challenge generator that brings a new thrill to your fingertips every day. From crazy dares to quirky tasks, you never know what surprise awaits inside the box! Gather your friends and embark on an adventure filled with laughter, spontaneity, and endless fun. Stay tuned for the grand unveiling! ",
+        "coolmind": "Welcome to Coolmind, your ultimate companion for positive vibes and a healthy mindset! Say goodbye to stress and negativity as Coolmind guides you through uplifting exercises, gratitude practices, and mindfulness techniques. Harness the power of positivity and unleash your inner joy! Get ready to transform your mind, one smile at a time! "
+      }
     }
   },
 
-  "about_page": {
-    "title": "Web developer passionate about innovation",
-    "services_separator": "Increase your business discoverability",
+  "about": {
+    "heroTitle": "You’ve got to start with the customer experience and work back towards the technology.",
+    "heroDescription": "- Steve Jobs, Co-Founder of Apple",
+
     "services": {
       "title": "Services",
       "main": {
@@ -77,77 +130,83 @@
         }
       }
     },
-
     "about_me": {
       "title": "About me",
-      "description": "Ever since I decided to make my passion for technology a professional career, I have been fully dedicated to the development of digital projects and the acquisition of new knowledge, in order to add competitive value in the creation of digital solutions.\nMy attention to detail, creative vision of the world and meticulous nature are the main contributions of my identity to the development and implementation of custom solutions. Throughout my career, I have developed projects for various sectors and I am mainly dedicated to creating websites, web apps, and branding.\nMy primary goal is to establish quick and long-lasting solutions, relationships, and assist in developing and implementing high-quality products."
+      "description": "I love this quote by Steve Jobs. This idea has guided me since the day I turned my passion for technology into my career path. I'm all in when it comes to building digital projects and constantly learning new things to keep pushing the envelope, but its so easy to forget the user in the process. That's why I'm big on the little things, dreaming up creative ways to view the world, and diving deep into the details, so I can craft tailor-made solutions that have a true impact on the user experience.\nOver the years, I've had the privilege to work across various industries with truly amazing people, focusing primarily on designing websites, developing web apps, and shaping brands. More than anything, my aim is to build lasting and meaningful relationships while help bringing visions to life with top-notch products that truly make a difference."
     },
     "experience": {
-      "title": "EXPERIENCE",
-      "probely": "At Probely, a leading name in cybersecurity, I've crafted user-friendly features with React & Typescript, enriching product capabilities and boosting client satisfaction. I've executed strategic updates to legacy codebases, emphasizing simplicity and efficiency to optimize operational performance. Furthermore, I've set coding standards, conducted refactoring, and bolstered test suite stability with Cypress. These efforts yielded tangible enhancements in code quality and system robustness, translating to significant time and resource efficiencies. Additionally, I've analyzed cybersecurity functionalities and elevated internal projects using Python and Django.",
-      "paytrix": "Joining Navro in its early phase provided me with a unique opportunity to make a significant impact across various company sectors. My key contributions included enhancing software reliability by integrating Cypress tests, which accelerated our release cycle and resolved critical issues. I took an active role in establishing coding standards and refining code practices, focusing on elevating both quality and efficiency. Additionally, I developed several automation tools that simplified project setups and streamlined financial data management. Leading our team was another highlight for me, where I fostered teamwork and synchronized efforts between product, back-end, and design departments, all aimed at achieving our collective goals.",
-      "pipedrive": "In Pipedrive, I had the opportunity to use microservices and event-driven architecture effectively, enhancing a crucial automation feature that significantly contributed to our revenue growth. My work involved utilizing a sophisticated tech stack, including React, TypeScript, Node, Docker, React Testing Library, and Cypress. This not only led to notable enhancements in code quality but also bolstered reliability through extensive testing. Participating in hackathons and strategic team projects, in collaboration with partners, allowed me to contribute to the brainstorming and development of pivotal features. These efforts were instrumental in securing a substantial competitive advantage in the market.",
-      "sky": "As part of the Peacock frontend team, I ensured a seamless user experience for NBCUniversal's streaming service. I also contributed to a scalable global platform with millions of monthly views, by taking ownership of the development process, I actively participated in product discussions and advocated for quality, security, and performance enhancements.",
-      "wise": "In my initial role as a Lead Front-End Developer & UX/UI Designer, I had the incredible opportunity to build an online lottery platform, from the ground up, called Lotto Jade. As part of the foundational team at our company, I played a crucial role in shaping our approach to solution development. In this capacity, I frequently engaged in communication with stakeholders and clients, conducting demos and discussions that highlighted our company's values and strategic goals. This involvement was vital in ensuring that our technical solutions were not only innovative but also closely aligned with client needs and market trends, fostering strong relationships and setting the stage to exceed expectations at every turn.",
-      "freelance": "As a freelancer, I've successfully implemented web solutions for several businesses, owning the entire process from concept design to deployment, offering market projection through personalized guidance and client-focused solutions tailored to business requirements. I've standardized output using a cutting-edge, responsive, mobile-first approach and strategy, aligning with current market trends and user expectations. Frequently I thorough assessments of UX and UI designs for technical feasibility, SEO optimization tests and branding."
+      "title": "Build lasting and meaningful relationships",
+      "description": "Throughout my career, I've been privileged to contribute to a range of impactful projects across several leading companies, each offering unique challenges and learning opportunities. Currently, at Probely, I refined their cybersecurity products with intuitive features using React & TypeScript, enhancing user satisfaction and product efficiency.\nMy roles at Navro and Pipedrive allowed me to deeply engage in software reliability and system optimization, implementing robust solutions and comprehensive testing regimes that elevated operational performance.\nAt NBCUniversal's Peacock, I took pride in ensuring a seamless streaming experience for millions of users worldwide, contributing to a scalable and responsive service.\nMy journey at Wise was particularly rewarding, as I led the development of an online lottery platform from the ground up, aligning our technical solutions closely with client needs and market demands. This role not only challenged my skills but also deepened my appreciation for collaborative solution development.",
+      "projects": "Projects in different sectors",
+      "years": "Years of experience"
     },
-    "education": "Education"
+    "contact": {
+      "title": "Schedule a meeting",
+      "description": "Want to know more about my journey or discuss a potential project? I'd love to hear from you! Let's chat."
+    }
   },
 
-  "skills_page": {
-    "soft_skills": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology, I was able to develop versatile skills that contributed immensely to my emotional, social, and psychological health, revealing an asset in the work environment. Some of them are creativity, emotional intelligence, empathy, interpersonal skills, critical thinking, problem-solving, and communication."
+  "skills": {
+    "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
+    "heroDescription": "- Will Durant",
+    "title": "overview",
+    "description": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
   },
 
-  "contacts_page": {
+  "contacts": {
     "title": "Get in touch!",
     "email": "let's chat",
-    "social": "social network"
+    "social": "social network",
+    "reachOut": "reach out"
   },
 
   "testimonials": {
-    "title": "Warm-hearted testimonials",
+    "title": "testimonials",
     "lets_talk": {
       "title": "Yours can be next!",
       "cta": "lets talk"
     },
-    "pedro": {
-      "details": "Entrepreneur",
-      "review": "André developed excellent branding work for my business, both the process and the result were outstanding! I highly recommend his work."
+    "cdeff": {
+      "details": "Sports Club",
+      "review": "André developed our website and we are very pleased with the final result! The design is modern and appealing, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. We definitely recommend his work!"
+    },
+    "barbara": {
+      "details": "Lawyer",
+      "review": "André developed my website and I couldn't be happier with the result! The design is modern and professional, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. His work comes with my highest recommendation!"
     },
     "sofia": {
-      "details": "Doctor",
-      "review": "The work developed by André exceeded our expectations! His empathy and creativity won us over in the first meeting and since then we've been continuously positively surprised. Now we count on him for future RIMA editions!"
+      "details": "Coordinator | Doctor",
+      "review": "André created a website for our General and Family Medicine Interns Meeting and it exceeded our expectations! His empathy and creativity won us over in the first meeting and since then we've been continuously positively surprised. Now we count on him for future RIMA editions!"
     },
-
     "ana": {
       "details": "Product Designer",
       "review": "I had the pleasure of working with André, witnessing his expertise as a Frontend Engineer. In the dynamic setting of an early-stage startup, working with a compact design team, André not only thrived but was an unwavering support to our team. His human qualities and attention to detail is a gem in our industry, and I'm confident he'll succeed in any challenge ahead!"
     },
-
+    "nkem": {
+      "details": "Software Engineer",
+      "review": "I had the privilege of working with André as part of a Frontend development team, and he is a great person to work with. He stands out for his commitment and exceptional problem solving skills. André always goes above and beyond, with a positive attitude that inspired the team and pushed us to meet our targets!"
+    },
     "anaJardim": {
       "details": "Psychologist",
       "review": "I'm so grateful for André Rodrigues' exceptional work on my psychology website. His care for my vision and professional expertise shine through the minimalist design. A true collaborator who brought my perspectives to life seamlessly. Thank you, André!"
     },
+
     "vlad": {
-      "details": "Web Developer",
+      "details": "Senior Developer",
       "review": "I’ve had the pleasure of collaborating with Andre Rodrigues and I am continually impressed by his exceptional communication skills and remarkable ability to grasp complex topics with ease. Andre’s proactive nature to exceed expectations is not just a testament to his work ethic, but also a significant advantage for our entire team."
     },
     "rafa": {
-      "details": "Web Developer",
+      "details": "Software Engineering Manager",
       "review": "André developed my website, IT Studios. His modern and minimalist design, with special attention to the user experience, made the website highly intuitive. I couldn't be more pleased with the final result. If you want to create an appealing and functional website, I highly recommend his work!"
     },
     "ahmad": {
-      "details": "Web Developer",
-      "review": "Andre is the kind of programmer any team would be lucky to have. His combination of technical know-how, teamwork, and a knack for simplifying complex ideas is rare. I would recommend him for any frontend development role."
+      "details": "Software Engineering Manager",
+      "review": "Working with Andre as his team lead was a real pleasure. He's a standout developer, with curiosity, bringing automation and always up for new challenges with great analysis skills to ensure longevity. His combination of technical know-how, teamwork, and a knack for simplifying complex ideas is rare. I would recommend him for any frontend development role."
     },
 
     "doart": {
       "details": "Artist",
-      "review": "I want to give a special thank you to André for the work he has done! If you have the opportunity, visit his page and see his amazing work, it's definitely worth it."
-    },
-    "patricia": {
-      "details": "Artist",
-      "review": "André develops spectacular work! He is a great talent."
+      "review": "I want to give a special thank you to André for the work he has done on my album cover and logo! Make sure to check out his website to view his incredible portfolio — you won't be disappointed!"
     }
   },
 
@@ -157,24 +216,42 @@
     "cta": "GO BACK"
   },
 
-  "contacts": {
-    "banner": {
-      "title": "Let's connect and turn your vision into reality",
-      "cta": "Send a message"
-    }
-  },
-
   "analytics_banner": {
     "description": "This website uses Google Analytics to understand human interaction. Therefore, by continuing to use this website, you consent to the use of cookies to track and analyze your usage.",
     "accept": "I agree"
   },
 
+  "portfolio_parallax": {
+    "title": "Delivering impactful\nsolutions to elevate your brand",
+    "description": "Take a look at the projects I’ve brought to life—each one crafted using the latest technologies and frameworks."
+  },
+
+  "trusted": {
+    "title": "Trusted by companies"
+  },
+
+  "buttons": {
+    "readMore": "Read more",
+    "see_more": "See more",
+    "contact": "Contact",
+    "send_message": "Send message",
+    "explore": "Explore",
+    "about": "About",
+    "skills": "Skills",
+    "schedule": "Schedule",
+    "goBack": "Go back"
+  },
+  "error": {
+    "title": "Upss something went wrong...",
+    "description": "An unexpected issue happened. Please try reloading the page or returning to the previous screen. If the problem persists, contact me for assistance."
+  },
   "metadata": {
     "homeTitle": "André Rodrigo • Web Development and Design",
     "aboutTitle": "About • André Rodrigo",
     "portfolioTitle": "Portfolio • André Rodrigo",
     "contactsTitle": "Contacts • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
+    "blogTitle": "Blog • André Rodrigo",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

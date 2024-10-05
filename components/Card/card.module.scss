@@ -1,0 +1,22 @@
+@import 'assets/styles/mixins';
+
+.container {
+  img {
+    filter: grayscale(100%);
+    transition: 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &:hover {
+    img {
+      filter: grayscale(0%);
+    }
+  }
+}
+
+@media only screen and (max-width: $breaking-point-sm) {
+  .container {
+    img {
+      filter: grayscale(0%);
+    }
+  }
+}

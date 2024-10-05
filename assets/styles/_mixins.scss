@@ -1,11 +1,14 @@
 //Colors
-$dark: #1c1c1c;
-$grey: #a6a6a6;
-$light-grey: #f3f3f3;
-$white: #ffffff;
-$yellow: #ffca6c;
-$grey-yellow: #edeee9;
-$salmon: #f18073;
+$colors: (
+  primary: #ff56cd,
+  secondary: #8b5afe,
+  white: #ffffff,
+  dark: #161616,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 
 //Sizes
 $breaking-point-xxl: 1400px;
@@ -17,25 +20,9 @@ $breaking-point-xs: 380px;
 $breaking-point-xxs: 330px;
 
 //Shapes
-@mixin button($color) {
-  background: linear-gradient($color 0 0) right / var(--p, 0) no-repeat;
-  transition: 0.4s, background-position 0s;
-  text-transform: uppercase;
-  border: 1px solid $color;
-  padding: 0.4rem 1.5rem;
-  color: $color;
-  letter-spacing: 2px;
-
-  &:hover {
-    color: white;
-    --p: 100%;
-    background-position: left;
-  }
-}
-
 @mixin read_button {
-  color: $dark;
-  @include hover_underline($dark);
+  color: color(dark);
+  @include hover_underline(color(dark));
   margin: 0;
   font-size: 0.9rem;
   font-weight: 400;
@@ -49,7 +36,9 @@ $breaking-point-xxs: 330px;
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 2px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s,
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s,
     letter-spacing 0.3s;
   &:hover {
     color: $color;
@@ -80,40 +69,9 @@ $breaking-point-xxs: 330px;
   }
 }
 
-//Blog
-@mixin blog_settings {
-  h1 {
-    font-family: Italiana, sans-serif;
-    font-size: var(--fs-xxl);
-  }
-  h2 {
-    font-size: var(--fs-xl);
-    margin-bottom: 70px;
-  }
-  h3 {
-    font-weight: 400;
-  }
-}
-
-//Title
-@mixin title_transparent {
-  @supports (-webkit-text-stroke: 1px white) {
-    .container {
-      h1 {
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-      }
-    }
-  }
-}
 //Exports
 :export {
-  dark: $dark;
-  grey: $grey;
-  grey-yellow: $grey-yellow;
-  light-grey: $light-grey;
-  white: $white;
-  yellow: $yellow;
+  dark: color(dark);
+  white: color(white);
   mobile_breaking_point: $breaking-point-sm;
 }

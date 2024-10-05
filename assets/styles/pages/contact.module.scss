@@ -1,11 +1,11 @@
-@import "assets/styles/mixins";
+@import 'assets/styles/mixins';
 
 .container {
   display: flex;
-
-  h1 {
-    font-size: var(--fs-xxl);
-    font-family: var(--font-blacker);
+  align-items: center;
+  justify-content: center;
+  p {
+    font-family: var(--font-jost);
   }
   h3 {
     font-size: var(--fs-s);
@@ -14,24 +14,26 @@
     letter-spacing: 1.4px;
     margin-bottom: 15px;
   }
-  a[id="contact_email"] {
-    color: $yellow;
+  a[id='contact_email'] {
+    color: color(primary);
+    transition: 0.3s ease;
+
     &:hover {
-      color: $white;
+      color: color(white);
     }
   }
-  div[class="row"] {
+  div[class='row'] {
     width: 100%;
   }
 
   ul {
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
   ul li {
     list-style: none;
-    @include hover_scale(1.3, 0.2s);
+
     & svg {
       font-size: 23px;
     }
@@ -47,29 +49,4 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
-}
-
-//Responsive
-@media only screen and (max-width: 767px) {
-  .container {
-    text-align: center;
-  }
-  .social {
-    transform: translateY(0px);
-  }
-
-  .col {
-    margin-bottom: 40px;
-  }
-}
-
-@media only screen and (max-width: $breaking-point-sm) {
-  .container {
-    h1 {
-      font-size: 3.7rem;
-    }
-    h3 {
-      font-size: 1rem;
-    }
-  }
 }
