@@ -21,7 +21,7 @@ function useFetch<T>(
   });
 
   useEffect(() => {
-    const graphcms = new GraphQLClient(baseURL || '');
+    const graphcms = new GraphQLClient(baseURL!);
 
     async function fetchData() {
       try {

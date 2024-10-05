@@ -41,14 +41,6 @@ const RootLayout = ({
       lang={locale}
       className={`${jost.variable} ${blacker.variable} ${moniqa.variable}`}
     >
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/italiana.woff2"
-          as="font"
-          type="font/woff2"
-        />
-      </head>
       <body className="min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
