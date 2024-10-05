@@ -16,6 +16,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { fadeInVariant } from '@/motion/motionVariants';
 import ErrorGeneric from '@/components/ErrorGeneric';
 import { IMAGE_DATA_BLUR_URL } from '@/constants/common.constants';
+import { useEffect, useState } from 'react';
+import { injectHeaderIds } from '@/utils/post.utils';
+import ContentNavigator from '@/components/ContentNavigator';
 
 type PostsData = {
   post: Post;
@@ -29,7 +32,17 @@ type BlogPostProps = {
   params: BlogPostParams;
 };
 
+export type Heading = { text: string | null; id: string };
+
 const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
+  const [enhancedPost, setEnhancedPost] = useState<{
+    html?: string;
+    headings: Heading[];
+  }>({
+    html: undefined,
+    headings: [],
+  });
+
   const { data, loading, error } = useFetch<PostsData>(ARTICLE_QUERY, {
     slug: params.slug,
   });
@@ -39,11 +52,18 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
 
   const router = useRouter();
 
+  useEffect(() => {
+    if (post?.content?.html) {
+      const { html, headings } = injectHeaderIds(content?.html);
+      setEnhancedPost({ html, headings, ...post });
+    }
+  }, [post, content]);
+
   return (
     <Container>
       <AnimatePresence> {loading && <Skeleton.Post />}</AnimatePresence>
       {error && <ErrorGeneric />}
-      {post && (
+      {enhancedPost?.html && (
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
@@ -76,8 +96,9 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
               </p>
               <p className="text-sm font-normal opacity-80">{publishedDate}</p>
             </div>
-            <div className={styles.content}>{parser(content?.html || '')}</div>
+            <div className={styles.content}>{parser(enhancedPost.html)}</div>
           </TracingBeam>
+          <ContentNavigator headings={enhancedPost.headings} />
         </motion.div>
       )}
     </Container>
