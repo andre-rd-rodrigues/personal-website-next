@@ -2,7 +2,7 @@ import baseURL from '../baseURL';
 
 import { GraphQLClient, gql } from 'graphql-request';
 
-export const graphcms = new GraphQLClient(baseURL || '');
+export const graphcms = new GraphQLClient(baseURL!);
 
 export const ARTICLES_CARD_QUERY = gql`
   {
@@ -22,7 +22,7 @@ export const ARTICLES_CARD_QUERY = gql`
         url(
           transformation: {
             image: { resize: { width: 1200, height: 1200 } }
-            document: { output: { format: png } }
+            document: { output: { format: webp } }
           }
         )
       }
@@ -47,7 +47,7 @@ export const ARTICLES_QUERY = gql`
         url(
           transformation: {
             image: { resize: { width: 1200, height: 1200 } }
-            document: { output: { format: png } }
+            document: { output: { format: webp } }
           }
         )
       }
@@ -57,14 +57,11 @@ export const ARTICLES_QUERY = gql`
 
 export const ARTICLE_QUERY = gql`
   query Post($slug: String!) {
-    post(where: { slug: $slug }) {
-      id
+    posts(where: { slug: $slug }) {
       title
       category
       publishedDate
       description
-      isTopPick
-      slug
       content {
         html
       }
@@ -72,7 +69,7 @@ export const ARTICLE_QUERY = gql`
         url(
           transformation: {
             image: { resize: { width: 1200, height: 1200 } }
-            document: { output: { format: png } }
+            document: { output: { format: webp } }
           }
         )
       }

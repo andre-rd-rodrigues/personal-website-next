@@ -21,7 +21,7 @@ import { injectHeaderIds } from '@/utils/post.utils';
 import ContentNavigator from '@/components/ContentNavigator';
 
 type PostsData = {
-  post: Post;
+  posts: Post[];
 };
 
 type BlogPostParams = {
@@ -46,8 +46,8 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLE_QUERY, {
     slug: params.slug,
   });
+  const post = data?.posts?.[0];
 
-  const { post } = data || {};
   const { title, publishedDate, content, coverPhoto, category } = post || {};
 
   const router = useRouter();
@@ -62,7 +62,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
   return (
     <Container>
       <AnimatePresence> {loading && <Skeleton.Post />}</AnimatePresence>
-      {error && (
+      {(error || !post) && (
         <div className="flex h-[100vh] items-center justify-center">
           <ErrorGeneric />
         </div>
