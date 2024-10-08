@@ -29,6 +29,7 @@
   ul {
     padding: 0;
     display: flex;
+
     gap: 20px;
   }
   ul li {
@@ -49,4 +50,12 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 40px;
+}
+
+@media (max-width: $breaking-point-md) {
+  .container {
+    ul {
+      justify-content: center;
+    }
+  }
 }

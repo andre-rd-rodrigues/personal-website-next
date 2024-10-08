@@ -106,7 +106,7 @@ const Home = () => {
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
-                className="mb-10 text-center text-6xl sm:text-start"
+                className="mb-10 text-6xl"
               >
                 {t('homepage.about.title')}
               </motion.h2>

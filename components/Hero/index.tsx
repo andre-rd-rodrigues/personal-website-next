@@ -28,7 +28,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
     <div className={`text-white md:px-20 ${className}`}>
       <AnimatedText.Fade
         text={title}
-        className={`mb-4 text-5xl font-extralight md:mb-12 md:w-5/6 md:text-7xl ${textClassName}`}
+        className={`mb-4 text-5xl font-light sm:font-extralight md:mb-12 md:w-5/6 md:text-7xl ${textClassName}`}
       />
 
       <motion.div
@@ -61,7 +61,7 @@ const HeroCtaSection: React.FC<{
     >
       <AnimatedText.Fade
         text={text}
-        className="mb-8 text-center text-4xl font-extralight"
+        className="mb-8 text-center text-4xl font-light sm:font-extralight"
       />
       <motion.div variants={fadeInSlideLeftVariant} className="text-center">
         {cta}
@@ -83,7 +83,7 @@ export function HeroFlipWords({ children, className }: FlipWordsProps) {
       whileInView="visible"
       className={`border-1 relative flex h-full items-center rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-[40px] md:px-12 md:py-20 ${className}`}
     >
-      <div className="mx-auto text-center text-4xl font-extralight sm:text-start">
+      <div className="mx-auto text-center text-4xl font-light sm:text-start sm:font-extralight">
         {children}
       </div>
     </motion.div>
