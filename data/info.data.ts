@@ -74,6 +74,57 @@ const PROJECTS = {
   ],
   web: [
     {
+      imgSrc: '/images/websites/bb.webp',
+      label: 'Bárbara Barbizani',
+
+      description: 'web.projects.bb',
+      techStack: {
+        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://www.barbizanicarvalholaw.com/',
+        github: 'https://github.com/andre-rd-rodrigues/bb-website',
+      },
+    },
+    {
+      imgSrc: '/images/websites/carolina.webp',
+      label: 'Carolina Jardim',
+      description: 'web.projects.carolina',
+
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://acarolinajardim.com',
+        github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
+      },
+    },
+    {
+      imgSrc: '/images/websites/barber.webp',
+      label: 'Barber Studio',
+      description: 'web.projects.barber',
+
+      techStack: {
+        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
+      },
+      href: {
+        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
+      },
+    },
+    {
+      imgSrc: '/images/websites/itstudios.webp',
+      label: 'IT Studios',
+      description: 'web.projects.it',
+      techStack: {
+        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+      },
+      href: {
+        website: 'https://itstudios.netlify.app/',
+        github: 'https://github.com/andre-rd-rodrigues/it-studios',
+      },
+    },
+    {
       imgSrc: '/images/websites/pipedrive.webp',
       label: 'Pipedrive',
       description: 'web.projects.pipedrive',
@@ -85,6 +136,8 @@ const PROJECTS = {
           'React Testing Library',
           'Cypress',
           'Styled Components',
+        ],
+        backend: [
           'Node',
           'Data Dog',
           'Docker',
@@ -110,10 +163,8 @@ const PROJECTS = {
           'React Testing Library',
           'Cypress',
           'Styled Components',
-          'Node',
-          'AWS',
-          'RESTful API',
         ],
+        backend: ['Node', 'AWS', 'RESTful API'],
       },
       href: {
         website: 'https://www.navro.com',
@@ -131,10 +182,8 @@ const PROJECTS = {
           'Next.js',
           'Cypress',
           'Styled Components',
-          'Node',
-          'Vercel',
-          'RESTful API',
         ],
+        backend: ['Node', 'Vercel', 'RESTful API'],
       },
       href: {
         website: 'https://www.probely.com',
@@ -152,29 +201,14 @@ const PROJECTS = {
           'Next.js',
           'Cypress',
           'Styled Components',
-          'Node',
-          'Vercel',
-          'RESTful API',
         ],
+        backend: ['Node', 'Vercel', 'RESTful API'],
       },
       href: {
         website: 'https://www.peacocktv.com',
       },
     },
 
-    {
-      imgSrc: '/images/websites/bb.webp',
-      label: 'Bárbara Barbizani',
-
-      description: 'web.projects.bb',
-      techStack: {
-        frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
-      },
-      href: {
-        website: 'https://www.barbizanicarvalholaw.com/',
-        github: 'https://github.com/andre-rd-rodrigues/bb-website',
-      },
-    },
     {
       imgSrc: '/images/websites/cdeff.webp',
 
@@ -212,19 +246,7 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/primetravel-app',
       },
     },
-    {
-      imgSrc: '/images/websites/carolina.webp',
-      label: 'Carolina Jardim',
-      description: 'web.projects.carolina',
 
-      techStack: {
-        frontend: ['HTML5', 'CSS3', 'JavaScript'],
-      },
-      href: {
-        website: 'https://acarolinajardim.com',
-        github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
-      },
-    },
     {
       imgSrc: '/images/websites/curiosity.webp',
       label: 'Personal Blog',
@@ -239,31 +261,7 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/curiositygem',
       },
     },
-    {
-      imgSrc: '/images/websites/barber.webp',
-      label: 'Barber Studio',
-      description: 'web.projects.barber',
 
-      techStack: {
-        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
-      },
-      href: {
-        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
-      },
-    },
-    {
-      imgSrc: '/images/websites/itstudios.webp',
-      label: 'IT Studios',
-      description: 'web.projects.it',
-      techStack: {
-        frontend: ['HTML5', 'CSS3', 'JavaScript'],
-      },
-      href: {
-        website: 'https://itstudios.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/it-studios',
-      },
-    },
     {
       imgSrc: '/images/websites/memory.webp',
       label: 'Memory Game',

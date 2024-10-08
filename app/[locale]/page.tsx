@@ -63,7 +63,7 @@ const Home = () => {
             </motion.p>
             <div className="mt-8 flex gap-3">
               <motion.span variants={fadeInSlideInVariant}>
-                <Link href="/portfolio">
+                <Link href="/portfolio/web">
                   <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
                 </Link>
               </motion.span>

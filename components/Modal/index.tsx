@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fadeInSlideInVariant } from '@/motion/motionVariants';
+import { Icon } from '@iconify/react';
+import ICONS from '@/constants/icons.constants';
 
 interface Props {
   show: boolean;
@@ -35,6 +37,13 @@ const Modal = ({ show, onHide, children }: Props) => {
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
             className="border-1 relative w-full max-w-4xl rounded-lg border-gray-500 border-opacity-20 bg-gray-800 bg-opacity-10 p-8 shadow-lg backdrop-blur-[40px]"
           >
+            <motion.div onClick={onHide} className="00 flex justify-end">
+              <Icon
+                icon={ICONS.close}
+                fontSize={40}
+                className="cursor-pointer"
+              />
+            </motion.div>
             {children}
           </motion.div>
         </motion.div>

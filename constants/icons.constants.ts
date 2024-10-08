@@ -10,6 +10,7 @@ const ICONS = {
   facebook: 'ri:facebook-line',
   menu: 'ri:menu-line',
   calendar: 'clarity:calendar-line',
+  close: 'iconamoon:close-thin',
 };
 
 export default ICONS;
