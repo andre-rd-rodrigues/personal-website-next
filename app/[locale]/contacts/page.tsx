@@ -21,10 +21,10 @@ const Contacts = () => {
     <PageContainer className={styles.container}>
       <div className="flex flex-wrap items-center justify-center gap-10 text-center sm:flex-nowrap sm:justify-start sm:gap-40 sm:text-start">
         <div className="">
-          <h1 className="absolute text-5xl font-extralight opacity-0 sm:text-7xl">
+          <h1 className="absolute opacity-0">{t('title')}</h1>
+          <p className="text-6xl font-light sm:font-extralight md:text-8xl">
             {t('title')}
-          </h1>
-          <p className="text-6xl font-extralight md:text-8xl">{t('title')}</p>
+          </p>
         </div>
 
         <motion.div
