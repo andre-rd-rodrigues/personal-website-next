@@ -112,17 +112,17 @@ export default function Navbar() {
                     key={item.href}
                     /* @ts-expect-error href does not have the type */
                     href={item.href}
-                    className={`block rounded-md px-3 py-2 text-right font-extralight ${
+                    className={`block rounded-md px-3 py-3 text-right font-extralight ${
                       pathname === item.href
                         ? 'text-white'
                         : 'text-gray-300 hover:text-white'
                     } transition-colors duration-300`}
                     onClick={() => setIsOpen(false)}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </Link>
                 ))}
-                <LanguageSelector className="flex justify-end" />
+                <LanguageSelector className="flex justify-end pt-3" />
               </div>
             </div>
           </motion.div>
