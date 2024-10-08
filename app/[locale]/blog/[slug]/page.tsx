@@ -62,7 +62,11 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
   return (
     <Container>
       <AnimatePresence> {loading && <Skeleton.Post />}</AnimatePresence>
-      {error && <ErrorGeneric />}
+      {error && (
+        <div className="flex h-[100vh] items-center justify-center">
+          <ErrorGeneric />
+        </div>
+      )}
       {enhancedPost?.html && (
         <motion.div
           variants={fadeInVariant}
