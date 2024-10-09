@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl';
 
 import styles from '@/assets/styles/pages/homepage.module.scss';
-import AnimatedText from '@/components/AnimatedText';
+
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import HeroSection from '@/components/Hero';
@@ -13,7 +13,6 @@ import Container from '@/components/Container';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import TypeformPopup from '@/components/TypeformPopup';
-import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FlipWords } from '@/components/ui/flip-words';
 import { HeroParallax } from '@/components/ui/hero-parallax';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
@@ -29,9 +28,10 @@ import {
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Compare } from '@/components/ui/compare';
 import useTranslation from '@/hooks/useTranslation';
+import VideoBackground from '@/components/VideoBackground';
+import Image from 'next/image';
 
 const Home = () => {
   const t = useTranslations();
@@ -40,28 +40,35 @@ const Home = () => {
   return (
     <>
       {/* Title */}
-      <AuroraBackground className="relative">
-        <div className="relative z-10 grid h-[100vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 sm:h-[80vh] md:grid-cols-12">
+      <VideoBackground
+        src="/animations/liquid.webm"
+        placeholder="/images/liquid.webp"
+      >
+        <div className="relative z-10 flex h-[100vh] w-full flex-col items-center justify-center px-5 sm:mx-12">
           <motion.div
             variants={containerVariant}
             whileInView="visible"
             initial="hidden"
             className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
           >
-            <h1 className="absolute opacity-0">André Rodrigo</h1>
-            <AnimatedText.Fade
-              className="py-3 text-5xl sm:text-[80px]"
-              text="André Rodrigo"
-              underline
+            <Image
+              src="/images/logo_light.webp"
+              width={200}
+              height={200}
+              className="mx-auto"
+              alt="André Rodrigo - Software Engineer"
             />
+            <h1 className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]">
+              André Rodrigo
+            </h1>
 
             <motion.p
               variants={fadeInSlideLeftVariant}
-              className="mt-5 opacity-70"
+              className="mt-8 w-full text-center opacity-70"
             >
               {t('homepage.subtitle')}
             </motion.p>
-            <div className="mt-8 flex gap-3">
+            {/*  <div className="mt-8 flex w-full items-center justify-center gap-3">
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio/web">
                   <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
@@ -70,26 +77,25 @@ const Home = () => {
               <motion.span variants={fadeInSlideInVariant}>
                 <TypeformPopup />
               </motion.span>
-            </div>
+            </div> */}
           </motion.div>
         </div>
-
-        {/* Profile */}
-        <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
-          <motion.span
-            variants={fadeInVariant}
-            initial="hidden"
-            animate="visible"
-          >
-            <Image
-              src="/images/profile.webp"
-              alt="André Rodrigo - Software Engineer"
-              objectFit="contain"
-              layout="fill"
-            />
-          </motion.span>
-        </div>
-      </AuroraBackground>
+      </VideoBackground>
+      {/* Profile */}
+      {/*  <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
+        <motion.span
+          variants={fadeInVariant}
+          initial="hidden"
+          animate="visible"
+        >
+          <Image
+            src="/images/profile.webp"
+            alt="André Rodrigo - Software Engineer"
+            objectFit="contain"
+            layout="fill"
+          />
+        </motion.span>
+      </div> */}
 
       <Container>
         {/* About Me */}
