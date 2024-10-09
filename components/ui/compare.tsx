@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 'use client';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { SparklesCore } from '@/components/ui/sparkles';

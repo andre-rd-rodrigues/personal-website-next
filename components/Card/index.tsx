@@ -18,10 +18,10 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`${styles.container} border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
+      className={`${styles.container} rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
     >
       <CardContainer className="inter-var">
-        <CardBody className="group/card border-1 relative h-auto w-auto rounded-lg p-8 md:p-12 md:text-left">
+        <CardBody className="group/card border-1 relative h-auto w-auto p-8 md:p-12 md:text-left">
           <CardItem translateZ="60" className="relative mb-4 h-40 w-full">
             <Image
               src={imageUrl}

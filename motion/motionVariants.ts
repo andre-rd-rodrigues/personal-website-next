@@ -162,6 +162,21 @@ const underlineSlideInVariant = {
   },
 };
 
+const blurVariant = {
+  hidden: {
+    opacity: 0,
+    filter: 'blur(20px)',
+  },
+  visible: {
+    opacity: 1,
+    filter: 'blur(0)',
+    transition: {
+      duration: 1.5,
+      ease: [0.35, 0, 0.25, 1],
+    },
+  },
+};
+
 export {
   containerVariant,
   fadeInSlideInVariant,
@@ -176,4 +191,5 @@ export {
   useTransform,
   workPageHeaderContent,
   underlineSlideInVariant,
+  blurVariant,
 };

@@ -136,11 +136,10 @@ export const ProductCard = ({
       style={{
         x: translate,
       }}
-      whileHover={{
-        y: -20,
-      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       key={product.title}
-      className="group/product relative h-96 w-[35rem] flex-shrink-0"
+      className="group/product relative h-96 w-[35rem] flex-shrink-0 overflow-hidden rounded-3xl"
     >
       <Link
         href={product.link}

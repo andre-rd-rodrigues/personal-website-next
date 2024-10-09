@@ -78,7 +78,7 @@ const Contacts = () => {
               {t('reachOut')}
             </motion.h3>
             <motion.div variants={fadeInSlideInVariant}>
-              <TypeformPopup />
+              <TypeformPopup.Button />
             </motion.div>
           </motion.div>
         </motion.div>

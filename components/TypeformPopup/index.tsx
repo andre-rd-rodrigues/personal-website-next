@@ -10,7 +10,7 @@ type Props = {
   icon?: (typeof ICONS)[keyof typeof ICONS];
 };
 
-const TypeformPopup = ({
+const TypeformPopupButton = ({
   label = 'send_message',
   icon = ICONS.message,
 }: Props) => {
@@ -21,6 +21,24 @@ const TypeformPopup = ({
       <Button.Text icon={icon} label={t(label)} />
     </PopupButton>
   );
+};
+
+const TypeformPopupMinimal = ({
+  label = 'send_message',
+  icon = ICONS.message,
+}: Props) => {
+  const t = useTranslations('buttons');
+
+  return (
+    <PopupButton id={TYPEFORM_ID} size={70}>
+      <Button.Minimal icon={icon} label={t(label)} />
+    </PopupButton>
+  );
+};
+
+const TypeformPopup = {
+  Button: TypeformPopupButton,
+  Minimal: TypeformPopupMinimal,
 };
 
 export default TypeformPopup;

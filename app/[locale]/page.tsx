@@ -21,6 +21,7 @@ import ICONS from '@/constants/icons.constants';
 import TESTIMONIALS from '@/constants/testimonials.constants';
 import { EXPERTISE, PROJECTS } from '@/data/info.data';
 import {
+  blurVariant,
   containerVariant,
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
@@ -49,70 +50,68 @@ const Home = () => {
             variants={containerVariant}
             whileInView="visible"
             initial="hidden"
-            className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
+            viewport={{ once: true }}
+            className={`${styles.title} mx-auto flex flex-col items-center justify-center text-center`}
           >
-            <Image
-              src="/images/logo_light.webp"
-              width={200}
-              height={200}
-              className="mx-auto"
-              alt="André Rodrigo - Software Engineer"
-            />
-            <h1 className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]">
+            <motion.span variants={blurVariant}>
+              <Image
+                src="/images/logo_light.webp"
+                width={200}
+                height={200}
+                className="mx-auto"
+                alt="André Rodrigo - Software Engineer"
+              />
+            </motion.span>
+            <motion.h1
+              variants={fadeInSlideInVariant}
+              className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]"
+            >
               André Rodrigo
-            </h1>
+            </motion.h1>
 
             <motion.p
-              variants={fadeInSlideLeftVariant}
+              variants={fadeInSlideInVariant}
               className="mt-8 w-full text-center opacity-70"
             >
               {t('homepage.subtitle')}
             </motion.p>
-            {/*  <div className="mt-8 flex w-full items-center justify-center gap-3">
+            <div className="mt-8 flex w-full items-center justify-center gap-3">
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio/web">
-                  <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
+                  <Button.Minimal
+                    label={t('homepage.cta')}
+                    icon={ICONS.arrow}
+                  />
                 </Link>
               </motion.span>
-              <motion.span variants={fadeInSlideInVariant}>
-                <TypeformPopup />
-              </motion.span>
-            </div> */}
+            </div>
           </motion.div>
         </div>
       </VideoBackground>
-      {/* Profile */}
-      {/*  <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
-        <motion.span
-          variants={fadeInVariant}
-          initial="hidden"
-          animate="visible"
-        >
-          <Image
-            src="/images/profile.webp"
-            alt="André Rodrigo - Software Engineer"
-            objectFit="contain"
-            layout="fill"
-          />
-        </motion.span>
-      </div> */}
 
+      {/* About Me */}
       <Container>
-        {/* About Me */}
         <Section className="md:my-56">
           <div className="grid gap-6 md:grid-cols-12">
-            <div className="col-span-12 flex h-full justify-center sm:col-span-5">
+            <motion.div
+              variants={fadeInVariant}
+              viewport={{ once: true }}
+              initial="hidden"
+              whileInView="visible"
+              className="col-span-12 flex h-full justify-center sm:col-span-5"
+            >
               <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
                 <InfoCounter label={t('about.experience.years')} end={4} />
                 <InfoCounter label={t('about.experience.projects')} end={15} />
               </div>
-            </div>
+            </motion.div>
             <div className="col-span-12 sm:col-span-7">
               <motion.h2
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
                 className="mb-10 text-6xl"
+                viewport={{ once: true }}
               >
                 {t('homepage.about.title')}
               </motion.h2>
@@ -120,6 +119,7 @@ const Home = () => {
                 variants={fadeInVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
               >
                 {t('homepage.about.description')}
               </motion.p>
@@ -128,6 +128,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView="visible"
                 className="mt-4 flex items-end justify-end gap-3"
+                viewport={{ once: true }}
               >
                 <motion.span variants={fadeInSlideInVariant}>
                   <a href={CONTACTS.LINKEDIN} target="_">
@@ -154,6 +155,7 @@ const Home = () => {
             variants={containerVariant}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
           >
             {EXPERTISE.map(({ name, description, src }, i) => (
@@ -175,6 +177,7 @@ const Home = () => {
             whileInView="visible"
             initial="hidden"
             className="mt-6 text-center"
+            viewport={{ once: true }}
           >
             <Link href="/skills">
               <Button.Text
@@ -198,6 +201,7 @@ const Home = () => {
         variants={fadeInSlideInVariant}
         whileInView="visible"
         initial="hidden"
+        viewport={{ once: true }}
         className="mt-6 text-center"
       >
         <Link href="/portfolio">
@@ -209,13 +213,14 @@ const Home = () => {
         </Link>
       </motion.div>
 
+      {/* Rebranding hero */}
       <Container>
-        {/* Rebranding hero */}
         <Section>
           <motion.div
             variants={fadeInSlideLeftVariant}
             whileInView="visible"
             initial="hidden"
+            viewport={{ once: true }}
             className="mb-4 text-5xl md:mb-12 md:w-5/6 md:text-7xl"
           >
             <h2 className="text-4xl md:text-6xl">
@@ -236,6 +241,7 @@ const Home = () => {
             variants={fadeInSlideInVariant}
             whileInView="visible"
             initial="hidden"
+            viewport={{ once: true }}
             className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-[40px] sm:h-[500px] sm:w-4/5"
           >
             <Compare
@@ -259,7 +265,9 @@ const Home = () => {
         <Section className="md:my-56">
           <HeroSection.Cta
             text={t('homepage.contact.description')}
-            cta={<TypeformPopup label="schedule" icon={ICONS.calendar} />}
+            cta={
+              <TypeformPopup.Button label="schedule" icon={ICONS.calendar} />
+            }
           />
         </Section>
       </Container>

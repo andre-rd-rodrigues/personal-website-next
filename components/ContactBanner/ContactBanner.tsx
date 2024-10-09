@@ -16,7 +16,7 @@ const ContactBanner = () => {
       viewport={{ once: true }}
     >
       <h4>{t('banner.title')}</h4>
-      <TypeformPopup />
+      <TypeformPopup.Button />
     </motion.div>
   );
 };
