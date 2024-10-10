@@ -1,4 +1,5 @@
 'use client';
+import useIsMobile from '@/hooks/useIsMobile';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -6,9 +7,10 @@ import { useEffect, useState } from 'react';
 const PageLoading = () => {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const isMobile = useIsMobile();
 
   const ANIMATION_DURATION = 2;
-  const CIRCLE_RADIUS = 175;
+  const CIRCLE_RADIUS = isMobile ? 130 : 175;
 
   useEffect(() => {
     const interval = setInterval(() => {
