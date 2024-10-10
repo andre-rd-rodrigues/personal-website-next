@@ -37,6 +37,9 @@ const options: ChartOptions<'radar'> = {
       },
       pointLabels: {
         color: 'white',
+        font: {
+          size: 13,
+        },
       },
     },
   },
@@ -50,6 +53,9 @@ const options: ChartOptions<'radar'> = {
     legend: {
       labels: {
         color: 'white',
+        font: {
+          size: 17,
+        },
       },
     },
   },

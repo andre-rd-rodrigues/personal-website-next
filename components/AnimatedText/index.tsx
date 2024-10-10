@@ -35,6 +35,7 @@ const Fade = ({ text, className, letter, underline }: FadeProps) => {
             marginRight: index !== data.length - 1 ? '0.25em' : '0',
             fontFamily: 'var(--font-jost)',
           }}
+          viewport={{ once: true }}
         >
           {word}
         </motion.span>
@@ -71,6 +72,7 @@ const ReplaceWord = ({ words, className }: ReplaceWordProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           style={{ display: 'inline-block' }}
         >
           {currentWord}

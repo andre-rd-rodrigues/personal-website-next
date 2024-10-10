@@ -38,6 +38,7 @@ const Contacts = () => {
               href={`mailto:${CONTACTS.EMAIL}`}
               target="_blank"
               rel="noreferrer"
+              className="font-normal"
             >
               {CONTACTS.EMAIL}
             </a>
