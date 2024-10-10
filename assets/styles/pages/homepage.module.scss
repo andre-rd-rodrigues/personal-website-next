@@ -3,29 +3,3 @@
 .homepage {
   background-color: color(dark);
 }
-.title {
-  color: white;
-  h1 {
-    font-family: var(--font-jost);
-  }
-  p {
-    font-size: var(--fs-m);
-  }
-  a {
-    font-size: var(--fs-m);
-  }
-}
-
-.formButton {
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: white;
-  font-weight: 400;
-  border: none;
-  background: none;
-  @include hover_underline(color(white));
-  &:hover {
-    letter-spacing: 6px;
-  }
-}
