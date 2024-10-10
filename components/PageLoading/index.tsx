@@ -7,6 +7,8 @@ const PageLoading = () => {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
+  const ANIMATION_DURATION = 2;
+
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
@@ -17,7 +19,7 @@ const PageLoading = () => {
         }
         return prev + 1;
       });
-    }, 30); // Adjust speed of progress
+    }, ANIMATION_DURATION * 10);
     return () => clearInterval(interval);
   }, []);
 
@@ -35,7 +37,7 @@ const PageLoading = () => {
           ease: 'easeInOut',
         },
         strokeDashoffset: {
-          duration: 3,
+          duration: ANIMATION_DURATION,
           ease: 'easeInOut',
         },
       },
@@ -47,6 +49,23 @@ const PageLoading = () => {
           duration: 0.5,
           ease: 'easeInOut',
         },
+      },
+    },
+  };
+
+  const fixedCircleVariants = {
+    initial: { opacity: 0 },
+
+    animate: {
+      opacity: 0.1,
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 1,
       },
     },
   };
@@ -68,7 +87,7 @@ const PageLoading = () => {
       scale: 0,
       transition: {
         scale: {
-          delay: 0.4,
+          delay: 0.5,
           duration: 0.3,
           ease: 'easeInOut',
         },
@@ -100,7 +119,10 @@ const PageLoading = () => {
           className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-r from-zinc-900 via-indigo-900 to-zinc-900"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { delay: 0.7, duration: 1 } }}
+          exit={{
+            opacity: 0,
+            transition: { delay: 0.8, duration: ANIMATION_DURATION },
+          }}
         >
           <motion.div
             className="relative flex flex-col items-center justify-center"
@@ -139,21 +161,7 @@ const PageLoading = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <motion.circle
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 0.1,
-                  transition: {
-                    duration: 1,
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 1,
-                  },
-                }}
+                variants={fixedCircleVariants}
                 cx="200"
                 cy="200"
                 r="199.5"
