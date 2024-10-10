@@ -8,6 +8,7 @@ const PageLoading = () => {
   const [progress, setProgress] = useState(0);
 
   const ANIMATION_DURATION = 2;
+  const CIRCLE_RADIUS = 175;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,7 +27,7 @@ const PageLoading = () => {
   const circleVariants = {
     initial: {
       opacity: 0,
-      strokeDashoffset: Math.PI * 2 * 199.5,
+      strokeDashoffset: Math.PI * 2 * CIRCLE_RADIUS,
     },
     animate: {
       opacity: 1,
@@ -78,8 +79,8 @@ const PageLoading = () => {
         scale: {
           duration: 0.8,
           type: 'spring',
-          stiffness: 350,
-          damping: 15,
+          stiffness: 400,
+          damping: 13,
         },
       },
     },
@@ -164,7 +165,7 @@ const PageLoading = () => {
                 variants={fixedCircleVariants}
                 cx="200"
                 cy="200"
-                r="199.5"
+                r={CIRCLE_RADIUS}
                 stroke="white"
                 strokeWidth="1"
                 strokeLinecap="round"
@@ -173,12 +174,12 @@ const PageLoading = () => {
               <motion.circle
                 cx="200"
                 cy="200"
-                r="199.5"
+                r={CIRCLE_RADIUS}
                 stroke="white"
                 strokeWidth="1"
                 fill="none"
-                strokeDasharray={Math.PI * 2 * 199.5}
-                strokeDashoffset={Math.PI * 2 * 199.5}
+                strokeDasharray={Math.PI * 2 * CIRCLE_RADIUS}
+                strokeDashoffset={Math.PI * 2 * CIRCLE_RADIUS}
                 variants={circleVariants}
                 strokeLinecap="round"
               />
