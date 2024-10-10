@@ -50,6 +50,7 @@ const Portfolio = () => {
                       label={t_button('explore')}
                       icon={ICONS.arrow}
                       fullWidth
+                      hover={false}
                     />
                   </Link>
                 }

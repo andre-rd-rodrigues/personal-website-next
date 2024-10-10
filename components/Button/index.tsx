@@ -8,6 +8,7 @@ interface ButtonProps {
   icon?: string;
   fullWidth?: boolean;
   onClick?: () => void;
+  hover?: boolean;
 }
 
 const ButtonWithText: FC<ButtonProps> = ({
@@ -15,13 +16,14 @@ const ButtonWithText: FC<ButtonProps> = ({
   icon,
   fullWidth,
   onClick,
+  hover = true,
 }) => {
   return (
     <motion.button
       style={{ width: fullWidth ? '100%' : 'auto' }}
       className="relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       onClick={onClick}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: hover ? 1.1 : 1 }}
       whileTap={{ scale: 0.9 }}
     >
       <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0000_0%,#ff56cd_60%,#0000_100%)]" />

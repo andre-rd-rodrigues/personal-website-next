@@ -237,19 +237,20 @@ const Home = () => {
               {t('homepage.rebrand_hero.description')}
             </p>
           </motion.div>
+
           <motion.div
             variants={fadeInSlideInVariant}
             whileInView="visible"
             initial="hidden"
             viewport={{ once: true }}
-            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-[40px] sm:h-[500px] sm:w-4/5"
+            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-3xl sm:h-[500px] sm:w-4/5"
           >
             <Compare
               firstImage="/images/websites/bb_before.webp"
               secondImage="/images/websites/bb_after.webp"
               firstImageClassName="object-cover object-left-top w-full"
               secondImageClassName="object-cover  w-full"
-              className="h-full w-full rounded-[22px] md:rounded-lg"
+              className="h-full w-full rounded-2xl"
               slideMode="drag"
             />
           </motion.div>

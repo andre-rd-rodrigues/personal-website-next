@@ -8,7 +8,7 @@
   left: 0px;
   z-index: -1;
   img {
-    animation: slowZoom 35s infinite;
+    animation: slowZoom 100s infinite;
   }
 
   &::after {
@@ -25,9 +25,9 @@
 
 @keyframes slowZoom {
   0% {
-    transform: scale(1); // Initial size
+    transform: scale(1) rotate(0deg);
   }
   100% {
-    transform: scale(1.5); // End size, zoom in slightly
+    transform: scale(2) rotate(90deg);
   }
 }

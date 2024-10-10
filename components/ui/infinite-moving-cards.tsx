@@ -73,7 +73,7 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               />
-              <span className="relative z-20 text-sm font-normal leading-[1.6] text-gray-100">
+              <span className="text-md relative z-20 font-light leading-[1.6]">
                 &quot;{t(item.review)}&quot;
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center gap-5">
@@ -88,10 +88,8 @@ export const InfiniteMovingCards = ({
                   />
                 </div>
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm font-normal leading-[1.6] text-gray-400">
-                    {item.client_name}
-                  </span>
-                  <span className="text-sm font-normal leading-[1.6] text-gray-400">
+                  <span className="leading-[1.6]">{item.client_name}</span>
+                  <span className="text-sm font-light italic leading-[1.6]">
                     {t(item.client_details)}
                   </span>
                 </span>
