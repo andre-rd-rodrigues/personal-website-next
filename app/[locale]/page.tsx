@@ -1,8 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
-import styles from '@/assets/styles/pages/homepage.module.scss';
-
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import HeroSection from '@/components/Hero';
@@ -45,48 +43,43 @@ const Home = () => {
         src="/animations/liquid.webm"
         placeholder="/images/liquid.webp"
       >
-        <div className="relative z-10 flex h-[100vh] w-full flex-col items-center justify-center px-5 sm:mx-12">
-          <motion.div
-            variants={containerVariant}
-            whileInView="visible"
-            initial="hidden"
-            viewport={{ once: true }}
-            className={`${styles.title} mx-auto flex flex-col items-center justify-center text-center`}
+        <motion.div
+          variants={containerVariant}
+          whileInView="visible"
+          initial="hidden"
+          viewport={{ once: true }}
+          className="relative z-10 flex h-[100vh] w-full flex-col items-center justify-center"
+        >
+          <motion.span variants={blurVariant}>
+            <Image
+              src="/images/logo_light.webp"
+              width={200}
+              height={200}
+              className="mx-auto"
+              alt="André Rodrigo - Software Engineer"
+            />
+          </motion.span>
+          <motion.h1
+            variants={fadeInSlideInVariant}
+            className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]"
           >
-            <motion.span variants={blurVariant}>
-              <Image
-                src="/images/logo_light.webp"
-                width={200}
-                height={200}
-                className="mx-auto"
-                alt="André Rodrigo - Software Engineer"
-              />
-            </motion.span>
-            <motion.h1
-              variants={fadeInSlideInVariant}
-              className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]"
-            >
-              André Rodrigo
-            </motion.h1>
+            André Rodrigo
+          </motion.h1>
 
-            <motion.p
-              variants={fadeInSlideInVariant}
-              className="mt-8 w-full text-center opacity-70"
-            >
-              {t('homepage.subtitle')}
-            </motion.p>
-            <div className="mt-8 flex w-full items-center justify-center gap-3">
-              <motion.span variants={fadeInSlideInVariant}>
-                <Link href="/portfolio/web">
-                  <Button.Minimal
-                    label={t('homepage.cta')}
-                    icon={ICONS.arrow}
-                  />
-                </Link>
-              </motion.span>
-            </div>
-          </motion.div>
-        </div>
+          <motion.p
+            variants={fadeInSlideInVariant}
+            className="mt-8 w-full text-center opacity-70"
+          >
+            {t('homepage.subtitle')}
+          </motion.p>
+          <div className="mt-8 flex w-full items-center justify-center gap-3">
+            <motion.span variants={fadeInSlideInVariant}>
+              <Link href="/portfolio/web">
+                <Button.Minimal label={t('homepage.cta')} icon={ICONS.arrow} />
+              </Link>
+            </motion.span>
+          </div>
+        </motion.div>
       </VideoBackground>
 
       {/* About Me */}

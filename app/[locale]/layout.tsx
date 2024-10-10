@@ -15,6 +15,7 @@ import AnalyticsBanner from '@/components/AnalyticsBanner';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import GlobalBackground from '@/components/GlobalBackground';
+import PageLoading from '@/components/PageLoading';
 
 export async function generateMetadata({
   params: { locale },
@@ -54,6 +55,7 @@ const RootLayout = ({
         </NextIntlClientProvider>
       </body>
       <GlobalBackground />
+      <PageLoading />
     </html>
   );
 };
