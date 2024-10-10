@@ -125,6 +125,18 @@ const PageLoading = () => {
             transition: { delay: 0.8, duration: ANIMATION_DURATION },
           }}
         >
+          {/* Background */}
+          <Image
+            src="/images/liquid.webp"
+            alt="Logo"
+            objectFit="cover"
+            layout="fill"
+            priority
+            className="blur-3xl"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50" />
+
+          {/* Content */}
           <motion.div
             className="relative flex flex-col items-center justify-center"
             initial="initial"
