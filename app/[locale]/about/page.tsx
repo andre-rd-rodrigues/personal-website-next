@@ -43,6 +43,7 @@ const About = () => {
           variants={containerVariant}
           initial="hidden"
           whileInView="visible"
+          viewport={{ once: true }}
           className="md:24 mb-24"
         >
           <motion.p variants={fadeInVariant} className="mb-12">
@@ -82,6 +83,7 @@ const About = () => {
               variants={fadeInSlideLeftVariant}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="mb-5 text-6xl font-extralight"
             >
               {t('experience.title')}
@@ -97,6 +99,7 @@ const About = () => {
               variants={containerVariant}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               className="mt-4 flex items-end justify-end gap-3"
             >
               <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
@@ -115,7 +118,7 @@ const About = () => {
         <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
         <HeroSection.Cta
           text={t('contact.description')}
-          cta={<TypeformPopup />}
+          cta={<TypeformPopup.Button />}
         />
       </Section>
     </PageContainer>

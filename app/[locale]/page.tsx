@@ -1,8 +1,6 @@
 'use client';
 import { useTranslations } from 'next-intl';
 
-import styles from '@/assets/styles/pages/homepage.module.scss';
-import AnimatedText from '@/components/AnimatedText';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import HeroSection from '@/components/Hero';
@@ -13,7 +11,6 @@ import Container from '@/components/Container';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import TypeformPopup from '@/components/TypeformPopup';
-import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FlipWords } from '@/components/ui/flip-words';
 import { HeroParallax } from '@/components/ui/hero-parallax';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
@@ -22,6 +19,7 @@ import ICONS from '@/constants/icons.constants';
 import TESTIMONIALS from '@/constants/testimonials.constants';
 import { EXPERTISE, PROJECTS } from '@/data/info.data';
 import {
+  blurVariant,
   containerVariant,
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
@@ -29,9 +27,10 @@ import {
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Compare } from '@/components/ui/compare';
 import useTranslation from '@/hooks/useTranslation';
+import VideoBackground from '@/components/VideoBackground';
+import Image from 'next/image';
 
 const Home = () => {
   const t = useTranslations();
@@ -40,73 +39,72 @@ const Home = () => {
   return (
     <>
       {/* Title */}
-      <AuroraBackground className="relative">
-        <div className="relative z-10 grid h-[100vh] grid-cols-1 gap-6 overflow-hidden px-5 sm:mx-12 sm:h-[80vh] md:grid-cols-12">
-          <motion.div
-            variants={containerVariant}
-            whileInView="visible"
-            initial="hidden"
-            className={`${styles.title} col-span-12 mx-auto flex flex-col items-center justify-center text-center sm:col-span-8 sm:items-start sm:text-start`}
-          >
-            <h1 className="absolute opacity-0">André Rodrigo</h1>
-            <AnimatedText.Fade
-              className="py-3 text-5xl sm:text-[80px]"
-              text="André Rodrigo"
-              underline
-            />
-
-            <motion.p
-              variants={fadeInSlideLeftVariant}
-              className="mt-5 opacity-70"
-            >
-              {t('homepage.subtitle')}
-            </motion.p>
-            <div className="mt-8 flex gap-3">
-              <motion.span variants={fadeInSlideInVariant}>
-                <Link href="/portfolio/web">
-                  <Button.Text label={t('homepage.cta')} icon={ICONS.arrow} />
-                </Link>
-              </motion.span>
-              <motion.span variants={fadeInSlideInVariant}>
-                <TypeformPopup />
-              </motion.span>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Profile */}
-        <div className="absolute bottom-0 right-0 z-0 h-[750px] w-[500px] opacity-30 sm:opacity-70">
-          <motion.span
-            variants={fadeInVariant}
-            initial="hidden"
-            animate="visible"
-          >
+      <VideoBackground
+        src="/animations/liquid.webm"
+        placeholder="/images/liquid.webp"
+      >
+        <motion.div
+          variants={containerVariant}
+          whileInView="visible"
+          initial="hidden"
+          viewport={{ once: true }}
+          className="relative z-10 flex h-[100vh] w-full flex-col items-center justify-center"
+        >
+          <motion.span variants={blurVariant}>
             <Image
-              src="/images/profile.webp"
+              src="/images/logo_light.webp"
+              width={200}
+              height={200}
+              className="mx-auto"
               alt="André Rodrigo - Software Engineer"
-              objectFit="contain"
-              layout="fill"
             />
           </motion.span>
-        </div>
-      </AuroraBackground>
+          <motion.h1
+            variants={fadeInSlideInVariant}
+            className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]"
+          >
+            André Rodrigo
+          </motion.h1>
 
+          <motion.p
+            variants={fadeInSlideInVariant}
+            className="mt-8 w-full text-center opacity-70"
+          >
+            {t('homepage.subtitle')}
+          </motion.p>
+          <div className="mt-8 flex w-full items-center justify-center gap-3">
+            <motion.span variants={fadeInSlideInVariant}>
+              <Link href="/portfolio/web">
+                <Button.Minimal label={t('homepage.cta')} icon={ICONS.arrow} />
+              </Link>
+            </motion.span>
+          </div>
+        </motion.div>
+      </VideoBackground>
+
+      {/* About Me */}
       <Container>
-        {/* About Me */}
         <Section className="md:my-56">
           <div className="grid gap-6 md:grid-cols-12">
-            <div className="col-span-12 flex h-full justify-center sm:col-span-5">
+            <motion.div
+              variants={fadeInVariant}
+              viewport={{ once: true }}
+              initial="hidden"
+              whileInView="visible"
+              className="col-span-12 flex h-full justify-center sm:col-span-5"
+            >
               <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
                 <InfoCounter label={t('about.experience.years')} end={4} />
                 <InfoCounter label={t('about.experience.projects')} end={15} />
               </div>
-            </div>
+            </motion.div>
             <div className="col-span-12 sm:col-span-7">
               <motion.h2
                 variants={fadeInSlideLeftVariant}
                 initial="hidden"
                 whileInView="visible"
                 className="mb-10 text-6xl"
+                viewport={{ once: true }}
               >
                 {t('homepage.about.title')}
               </motion.h2>
@@ -114,6 +112,7 @@ const Home = () => {
                 variants={fadeInVariant}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
               >
                 {t('homepage.about.description')}
               </motion.p>
@@ -122,6 +121,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView="visible"
                 className="mt-4 flex items-end justify-end gap-3"
+                viewport={{ once: true }}
               >
                 <motion.span variants={fadeInSlideInVariant}>
                   <a href={CONTACTS.LINKEDIN} target="_">
@@ -148,6 +148,7 @@ const Home = () => {
             variants={containerVariant}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
           >
             {EXPERTISE.map(({ name, description, src }, i) => (
@@ -169,6 +170,7 @@ const Home = () => {
             whileInView="visible"
             initial="hidden"
             className="mt-6 text-center"
+            viewport={{ once: true }}
           >
             <Link href="/skills">
               <Button.Text
@@ -192,6 +194,7 @@ const Home = () => {
         variants={fadeInSlideInVariant}
         whileInView="visible"
         initial="hidden"
+        viewport={{ once: true }}
         className="mt-6 text-center"
       >
         <Link href="/portfolio">
@@ -203,13 +206,14 @@ const Home = () => {
         </Link>
       </motion.div>
 
+      {/* Rebranding hero */}
       <Container>
-        {/* Rebranding hero */}
         <Section>
           <motion.div
             variants={fadeInSlideLeftVariant}
             whileInView="visible"
             initial="hidden"
+            viewport={{ once: true }}
             className="mb-4 text-5xl md:mb-12 md:w-5/6 md:text-7xl"
           >
             <h2 className="text-4xl md:text-6xl">
@@ -226,18 +230,20 @@ const Home = () => {
               {t('homepage.rebrand_hero.description')}
             </p>
           </motion.div>
+
           <motion.div
             variants={fadeInSlideInVariant}
             whileInView="visible"
             initial="hidden"
-            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-[40px] sm:h-[500px] sm:w-4/5"
+            viewport={{ once: true }}
+            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-3xl sm:h-[500px] sm:w-4/5"
           >
             <Compare
               firstImage="/images/websites/bb_before.webp"
               secondImage="/images/websites/bb_after.webp"
               firstImageClassName="object-cover object-left-top w-full"
               secondImageClassName="object-cover  w-full"
-              className="h-full w-full rounded-[22px] md:rounded-lg"
+              className="h-full w-full rounded-2xl"
               slideMode="drag"
             />
           </motion.div>
@@ -253,7 +259,9 @@ const Home = () => {
         <Section className="md:my-56">
           <HeroSection.Cta
             text={t('homepage.contact.description')}
-            cta={<TypeformPopup label="schedule" icon={ICONS.calendar} />}
+            cta={
+              <TypeformPopup.Button label="schedule" icon={ICONS.calendar} />
+            }
           />
         </Section>
       </Container>

@@ -40,6 +40,7 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
           ease: [0.35, 0, 0, 1],
           delay: options?.subtitleDelay || 2,
         }}
+        viewport={{ once: true }}
       >
         {subtitle}
       </motion.div>
@@ -56,8 +57,9 @@ const HeroCtaSection: React.FC<{
     <motion.div
       variants={containerVariant}
       initial="hidden"
+      viewport={{ once: true }}
       whileInView="visible"
-      className="border-1 relative h-full rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-[40px] md:px-12 md:py-16"
+      className="relative h-full rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-3xl md:px-12 md:py-16"
     >
       <AnimatedText.Fade
         text={text}
@@ -80,8 +82,9 @@ export function HeroFlipWords({ children, className }: FlipWordsProps) {
     <motion.div
       variants={containerVariant}
       initial="hidden"
+      viewport={{ once: true }}
       whileInView="visible"
-      className={`border-1 relative flex h-full items-center rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-[40px] md:px-12 md:py-20 ${className}`}
+      className={`relative flex h-full items-center rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-9 shadow-lg backdrop-blur-3xl md:px-12 md:py-20 ${className}`}
     >
       <div className="mx-auto text-center text-4xl font-light sm:text-start sm:font-extralight">
         {children}

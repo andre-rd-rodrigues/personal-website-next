@@ -19,53 +19,11 @@ $breaking-point-sm: 576px;
 $breaking-point-xs: 380px;
 $breaking-point-xxs: 330px;
 
-//Shapes
-@mixin read_button {
-  color: color(dark);
-  @include hover_underline(color(dark));
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-}
-
-//hover
-@mixin hover_underline($color) {
-  margin: 0 14px;
-  padding-bottom: 2px;
-  background-image: linear-gradient($color, $color);
-  background-position: 0 100%; /*OR bottom left*/
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  transition:
-    background-size 0.3s,
-    background-position 0s 0.3s,
-    letter-spacing 0.3s;
-  &:hover {
-    color: $color;
-    background-position: 100% 100%; /*OR bottom right*/
-    background-size: 100% 2px;
-  }
-}
-
 @mixin hover_scale($size, $time) {
   transition: $time ease;
   cursor: pointer;
   &:hover {
     transform: scale($size);
-  }
-}
-
-@mixin date_category_container {
-  display: flex;
-  justify-content: space-between;
-  color: $grey;
-  & p {
-    font-size: var(--fs-s);
-
-    &:first-child {
-      text-transform: uppercase;
-      letter-spacing: 1.4px;
-    }
   }
 }
 

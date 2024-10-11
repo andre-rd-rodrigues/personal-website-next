@@ -3,7 +3,7 @@
 .wrapper {
   overflow: hidden;
   width: 100%;
-
+  border-radius: 20px;
   &:hover {
     .image {
       background-color: antiquewhite;
@@ -17,7 +17,6 @@
   }
 }
 .image {
-  border-radius: 10px;
   position: relative;
   @include hover_scale(1.1, 0.4s);
   width: 100%;
@@ -25,6 +24,7 @@
   background: center center no-repeat;
   background-color: black;
   background-size: cover;
+  border-radius: 20px;
 }
 
 .overlay {

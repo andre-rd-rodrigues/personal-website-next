@@ -27,6 +27,7 @@
 
 * {
   color: white;
+  font-family: var(--font-jost);
 }
 
 body {
@@ -38,9 +39,11 @@ nav {
   margin: auto;
 }
 
-p {
-  font-weight: 200;
-  font-size: var(--fs-m);
+p,
+ul,
+a {
+  font-weight: 300;
+  font-size: 1.2rem;
   white-space: break-spaces;
 }
 
@@ -50,7 +53,6 @@ a {
 }
 
 h2 {
-  font-family: var(--font-jost) !important;
   font-weight: 300;
 }
 

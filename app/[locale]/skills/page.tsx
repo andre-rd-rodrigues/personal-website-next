@@ -37,6 +37,7 @@ const Skills = () => {
           variants={fadeInSlideLeftVariant}
           whileInView="visible"
           initial="hidden"
+          viewport={{ once: true }}
         >
           {t('description')}
         </motion.p>

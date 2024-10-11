@@ -111,11 +111,13 @@ export const Header = () => {
         style={{
           fontFamily: 'var(--font-jost)',
         }}
-        className="text-4xl font-light md:text-6xl"
+        className="text-4xl md:text-6xl"
       >
         {t('title')}
       </p>
-      <p className="mt-8 max-w-2xl md:text-xl">{t('description')}</p>
+      <p className="mt-8 max-w-2xl font-normal md:text-xl">
+        {t('description')}
+      </p>
     </div>
   );
 };
@@ -136,11 +138,10 @@ export const ProductCard = ({
       style={{
         x: translate,
       }}
-      whileHover={{
-        y: -20,
-      }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
       key={product.title}
-      className="group/product relative h-96 w-[35rem] flex-shrink-0"
+      className="group/product relative h-96 w-[35rem] flex-shrink-0 overflow-hidden rounded-2xl"
     >
       <Link
         href={product.link}

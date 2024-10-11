@@ -6,7 +6,7 @@ const InfoCounter = ({ label, end }: { label: string; end: number }) => {
 
   return (
     <div>
-      <p ref={counterRef} className="text-8xl font-thin text-purple-500">
+      <p ref={counterRef} className="text-8xl font-thin text-[#ff56cd]">
         {'+'} <CountUp isCounting={counterInView} end={end} duration={3} />
       </p>
       <p className="mt-3">{label}</p>

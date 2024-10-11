@@ -50,6 +50,7 @@ const Blog: NextPage = () => {
         <motion.div
           initial="hidden"
           animate="visible"
+          viewport={{ once: true }}
           variants={fadeInSlideLeftVariant}
           className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
         >
@@ -63,6 +64,7 @@ const Blog: NextPage = () => {
         <motion.div
           initial="visible"
           exit="hidden"
+          viewport={{ once: true }}
           variants={fadeInVariant}
           className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
         >
@@ -73,11 +75,11 @@ const Blog: NextPage = () => {
       <motion.div
         initial="visible"
         animate="visible"
+        viewport={{ once: true }}
         variants={containerVariant}
         className="flex flex-wrap justify-center gap-5"
       >
         {/* Loading */}
-
         {loading &&
           MOCK_POSTS.map((i) => (
             <motion.div
