@@ -1,8 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { fadeInSlideInVariant } from '@/motion/motionVariants';
-import { Icon } from '@iconify/react';
-import ICONS from '@/constants/icons.constants';
+import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 
 interface Props {
   show: boolean;
@@ -11,6 +8,16 @@ interface Props {
 }
 
 const Modal = ({ show, onHide, children }: Props) => {
+  const handleDragEnd = (
+    _: MouseEvent | TouchEvent | PointerEvent,
+    info: PanInfo,
+  ) => {
+    // Close the modal if dragged down sufficiently or with enough velocity
+    if (info.point.y > 1700 || info.velocity.y > 765) {
+      onHide();
+    }
+  };
+
   return (
     <AnimatePresence>
       {show && (
@@ -19,7 +26,7 @@ const Modal = ({ show, onHide, children }: Props) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-end justify-center sm:items-center sm:p-4"
           onClick={onHide}
         >
           <motion.div
@@ -29,25 +36,22 @@ const Modal = ({ show, onHide, children }: Props) => {
             exit={{ opacity: 0 }}
           />
           <motion.div
-            variants={fadeInSlideInVariant}
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={0.5}
+            onDragEnd={handleDragEnd}
+            variants={{
+              hidden: { y: 50, opacity: 0 },
+              visible: { y: 0, opacity: 1 },
+              exit: { y: 50, opacity: 0 },
+            }}
             initial="hidden"
             animate="visible"
             exit="exit"
             whileInView="visible"
-            onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-            className="border-1 relative w-full max-w-7xl rounded-lg border-gray-500 border-opacity-20 bg-gray-800 bg-opacity-10 p-8 shadow-lg backdrop-blur-3xl"
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full rounded-t-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-8 backdrop-blur-3xl sm:max-w-7xl sm:rounded-lg sm:shadow-lg"
           >
-            <motion.div
-              onClick={onHide}
-              className="flex -translate-y-4 translate-x-5 justify-end"
-            >
-              <Icon
-                icon={ICONS.close}
-                fontSize={34}
-                className="cursor-pointer"
-                color="white"
-              />
-            </motion.div>
             {children}
           </motion.div>
         </motion.div>

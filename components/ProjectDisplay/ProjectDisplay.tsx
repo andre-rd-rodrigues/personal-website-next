@@ -12,6 +12,7 @@ import Modal from '../Modal';
 
 interface ProjectDisplayProps {
   imgSrc: string;
+  video?: string;
   logo?: string;
   label: string;
   description: string;
@@ -29,6 +30,7 @@ interface ProjectDisplayProps {
 
 const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   imgSrc,
+  video,
   label,
   description,
   techStack,
@@ -63,7 +65,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
       {/* Modal */}
       <Modal onHide={() => setIsModalOpen(false)} show={isModalOpen}>
         <div className="grid grid-cols-2 gap-10">
-          <div className="col-span-1 flex h-full items-center justify-center">
+          <div className="col-span-2 flex h-full items-center justify-center md:col-span-1">
             <video
               className="h-full rounded-lg"
               autoPlay
@@ -71,13 +73,16 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
               loop
               playsInline
             >
-              <source src="/animations/liquid.webm" type="video/webm" />
+              <source
+                src={video || '/animations/liquid.webm'}
+                type="video/webm"
+              />
             </video>
           </div>
-          <div className="col-span-1 flex h-full flex-col justify-between">
+          <div className="col-span-2 flex h-full flex-col justify-between md:col-span-1">
             <div>
-              <h4 className="inline-block text-5xl font-light">
-                {label} <hr className="mb-7 w-full border-[#ff56cd]" />
+              <h4 className="mb-5 inline-block text-4xl font-light sm:mb-7 sm:text-5xl">
+                {label} <hr className="w-full border-[#ff56cd]" />
               </h4>
               <p>{t(description)}</p>
               {/* Tech Stack */}
