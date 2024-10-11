@@ -20,17 +20,18 @@
   margin-top: 10px;
   & svg,
   path {
-    color: #fe3ac3;
+    color: white;
   }
 }
 
 .picker {
   margin-top: 0.5rem;
-  background-color: #000000ce;
-  backdrop-filter: blur(3px);
+  background-color: #00000063;
+  backdrop-filter: blur(40px);
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #4d4d4d3d;
 }
 
 .list {
@@ -43,13 +44,13 @@
   color: white;
   margin: 1rem 0;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 1;
   transition: 0.2s ease;
-  font-weight: 400;
+  font-weight: 300;
 
   &:hover,
   &.active {
-    opacity: 1;
+    color: var(--color-primary);
   }
 }
 

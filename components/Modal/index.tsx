@@ -35,13 +35,17 @@ const Modal = ({ show, onHide, children }: Props) => {
             exit="exit"
             whileInView="visible"
             onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-            className="border-1 relative w-full max-w-4xl rounded-lg border-gray-500 border-opacity-20 bg-gray-800 bg-opacity-10 p-8 shadow-lg backdrop-blur-3xl"
+            className="border-1 relative w-full max-w-7xl rounded-lg border-gray-500 border-opacity-20 bg-gray-800 bg-opacity-10 p-8 shadow-lg backdrop-blur-3xl"
           >
-            <motion.div onClick={onHide} className="00 flex justify-end">
+            <motion.div
+              onClick={onHide}
+              className="flex -translate-y-4 translate-x-5 justify-end"
+            >
               <Icon
                 icon={ICONS.close}
-                fontSize={40}
+                fontSize={34}
                 className="cursor-pointer"
+                color="white"
               />
             </motion.div>
             {children}
