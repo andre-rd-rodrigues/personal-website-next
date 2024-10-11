@@ -45,7 +45,7 @@ const AnalyticsBanner = () => {
           </div>
           <p className="mt-2 text-sm">{t('description')}</p>
           <div className="mt-5 text-end">
-            <Button.Text label={t('accept')} onClick={handleClose} />
+            <Button.Minimal label={t('accept')} onClick={handleClose} />
           </div>
         </motion.div>
       )}
