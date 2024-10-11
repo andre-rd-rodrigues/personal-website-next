@@ -76,7 +76,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Barbizani',
-
+      video: '/videos/bb.webm',
       description: 'web.projects.bb',
       techStack: {
         frontend: ['Next.js', 'HTML5', 'CSS3', 'SCSS', 'TailwindCSS'],
@@ -90,7 +90,7 @@ const PROJECTS = {
       imgSrc: '/images/websites/carolina.webp',
       label: 'Carolina Jardim',
       description: 'web.projects.carolina',
-
+      video: '/videos/ana.webm',
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },
@@ -103,7 +103,7 @@ const PROJECTS = {
       imgSrc: '/images/websites/barber.webp',
       label: 'Barber Studio',
       description: 'web.projects.barber',
-
+      video: '/videos/barber.webm',
       techStack: {
         frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
       },
@@ -116,6 +116,7 @@ const PROJECTS = {
       imgSrc: '/images/websites/itstudios.webp',
       label: 'IT Studios',
       description: 'web.projects.it',
+      video: '/videos/it.webm',
       techStack: {
         frontend: ['HTML5', 'CSS3', 'JavaScript'],
       },
@@ -126,6 +127,7 @@ const PROJECTS = {
     },
     {
       imgSrc: '/images/websites/pipedrive.webp',
+      video: '/videos/pipedrive.webm',
       label: 'Pipedrive',
       description: 'web.projects.pipedrive',
       techStack: {

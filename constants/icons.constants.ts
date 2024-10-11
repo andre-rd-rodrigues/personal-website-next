@@ -11,6 +11,8 @@ const ICONS = {
   menu: 'ri:menu-line',
   calendar: 'clarity:calendar-line',
   close: 'iconamoon:close-thin',
+  stack: 'radix-icons:stack',
+  arrowMinimal: 'akar-icons:arrow-right',
 };
 
 export default ICONS;

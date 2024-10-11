@@ -32,7 +32,7 @@ const BlogMainArticleCard = ({ post }: Props) => {
             </div>
             <div>
               <div
-                className="my-5 w-full text-4xl"
+                className="my-5 w-full text-4xl text-white"
                 style={{
                   fontFamily: 'var(--font-jost)',
                 }}

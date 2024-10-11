@@ -3,10 +3,9 @@
 .wrapper {
   overflow: hidden;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   &:hover {
     .image {
-      background-color: antiquewhite;
       &::before {
         opacity: 1;
       }
@@ -24,7 +23,7 @@
   background: center center no-repeat;
   background-color: black;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .overlay {
