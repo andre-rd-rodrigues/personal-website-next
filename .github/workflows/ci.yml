@@ -39,7 +39,7 @@ jobs:
         # Add your specific lint script from package.json
 
       - name: Run Prettier Check
-        run: pnpm run prettier-check
+        run: pnpm run prettier
         # Ensure your package.json has a script that runs Prettier in check mode
 
       - name: Run TypeScript Compiler
