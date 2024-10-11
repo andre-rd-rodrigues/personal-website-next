@@ -119,7 +119,7 @@ const PageLoading = () => {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-r from-zinc-900 via-indigo-900 to-zinc-900"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{
