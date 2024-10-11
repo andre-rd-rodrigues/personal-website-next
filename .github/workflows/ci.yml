@@ -4,35 +4,48 @@ on:
   pull_request:
     branches:
       - main
+      - master # Adjust as necessary for your default branch name.
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04 # Using a specific version of Ubuntu for consistency
+    strategy:
+      matrix:
+        node-version: [18.17] # Adjust the Node.js version as needed
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18.17.0'
-          cache: 'pnpm'
-
       - name: Install pnpm
-        run: npm install -g pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+        # Installs the specified version of pnpm
 
-      - name: Install Dependencies
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+        # Sets up Node.js and configures caching for pnpm
+
+      - name: Install dependencies
         run: pnpm install
+        # Installs dependencies using pnpm
 
       - name: Run ESLint
-        run: pnpm eslint . --ext .js,.jsx,.ts,.tsx
+        run: pnpm run lint
+        # Add your specific lint script from package.json
 
       - name: Run Prettier Check
-        run: pnpm prettier --check .
+        run: pnpm run prettier-check
+        # Ensure your package.json has a script that runs Prettier in check mode
 
       - name: Run TypeScript Compiler
-        run: pnpm tsc --noEmit
+        run: pnpm run type-check
+        # Ensure your package.json has a script that runs the TypeScript compiler with --noEmit
 
       - name: Build
         run: pnpm run build
+        # Optionally, build your project if necessary
