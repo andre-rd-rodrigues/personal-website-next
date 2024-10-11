@@ -35,13 +35,13 @@ const AnalyticsBanner = () => {
           animate="visible"
           exit="exit"
           whileInView="visible"
-          className="bg-dark fixed bottom-0 right-0 z-10 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
+          className="bg-dark fixed bottom-5 right-5 z-10 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
         >
           <div className="flex items-center gap-2">
             <motion.span animate={slowRotateVariant}>
               <Icon icon="fluent:cookies-16-regular" />
             </motion.span>
-            <h2 className="text-lg font-bold">Cookies</h2>
+            <h2 className="text-lg font-normal">Cookies</h2>
           </div>
           <p className="mt-2 text-sm">{t('description')}</p>
           <div className="mt-5 text-end">
