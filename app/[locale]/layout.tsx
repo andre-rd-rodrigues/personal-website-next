@@ -11,7 +11,7 @@ import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
 import Analytics from '@/components/Analytics';
-import AnalyticsBanner from '@/components/AnalyticsBanner';
+import Cookies from '@/components/Cookies';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import GlobalBackground from '@/components/GlobalBackground';
@@ -46,7 +46,7 @@ const RootLayout = ({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
-          <AnalyticsBanner />
+          <Cookies />
           <Footer />
 
           {/* Metrics */}

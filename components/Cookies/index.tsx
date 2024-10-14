@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { scaleSpringVariant, slowRotateVariant } from '@/motion/motionVariants';
 import Button from '../Button';
 
-const AnalyticsBanner = () => {
+const Cookies = () => {
   const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations('analytics_banner');
 
@@ -35,7 +35,7 @@ const AnalyticsBanner = () => {
           animate="visible"
           exit="exit"
           whileInView="visible"
-          className="bg-dark fixed bottom-5 right-5 z-10 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
+          className="bg-dark fixed bottom-0 right-0 z-10 m-1 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
         >
           <div className="flex items-center gap-2">
             <motion.span animate={slowRotateVariant}>
@@ -53,4 +53,4 @@ const AnalyticsBanner = () => {
   );
 };
 
-export default AnalyticsBanner;
+export default Cookies;
