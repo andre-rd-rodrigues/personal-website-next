@@ -119,7 +119,7 @@ const PageLoading = () => {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-900"
           initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           exit={{
@@ -134,7 +134,7 @@ const PageLoading = () => {
             objectFit="cover"
             layout="fill"
             priority
-            className="blur-3xl"
+            className="blur-2xl sm:blur-3xl"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
 

@@ -214,7 +214,7 @@ const Home = () => {
             whileInView="visible"
             initial="hidden"
             viewport={{ once: true }}
-            className="mb-4 text-5xl md:mb-12 md:w-5/6 md:text-7xl"
+            className="mb-7 text-5xl md:mb-12 md:w-5/6 md:text-7xl"
           >
             <h2 className="text-4xl md:text-6xl">
               {t('homepage.rebrand_hero.title')}
@@ -226,7 +226,7 @@ const Home = () => {
                 )}
               />
             </h2>
-            <p className="mt-8 md:w-3/5 md:text-xl">
+            <p className="mt-9 md:w-3/5 md:text-xl">
               {t('homepage.rebrand_hero.description')}
             </p>
           </motion.div>

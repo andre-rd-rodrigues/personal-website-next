@@ -44,8 +44,8 @@ export default function Navbar() {
 
   return (
     <nav className="fixed left-4 right-4 top-0 z-50 sm:top-4" ref={navRef}>
-      <div className="border-1 bg-dark relative h-full rounded-full bg-opacity-50 shadow-lg backdrop-blur-[20px]">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative h-full rounded-full bg-black bg-opacity-10 shadow-lg backdrop-blur-[20px]">
+        <div className="mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
