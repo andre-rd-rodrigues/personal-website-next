@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
+import ICONS from '@/constants/icons.constants';
+import { Icon } from '@iconify/react';
+import useIsMobile from '@/hooks/useIsMobile';
 
 interface Props {
   show: boolean;
@@ -8,6 +11,8 @@ interface Props {
 }
 
 const Modal = ({ show, onHide, children }: Props) => {
+  const isMobile = useIsMobile(767);
+
   const handleDragEnd = (
     _: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo,
@@ -35,23 +40,39 @@ const Modal = ({ show, onHide, children }: Props) => {
             animate={{ opacity: 0.8 }}
             exit={{ opacity: 0 }}
           />
+
           <motion.div
             drag="y"
             dragConstraints={{ top: 0, bottom: 0 }}
-            dragElastic={0.5}
+            dragElastic={1}
             onDragEnd={handleDragEnd}
             variants={{
               hidden: { y: 50, opacity: 0 },
-              visible: { y: 0, opacity: 1 },
-              exit: { y: 50, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: { duration: 0.2, type: 'linear' },
+              },
+              exit: {
+                opacity: 0,
+                transition: { duration: 0.1, type: 'linear' },
+              },
             }}
             initial="hidden"
             animate="visible"
             exit="exit"
             whileInView="visible"
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full rounded-t-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-8 backdrop-blur-3xl sm:max-w-7xl sm:rounded-lg sm:shadow-lg"
+            className={`relative w-full rounded-t-3xl border border-gray-800 bg-gray-800 bg-opacity-10 px-8 pb-8 ${isMobile || 'pt-8'} backdrop-blur-3xl sm:max-w-7xl sm:rounded-lg sm:shadow-lg`}
           >
+            {isMobile && (
+              <Icon
+                icon={ICONS.drag}
+                fontSize={35}
+                color="grey"
+                className="mx-auto mb-4"
+              />
+            )}
             {children}
           </motion.div>
         </motion.div>

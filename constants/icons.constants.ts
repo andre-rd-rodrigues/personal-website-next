@@ -13,6 +13,7 @@ const ICONS = {
   close: 'iconamoon:close-thin',
   stack: 'radix-icons:stack',
   arrowMinimal: 'akar-icons:arrow-right',
+  drag: 'pepicons-pop:line-x',
 };
 
 export default ICONS;

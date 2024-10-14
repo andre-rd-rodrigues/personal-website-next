@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
  * @param {number} breakpoint - The max width in pixels to consider as mobile.
  * @returns {boolean} - True if the screen width is less than or equal to the breakpoint.
  */
-const useIsMobile = (breakpoint = 390) => {
+const useIsMobile = (breakpoint = 450) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
