@@ -4,7 +4,9 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  background-color: color(dark);
+  background-color: rgba(27, 27, 27, 0.305);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(128, 128, 128, 0.185);
   padding: 15px var(--padding-y);
   color: color(white);
   font-size: var(--fs-m);

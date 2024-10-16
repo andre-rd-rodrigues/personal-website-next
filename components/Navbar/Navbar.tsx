@@ -67,7 +67,7 @@ export default function Navbar() {
                     key={item.href}
                     /* @ts-expect-error href does not have the type */
                     href={item.href}
-                    className={`rounded-md px-3 py-2 text-[0.9rem] font-normal ${
+                    className={`rounded-md px-3 py-2 text-[1rem] font-normal ${
                       pathname === item.href
                         ? 'text-white'
                         : 'text-gray-300 hover:text-white'
