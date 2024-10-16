@@ -35,12 +35,19 @@ const PostCard = () => {
     <motion.div
       variants={fadeInVariant}
       exit="hidden"
-      className="w-full max-w-full animate-pulse px-6 md:w-[700px]"
+      className="animate-pulse"
     >
       {/* Image */}
       <div className="mt-4 h-40 rounded-xl bg-white opacity-40"></div>
       {/* Main Title */}
-      <div className="mt-4 h-16 rounded-xl bg-white opacity-40"></div>
+      <div className="mt-4 h-16 rounded-xl bg-white opacity-40">
+        <p className="opacity-0">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic debitis
+          aperiam, rerum exercitationem tempora facilis nisi laudantium iusto
+          repudiandae natus. Ipsa repudiandae quos hic voluptate accusantium
+          modi quisquam, delectus temporibus.
+        </p>
+      </div>
       {/* Text */}
       <div className="mt-4 h-5 rounded-xl bg-white px-5 opacity-40"></div>
       <div className="mt-4 h-5 rounded-xl bg-white px-5 opacity-40"></div>
@@ -57,9 +64,17 @@ const PostCard = () => {
 const BlogMainArticleCard = () => {
   return (
     <div className="animate-pulse">
-      <div className="group/card border-1 relative flex h-full w-full flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
-        <div className="w-1/2">
-          <div className="mb-3 h-4 w-full rounded bg-white opacity-40"></div>
+      <div className="group/card border-1 relative flex h-full w-full flex-wrap gap-10 rounded-lg md:flex-nowrap">
+        {/* Content */}
+        <div className="md:w-1/2">
+          <div className="mb-3 h-4 w-full rounded bg-white opacity-40">
+            <p className="opacity-0">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic
+              debitis aperiam, rerum exercitationem tempora facilis nisi
+              laudantium iusto repudiandae natus. Ipsa repudiandae quos hic
+              voluptate accusantium modi quisquam, delectus temporibus.
+            </p>
+          </div>
           <div className="mb-7 h-16 w-full rounded bg-white opacity-40"></div>
           <div className="mt-7 h-4 w-full rounded bg-white opacity-40"></div>
           <div className="mt-3 h-3 w-full rounded bg-white opacity-40"></div>
@@ -69,7 +84,8 @@ const BlogMainArticleCard = () => {
           </div>
         </div>
 
-        <div className="relative min-h-48 w-1/2 rounded-md bg-white opacity-40 sm:min-h-full"></div>
+        {/* Image */}
+        <div className="relative min-h-48 w-full rounded-md bg-white opacity-40 md:w-1/2"></div>
       </div>
     </div>
   );

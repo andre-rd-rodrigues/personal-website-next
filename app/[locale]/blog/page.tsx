@@ -59,7 +59,6 @@ const Blog: NextPage = () => {
       )}
 
       {/* Main Article */}
-
       {loading && (
         <motion.div
           initial="visible"
