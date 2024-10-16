@@ -4,7 +4,7 @@ const ICONS = {
   message: 'streamline:mail-send-email-message',
   linktree: 'ph:linktree-logo',
   instagram: 'ph:instagram-logo-light',
-  arrow: 'guidance:left-arrow',
+  arrow: 'akar-icons:arrow-right',
   git: 'akar-icons:github-fill',
   open: 'majesticons:open',
   facebook: 'ri:facebook-line',
@@ -12,7 +12,6 @@ const ICONS = {
   calendar: 'clarity:calendar-line',
   close: 'iconamoon:close-thin',
   stack: 'radix-icons:stack',
-  arrowMinimal: 'akar-icons:arrow-right',
   drag: 'pepicons-pop:line-x',
 };
 

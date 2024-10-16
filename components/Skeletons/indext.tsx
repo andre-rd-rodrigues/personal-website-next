@@ -6,7 +6,7 @@ const Post = () => {
     <motion.div
       variants={fadeInVariant}
       exit="hidden"
-      className="mx-0 animate-pulse sm:mx-32"
+      className="mx-0 animate-pulse sm:mx-20"
     >
       {/* Arrow */}
       <div className="my-12 h-10 w-10 rounded-full bg-white opacity-40"></div>
