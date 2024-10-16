@@ -70,7 +70,7 @@ const Portfolio = () => {
             </p>
           }
           options={{
-            subtitleDelay: 2,
+            subtitleDelay: 1,
           }}
         />
       </Section>

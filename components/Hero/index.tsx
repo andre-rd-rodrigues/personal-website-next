@@ -28,11 +28,11 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
     <div className={`text-white md:px-20 ${className}`}>
       <AnimatedText.Fade
         text={title}
-        className={`mb-4 text-5xl font-light sm:font-extralight md:mb-12 md:w-5/6 md:text-7xl ${textClassName}`}
+        className={`mb-7 text-5xl font-light md:mb-12 md:text-7xl lg:w-5/6 ${textClassName}`}
       />
 
       <motion.div
-        className="md:w-3/5"
+        className="md:w-4/5 lg:w-3/5"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
