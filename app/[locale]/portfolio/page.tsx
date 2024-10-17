@@ -10,13 +10,12 @@ import { WORK_CATEGORIES } from '@/data/info.data';
 import { useTranslations } from 'next-intl';
 
 import HeroSection from '@/components/Hero';
-import SectionTitle from '@/components/SectionTitle';
-import TypeformPopup from '@/components/TypeformPopup';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import ICONS from '@/constants/icons.constants';
-import TESTIMONIALS from '@/constants/testimonials.constants';
-import { Link } from '@/navigation';
 import Section from '@/components/Section';
+import SectionTitle from '@/components/SectionTitle';
+import Testimonials from '@/components/Testimonials';
+import TypeformPopup from '@/components/TypeformPopup';
+import ICONS from '@/constants/icons.constants';
+import { Link } from '@/navigation';
 
 const Portfolio = () => {
   const t = useTranslations('portfolio');
@@ -78,7 +77,7 @@ const Portfolio = () => {
       {/* Testimonials */}
       <Section>
         <SectionTitle title={t_testimonials('title')} />
-        <InfiniteMovingCards items={TESTIMONIALS} />
+        <Testimonials />
       </Section>
 
       {/* Contact */}

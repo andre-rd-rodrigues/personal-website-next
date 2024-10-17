@@ -9,15 +9,17 @@ import SectionTitle from '@/components/SectionTitle';
 
 import Container from '@/components/Container';
 import Section from '@/components/Section';
+import Testimonials from '@/components/Testimonials';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import TypeformPopup from '@/components/TypeformPopup';
+import { Compare } from '@/components/ui/compare';
 import { FlipWords } from '@/components/ui/flip-words';
 import { HeroParallax } from '@/components/ui/hero-parallax';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import VideoBackground from '@/components/VideoBackground';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
-import TESTIMONIALS from '@/constants/testimonials.constants';
 import { EXPERTISE, PROJECTS } from '@/data/info.data';
+import useTranslation from '@/hooks/useTranslation';
 import {
   blurVariant,
   containerVariant,
@@ -27,9 +29,6 @@ import {
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
-import { Compare } from '@/components/ui/compare';
-import useTranslation from '@/hooks/useTranslation';
-import VideoBackground from '@/components/VideoBackground';
 import Image from 'next/image';
 
 const Home = () => {
@@ -252,7 +251,7 @@ const Home = () => {
         {/* Testimonials */}
         <Section className="md:my-56">
           <SectionTitle tag="h2" title={t('testimonials.title')} />
-          <InfiniteMovingCards items={TESTIMONIALS} />
+          <Testimonials />
         </Section>
 
         {/* Contacts */}

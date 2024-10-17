@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const PageLoading = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(
+    process.env.NODE_ENV === 'production' ? true : false,
+  );
   const [progress, setProgress] = useState(0);
   const isMobile = useIsMobile();
 
@@ -13,6 +15,8 @@ const PageLoading = () => {
   const CIRCLE_RADIUS = isMobile ? 130 : 175;
 
   useEffect(() => {
+    if (!loading) return;
+
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -24,7 +28,7 @@ const PageLoading = () => {
       });
     }, ANIMATION_DURATION * 10);
     return () => clearInterval(interval);
-  }, []);
+  }, [loading]);
 
   const circleVariants = {
     initial: {
