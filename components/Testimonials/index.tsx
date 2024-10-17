@@ -57,33 +57,31 @@ const TestimonialCard = ({
 }) => {
   const t = useTranslations('testimonials');
   return (
-    <div
-      className="relative w-full rounded-2xl border border-gray-800 px-8 py-6"
+    <blockquote
+      className="relative mb-6 w-full rounded-2xl border border-gray-800 px-8 py-6"
       key={item.client_details}
     >
-      <blockquote>
-        <p className="text-md relative z-20 font-light leading-[1.6]">
-          &quot;{t(item.review)}&quot;
-        </p>
-        <div className="relative z-20 mt-6 flex flex-row items-center gap-5">
-          <div className="relative mt-4 h-16 w-16 overflow-hidden">
-            <Image
-              src={item.picture_path}
-              alt="Personal Picture"
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center center"
-              className="rounded-full"
-            />
-          </div>
-          <div className="flex flex-col gap-1">
-            <h5 className="leading-[1.6]">{item.client_name}</h5>
-            <p className="text-sm font-light italic leading-[1.6]">
-              {t(item.client_details)}
-            </p>
-          </div>
+      <p className="text-md relative z-20 font-light leading-[1.6]">
+        &quot;{t(item.review)}&quot;
+      </p>
+      <div className="relative z-20 mt-6 flex flex-row items-center gap-5">
+        <div className="relative mt-4 h-16 w-16 overflow-hidden">
+          <Image
+            src={item.picture_path}
+            alt="Personal Picture"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center center"
+            className="rounded-full"
+          />
         </div>
-      </blockquote>
-    </div>
+        <div className="flex flex-col gap-1">
+          <h5 className="leading-[1.6]">{item.client_name}</h5>
+          <p className="text-sm font-light italic leading-[1.6]">
+            {t(item.client_details)}
+          </p>
+        </div>
+      </div>
+    </blockquote>
   );
 };
