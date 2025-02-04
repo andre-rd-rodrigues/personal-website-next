@@ -85,6 +85,7 @@ const PROJECTS = {
         website: 'https://www.barbizanicarvalholaw.com/',
         github: 'https://github.com/andre-rd-rodrigues/bb-website',
       },
+      isFreelance: true,
     },
     {
       imgSrc: '/images/websites/carolina.webp',
@@ -98,6 +99,7 @@ const PROJECTS = {
         website: 'https://acarolinajardim.com',
         github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
       },
+      isFreelance: true,
     },
     {
       imgSrc: '/images/websites/barber.webp',
@@ -111,6 +113,7 @@ const PROJECTS = {
         website: 'https://strong-cheesecake-3a87ea.netlify.app/',
         github: 'https://github.com/andre-rd-rodrigues/barberstudio',
       },
+      isFreelance: true,
     },
     {
       imgSrc: '/images/websites/itstudios.webp',
@@ -124,8 +127,31 @@ const PROJECTS = {
         website: 'https://itstudios.netlify.app/',
         github: 'https://github.com/andre-rd-rodrigues/it-studios',
       },
+      isFreelance: true,
     },
     {
+      isFreelance: false,
+      imgSrc: '/images/websites/snyk.webp',
+      video: '/videos/snyk.webm',
+      label: 'Snyk',
+      description: 'web.projects.snyk',
+      techStack: {
+        frontend: [
+          'React',
+          'JavaScript',
+          'Typescript',
+          'Next.js',
+          'Cypress',
+          'Styled Components',
+        ],
+        backend: ['Node', 'Vercel', 'RESTful API', 'Django'],
+      },
+      href: {
+        website: 'https://www.snyk.io',
+      },
+    },
+    {
+      isFreelance: false,
       imgSrc: '/images/websites/pipedrive.webp',
       video: '/videos/pipedrive.webm',
       label: 'Pipedrive',
@@ -154,6 +180,7 @@ const PROJECTS = {
       },
     },
     {
+      isFreelance: false,
       imgSrc: '/images/websites/navro.webp',
       label: 'Navro',
       description: 'web.projects.navro',
@@ -173,6 +200,7 @@ const PROJECTS = {
       },
     },
     {
+      isFreelance: false,
       imgSrc: '/images/websites/probely.webp',
       label: 'Probely',
       description: 'web.projects.probely',
@@ -192,6 +220,7 @@ const PROJECTS = {
       },
     },
     {
+      isFreelance: false,
       imgSrc: '/images/websites/sky.webp',
       label: 'Sky | Peacock',
       description: 'web.projects.sky',
@@ -210,10 +239,9 @@ const PROJECTS = {
         website: 'https://www.peacocktv.com',
       },
     },
-
     {
       imgSrc: '/images/websites/cdeff.webp',
-
+      isFreelance: true,
       label: 'CDEFF',
       description: 'web.projects.CDEFF',
       techStack: {
@@ -227,7 +255,7 @@ const PROJECTS = {
     },
     {
       imgSrc: '/images/websites/primetravel.webp',
-
+      isFreelance: true,
       label: 'PrimeTravel',
       description: 'web.projects.PrimeTravel',
       techStack: {
@@ -248,12 +276,11 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/primetravel-app',
       },
     },
-
     {
       imgSrc: '/images/websites/curiosity.webp',
       label: 'Personal Blog',
       description: 'web.projects.blog',
-
+      isFreelance: true,
       techStack: {
         frontend: ['Next.js', 'GraphQL', 'HTML5', 'CSS3', 'SCSS'],
         database: ['Hygraph'],
@@ -263,8 +290,8 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/curiositygem',
       },
     },
-
     {
+      isFreelance: true,
       imgSrc: '/images/websites/memory.webp',
       label: 'Memory Game',
       description: 'web.projects.Memory',

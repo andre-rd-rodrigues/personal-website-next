@@ -1,5 +1,5 @@
 const COMPANIES = [
-  { name: 'Wise Sparrow', logo: '/images/companies/wise.webp' },
+  { name: 'Snyk', logo: '/images/companies/snyk.webp' },
   { name: 'Navro', logo: '/images/companies/navro.webp' },
   { name: 'Pipedrive', logo: '/images/companies/pipedrive.webp' },
   {

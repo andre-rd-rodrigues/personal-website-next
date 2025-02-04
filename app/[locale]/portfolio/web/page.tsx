@@ -41,18 +41,41 @@ const Web = () => {
         </motion.p>
       </div>
 
-      <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        animate="visible"
-        className={styles.showCaseContainer}
-      >
-        {projects.map((project, i) => (
-          <motion.div variants={fadeInSlideInVariant} key={i}>
-            <ProjectDisplay key={i} {...project} />
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="mb-16">
+        <SectionTitle title="Freelance" color="primary" />
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.showCaseContainer}
+        >
+          {projects
+            .filter((project) => project.isFreelance)
+            .map((project, i) => (
+              <motion.div variants={fadeInSlideInVariant} key={i}>
+                <ProjectDisplay key={i} {...project} />
+              </motion.div>
+            ))}
+        </motion.div>
+      </div>
+
+      <div className="mb-16">
+        <SectionTitle title="Corporate" color="primary" />
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          animate="visible"
+          className={styles.showCaseContainer}
+        >
+          {projects
+            .filter((project) => !project.isFreelance)
+            .map((project, i) => (
+              <motion.div variants={fadeInSlideInVariant} key={i}>
+                <ProjectDisplay key={i} {...project} />
+              </motion.div>
+            ))}
+        </motion.div>
+      </div>
 
       {/* Next category button */}
       <Link href={`/portfolio/mobile`} className={styles.nextCategoryContainer}>

@@ -81,7 +81,9 @@
 
         "sky": "At Peacock, NBCUniversal Media Group's streaming service, I applied my expertise in React and TypeScript to enhance viewer interfaces. My role involved front-end development that supports the delivery of diverse, on-demand content, optimizing user experiences in a competitive streaming landscape.",
 
-        "probely": "With Probely, I integrated security testing into development pipelines as a Front End Developer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs."
+        "probely": "With Probely, I integrated security testing into development pipelines as a Front End Developer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs.",
+
+        "snyk": "With Snyk, I integrated security testing into development pipelines as a Software Engineer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs."
       }
     },
     "mobile": {
