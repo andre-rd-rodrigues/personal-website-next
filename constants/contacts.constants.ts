@@ -4,7 +4,7 @@ const CONTACTS = {
   INSTAGRAM: 'https://www.instagram.com/andrerodrigo_web/',
   GITHUB: 'https://github.com/andre-rd-rodrigues',
   LINKTREE: 'https://linktr.ee/andre.webstudio',
-  EMAIL: 'andrerodrigo.web@gmail.com',
+  EMAIL: 'geral@andrerodrigo.com',
 };
 
 export default CONTACTS;
