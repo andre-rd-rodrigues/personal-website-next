@@ -4,7 +4,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const PageLoading = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(
+    process.env.NODE_ENV === 'production' ? true : false,
+  );
   const ANIMATION_DURATION = 2;
 
   useEffect(() => {
