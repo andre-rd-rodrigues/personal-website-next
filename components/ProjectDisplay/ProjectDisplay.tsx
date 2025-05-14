@@ -1,12 +1,11 @@
 import ImageZoomEffect from '@/components/ImageZoomEffect/ImageZoomEffect';
 import React, { useState } from 'react';
 import styles from './projectdisplay.module.scss';
+import Hotjar from '@hotjar/browser';
 
-import { EventActions, EventCategories } from '@/constants/analytics.constants';
 import ICONS from '@/constants/icons.constants';
 import { Icon } from '@iconify/react';
 import { useTranslations } from 'next-intl';
-import ReactGA from 'react-ga4';
 import Button from '../Button';
 import Modal from '../Modal';
 
@@ -47,11 +46,7 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   const handleOpenProjectModal = () => {
     setIsModalOpen((prevState) => !prevState);
 
-    ReactGA.event({
-      category: EventCategories.USER_INTERACTION,
-      action: EventActions.OPEN_PROJECT_DETAILS_MODAL,
-      label,
-    });
+    Hotjar.event(`Project opened: ${label}`);
   };
 
   return (
@@ -127,13 +122,9 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
                 <a
                   style={{ transform: 'scale(0.8)' }}
                   onClick={() =>
-                    ReactGA.event({
-                      category: EventCategories.USER_INTERACTION,
-                      action: app
-                        ? EventActions.OPEN_PROJECT_APP
-                        : EventActions.OPEN_PROJECT_WEBSITE,
-                      label,
-                    })
+                    Hotjar.event(
+                      `project_link_clicked_${label}_${app ? 'app' : 'website'}`,
+                    )
                   }
                   href={website || app}
                   target="_blank"
