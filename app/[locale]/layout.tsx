@@ -15,6 +15,7 @@ import Cookies from '@/components/Cookies';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import GlobalBackground from '@/components/GlobalBackground';
 import PageLoading from '@/components/PageLoading';
+import Analytics from '@/components/Analytics';
 
 export async function generateMetadata({
   params: { locale },
@@ -49,6 +50,7 @@ const RootLayout = ({
           <Footer />
 
           {/* Metrics */}
+          <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>
       </body>
