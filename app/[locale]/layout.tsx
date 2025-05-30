@@ -10,7 +10,6 @@ import { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
-import Analytics from '@/components/Analytics';
 import Cookies from '@/components/Cookies';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -51,7 +50,6 @@ const RootLayout = ({
 
           {/* Metrics */}
           <SpeedInsights />
-          <Analytics />
         </NextIntlClientProvider>
       </body>
       <GlobalBackground />
