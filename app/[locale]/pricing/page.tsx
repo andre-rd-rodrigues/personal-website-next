@@ -1,3 +1,4 @@
+'use client';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import PageContainer from '@/components/PageContainer/PageContainer';
@@ -8,11 +9,14 @@ import {
   fadeInSlideLeftVariant,
   motion,
 } from '@/motion/motionVariants';
+import SectionTitle from '@/components/SectionTitle';
 
 const Pricing = () => {
   const t = useTranslations('pricing');
   const t_button = useTranslations('buttons');
   const { getTranslationsArray } = useTranslation();
+
+  const maintenancePlans = getTranslationsArray('pricing.maintenance.plans');
 
   return (
     <PageContainer>
@@ -93,6 +97,31 @@ const Pricing = () => {
             />
           }
         />
+      </div>
+
+      <div className="mt-20">
+        <SectionTitle title={t('maintenance.title')} color="primary" tag="h2" />
+
+        <motion.p
+          variants={fadeInVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {t('maintenance.description')}
+        </motion.p>
+      </div>
+      <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        {maintenancePlans.map((plan, index) => (
+          <Card.Pricing
+            key={index}
+            title={plan.title}
+            price={plan.price}
+            description={plan.description}
+            features={plan.features}
+            cta={<hr className="my-8 border-t border-gray-600" />}
+          />
+        ))}
       </div>
     </PageContainer>
   );

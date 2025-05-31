@@ -102,7 +102,6 @@ function PricingCard({
               {cta}
             </CardItem>
           </div>
-          {/*  <hr className="my-8 border-t border-gray-400" /> */}
           <div className="mt-6">
             <ul className="space-y-3">
               {features.map((feature, index) => (

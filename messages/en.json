@@ -155,70 +155,107 @@
     "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
     "packs": {
       "title": "Packages",
-      "description": "Institutional Website",
-      "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
+      "description": "Choose a package that grows with your business — fast, secure, and tailor-made",
+      "subtitle": "Each project is unique, and the final price may vary based on your business needs.",
       "starter": {
         "title": "Online Presence",
-        "description": "Perfect for small businesses and personal websites",
         "price": "800 €",
+        "description": "Perfect for small businesses and personal websites",
         "features": [
           "Homepage + up to 3 pages",
           "Contact form",
-          "Custom and responsive design",
+          "Custom and responsive template",
           "Performance and SEO optimization",
-          "3 months free hosting"
+          "3 months free hosting",
+          "Hosting setup support"
         ]
       },
       "professional": {
         "title": "Professional",
-        "description": "Perfect for growing businesses that want to publish content frequently",
         "price": "1,400 €",
+        "description": "Perfect for growing businesses that want to publish content regularly",
         "features": [
           "Everything from 'Online Presence'",
           "CMS integration (Blog)",
           "Up to 6 pages",
-          "Cookies policy and legal notice",
+          "Cookie policy and legal notice",
           "Google Analytics integration",
-          "1-hour training"
+          "Google Search Console integration",
+          "Domain purchase and hosting"
         ]
       },
       "premium": {
         "title": "Premium",
-        "description": "For brands that want a high-impact online presence, with animations, integrations, and multilingual support",
         "price": "2,100 €",
+        "description": "For brands seeking high-impact online presence, with animations, integrations, and multilingual support",
         "features": [
           "Everything from 'Professional'",
-          "Unique layouts and animations",
-          "Specific integrations (Payments, CRM, etc)",
-          "Multilingual (2 languages)",
-          "Advanced SEO",
-          "Extra training and documentation"
+          "Unique design",
+          "Animation integration",
+          "Integrations (Payments, Scheduling, etc.)",
+          "Bilingual (2 languages)",
+          "Priority support"
         ]
       },
       "enterprise": {
         "title": "Enterprise",
-        "description": "Tailored solutions for ambitious projects — from apps to complex integrations",
-        "price": "Contact me",
+        "price": "On request",
+        "description": "Tailored solutions for ambitious projects",
         "features": [
-          "Mobile and web app development",
-          "Strategic and technical consulting",
+          "MVP development",
+          "Web app development",
+          "Strategic consulting",
           "Cybersecurity consulting",
-          "Integrations with APIs, CRMs, and internal systems",
-          "Advanced SEO analysis and improvement",
+          "360° rebranding",
+          "SEO evaluation and improvement",
+          "Performance assessment and enhancement",
           "Custom digital solutions"
         ]
-      },
-
-      "maintenance": {
-        "title": "Hosting + Monthly Maintenance",
-        "subtitle": "Choose the plan that best suits your level of autonomy:",
-        "basic": "Essential",
-        "basicFeatures": "Hosting and monitoring",
-        "proactive": "Essential Plus",
-        "proactiveFeatures": "40 – 50 €/month Updates and small monthly changes",
-        "complete": "Independent",
-        "completeFeatures": "90 –100 €/month Active platform management (blog, texts, images)"
       }
+    },
+    "maintenance": {
+      "title": "Monthly Hosting & Maintenance",
+      "description": "Ensure your website stays updated, available, and secure with a continuous hosting and maintenance plan.",
+      "plans": [
+        {
+          "title": "Essential",
+          "price": "10 €/month",
+          "description": "Hosting and basic technical monitoring",
+          "features": [
+            "Uptime monitoring and availability checks",
+            "Infrastructure maintenance",
+            "Basic backups and alerts",
+            "Basic email support"
+          ]
+        },
+        {
+          "title": "Essential Plus",
+          "price": "25–40 €/month",
+          "description": "Ideal for businesses that update their website regularly — simple changes without worry",
+          "features": [
+            "Everything in the 'Essential' plan",
+            "Domain management (renewal, DNS settings, etc.)",
+            "Small monthly changes (up to 1h/month)",
+            "Content updates in CMS",
+            "Ongoing support and regular improvements"
+          ]
+        },
+        {
+          "title": "Independent",
+          "price": "90–100 €/month",
+          "description": "Designed for brands with an active online presence — businesses with frequent launches or those needing an always-updated website",
+          "features": [
+            "Everything in the 'Essential Plus' plan",
+            "Creation of landing pages for marketing campaigns",
+            "Blog and page management",
+            "Includes up to 3h/month of changes",
+            "Performance and UX consulting",
+            "Domain and subdomain management",
+            "Ongoing SEO and performance optimizations",
+            "Priority support and fast execution (response within 24 business hours)"
+          ]
+        }
+      ]
     }
   },
 

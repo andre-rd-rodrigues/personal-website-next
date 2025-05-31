@@ -163,9 +163,10 @@
         "features": [
           "Homepage + até 3 páginas",
           "Formulário de contacto",
-          "Design personalizado e responsivo",
+          "Template personalizado e responsivo",
           "Otimização de performance e SEO",
-          "Alojamento gratuito 3 meses"
+          "Alojamento gratuito 3 meses",
+          "Ajuda com o alojamento"
         ]
       },
       "professional": {
@@ -178,7 +179,8 @@
           "Até 6 páginas",
           "Política de cookies e aviso legal",
           "Integração com Google Analytics",
-          "1h de formação"
+          "Integração com Google Search Console",
+          "Compra de domínio e alojamento"
         ]
       },
       "premium": {
@@ -187,11 +189,11 @@
         "description": "Para marcas que querem uma presença online de alto impacto, com animações, integrações e suporte multilingue",
         "features": [
           "Tudo do \"Profissional\"",
-          "Layouts únicos e animações",
-          "Integrações específicas (Pagamentos, CRM, etc)",
-          "Multilingue (2 idiomas)",
-          "SEO avançado",
-          "Treino extra e documentação"
+          "Design único",
+          "Integração de animações",
+          "Integrações (Pagamentos, Agendamentos, etc)",
+          "Bilingue (2 idiomas)",
+          "Suporte prioritário"
         ]
       },
       "enterprise": {
@@ -199,25 +201,60 @@
         "price": "Orçamento",
         "description": "Soluções à medida para projetos ambiciosos",
         "features": [
-          "Desenvolvimento de apps mobile e web",
-          "Consultoria estratégica e técnica",
+          "Desenvolvimento de MVPs",
+          "Desenvolvimento de web apps",
+          "Consultoria estratégica",
           "Consultoria de Cibersegurança",
-          "Integrações com APIs, CRMs e sistemas internos",
-          "Análise e melhoria avançada de SEO",
+          "Rebranding 360",
+          "Avaliação e melhoria de SEO",
+          "Avaliação e aumento de performance",
           "Soluções digitais personalizadas"
         ]
-      },
-
-      "maintenance": {
-        "title": "Alojamento + Manutenção Mensal",
-        "subtitle": "Escolhe o plano que melhor se adapta ao teu nível de autonomia:",
-        "basic": "Essencial",
-        "basicFeatures": "Alojamento e monitorização",
-        "proactive": "Essencial Plus",
-        "proactiveFeatures": "40 – 50 €/mês Atualizações e pequenas alterações mensais",
-        "complete": "Independente",
-        "completeFeatures": "90 –100 €/mês Gestão ativa da plataforma (blog, textos, imagens)"
       }
+    },
+    "maintenance": {
+      "title": "Alojamento & Manutenção Mensal",
+      "description": "Garante que o teu site se mantém atualizado, disponível e seguro com um plano contínuo de alojamento e manutenção.",
+      "plans": [
+        {
+          "title": "Essencial",
+          "price": "10 €/mês",
+          "description": "Alojamento e monitorização técnica básica",
+          "features": [
+            "Monitorização de uptime e verificações de disponibilidade",
+            "Manutenção da infraestrutura",
+            "Backups e alertas básicos",
+            "Suporte básico por email"
+          ]
+        },
+        {
+          "title": "Essencial Plus",
+          "price": "25–40 €/mês",
+          "description": "Ideal para negócios que atualizam o site com regularidade — alterações simples sem preocupações",
+          "features": [
+            "Tudo incluído no plano 'Essencial'",
+            "Gestão de domínio (renovação, apontamentos DNS, etc.)",
+            "Pequenas alterações mensais (até 1h/mês)",
+            "Updates de conteúdos no CMS",
+            "Apoio contínuo e melhorias regulares"
+          ]
+        },
+        {
+          "title": "Independente",
+          "price": "90–100 €/mês",
+          "description": "Pensado para marcas com presença ativa online — negócios com lançamentos frequentes ou empresas que precisam de um site sempre atualizado",
+          "features": [
+            "Tudo incluído no plano 'Essencial Plus'",
+            "Criação de landing pages para campanhas de marketing",
+            "Gestão de blog e páginas",
+            "Inclui até 3h/mês de alterações",
+            "Consultoria de performance e UX",
+            "Gestão de domínios e subdomínios",
+            "Otimizações contínuas de SEO e performance",
+            "Suporte prioritário e execuções rápidas (resposta em 24h úteis)"
+          ]
+        }
+      ]
     }
   },
 
