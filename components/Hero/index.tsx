@@ -8,7 +8,7 @@ import AnimatedText from '../AnimatedText';
 
 interface HeroSectionProps {
   title: string;
-  subtitle: ReactNode;
+  subtitle?: ReactNode;
   className?: string;
   textClassName?: string;
   options?: {
@@ -31,19 +31,21 @@ const HeroTextSection: React.FC<HeroSectionProps> = ({
         className={`mb-7 text-5xl font-light md:mb-12 md:text-7xl lg:w-5/6 ${textClassName}`}
       />
 
-      <motion.div
-        className="md:w-4/5 lg:w-3/5"
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 1,
-          ease: [0.35, 0, 0, 1],
-          delay: options?.subtitleDelay || 2,
-        }}
-        viewport={{ once: true }}
-      >
-        {subtitle}
-      </motion.div>
+      {subtitle && (
+        <motion.div
+          className="md:w-4/5 lg:w-3/5"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1,
+            ease: [0.35, 0, 0, 1],
+            delay: options?.subtitleDelay || 2,
+          }}
+          viewport={{ once: true }}
+        >
+          {subtitle}
+        </motion.div>
+      )}
     </div>
   );
 };

@@ -156,7 +156,7 @@ const Home = () => {
                 className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
                 key={i}
               >
-                <Card
+                <Card.Basic
                   title={name}
                   description={t('portfolio.' + description)}
                   imageUrl={src}

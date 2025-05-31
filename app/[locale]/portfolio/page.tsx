@@ -38,7 +38,7 @@ const Portfolio = () => {
             key={i}
           >
             <motion.div variants={fadeInSlideInVariant} className="h-full">
-              <Card
+              <Card.Basic
                 title={name}
                 description={t(description)}
                 imageUrl={src}

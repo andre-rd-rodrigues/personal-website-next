@@ -23,6 +23,10 @@ export const pathnames = {
     en: '/about',
     pt: '/sobre',
   },
+  '/pricing': {
+    en: '/pricing',
+    pt: '/preçário',
+  },
   '/portfolio': {
     en: '/portfolio',
     pt: '/portfolio',

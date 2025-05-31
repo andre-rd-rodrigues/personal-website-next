@@ -1,20 +1,20 @@
-import enTranslations from "../messages/en.json";
-import ptTranslations from "../messages/pt.json";
-import { useLocale } from "next-intl";
+import enTranslations from '../messages/en.json';
+import ptTranslations from '../messages/pt.json';
+import { useLocale } from 'next-intl';
 
 const useTranslation = () => {
   const locale = useLocale();
 
-  const translations = locale === "en" ? enTranslations : ptTranslations;
+  const translations = locale === 'en' ? enTranslations : ptTranslations;
 
   const getTranslationsArray = (key: string) => {
     // Split the key string into an array of keys
-    const keys = key.split(".");
+    const keys = key.split('.');
 
     // Use reduce to traverse the nested object
     // eslint-disable-next-line
     const result = keys.reduce((obj: any, currentKey: any) => {
-      return obj && obj[currentKey] !== "undefined"
+      return obj && obj[currentKey] !== 'undefined'
         ? obj[currentKey]
         : undefined;
     }, translations);
@@ -31,7 +31,7 @@ const useTranslation = () => {
 
   return {
     translations,
-    getTranslationsArray
+    getTranslationsArray,
   };
 };
 

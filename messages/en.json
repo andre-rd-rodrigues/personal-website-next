@@ -6,7 +6,8 @@
     "blog": "Blog",
     "brand_label": "Web Developer",
     "testimonials": "Testimonials",
-    "skills": "Skills"
+    "skills": "Skills",
+    "pricing": "Pricing"
   },
 
   "homepage": {
@@ -148,6 +149,116 @@
     }
   },
 
+  "pricing": {
+    "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
+    "title": "Pricing",
+    "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
+    "packs": {
+      "title": "Packages",
+      "description": "Choose a package that grows with your business — fast, secure, and tailor-made",
+      "subtitle": "Each project is unique, and the final price may vary based on your business needs.",
+      "starter": {
+        "title": "Online Presence",
+        "price": "800 €",
+        "description": "Perfect for small businesses and personal websites",
+        "features": [
+          "Homepage + up to 3 pages",
+          "Contact form",
+          "Custom and responsive template",
+          "Performance and SEO optimization",
+          "3 months free hosting",
+          "Hosting setup support"
+        ]
+      },
+      "professional": {
+        "title": "Professional",
+        "price": "1,400 €",
+        "description": "Perfect for growing businesses that want to publish content regularly",
+        "features": [
+          "Everything from 'Online Presence'",
+          "CMS integration (Blog)",
+          "Up to 6 pages",
+          "Cookie policy and legal notice",
+          "Google Analytics integration",
+          "Google Search Console integration",
+          "Domain purchase and hosting"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "2,100 €",
+        "description": "For brands seeking high-impact online presence, with animations, integrations, and multilingual support",
+        "features": [
+          "Everything from 'Professional'",
+          "Unique design",
+          "Animation integration",
+          "Integrations (Payments, Scheduling, etc.)",
+          "Bilingual (2 languages)",
+          "Priority support"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "On request",
+        "description": "Tailored solutions for ambitious projects",
+        "features": [
+          "MVP development",
+          "Web app development",
+          "Strategic consulting",
+          "Cybersecurity consulting",
+          "360° rebranding",
+          "SEO evaluation and improvement",
+          "Performance assessment and enhancement",
+          "Custom digital solutions"
+        ]
+      }
+    },
+    "maintenance": {
+      "title": "Monthly Hosting & Maintenance",
+      "description": "Ensure your website stays updated, available, and secure with a continuous hosting and maintenance plan.",
+      "plans": [
+        {
+          "title": "Essential",
+          "price": "10 €/month",
+          "description": "Hosting and basic technical monitoring",
+          "features": [
+            "Uptime monitoring and availability checks",
+            "Infrastructure maintenance",
+            "Basic backups and alerts",
+            "Basic email support"
+          ]
+        },
+        {
+          "title": "Essential Plus",
+          "price": "25–40 €/month",
+          "description": "Ideal for businesses that update their website regularly — simple changes without worry",
+          "features": [
+            "Everything in the 'Essential' plan",
+            "Domain management (renewal, DNS settings, etc.)",
+            "Small monthly changes (up to 1h/month)",
+            "Content updates in CMS",
+            "Ongoing support and regular improvements"
+          ]
+        },
+        {
+          "title": "Independent",
+          "price": "90–100 €/month",
+          "description": "Designed for brands with an active online presence — businesses with frequent launches or those needing an always-updated website",
+          "features": [
+            "Everything in the 'Essential Plus' plan",
+            "Creation of landing pages for marketing campaigns",
+            "Blog and page management",
+            "Includes up to 3h/month of changes",
+            "Performance and UX consulting",
+            "Domain and subdomain management",
+            "Ongoing SEO and performance optimizations",
+            "Priority support and fast execution (response within 24 business hours)"
+          ]
+        }
+      ]
+    }
+  },
+
   "skills": {
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
@@ -241,7 +352,9 @@
     "about": "About",
     "skills": "Skills",
     "schedule": "Schedule",
-    "goBack": "Go back"
+    "goBack": "Go back",
+    "getStarted": "Get started",
+    "select": "Select"
   },
   "error": {
     "title": "Upss something went wrong...",
@@ -254,6 +367,7 @@
     "contactsTitle": "Contacts • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
+    "pricingTitle": "Pricing • André Rodrigo",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }
