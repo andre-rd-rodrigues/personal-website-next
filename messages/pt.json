@@ -148,6 +148,75 @@
     }
   },
 
+  "pricing": {
+    "heroTitle": "Soluções seguras, rápidas e personalizadas para crescerem contigo.",
+    "title": "Preçário",
+
+    "packs": {
+      "title": "Pacotes",
+      "description": "Mais do que apenas um site, eu desenvolvo a tua presença digital com foco em confiança, performance e escalabilidade. Cada projeto é feito com tecnologias modernas e pensado para que possas crescer sem depender de soluções lentas ou desatualizadas.",
+      "subtitle": "Cada projeto é único e o preço final pode variar de acordo com as necessidades do teu negócio.",
+      "starter": {
+        "title": "Presença Online",
+        "price": "800 €",
+        "features": [
+          "Homepage + até 3 páginas",
+          "Formulário de contacto",
+          "Design personalizado e responsivo",
+          "Otimização de performance e SEO",
+          "Alojamento gratuito 3 meses"
+        ]
+      },
+      "professional": {
+        "title": "Profissional",
+        "price": "1.400 €",
+        "features": [
+          "Tudo do \"Presença Digital\"",
+          "Integração com CMS (Blog)",
+          "Até 6 páginas",
+          "Política de cookies e aviso legal",
+          "Integração com Google Analytics",
+          "1h de formação"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "2.100 €",
+        "features": [
+          "Tudo do \"Profissional\"",
+          "Layouts únicos e animações",
+          "Integrações específicas (Pagamentos, CRM, etc)",
+          "Multilingue (2 idiomas)",
+          "SEO avançado",
+          "Treino extra e documentação"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "Sob orçamento",
+        "features": [
+          "Desenvolvimento de apps mobile e web",
+          "Consultoria estratégica e técnica",
+          "Consultoria de Cibersegurança",
+          "Integrações com APIs, CRMs e sistemas internos",
+          "Análise e melhoria avançada de SEO",
+          "Soluções digitais personalizadas"
+        ]
+      },
+
+      "maintenance": {
+        "title": "Alojamento + Manutenção Mensal",
+        "subtitle": "Escolhe o plano que melhor se adapta ao teu nível de autonomia:",
+        "basic": "Essencial",
+        "basicFeatures": "Alojamento e monitorização",
+        "proactive": "Essencial Plus",
+        "proactiveFeatures": "40 – 50 €/mês Atualizações e pequenas alterações mensais",
+        "complete": "Independente",
+        "completeFeatures": "90 –100 €/mês Gestão ativa da plataforma (blog, textos, imagens)"
+      }
+    }
+  },
+
   "skills": {
     "heroTitle": "O conhecimento é o olho do desejo e o piloto da alma.",
     "heroDescription": "- Will Durant",

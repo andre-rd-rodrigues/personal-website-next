@@ -1,23 +1,25 @@
 'use client';
-import styles from '@/assets/styles/pages/contact.module.scss';
-import { motion } from 'framer-motion';
 
-import Button from '@/components/Button';
+import HeroSection from '@/components/Hero';
 import PageContainer from '@/components/PageContainer/PageContainer';
-import CONTACTS from '@/constants/contacts.constants';
-import ICONS from '@/constants/icons.constants';
-import {
-  containerVariant,
-  fadeInSlideInVariant,
-  fadeInSlideLeftVariant,
-} from '@/motion/motionVariants';
+import Section from '@/components/Section';
+import SectionTitle from '@/components/SectionTitle';
 import { useTranslations } from 'next-intl';
-import TypeformPopup from '@/components/TypeformPopup';
 
 const Contacts = () => {
   const t = useTranslations('pricing');
 
-  return <PageContainer className={styles.container}></PageContainer>;
+  return (
+    <PageContainer>
+      <Section>
+        <HeroSection.Text title={t('heroTitle')} className="pb-0" />
+      </Section>
+      <Section>
+        <SectionTitle title={t('packs.title')} color="primary" tag="h2" />
+        <p>{t('packs.description')}</p>
+      </Section>
+    </PageContainer>
+  );
 };
 
 export default Contacts;

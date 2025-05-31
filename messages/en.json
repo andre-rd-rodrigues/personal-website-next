@@ -149,6 +149,75 @@
     }
   },
 
+  "pricing": {
+    "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
+    "title": "Pricing",
+    "description1": "More than just a website, I develop your digital presence focusing on trust, performance, and scalability. Each project is made with modern technologies and designed so you can grow without relying on slow or outdated solutions.",
+    "packs": {
+      "title": "Packages",
+      "description": "Institutional Website",
+      "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
+      "starter": {
+        "title": "Online Presence",
+        "price": "800 €",
+        "features": [
+          "Homepage + up to 3 pages",
+          "Contact form",
+          "Custom and responsive design",
+          "Performance and SEO optimization",
+          "3 months free hosting"
+        ]
+      },
+      "professional": {
+        "title": "Professional",
+        "price": "1,400 €",
+        "features": [
+          "Everything from 'Online Presence'",
+          "CMS integration (Blog)",
+          "Up to 6 pages",
+          "Cookies policy and legal notice",
+          "Google Analytics integration",
+          "1-hour training"
+        ]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "2,100 €",
+        "features": [
+          "Everything from 'Professional'",
+          "Unique layouts and animations",
+          "Specific integrations (Payments, CRM, etc)",
+          "Multilingual (2 languages)",
+          "Advanced SEO",
+          "Extra training and documentation"
+        ]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "On budget",
+        "features": [
+          "Mobile and web app development",
+          "Strategic and technical consulting",
+          "Cybersecurity consulting",
+          "Integrations with APIs, CRMs, and internal systems",
+          "Advanced SEO analysis and improvement",
+          "Custom digital solutions"
+        ]
+      },
+
+      "maintenance": {
+        "title": "Hosting + Monthly Maintenance",
+        "subtitle": "Choose the plan that best suits your level of autonomy:",
+        "basic": "Essential",
+        "basicFeatures": "Hosting and monitoring",
+        "proactive": "Essential Plus",
+        "proactiveFeatures": "40 – 50 €/month Updates and small monthly changes",
+        "complete": "Independent",
+        "completeFeatures": "90 –100 €/month Active platform management (blog, texts, images)"
+      }
+    }
+  },
+
   "skills": {
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
