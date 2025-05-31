@@ -159,6 +159,7 @@
       "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
       "starter": {
         "title": "Online Presence",
+        "description": "Perfect for small businesses and personal websites",
         "price": "800 €",
         "features": [
           "Homepage + up to 3 pages",
@@ -170,6 +171,7 @@
       },
       "professional": {
         "title": "Professional",
+        "description": "Perfect for growing businesses that want to publish content and have control over their website.",
         "price": "1,400 €",
         "features": [
           "Everything from 'Online Presence'",
@@ -182,6 +184,7 @@
       },
       "premium": {
         "title": "Premium",
+        "description": "For brands that want a high-impact online presence, with animations, integrations, and multilingual support.",
         "price": "2,100 €",
         "features": [
           "Everything from 'Professional'",
@@ -194,6 +197,7 @@
       },
       "enterprise": {
         "title": "Enterprise",
+        "description": "Tailored solutions for ambitious projects — from apps to complex integrations and ongoing digital consulting.",
         "price": "On budget",
         "features": [
           "Mobile and web app development",
@@ -311,7 +315,8 @@
     "about": "About",
     "skills": "Skills",
     "schedule": "Schedule",
-    "goBack": "Go back"
+    "goBack": "Go back",
+    "getStarted": "Get started"
   },
   "error": {
     "title": "Upss something went wrong...",
