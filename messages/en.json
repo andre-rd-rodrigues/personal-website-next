@@ -6,7 +6,8 @@
     "blog": "Blog",
     "brand_label": "Web Developer",
     "testimonials": "Testimonials",
-    "skills": "Skills"
+    "skills": "Skills",
+    "pricing": "Pricing"
   },
 
   "homepage": {
@@ -254,6 +255,7 @@
     "contactsTitle": "Contacts • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
+    "pricingTitle": "Pricing • André Rodrigo",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

@@ -6,7 +6,8 @@
     "blog": "Blog",
     "brand_label": "Programação",
     "testimonials": "Testemunhos",
-    "skills": "Skills"
+    "skills": "Skills",
+    "pricing": "Preçário"
   },
 
   "homepage": {
@@ -259,6 +260,7 @@
     "contactsTitle": "Contactos • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
+    "pricingTitle": "Preçário • André Rodrigo",
     "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
   }
 }
