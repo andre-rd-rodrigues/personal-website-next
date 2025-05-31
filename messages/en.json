@@ -152,7 +152,7 @@
   "pricing": {
     "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
     "title": "Pricing",
-    "description1": "More than just a website, I develop your digital presence focusing on trust, performance, and scalability. Each project is made with modern technologies and designed so you can grow without relying on slow or outdated solutions.",
+    "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
     "packs": {
       "title": "Packages",
       "description": "Institutional Website",
@@ -171,7 +171,7 @@
       },
       "professional": {
         "title": "Professional",
-        "description": "Perfect for growing businesses that want to publish content and have control over their website.",
+        "description": "Perfect for growing businesses that want to publish content frequently",
         "price": "1,400 €",
         "features": [
           "Everything from 'Online Presence'",
@@ -184,7 +184,7 @@
       },
       "premium": {
         "title": "Premium",
-        "description": "For brands that want a high-impact online presence, with animations, integrations, and multilingual support.",
+        "description": "For brands that want a high-impact online presence, with animations, integrations, and multilingual support",
         "price": "2,100 €",
         "features": [
           "Everything from 'Professional'",
@@ -197,8 +197,8 @@
       },
       "enterprise": {
         "title": "Enterprise",
-        "description": "Tailored solutions for ambitious projects — from apps to complex integrations and ongoing digital consulting.",
-        "price": "On budget",
+        "description": "Tailored solutions for ambitious projects — from apps to complex integrations",
+        "price": "Contact me",
         "features": [
           "Mobile and web app development",
           "Strategic and technical consulting",
@@ -316,7 +316,8 @@
     "skills": "Skills",
     "schedule": "Schedule",
     "goBack": "Go back",
-    "getStarted": "Get started"
+    "getStarted": "Get started",
+    "select": "Select"
   },
   "error": {
     "title": "Upss something went wrong...",

@@ -154,7 +154,7 @@
 
     "packs": {
       "title": "Pacotes",
-      "description": "Mais do que apenas um site, eu desenvolvo a tua presença digital com foco em confiança, performance e escalabilidade. Cada projeto é feito com tecnologias modernas e pensado para que possas crescer sem depender de soluções lentas ou desatualizadas.",
+      "description": "Escolhe um pacote que cresce com o teu negócio — rápido, seguro e feito à medida",
       "subtitle": "Cada projeto é único e o preço final pode variar de acordo com as necessidades do teu negócio.",
       "starter": {
         "title": "Presença Online",
@@ -171,7 +171,7 @@
       "professional": {
         "title": "Profissional",
         "price": "1.400 €",
-        "description": "Perfeito para empresas em crescimento que querem publicar conteúdo e ter controle sobre o seu site.",
+        "description": "Perfeito para empresas em crescimento que querem publicar conteúdo frequentemente",
         "features": [
           "Tudo do \"Presença Digital\"",
           "Integração com CMS (Blog)",
@@ -184,7 +184,7 @@
       "premium": {
         "title": "Premium",
         "price": "2.100 €",
-        "description": "Para marcas que querem uma presença online de alto impacto, com animações, integrações e suporte multilingue.",
+        "description": "Para marcas que querem uma presença online de alto impacto, com animações, integrações e suporte multilingue",
         "features": [
           "Tudo do \"Profissional\"",
           "Layouts únicos e animações",
@@ -196,8 +196,8 @@
       },
       "enterprise": {
         "title": "Enterprise",
-        "price": "Sob orçamento",
-        "description": "Soluções à medida para projetos ambiciosos — de apps a integrações complexas e consultoria digital contínua.",
+        "price": "Orçamento",
+        "description": "Soluções à medida para projetos ambiciosos",
         "features": [
           "Desenvolvimento de apps mobile e web",
           "Consultoria estratégica e técnica",
@@ -319,7 +319,8 @@
     "skills": "Skills",
     "schedule": "Agendar",
     "goBack": "Voltar",
-    "getStarted": "Selecionar"
+    "getStarted": "Começar",
+    "select": "Escolher"
   },
 
   "error": {
