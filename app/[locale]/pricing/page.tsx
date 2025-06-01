@@ -10,6 +10,8 @@ import {
   motion,
 } from '@/motion/motionVariants';
 import SectionTitle from '@/components/SectionTitle';
+import WebsiteProcess from '@/components/WebsiteProcess';
+import Section from '@/components/Section';
 
 const Pricing = () => {
   const t = useTranslations('pricing');
@@ -111,6 +113,7 @@ const Pricing = () => {
         />
       </div>
 
+      {/* Maintenance */}
       <div className="mt-20">
         <SectionTitle title={t('maintenance.title')} color="primary" tag="h2" />
 
@@ -136,6 +139,13 @@ const Pricing = () => {
           />
         ))}
       </div>
+
+      {/* Process */}
+      <Section>
+        <WebsiteProcess />
+      </Section>
+
+      {/* Faqs */}
     </PageContainer>
   );
 };

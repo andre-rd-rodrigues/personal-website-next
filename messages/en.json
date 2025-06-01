@@ -353,6 +353,33 @@
     "title": "Trusted by companies"
   },
 
+  "website_process": {
+    "title": "Development Stages",
+    "description": "The success of the projects I build comes from a personalized and well-structured approach, following clear steps that make you feel comfortable and lead to real results.",
+    "steps": [
+      {
+        "icon": "iconoir:notes",
+        "title": "Briefing",
+        "description": "I start by understanding your business goals, target audience, and the essential features your website needs."
+      },
+      {
+        "icon": "clarity:design-line",
+        "title": "Concept & Design",
+        "description": "I design the visual layout based on your brand identity and send it for your approval before moving on to development."
+      },
+      {
+        "icon": "iconoir:code",
+        "title": "Development",
+        "description": "I build the site using modern technologies, ensuring performance, security, and easy content management."
+      },
+      {
+        "icon": "iconoir:rocket",
+        "title": "Launch",
+        "description": "I launch the site online with domain and hosting configured, ready to receive visitors and deliver results."
+      }
+    ]
+  },
+
   "buttons": {
     "readMore": "Read more",
     "see_more": "See more",

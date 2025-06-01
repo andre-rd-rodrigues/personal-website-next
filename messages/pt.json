@@ -356,6 +356,33 @@
     "title": "Colaborações"
   },
 
+  "website_process": {
+    "title": "Etapas de Desenvolvimento",
+    "description": "O sucesso dos projetos que desenvolvo vem de uma abordagem personalizada e estruturada, com etapas claras que garantem conforto e resultados reais.",
+    "steps": [
+      {
+        "icon": "iconoir:notes",
+        "title": "Briefing",
+        "description": "Definição dos objetivos, público-alvo e funcionalidades essenciais para o sucesso do negócio."
+      },
+      {
+        "icon": "clarity:design-line",
+        "title": "Conceito e Design",
+        "description": "Criação do conceito visual com base na marca, seguido da sua aprovação antes do desenvolvimento."
+      },
+      {
+        "icon": "iconoir:code",
+        "title": "Desenvolvimento",
+        "description": "Desenvolvimento do site com tecnologias modernas, focado em desempenho, segurança e gestão fácil de conteúdos."
+      },
+      {
+        "icon": "iconoir:rocket",
+        "title": "Publicação",
+        "description": "Lançamento final com domínio e alojamento configurados — online e a gerar resultados."
+      }
+    ]
+  },
+
   "buttons": {
     "readMore": "Ler mais",
     "see_more": "Ver mais",
