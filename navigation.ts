@@ -27,6 +27,10 @@ export const pathnames = {
     en: '/pricing',
     pt: '/preçário',
   },
+  '/faqs': {
+    en: '/faqs',
+    pt: '/faqs',
+  },
   '/portfolio': {
     en: '/portfolio',
     pt: '/portfolio',

@@ -7,7 +7,8 @@
     "brand_label": "Web Developer",
     "testimonials": "Testimonials",
     "skills": "Skills",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "faqs": "FAQs"
   },
 
   "homepage": {
@@ -332,6 +333,53 @@
       "review": "I'd like to thank André for his outstanding work on my album cover and logo! His creativity and skill are truly exceptional, and he has a remarkable ability to explain the best design choices with clarity and confidence. If you're looking for top-tier design work, I highly recommend checking out his website and portfolio!"
     }
   },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "description": "Here are some answers to the most common questions I receive. If you have any other doubts, feel free to reach out.",
+    "placeholder": "Type your question here...",
+    "noQuestionFound": {
+      "title": "Didn't find the answer you were looking for?",
+      "description": "If your question isn’t listed here, feel free to reach out — I’ll be happy to help."
+    },
+    "questions": [
+      {
+        "question": "How long does it take to build a website?",
+        "answer": "On average, a website under the 'Online Presence' package takes between 3 to 5 weeks. However, the timeline depends on the complexity of the project and the client's availability to provide the required content."
+      },
+      {
+        "question": "What are the advantages of hiring a developer instead of using a site builder?",
+        "answer": "When you hire a developer, your website is tailored specifically to your business — without the limitations of generic templates. This means better performance, a unique design, improved security, and the ability to scale or add custom features. It also avoids hidden fees, paid extensions, and technical issues that many DIY platforms can't solve."
+      },
+      {
+        "question": "Why don’t you use tools like WordPress?",
+        "answer": "I prefer not to use WordPress because its templates are quite limited and, in my experience, they don’t offer the flexibility needed for a truly customized website. I work with modern solutions that ensure better performance, scalability, and simpler maintenance. I also have access to high-quality plugins and tools at better cost-benefit, resulting in a more efficient site tailored to your business — without relying on generic systems."
+      },
+      {
+        "question": "Can I edit the content on my website later?",
+        "answer": "Yes. Whenever applicable (e.g. blog), I deliver the site with a CMS so you can easily update text and images."
+      },
+      {
+        "question": "Do you also provide hosting and domain setup?",
+        "answer": "Yes. I can take care of the hosting and domain setup for you, or simply guide you through it if you prefer handling it yourself."
+      },
+      {
+        "question": "Will the website be mobile-friendly?",
+        "answer": "Yes. Every website I build is responsive and fully optimized for mobile devices like phones and tablets."
+      },
+      {
+        "question": "How does the monthly maintenance work?",
+        "answer": "All websites include a basic maintenance plan at €10/month. This ensures your site remains fast, secure, and fully functional over time. It includes 24/7 monitoring, regular backups, minor fixes, and email support. You can also request up to 30 minutes of updates per quarter."
+      },
+      {
+        "question": "Do I need to pay for maintenance even if I don’t request changes?",
+        "answer": "Yes. Maintenance covers much more than visible changes. It ensures your site stays online, secure, backed up, and ready to handle any unexpected technical issues."
+      },
+      {
+        "question": "What if I need more updates than what’s included?",
+        "answer": "If you need more updates than what's included in the plan, I can quote the extra work or you can upgrade to a higher-tier plan with more support time included each month."
+      }
+    ]
+  },
 
   "404": {
     "title": "Page not found",
@@ -355,27 +403,27 @@
 
   "website_process": {
     "title": "Development Stages",
-    "description": "The success of the projects I build comes from a personalized and well-structured approach, following clear steps that make you feel comfortable and lead to real results.",
+    "description": "The success of the projects I build comes from a personalized and structured approach, with clear steps that ensure comfort and real results.",
     "steps": [
       {
         "icon": "iconoir:notes",
         "title": "Briefing",
-        "description": "I start by understanding your business goals, target audience, and the essential features your website needs."
+        "description": "Definition of goals, target audience, and essential features for your business success."
       },
       {
         "icon": "clarity:design-line",
         "title": "Concept & Design",
-        "description": "I design the visual layout based on your brand identity and send it for your approval before moving on to development."
+        "description": "Creation of the visual concept based on your brand, followed by your approval before development."
       },
       {
         "icon": "iconoir:code",
         "title": "Development",
-        "description": "I build the site using modern technologies, ensuring performance, security, and easy content management."
+        "description": "Website development using modern technologies, with performance, security, and easy content management."
       },
       {
         "icon": "iconoir:rocket",
         "title": "Launch",
-        "description": "I launch the site online with domain and hosting configured, ready to receive visitors and deliver results."
+        "description": "Final launch with domain and hosting configured — ready to go live and generate results."
       }
     ]
   },
@@ -405,6 +453,7 @@
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
     "pricingTitle": "Pricing • André Rodrigo",
+    "faqsTitle": "FAQs • André Rodrigo",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

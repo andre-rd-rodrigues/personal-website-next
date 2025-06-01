@@ -7,7 +7,8 @@
     "brand_label": "Programação",
     "testimonials": "Testemunhos",
     "skills": "Skills",
-    "pricing": "Preçário"
+    "pricing": "Preçário",
+    "faqs": "FAQs"
   },
 
   "homepage": {
@@ -383,6 +384,54 @@
     ]
   },
 
+  "faqs": {
+    "title": "Perguntas Frequentes",
+    "description": "Aqui estão algumas respostas às perguntas mais comuns que recebo. Se tiver outras dúvidas, estou disponível para ajudar.",
+    "placeholder": "Pesquise a sua questão...",
+    "noQuestionFound": {
+      "title": "Não encontrou a resposta que procurava?",
+      "description": "Se não encontrou a resposta à sua pergunta, estou aqui para ajudar. Entre em contacto comigo e respondo com todo o gosto."
+    },
+    "questions": [
+      {
+        "question": "Quanto tempo demora a criar um website?",
+        "answer": "Em média, um website dentro do pacote 'Presença Online' varia entre 3 a 5 semanas. No entanto, o tempo depende da complexidade do projeto e da disponibilidade do cliente em fornecer os conteúdos requisitados."
+      },
+      {
+        "question": "Quais as vantagens de contratar um programador em vez de usar um criador de sites?",
+        "answer": "Ao contratar um programador, o seu site é feito à medida do seu negócio — sem limitações de templates genéricos. Isso significa melhor desempenho, visual único, mais segurança e possibilidade de escalar ou integrar funcionalidades específicas. Além disso, evita mensalidades escondidas, extensões pagas e dores de cabeça técnicas que muitas plataformas 'DIY' não resolvem."
+      },
+      {
+        "question": "Por que não usas ferramentas como o WordPress?",
+        "answer": "Prefiro não usar WordPress porque os templates são bastante limitados e, pela minha experiência, não oferecem a flexibilidade necessária para criar um site verdadeiramente personalizado. Além disso, consigo integrar soluções modernas que garantem melhor desempenho, escalabilidade e uma manutenção mais simples. Também tenho acesso a plugins e ferramentas com melhor custo-benefício, resultando num site mais eficiente e adaptado ao seu negócio — sem depender de sistemas genéricos."
+      },
+      {
+        "question": "Posso editar o conteúdo do meu site posteriormente?",
+        "answer": "Sim. Sempre que aplicável (ex. Blog), entrego o site com um CMS para que possa atualizar textos e imagens facilmente."
+      },
+      {
+        "question": "Ofereces também alojamento e domínio?",
+        "answer": "Sim. Posso tratar da configuração de alojamento e domínio por si, ou apenas orientar se preferir tratar diretamente."
+      },
+      {
+        "question": "O site será otimizado para telemóvel?",
+        "answer": "Sim. Todos os sites que crio são responsivos e adaptados a dispositivos móveis como telemóveis e tablets."
+      },
+      {
+        "question": "Como funciona a manutenção mensal?",
+        "answer": "Todos os websites incluem um plano básico de manutenção no valor de 10 €/mês. Esse plano garante que o seu site continua rápido, seguro e funcional ao longo do tempo. Inclui monitorização 24/7, backups regulares, pequenas correções e suporte por email. Também pode solicitar pequenas alterações de até 30 minutos por trimestre."
+      },
+      {
+        "question": "Preciso de pagar a manutenção mesmo que não peça alterações?",
+        "answer": "Sim. A manutenção cobre muito mais do que alterações visíveis. Garante que o site esteja sempre disponível, atualizado, com cópias de segurança ativas e pronto para responder a qualquer problema técnico inesperado."
+      },
+      {
+        "question": "E se precisar de mais alterações do que as incluídas?",
+        "answer": "Se precisar de mais alterações do que as incluídas no plano, posso orçamentar os pedidos extra ou pode optar por um plano superior com mais tempo de suporte incluído mensalmente."
+      }
+    ]
+  },
+
   "buttons": {
     "readMore": "Ler mais",
     "see_more": "Ver mais",
@@ -410,6 +459,7 @@
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
     "pricingTitle": "Preçário • André Rodrigo",
+    "faqsTitle": "Perguntas Frequentes • André Rodrigo",
     "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
   }
 }

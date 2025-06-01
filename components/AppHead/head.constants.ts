@@ -26,4 +26,7 @@ export const HEAD_ROUTES = {
   '/pricing': {
     title: 'pricingTitle',
   },
+  '/faqs': {
+    title: 'faqsTitle',
+  },
 };

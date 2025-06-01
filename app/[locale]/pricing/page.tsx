@@ -12,6 +12,7 @@ import {
 import SectionTitle from '@/components/SectionTitle';
 import WebsiteProcess from '@/components/WebsiteProcess';
 import Section from '@/components/Section';
+import Faqs from '@/components/Faqs';
 
 const Pricing = () => {
   const t = useTranslations('pricing');
@@ -146,6 +147,7 @@ const Pricing = () => {
       </Section>
 
       {/* Faqs */}
+      <Faqs numberOfQuestionsVisible={4} />
     </PageContainer>
   );
 };
