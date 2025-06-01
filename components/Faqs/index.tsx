@@ -23,7 +23,7 @@ export function FAQItem({
           className="flex w-full items-center justify-between text-left"
           onClick={() => setOpen(!open)}
         >
-          <span className="text-lg font-light">{question}</span>
+          <span className="text-lg font-normal">{question}</span>
           <Icon
             icon={ICONS.arrowMinimal}
             className={`transform text-white transition-transform duration-300 ${
@@ -73,7 +73,6 @@ export default function Faqs({ numberOfQuestionsVisible }: Props) {
           <div>
             <h2 className="mb-4 text-6xl font-extralight">{t('title')}</h2>
             <p className="mb-6 text-base">{t('description')}</p>
-            {/*  @ts-expect-error href does not have the type  */}
             <Link href="/faqs">
               <Button.Text icon={ICONS.arrow} label={t_button('readMore')} />
             </Link>
