@@ -155,103 +155,113 @@
     "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
     "packs": {
       "title": "Packages",
-      "description": "Choose a package that grows with your business — fast, secure, and tailor-made",
-      "subtitle": "Each project is unique, and the final price may vary based on your business needs.",
+      "description": "Choose a package that grows with your business — fast, secure, and tailored to your needs.",
+      "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
       "starter": {
         "title": "Online Presence",
         "price": "800 €",
-        "description": "Perfect for small businesses and personal websites",
+        "subtitle": "*Reference value",
+        "description": "Perfect for small businesses and personal websites.",
         "features": [
           "Homepage + up to 3 pages",
-          "Contact form",
-          "Custom and responsive template",
+          "Custom template",
+          "Social media metadata",
+          "Mobile-optimized",
           "Performance and SEO optimization",
-          "3 months free hosting",
-          "Hosting setup support"
+          "Contact form",
+          "Hosting + domain (advice and setup)"
         ]
       },
       "professional": {
         "title": "Professional",
         "price": "1,400 €",
-        "description": "Perfect for growing businesses that want to publish content regularly",
+        "subtitle": "*Reference value",
+        "description": "Ideal for businesses focused on growth and dynamic content.",
         "features": [
-          "Everything from 'Online Presence'",
+          "Everything in 'Online Presence'",
           "CMS integration (Blog)",
           "Up to 6 pages",
-          "Cookie policy and legal notice",
-          "Google Analytics integration",
-          "Google Search Console integration",
-          "Domain purchase and hosting"
-        ]
+          "Cookie policy + Legal notice",
+          "Google Analytics"
+        ],
+        "extras": ["Google Search Console", "3 months free hosting"]
       },
       "premium": {
         "title": "Premium",
         "price": "2,100 €",
-        "description": "For brands seeking high-impact online presence, with animations, integrations, and multilingual support",
+        "subtitle": "*Reference value",
+        "description": "Essential for an active online presence.",
         "features": [
-          "Everything from 'Professional'",
-          "Unique design",
+          "Everything in 'Professional'",
+          "Original design",
+          "Logo creation",
           "Animation integration",
           "Integrations (Payments, Scheduling, etc.)",
           "Bilingual (2 languages)",
           "Priority support"
-        ]
+        ],
+        "extras": ["Google Business Profile", "Google Maps"]
       },
       "enterprise": {
         "title": "Enterprise",
-        "price": "On request",
+        "price": "Custom quote",
         "description": "Tailored solutions for ambitious projects",
         "features": [
           "MVP development",
           "Web app development",
           "Strategic consulting",
           "Cybersecurity consulting",
-          "360° rebranding",
+          "360 rebranding",
           "SEO evaluation and improvement",
-          "Performance assessment and enhancement",
+          "Performance evaluation and enhancement",
           "Custom digital solutions"
         ]
       }
     },
     "maintenance": {
-      "title": "Monthly Hosting & Maintenance",
+      "title": "Monthly Fee",
       "description": "Ensure your website stays updated, available, and secure with a continuous hosting and maintenance plan.",
       "plans": [
         {
           "title": "Essential",
-          "price": "10 €/month",
-          "description": "Hosting and basic technical monitoring",
+          "price": "10 €",
+          "subtitle": "per month, 120 € annually, excl. taxes",
+          "description": "Hosting and basic technical monitoring.",
           "features": [
-            "Uptime monitoring and availability checks",
+            "Uptime monitoring",
+            "Availability checks",
             "Infrastructure maintenance",
             "Basic backups and alerts",
-            "Basic email support"
+            "Basic email support",
+            "Limited updates (up to 30min/quarterly)"
           ]
         },
         {
           "title": "Essential Plus",
-          "price": "25–40 €/month",
-          "description": "Ideal for businesses that update their website regularly — simple changes without worry",
+          "price": "25 €",
+          "subtitle": "per month, 300 € annually, excl. taxes",
+          "description": "Ideal for businesses that need a dynamic website.",
           "features": [
             "Everything in the 'Essential' plan",
-            "Domain management (renewal, DNS settings, etc.)",
-            "Small monthly changes (up to 1h/month)",
-            "Content updates in CMS",
+            "Domain management (purchase, renewal, DNS, etc.)",
+            "Small monthly updates (up to 30min/month)",
+            "Content updates in the CMS",
             "Ongoing support and regular improvements"
           ]
         },
         {
           "title": "Independent",
-          "price": "90–100 €/month",
-          "description": "Designed for brands with an active online presence — businesses with frequent launches or those needing an always-updated website",
+          "price": "45 €",
+          "subtitle": "per month, 540 € annually, excl. taxes",
+          "description": "Perfect for businesses with frequent launches and updated content.",
           "features": [
             "Everything in the 'Essential Plus' plan",
-            "Creation of landing pages for marketing campaigns",
+            "Landing page creation for marketing campaigns",
             "Blog and page management",
-            "Includes up to 3h/month of changes",
+            "Includes up to 3h/month of updates",
             "Performance and UX consulting",
             "Domain and subdomain management",
-            "Ongoing SEO and performance optimizations",
+            "Ongoing SEO and performance optimization",
             "Priority support and fast execution (response within 24 business hours)"
           ]
         }

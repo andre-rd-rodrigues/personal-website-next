@@ -159,42 +159,47 @@
       "starter": {
         "title": "Presença Online",
         "price": "800 €",
-        "description": "Perfeito para pequenas empresas e sites pessoais",
+        "subtitle": "*Valor de referência",
+        "description": "Perfeito para pequenas empresas e sites pessoais.",
         "features": [
           "Homepage + até 3 páginas",
-          "Formulário de contacto",
-          "Template personalizado e responsivo",
+          "Template personalizado",
+          "Metadados para redes sociais",
+          "Optimizado para telemóvel",
           "Otimização de performance e SEO",
-          "Alojamento gratuito 3 meses",
-          "Ajuda com o alojamento"
+          "Formulário de contacto",
+          "Alojamento + domínio (aconselhamento e configuração)"
         ]
       },
       "professional": {
         "title": "Profissional",
         "price": "1.400 €",
-        "description": "Perfeito para empresas em crescimento que querem publicar conteúdo frequentemente",
+        "subtitle": "*Valor de referência",
+        "description": "Ideal para empresas com foco na expansão e conteúdo dinâmico.",
         "features": [
           "Tudo do \"Presença Digital\"",
           "Integração com CMS (Blog)",
           "Até 6 páginas",
-          "Política de cookies e aviso legal",
-          "Integração com Google Analytics",
-          "Integração com Google Search Console",
-          "Compra de domínio e alojamento"
-        ]
+          "Política de cookies + Aviso Legal",
+          "Google Analytics"
+        ],
+        "extras": ["Google Search Console", "Alojamento Gratuito 3 Meses"]
       },
       "premium": {
         "title": "Premium",
         "price": "2.100 €",
-        "description": "Para marcas que querem uma presença online de alto impacto, com animações, integrações e suporte multilingue",
+        "subtitle": "*Valor de referência",
+        "description": "Essencial para uma presença online ativa.",
         "features": [
           "Tudo do \"Profissional\"",
-          "Design único",
+          "Design original",
+          "Criação de Logótipo",
           "Integração de animações",
           "Integrações (Pagamentos, Agendamentos, etc)",
           "Bilingue (2 idiomas)",
           "Suporte prioritário"
-        ]
+        ],
+        "extras": ["Google Business Profile", "Google Maps"]
       },
       "enterprise": {
         "title": "Enterprise",
@@ -213,36 +218,41 @@
       }
     },
     "maintenance": {
-      "title": "Alojamento & Manutenção Mensal",
+      "title": "Mensalidades",
       "description": "Garante que o teu site se mantém atualizado, disponível e seguro com um plano contínuo de alojamento e manutenção.",
       "plans": [
         {
           "title": "Essencial",
-          "price": "10 €/mês",
-          "description": "Alojamento e monitorização técnica básica",
+          "price": "10 €",
+          "subtitle": "por mês, 120 € anual, excl. taxas",
+          "description": "Alojamento e monitorização técnica básica.",
           "features": [
-            "Monitorização de uptime e verificações de disponibilidade",
+            "Monitorização de uptime",
+            "Verificações de disponibilidade",
             "Manutenção da infraestrutura",
             "Backups e alertas básicos",
-            "Suporte básico por email"
+            "Suporte básico por email",
+            "Alterações limitadas (até 30min/trimestral)"
           ]
         },
         {
           "title": "Essencial Plus",
-          "price": "25–40 €/mês",
-          "description": "Ideal para negócios que atualizam o site com regularidade — alterações simples sem preocupações",
+          "price": "25 €",
+          "subtitle": "por mês, 300 € anual, excl. taxas",
+          "description": "Ideal para negócios que precisam de um site dinâmico.",
           "features": [
             "Tudo incluído no plano 'Essencial'",
-            "Gestão de domínio (renovação, apontamentos DNS, etc.)",
-            "Pequenas alterações mensais (até 1h/mês)",
+            "Gestão de domínio (compra, renovação, DNS, etc.)",
+            "Pequenas alterações mensais (até 30min/mês)",
             "Updates de conteúdos no CMS",
             "Apoio contínuo e melhorias regulares"
           ]
         },
         {
           "title": "Independente",
-          "price": "90–100 €/mês",
-          "description": "Pensado para marcas com presença ativa online — negócios com lançamentos frequentes ou empresas que precisam de um site sempre atualizado",
+          "price": "45 €",
+          "subtitle": "por mês, 540 € anual, excl. taxas",
+          "description": "Perfeito para negócios com lançamentos frequentes e conteúdo atualizado.",
           "features": [
             "Tudo incluído no plano 'Essencial Plus'",
             "Criação de landing pages para campanhas de marketing",

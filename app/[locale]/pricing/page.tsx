@@ -40,9 +40,11 @@ const Pricing = () => {
         </motion.p>
       </div>
 
+      {/* Presença Online */}
       <div className="mt-24 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
         <Card.Pricing
           title={t('packs.starter.title')}
+          subtitle={t('packs.starter.subtitle')}
           price={t('packs.starter.price')}
           description={t('packs.starter.description')}
           features={getTranslationsArray('pricing.packs.starter.features')}
@@ -55,11 +57,15 @@ const Pricing = () => {
             />
           }
         />
+
+        {/* Profissional */}
         <Card.Pricing
           title={t('packs.professional.title')}
+          subtitle={t('packs.professional.subtitle')}
           price={t('packs.professional.price')}
           description={t('packs.professional.description')}
           features={getTranslationsArray('pricing.packs.professional.features')}
+          extras={getTranslationsArray('pricing.packs.professional.extras')}
           cta={
             <Button.Text
               className="w-full"
@@ -69,11 +75,15 @@ const Pricing = () => {
             />
           }
         />
+
+        {/* Premium */}
         <Card.Pricing
           title={t('packs.premium.title')}
+          subtitle={t('packs.premium.subtitle')}
           price={t('packs.premium.price')}
           description={t('packs.premium.description')}
           features={getTranslationsArray('pricing.packs.premium.features')}
+          extras={getTranslationsArray('pricing.packs.premium.extras')}
           cta={
             <Button.Text
               className="w-full"
@@ -83,6 +93,8 @@ const Pricing = () => {
             />
           }
         />
+
+        {/* Enterprise */}
         <Card.Pricing
           title={t('packs.enterprise.title')}
           price={t('packs.enterprise.price')}
@@ -116,6 +128,7 @@ const Pricing = () => {
           <Card.Pricing
             key={index}
             title={plan.title}
+            subtitle={plan.subtitle}
             price={plan.price}
             description={plan.description}
             features={plan.features}

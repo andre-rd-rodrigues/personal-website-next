@@ -59,18 +59,22 @@ const BasicCard: React.FC<CardProps> = ({
 
 interface PricingCardProps {
   title: string;
+  subtitle?: string;
   description: string;
   features: string[];
   cta?: ReactNode;
   price: string;
+  extras?: string[];
 }
 
 function PricingCard({
   title,
+  subtitle,
   description,
   features,
   cta,
   price,
+  extras,
 }: PricingCardProps) {
   return (
     <div
@@ -82,22 +86,32 @@ function PricingCard({
             <CardItem
               as="h2"
               translateZ="70"
-              className="m-auto text-2xl text-[var(--color-primary)]"
+              className="mb-4 text-2xl text-[var(--color-primary)]"
               style={{ fontFamily: 'var(--font-jost)' }}
             >
               {title}
             </CardItem>
+            <CardItem translateZ="30" as="p" className="text-base">
+              {description}
+            </CardItem>
             <CardItem
-              as="h3"
+              as="p"
               translateZ="70"
-              className="text-pink m-auto mb-8 mt-4 text-5xl font-medium"
+              className="text-pink mt-7 text-5xl font-medium"
               style={{ fontFamily: 'var(--font-jost)' }}
             >
               {price}
             </CardItem>
-            <CardItem translateZ="30" as="p" className="text-center">
-              {description}
-            </CardItem>
+            {subtitle && (
+              <CardItem
+                as="p"
+                translateZ="70"
+                className="text-sm"
+                style={{ fontFamily: 'var(--font-jost)' }}
+              >
+                {subtitle}
+              </CardItem>
+            )}
             <CardItem translateZ="55" className="mb-12 mt-7 w-full text-center">
               {cta}
             </CardItem>
@@ -116,6 +130,27 @@ function PricingCard({
               ))}
             </ul>
           </div>
+
+          {extras && (
+            <>
+              <hr className="my-7 text-gray-300" />
+              <p className="font- mb-4 text-base text-[var(--color-primary)]">
+                Ofertas
+              </p>
+              <ul className="space-y-3">
+                {extras.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-2 text-base">
+                    <Icon
+                      icon={ICONS.check}
+                      className="text-[var(--color-primary)]"
+                      fontSize={19}
+                    />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </CardBody>
       </CardContainer>
     </div>
