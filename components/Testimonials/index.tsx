@@ -76,7 +76,7 @@ const TestimonialCard = ({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <h5 className="leading-[1.6]">{item.client_name}</h5>
+          <p className="leading-[1.6]">{item.client_name}</p>
           <p className="text-sm font-light italic leading-[1.6]">
             {t(item.client_details)}
           </p>
