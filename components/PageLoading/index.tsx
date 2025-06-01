@@ -7,7 +7,7 @@ const PageLoading = () => {
   const [loading, setLoading] = useState(
     process.env.NODE_ENV === 'production' ? true : false,
   );
-  const ANIMATION_DURATION = 2;
+  const ANIMATION_DURATION = 0.2;
 
   useEffect(() => {
     if (loading) {
