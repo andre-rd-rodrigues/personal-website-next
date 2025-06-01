@@ -20,9 +20,6 @@ export const HEAD_ROUTES = {
   '/contactos': {
     title: 'contactsTitle',
   },
-  '/skills': {
-    title: 'skillsTitle',
-  },
   '/pricing': {
     title: 'pricingTitle',
   },

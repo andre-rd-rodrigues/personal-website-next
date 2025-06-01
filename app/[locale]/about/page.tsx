@@ -17,14 +17,16 @@ import Button from '@/components/Button';
 import Section from '@/components/Section';
 import TrustedCompanies from '@/components/TrustedCompanies';
 
-import InfoCounter from '@/components/InfoCounter';
 import TypeformPopup from '@/components/TypeformPopup';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import Link from 'next/link';
+import { skillsDataBE, skillsDataFE } from '@/data/info.data';
+import RadarChart from '@/components/RadarChart';
 
 const About = () => {
   const t = useTranslations('about');
+  const t_skills = useTranslations('skills');
 
   return (
     <PageContainer>
@@ -69,49 +71,34 @@ const About = () => {
         <TrustedCompanies />
       </Section>
 
-      {/* About */}
+      {/* Skills */}
       <Section>
-        <div className="grid gap-6 md:grid-cols-12">
-          <div className="col-span-12 flex h-full justify-center sm:col-span-4">
-            <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
-              <InfoCounter label={t('experience.years')} end={4} />
-              <InfoCounter label={t('experience.projects')} end={15} />
-            </div>
-          </div>
-          <div className="col-span-12 sm:col-span-8">
-            <motion.h3
-              variants={fadeInSlideLeftVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mb-5 text-6xl font-extralight"
-            >
-              {t('experience.title')}
-            </motion.h3>
-            <motion.p
-              variants={fadeInVariant}
-              initial="hidden"
-              whileInView="visible"
-            >
-              {t('experience.description')}
-            </motion.p>
-            <motion.div
-              variants={containerVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="mt-4 flex items-end justify-end gap-3"
-            >
-              <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
-                <Button.Icon icon={ICONS.download} />
-              </a>
-              <Link href={CONTACTS.LINKEDIN} target="_">
-                <Button.Icon icon={ICONS.linkedin} />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
+        <SectionTitle title={t_skills('title')} color="primary" tag="h2" />
+        <motion.p
+          variants={fadeInSlideLeftVariant}
+          whileInView="visible"
+          initial="hidden"
+          viewport={{ once: true }}
+        >
+          {t_skills('description')}
+        </motion.p>
       </Section>
+      <div className="grid items-baseline gap-6 md:grid-cols-12">
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-6">
+          <RadarChart data={skillsDataFE} />
+        </div>
+        <div className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-6">
+          <RadarChart data={skillsDataBE} />
+        </div>
+      </div>
+      <div className="flex items-end justify-end gap-3">
+        <a href="/docs/cv.pdf" download="André_Rodrigues_CV.pdf">
+          <Button.Icon icon={ICONS.download} />
+        </a>
+        <Link href={CONTACTS.LINKEDIN} target="_">
+          <Button.Icon icon={ICONS.linkedin} />
+        </Link>
+      </div>
 
       {/* Contact */}
       <Section className="mb-0 md:mb-0">

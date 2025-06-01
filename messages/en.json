@@ -140,7 +140,7 @@
     },
     "experience": {
       "title": "Build lasting and meaningful relationships",
-      "description": "Throughout my career, I've been privileged to contribute to a range of impactful projects across several leading companies, each offering unique challenges and learning opportunities. Currently, at Probely, I refined their cybersecurity products with intuitive features using React & TypeScript, enhancing user satisfaction and product efficiency.\nMy roles at Navro and Pipedrive allowed me to deeply engage in software reliability and system optimization, implementing robust solutions and comprehensive testing regimes that elevated operational performance.\nAt NBCUniversal's Peacock, I took pride in ensuring a seamless streaming experience for millions of users worldwide, contributing to a scalable and responsive service.\nMy journey at Wise was particularly rewarding, as I led the development of an online lottery platform from the ground up, aligning our technical solutions closely with client needs and market demands. This role not only challenged my skills but also deepened my appreciation for collaborative solution development.",
+      "description": "Throughout my career, I've been privileged to contribute to a range of impactful projects across several leading companies, each offering unique challenges and learning opportunities. Currently, at Snyk, I refined their cybersecurity products with intuitive features using React & TypeScript, enhancing user satisfaction and product efficiency.\nMy roles at Navro and Pipedrive allowed me to deeply engage in software reliability and system optimization, implementing robust solutions and comprehensive testing regimes that elevated operational performance.\nAt NBCUniversal's Peacock, I took pride in ensuring a seamless streaming experience for millions of users worldwide, contributing to a scalable and responsive service.\nMy journey at Wise was particularly rewarding, as I led the development of an online lottery platform from the ground up, aligning our technical solutions closely with client needs and market demands. This role not only challenged my skills but also deepened my appreciation for collaborative solution development.",
       "projects": "Projects in different sectors",
       "years": "Years of experience"
     },
@@ -273,7 +273,7 @@
   "skills": {
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
-    "title": "overview",
+    "title": "Skills",
     "description": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
   },
 
@@ -451,14 +451,12 @@
     "aboutTitle": "About • André Rodrigo",
     "portfolioTitle": "Portfolio • André Rodrigo",
     "contactsTitle": "Contacts • André Rodrigo",
-    "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
     "pricingTitle": "Pricing • André Rodrigo",
     "faqsTitle": "FAQs • André Rodrigo",
     "aboutDescription": "Get to know more about my background, how I work, and the values that guide every project.",
     "portfolioDescription": "Recent projects including websites, apps, and digital solutions built for companies and brands.",
     "contactsDescription": "Get in touch to discuss your project or ask questions. Available via email or social media.",
-    "skillsDescription": "Explore the technologies and skills I use to build modern and scalable digital solutions.",
     "blogDescription": "Tips, insights, and content about web development, freelancing, and technology.",
     "pricingDescription": "Check available service packages and pricing for website development and custom digital solutions.",
     "faqsDescription": "Answers to frequently asked questions about my services, process, and how I work."

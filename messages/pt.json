@@ -139,7 +139,7 @@
     },
     "experience": {
       "title": "O segredo está na relação humana",
-      "description": "Ao longo da minha carreira, tive o privilégio de contribuir para uma série de projectos impactantes em várias empresas líderes, cada um oferecendo desafios únicos e oportunidades de aprendizagem. Atualmente, na Probely, aperfeiçoei os seus produtos de cibersegurança com funcionalidades intuitivas utilizando React e TypeScript, aumentando a satisfação do utilizador e a eficiência do produto.\nAs minhas funções na Navro e na Pipedrive permitiram-me envolver-me profundamente na fiabilidade do software e na otimização do sistema, implementando soluções robustas e regimes de teste abrangentes que elevaram o desempenho operacional. \nNa NBCUniversal's Peacock, orgulhei-me de assegurar uma experiência de streaming sem falhas para milhões de utilizadores em todo o mundo, contribuindo para um serviço escalável e com capacidade de resposta.\nA minha jornada na Wise foi particularmente gratificante, uma vez que liderei o desenvolvimento de uma plataforma de lotaria online desde o início, alinhando as nossas soluções técnicas com as necessidades do cliente e as exigências do mercado. Esta função não só desafiou a minha capacidade de liderança técnica, como também aprofundou o meu gosto pelo desenvolvimento de soluções em colaboração.",
+      "description": "Ao longo da minha carreira, tive o privilégio de contribuir para uma série de projectos impactantes em várias empresas líderes, cada um oferecendo desafios únicos e oportunidades de aprendizagem. Atualmente, na Snyk, aperfeiçoei os seus produtos de cibersegurança com funcionalidades intuitivas utilizando React e TypeScript, aumentando a satisfação do utilizador e a eficiência do produto.\nAs minhas funções na Navro e na Pipedrive permitiram-me envolver-me profundamente na fiabilidade do software e na otimização do sistema, implementando soluções robustas e regimes de teste abrangentes que elevaram o desempenho operacional. \nNa NBCUniversal's Peacock, orgulhei-me de assegurar uma experiência de streaming sem falhas para milhões de utilizadores em todo o mundo, contribuindo para um serviço escalável e com capacidade de resposta.\nA minha jornada na Wise foi particularmente gratificante, uma vez que liderei o desenvolvimento de uma plataforma de lotaria online desde o início, alinhando as nossas soluções técnicas com as necessidades do cliente e as exigências do mercado. Esta função não só desafiou a minha capacidade de liderança técnica, como também aprofundou o meu gosto pelo desenvolvimento de soluções em colaboração.",
       "projects": "Projetos em diferentes setores",
       "years": "Anos de experiência"
     },
@@ -457,14 +457,12 @@
     "aboutTitle": "Sobre • André Rodrigo",
     "portfolioTitle": "Portfólio • André Rodrigo",
     "contactsTitle": "Contactos • André Rodrigo",
-    "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
     "pricingTitle": "Preçário • André Rodrigo",
     "faqsTitle": "Perguntas Frequentes • André Rodrigo",
     "aboutDescription": "Conhece melhor o meu percurso, a forma como trabalho e os valores que guiam cada projeto.",
     "portfolioDescription": "Projetos recentes de websites, aplicações e soluções digitais criadas para empresas e marcas.",
     "contactsDescription": "Entra em contacto para discutir o teu projeto ou tirar dúvidas. Estou disponível por email ou redes sociais.",
-    "skillsDescription": "Conhece as tecnologias e competências que utilizo para criar soluções modernas e escaláveis.",
     "blogDescription": "Dicas, ideias e conteúdos sobre desenvolvimento web, freelance e tecnologia.",
     "pricingDescription": "Consulta os pacotes de serviços e preços para criação de websites e soluções digitais personalizadas.",
     "faqsDescription": "Respostas às perguntas mais frequentes sobre os meus serviços, processos e formas de trabalho."
