@@ -10,7 +10,7 @@ export async function generateMetadata({
 
   return getMetadata({
     title: t('faqsTitle'),
-    description: t('description'),
+    description: t('faqsDescription'),
   });
 }
 

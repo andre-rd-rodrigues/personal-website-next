@@ -453,6 +453,7 @@
 
   "metadata": {
     "homeTitle": "André Rodrigo • Engenharia de Software",
+    "description": "Criação de websites, apps e serviços de consultoria digital para empresas e marcas em crescimento.Soluções rápidas, seguras e feitas à medida.",
     "aboutTitle": "Sobre • André Rodrigo",
     "portfolioTitle": "Portfólio • André Rodrigo",
     "contactsTitle": "Contactos • André Rodrigo",
@@ -460,6 +461,12 @@
     "blogTitle": "Blog • André Rodrigo",
     "pricingTitle": "Preçário • André Rodrigo",
     "faqsTitle": "Perguntas Frequentes • André Rodrigo",
-    "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
+    "aboutDescription": "Conhece melhor o meu percurso, a forma como trabalho e os valores que guiam cada projeto.",
+    "portfolioDescription": "Projetos recentes de websites, aplicações e soluções digitais criadas para empresas e marcas.",
+    "contactsDescription": "Entra em contacto para discutir o teu projeto ou tirar dúvidas. Estou disponível por email ou redes sociais.",
+    "skillsDescription": "Conhece as tecnologias e competências que utilizo para criar soluções modernas e escaláveis.",
+    "blogDescription": "Dicas, ideias e conteúdos sobre desenvolvimento web, freelance e tecnologia.",
+    "pricingDescription": "Consulta os pacotes de serviços e preços para criação de websites e soluções digitais personalizadas.",
+    "faqsDescription": "Respostas às perguntas mais frequentes sobre os meus serviços, processos e formas de trabalho."
   }
 }
