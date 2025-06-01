@@ -99,7 +99,7 @@ export default function FaqSearch({ faqs }: { faqs: FAQ[] }) {
             <ul
               id="search-suggestion-list"
               role="listbox"
-              className="absolute z-10 mt-1 w-full rounded-lg bg-white shadow-md dark:bg-zinc-800"
+              className="absolute z-10 mt-1 w-full rounded-lg bg-zinc-800 shadow-md"
             >
               {suggestions.map((suggestion: string, idx: number) => (
                 <li
@@ -108,9 +108,7 @@ export default function FaqSearch({ faqs }: { faqs: FAQ[] }) {
                   aria-selected={activeIndex === idx}
                   tabIndex={-1}
                   className={`cursor-pointer px-4 py-2 text-sm ${
-                    activeIndex === idx
-                      ? 'bg-gray-100 dark:bg-zinc-700'
-                      : 'hover:bg-gray-100 dark:hover:bg-zinc-700'
+                    activeIndex === idx ? 'bg-zinc-700' : 'hover:bg-zinc-700'
                   }`}
                   onClick={() => handleSuggestionClick(suggestion)}
                 >
