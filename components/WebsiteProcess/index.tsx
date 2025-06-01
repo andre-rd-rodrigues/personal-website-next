@@ -25,7 +25,7 @@ export default function WebsiteProcess() {
       >
         <motion.h2
           variants={fadeInSlideLeftVariant}
-          className="mb-7 text-center text-6xl font-extralight"
+          className="mb-7 text-center text-4xl font-extralight sm:text-6xl"
         >
           {t('title')}
         </motion.h2>
