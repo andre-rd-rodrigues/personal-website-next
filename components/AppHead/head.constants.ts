@@ -23,4 +23,10 @@ export const HEAD_ROUTES = {
   '/skills': {
     title: 'skillsTitle',
   },
+  '/pricing': {
+    title: 'pricingTitle',
+  },
+  '/faqs': {
+    title: 'faqsTitle',
+  },
 };

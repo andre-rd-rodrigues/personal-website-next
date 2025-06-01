@@ -1,4 +1,4 @@
 export type WorkCategory = {
-  name: "Websites" | "Apps";
+  name: 'Websites' | 'Apps';
   src: string;
 };

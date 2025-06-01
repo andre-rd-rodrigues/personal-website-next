@@ -6,7 +6,9 @@
     "blog": "Blog",
     "brand_label": "Web Developer",
     "testimonials": "Testimonials",
-    "skills": "Skills"
+    "skills": "Skills",
+    "pricing": "Pricing",
+    "faqs": "FAQs"
   },
 
   "homepage": {
@@ -148,6 +150,126 @@
     }
   },
 
+  "pricing": {
+    "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
+    "title": "Pricing",
+    "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
+    "packs": {
+      "title": "Packages",
+      "description": "Choose a package that grows with your business — fast, secure, and tailored to your needs.",
+      "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
+      "starter": {
+        "title": "Online Presence",
+        "price": "800 €",
+        "subtitle": "*Reference value",
+        "description": "Perfect for small businesses and personal websites.",
+        "features": [
+          "Homepage + up to 3 pages",
+          "Custom template",
+          "Social media metadata",
+          "Mobile-optimized",
+          "Performance and SEO optimization",
+          "Contact form",
+          "Hosting + domain (advice and setup)"
+        ]
+      },
+      "professional": {
+        "title": "Professional",
+        "price": "1,400 €",
+        "subtitle": "*Reference value",
+        "description": "Ideal for businesses focused on growth and dynamic content.",
+        "features": [
+          "Everything in 'Online Presence'",
+          "CMS integration (Blog)",
+          "Up to 6 pages",
+          "Cookie policy + Legal notice",
+          "Google Analytics"
+        ],
+        "extras": ["Google Search Console", "3 months free hosting"]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "2,100 €",
+        "subtitle": "*Reference value",
+        "description": "Essential for an active online presence.",
+        "features": [
+          "Everything in 'Professional'",
+          "Original design",
+          "Logo creation",
+          "Animation integration",
+          "Integrations (Payments, Scheduling, etc.)",
+          "Bilingual (2 languages)",
+          "Priority support"
+        ],
+        "extras": ["Google Business Profile", "Google Maps"]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "Custom quote",
+        "description": "Tailored solutions for ambitious projects",
+        "features": [
+          "MVP development",
+          "Web app development",
+          "Strategic consulting",
+          "Cybersecurity consulting",
+          "360 rebranding",
+          "SEO evaluation and improvement",
+          "Performance evaluation and enhancement",
+          "Custom digital solutions"
+        ]
+      }
+    },
+    "maintenance": {
+      "title": "Monthly Fee",
+      "description": "Ensure your website stays updated, available, and secure with a continuous hosting and maintenance plan.",
+      "plans": [
+        {
+          "title": "Essential",
+          "price": "10 €",
+          "subtitle": "per month, 120 € annually, excl. taxes",
+          "description": "Hosting and basic technical monitoring.",
+          "features": [
+            "Uptime monitoring",
+            "Availability checks",
+            "Infrastructure maintenance",
+            "Basic backups and alerts",
+            "Basic email support",
+            "Limited updates (up to 30min/quarterly)"
+          ]
+        },
+        {
+          "title": "Essential Plus",
+          "price": "25 €",
+          "subtitle": "per month, 300 € annually, excl. taxes",
+          "description": "Ideal for businesses that need a dynamic website.",
+          "features": [
+            "Everything in the 'Essential' plan",
+            "Domain management (purchase, renewal, DNS, etc.)",
+            "Small monthly updates (up to 30min/month)",
+            "Content updates in the CMS",
+            "Ongoing support and regular improvements"
+          ]
+        },
+        {
+          "title": "Independent",
+          "price": "45 €",
+          "subtitle": "per month, 540 € annually, excl. taxes",
+          "description": "Perfect for businesses with frequent launches and updated content.",
+          "features": [
+            "Everything in the 'Essential Plus' plan",
+            "Landing page creation for marketing campaigns",
+            "Blog and page management",
+            "Includes up to 3h/month of updates",
+            "Performance and UX consulting",
+            "Domain and subdomain management",
+            "Ongoing SEO and performance optimization",
+            "Priority support and fast execution (response within 24 business hours)"
+          ]
+        }
+      ]
+    }
+  },
+
   "skills": {
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
@@ -211,6 +333,53 @@
       "review": "I'd like to thank André for his outstanding work on my album cover and logo! His creativity and skill are truly exceptional, and he has a remarkable ability to explain the best design choices with clarity and confidence. If you're looking for top-tier design work, I highly recommend checking out his website and portfolio!"
     }
   },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "description": "Here are some answers to the most common questions I receive. If you have any other doubts, feel free to reach out.",
+    "placeholder": "Type your question here...",
+    "noQuestionFound": {
+      "title": "Didn't find the answer you were looking for?",
+      "description": "If your question isn’t listed here, feel free to reach out — I’ll be happy to help."
+    },
+    "questions": [
+      {
+        "question": "How long does it take to build a website?",
+        "answer": "On average, a website under the 'Online Presence' package takes between 3 to 5 weeks. However, the timeline depends on the complexity of the project and the client's availability to provide the required content."
+      },
+      {
+        "question": "What are the advantages of hiring a developer instead of using a site builder?",
+        "answer": "When you hire a developer, your website is tailored specifically to your business — without the limitations of generic templates. This means better performance, a unique design, improved security, and the ability to scale or add custom features. It also avoids hidden fees, paid extensions, and technical issues that many DIY platforms can't solve."
+      },
+      {
+        "question": "Why don’t you use tools like WordPress?",
+        "answer": "I prefer not to use WordPress because its templates are quite limited and, in my experience, they don’t offer the flexibility needed for a truly customized website. I work with modern solutions that ensure better performance, scalability, and simpler maintenance. I also have access to high-quality plugins and tools at better cost-benefit, resulting in a more efficient site tailored to your business — without relying on generic systems."
+      },
+      {
+        "question": "Can I edit the content on my website later?",
+        "answer": "Yes. Whenever applicable (e.g. blog), I deliver the site with a CMS so you can easily update text and images."
+      },
+      {
+        "question": "Do you also provide hosting and domain setup?",
+        "answer": "Yes. I can take care of the hosting and domain setup for you, or simply guide you through it if you prefer handling it yourself."
+      },
+      {
+        "question": "Will the website be mobile-friendly?",
+        "answer": "Yes. Every website I build is responsive and fully optimized for mobile devices like phones and tablets."
+      },
+      {
+        "question": "How does the monthly maintenance work?",
+        "answer": "All websites include a basic maintenance plan at €10/month. This ensures your site remains fast, secure, and fully functional over time. It includes 24/7 monitoring, regular backups, minor fixes, and email support. You can also request up to 30 minutes of updates per quarter."
+      },
+      {
+        "question": "Do I need to pay for maintenance even if I don’t request changes?",
+        "answer": "Yes. Maintenance covers much more than visible changes. It ensures your site stays online, secure, backed up, and ready to handle any unexpected technical issues."
+      },
+      {
+        "question": "What if I need more updates than what’s included?",
+        "answer": "If you need more updates than what's included in the plan, I can quote the extra work or you can upgrade to a higher-tier plan with more support time included each month."
+      }
+    ]
+  },
 
   "404": {
     "title": "Page not found",
@@ -232,6 +401,33 @@
     "title": "Trusted by companies"
   },
 
+  "website_process": {
+    "title": "Development Stages",
+    "description": "The success of the projects I build comes from a personalized and structured approach, with clear steps that ensure comfort and real results.",
+    "steps": [
+      {
+        "icon": "iconoir:notes",
+        "title": "Briefing",
+        "description": "Definition of goals, target audience, and essential features for your business success."
+      },
+      {
+        "icon": "clarity:design-line",
+        "title": "Concept & Design",
+        "description": "Creation of the visual concept based on your brand, followed by your approval before development."
+      },
+      {
+        "icon": "iconoir:code",
+        "title": "Development",
+        "description": "Website development using modern technologies, with performance, security, and easy content management."
+      },
+      {
+        "icon": "iconoir:rocket",
+        "title": "Launch",
+        "description": "Final launch with domain and hosting configured — ready to go live and generate results."
+      }
+    ]
+  },
+
   "buttons": {
     "readMore": "Read more",
     "see_more": "See more",
@@ -241,7 +437,9 @@
     "about": "About",
     "skills": "Skills",
     "schedule": "Schedule",
-    "goBack": "Go back"
+    "goBack": "Go back",
+    "getStarted": "Get started",
+    "select": "Select"
   },
   "error": {
     "title": "Upss something went wrong...",
@@ -254,6 +452,8 @@
     "contactsTitle": "Contacts • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
+    "pricingTitle": "Pricing • André Rodrigo",
+    "faqsTitle": "FAQs • André Rodrigo",
     "description": "Transforming ideas into powerful web solutions. From websites to mobile apps, my services redefine your digital landscape. Ready to innovate?"
   }
 }

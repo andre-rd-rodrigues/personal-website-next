@@ -12,7 +12,9 @@ import { useTranslations } from 'next-intl';
 const navItems = [
   { href: '/portfolio', label: 'portfolio' },
   { href: '/about', label: 'about' },
+  { href: '/pricing', label: 'pricing' },
   { href: '/skills', label: 'skills' },
+  { href: '/faqs', label: 'faqs' },
   { href: '/contacts', label: 'contacts' },
   { href: '/blog', label: 'blog' },
 ];

@@ -30,6 +30,7 @@ import {
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import WebsiteProcess from '@/components/WebsiteProcess';
 
 const Home = () => {
   const t = useTranslations();
@@ -119,8 +120,8 @@ const Home = () => {
                 variants={containerVariant}
                 initial="hidden"
                 whileInView="visible"
-                className="mt-9 flex items-end justify-end gap-3"
                 viewport={{ once: true }}
+                className="mt-9 flex items-end justify-end gap-3"
               >
                 <motion.span variants={fadeInSlideInVariant}>
                   <a href={CONTACTS.LINKEDIN} target="_">
@@ -156,7 +157,7 @@ const Home = () => {
                 className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
                 key={i}
               >
-                <Card
+                <Card.Basic
                   title={name}
                   description={t('portfolio.' + description)}
                   imageUrl={src}
@@ -247,6 +248,9 @@ const Home = () => {
             />
           </motion.div>
         </Section>
+
+        {/* Process */}
+        <WebsiteProcess />
 
         {/* Testimonials */}
         <Section className="md:my-56">

@@ -6,7 +6,9 @@
     "blog": "Blog",
     "brand_label": "Programação",
     "testimonials": "Testemunhos",
-    "skills": "Skills"
+    "skills": "Skills",
+    "pricing": "Preçário",
+    "faqs": "FAQs"
   },
 
   "homepage": {
@@ -147,6 +149,126 @@
     }
   },
 
+  "pricing": {
+    "heroTitle": "Soluções seguras, rápidas e personalizadas para crescerem contigo.",
+    "title": "Preçário",
+
+    "packs": {
+      "title": "Pacotes",
+      "description": "Escolhe um pacote que cresce com o teu negócio — rápido, seguro e feito à medida",
+      "subtitle": "Cada projeto é único e o preço final pode variar de acordo com as necessidades do teu negócio.",
+      "starter": {
+        "title": "Presença Online",
+        "price": "800 €",
+        "subtitle": "*Valor de referência",
+        "description": "Perfeito para pequenas empresas e sites pessoais.",
+        "features": [
+          "Homepage + até 3 páginas",
+          "Template personalizado",
+          "Metadados para redes sociais",
+          "Optimizado para telemóvel",
+          "Otimização de performance e SEO",
+          "Formulário de contacto",
+          "Alojamento + domínio (aconselhamento e configuração)"
+        ]
+      },
+      "professional": {
+        "title": "Profissional",
+        "price": "1.400 €",
+        "subtitle": "*Valor de referência",
+        "description": "Ideal para empresas com foco na expansão e conteúdo dinâmico.",
+        "features": [
+          "Tudo do \"Presença Digital\"",
+          "Integração com CMS (Blog)",
+          "Até 6 páginas",
+          "Política de cookies + Aviso Legal",
+          "Google Analytics"
+        ],
+        "extras": ["Google Search Console", "Alojamento Gratuito 3 Meses"]
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "2.100 €",
+        "subtitle": "*Valor de referência",
+        "description": "Essencial para uma presença online ativa.",
+        "features": [
+          "Tudo do \"Profissional\"",
+          "Design original",
+          "Criação de Logótipo",
+          "Integração de animações",
+          "Integrações (Pagamentos, Agendamentos, etc)",
+          "Bilingue (2 idiomas)",
+          "Suporte prioritário"
+        ],
+        "extras": ["Google Business Profile", "Google Maps"]
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "Orçamento",
+        "description": "Soluções à medida para projetos ambiciosos",
+        "features": [
+          "Desenvolvimento de MVPs",
+          "Desenvolvimento de web apps",
+          "Consultoria estratégica",
+          "Consultoria de Cibersegurança",
+          "Rebranding 360",
+          "Avaliação e melhoria de SEO",
+          "Avaliação e aumento de performance",
+          "Soluções digitais personalizadas"
+        ]
+      }
+    },
+    "maintenance": {
+      "title": "Mensalidades",
+      "description": "Garante que o teu site se mantém atualizado, disponível e seguro com um plano contínuo de alojamento e manutenção.",
+      "plans": [
+        {
+          "title": "Essencial",
+          "price": "10 €",
+          "subtitle": "por mês, 120 € anual, excl. taxas",
+          "description": "Alojamento e monitorização técnica básica.",
+          "features": [
+            "Monitorização de uptime",
+            "Verificações de disponibilidade",
+            "Manutenção da infraestrutura",
+            "Backups e alertas básicos",
+            "Suporte básico por email",
+            "Alterações limitadas (até 30min/trimestral)"
+          ]
+        },
+        {
+          "title": "Essencial Plus",
+          "price": "25 €",
+          "subtitle": "por mês, 300 € anual, excl. taxas",
+          "description": "Ideal para negócios que precisam de um site dinâmico.",
+          "features": [
+            "Tudo incluído no plano 'Essencial'",
+            "Gestão de domínio (compra, renovação, DNS, etc.)",
+            "Pequenas alterações mensais (até 30min/mês)",
+            "Updates de conteúdos no CMS",
+            "Apoio contínuo e melhorias regulares"
+          ]
+        },
+        {
+          "title": "Independente",
+          "price": "45 €",
+          "subtitle": "por mês, 540 € anual, excl. taxas",
+          "description": "Perfeito para negócios com lançamentos frequentes e conteúdo atualizado.",
+          "features": [
+            "Tudo incluído no plano 'Essencial Plus'",
+            "Criação de landing pages para campanhas de marketing",
+            "Gestão de blog e páginas",
+            "Inclui até 3h/mês de alterações",
+            "Consultoria de performance e UX",
+            "Gestão de domínios e subdomínios",
+            "Otimizações contínuas de SEO e performance",
+            "Suporte prioritário e execuções rápidas (resposta em 24h úteis)"
+          ]
+        }
+      ]
+    }
+  },
+
   "skills": {
     "heroTitle": "O conhecimento é o olho do desejo e o piloto da alma.",
     "heroDescription": "- Will Durant",
@@ -235,6 +357,81 @@
     "title": "Colaborações"
   },
 
+  "website_process": {
+    "title": "Etapas de Desenvolvimento",
+    "description": "O sucesso dos projetos que desenvolvo vem de uma abordagem personalizada e estruturada, com etapas claras que garantem conforto e resultados reais.",
+    "steps": [
+      {
+        "icon": "iconoir:notes",
+        "title": "Briefing",
+        "description": "Definição dos objetivos, público-alvo e funcionalidades essenciais para o sucesso do negócio."
+      },
+      {
+        "icon": "clarity:design-line",
+        "title": "Conceito e Design",
+        "description": "Criação do conceito visual com base na marca, seguido da sua aprovação antes do desenvolvimento."
+      },
+      {
+        "icon": "iconoir:code",
+        "title": "Desenvolvimento",
+        "description": "Desenvolvimento do site com tecnologias modernas, focado em desempenho, segurança e gestão fácil de conteúdos."
+      },
+      {
+        "icon": "iconoir:rocket",
+        "title": "Publicação",
+        "description": "Lançamento final com domínio e alojamento configurados — online e a gerar resultados."
+      }
+    ]
+  },
+
+  "faqs": {
+    "title": "Perguntas Frequentes",
+    "description": "Aqui estão algumas respostas às perguntas mais comuns que recebo. Se tiver outras dúvidas, estou disponível para ajudar.",
+    "placeholder": "Pesquise a sua questão...",
+    "noQuestionFound": {
+      "title": "Não encontrou a resposta que procurava?",
+      "description": "Se não encontrou a resposta à sua pergunta, estou aqui para ajudar. Entre em contacto comigo e respondo com todo o gosto."
+    },
+    "questions": [
+      {
+        "question": "Quanto tempo demora a criar um website?",
+        "answer": "Em média, um website dentro do pacote 'Presença Online' varia entre 3 a 5 semanas. No entanto, o tempo depende da complexidade do projeto e da disponibilidade do cliente em fornecer os conteúdos requisitados."
+      },
+      {
+        "question": "Quais as vantagens de contratar um programador em vez de usar uma aplicação?",
+        "answer": "Ao contratar um programador, o seu site é feito à medida do seu negócio — sem limitações de templates genéricos. Isso significa melhor desempenho, visual único, mais segurança e possibilidade de escalar ou integrar funcionalidades específicas. Além disso, evita mensalidades escondidas, extensões pagas e dores de cabeça técnicas que muitas plataformas 'DIY' não resolvem."
+      },
+      {
+        "question": "Usas ferramentas de criação como o WordPress?",
+        "answer": "Prefiro não usar WordPress porque os templates são bastante limitados e, pela minha experiência, não oferecem a flexibilidade necessária para criar um site verdadeiramente personalizado. Além disso, consigo integrar soluções modernas que garantem melhor desempenho, escalabilidade e uma manutenção mais simples."
+      },
+      {
+        "question": "Posso editar o conteúdo do meu site posteriormente?",
+        "answer": "Sim. Sempre que aplicável (ex. Blog), entrego o site com um CMS para que possa atualizar textos e imagens facilmente."
+      },
+      {
+        "question": "Ofereces também alojamento e domínio?",
+        "answer": "Sim. Posso tratar da configuração de alojamento e domínio por si, ou apenas orientar se preferir tratar diretamente."
+      },
+      {
+        "question": "O site será otimizado para telemóvel?",
+        "answer": "Sim. Todos os sites que crio são responsivos e adaptados a dispositivos móveis como telemóveis e tablets."
+      },
+      {
+        "question": "Como funciona a manutenção mensal?",
+        "answer": "Todos os websites incluem um plano básico de manutenção no valor de 10 €/mês. Esse plano garante que o seu site continua rápido, seguro e funcional ao longo do tempo. Inclui monitorização 24/7, backups regulares, pequenas correções e suporte por email. Também pode solicitar pequenas alterações de até 30 minutos por trimestre."
+      },
+      {
+        "question": "Preciso de pagar a manutenção mesmo que não peça alterações?",
+        "answer": "Sim. A manutenção cobre muito mais do que alterações visíveis. Garante que o site esteja sempre disponível, atualizado, com cópias de segurança ativas e pronto para responder a qualquer problema técnico inesperado."
+      },
+      {
+        "question": "E se precisar de mais alterações do que as incluídas?",
+        "answer": "Se precisar de mais alterações do que as incluídas no plano, posso orçamentar os pedidos extra ou pode optar por um plano superior com mais tempo de suporte incluído mensalmente."
+      }
+    ]
+  },
+
   "buttons": {
     "readMore": "Ler mais",
     "see_more": "Ver mais",
@@ -244,7 +441,9 @@
     "about": "Sobre",
     "skills": "Skills",
     "schedule": "Agendar",
-    "goBack": "Voltar"
+    "goBack": "Voltar",
+    "getStarted": "Começar",
+    "select": "Escolher"
   },
 
   "error": {
@@ -259,6 +458,8 @@
     "contactsTitle": "Contactos • André Rodrigo",
     "skillsTitle": "Skills • André Rodrigo",
     "blogTitle": "Blog • André Rodrigo",
+    "pricingTitle": "Preçário • André Rodrigo",
+    "faqsTitle": "Perguntas Frequentes • André Rodrigo",
     "description": "Transformo ideias em soluções web. Desde websites a aplicações mobile, realizo diferentes serviços personalizados ao seu negócio. Entre em contacto para começar a inovar!"
   }
 }
