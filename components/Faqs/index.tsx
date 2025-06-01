@@ -45,7 +45,7 @@ export function FAQItem({
           <p className="mt-4 text-base">{answer}</p>
         </motion.div>
       </div>
-      <hr className="my-5 border-gray-300 dark:border-zinc-700" />
+      <hr className="my-5 border-zinc-700" />
     </>
   );
 }
