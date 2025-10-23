@@ -21,7 +21,6 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@hotjar/browser": "^1.0.9",
     "@iconify/react": "^4.1.1",
     "@next/third-parties": "^16.0.0",
     "@tabler/icons-react": "^3.19.0",
