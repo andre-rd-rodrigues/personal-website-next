@@ -1,16 +1,11 @@
-'use client';
-
-import { useEffect } from 'react';
-import Hotjar from '@hotjar/browser';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const Analytics = () => {
-  useEffect(() => {
-    if (process.env.NEXT_PUBLIC_HOTJAR_ID) {
-      Hotjar.init(Number(process.env.NEXT_PUBLIC_HOTJAR_ID), 6);
-    }
-  }, []);
-
-  return null;
+  return (
+    <>
+      <GoogleAnalytics gaId="G-K901N5P0GC" />
+    </>
+  );
 };
 
 export default Analytics;
