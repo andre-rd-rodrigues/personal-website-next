@@ -1,7 +1,7 @@
 import ImageZoomEffect from '@/components/ImageZoomEffect/ImageZoomEffect';
 import React, { useState } from 'react';
 import styles from './projectdisplay.module.scss';
-import Hotjar from '@hotjar/browser';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 import ICONS from '@/constants/icons.constants';
 import { Icon } from '@iconify/react';
@@ -46,7 +46,11 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   const handleOpenProjectModal = () => {
     setIsModalOpen((prevState) => !prevState);
 
-    Hotjar.event(`Project opened: ${label}`);
+    sendGTMEvent({
+      event: 'project_viewed',
+      project_name: label,
+      project_type: 'portfolio_item',
+    });
   };
 
   return (
@@ -122,9 +126,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
                 <a
                   style={{ transform: 'scale(0.8)' }}
                   onClick={() =>
-                    Hotjar.event(
-                      `project_link_clicked_${label}_${app ? 'app' : 'website'}`,
-                    )
+                    sendGTMEvent({
+                      event: 'project_link_clicked',
+                      project_name: label,
+                      link_type: app ? 'app' : 'website',
+                      link_destination: website || app,
+                    })
                   }
                   href={website || app}
                   target="_blank"
