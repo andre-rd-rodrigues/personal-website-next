@@ -2,13 +2,39 @@
 
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { useTranslations } from 'next-intl';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
 
-export default function ExpandableCardDemo() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null,
-  );
+export interface ExpandableCard {
+  title: string;
+  description: string;
+  src: string; // Image URL
+  ctaText: string;
+  ctaLink: string;
+  content:
+    | React.ReactNode
+    | ((t: ReturnType<typeof useTranslations>) => React.ReactNode);
+  colSpan?: number; // Optional: custom column span for bento grid (defaults to auto)
+}
+
+export interface ExpandableCardsProps {
+  cards: ExpandableCard[];
+  className?: string; // For the root container
+  gridClassName?: string; // For customizing BentoGrid
+  maxModalWidth?: string; // For the expanded modal (default: "500px")
+  onCardClick?: (card: ExpandableCard) => void; // Optional callback when card is clicked
+}
+
+export default function ExpandableCards({
+  cards,
+  className,
+  gridClassName,
+  maxModalWidth = '500px',
+  onCardClick,
+}: ExpandableCardsProps) {
+  const t = useTranslations();
+  const [active, setActive] = useState<ExpandableCard | boolean | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -31,8 +57,31 @@ export default function ExpandableCardDemo() {
 
   useOutsideClick(ref, () => setActive(null));
 
+  const handleCardClick = (card: ExpandableCard) => {
+    setActive(card);
+    onCardClick?.(card);
+  };
+
+  // Default column span logic: first and last cards span 2 columns, others span 1
+  const getColSpan = (index: number, card: ExpandableCard) => {
+    if (card.colSpan !== undefined) {
+      // Map common colSpan values to Tailwind classes
+      const colSpanMap: Record<number, string> = {
+        1: 'md:col-span-1',
+        2: 'md:col-span-2',
+        3: 'md:col-span-3',
+      };
+      return colSpanMap[card.colSpan] || `md:col-span-${card.colSpan}`;
+    }
+    // Default pattern: first and last cards are wider
+    if (index === 0 || index === cards.length - 1) {
+      return 'md:col-span-2';
+    }
+    return 'md:col-span-1';
+  };
+
   return (
-    <>
+    <div className={className}>
       <AnimatePresence>
         {active && typeof active === 'object' && (
           <motion.div
@@ -69,7 +118,8 @@ export default function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full max-w-[500px] flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-2xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-2xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              style={{ maxWidth: maxModalWidth }}
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -119,10 +169,10 @@ export default function ExpandableCardDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="flex h-40 flex-col items-start gap-4 overflow-auto pb-10 text-xs text-white/80 [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] md:h-fit md:text-sm lg:text-base"
+                    className="flex h-40 flex-col items-start gap-4 overflow-auto pb-10 text-xs text-white/80 md:h-fit md:text-sm lg:text-base"
                   >
                     {typeof active.content === 'function'
-                      ? active.content()
+                      ? active.content(t)
                       : active.content}
                   </motion.div>
                 </div>
@@ -131,19 +181,15 @@ export default function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <BentoGrid>
+      <BentoGrid className={gridClassName}>
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
-            key={card.title}
-            onClick={() => setActive(card)}
+            key={`${card.title}-${index}`}
+            onClick={() => handleCardClick(card)}
             className={cn(
               'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl transition-all hover:bg-opacity-20',
-              // Varying sizes for bento grid effect
-              index === 0 && 'md:col-span-2',
-              index === 1 && 'md:col-span-1',
-              index === 2 && 'md:col-span-1',
-              index === 3 && 'md:col-span-2',
+              getColSpan(index, card),
             )}
           >
             <div className="flex w-full flex-col gap-4">
@@ -177,7 +223,7 @@ export default function ExpandableCardDemo() {
           </motion.div>
         ))}
       </BentoGrid>
-    </>
+    </div>
   );
 }
 
@@ -232,96 +278,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-const cards = [
-  {
-    description: 'Lana Del Rey',
-    title: 'Summertime Sadness',
-    src: 'https://assets.aceternity.com/demos/lana-del-rey.jpeg',
-    ctaText: 'Visit',
-    ctaLink: 'https://ui.aceternity.com/templates',
-    content: () => {
-      return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
-      );
-    },
-  },
-  {
-    description: 'Babbu Maan',
-    title: 'Mitran Di Chhatri',
-    src: 'https://assets.aceternity.com/demos/babbu-maan.jpeg',
-    ctaText: 'Visit',
-    ctaLink: 'https://ui.aceternity.com/templates',
-    content: () => {
-      return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-
-  {
-    description: 'Metallica',
-    title: 'For Whom The Bell Tolls',
-    src: 'https://assets.aceternity.com/demos/metallica.jpeg',
-    ctaText: 'Visit',
-    ctaLink: 'https://ui.aceternity.com/templates',
-    content: () => {
-      return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
-        </p>
-      );
-    },
-  },
-  {
-    description: 'Lord Himesh',
-    title: 'Aap Ka Suroor',
-    src: 'https://assets.aceternity.com/demos/aap-ka-suroor.jpeg',
-    ctaText: 'Visit',
-    ctaLink: 'https://ui.aceternity.com/templates',
-    content: () => {
-      return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-];

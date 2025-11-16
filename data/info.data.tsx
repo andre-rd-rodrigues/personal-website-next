@@ -1,3 +1,5 @@
+import React from 'react';
+import { ExpandableCard } from '@/components/ui/expandable-card-demo-grid';
 import { ChartData } from 'chart.js';
 import { v4 as uuid } from 'uuid';
 
@@ -463,6 +465,41 @@ const PROJECTS = {
   ],
 };
 
+const MAIN_PROJECTS: ExpandableCard[] = [
+  {
+    title: 'Bárbara Barbizani',
+    description: 'web.projects.bb',
+    src: '/images/websites/bb.webp',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.barbizanicarvalholaw.com/',
+    content: (t) => <p>{t('projects.web.projects.bb')}</p>,
+  },
+  {
+    title: 'Carolina Jardim',
+    description: 'web.projects.carolina',
+    src: '/images/websites/carolina.webp',
+    ctaText: 'View Project',
+    ctaLink: 'https://acarolinajardim.com',
+    content: (t) => <p>{t('projects.web.projects.carolina')}</p>,
+  },
+  {
+    title: 'Snyk',
+    description: 'web.projects.snyk',
+    src: '/images/websites/snyk.webp',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.snyk.io',
+    content: (t) => <p>{t('projects.web.projects.snyk')}</p>,
+  },
+  {
+    title: 'Pipedrive',
+    description: 'web.projects.pipedrive',
+    src: '/images/websites/pipedrive.webp',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.pipedrive.com',
+    content: (t) => <p>{t('projects.web.projects.pipedrive')}</p>,
+  },
+];
+
 const get_homepage_gallery = () => {
   const gallery = [];
 
@@ -657,6 +694,7 @@ export {
   CONTACTS,
   WORK_CATEGORIES,
   PROJECTS,
+  MAIN_PROJECTS,
   services,
   techStack,
   get_homepage_gallery,

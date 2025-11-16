@@ -18,7 +18,7 @@ import { HeroParallax } from '@/components/ui/hero-parallax';
 import VideoBackground from '@/components/VideoBackground';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
-import { EXPERTISE, PROJECTS } from '@/data/info.data';
+import { EXPERTISE, MAIN_PROJECTS, PROJECTS } from '@/data/info.data';
 import useTranslation from '@/hooks/useTranslation';
 import {
   blurVariant,
@@ -31,7 +31,7 @@ import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import WebsiteProcess from '@/components/WebsiteProcess';
-import ExpandableCardDemo from '@/components/ui/expandable-card-demo-grid';
+import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 
 const Home = () => {
   const t = useTranslations();
@@ -194,7 +194,7 @@ const Home = () => {
       {/*    <HeroParallax products={PROJECTS.homepage} /> */}
       <Container>
         <Section>
-          <ExpandableCardDemo />
+          <ExpandableCards cards={MAIN_PROJECTS} />
         </Section>
       </Container>
 
