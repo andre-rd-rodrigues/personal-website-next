@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 
 export interface ExpandableCard {
   title: string;
-  description: string;
   src: string; // Image URL
   ctaText: string;
   ctaLink: string;
@@ -110,7 +109,7 @@ export default function ExpandableCards({
                   duration: 0.05,
                 },
               }}
-              className="absolute right-6 top-6 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-2xl transition-opacity hover:opacity-80 lg:hidden"
+              className="absolute right-6 top-6 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl shadow-lg transition-opacity hover:opacity-80 hover:bg-white/10 lg:hidden"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -118,7 +117,7 @@ export default function ExpandableCards({
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-2xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
               style={{ maxWidth: maxModalWidth }}
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
@@ -136,19 +135,13 @@ export default function ExpandableCards({
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="text-base font-medium text-white md:text-lg"
+                      className="text-xl font-medium text-white md:text-2xl"
                       style={{
                         fontFamily: 'var(--font-jost)',
                       }}
                     >
                       {active.title}
                     </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="mt-2 text-base text-white/70"
-                    >
-                      {active.description}
-                    </motion.p>
                   </div>
 
                   <motion.a
@@ -188,11 +181,11 @@ export default function ExpandableCards({
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
-              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl transition-all hover:bg-opacity-20',
+              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-lg transition-all hover:bg-white/10 hover:border-white/30',
               getColSpan(index, card),
             )}
           >
-            <div className="flex w-full flex-col gap-4">
+            <div className="flex w-full flex-col gap-2">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <img
                   width={100}
@@ -202,22 +195,16 @@ export default function ExpandableCards({
                   className="h-60 w-full rounded-lg object-cover object-top"
                 />
               </motion.div>
-              <div className="flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center justify-center md:items-start">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="text-center text-base font-medium text-white md:text-left"
+                  className="ml-4 font-light text-white md:text-lg"
                   style={{
                     fontFamily: 'var(--font-jost)',
                   }}
                 >
                   {card.title}
                 </motion.h3>
-                <motion.p
-                  layoutId={`description-${card.description}-${id}`}
-                  className="mt-2 text-center text-base text-white/70 md:text-left"
-                >
-                  {card.description}
-                </motion.p>
               </div>
             </div>
           </motion.div>

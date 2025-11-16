@@ -468,7 +468,6 @@ const PROJECTS = {
 const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Bárbara Barbizani',
-    description: 'web.projects.bb',
     src: '/images/websites/bb.webp',
     ctaText: 'View Project',
     ctaLink: 'https://www.barbizanicarvalholaw.com/',
@@ -476,7 +475,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
   {
     title: 'Carolina Jardim',
-    description: 'web.projects.carolina',
     src: '/images/websites/carolina.webp',
     ctaText: 'View Project',
     ctaLink: 'https://acarolinajardim.com',
@@ -484,7 +482,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
   {
     title: 'Snyk',
-    description: 'web.projects.snyk',
     src: '/images/websites/snyk.webp',
     ctaText: 'View Project',
     ctaLink: 'https://www.snyk.io',
@@ -492,7 +489,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
   {
     title: 'Pipedrive',
-    description: 'web.projects.pipedrive',
     src: '/images/websites/pipedrive.webp',
     ctaText: 'View Project',
     ctaLink: 'https://www.pipedrive.com',
