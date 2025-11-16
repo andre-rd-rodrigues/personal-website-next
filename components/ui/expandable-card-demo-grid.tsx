@@ -109,7 +109,7 @@ export default function ExpandableCards({
                   duration: 0.05,
                 },
               }}
-              className="absolute right-6 top-6 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-xl shadow-lg transition-opacity hover:opacity-80 hover:bg-white/10 lg:hidden"
+              className="absolute right-6 top-6 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 shadow-lg backdrop-blur-xl transition-opacity hover:bg-white/10 hover:opacity-80 lg:hidden"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -117,7 +117,7 @@ export default function ExpandableCards({
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
               style={{ maxWidth: maxModalWidth }}
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
@@ -181,7 +181,7 @@ export default function ExpandableCards({
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
-              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-lg transition-all hover:bg-white/10 hover:border-white/30',
+              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-lg backdrop-blur-xl transition-all hover:border-white/30 hover:bg-white/10',
               getColSpan(index, card),
             )}
           >

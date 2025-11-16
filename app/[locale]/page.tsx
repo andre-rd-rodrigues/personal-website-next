@@ -194,25 +194,36 @@ const Home = () => {
       {/*    <HeroParallax products={PROJECTS.homepage} /> */}
       <Container>
         <Section>
+          <div className="mx-auto w-full max-w-7xl mb-12">
+            <p
+              className="text-4xl md:text-6xl"
+            >
+              {t('portfolio_parallax.title')}
+            </p>
+            <p className="mt-8 max-w-2xl md:text-xl">
+              {t('portfolio_parallax.description')}
+            </p>
+          </div>
+
           <ExpandableCards cards={MAIN_PROJECTS} />
+
+          <motion.div
+            variants={fadeInSlideInVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mt-6 text-center"
+          >
+            <Link href="/portfolio">
+              <Button.Text
+                className="w-full"
+                label={t('buttons.see_more')}
+                icon={ICONS.arrow}
+              />
+            </Link>
+          </motion.div>
         </Section>
       </Container>
-
-      <motion.div
-        variants={fadeInSlideInVariant}
-        whileInView="visible"
-        initial="hidden"
-        viewport={{ once: true }}
-        className="mt-6 text-center"
-      >
-        <Link href="/portfolio">
-          <Button.Text
-            className="w-full"
-            label={t('buttons.see_more')}
-            icon={ICONS.arrow}
-          />
-        </Link>
-      </motion.div>
 
       {/* Rebranding hero */}
       <Container>
