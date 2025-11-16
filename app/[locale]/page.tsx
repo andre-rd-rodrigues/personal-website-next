@@ -31,6 +31,7 @@ import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import WebsiteProcess from '@/components/WebsiteProcess';
+import ExpandableCardDemo from '@/components/ui/expandable-card-demo-grid';
 
 const Home = () => {
   const t = useTranslations();
@@ -190,7 +191,8 @@ const Home = () => {
       </Container>
 
       {/* Portfolio */}
-      <HeroParallax products={PROJECTS.homepage} />
+      {/*    <HeroParallax products={PROJECTS.homepage} /> */}
+      <ExpandableCardDemo />
       <motion.div
         variants={fadeInSlideInVariant}
         whileInView="visible"
