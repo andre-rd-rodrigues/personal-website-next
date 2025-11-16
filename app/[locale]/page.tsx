@@ -192,7 +192,12 @@ const Home = () => {
 
       {/* Portfolio */}
       {/*    <HeroParallax products={PROJECTS.homepage} /> */}
-      <ExpandableCardDemo />
+      <Container>
+        <Section>
+          <ExpandableCardDemo />
+        </Section>
+      </Container>
+
       <motion.div
         variants={fadeInSlideInVariant}
         whileInView="visible"

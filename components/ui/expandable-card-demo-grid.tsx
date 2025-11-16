@@ -3,6 +3,7 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useOutsideClick } from '@/hooks/use-outside-click';
+import { cn } from '@/lib/utils';
 
 export default function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -130,13 +131,20 @@ export default function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="mx-auto grid w-full max-w-2xl grid-cols-1 items-start gap-4 md:grid-cols-2">
+      <BentoGrid>
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
             key={card.title}
             onClick={() => setActive(card)}
-            className="flex cursor-pointer flex-col rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl transition-all hover:bg-opacity-20"
+            className={cn(
+              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl transition-all hover:bg-opacity-20',
+              // Varying sizes for bento grid effect
+              index === 0 && 'md:col-span-2',
+              index === 1 && 'md:col-span-1',
+              index === 2 && 'md:col-span-1',
+              index === 3 && 'md:col-span-2',
+            )}
           >
             <div className="flex w-full flex-col gap-4">
               <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -168,10 +176,29 @@ export default function ExpandableCardDemo() {
             </div>
           </motion.div>
         ))}
-      </ul>
+      </BentoGrid>
     </>
   );
 }
+
+export const BentoGrid = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: React.ReactNode;
+}) => {
+  return (
+    <div
+      className={cn(
+        'mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const CloseIcon = () => {
   return (
