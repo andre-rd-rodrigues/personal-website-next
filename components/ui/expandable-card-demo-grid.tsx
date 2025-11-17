@@ -10,8 +10,6 @@ import {
   fadeInSlideInVariant,
   containerVariant,
 } from '@/motion/motionVariants';
-import Button from '../Button';
-import ICONS from '@/constants/icons.constants';
 
 export interface ExpandableCard {
   title: string;
@@ -111,20 +109,6 @@ export default function ExpandableCards({
       <AnimatePresence>
         {active && typeof active === 'object' ? (
           <div className="fixed inset-0 z-[100] grid place-items-center p-4">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.2,
-                ease: 'easeInOut',
-              }}
-              className="absolute right-4 top-4 z-[101] flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 shadow-lg backdrop-blur-xl transition-opacity hover:bg-white/20 hover:opacity-90 lg:hidden"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
             <motion.div
               ref={ref}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -137,7 +121,7 @@ export default function ExpandableCards({
               className="flex h-fit max-h-[90vh] w-full flex-col overflow-y-auto rounded-2xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
               style={{ maxWidth: maxModalWidth }}
             >
-              <div>
+              <div className="relative">
                 <video
                   width={200}
                   height={200}
@@ -148,6 +132,20 @@ export default function ExpandableCards({
                   playsInline
                   className="h-80 w-full object-cover object-top sm:rounded-tl-lg sm:rounded-tr-lg lg:h-80"
                 />
+                <motion.button
+                  key={`button-${active.title}-${id}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{
+                    duration: 0.2,
+                    ease: 'easeInOut',
+                  }}
+                  className="absolute right-3 top-2 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/50 shadow-lg backdrop-blur-sm transition-opacity hover:bg-black/70 hover:opacity-90"
+                  onClick={() => setActive(null)}
+                >
+                  <CloseIcon />
+                </motion.button>
               </div>
 
               <div>
@@ -193,7 +191,7 @@ export default function ExpandableCards({
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
-              'group cursor-pointer overflow-hidden rounded-2xl border border-white/20 backdrop-blur-sm bg-white/5 p-3 md:hover:scale-[1.02]',
+              'group cursor-pointer overflow-hidden rounded-2xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:hover:scale-[1.02]',
               getColSpan(index, card),
             )}
             transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -221,7 +219,7 @@ export const CloseIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 24"
+      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
