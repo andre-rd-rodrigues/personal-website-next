@@ -1,19 +1,6 @@
 import React from 'react';
 import { ExpandableCard } from '@/components/ui/expandable-card-demo-grid';
 import { ChartData } from 'chart.js';
-import { v4 as uuid } from 'uuid';
-
-const CONTACTS = [
-  { label: 'facebook', ref: 'https://www.facebook.com/andrerodrigoweb' },
-  {
-    label: 'instagram',
-    ref: 'https://www.instagram.com/andre.creativedesign/',
-  },
-  {
-    label: 'linkedin',
-    ref: 'https://www.linkedin.com/in/andr%C3%A9-rodrigues-4b4a9b188/',
-  },
-];
 
 const WORK_CATEGORIES = [
   {
@@ -508,139 +495,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
 ];
 
-const get_homepage_gallery = () => {
-  const gallery = [];
-
-  for (let i = 1; i <= 11; i++) {
-    gallery.push(`/images/homepageGallery/${i}.webp`);
-  }
-  gallery.push(`/images/homepageGallery/2.webp`);
-  gallery.push(`/images/homepageGallery/3.webp`);
-
-  return gallery;
-};
-
-const services = {
-  main: [
-    {
-      id: uuid(),
-      title: 'about.services.main.design.title',
-      description: 'about.services.main.design.description',
-      icon: 'ph:pencil-thin',
-    },
-    {
-      id: uuid(),
-      title: 'about.services.main.programming.title',
-      description: 'about.services.main.programming.description',
-      icon: 'bytesize:code',
-    },
-    {
-      id: uuid(),
-      title: 'about.services.main.seo.title',
-      description: 'about.services.main.seo.description',
-      icon: 'clarity:world-line',
-    },
-    {
-      id: uuid(),
-      title: 'about.services.main.metrics.title',
-      description: 'about.services.main.metrics.description',
-      icon: 'fluent:megaphone-loud-16-regular',
-    },
-  ],
-  extra: [
-    {
-      id: uuid(),
-      title: 'about.services.extra.branding.title',
-      description: 'about.services.extra.branding.description',
-      icon: 'ph:paint-brush-light',
-    },
-    {
-      id: uuid(),
-      title: '',
-      description: '',
-      icon: '',
-    },
-  ],
-};
-
-const techStack = [
-  {
-    label: 'JavaScript',
-    img_src: '/images/technologies/js.webp',
-  },
-  {
-    label: 'TypeScript',
-    img_src: '/images/technologies/ts.webp',
-  },
-
-  {
-    label: 'ReactJs',
-    img_src: '/images/technologies/react.webp',
-  },
-  {
-    label: 'React Native',
-    img_src: '/images/technologies/react.webp',
-  },
-  {
-    label: 'NodeJs',
-    img_src: '/images/technologies/node.webp',
-  },
-  {
-    label: 'NextJs',
-    img_src: '/images/technologies/next.webp',
-  },
-  {
-    label: 'Jest',
-    img_src: '/images/technologies/jest.webp',
-  },
-  {
-    label: 'RTL',
-    img_src: '/images/technologies/rtl.webp',
-  },
-  {
-    label: 'Cypress',
-    img_src: '/images/technologies/cypress.webp',
-  },
-
-  {
-    label: 'HTML',
-    img_src: '/images/technologies/html.webp',
-  },
-
-  {
-    label: 'CSS',
-    img_src: '/images/technologies/css.webp',
-  },
-  {
-    label: 'Git',
-    img_src: '/images/technologies/git.webp',
-  },
-  {
-    label: 'Bash',
-    img_src: '/images/technologies/bash.webp',
-  },
-  {
-    label: 'Docker',
-    img_src: '/images/technologies/docker.webp',
-  },
-  {
-    label: 'RESTful API',
-    img_src: '/images/technologies/rest.webp',
-  },
-  {
-    label: 'Databases',
-    img_src: '/images/technologies/db.webp',
-  },
-  {
-    label: 'Google Analytics',
-    img_src: '/images/technologies/analytics.webp',
-  },
-  {
-    label: 'Open AI',
-    img_src: '/images/technologies/openai.webp',
-  },
-];
-
 const skillsDataFE: ChartData<'radar'> = {
   labels: [
     'HTML5',
@@ -698,14 +552,4 @@ const skillsDataBE: ChartData<'radar'> = {
   ],
 };
 
-export {
-  CONTACTS,
-  WORK_CATEGORIES,
-  PROJECTS,
-  MAIN_PROJECTS,
-  services,
-  techStack,
-  get_homepage_gallery,
-  skillsDataFE,
-  skillsDataBE,
-};
+export { WORK_CATEGORIES, PROJECTS, MAIN_PROJECTS, skillsDataFE, skillsDataBE };

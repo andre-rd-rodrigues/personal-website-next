@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const containerVariant = {
   hidden: {
@@ -8,19 +8,6 @@ const containerVariant = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
-    },
-  },
-};
-
-// Homepage
-const homepageDelayVariant = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
     },
   },
 };
@@ -113,35 +100,6 @@ const scaleSpringVariant = {
   },
 };
 
-const getAttentionVariant = {
-  animate: {
-    y: [0, -10, 0],
-    rotate: [0, 5, -5, 0],
-    transition: {
-      y: {
-        repeat: Infinity,
-        duration: 0.6,
-        ease: 'easeInOut',
-        repeatDelay: 1,
-      },
-      rotate: {
-        repeat: Infinity,
-        duration: 0.6,
-        ease: 'easeInOut',
-        repeatDelay: 1,
-      },
-    },
-  },
-  hover: {
-    y: 0,
-    rotate: 0,
-    transition: {
-      duration: 0.3,
-      ease: 'easeOut',
-    },
-  },
-};
-
 const underlineSlideInVariant = {
   hidden: {
     width: '0%',
@@ -182,13 +140,9 @@ export {
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
   fadeInVariant,
-  getAttentionVariant,
-  homepageDelayVariant,
   motion,
   scaleSpringVariant,
   slowRotateVariant,
-  useScroll,
-  useTransform,
   workPageHeaderContent,
   underlineSlideInVariant,
   blurVariant,

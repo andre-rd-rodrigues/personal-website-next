@@ -222,7 +222,7 @@ export default function ExpandableCards({
   );
 }
 
-export const CloseIcon = () => {
+const CloseIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

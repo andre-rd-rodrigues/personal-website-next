@@ -79,7 +79,7 @@ type FlipWordsProps = {
   className?: string;
 };
 
-export function HeroFlipWords({ children, className }: FlipWordsProps) {
+function HeroFlipWords({ children, className }: FlipWordsProps) {
   return (
     <motion.div
       variants={containerVariant}

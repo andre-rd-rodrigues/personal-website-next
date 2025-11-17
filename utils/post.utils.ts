@@ -19,7 +19,7 @@ export function injectHeaderIds(htmlContent?: string) {
   };
 }
 
-export const extractHeadings = (htmlContent: string) => {
+function extractHeadings(htmlContent: string) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlContent, 'text/html');
   const headings = doc.querySelectorAll('h1, h2, h3'); // adjust selector as needed
@@ -27,4 +27,4 @@ export const extractHeadings = (htmlContent: string) => {
     text: h.textContent,
     id: h.id, // ensure headings in the HTML have IDs
   }));
-};
+}
