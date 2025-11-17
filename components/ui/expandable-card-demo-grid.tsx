@@ -5,6 +5,11 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
+import { BentoGrid } from '@/components/ui/bento-grid';
+import {
+  fadeInSlideInVariant,
+  containerVariant,
+} from '@/motion/motionVariants';
 
 export interface ExpandableCard {
   title: string;
@@ -80,7 +85,13 @@ export default function ExpandableCards({
   };
 
   return (
-    <div className={className}>
+    <motion.div
+      variants={containerVariant}
+      whileInView="visible"
+      initial="hidden"
+      viewport={{ once: true }}
+      className={className}
+    >
       <AnimatePresence>
         {active && typeof active === 'object' && (
           <motion.div
@@ -94,10 +105,8 @@ export default function ExpandableCards({
             className="fixed inset-0 z-10 h-full w-full bg-black/40 backdrop-blur-sm"
           />
         )}
- 
       </AnimatePresence>
       <AnimatePresence>
- 
         {active && typeof active === 'object' ? (
           <div className="fixed inset-0 z-[100] grid place-items-center p-4">
             <motion.button
@@ -123,7 +132,7 @@ export default function ExpandableCards({
                 duration: 0.2,
                 ease: 'easeInOut',
               }}
-              className="flex h-fit w-full max-h-[90vh] flex-col overflow-y-auto rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
+              className="flex h-fit max-h-[90vh] w-full flex-col overflow-y-auto rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
               style={{ maxWidth: maxModalWidth }}
             >
               <div>
@@ -153,6 +162,7 @@ export default function ExpandableCards({
                     href={active.ctaLink}
                     target="_blank"
                     className="ml-4 rounded-full bg-[var(--color-primary)] px-4 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                    rel="noreferrer"
                   >
                     {active.ctaText}
                   </a>
@@ -173,60 +183,29 @@ export default function ExpandableCards({
       {/* Grid */}
       <BentoGrid className={gridClassName}>
         {cards.map((card, index) => (
-          <div
+          <motion.div
+            variants={fadeInSlideInVariant}
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
-              'group relative flex cursor-pointer flex-col justify-between overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-lg backdrop-blur-xl transition-all hover:border-white/30 hover:bg-white/10',
+              'group cursor-pointer overflow-hidden rounded-2xl md:hover:scale-[1.02]',
               getColSpan(index, card),
             )}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
           >
-            <div className="flex w-full flex-col gap-2">
-              <div>
-                <img
-                  width={100}
-                  height={100}
-                  src={card.src}
-                  alt={card.title}
-                  className="h-60 w-full rounded-lg object-cover object-top"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center md:items-start">
-                <h3
-                  className="ml-4 font-light text-white md:text-lg"
-                  style={{
-                    fontFamily: 'var(--font-jost)',
-                  }}
-                >
-                  {card.title}
-                </h3>
-              </div>
-            </div>
-          </div>
+            <img
+              width={100}
+              height={100}
+              src={card.src}
+              alt={card.title}
+              className="h-full w-full object-cover transition-all duration-300 ease-out md:group-hover:scale-105 md:group-hover:brightness-110"
+            />
+          </motion.div>
         ))}
       </BentoGrid>
-    </div>
+    </motion.div>
   );
 }
-
-export const BentoGrid = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={cn(
-        'mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3',
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-};
 
 export const CloseIcon = () => {
   return (

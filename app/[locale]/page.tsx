@@ -13,12 +13,13 @@ import Testimonials from '@/components/Testimonials';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import TypeformPopup from '@/components/TypeformPopup';
 import { Compare } from '@/components/ui/compare';
+import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 import { FlipWords } from '@/components/ui/flip-words';
-import { HeroParallax } from '@/components/ui/hero-parallax';
 import VideoBackground from '@/components/VideoBackground';
+import WebsiteProcess from '@/components/WebsiteProcess';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
-import { EXPERTISE, MAIN_PROJECTS, PROJECTS } from '@/data/info.data';
+import { EXPERTISE, MAIN_PROJECTS } from '@/data/info.data';
 import useTranslation from '@/hooks/useTranslation';
 import {
   blurVariant,
@@ -30,8 +31,6 @@ import {
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import WebsiteProcess from '@/components/WebsiteProcess';
-import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 
 const Home = () => {
   const t = useTranslations();
@@ -194,10 +193,8 @@ const Home = () => {
       {/*    <HeroParallax products={PROJECTS.homepage} /> */}
       <Container>
         <Section>
-          <div className="mx-auto w-full max-w-7xl mb-12">
-            <p
-              className="text-4xl md:text-6xl"
-            >
+          <div className="mx-auto mb-12 w-full max-w-7xl">
+            <p className="text-4xl md:text-6xl">
               {t('portfolio_parallax.title')}
             </p>
             <p className="mt-8 max-w-2xl md:text-xl">
