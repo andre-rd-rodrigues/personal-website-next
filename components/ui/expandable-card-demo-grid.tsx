@@ -10,10 +10,12 @@ import {
   fadeInSlideInVariant,
   containerVariant,
 } from '@/motion/motionVariants';
+import Button from '../Button';
+import ICONS from '@/constants/icons.constants';
 
 export interface ExpandableCard {
   title: string;
-  src: string; // Image URL
+  src: string; // Video URL
   ctaText: string;
   ctaLink: string;
   content:
@@ -132,15 +134,18 @@ export default function ExpandableCards({
                 duration: 0.2,
                 ease: 'easeInOut',
               }}
-              className="flex h-fit max-h-[90vh] w-full flex-col overflow-y-auto rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
+              className="flex h-fit max-h-[90vh] w-full flex-col overflow-y-auto rounded-2xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
               style={{ maxWidth: maxModalWidth }}
             >
               <div>
-                <img
+                <video
                   width={200}
                   height={200}
                   src={active.src}
-                  alt={active.title}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="h-80 w-full object-cover object-top sm:rounded-tl-lg sm:rounded-tr-lg lg:h-80"
                 />
               </div>
@@ -161,7 +166,7 @@ export default function ExpandableCards({
                   <a
                     href={active.ctaLink}
                     target="_blank"
-                    className="ml-4 rounded-full bg-[var(--color-primary)] px-4 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                    className="font-normal text-[var(--color-primary)]"
                     rel="noreferrer"
                   >
                     {active.ctaText}
@@ -193,11 +198,14 @@ export default function ExpandableCards({
             )}
             transition={{ duration: 0.3, ease: 'easeOut' }}
           >
-            <img
+            <video
               width={100}
               height={100}
               src={card.src}
-              alt={card.title}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="h-full w-full rounded-xl object-cover transition-all duration-300 ease-out md:group-hover:scale-105 md:group-hover:brightness-110"
             />
           </motion.div>

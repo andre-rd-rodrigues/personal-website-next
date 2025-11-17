@@ -468,7 +468,7 @@ const PROJECTS = {
 const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Bárbara Barbizani',
-    src: '/images/websites/bb.webp',
+    src: '/videos/bb.webm',
     ctaText: 'View Project',
     ctaLink: 'https://www.barbizanicarvalholaw.com/',
     content: (t) => <p>{t('projects.web.projects.bb')}</p>,
@@ -476,23 +476,23 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
   {
     title: 'Carolina Jardim',
-    src: '/images/websites/carolina.webp',
+    src: '/videos/ana.webm',
     ctaText: 'View Project',
     ctaLink: 'https://acarolinajardim.com',
     content: (t) => <p>{t('projects.web.projects.carolina')}</p>,
     colSpan: 1,
   },
   {
-    title: 'Snyk',
-    src: '/images/websites/snyk.webp',
+    title: 'IT Studios',
+    src: '/videos/it.webm',
     ctaText: 'View Project',
-    ctaLink: 'https://www.snyk.io',
-    content: (t) => <p>{t('projects.web.projects.snyk')}</p>,
+    ctaLink: 'https://itstudios.netlify.app/',
+    content: (t) => <p>{t('projects.web.projects.it')}</p>,
     colSpan: 1,
   },
   {
     title: 'Pipedrive',
-    src: '/images/websites/pipedrive.webp',
+    src: '/videos/pipedrive.webm',
     ctaText: 'View Project',
     ctaLink: 'https://www.pipedrive.com',
     content: (t) => <p>{t('projects.web.projects.pipedrive')}</p>,
@@ -500,7 +500,7 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   },
   {
     title: 'Navro',
-    src: '/images/websites/navro.webp',
+    src: '/videos/barber.webm',
     ctaText: 'View Project',
     ctaLink: 'https://www.navro.com',
     content: (t) => <p>{t('projects.web.projects.navro')}</p>,
