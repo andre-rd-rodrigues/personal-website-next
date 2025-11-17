@@ -101,23 +101,23 @@ const Pricing = () => {
 
               {/* Description Row */}
               <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
-                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.starter.description')}
                 </td>
-                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.professional.description')}
                 </td>
-                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.premium.description')}
                 </td>
-                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.enterprise.description')}
                 </td>
               </tr>
 
               {/* Features Row */}
               <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
-                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray('pricing.packs.starter.features').map(
                       (feature, idx) => (
@@ -131,7 +131,7 @@ const Pricing = () => {
                     )}
                   </ul>
                 </td>
-                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray(
                       'pricing.packs.professional.features',
@@ -156,7 +156,7 @@ const Pricing = () => {
                     ))}
                   </ul>
                 </td>
-                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray('pricing.packs.premium.features').map(
                       (feature, idx) => (
@@ -181,7 +181,7 @@ const Pricing = () => {
                     )}
                   </ul>
                 </td>
-                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray(
                       'pricing.packs.enterprise.features',
