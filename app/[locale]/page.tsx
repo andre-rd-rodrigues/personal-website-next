@@ -190,17 +190,22 @@ const Home = () => {
       </Container>
 
       {/* Portfolio */}
-      {/*    <HeroParallax products={PROJECTS.homepage} /> */}
       <Container>
         <Section>
-          <div className="mx-auto mb-12 w-full max-w-7xl">
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mx-auto mb-12 w-full max-w-7xl"
+          >
             <p className="text-4xl md:text-6xl">
               {t('portfolio_parallax.title')}
             </p>
             <p className="mt-8 max-w-2xl md:text-xl">
               {t('portfolio_parallax.description')}
             </p>
-          </div>
+          </motion.div>
 
           <ExpandableCards cards={MAIN_PROJECTS} />
 

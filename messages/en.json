@@ -65,9 +65,9 @@
 
         "PrimeTravel": "PrimeTravel, my personal project, showcases my Fullstack Developer skills through an advanced travel agency management tool. This initiative features an optimized, intuitive design to demonstrate effective travel business operations in a real-world application.",
 
-        "bb": "The website for Dr. Barbara Barbizani, designed for a lawyer, merges professional legal insight with an empathetic user interface. It provides a seamless experience, offering legal support with a personal touch and ensuring high online visibility through optimized SEO strategies.",
+        "bb": "The website for attorney Dr. Bárbara Barbizani is part of a rebranding focused on presenting legal services and topics through an intuitive and trustworthy interface. It offers a fluid experience that provides legal support with a personal touch, while ensuring online visibility through tailored SEO strategies.",
 
-        "carolina": "Developed for a clinical psychologist, Dr. Carolina Jardim's website serves as a peaceful digital sanctuary. It features a calming user interface designed to engage visitors effectively, backed by robust analytics to broaden its reach and influence.",
+        "carolina": "The website for psychologist Dr. Carolina Jardim features a soft, minimalist interface that promotes a digital experience that reflects the calm and welcoming atmosphere of a therapy session.",
 
         "blog": "My personal blog acts as a vibrant platform where I share insights into technology, finance, and career development. Equipped with advanced functionalities like search and filtering, it serves as a resource for readers seeking professional growth.",
 
@@ -77,15 +77,15 @@
 
         "Memory": "Prepare to enhance your cognitive skills with the Memory Game web app, a thrilling challenge against friends or the computer. This app features a sophisticated design with multiplayer options and a scoreboard to track your victories.",
 
-        "pipedrive": "At Pipedrive, a leading Estonian cloud-based SaaS company, I enhanced their CRM Automation tool as a Software Engineer. Leveraging React, TypeScript, Docker, Node and other technologies, I contributed to optimizing the user interface of their web and mobile applications, supporting a global team across multiple offices.",
+        "pipedrive": "Pipedrive is a leading SaaS company in Estonia, where I worked in automation as a Software Engineer using modern tools. I contributed within a multifaceted international environment to improve the interface and optimize internal systems.",
 
         "navro": "While working with Navro, I utilized my front-end development skills in React and Next.js to help businesses seamlessly expand into foreign markets. My work focused on improving the user interface of their global payments infrastructure, management tasks and building internal automation tools, providing a unified API experience through modern web technologies.",
 
-        "sky": "At Peacock, NBCUniversal Media Group's streaming service, I applied my expertise in React and TypeScript to enhance viewer interfaces. My role involved front-end development that supports the delivery of diverse, on-demand content, optimizing user experiences in a competitive streaming landscape.",
+        "sky": "In the Peacock project, NBCUniversal Media Group's streaming service, I applied my experience in React and TypeScript to enhance the interface, optimize performance, and strengthen the overall product quality.",
 
-        "probely": "With Probely, I integrated security testing into development pipelines as a Front End Developer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs.",
+        "probely": "At Probely, as a Software Engineer, I developed solutions and features leveraging React, TypeScript, Next.js, and other technologies to boost vulnerability scanning and raise the security standards of web applications and APIs used by hundreds of companies.",
 
-        "snyk": "With Snyk, I integrated security testing into development pipelines as a Software Engineer. Using React, TypeScript and Next.Js and modern CI/CD tools, I developed interfaces that help agile teams automate vulnerability scans and maintain high security standards in their web applications and APIs."
+        "snyk": "At Snyk, I co-led the Frontend team, guiding planning, release processes, and cross-team initiatives. I led the team through four successful delivery cycles during a major rebranding and a full UI overhaul — we rebuilt the application from the ground up and launched two months ahead of schedule."
       }
     },
     "mobile": {
