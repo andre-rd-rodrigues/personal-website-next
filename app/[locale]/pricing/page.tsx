@@ -43,76 +43,391 @@ const Pricing = () => {
         </motion.p>
       </div>
 
-      {/* Presença Online */}
-      <div className="mt-24 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <Card.Pricing
-          title={t('packs.starter.title')}
-          subtitle={t('packs.starter.subtitle')}
-          price={t('packs.starter.price')}
-          description={t('packs.starter.description')}
-          features={getTranslationsArray('pricing.packs.starter.features')}
-          cta={
+      {/* Pricing Table - Desktop */}
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-24 hidden overflow-x-auto md:block"
+      >
+        <div className="min-w-full rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl md:p-6">
+          <table className="w-full border-separate border-spacing-0">
+            <thead>
+              <tr className="border-b border-gray-800">
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.starter.title')}
+                </th>
+                <th
+                  className="overflow-hidden border-l border-r border-t border-gray-800 bg-gray-800/10 px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl"
+                  style={{
+                    borderTopLeftRadius: '1.5rem',
+                    borderTopRightRadius: '1.5rem',
+                  }}
+                >
+                  {t('packs.professional.title')}
+                </th>
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.premium.title')}
+                </th>
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.enterprise.title')}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Price Row */}
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">{t('packs.starter.price')}</div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.starter.subtitle')}
+                  </div>
+                </td>
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">
+                    {t('packs.professional.price')}
+                  </div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.professional.subtitle')}
+                  </div>
+                </td>
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">{t('packs.premium.price')}</div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.premium.subtitle')}
+                  </div>
+                </td>
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">
+                    {t('packs.enterprise.price')}
+                  </div>
+                </td>
+              </tr>
+
+              {/* Description Row */}
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
+                  {t('packs.starter.description')}
+                </td>
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
+                  {t('packs.professional.description')}
+                </td>
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
+                  {t('packs.premium.description')}
+                </td>
+                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
+                  {t('packs.enterprise.description')}
+                </td>
+              </tr>
+
+              {/* Features Row */}
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray('pricing.packs.starter.features').map(
+                      (feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-lg text-[var(--color-primary)]">
+                            ✓
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </td>
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray(
+                      'pricing.packs.professional.features',
+                    ).map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="mr-2 text-lg text-[var(--color-primary)]">
+                          ✓
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                    {getTranslationsArray(
+                      'pricing.packs.professional.extras',
+                    ).map((extra, idx) => (
+                      <li
+                        key={`extra-${idx}`}
+                        className="flex items-start text-[var(--color-primary)]"
+                      >
+                        <span className="mr-2 text-lg">+</span>
+                        <span>{extra}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray('pricing.packs.premium.features').map(
+                      (feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-lg text-[var(--color-primary)]">
+                            ✓
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ),
+                    )}
+                    {getTranslationsArray('pricing.packs.premium.extras').map(
+                      (extra, idx) => (
+                        <li
+                          key={`extra-${idx}`}
+                          className="flex items-start text-[var(--color-primary)]"
+                        >
+                          <span className="mr-2 text-lg">+</span>
+                          <span>{extra}</span>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </td>
+                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray(
+                      'pricing.packs.enterprise.features',
+                    ).map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="mr-2 text-lg text-[var(--color-primary)]">
+                          ✓
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+
+              {/* Action Row */}
+              <tr>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('getStarted')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td
+                  className="overflow-hidden border-b border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center md:px-6 md:py-6"
+                  style={{
+                    borderBottomLeftRadius: '1.5rem',
+                    borderBottomRightRadius: '1.5rem',
+                  }}
+                >
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('select')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('select')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('send_message')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </motion.div>
+
+      {/* Pricing Cards - Mobile */}
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-24 block space-y-5 md:hidden"
+      >
+        {/* Starter Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.starter.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.starter.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.starter.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.starter.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.starter.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
             <Button.Text
               className="w-full"
               label={t_button('getStarted')}
               fullWidth
               hover={false}
             />
-          }
-        />
+          </div>
+        </div>
 
-        {/* Profissional */}
-        <Card.Pricing
-          title={t('packs.professional.title')}
-          subtitle={t('packs.professional.subtitle')}
-          price={t('packs.professional.price')}
-          description={t('packs.professional.description')}
-          features={getTranslationsArray('pricing.packs.professional.features')}
-          extras={getTranslationsArray('pricing.packs.professional.extras')}
-          cta={
+        {/* Professional Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.professional.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.professional.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.professional.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.professional.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.professional.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+            {getTranslationsArray('pricing.packs.professional.extras').map(
+              (extra, idx) => (
+                <li
+                  key={`extra-${idx}`}
+                  className="flex items-start text-[var(--color-primary)]"
+                >
+                  <span className="mr-2 text-lg">+</span>
+                  <span>{extra}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
             <Button.Text
               className="w-full"
               label={t_button('select')}
               fullWidth
               hover={false}
             />
-          }
-        />
+          </div>
+        </div>
 
-        {/* Premium */}
-        <Card.Pricing
-          title={t('packs.premium.title')}
-          subtitle={t('packs.premium.subtitle')}
-          price={t('packs.premium.price')}
-          description={t('packs.premium.description')}
-          features={getTranslationsArray('pricing.packs.premium.features')}
-          extras={getTranslationsArray('pricing.packs.premium.extras')}
-          cta={
+        {/* Premium Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.premium.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.premium.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.premium.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.premium.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.premium.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+            {getTranslationsArray('pricing.packs.premium.extras').map(
+              (extra, idx) => (
+                <li
+                  key={`extra-${idx}`}
+                  className="flex items-start text-[var(--color-primary)]"
+                >
+                  <span className="mr-2 text-lg">+</span>
+                  <span>{extra}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
             <Button.Text
               className="w-full"
               label={t_button('select')}
               fullWidth
               hover={false}
             />
-          }
-        />
+          </div>
+        </div>
 
-        {/* Enterprise */}
-        <Card.Pricing
-          title={t('packs.enterprise.title')}
-          price={t('packs.enterprise.price')}
-          description={t('packs.enterprise.description')}
-          features={getTranslationsArray('pricing.packs.enterprise.features')}
-          cta={
+        {/* Enterprise Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.enterprise.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.enterprise.price')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.enterprise.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.enterprise.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
             <Button.Text
               className="w-full"
               label={t_button('send_message')}
               fullWidth
               hover={false}
             />
-          }
-        />
-      </div>
+          </div>
+        </div>
+      </motion.div>
 
       {/* Maintenance */}
       <div className="mt-20">

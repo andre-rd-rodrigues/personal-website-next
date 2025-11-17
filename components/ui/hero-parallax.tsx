@@ -152,7 +152,7 @@ export const ProductCard = ({
           src={product.thumbnail}
           className="absolute inset-0 h-full w-full object-cover"
           alt={product.title}
-          layout="fill"
+          fill
         />
       </Link>
       <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-30"></div>

@@ -13,12 +13,13 @@ import Testimonials from '@/components/Testimonials';
 import TrustedCompanies from '@/components/TrustedCompanies';
 import TypeformPopup from '@/components/TypeformPopup';
 import { Compare } from '@/components/ui/compare';
+import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 import { FlipWords } from '@/components/ui/flip-words';
-import { HeroParallax } from '@/components/ui/hero-parallax';
 import VideoBackground from '@/components/VideoBackground';
+import WebsiteProcess from '@/components/WebsiteProcess';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
-import { EXPERTISE, PROJECTS } from '@/data/info.data';
+import { EXPERTISE, MAIN_PROJECTS } from '@/data/info.data';
 import useTranslation from '@/hooks/useTranslation';
 import {
   blurVariant,
@@ -30,7 +31,6 @@ import {
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import WebsiteProcess from '@/components/WebsiteProcess';
 
 const Home = () => {
   const t = useTranslations();
@@ -83,66 +83,73 @@ const Home = () => {
       </VideoBackground>
 
       {/* About Me */}
-      <Container>
-        <Section className="md:my-56">
-          <div className="grid gap-6 md:grid-cols-12">
-            <motion.div
-              variants={fadeInVariant}
-              viewport={{ once: true }}
-              initial="hidden"
-              whileInView="visible"
-              className="col-span-12 flex h-full justify-center sm:col-span-5"
-            >
-              <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
-                <InfoCounter label={t('about.experience.years')} end={4} />
-                <InfoCounter label={t('about.experience.projects')} end={15} />
-              </div>
-            </motion.div>
-            <div className="col-span-12 sm:col-span-7">
-              <motion.h2
-                variants={fadeInSlideLeftVariant}
-                initial="hidden"
-                whileInView="visible"
-                className="mb-10 text-6xl"
-                viewport={{ once: true }}
-              >
-                {t('homepage.about.title')}
-              </motion.h2>
-              <motion.p
-                variants={fadeInVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-              >
-                {t('homepage.about.description')}
-              </motion.p>
+      <div className="relative z-10 -mt-24 rounded-b-3xl rounded-t-3xl border-t-2 border-gray-800 bg-gray-900/30 backdrop-blur-2xl md:-mt-32">
+        <Container className="!mb-0 !mt-0 pb-6 md:pb-8">
+          <Section className="mb-12 mt-12 md:mb-16 md:mt-28">
+            <div className="grid gap-6 md:grid-cols-12">
               <motion.div
-                variants={containerVariant}
+                variants={fadeInVariant}
+                viewport={{ once: true }}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                className="mt-9 flex items-end justify-end gap-3"
+                className="col-span-12 flex h-full justify-center sm:col-span-5"
               >
-                <motion.span variants={fadeInSlideInVariant}>
-                  <a href={CONTACTS.LINKEDIN} target="_">
-                    <Button.Icon icon={ICONS.linkedin} />
-                  </a>
-                </motion.span>
-                <motion.span variants={fadeInSlideInVariant}>
-                  <Link href="/about">
-                    <Button.Text
-                      label={t('buttons.see_more')}
-                      icon={ICONS.arrow}
-                    />
-                  </Link>
-                </motion.span>
+                <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
+                  <InfoCounter label={t('about.experience.years')} end={4} />
+                  <InfoCounter
+                    label={t('about.experience.projects')}
+                    end={15}
+                  />
+                </div>
               </motion.div>
+              <div className="col-span-12 sm:col-span-7">
+                <motion.h2
+                  variants={fadeInSlideLeftVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  className="mb-10 text-6xl"
+                  viewport={{ once: true }}
+                >
+                  {t('homepage.about.title')}
+                </motion.h2>
+                <motion.p
+                  variants={fadeInVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  {t('homepage.about.description')}
+                </motion.p>
+                <motion.div
+                  variants={containerVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="mt-9 flex items-end justify-end gap-3"
+                >
+                  <motion.span variants={fadeInSlideInVariant}>
+                    <a href={CONTACTS.LINKEDIN} target="_">
+                      <Button.Icon icon={ICONS.linkedin} />
+                    </a>
+                  </motion.span>
+                  <motion.span variants={fadeInSlideInVariant}>
+                    <Link href="/about">
+                      <Button.Text
+                        label={t('buttons.see_more')}
+                        icon={ICONS.arrow}
+                      />
+                    </Link>
+                  </motion.span>
+                </motion.div>
+              </div>
             </div>
-          </div>
-        </Section>
+          </Section>
+        </Container>
+      </div>
 
-        {/* Expertise */}
-        <Section>
+      {/* Expertise */}
+      <Container>
+        <Section className="mt-12 md:mt-28">
           <SectionTitle tag="h2" title="Expertise" />
           <motion.div
             variants={containerVariant}
@@ -154,6 +161,9 @@ const Home = () => {
             {EXPERTISE.map(({ name, description, src }, i) => (
               <motion.div
                 variants={fadeInSlideInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
                 key={i}
               >
@@ -190,22 +200,42 @@ const Home = () => {
       </Container>
 
       {/* Portfolio */}
-      <HeroParallax products={PROJECTS.homepage} />
-      <motion.div
-        variants={fadeInSlideInVariant}
-        whileInView="visible"
-        initial="hidden"
-        viewport={{ once: true }}
-        className="mt-6 text-center"
-      >
-        <Link href="/portfolio">
-          <Button.Text
-            className="w-full"
-            label={t('buttons.see_more')}
-            icon={ICONS.arrow}
-          />
-        </Link>
-      </motion.div>
+      <Container>
+        <Section>
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mx-auto mb-12 w-full max-w-7xl"
+          >
+            <p className="text-4xl md:text-6xl">
+              {t('portfolio_parallax.title')}
+            </p>
+            <p className="mt-8 max-w-2xl md:text-xl">
+              {t('portfolio_parallax.description')}
+            </p>
+          </motion.div>
+
+          <ExpandableCards cards={MAIN_PROJECTS} />
+
+          <motion.div
+            variants={fadeInSlideInVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mt-6 text-center"
+          >
+            <Link href="/portfolio">
+              <Button.Text
+                className="w-full"
+                label={t('buttons.see_more')}
+                icon={ICONS.arrow}
+              />
+            </Link>
+          </motion.div>
+        </Section>
+      </Container>
 
       {/* Rebranding hero */}
       <Container>

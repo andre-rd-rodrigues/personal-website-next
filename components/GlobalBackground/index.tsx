@@ -9,8 +9,8 @@ const GlobalBackground = () => {
       <Image
         src="/images/gauze.webp"
         alt="André Rodrigues"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
       />
     </div>
   );

@@ -1,4 +1,5 @@
 'use client';
+
 import { ARTICLE_QUERY } from '@/api/graphQL/main';
 import styles from '@/assets/styles/pages/blog.module.scss';
 import Container from '@/components/Container';
@@ -11,8 +12,7 @@ import { NextPage } from 'next';
 import Image from 'next/image';
 import parser from 'react-html-parser';
 import { Post } from '../page';
-import Skeleton from '@/components/Skeletons/indext';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { fadeInVariant } from '@/motion/motionVariants';
 import ErrorGeneric from '@/components/ErrorGeneric';
 import { IMAGE_DATA_BLUR_URL } from '@/constants/common.constants';
@@ -61,13 +61,33 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
 
   return (
     <Container>
-      <AnimatePresence> {loading && <Skeleton.Post />}</AnimatePresence>
-      {(error || !post) && (
+      {loading && (
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={fadeInVariant}
+          className="flex min-h-[60vh] items-center justify-center"
+        >
+          <div className="flex flex-col items-center gap-4">
+            <motion.div
+              className="h-12 w-12 rounded-full border-4 border-[var(--color-primary)] border-t-transparent"
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            />
+            <p className="text-white/60">Loading article...</p>
+          </div>
+        </motion.div>
+      )}
+      {(error || (!loading && !post)) && (
         <div className="flex h-[100vh] items-center justify-center">
           <ErrorGeneric />
         </div>
       )}
-      {enhancedPost?.html && (
+      {!loading && enhancedPost?.html && (
         <motion.div
           variants={fadeInVariant}
           initial="hidden"
@@ -87,9 +107,8 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
               <Image
                 src={coverPhoto?.url || ''}
                 alt={title || 'André Rodrigo'}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
                 placeholder="blur"
                 blurDataURL={IMAGE_DATA_BLUR_URL}
               />

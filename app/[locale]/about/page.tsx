@@ -46,23 +46,29 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="md:24 mb-24"
+          className="mb-24"
         >
-          <motion.p variants={fadeInVariant} className="mb-12">
-            {t('about_me.description')}
-          </motion.p>
-          <motion.div
-            variants={fadeInSlideInVariant}
-            className="relative h-96 w-full"
-          >
-            <Image
-              src="/images/profile-extend.webp"
-              alt="André Rodrigues - Web Developer"
-              className="rounded-lg"
-              objectFit="cover"
-              layout="fill"
-            />
-          </motion.div>
+          <div className="flex flex-col gap-8 md:flex-row md:items-start md:gap-12">
+            <motion.p
+              variants={fadeInVariant}
+              className="flex-1 text-base md:text-lg"
+            >
+              {t('about_me.description')}
+            </motion.p>
+            <motion.div
+              variants={fadeInSlideInVariant}
+              className="relative h-96 w-full flex-shrink-0 overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:h-[400px] md:w-[400px]"
+            >
+              <div className="relative h-full w-full">
+                <Image
+                  src="/images/profile.webp"
+                  alt="André Rodrigues - Web Developer"
+                  className="rounded-2xl object-cover"
+                  fill
+                />
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </Section>
 

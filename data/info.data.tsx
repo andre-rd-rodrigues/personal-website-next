@@ -1,3 +1,5 @@
+import React from 'react';
+import { ExpandableCard } from '@/components/ui/expandable-card-demo-grid';
 import { ChartData } from 'chart.js';
 import { v4 as uuid } from 'uuid';
 
@@ -463,6 +465,49 @@ const PROJECTS = {
   ],
 };
 
+const MAIN_PROJECTS: ExpandableCard[] = [
+  {
+    title: 'Bárbara Barbizani',
+    src: '/videos/bb.webm',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.barbizanicarvalholaw.com/',
+    content: (t) => <p>{t('projects.web.projects.bb')}</p>,
+    colSpan: 1,
+  },
+  {
+    title: 'Carolina Jardim',
+    src: '/videos/ana.webm',
+    ctaText: 'View Project',
+    ctaLink: 'https://acarolinajardim.com',
+    content: (t) => <p>{t('projects.web.projects.carolina')}</p>,
+    colSpan: 1,
+  },
+  {
+    title: 'IT Studios',
+    src: '/videos/it.webm',
+    ctaText: 'View Project',
+    ctaLink: 'https://itstudios.netlify.app/',
+    content: (t) => <p>{t('projects.web.projects.it')}</p>,
+    colSpan: 1,
+  },
+  {
+    title: 'Pipedrive',
+    src: '/videos/pipedrive.webm',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.pipedrive.com',
+    content: (t) => <p>{t('projects.web.projects.pipedrive')}</p>,
+    colSpan: 2,
+  },
+  {
+    title: 'Navro',
+    src: '/videos/barber.webm',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.navro.com',
+    content: (t) => <p>{t('projects.web.projects.navro')}</p>,
+    colSpan: 1,
+  },
+];
+
 const get_homepage_gallery = () => {
   const gallery = [];
 
@@ -657,6 +702,7 @@ export {
   CONTACTS,
   WORK_CATEGORIES,
   PROJECTS,
+  MAIN_PROJECTS,
   services,
   techStack,
   get_homepage_gallery,

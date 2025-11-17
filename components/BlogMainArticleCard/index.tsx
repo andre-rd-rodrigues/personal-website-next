@@ -53,9 +53,8 @@ const BlogMainArticleCard = ({ post }: Props) => {
             <Image
               src={coverPhoto.url}
               alt={title}
-              layout="fill"
-              objectFit="cover"
-              className="group-hover rounded-md"
+              fill
+              className="group-hover rounded-md object-cover"
             />
           </div>
         </div>
