@@ -472,6 +472,7 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     ctaText: 'View Project',
     ctaLink: 'https://www.barbizanicarvalholaw.com/',
     content: (t) => <p>{t('projects.web.projects.bb')}</p>,
+    colSpan: 1,
   },
   {
     title: 'Carolina Jardim',
@@ -479,6 +480,7 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     ctaText: 'View Project',
     ctaLink: 'https://acarolinajardim.com',
     content: (t) => <p>{t('projects.web.projects.carolina')}</p>,
+    colSpan: 1,
   },
   {
     title: 'Snyk',
@@ -486,6 +488,7 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     ctaText: 'View Project',
     ctaLink: 'https://www.snyk.io',
     content: (t) => <p>{t('projects.web.projects.snyk')}</p>,
+    colSpan: 1,
   },
   {
     title: 'Pipedrive',
@@ -493,6 +496,15 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     ctaText: 'View Project',
     ctaLink: 'https://www.pipedrive.com',
     content: (t) => <p>{t('projects.web.projects.pipedrive')}</p>,
+    colSpan: 2,
+  },
+  {
+    title: 'Navro',
+    src: '/images/websites/navro.webp',
+    ctaText: 'View Project',
+    ctaLink: 'https://www.navro.com',
+    content: (t) => <p>{t('projects.web.projects.navro')}</p>,
+    colSpan: 1,
   },
 ];
 

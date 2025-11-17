@@ -87,40 +87,46 @@ export default function ExpandableCards({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-10 h-full w-full bg-black/20 backdrop-blur-sm"
+            transition={{
+              duration: 0.2,
+              ease: 'easeInOut',
+            }}
+            className="fixed inset-0 z-10 h-full w-full bg-black/40 backdrop-blur-sm"
           />
         )}
+ 
       </AnimatePresence>
       <AnimatePresence>
+ 
         {active && typeof active === 'object' ? (
           <div className="fixed inset-0 z-[100] grid place-items-center p-4">
             <motion.button
               key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeInOut',
               }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="absolute right-6 top-6 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/20 bg-white/5 shadow-lg backdrop-blur-xl transition-opacity hover:bg-white/10 hover:opacity-80 lg:hidden"
+              className="absolute right-4 top-4 z-[101] flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 shadow-lg backdrop-blur-xl transition-opacity hover:bg-white/20 hover:opacity-90 lg:hidden"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
             </motion.button>
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full flex-col overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeInOut',
+              }}
+              className="flex h-fit w-full max-h-[90vh] flex-col overflow-y-auto rounded-2xl border border-white/20 bg-white/5 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
               style={{ maxWidth: maxModalWidth }}
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <div>
                 <img
                   width={200}
                   height={200}
@@ -128,56 +134,46 @@ export default function ExpandableCards({
                   alt={active.title}
                   className="h-80 w-full object-cover object-top sm:rounded-tl-lg sm:rounded-tr-lg lg:h-80"
                 />
-              </motion.div>
+              </div>
 
               <div>
                 <div className="flex items-start justify-between p-4 md:p-8">
                   <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
+                    <h3
                       className="text-xl font-medium text-white md:text-2xl"
                       style={{
                         fontFamily: 'var(--font-jost)',
                       }}
                     >
                       {active.title}
-                    </motion.h3>
+                    </h3>
                   </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
+                  <a
                     href={active.ctaLink}
                     target="_blank"
                     className="ml-4 rounded-full bg-[var(--color-primary)] px-4 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
                   >
                     {active.ctaText}
-                  </motion.a>
+                  </a>
                 </div>
                 <div className="relative px-4 pt-4 md:px-8">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="flex h-40 flex-col items-start gap-4 overflow-auto pb-10 text-xs text-white/80 md:h-fit md:text-sm lg:text-base"
-                  >
+                  <div className="flex flex-col items-start gap-4 pb-10 text-xs text-white/80 md:text-sm lg:text-base">
                     {typeof active.content === 'function'
                       ? active.content(t)
                       : active.content}
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </div>
         ) : null}
       </AnimatePresence>
+
+      {/* Grid */}
       <BentoGrid className={gridClassName}>
         {cards.map((card, index) => (
-          <motion.div
-            layoutId={`card-${card.title}-${id}`}
+          <div
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
@@ -186,7 +182,7 @@ export default function ExpandableCards({
             )}
           >
             <div className="flex w-full flex-col gap-2">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+              <div>
                 <img
                   width={100}
                   height={100}
@@ -194,20 +190,19 @@ export default function ExpandableCards({
                   alt={card.title}
                   className="h-60 w-full rounded-lg object-cover object-top"
                 />
-              </motion.div>
+              </div>
               <div className="flex flex-col items-center justify-center md:items-start">
-                <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
+                <h3
                   className="ml-4 font-light text-white md:text-lg"
                   style={{
                     fontFamily: 'var(--font-jost)',
                   }}
                 >
                   {card.title}
-                </motion.h3>
+                </h3>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </BentoGrid>
     </div>
@@ -235,19 +230,7 @@ export const BentoGrid = ({
 
 export const CloseIcon = () => {
   return (
-    <motion.svg
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      exit={{
-        opacity: 0,
-        transition: {
-          duration: 0.05,
-        },
-      }}
+    <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -262,6 +245,6 @@ export const CloseIcon = () => {
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />
       <path d="M6 6l12 12" />
-    </motion.svg>
+    </svg>
   );
 };
