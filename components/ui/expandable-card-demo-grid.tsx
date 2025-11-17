@@ -188,7 +188,7 @@ export default function ExpandableCards({
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
-              'group cursor-pointer overflow-hidden rounded-2xl md:hover:scale-[1.02]',
+              'group cursor-pointer overflow-hidden rounded-2xl border border-white/20 backdrop-blur-sm bg-white/5 p-3 md:hover:scale-[1.02]',
               getColSpan(index, card),
             )}
             transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -198,7 +198,7 @@ export default function ExpandableCards({
               height={100}
               src={card.src}
               alt={card.title}
-              className="h-full w-full object-cover transition-all duration-300 ease-out md:group-hover:scale-105 md:group-hover:brightness-110"
+              className="h-full w-full rounded-xl object-cover transition-all duration-300 ease-out md:group-hover:scale-105 md:group-hover:brightness-110"
             />
           </motion.div>
         ))}
