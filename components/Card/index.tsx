@@ -28,9 +28,8 @@ const BasicCard: React.FC<CardProps> = ({
             <Image
               src={imageUrl}
               alt={title}
-              layout="fill"
-              objectFit="contain"
-              className="group-hover"
+              fill
+              className="group-hover object-contain"
             />
           </CardItem>
           <CardItem

@@ -107,9 +107,8 @@ const BlogPost: NextPage<BlogPostProps> = ({ params }) => {
               <Image
                 src={coverPhoto?.url || ''}
                 alt={title || 'André Rodrigo'}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-cover"
                 placeholder="blur"
                 blurDataURL={IMAGE_DATA_BLUR_URL}
               />

@@ -23,9 +23,8 @@ const BlogCard = ({ post }: { post: Post }) => {
             <Image
               src={coverPhoto.url}
               alt={title}
-              layout="fill"
-              objectFit="cover"
-              className="group-hover rounded-md"
+              fill
+              className="group-hover rounded-md object-cover"
             />
           </CardItem>
 

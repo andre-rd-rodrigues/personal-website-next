@@ -64,10 +64,9 @@ const PageLoading = () => {
           <Image
             src="/images/liquid.webp"
             alt="Logo"
-            objectFit="cover"
-            layout="fill"
+            fill
             priority
-            className="blur-2xl sm:blur-3xl"
+            className="object-cover blur-2xl sm:blur-3xl"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
 
@@ -88,8 +87,8 @@ const PageLoading = () => {
               <Image
                 src="/images/logo.webp"
                 alt="Logo"
-                objectFit="contain"
-                layout="fill"
+                fill
+                className="object-contain"
                 priority
               />
             </motion.div>
