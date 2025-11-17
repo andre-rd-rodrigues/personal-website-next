@@ -161,6 +161,9 @@ const Home = () => {
             {EXPERTISE.map(({ name, description, src }, i) => (
               <motion.div
                 variants={fadeInSlideInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
                 key={i}
               >

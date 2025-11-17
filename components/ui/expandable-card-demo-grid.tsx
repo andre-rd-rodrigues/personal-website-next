@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useId, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { AnimatePresence } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { cn } from '@/lib/utils';
@@ -9,6 +9,7 @@ import { BentoGrid } from '@/components/ui/bento-grid';
 import {
   fadeInSlideInVariant,
   containerVariant,
+  motion,
 } from '@/motion/motionVariants';
 
 export interface ExpandableCard {
@@ -188,6 +189,8 @@ export default function ExpandableCards({
         {cards.map((card, index) => (
           <motion.div
             variants={fadeInSlideInVariant}
+            initial="hidden"
+            whileInView="visible"
             key={`${card.title}-${index}`}
             onClick={() => handleCardClick(card)}
             className={cn(
