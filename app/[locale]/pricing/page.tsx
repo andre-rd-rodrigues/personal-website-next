@@ -43,13 +43,13 @@ const Pricing = () => {
         </motion.p>
       </div>
 
-      {/* Pricing Table */}
+      {/* Pricing Table - Desktop */}
       <motion.div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="mt-24 overflow-x-auto"
+        className="mt-24 hidden overflow-x-auto md:block"
       >
         <div className="min-w-full rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl md:p-6">
           <table className="w-full border-separate border-spacing-0">
@@ -77,7 +77,7 @@ const Pricing = () => {
             </thead>
             <tbody>
               {/* Price Row */}
-              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800">
                 <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
                   <div className="font-medium">{t('packs.starter.price')}</div>
                   <div className="text-xs text-white/60">
@@ -106,7 +106,7 @@ const Pricing = () => {
               </tr>
 
               {/* Description Row */}
-              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800">
                 <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.starter.description')}
                 </td>
@@ -122,7 +122,7 @@ const Pricing = () => {
               </tr>
 
               {/* Features Row */}
-              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800">
                 <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray('pricing.packs.starter.features').map(
@@ -204,7 +204,7 @@ const Pricing = () => {
               </tr>
 
               {/* Action Row */}
-              <tr className="transition-colors hover:bg-white/5">
+              <tr>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
                   <Button.Text
                     className="w-full"
@@ -246,6 +246,186 @@ const Pricing = () => {
               </tr>
             </tbody>
           </table>
+        </div>
+      </motion.div>
+
+      {/* Pricing Cards - Mobile */}
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-24 block space-y-5 md:hidden"
+      >
+        {/* Starter Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.starter.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.starter.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.starter.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.starter.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.starter.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
+            <Button.Text
+              className="w-full"
+              label={t_button('getStarted')}
+              fullWidth
+              hover={false}
+            />
+          </div>
+        </div>
+
+        {/* Professional Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.professional.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.professional.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.professional.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.professional.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.professional.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+            {getTranslationsArray('pricing.packs.professional.extras').map(
+              (extra, idx) => (
+                <li
+                  key={`extra-${idx}`}
+                  className="flex items-start text-[var(--color-primary)]"
+                >
+                  <span className="mr-2 text-lg">+</span>
+                  <span>{extra}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
+            <Button.Text
+              className="w-full"
+              label={t_button('select')}
+              fullWidth
+              hover={false}
+            />
+          </div>
+        </div>
+
+        {/* Premium Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.premium.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.premium.price')}
+            </div>
+            <div className="text-sm text-white/60">
+              {t('packs.premium.subtitle')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.premium.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.premium.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+            {getTranslationsArray('pricing.packs.premium.extras').map(
+              (extra, idx) => (
+                <li
+                  key={`extra-${idx}`}
+                  className="flex items-start text-[var(--color-primary)]"
+                >
+                  <span className="mr-2 text-lg">+</span>
+                  <span>{extra}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
+            <Button.Text
+              className="w-full"
+              label={t_button('select')}
+              fullWidth
+              hover={false}
+            />
+          </div>
+        </div>
+
+        {/* Enterprise Pack */}
+        <div className="rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-6 backdrop-blur-2xl">
+          <h3 className="mb-2 text-center text-2xl font-normal text-[var(--color-primary)]">
+            {t('packs.enterprise.title')}
+          </h3>
+          <div className="mb-4 text-center">
+            <div className="text-3xl font-medium text-white">
+              {t('packs.enterprise.price')}
+            </div>
+          </div>
+          <p className="mb-6 text-center text-white/80">
+            {t('packs.enterprise.description')}
+          </p>
+          <ul className="mb-6 space-y-2 text-white/80">
+            {getTranslationsArray('pricing.packs.enterprise.features').map(
+              (feature, idx) => (
+                <li key={idx} className="flex items-start">
+                  <span className="mr-2 text-lg text-[var(--color-primary)]">
+                    ✓
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ),
+            )}
+          </ul>
+          <div className="mt-6">
+            <Button.Text
+              className="w-full"
+              label={t_button('send_message')}
+              fullWidth
+              hover={false}
+            />
+          </div>
         </div>
       </motion.div>
 
