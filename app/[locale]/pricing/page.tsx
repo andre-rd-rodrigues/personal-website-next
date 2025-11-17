@@ -43,76 +43,199 @@ const Pricing = () => {
         </motion.p>
       </div>
 
-      {/* Presença Online */}
-      <div className="mt-24 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
-        <Card.Pricing
-          title={t('packs.starter.title')}
-          subtitle={t('packs.starter.subtitle')}
-          price={t('packs.starter.price')}
-          description={t('packs.starter.description')}
-          features={getTranslationsArray('pricing.packs.starter.features')}
-          cta={
-            <Button.Text
-              className="w-full"
-              label={t_button('getStarted')}
-              fullWidth
-              hover={false}
-            />
-          }
-        />
+      {/* Pricing Table */}
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="mt-24 overflow-x-auto"
+      >
+        <div className="min-w-full rounded-3xl border border-white/20 bg-black/40 p-4 backdrop-blur-xl md:p-6">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-white/20">
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.starter.title')}
+                </th>
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.professional.title')}
+                </th>
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.premium.title')}
+                </th>
+                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                  {t('packs.enterprise.title')}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* Price Row */}
+              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">{t('packs.starter.price')}</div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.starter.subtitle')}
+                  </div>
+                </td>
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">
+                    {t('packs.professional.price')}
+                  </div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.professional.subtitle')}
+                  </div>
+                </td>
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">{t('packs.premium.price')}</div>
+                  <div className="text-xs text-white/60">
+                    {t('packs.premium.subtitle')}
+                  </div>
+                </td>
+                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                  <div className="font-medium">
+                    {t('packs.enterprise.price')}
+                  </div>
+                </td>
+              </tr>
 
-        {/* Profissional */}
-        <Card.Pricing
-          title={t('packs.professional.title')}
-          subtitle={t('packs.professional.subtitle')}
-          price={t('packs.professional.price')}
-          description={t('packs.professional.description')}
-          features={getTranslationsArray('pricing.packs.professional.features')}
-          extras={getTranslationsArray('pricing.packs.professional.extras')}
-          cta={
-            <Button.Text
-              className="w-full"
-              label={t_button('select')}
-              fullWidth
-              hover={false}
-            />
-          }
-        />
+              {/* Description Row */}
+              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                  {t('packs.starter.description')}
+                </td>
+                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                  {t('packs.professional.description')}
+                </td>
+                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                  {t('packs.premium.description')}
+                </td>
+                <td className="px-4 py-4 text-center text-white/80 md:px-6 md:py-6">
+                  {t('packs.enterprise.description')}
+                </td>
+              </tr>
 
-        {/* Premium */}
-        <Card.Pricing
-          title={t('packs.premium.title')}
-          subtitle={t('packs.premium.subtitle')}
-          price={t('packs.premium.price')}
-          description={t('packs.premium.description')}
-          features={getTranslationsArray('pricing.packs.premium.features')}
-          extras={getTranslationsArray('pricing.packs.premium.extras')}
-          cta={
-            <Button.Text
-              className="w-full"
-              label={t_button('select')}
-              fullWidth
-              hover={false}
-            />
-          }
-        />
+              {/* Features Row */}
+              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray('pricing.packs.starter.features').map(
+                      (feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-lg text-[var(--color-primary)]">
+                            ✓
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </td>
+                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray(
+                      'pricing.packs.professional.features',
+                    ).map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="mr-2 text-lg text-[var(--color-primary)]">
+                          ✓
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                    {getTranslationsArray(
+                      'pricing.packs.professional.extras',
+                    ).map((extra, idx) => (
+                      <li
+                        key={`extra-${idx}`}
+                        className="flex items-start text-[var(--color-primary)]"
+                      >
+                        <span className="mr-2 text-lg">+</span>
+                        <span>{extra}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray('pricing.packs.premium.features').map(
+                      (feature, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <span className="mr-2 text-lg text-[var(--color-primary)]">
+                            ✓
+                          </span>
+                          <span>{feature}</span>
+                        </li>
+                      ),
+                    )}
+                    {getTranslationsArray('pricing.packs.premium.extras').map(
+                      (extra, idx) => (
+                        <li
+                          key={`extra-${idx}`}
+                          className="flex items-start text-[var(--color-primary)]"
+                        >
+                          <span className="mr-2 text-lg">+</span>
+                          <span>{extra}</span>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </td>
+                <td className="px-4 py-4 text-white/80 md:px-6 md:py-6">
+                  <ul className="space-y-1 text-base">
+                    {getTranslationsArray(
+                      'pricing.packs.enterprise.features',
+                    ).map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="mr-2 text-lg text-[var(--color-primary)]">
+                          ✓
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
 
-        {/* Enterprise */}
-        <Card.Pricing
-          title={t('packs.enterprise.title')}
-          price={t('packs.enterprise.price')}
-          description={t('packs.enterprise.description')}
-          features={getTranslationsArray('pricing.packs.enterprise.features')}
-          cta={
-            <Button.Text
-              className="w-full"
-              label={t_button('send_message')}
-              fullWidth
-              hover={false}
-            />
-          }
-        />
-      </div>
+              {/* Action Row */}
+              <tr className="transition-colors hover:bg-white/5">
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('getStarted')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('select')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('select')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                  <Button.Text
+                    className="w-full"
+                    label={t_button('send_message')}
+                    fullWidth
+                    hover={false}
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </motion.div>
 
       {/* Maintenance */}
       <div className="mt-20">
