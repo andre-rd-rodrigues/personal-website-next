@@ -38,6 +38,7 @@ const Blog: NextPage = () => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLES_CARD_QUERY);
 
   const mainArticle = data?.posts?.filter((post) => post.isTopPick)[0];
+  const regularPosts = data?.posts?.filter((post) => !post.isTopPick) || [];
 
   return (
     <Container className="min-h-[95vh] max-w-full px-0">
@@ -84,18 +85,15 @@ const Blog: NextPage = () => {
             animate="visible"
             viewport={{ once: true }}
             variants={containerVariant}
-            className="flex flex-wrap justify-center gap-5"
           >
-            {/* Posts */}
-            {data?.posts.map((post, i) => (
-              <motion.div
-                variants={fadeInSlideInVariant}
-                className="max-w-full lg:max-w-[700px]"
-                key={i}
-              >
-                <BlogCard post={post} />
-              </motion.div>
-            ))}
+            <div className="mx-auto grid max-w-7xl grid-cols-1 gap-0 md:grid-cols-2 md:gap-6">
+              {/* Posts */}
+              {regularPosts.map((post) => (
+                <motion.div variants={fadeInSlideInVariant} key={post.id}>
+                  <BlogCard post={post} />
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </>
       )}

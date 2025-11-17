@@ -1,4 +1,5 @@
 'use client';
+
 import { ARTICLE_QUERY } from '@/api/graphQL/main';
 import styles from '@/assets/styles/pages/blog.module.scss';
 import Container from '@/components/Container';
