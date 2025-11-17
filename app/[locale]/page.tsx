@@ -147,8 +147,8 @@ const Home = () => {
         </Container>
       </div>
 
+      {/* Expertise */}
       <Container>
-        {/* Expertise */}
         <Section className="mt-12 md:mt-28">
           <SectionTitle tag="h2" title="Expertise" />
           <motion.div

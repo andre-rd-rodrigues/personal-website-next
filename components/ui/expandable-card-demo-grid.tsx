@@ -119,10 +119,11 @@ export default function ExpandableCards({
                 duration: 0.2,
                 ease: 'easeInOut',
               }}
-              className="flex h-fit max-h-[90vh] w-full flex-col overflow-y-auto rounded-2xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%] md:overflow-hidden"
+              className="flex max-h-[90vh] w-full flex-col overflow-hidden rounded-2xl border border-white/20 bg-black/40 shadow-2xl backdrop-blur-xl sm:rounded-3xl md:max-h-[90%]"
               style={{ maxWidth: maxModalWidth }}
             >
-              <div className="relative">
+              {/* Fixed video section */}
+              <div className="relative flex-shrink-0">
                 <video
                   width={200}
                   height={200}
@@ -142,14 +143,15 @@ export default function ExpandableCards({
                     duration: 0.2,
                     ease: 'easeInOut',
                   }}
-                  className="absolute right-3 top-2 z-[101] flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/50 shadow-lg backdrop-blur-sm transition-opacity hover:bg-black/70 hover:opacity-90"
+                  className="fixed right-4 top-4 z-[102] flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/50 shadow-lg backdrop-blur-sm transition-opacity hover:bg-black/70 hover:opacity-90 md:absolute md:right-3 md:top-2"
                   onClick={() => setActive(null)}
                 >
                   <CloseIcon />
                 </motion.button>
               </div>
 
-              <div>
+              {/* Fixed header section */}
+              <div className="flex-shrink-0">
                 <div className="flex items-start justify-between p-4 md:p-8">
                   <div className="">
                     <h3
@@ -171,7 +173,11 @@ export default function ExpandableCards({
                     {active.ctaText}
                   </a>
                 </div>
-                <div className="relative px-4 pt-4 md:px-8">
+              </div>
+
+              {/* Scrollable description section */}
+              <div className="min-h-0 flex-1 overflow-y-auto">
+                <div className="px-4 pt-4 md:px-8">
                   <div className="flex flex-col items-start gap-4 pb-10 text-xs text-white/80 md:text-sm lg:text-base">
                     {typeof active.content === 'function'
                       ? active.content(t)
