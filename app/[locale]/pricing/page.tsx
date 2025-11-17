@@ -51,14 +51,20 @@ const Pricing = () => {
         viewport={{ once: true }}
         className="mt-24 overflow-x-auto"
       >
-        <div className="min-w-full rounded-3xl border border-white/20 bg-black/40 p-4 backdrop-blur-xl md:p-6">
-          <table className="w-full border-collapse">
+        <div className="min-w-full rounded-2xl border border-gray-800 bg-gray-800 bg-opacity-10 p-4 backdrop-blur-2xl md:p-6">
+          <table className="w-full border-separate border-spacing-0">
             <thead>
-              <tr className="border-b border-white/20">
+              <tr className="border-b border-gray-800">
                 <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
                   {t('packs.starter.title')}
                 </th>
-                <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
+                <th
+                  className="overflow-hidden border-l border-r border-t border-gray-800 bg-gray-800/10 px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl"
+                  style={{
+                    borderTopLeftRadius: '1.5rem',
+                    borderTopRightRadius: '1.5rem',
+                  }}
+                >
                   {t('packs.professional.title')}
                 </th>
                 <th className="px-4 py-4 text-center text-lg font-normal text-[var(--color-primary)] md:px-6 md:py-6 md:text-xl">
@@ -71,14 +77,14 @@ const Pricing = () => {
             </thead>
             <tbody>
               {/* Price Row */}
-              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
                 <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
                   <div className="font-medium">{t('packs.starter.price')}</div>
                   <div className="text-xs text-white/60">
                     {t('packs.starter.subtitle')}
                   </div>
                 </td>
-                <td className="px-4 py-4 text-center text-white md:px-6 md:py-6">
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center text-white md:px-6 md:py-6">
                   <div className="font-medium">
                     {t('packs.professional.price')}
                   </div>
@@ -100,11 +106,11 @@ const Pricing = () => {
               </tr>
 
               {/* Description Row */}
-              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
                 <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.starter.description')}
                 </td>
-                <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
                   {t('packs.professional.description')}
                 </td>
                 <td className="px-4 py-4 text-center font-normal text-white/80 md:px-6 md:py-6">
@@ -116,7 +122,7 @@ const Pricing = () => {
               </tr>
 
               {/* Features Row */}
-              <tr className="border-b border-white/10 transition-colors hover:bg-white/5">
+              <tr className="border-b border-gray-800 transition-colors hover:bg-white/5">
                 <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray('pricing.packs.starter.features').map(
@@ -131,7 +137,7 @@ const Pricing = () => {
                     )}
                   </ul>
                 </td>
-                <td className="px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
+                <td className="overflow-hidden border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 align-top text-white/80 md:px-6 md:py-6">
                   <ul className="space-y-1 text-base">
                     {getTranslationsArray(
                       'pricing.packs.professional.features',
@@ -207,7 +213,13 @@ const Pricing = () => {
                     hover={false}
                   />
                 </td>
-                <td className="px-4 py-4 text-center md:px-6 md:py-6">
+                <td
+                  className="overflow-hidden border-b border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center md:px-6 md:py-6"
+                  style={{
+                    borderBottomLeftRadius: '1.5rem',
+                    borderBottomRightRadius: '1.5rem',
+                  }}
+                >
                   <Button.Text
                     className="w-full"
                     label={t_button('select')}
