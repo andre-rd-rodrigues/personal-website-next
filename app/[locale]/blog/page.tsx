@@ -2,7 +2,6 @@
 import { ARTICLES_CARD_QUERY } from '@/api/graphQL/main';
 import BlogCard from '@/components/BlogCard';
 import Container from '@/components/Container';
-import Skeleton from '@/components/Skeletons/indext';
 import useFetch from '@/hooks/useFetch';
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
@@ -14,8 +13,6 @@ import {
 } from '@/motion/motionVariants';
 import ErrorGeneric from '@/components/ErrorGeneric';
 import BlogMainArticleCard from '@/components/BlogMainArticleCard';
-
-const MOCK_POSTS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 export type Post = {
   id: string;
@@ -40,69 +37,68 @@ type PostsData = {
 const Blog: NextPage = () => {
   const { data, loading, error } = useFetch<PostsData>(ARTICLES_CARD_QUERY);
 
-  const mainArticle = data?.posts.filter((post) => post.isTopPick)[0];
+  const mainArticle = data?.posts?.filter((post) => post.isTopPick)[0];
 
   return (
     <Container className="min-h-[95vh] max-w-full px-0">
       {error && <ErrorGeneric />}
 
-      {!!mainArticle && (
+      {loading && (
         <motion.div
           initial="hidden"
           animate="visible"
-          viewport={{ once: true }}
-          variants={fadeInSlideLeftVariant}
-          className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
-        >
-          <BlogMainArticleCard post={mainArticle} />
-        </motion.div>
-      )}
-
-      {/* Main Article */}
-      {loading && (
-        <motion.div
-          initial="visible"
-          exit="hidden"
-          viewport={{ once: true }}
           variants={fadeInVariant}
-          className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
+          className="flex min-h-[60vh] items-center justify-center"
         >
-          <Skeleton.MainPost />
+          <div className="flex flex-col items-center gap-4">
+            <motion.div
+              className="h-12 w-12 rounded-full border-4 border-[var(--color-primary)] border-t-transparent"
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            />
+            <p className="text-white/60">Loading articles...</p>
+          </div>
         </motion.div>
       )}
 
-      <motion.div
-        initial="visible"
-        animate="visible"
-        viewport={{ once: true }}
-        variants={containerVariant}
-        className="flex flex-wrap justify-center gap-5"
-      >
-        {/* Loading */}
-        {loading &&
-          MOCK_POSTS.map((i) => (
+      {!loading && (
+        <>
+          {!!mainArticle && (
             <motion.div
-              key={i}
-              initial="visible"
-              variants={fadeInVariant}
-              exit="hidden"
-              className="max-w-full lg:max-w-[700px]"
+              initial="hidden"
+              animate="visible"
+              viewport={{ once: true }}
+              variants={fadeInSlideLeftVariant}
+              className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
             >
-              <Skeleton.PostCard />
+              <BlogMainArticleCard post={mainArticle} />
             </motion.div>
-          ))}
+          )}
 
-        {/* Posts */}
-        {data?.posts.map((post, i) => (
           <motion.div
-            variants={fadeInSlideInVariant}
-            className="max-w-full lg:max-w-[700px]"
-            key={i}
+            initial="visible"
+            animate="visible"
+            viewport={{ once: true }}
+            variants={containerVariant}
+            className="flex flex-wrap justify-center gap-5"
           >
-            <BlogCard post={post} />
+            {/* Posts */}
+            {data?.posts.map((post, i) => (
+              <motion.div
+                variants={fadeInSlideInVariant}
+                className="max-w-full lg:max-w-[700px]"
+                key={i}
+              >
+                <BlogCard post={post} />
+              </motion.div>
+            ))}
           </motion.div>
-        ))}
-      </motion.div>
+        </>
+      )}
     </Container>
   );
 };
