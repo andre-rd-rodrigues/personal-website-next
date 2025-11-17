@@ -84,8 +84,8 @@ const Home = () => {
 
       {/* About Me */}
       <div className="relative z-10 -mt-24 rounded-b-3xl rounded-t-3xl border-t-2 border-gray-800 bg-gray-900/30 backdrop-blur-2xl md:-mt-32">
-        <Container className="!mt-0 pb-12">
-          <Section className="mt-12 md:my-28">
+        <Container className="!mb-0 !mt-0 pb-6 md:pb-8">
+          <Section className="mb-12 mt-12 md:mb-16 md:mt-28">
             <div className="grid gap-6 md:grid-cols-12">
               <motion.div
                 variants={fadeInVariant}
@@ -149,7 +149,7 @@ const Home = () => {
 
       <Container>
         {/* Expertise */}
-        <Section>
+        <Section className="mt-12 md:mt-28">
           <SectionTitle tag="h2" title="Expertise" />
           <motion.div
             variants={containerVariant}
