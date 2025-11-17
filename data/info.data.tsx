@@ -514,7 +514,7 @@ const skillsDataFE: ChartData<'radar'> = {
   datasets: [
     {
       label: 'Front-end Development',
-      data: [10, 10, 10, 10, 10, 8, 10, 10, 8, 9, 10, 10, 9],
+      data: [10, 10, 10, 10, 10, 9, 10, 10, 8, 10, 10, 10, 10],
       fill: true,
       backgroundColor: 'rgba(255, 86, 205, 0.2)',
       borderColor: 'rgba(255, 86, 205, 1)',
@@ -536,11 +536,13 @@ const skillsDataBE: ChartData<'radar'> = {
     'CI/CD Pipelines',
     'Python',
     'Git',
+    'AI Agents',
+    'LLMs',
   ],
   datasets: [
     {
       label: 'Back-end & Infrastructure',
-      data: [6, 8, 7, 5, 3, 7, 7, 4, 10],
+      data: [9, 9, 8, 7, 3, 9, 9, 4, 10, 8, 7],
       fill: true,
       backgroundColor: 'rgba(34, 202, 236, 0.2)',
       borderColor: 'rgba(34, 202, 236, 1)',
