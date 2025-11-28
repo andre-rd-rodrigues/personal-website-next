@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "next build",
+    "build": "bun run build:images && next build",
     "build:images": "bun run tinypng && bash scripts/convert-webp.sh",
     "start": "next start",
     "lint": "next lint",
