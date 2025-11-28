@@ -21,12 +21,12 @@ const BlogMainArticleCard = ({ post }: Props) => {
       <div>
         <div className="group/card border-1 relative flex flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
           <div>
-            <div className="flex gap-5 text-pink-500">
-              <p className="text-sm font-normal uppercase text-pink-500">
+            <div className="text-pink-500 flex gap-5">
+              <p className="text-pink-500 text-sm font-normal uppercase">
                 {category}
               </p>
               |
-              <p className="text-sm font-normal text-pink-500">
+              <p className="text-pink-500 text-sm font-normal">
                 {publishedDate}
               </p>
             </div>

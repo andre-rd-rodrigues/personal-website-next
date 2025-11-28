@@ -5,6 +5,21 @@ Welcome to my website! A modern and responsive web application built with Next.j
 **Website:** https://www.andrerodrigo.com
 **Blog:** https://www.blog.andrerodrigo.com
 
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js >=22
+- Bun >=1.0.0 ([Install Bun](https://bun.sh/docs/installation))
+
+### Installation
+```bash
+# Install dependencies
+bun install
+
+# Start development server
+bun dev
+```
+
 ## 📂 Project Structure
 
 Here is a brief overview of the project's structure:
@@ -94,10 +109,13 @@ Here are some of the key libraries used in this project:
 
 ## 🛠️ Scripts
 
-- `dev`: Runs the development server.
-- `build`: Builds the application for production.
-- `start`: Starts the production server.
-- `lint`: Runs the linter.
-- `prod`: Builds and starts the production server.
+Run scripts using Bun:
+- `bun dev`: Runs the development server.
+- `bun build`: Builds the application for production.
+- `bun start`: Starts the production server.
+- `bun lint`: Runs the linter.
+- `bun prod`: Builds and starts the production server.
+- `bun type-check`: Type checks the codebase.
+- `bun prettier`: Formats code with Prettier.
 
 Enjoy exploring my website and discovering my projects!

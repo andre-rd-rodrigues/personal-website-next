@@ -41,5 +41,9 @@ yarn-error.log*
 next-env.d.ts
 
 package-lock.json
+pnpm-lock.yaml
 
 .env*.local
+
+# TinyPNG API key (should be in ~/.tinypng, not project root)
+.tinypng

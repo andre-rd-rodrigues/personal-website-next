@@ -1,4 +1,5 @@
 {
+  "bunVersion": "1.x",
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
@@ -31,8 +32,14 @@
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=15768000;includeSubdomains" },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=15768000;includeSubdomains"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "frame-ancestors 'none'; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://*.iconify.design;"

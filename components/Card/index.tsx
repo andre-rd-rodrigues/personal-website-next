@@ -96,7 +96,7 @@ function PricingCard({
             <CardItem
               as="p"
               translateZ="70"
-              className="text-pink mt-7 text-5xl font-medium"
+              className="mt-7 text-5xl font-medium text-pink"
               style={{ fontFamily: 'var(--font-jost)' }}
             >
               {price}

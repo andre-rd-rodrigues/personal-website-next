@@ -23,7 +23,7 @@ const TrustedCompanies = ({ className }: Props) => {
         variants={fadeInSlideLeftVariant}
         initial="hidden"
         whileInView="visible"
-        className="text-pink mb-4 text-center text-xl font-light uppercase tracking-wider"
+        className="mb-4 text-center text-xl font-light uppercase tracking-wider text-pink"
         style={{ color: `var(--color-primary)` }}
       >
         {t('title')}

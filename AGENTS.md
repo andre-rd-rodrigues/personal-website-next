@@ -8,7 +8,7 @@ This file provides essential information for AI agents working on this codebase.
 **Type:** Personal portfolio website  
 **Framework:** Next.js 14.2.32 (App Router)  
 **Language:** TypeScript  
-**Package Manager:** pnpm (>=9)  
+**Package Manager:** Bun (>=1.0.0)  
 **Node.js:** >=22  
 
 **Live Sites:**
@@ -18,10 +18,10 @@ This file provides essential information for AI agents working on this codebase.
 ## 🚀 Quick Start
 
 ### Development Environment
-- Use `pnpm install` to install dependencies
-- Run `pnpm dev` to start the development server (uses Turbo mode)
+- Use `bun install` to install dependencies
+- Run `bun dev` to start the development server (uses Turbo mode)
 - Check the `name` field in `package.json` to confirm the project name: `andre-website`
-- Node.js version requirement: `>=22`, pnpm version requirement: `>=9`
+- Node.js version requirement: `>=22`, Bun version requirement: `>=1.0.0`
 
 ### Getting Full Context
 For comprehensive codebase context, refer to **`repomix-output.xml`** in the project root. This file contains:
@@ -160,22 +160,24 @@ The project uses Husky with lint-staged to automatically run:
 - Prettier (`prettier --write`)
 - TypeScript type checking (`tsc --noEmit`)
 
+**Note:** Bun can run scripts directly, so you can use `bun run <script>` or just `bun <script>` for most commands.
+
 ### Available Scripts
-- `pnpm dev` - Start development server with Turbo
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Auto-fix ESLint issues
-- `pnpm lint:strict` - Lint all files strictly
-- `pnpm prettier` - Format all files with Prettier
-- `pnpm type-check` - Type check without emitting files
-- `pnpm analyze` - Analyze bundle size
-- `pnpm knip` - Find unused code
+- `bun dev` - Start development server with Turbo
+- `bun build` - Build for production
+- `bun start` - Start production server
+- `bun lint` - Run ESLint
+- `bun lint:fix` - Auto-fix ESLint issues
+- `bun lint:strict` - Lint all files strictly
+- `bun prettier` - Format all files with Prettier
+- `bun type-check` - Type check without emitting files
+- `bun analyze` - Analyze bundle size
+- `bun knip` - Find unused code
 
 ### CI/CD
 - CI configuration: `.github/workflows/ci.yml`
-- Always run `pnpm lint`, `pnpm prettier`, and `pnpm type-check` before committing
-- Ensure `pnpm build` passes before pushing
+- Always run `bun lint`, `bun prettier`, and `bun type-check` before committing
+- Ensure `bun build` passes before pushing
 - All CI checks must pass before merging
 
 ## 🔄 Common Workflows
@@ -203,15 +205,15 @@ The project uses Husky with lint-staged to automatically run:
 - Place images in `public/images/`
 - Use Next.js `Image` component for optimization
 - Reference as `/images/filename.webp`
-- Profile images: `public/images/profile.webp`, `public/images/profile_home.png`
+- Profile images: `public/images/profile.webp`, `public/images/profile_home.webp`
 
 ## 📋 PR Instructions
 
 ### Commit Guidelines
 - Title format: `[personal-website] <Title>` or `[andre-website] <Title>`
-- Always run `pnpm lint`, `pnpm prettier`, and `pnpm type-check` before committing
+- Always run `bun lint`, `bun prettier`, and `bun type-check` before committing
 - The project uses Husky with lint-staged, which will automatically run checks on pre-commit
-- Ensure the build passes: `pnpm build` before pushing
+- Ensure the build passes: `bun build` before pushing
 - The commit should pass all CI checks (ESLint, Prettier, TypeScript, Build) before merging
 
 ### Code Style
@@ -228,8 +230,8 @@ The project uses Husky with lint-staged to automatically run:
 - **Import errors**: Check `tsconfig.json` paths configuration
 - **i18n not working**: Verify locale is set correctly in route
 - **Styles not applying**: Check if using CSS modules correctly
-- **Build failures**: Run `pnpm type-check` to identify TypeScript errors
-- **Lint errors**: Run `pnpm lint:fix` to auto-fix issues
+- **Build failures**: Run `bun type-check` to identify TypeScript errors
+- **Lint errors**: Run `bun lint:fix` to auto-fix issues
 
 ### Getting Help
 - Check `repomix-output.xml` for full codebase context

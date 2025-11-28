@@ -29,10 +29,10 @@ const BlogCard = ({ post }: { post: Post }) => {
           </CardItem>
 
           <div className="flex justify-between">
-            <p className="text-sm font-medium uppercase text-pink-500">
+            <p className="text-pink-500 text-sm font-medium uppercase">
               {category}
             </p>
-            <p className="text-sm font-medium text-pink-500">{publishedDate}</p>
+            <p className="text-pink-500 text-sm font-medium">{publishedDate}</p>
           </div>
 
           <CardItem

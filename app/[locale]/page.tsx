@@ -34,7 +34,7 @@ import Image from 'next/image';
 const Home = () => {
   const t = useTranslations();
   const { getTranslationsArray } = useTranslation();
-
+  console.log('runtime', process.versions.bun);
   return (
     <>
       {/* Title */}
@@ -82,7 +82,7 @@ const Home = () => {
           <div className="flex flex-1 items-center justify-center md:justify-end">
             <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
               <Image
-                src="/images/profile_home.png"
+                src="/images/profile_home.webp"
                 alt="André Rodrigues"
                 width={600}
                 height={600}
