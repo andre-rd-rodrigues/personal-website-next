@@ -15,7 +15,6 @@ import TypeformPopup from '@/components/TypeformPopup';
 import { Compare } from '@/components/ui/compare';
 import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 import { FlipWords } from '@/components/ui/flip-words';
-import VideoBackground from '@/components/VideoBackground';
 import WebsiteProcess from '@/components/WebsiteProcess';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
@@ -39,48 +38,60 @@ const Home = () => {
   return (
     <>
       {/* Title */}
-      <VideoBackground
-        src="/animations/liquid.webm"
-        placeholder="/images/liquid.webp"
+      <motion.div
+        variants={containerVariant}
+        whileInView="visible"
+        initial="hidden"
+        viewport={{ once: true }}
+        className="relative z-10 flex min-h-[100vh] w-full items-center justify-center py-12"
       >
-        <motion.div
-          variants={containerVariant}
-          whileInView="visible"
-          initial="hidden"
-          viewport={{ once: true }}
-          className="relative z-10 flex h-[100vh] w-full flex-col items-center justify-center"
-        >
-          <motion.span variants={blurVariant}>
-            <Image
-              src="/images/logo_light.webp"
-              width={200}
-              height={200}
-              className="mx-auto"
-              alt="André Rodrigo - Software Engineer"
-            />
-          </motion.span>
-          <motion.h1
-            variants={fadeInSlideInVariant}
-            className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider sm:text-[25px]"
-          >
-            André Rodrigo
-          </motion.h1>
-
-          <motion.p
-            variants={fadeInSlideInVariant}
-            className="mt-8 w-full text-center opacity-70"
-          >
-            {t('homepage.subtitle')}
-          </motion.p>
-          <div className="mt-8 flex w-full items-center justify-center gap-3">
-            <motion.span variants={fadeInSlideInVariant}>
-              <Link href="/portfolio/web">
-                <Button.Minimal label={t('homepage.cta')} icon={ICONS.arrow} />
-              </Link>
+        <Container className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">
+          <div className="flex flex-1 flex-col items-center md:items-start">
+            <motion.span variants={blurVariant}>
+              <Image
+                src="/images/logo_light.webp"
+                width={200}
+                height={200}
+                className="mx-auto md:mx-0"
+                alt="André Rodrigo - Software Engineer"
+              />
             </motion.span>
+            <motion.h1
+              variants={fadeInSlideInVariant}
+              className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider text-pink sm:text-[25px] md:text-left"
+            >
+              André Rodrigo
+            </motion.h1>
+            <motion.p
+              variants={fadeInSlideInVariant}
+              className="mt-8 w-full text-center opacity-70 md:text-left"
+            >
+              {t('homepage.subtitle')}
+            </motion.p>
+            <div className="mt-8 flex w-full items-center justify-center gap-3 md:justify-start">
+              <motion.span variants={fadeInSlideInVariant}>
+                <Link href="/portfolio/web">
+                  <Button.Minimal
+                    label={t('homepage.cta')}
+                    icon={ICONS.arrow}
+                  />
+                </Link>
+              </motion.span>
+            </div>
           </div>
-        </motion.div>
-      </VideoBackground>
+          <div className="flex flex-1 items-center justify-center md:justify-end">
+            <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
+              <Image
+                src="/images/profile_home.png"
+                alt="André Rodrigues"
+                width={600}
+                height={600}
+                className="h-full w-full rounded-2xl object-cover"
+              />
+            </div>
+          </div>
+        </Container>
+      </motion.div>
 
       {/* About Me */}
       <div className="relative z-10 -mt-24 rounded-b-3xl rounded-t-3xl border-t-2 border-gray-800 bg-gray-900/30 backdrop-blur-2xl md:-mt-32">

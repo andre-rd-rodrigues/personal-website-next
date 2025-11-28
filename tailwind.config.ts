@@ -9,6 +9,9 @@ const config: Config = {
 
   theme: {
     extend: {
+      colors: {
+        pink: 'var(--color-primary)',
+      },
       animation: {
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
