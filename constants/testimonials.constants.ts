@@ -22,8 +22,7 @@ const TESTIMONIALS = [
   },
   {
     review: 'sofia.review',
-    picture_path:
-      'https://media.licdn.com/dms/image/v2/D4D03AQES1YDYWE5r-g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1705440670907?e=1731542400&v=beta&t=LCqUN2sNqYuWn0xCadRTiDKYV_JfVUrfEmoQ4sUmFRY',
+    picture_path: '/images/testimonials/sofia.webp',
     client_name: 'Sofia Pimenta',
     client_details: 'sofia.details',
     project_link: 'https://kaleidoscopic-cheesecake-db7480.netlify.app/',

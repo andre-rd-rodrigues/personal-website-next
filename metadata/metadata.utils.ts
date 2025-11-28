@@ -11,27 +11,27 @@ export const getMetadata = (options: Metadata & { src?: string }): Metadata => {
     description: options.description,
     icons: [
       {
-        url: '/images/favicon/favicon-16x16.png',
+        url: '/images/favicon/favicon-16x16.webp',
         sizes: '16x16',
         rel: 'icon',
       },
       {
-        url: '/images/favicon/favicon-32x32.png',
+        url: '/images/favicon/favicon-32x32.webp',
         sizes: '32x32',
         rel: 'icon',
       },
       {
-        url: '/images/favicon/apple-touch-icon.png',
+        url: '/images/favicon/apple-touch-icon.webp',
         sizes: '180x180',
         rel: 'apple-touch-icon',
       },
       {
-        url: '/images/favicon/android-chrome-192x192.png',
+        url: '/images/favicon/android-chrome-192x192.webp',
         sizes: '192x192',
         rel: 'icon',
       },
       {
-        url: '/images/favicon/android-chrome-512x512.png',
+        url: '/images/favicon/android-chrome-512x512.webp',
         sizes: '512x512',
         rel: 'icon',
       },
