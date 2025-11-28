@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "build:images": "bash scripts/convert-webp.sh",
+    "build:images": "bun run tinypng && bash scripts/convert-webp.sh",
     "start": "next start",
     "lint": "next lint",
     "prod": "next build && next start",
@@ -20,7 +20,8 @@
     "prettier": "prettier --write \"**/*.{js,jsx,json,ts,tsx,scss,css,md}\"",
     "analyze": "ANALYZE=true bun run build",
     "type-check": "tsc --noEmit",
-    "knip": "knip"
+    "knip": "knip",
+    "tinypng": "tinypng public/images"
   },
   "dependencies": {
     "@iconify/react": "^4.1.1",
