@@ -38,7 +38,6 @@ plaintextCopiar código
 │   │   │   ├── /websites
 │   │   │   ├── layout.tsx
 │   │   │   └── page.tsx
-│   │   ├── /skills
 │   │   ├── globals.scss
 │   │   ├── layout.tsx
 │   │   ├── page.tsx
@@ -90,7 +89,6 @@ plaintextCopiar código
 - **About**: Information about me and my background.
 - **Contact**: A page with a form to reach out to me.
 - **Portfolio**: A showcase of my web and mobile projects, including subcategories for apps and websites.
-- **Skills**: Details about my technical skills.
 - **Not Found**: Custom 404 error page.
 
 ## 📦 Key Libraries

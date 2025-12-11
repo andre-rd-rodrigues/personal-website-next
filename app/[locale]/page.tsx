@@ -194,7 +194,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             {/* @ts-expect-error expected */}
-            <Link href="/skills">
+            <Link href="/about">
               <Button.Text
                 className="w-full"
                 label={t('buttons.skills')}

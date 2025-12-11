@@ -75,7 +75,6 @@ The repomix file is organized with:
   ├── portfolio/        # Portfolio pages
   │   ├── web/         # Web projects
   │   └── mobile/      # Mobile projects
-  ├── skills/          # Skills page
   ├── pricing/         # Pricing page
   ├── faqs/            # FAQs page
   └── page.tsx         # Homepage
