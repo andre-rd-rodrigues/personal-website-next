@@ -73,7 +73,7 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^3.3.0",
     "tinypng-cli": "^0.0.7",
-    "typescript": "~5.5.4",
+    "typescript": "~5.9.3",
     "use-count-up": "^3.0.1"
   },
   "husky": {
