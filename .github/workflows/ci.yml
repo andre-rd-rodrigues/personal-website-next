@@ -46,5 +46,5 @@ jobs:
         # Ensure your package.json has a script that runs the TypeScript compiler with --noEmit
 
       - name: Build
-        run: bun run build
-        # Optionally, build your project if necessary
+        run: bun run build:ci
+        # Build without image optimization (images should be pre-optimized and committed)
