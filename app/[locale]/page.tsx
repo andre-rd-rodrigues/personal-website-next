@@ -193,7 +193,6 @@ const Home = () => {
             className="mt-6 text-center"
             viewport={{ once: true }}
           >
-            {/* @ts-expect-error expected */}
             <Link href="/about">
               <Button.Text
                 className="w-full"
