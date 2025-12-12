@@ -48,6 +48,7 @@ export const pathnames = {
     pt: '/contactos',
   },
 } satisfies Pathnames<typeof locales>;
+    
 
 export const { Link,  usePathname, useRouter,  } =
   createLocalizedPathnamesNavigation({ locales, localePrefix, pathnames });
