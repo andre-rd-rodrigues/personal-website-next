@@ -41,6 +41,9 @@ jobs:
         run: bun run prettier
         # Ensure your package.json has a script that runs Prettier in check mode
 
+      - name: Run Tests
+        run: bun run test
+
       - name: Run TypeScript Compiler
         run: bun run type-check
         # Ensure your package.json has a script that runs the TypeScript compiler with --noEmit

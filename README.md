@@ -8,10 +8,12 @@ Welcome to my website! A modern and responsive web application built with Next.j
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js >=22
 - Bun >=1.0.0 ([Install Bun](https://bun.sh/docs/installation))
 
 ### Installation
+
 ```bash
 # Install dependencies
 bun install
@@ -108,6 +110,7 @@ Here are some of the key libraries used in this project:
 ## 🛠️ Scripts
 
 Run scripts using Bun:
+
 - `bun dev`: Runs the development server.
 - `bun build`: Builds the application for production.
 - `bun start`: Starts the production server.

@@ -63,4 +63,12 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      files: ['__tests__/**/*.{ts,tsx}'],
+      rules: {
+        '@typescript-eslint/no-require-imports': 'off',
+      },
+    },
+  ],
 };

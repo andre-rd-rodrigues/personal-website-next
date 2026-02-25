@@ -22,6 +22,8 @@
     "analyze": "ANALYZE=true bun run build",
     "type-check": "tsc --noEmit",
     "knip": "knip",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "tinypng": "tinypng public/images"
   },
   "dependencies": {
@@ -51,6 +53,12 @@
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "@next/bundle-analyzer": "^14.2.12",
     "@types/domutils": "^2.1.0",
     "@types/node": "^20",
