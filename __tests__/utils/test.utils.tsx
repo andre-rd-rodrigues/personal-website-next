@@ -4,6 +4,12 @@ import { type AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
 import '@testing-library/jest-dom';
 
 import en from '@/messages/en.json';
+import pt from '@/messages/pt.json';
+
+const messagesByLocale: Record<string, AbstractIntlMessages> = {
+  en: en as AbstractIntlMessages,
+  pt: pt as AbstractIntlMessages,
+};
 
 function customRender(
   ui: ReactElement,
@@ -17,11 +23,9 @@ function renderWithIntl(
   options?: Omit<RenderOptions, 'wrapper'> & { locale?: string },
 ) {
   const { locale = 'en', ...renderOptions } = options ?? {};
+  const messages = messagesByLocale[locale] ?? messagesByLocale.en;
   return render(
-    <NextIntlClientProvider
-      locale={locale}
-      messages={en as unknown as AbstractIntlMessages}
-    >
+    <NextIntlClientProvider locale={locale} messages={messages}>
       {ui}
     </NextIntlClientProvider>,
     renderOptions,
