@@ -38,7 +38,10 @@ function renderLayout(
   children: React.ReactNode = layoutChildren,
 ) {
   return render(
-    <RootLayoutBody locale={locale} messages={en as AbstractIntlMessages}>
+    <RootLayoutBody
+      locale={locale}
+      messages={en as unknown as AbstractIntlMessages}
+    >
       {children}
     </RootLayoutBody>,
   );
