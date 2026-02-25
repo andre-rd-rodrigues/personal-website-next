@@ -7,8 +7,8 @@ import en from '@/messages/en.json';
 import pt from '@/messages/pt.json';
 
 const messagesByLocale: Record<string, AbstractIntlMessages> = {
-  en: en as AbstractIntlMessages,
-  pt: pt as AbstractIntlMessages,
+  en: en as unknown as AbstractIntlMessages,
+  pt: pt as unknown as AbstractIntlMessages,
 };
 
 function customRender(
