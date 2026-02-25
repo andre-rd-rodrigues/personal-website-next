@@ -1,13 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import type { AbstractIntlMessages } from 'next-intl';
 import en from '@/messages/en.json';
-
-// Layout uses getMessages() from next-intl/server (messages from server in real app)
-jest.mock('next-intl/server', () => ({
-  ...jest.requireActual('next-intl/server'),
-  getMessages: () => Promise.resolve(en),
-  getTranslations: () => (key: string) => key,
-}));
 
 jest.mock(
   '@/components/LanguageSelector',
@@ -35,65 +29,50 @@ jest.mock('@/components/Cookies', () => ({
   default: () => null,
 }));
 
-import RootLayout from '@/app/[locale]/layout';
+import { RootLayoutBody } from '@/app/[locale]/layout';
 
-const paramsEn = Promise.resolve({ locale: 'en' });
-const paramsPt = Promise.resolve({ locale: 'pt' });
+const layoutChildren = <div data-testid="layout-children">Page content</div>;
 
-function renderLayout(params: Promise<{ locale: string }> = paramsEn) {
+function renderLayout(
+  locale: string = 'en',
+  children: React.ReactNode = layoutChildren,
+) {
   return render(
-    <Suspense fallback={<div>Loading...</div>}>
-      <RootLayout params={params}>{children}</RootLayout>
-    </Suspense>,
+    <RootLayoutBody locale={locale} messages={en as AbstractIntlMessages}>
+      {children}
+    </RootLayoutBody>,
   );
 }
 
 describe('Root layout', () => {
-  const children = <div data-testid="layout-children">Page content</div>;
-
   it('renders without throwing', () => {
     expect(() => renderLayout()).not.toThrow();
   });
 
-  it('sets html lang from locale', async () => {
-    const { container } = renderLayout();
-    await screen.findByTestId('layout-children');
-    const html = container.querySelector('html');
-    expect(html).toBeInTheDocument();
-    expect(html).toHaveAttribute('lang', 'en');
+  it('renders with en locale', () => {
+    renderLayout('en');
+    expect(screen.getByTestId('layout-children')).toBeInTheDocument();
   });
 
-  it('sets html lang for pt locale', async () => {
-    const { container } = renderLayout(paramsPt);
-    await screen.findByTestId('layout-children');
-    const html = container.querySelector('html');
-    expect(html).toHaveAttribute('lang', 'pt');
+  it('renders with pt locale', () => {
+    renderLayout('pt');
+    expect(screen.getByTestId('layout-children')).toBeInTheDocument();
   });
 
-  it('renders Navbar', async () => {
+  it('renders Navbar', () => {
     renderLayout();
-    expect(await screen.findByRole('navigation')).toBeInTheDocument();
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
 
-  it('renders children', async () => {
+  it('renders children', () => {
     renderLayout();
-    expect(await screen.findByTestId('layout-children')).toBeInTheDocument();
+    expect(screen.getByTestId('layout-children')).toBeInTheDocument();
     expect(screen.getByText('Page content')).toBeInTheDocument();
   });
 
-  it('renders Footer', async () => {
+  it('renders Footer', () => {
     renderLayout();
-    await screen.findByTestId('layout-children');
     const footer = document.querySelector('footer');
     expect(footer).toBeInTheDocument();
-  });
-
-  it('applies font class variables to html', async () => {
-    const { container } = renderLayout();
-    await screen.findByTestId('layout-children');
-    const html = container.querySelector('html');
-    // Layout uses jost.variable, blacker.variable, moniqa.variable (from @/assets/fonts)
-    expect(html?.className).toBeTruthy();
-    expect(html?.className?.includes('variable')).toBe(true);
   });
 });

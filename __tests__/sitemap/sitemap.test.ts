@@ -23,7 +23,7 @@ describe('sitemap', () => {
       expect(entry.lastModified).toBeInstanceOf(Date);
       expect(entry).toHaveProperty('alternates');
       expect(entry.alternates).toHaveProperty('languages');
-      expect(typeof entry.alternates.languages).toBe('object');
+      expect(typeof entry.alternates?.languages).toBe('object');
     }
   });
 
@@ -44,9 +44,12 @@ describe('sitemap', () => {
   it('alternates.languages has an entry for each locale', () => {
     const result = sitemap();
     for (const entry of result) {
+      const languages = entry.alternates?.languages;
+      expect(languages).toBeDefined();
+      if (!languages) continue;
       for (const locale of locales) {
-        expect(entry.alternates.languages).toHaveProperty(locale);
-        expect(entry.alternates.languages[locale]).toMatch(
+        expect(languages).toHaveProperty(locale);
+        expect(languages[locale]).toMatch(
           new RegExp(`^${escapeRegExp(host)}/${locale}`),
         );
       }

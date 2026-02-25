@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { headers } from 'next/headers';
 
 export const getMetadata = async (
-  options: Metadata & { src?: string }
+  options: Metadata & { src?: string },
 ): Promise<Metadata> => {
   const headersList = await headers();
   const pathname = headersList.get('x-invoke-path') || '';

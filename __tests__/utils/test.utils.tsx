@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
-import { NextIntlClientProvider } from 'next-intl';
+import { type AbstractIntlMessages, NextIntlClientProvider } from 'next-intl';
 import '@testing-library/jest-dom';
 
 import en from '@/messages/en.json';
@@ -18,7 +18,10 @@ function renderWithIntl(
 ) {
   const { locale = 'en', ...renderOptions } = options ?? {};
   return render(
-    <NextIntlClientProvider locale={locale} messages={en}>
+    <NextIntlClientProvider
+      locale={locale}
+      messages={en as unknown as AbstractIntlMessages}
+    >
       {ui}
     </NextIntlClientProvider>,
     renderOptions,

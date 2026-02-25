@@ -8,12 +8,14 @@ const withBundleAnalyzerPlugin = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-// Initialize the Next Intl plugin
-const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+// Initialize the Next Intl plugin (no path = default i18n/request.ts; explicit path can fail with Turbopack)
+const withNextIntl = createNextIntlPlugin();
 
 // Your existing Next.js configuration
 const nextConfig = {
   reactStrictMode: false,
+  // Next.js 16: allow build with webpack config present (e.g. next-intl, PDF loader)
+  turbopack: {},
   images: {
     remotePatterns: [
       {
