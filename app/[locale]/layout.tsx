@@ -7,8 +7,8 @@ import Footer from '@/components/Footer/Footer';
 import { getMetadata } from '@/metadata/metadata.utils';
 import { MetadataProps } from '@/metadata/types';
 import { Metadata } from 'next';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
 
 import Cookies from '@/components/Cookies';
 
@@ -18,32 +18,37 @@ import PageLoading from '@/components/PageLoading';
 import Analytics from '@/components/Analytics';
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: MetadataProps): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
-  return getMetadata({
+  return await getMetadata({
     title: t('homeTitle'),
     description: t('description'),
   });
 }
 
-const RootLayout = ({
+const RootLayout = async ({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) => {
-  const messages = useMessages();
+  const { locale } = await params;
+  const messages = await getMessages();
 
   return (
+    
     <html
       lang={locale}
       className={`${jost.variable} ${blacker.variable} ${moniqa.variable}`}
     >
       <body className="min-h-screen">
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <GlobalBackground />
+          <PageLoading />
           <Navbar />
           {children}
           <Cookies />
@@ -54,8 +59,6 @@ const RootLayout = ({
           <SpeedInsights />
         </NextIntlClientProvider>
       </body>
-      <GlobalBackground />
-      <PageLoading />
     </html>
   );
 };

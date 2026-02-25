@@ -2,7 +2,7 @@ import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import { mockUseFetch } from '@/__tests__/__mocks__/useFetch.mock';
 import { mockBack } from '@/__tests__/__mocks__/navigation.mock';
-import BlogPost from '@/app/[locale]/blog/[slug]/page';
+import BlogPostClient from '@/app/[locale]/blog/[slug]/BlogPostClient';
 
 jest.mock('@/hooks/useFetch', () =>
   require('@/__tests__/__mocks__/useFetch.mock').mockUseFetchModule(),
@@ -36,7 +36,7 @@ describe('Blog post page', () => {
       error: null,
     });
     expect(() =>
-      renderWithIntl(<BlogPost params={{ slug: 'test-post' }} />),
+      renderWithIntl(<BlogPostClient slug="test-post" />),
     ).not.toThrow();
   });
 
@@ -46,7 +46,7 @@ describe('Blog post page', () => {
       loading: true,
       error: null,
     });
-    renderWithIntl(<BlogPost params={{ slug: 'test-post' }} />);
+    renderWithIntl(<BlogPostClient slug="test-post" />);
     expect(screen.getByText('Loading article...')).toBeInTheDocument();
   });
 
@@ -56,7 +56,7 @@ describe('Blog post page', () => {
       loading: false,
       error: new Error('Failed'),
     });
-    renderWithIntl(<BlogPost params={{ slug: 'test-post' }} />);
+    renderWithIntl(<BlogPostClient slug="test-post" />);
     expect(
       screen.getByRole('heading', { name: /something went wrong/i, level: 2 }),
     ).toBeInTheDocument();
@@ -68,7 +68,7 @@ describe('Blog post page', () => {
       loading: false,
       error: null,
     });
-    renderWithIntl(<BlogPost params={{ slug: 'test-post' }} />);
+    renderWithIntl(<BlogPostClient slug="test-post" />);
     await screen.findByRole('heading', { name: 'Test Post Title', level: 1 });
     expect(screen.getByText('Body text')).toBeInTheDocument();
   });

@@ -1,4 +1,4 @@
-@import 'assets/styles/mixins';
+@use '../../assets/styles/_mixins';
 
 .container {
   display: flex;
@@ -8,13 +8,13 @@
   backdrop-filter: blur(20px);
   border-top: 1px solid rgba(128, 128, 128, 0.185);
   padding: 15px var(--padding-y);
-  color: color(white);
+  color: mixins.color(white);
   font-size: var(--fs-m);
   z-index: 100;
 }
 
 //Responsive
-@media only screen and (max-width: $breaking-point-sm) {
+@media only screen and (max-width: mixins.$breaking-point-sm) {
   .container {
     flex-wrap: wrap;
     justify-content: center;

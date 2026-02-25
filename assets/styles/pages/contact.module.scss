@@ -1,4 +1,4 @@
-@import 'assets/styles/mixins';
+@use '../_mixins';
 
 .container {
   display: flex;
@@ -15,11 +15,11 @@
     margin-bottom: 15px;
   }
   a[id='contact_email'] {
-    color: color(primary);
+    color: mixins.color(primary);
     transition: 0.3s ease;
 
     &:hover {
-      color: color(white);
+      color: mixins.color(white);
     }
   }
   div[class='row'] {
@@ -52,7 +52,7 @@
   padding: 0 40px;
 }
 
-@media (max-width: $breaking-point-md) {
+@media (max-width: mixins.$breaking-point-md) {
   .container {
     ul {
       justify-content: center;

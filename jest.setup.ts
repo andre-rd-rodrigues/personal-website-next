@@ -5,12 +5,13 @@ class MockIntersectionObserver {
   observe = (): null => null;
   disconnect = (): null => null;
   unobserve = (): null => null;
+  takeRecords = (): IntersectionObserverEntry[] => [];
   root = null;
   rootMargin = '';
   thresholds: number[] = [];
 }
 global.IntersectionObserver =
-  MockIntersectionObserver as typeof IntersectionObserver;
+  MockIntersectionObserver as unknown as typeof IntersectionObserver;
 
 jest.mock('next/image', () => ({
   __esModule: true,

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { BREAKPOINTS, COLORS } from './constants/design-tokens.constants';
 
 const config: Config = {
   content: [
@@ -11,6 +12,15 @@ const config: Config = {
     extend: {
       colors: {
         pink: 'var(--color-primary)',
+        dark: COLORS.dark,
+        white: COLORS.white,
+      },
+      screens: {
+        sm: `${BREAKPOINTS.sm}px`,
+        md: `${BREAKPOINTS.md}px`,
+        lg: `${BREAKPOINTS.lg}px`,
+        xl: `${BREAKPOINTS.xl}px`,
+        xxl: `${BREAKPOINTS.xxl}px`,
       },
       animation: {
         scroll:

@@ -5,18 +5,20 @@ import { ARTICLE_QUERY, graphcms } from '@/api/graphQL/main';
 import { Post } from '../page';
 
 export async function generateMetadata({
-  params: { slug },
+  params,
 }: MetadataProps): Promise<Metadata | undefined> {
+  const { slug } = await params;
   async function fetchData() {
     try {
-      const data: { post: Post } = await graphcms.request(ARTICLE_QUERY, {
-        slug,
+      const data: { post?: Post } = await graphcms.request(ARTICLE_QUERY, {
+        slug: slug!,
       });
 
-      return getMetadata({
-        title: data?.post.title,
-        description: data?.post.description,
-        src: data?.post.coverPhoto.url,
+      const post = data?.post;
+      return await getMetadata({
+        title: post?.title ?? 'Blog',
+        description: post?.description ?? undefined,
+        src: post?.coverPhoto?.url,
       });
     } catch (error: unknown) {
       console.error(error);

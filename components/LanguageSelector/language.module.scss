@@ -1,8 +1,8 @@
-@import 'assets/styles/mixins';
+@use '../../assets/styles/_mixins';
 
 .container {
   position: relative;
-  color: color(white);
+  color: mixins.color(white);
   display: flex;
   align-items: center;
   margin-left: 17px;

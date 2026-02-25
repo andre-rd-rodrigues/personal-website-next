@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './navigator.module.scss';
-import { Heading } from '@/app/[locale]/blog/[slug]/page';
+import type { Heading } from '@/app/[locale]/blog/[slug]/BlogPostClient';
 
 interface ContentNavigatorProps {
   headings: Heading[];

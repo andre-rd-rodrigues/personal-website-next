@@ -11,6 +11,9 @@ const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    // Use a single React copy in tests to avoid "Invalid hook call" / "older version of React"
+    '^react$': '<rootDir>/node_modules/react/index.js',
+    '^react-dom$': '<rootDir>/node_modules/react-dom/index.js',
   },
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',

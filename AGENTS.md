@@ -6,9 +6,9 @@ This file provides essential information for AI agents working on this codebase.
 
 **Project Name:** `andre-website`  
 **Type:** Personal portfolio website  
-**Framework:** Next.js 14.2.32 (App Router)  
+**Framework:** Next.js 16.x (App Router)  
 **Language:** TypeScript  
-**Package Manager:** Bun (>=1.0.0)  
+**Package Manager:** pnpm (>=9)  
 **Node.js:** >=22
 
 **Live Sites:**
@@ -20,10 +20,10 @@ This file provides essential information for AI agents working on this codebase.
 
 ### Development Environment
 
-- Use `bun install` to install dependencies
-- Run `bun dev` to start the development server (uses Turbo mode)
+- Use `pnpm install` to install dependencies
+- Run `pnpm dev` to start the development server (webpack)
 - Check the `name` field in `package.json` to confirm the project name: `andre-website`
-- Node.js version requirement: `>=22`, Bun version requirement: `>=1.0.0`
+- Node.js version requirement: `>=22`, pnpm version: `>=9`
 
 ### Getting Full Context
 
@@ -47,11 +47,11 @@ The repomix file is organized with:
 
 ### Core Framework & Libraries
 
-- **Next.js 14.2.32** - React framework with App Router
-- **React 18** - UI library
-- **TypeScript 5.5.4** - Type safety
-- **next-intl 3.19.3** - Internationalization (i18n)
-- **Tailwind CSS 3.3.0** - Utility-first CSS framework
+- **Next.js 16.x** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript 5.5.x** - Type safety
+- **next-intl 3.19.x** - Internationalization (i18n)
+- **Tailwind CSS 3.3.x** - Utility-first CSS framework
 - **Sass/SCSS** - CSS preprocessing
 
 ### Key Dependencies
@@ -96,9 +96,10 @@ The repomix file is organized with:
   ├── Testimonials/    # Testimonial slider
   └── ui/              # UI components (3d-card, compare, etc.)
 
-/constants/             # Constant definitions
+/constants/             # Constant definitions (incl. design-tokens.constants.ts)
 /data/                  # Static data (projects, expertise)
 /hooks/                 # Custom React hooks
+/i18n/                  # next-intl request config (i18n/request.ts)
 /messages/              # i18n translation files (en.json, pt.json)
 /metadata/              # SEO metadata utilities
 /motion/                # Framer Motion animation variants
@@ -131,8 +132,11 @@ The repomix file is organized with:
 
 - All user-facing text should use `next-intl`
 - Translation keys are in `/messages/en.json` and `/messages/pt.json`
-- Use `useTranslations()` hook: `const t = useTranslations()`
-- Routes are locale-prefixed: `/en/about`, `/pt/about`
+- Use `useTranslations()` hook in client components: `const t = useTranslations()`
+- Use `getTranslations()` from `next-intl/server` in server components
+- Locale config and message loading: `i18n/request.ts` (used by next-intl plugin in `next.config.mjs`)
+- Route definitions and localized pathnames: `navigation.ts` (re-exports `Link`, `useRouter`, `usePathname` from next-intl)
+- Locale type: `locale.types.ts` (e.g. `Locale`); routes are locale-prefixed: `/en/about`, `/pt/about`
 
 ### Styling
 
@@ -151,21 +155,24 @@ The repomix file is organized with:
 
 ### Configuration
 
-- `next.config.mjs` - Next.js configuration (includes next-intl plugin)
+- `next.config.mjs` - Next.js configuration (next-intl plugin points to `./i18n/request.ts`)
 - `tsconfig.json` - TypeScript configuration (path aliases: `@/*`)
 - `.eslintrc.js` - ESLint rules
 - `.prettierrc` - Prettier formatting rules
 - `tailwind.config.ts` - Tailwind CSS configuration
-- `i18n.ts` - Internationalization configuration
+- `i18n/request.ts` - Internationalization (locale resolution, message loading); no root `middleware.ts` (next-intl uses request config)
 
 ### Key Source Files
 
-- `app/[locale]/layout.tsx` - Root layout with i18n provider
+- `app/[locale]/layout.tsx` - Root layout with NextIntlClientProvider
 - `app/[locale]/page.tsx` - Homepage
+- `app/[locale]/blog/[slug]/page.tsx` and `BlogPostClient.tsx` - Blog post (server + client)
 - `data/info.data.tsx` - Project data and expertise definitions
 - `constants/testimonials.constants.ts` - Testimonial data
+- `constants/design-tokens.constants.ts` - Breakpoints, colors (aligned with Tailwind/SCSS)
 - `metadata/metadata.utils.ts` - SEO metadata generation
-- `navigation.ts` - Route definitions for i18n
+- `navigation.ts` - Localized route pathnames and navigation (Link, useRouter, usePathname)
+- `locale.types.ts` - Locale type used across app and i18n
 
 ## 🧪 Testing & Quality
 
@@ -173,9 +180,9 @@ The repomix file is organized with:
 
 When upgrading any dependency (next, react, next-intl, framer-motion, swiper, etc.):
 
-1. **Before upgrading:** run `bun run test` and confirm all tests pass.
-2. **Upgrade** the library (e.g. `bun add next@latest`).
-3. **After upgrading:** run `bun run test` again. If all pass, the upgrade is likely safe; if something fails, the new version probably introduced a breaking change.
+1. **Before upgrading:** run `pnpm test` and confirm all tests pass.
+2. **Upgrade** the library (e.g. `pnpm add next@latest`).
+3. **After upgrading:** run `pnpm test` again. If all pass, the upgrade is likely safe; if something fails, the new version probably introduced a breaking change.
 
 Smoke tests live in `__tests__/smoke/smoke.test.tsx` and cover core components and key libraries. For Swiper and the language selector, do a quick manual check in the browser after upgrading.
 
@@ -187,28 +194,29 @@ The project uses Husky with lint-staged to automatically run:
 - Prettier (`prettier --write`)
 - TypeScript type checking (`tsc --noEmit`)
 
-**Note:** Bun can run scripts directly, so you can use `bun run <script>` or just `bun <script>` for most commands.
+**Note:** Use `pnpm run <script>` or `pnpm <script>` for all commands.
 
 ### Available Scripts
 
-- `bun dev` - Start development server with Turbo
-- `bun build` - Build for production
-- `bun start` - Start production server
-- `bun test` - Run all tests (unit + smoke); **run before/after upgrades to feel safe**
-- `bun run test:watch` - Run tests in watch mode
-- `bun lint` - Run ESLint
-- `bun lint:fix` - Auto-fix ESLint issues
-- `bun lint:strict` - Lint all files strictly
-- `bun prettier` - Format all files with Prettier
-- `bun type-check` - Type check without emitting files
-- `bun analyze` - Analyze bundle size
-- `bun knip` - Find unused code
+- `pnpm dev` - Start development server (webpack)
+- `pnpm build` - Build for production (includes image pipeline; uses Turbopack)
+- `pnpm build:ci` - Build for CI (no image optimization)
+- `pnpm start` - Start production server
+- `pnpm test` - Run all tests (unit + smoke); **run before/after upgrades to feel safe**
+- `pnpm run test:watch` - Run tests in watch mode
+- `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Auto-fix ESLint issues
+- `pnpm lint:strict` - Lint all files strictly
+- `pnpm prettier` - Format all files with Prettier
+- `pnpm type-check` - Type check without emitting files
+- `pnpm analyze` - Analyze bundle size
+- `pnpm knip` - Find unused code
 
 ### CI/CD
 
-- CI configuration: `.github/workflows/ci.yml`
-- Always run `bun lint`, `bun prettier`, and `bun type-check` before committing
-- Ensure `bun build` passes before pushing
+- CI configuration: `.github/workflows/ci.yml` (uses pnpm, Node 22)
+- Always run `pnpm lint`, `pnpm prettier`, and `pnpm type-check` before committing
+- Ensure `pnpm build` (or `pnpm build:ci` in CI) passes before pushing
 - All CI checks must pass before merging
 
 ## 🔄 Common Workflows
@@ -247,9 +255,9 @@ The project uses Husky with lint-staged to automatically run:
 ### Commit Guidelines
 
 - Title format: `[personal-website] <Title>` or `[andre-website] <Title>`
-- Always run `bun lint`, `bun prettier`, and `bun type-check` before committing
+- Always run `pnpm lint`, `pnpm prettier`, and `pnpm type-check` before committing
 - The project uses Husky with lint-staged, which will automatically run checks on pre-commit
-- Ensure the build passes: `bun build` before pushing
+- Ensure the build passes: `pnpm build` before pushing
 - The commit should pass all CI checks (ESLint, Prettier, TypeScript, Build) before merging
 
 ### Code Style
@@ -266,7 +274,7 @@ The project uses Husky with lint-staged to automatically run:
 ### Common Issues
 
 - **Import errors**: Check `tsconfig.json` paths configuration
-- **i18n not working**: Verify locale is set correctly in route
+- **i18n not working**: Verify locale in route; check `i18n/request.ts` and `navigation.ts` for pathnames
 - **Styles not applying**: Check if using CSS modules correctly
 - **Build failures**: Run `bun type-check` to identify TypeScript errors
 - **Lint errors**: Run `bun lint:fix` to auto-fix issues

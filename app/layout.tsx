@@ -4,11 +4,9 @@ import { ReactNode } from 'react';
 
 type Props = {
   children: ReactNode;
-  params: {
-    locale: Locale;
-  };
+  params: Promise<{ locale: Locale }>;
 };
 
-export default function RootLayout({ children }: Props) {
+export default async function RootLayout({ children }: Props) {
   return children;
 }

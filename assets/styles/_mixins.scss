@@ -6,8 +6,10 @@ $colors: (
   dark: #161616,
 );
 
+@use 'sass:map';
+
 @function color($color-name) {
-  @return map-get($colors, $color-name);
+  @return map.get($colors, $color-name);
 }
 
 //Sizes
@@ -25,11 +27,4 @@ $breaking-point-xxs: 330px;
   &:hover {
     transform: scale($size);
   }
-}
-
-//Exports
-:export {
-  dark: color(dark);
-  white: color(white);
-  mobile_breaking_point: $breaking-point-sm;
 }
