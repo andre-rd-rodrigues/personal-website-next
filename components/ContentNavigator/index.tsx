@@ -15,7 +15,7 @@ const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
 
   useEffect(() => {
     if (!headings || headings.length === 0) return;
-    setActiveHeadingId(headings[0].id);
+    queueMicrotask(() => setActiveHeadingId(headings[0].id));
   }, [headings]);
 
   useEffect(() => {

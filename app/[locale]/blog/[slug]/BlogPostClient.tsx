@@ -50,7 +50,7 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
   useEffect(() => {
     if (post?.content?.html) {
       const { html, headings } = injectHeaderIds(content?.html);
-      setEnhancedPost({ html, headings, ...post });
+      queueMicrotask(() => setEnhancedPost({ html, headings, ...post }));
     }
   }, [post, content]);
 
