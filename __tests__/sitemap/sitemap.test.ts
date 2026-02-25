@@ -1,6 +1,10 @@
 import sitemap from '@/app/sitemap';
 import { locales } from '@/navigation';
 
+function escapeRegExp(str: string): string {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 const host = 'https://www.andrerodrigo.com';
 
 describe('sitemap', () => {
@@ -43,7 +47,7 @@ describe('sitemap', () => {
       for (const locale of locales) {
         expect(entry.alternates.languages).toHaveProperty(locale);
         expect(entry.alternates.languages[locale]).toMatch(
-          new RegExp(`^${host}/${locale}`),
+          new RegExp(`^${escapeRegExp(host)}/${locale}`),
         );
       }
     }
