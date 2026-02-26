@@ -2,8 +2,10 @@ import { WEBSITE_DOMAIN_URL } from '@/constants/common.constants';
 import { Metadata } from 'next';
 import { headers } from 'next/headers';
 
-export const getMetadata = (options: Metadata & { src?: string }): Metadata => {
-  const headersList = headers();
+export const getMetadata = async (
+  options: Metadata & { src?: string },
+): Promise<Metadata> => {
+  const headersList = await headers();
   const pathname = headersList.get('x-invoke-path') || '';
 
   return {

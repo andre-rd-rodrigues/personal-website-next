@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './navigator.module.scss';
-import { Heading } from '@/app/[locale]/blog/[slug]/page';
+import type { Heading } from '@/app/[locale]/blog/[slug]/BlogPostClient';
 
 interface ContentNavigatorProps {
   headings: Heading[];
@@ -15,7 +15,7 @@ const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
 
   useEffect(() => {
     if (!headings || headings.length === 0) return;
-    setActiveHeadingId(headings[0].id);
+    queueMicrotask(() => setActiveHeadingId(headings[0].id));
   }, [headings]);
 
   useEffect(() => {

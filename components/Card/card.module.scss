@@ -1,4 +1,4 @@
-@import 'assets/styles/mixins';
+@use '../../assets/styles/_mixins';
 
 .container {
   img {
@@ -13,7 +13,7 @@
   }
 }
 
-@media only screen and (max-width: $breaking-point-sm) {
+@media only screen and (max-width: mixins.$breaking-point-sm) {
   .container {
     img {
       filter: grayscale(0%);

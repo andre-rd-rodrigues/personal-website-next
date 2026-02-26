@@ -3,30 +3,30 @@ import {
   underlineSlideInVariant,
 } from '@/motion/motionVariants';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { type ElementType } from 'react';
 
 interface SectionTitleProps {
   title: string;
-  tag?: keyof JSX.IntrinsicElements;
+  tag?: ElementType;
   color?: 'white' | 'primary';
 }
 
 const SectionTitle: React.FC<SectionTitleProps> = ({
   title,
-  tag = 'h1',
+  tag: Tag = 'h1',
   color = 'primary',
 }) => {
-  const Tag = tag as keyof JSX.IntrinsicElements;
+  const Component = Tag;
 
   return (
     <div className="relative mb-5">
       <motion.div variants={fadeInSlideLeftVariant}>
-        <Tag
+        <Component
           className={`pb-2 text-xl font-light uppercase tracking-wider`}
           style={{ color: `var(--color-${color})` }}
         >
           {title}
-        </Tag>
+        </Component>
       </motion.div>
       <motion.div
         className="absolute bottom-0 left-0"

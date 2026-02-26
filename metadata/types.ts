@@ -1,5 +1,5 @@
 import { Locale } from '@/locale.types';
 
 export type MetadataProps = {
-  params: { locale: Locale; slug?: string };
+  params: Promise<{ locale: Locale; slug?: string }>;
 };

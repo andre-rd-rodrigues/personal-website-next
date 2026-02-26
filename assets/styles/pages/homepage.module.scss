@@ -1,5 +1,5 @@
-@import 'assets/styles/mixins';
+@use '../_mixins';
 
 .homepage {
-  background-color: color(dark);
+  background-color: mixins.color(dark);
 }

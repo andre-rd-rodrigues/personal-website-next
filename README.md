@@ -8,16 +8,18 @@ Welcome to my website! A modern and responsive web application built with Next.j
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js >=22
-- Bun >=1.0.0 ([Install Bun](https://bun.sh/docs/installation))
+- pnpm >=9 ([Install pnpm](https://pnpm.io/installation))
 
 ### Installation
+
 ```bash
 # Install dependencies
-bun install
+pnpm install
 
 # Start development server
-bun dev
+pnpm dev
 ```
 
 ## 📂 Project Structure
@@ -25,62 +27,46 @@ bun dev
 Here is a brief overview of the project's structure:
 
 ```
-plaintextCopiar código
-/your-project
-│
-├── /app
-│   ├── /[locale]
-│   │   ├── [...not_found]
-│   │   ├── /about
-│   │   ├── /contacts
-│   │   ├── /portfolio
-│   │   │   ├── /apps
-│   │   │   ├── /websites
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── globals.scss
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   ├── not-found.tsx
-│   │   └── sitemap.ts
-│
-├── /assets
-│
-├── /components
-│   ├── /Button.Text
-│   ├── /AppHead
-│   ├── /AppLink
-│   ├── /Navbar
-│   ├── /ContactBanner
-│   ├── /ExperienceTimeline
-│   ├── /Footer
-│   ├── /GalleryShowcase
-│   ├── /ImageZoomEffect
-│   ├── /LanguageSelector
-│   ├── /PageContainer
-│   ├── /ProjectDisplay
-│   ├── /TechStack
-│   ├── /Testimonials
-│   └── /WorkCategory
-│
-├── /constants
-│
-├── /data
-│
-├── /helpers
-│
-├── /hooks
-│
-├── /messages
-│
-├── /metadata
-│   ├── index.ts
-│   └── metadata-utils.ts
-│
-├── package.json
-├── README.md
-└── next.config.js
+/app
+  └── /[locale]           # Internationalized routes (en, pt)
+        ├── /about
+        ├── /blog
+        │   └── /[slug]
+        ├── /contacts
+        ├── /portfolio
+        │   ├── /web
+        │   ├── /mobile
+        │   ├── layout.tsx
+        │   └── page.tsx
+        ├── /pricing
+        ├── /faqs
+        ├── globals.scss
+        ├── layout.tsx
+        ├── page.tsx
+        └── not-found.tsx
 
+/assets
+/components
+  ├── /Button, /Card, /Navbar, /Footer
+  ├── /ContactBanner, /ImageZoomEffect, /LanguageSelector
+  ├── /PageContainer, /ProjectDisplay, /Testimonials
+  └── ...
+
+/constants
+/data
+/hooks
+/i18n                    # next-intl config (request.ts)
+/messages                # en.json, pt.json
+/metadata                # metadata.utils.ts, types.ts
+/motion
+/public
+/utils
+
+navigation.ts            # Localized routes (next-intl)
+locale.types.ts
+next.config.mjs
+package.json
+README.md
 ```
 
 ## 🚀 Pages
@@ -95,25 +81,28 @@ plaintextCopiar código
 
 Here are some of the key libraries used in this project:
 
-- **@iconify/react**: For a wide range of icons.
-- **@typeform/embed-react**: For embedding Typeform forms.
-- **react-ga4**: Analytics integration with Google.
-- **framer-motion**: For animations.
-- **next-intl**: For internationalization support.
-- **next-seo**: For SEO management.
-- **react-slick**: For carousels and sliders.
-- **react-vertical-timeline-component**: For creating vertical timelines.
-- **sass**: For styling.
+- **Next.js 16** – React framework with App Router.
+- **next-intl** – Internationalization (en/pt).
+- **framer-motion** – Animations.
+- **@iconify/react** – Icons.
+- **@typeform/embed-react** – Typeform embeds.
+- **chart.js & react-chartjs-2** – Charts.
+- **swiper** – Touch sliders/carousels.
+- **graphql & graphql-request** – GraphQL client for blog.
+- **sass** – Styling; **Tailwind CSS** – Utility CSS.
+- **@vercel/speed-insights** – Performance monitoring.
 
 ## 🛠️ Scripts
 
-Run scripts using Bun:
-- `bun dev`: Runs the development server.
-- `bun build`: Builds the application for production.
-- `bun start`: Starts the production server.
-- `bun lint`: Runs the linter.
-- `bun prod`: Builds and starts the production server.
-- `bun type-check`: Type checks the codebase.
-- `bun prettier`: Formats code with Prettier.
+Run scripts using pnpm:
+
+- `pnpm dev` – Development server.
+- `pnpm build` – Production build (includes image pipeline).
+- `pnpm build:ci` – CI build (no image optimization).
+- `pnpm start` – Production server.
+- `pnpm lint` / `pnpm lint:fix` – ESLint.
+- `pnpm type-check` – TypeScript check.
+- `pnpm prettier` – Format code.
+- `pnpm test` – Run tests.
 
 Enjoy exploring my website and discovering my projects!

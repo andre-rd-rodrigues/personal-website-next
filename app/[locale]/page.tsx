@@ -34,7 +34,6 @@ import Image from 'next/image';
 const Home = () => {
   const t = useTranslations();
   const { getTranslationsArray } = useTranslation();
-  console.log('runtime', process.versions.bun);
   return (
     <>
       {/* Title */}

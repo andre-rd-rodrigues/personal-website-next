@@ -27,7 +27,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    setIsOpen(false);
+    queueMicrotask(() => setIsOpen(false));
   }, [pathname]);
 
   useEffect(() => {

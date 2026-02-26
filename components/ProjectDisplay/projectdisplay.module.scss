@@ -1,4 +1,4 @@
-@import 'assets/styles/mixins';
+@use '../../assets/styles/_mixins';
 
 .container {
   min-width: 350px;
@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (max-width: $breaking-point-sm) {
+@media screen and (max-width: mixins.$breaking-point-sm) {
   .container {
     min-width: 100%;
   }

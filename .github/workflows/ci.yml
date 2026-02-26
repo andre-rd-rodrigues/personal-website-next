@@ -11,40 +11,39 @@ jobs:
     runs-on: ubuntu-22.04 # Using a specific version of Ubuntu for consistency
     strategy:
       matrix:
-        node-version: [18.17] # Adjust the Node.js version as needed
+        node-version: [22] # Adjust the Node.js version as needed
 
     steps:
       - uses: actions/checkout@v4
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
 
-      - name: Install Bun
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-        # Installs the latest version of Bun
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-        # Sets up Node.js (Bun handles its own caching)
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: bun install
-        # Installs dependencies using Bun
+        run: pnpm install
 
       - name: Run ESLint
-        run: bun run lint
+        run: pnpm run lint
         # Add your specific lint script from package.json
 
       - name: Run Prettier Check
-        run: bun run prettier
+        run: pnpm run prettier
         # Ensure your package.json has a script that runs Prettier in check mode
 
+      - name: Run Tests
+        run: pnpm run test
+
       - name: Run TypeScript Compiler
-        run: bun run type-check
+        run: pnpm run type-check
         # Ensure your package.json has a script that runs the TypeScript compiler with --noEmit
 
       - name: Build
-        run: bun run build:ci
+        run: pnpm run build:ci
         # Build without image optimization (images should be pre-optimized and committed)

@@ -14,7 +14,7 @@ const Cookies = () => {
   useEffect(() => {
     const cookies = parseCookies();
     if (!cookies.analyticsAccepted) {
-      setIsVisible(true);
+      queueMicrotask(() => setIsVisible(true));
     }
   }, []);
 
@@ -35,7 +35,7 @@ const Cookies = () => {
           animate="visible"
           exit="exit"
           whileInView="visible"
-          className="bg-dark fixed bottom-0 right-0 z-10 m-1 max-w-md rounded-lg border-gray-800 bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
+          className="fixed bottom-0 right-0 z-10 m-1 max-w-md rounded-lg border-gray-800 bg-dark bg-opacity-50 p-4 text-white shadow-lg backdrop-blur-[20px]"
         >
           <div className="flex items-center gap-2">
             <motion.span animate={slowRotateVariant}>

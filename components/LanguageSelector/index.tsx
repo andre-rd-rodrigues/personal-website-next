@@ -17,7 +17,11 @@ const LanguageSelector = ({ className }: { className?: string }) => {
   return (
     <div className={`${styles.container} ${className}`}>
       <Icon icon="ph:globe-thin" fontSize={30} color="white" />
-      <select onChange={handleChangeLanguage} value={locale}>
+      <select
+        onChange={handleChangeLanguage}
+        value={locale}
+        suppressHydrationWarning
+      >
         <option value="en">English</option>
         <option value="pt">Português</option>
       </select>

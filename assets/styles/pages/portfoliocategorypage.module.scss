@@ -1,4 +1,4 @@
-@import 'assets/styles/mixins';
+@use '../_mixins';
 
 .container {
   min-height: 100vh;
@@ -50,7 +50,7 @@
 }
 
 //Responsive
-@media only screen and (max-width: $breaking-point-md) {
+@media only screen and (max-width: mixins.$breaking-point-md) {
   .showCaseContainer {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,6 @@
 import React, { ReactNode, CSSProperties, useEffect, useState } from 'react';
 import styles from './imagezoomeffect.module.scss';
+import { MOBILE_BREAKPOINT } from '@/constants/design-tokens.constants';
 
 interface ImageZoomEffectProps {
   src: string;
@@ -25,7 +26,7 @@ const ImageZoomEffect: React.FC<ImageZoomEffectProps> = ({
   useEffect(() => {
     // Check window width after component mounts
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 576);
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
     };
 
     handleResize(); // Check initially
