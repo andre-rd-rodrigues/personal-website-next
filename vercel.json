@@ -42,7 +42,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors 'none'; default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://*.iconify.design https://*.cdn.hygraph.com;"
+          "value": "frame-ancestors 'none'; default-src 'self'; frame-src 'self' https://*.typeform.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.google.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.typeform.com https://*.vercel-insights.com https://vitals.vercel-insights.com https://*.iconify.design https://*.cdn.hygraph.com;"
         }
       ]
     }
