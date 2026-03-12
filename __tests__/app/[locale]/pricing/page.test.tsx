@@ -32,9 +32,9 @@ describe('Pricing page', () => {
 
   it('renders pack prices and descriptions', () => {
     renderWithIntl(<Pricing />);
-    expect(screen.getAllByText('800 €').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('1,400 €').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('2,100 €').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('504 €').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('882 €').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('1323 €').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Custom quote').length).toBeGreaterThan(0);
     expect(
       screen.getAllByText('Perfect for small businesses and personal websites.')

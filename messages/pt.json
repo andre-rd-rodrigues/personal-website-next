@@ -159,7 +159,7 @@
       "subtitle": "Cada projeto é único e o preço final pode variar de acordo com as necessidades do teu negócio.",
       "starter": {
         "title": "Presença Online",
-        "price": "800 €",
+        "price": "504 €",
         "subtitle": "*Valor de referência",
         "description": "Perfeito para pequenas empresas e sites pessoais.",
         "features": [
@@ -174,7 +174,7 @@
       },
       "professional": {
         "title": "Profissional",
-        "price": "1.400 €",
+        "price": "882 €",
         "subtitle": "*Valor de referência",
         "description": "Ideal para empresas com foco na expansão e conteúdo dinâmico.",
         "features": [
@@ -188,7 +188,7 @@
       },
       "premium": {
         "title": "Premium",
-        "price": "2.100 €",
+        "price": "1323 €",
         "subtitle": "*Valor de referência",
         "description": "Essencial para uma presença online ativa.",
         "features": [
