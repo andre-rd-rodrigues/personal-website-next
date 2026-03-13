@@ -70,14 +70,17 @@ const ButtonMinimal: FC<ButtonProps> = ({
 }) => {
   return (
     <motion.button
-      style={{ width: fullWidth ? '100%' : 'auto' }}
-      className="relative inline-flex overflow-hidden rounded-full border border-gray-400 p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+      style={{
+        width: fullWidth ? '100%' : 'auto',
+        transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      }}
+      className="group relative inline-flex overflow-hidden rounded-full border border-gray-400 px-5 py-3 transition-transform duration-300 hover:scale-[1.03] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       onClick={onClick}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 0.95 }}
     >
+      <span className="absolute inset-0 translate-y-full rounded-full bg-white/10 transition-transform duration-500 ease-out group-hover:translate-y-0" />
       <span
-        className="inline-flex cursor-pointer items-center justify-center gap-3 p-3 px-5 font-light text-white backdrop-blur-3xl"
+        className="relative z-10 inline-flex cursor-pointer items-center justify-center gap-3 font-light text-white"
         style={{
           fontFamily: 'var(--font-jost)',
           width: fullWidth ? '100%' : 'auto',
