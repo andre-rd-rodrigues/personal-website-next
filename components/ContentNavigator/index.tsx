@@ -1,17 +1,44 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import { Icon } from '@iconify/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import styles from './navigator.module.scss';
 import type { Heading } from '@/app/[locale]/blog/[slug]/BlogPostClient';
 
+type HeadingGroup = {
+  parent: Heading;
+  children: Heading[];
+};
+
 interface ContentNavigatorProps {
   headings: Heading[];
+}
+
+function buildHeadingTree(headings: Heading[]): HeadingGroup[] {
+  const groups: HeadingGroup[] = [];
+  let current: HeadingGroup | null = null;
+
+  for (const heading of headings) {
+    if (heading.level <= 2) {
+      current = { parent: heading, children: [] };
+      groups.push(current);
+    } else if (current) {
+      current.children.push(heading);
+    } else {
+      current = { parent: heading, children: [] };
+      groups.push(current);
+    }
+  }
+
+  return groups;
 }
 
 const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [activeHeadingId, setActiveHeadingId] = useState<string | undefined>();
+  const [expandedGroupId, setExpandedGroupId] = useState<string | null>(null);
   const modalRef = useRef<HTMLDivElement | null>(null);
+
+  const groups = useMemo(() => buildHeadingTree(headings), [headings]);
 
   useEffect(() => {
     if (!headings || headings.length === 0) return;
@@ -45,6 +72,10 @@ const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
     setIsVisible((prevState) => !prevState);
   };
 
+  const toggleGroup = (groupId: string) => {
+    setExpandedGroupId((prev) => (prev === groupId ? null : groupId));
+  };
+
   const handleNavigation = (id: string) => {
     const element = document.getElementById(id);
 
@@ -63,6 +94,10 @@ const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
     setActiveHeadingId(id);
   };
 
+  const isGroupActive = (group: HeadingGroup) =>
+    activeHeadingId === group.parent.id ||
+    group.children.some((c) => c.id === activeHeadingId);
+
   return (
     <div className={styles.container}>
       <AnimatePresence>
@@ -76,15 +111,57 @@ const ContentNavigator: React.FC<ContentNavigatorProps> = ({ headings }) => {
             className={styles.picker}
           >
             <ul className={styles.list}>
-              {headings.map((heading) => (
-                <li
-                  key={heading.id}
-                  className={`${styles.listItem} ${heading.id === activeHeadingId ? styles.active : ''}`}
-                  onClick={() => handleNavigation(heading.id)}
-                >
-                  {heading.text}
-                </li>
-              ))}
+              {groups.map((group) => {
+                const hasChildren = group.children.length > 0;
+                const isExpanded = expandedGroupId === group.parent.id;
+                const groupActive = isGroupActive(group);
+
+                return (
+                  <li key={group.parent.id} className={styles.group}>
+                    <div
+                      className={`${styles.parentItem} ${groupActive ? styles.active : ''}`}
+                    >
+                      <span
+                        className={styles.parentText}
+                        onClick={() => handleNavigation(group.parent.id)}
+                      >
+                        {group.parent.text}
+                      </span>
+                      {hasChildren && (
+                        <button
+                          className={`${styles.chevron} ${isExpanded ? styles.chevronOpen : ''}`}
+                          onClick={() => toggleGroup(group.parent.id)}
+                          aria-label="Toggle subsections"
+                        >
+                          <Icon icon="mdi:chevron-down" />
+                        </button>
+                      )}
+                    </div>
+
+                    <AnimatePresence>
+                      {hasChildren && isExpanded && (
+                        <motion.ul
+                          className={styles.childList}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2, ease: 'easeInOut' }}
+                        >
+                          {group.children.map((child) => (
+                            <li
+                              key={child.id}
+                              className={`${styles.childItem} ${child.id === activeHeadingId ? styles.active : ''}`}
+                              onClick={() => handleNavigation(child.id)}
+                            >
+                              {child.text}
+                            </li>
+                          ))}
+                        </motion.ul>
+                      )}
+                    </AnimatePresence>
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
         )}

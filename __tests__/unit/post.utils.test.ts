@@ -21,10 +21,12 @@ describe('injectHeaderIds', () => {
     expect(result.headings[0]).toEqual({
       text: 'Hello World',
       id: 'hello-world-0',
+      level: 1,
     });
     expect(result.headings[1]).toEqual({
       text: 'Section One',
       id: 'section-one-1',
+      level: 2,
     });
     expect(result.html).toContain('id="hello-world-0"');
     expect(result.html).toContain('id="section-one-1"');

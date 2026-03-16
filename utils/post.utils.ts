@@ -22,9 +22,10 @@ export function injectHeaderIds(htmlContent?: string) {
 function extractHeadings(htmlContent: string) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(htmlContent, 'text/html');
-  const headings = doc.querySelectorAll('h1, h2, h3'); // adjust selector as needed
+  const headings = doc.querySelectorAll('h1, h2, h3');
   return Array.from(headings).map((h) => ({
     text: h.textContent,
-    id: h.id, // ensure headings in the HTML have IDs
+    id: h.id,
+    level: parseInt(h.tagName.substring(1), 10),
   }));
 }

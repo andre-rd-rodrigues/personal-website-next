@@ -11,7 +11,7 @@ jest.mock('@/navigation', () =>
 jest.mock('@/utils/post.utils', () => ({
   injectHeaderIds: (html: string) => ({
     html,
-    headings: [{ text: 'Hello', id: 'hello-0' }],
+    headings: [{ text: 'Hello', id: 'hello-0', level: 2 }],
   }),
 }));
 

@@ -16,7 +16,7 @@ import { useEffect, useState } from 'react';
 import { injectHeaderIds } from '@/utils/post.utils';
 import ContentNavigator from '@/components/ContentNavigator';
 
-export type Heading = { text: string | null; id: string };
+export type Heading = { text: string | null; id: string; level: number };
 
 type BlogPostClientProps = {
   post: Post;
