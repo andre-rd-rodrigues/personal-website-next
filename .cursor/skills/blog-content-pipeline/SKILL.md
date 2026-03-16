@@ -273,6 +273,6 @@ After writing files:
 ## Important Notes
 
 - **Always ask for user approval** after Phase 1 before writing articles.
-- **Cover images**: Note that `coverImage` references `/images/blog/{slug}.webp`. Remind the user to add a cover image at `public/images/blog/{slug}.webp` or use an existing one as placeholder.
+- **Cover images**: `coverImage` references `/images/blog/{slug}.webp`. After file creation, offer to generate a cover image prompt for the user.
 - **Existing articles**: Check `content/blog/en/` before writing to avoid duplicate topics.
 - **Consistent voice**: Read 1-2 existing articles to match the writing style before drafting.
