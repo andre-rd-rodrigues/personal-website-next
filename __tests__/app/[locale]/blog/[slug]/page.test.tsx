@@ -1,17 +1,21 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
-import { mockUseFetch } from '@/__tests__/__mocks__/useFetch.mock';
 import { mockBack } from '@/__tests__/__mocks__/navigation.mock';
 import BlogPostClient from '@/app/[locale]/blog/[slug]/BlogPostClient';
+import type { Post } from '@/types/blog';
 
-jest.mock('@/hooks/useFetch', () =>
-  require('@/__tests__/__mocks__/useFetch.mock').mockUseFetchModule(),
-);
 jest.mock('@/navigation', () =>
   require('@/__tests__/__mocks__/navigation.mock').mockNavigationModule(),
 );
 
-const postWithContent = {
+jest.mock('@/utils/post.utils', () => ({
+  injectHeaderIds: (html: string) => ({
+    html,
+    headings: [{ text: 'Hello', id: 'hello-0' }],
+  }),
+}));
+
+const postWithContent: Post = {
   id: '1',
   title: 'Test Post Title',
   slug: 'test-post',
@@ -23,52 +27,19 @@ const postWithContent = {
   coverPhoto: { url: 'https://example.com/cover.jpg' },
 };
 
-describe('Blog post page', () => {
+describe('Blog post (BlogPostClient)', () => {
   beforeEach(() => {
-    mockUseFetch.mockReset();
     mockBack.mockClear();
   });
 
   it('renders without throwing', () => {
-    mockUseFetch.mockReturnValue({
-      data: { posts: [postWithContent] },
-      loading: false,
-      error: null,
-    });
     expect(() =>
-      renderWithIntl(<BlogPostClient slug="test-post" />),
+      renderWithIntl(<BlogPostClient post={postWithContent} />),
     ).not.toThrow();
   });
 
-  it('shows loading state when useFetch is loading', () => {
-    mockUseFetch.mockReturnValue({
-      data: null,
-      loading: true,
-      error: null,
-    });
-    renderWithIntl(<BlogPostClient slug="test-post" />);
-    expect(screen.getByText('Loading article...')).toBeInTheDocument();
-  });
-
-  it('shows error when useFetch returns error', () => {
-    mockUseFetch.mockReturnValue({
-      data: null,
-      loading: false,
-      error: new Error('Failed'),
-    });
-    renderWithIntl(<BlogPostClient slug="test-post" />);
-    expect(
-      screen.getByRole('heading', { name: /something went wrong/i, level: 2 }),
-    ).toBeInTheDocument();
-  });
-
-  it('renders post title and content when data is returned', async () => {
-    mockUseFetch.mockReturnValue({
-      data: { posts: [postWithContent] },
-      loading: false,
-      error: null,
-    });
-    renderWithIntl(<BlogPostClient slug="test-post" />);
+  it('renders post title and content when post is passed', async () => {
+    renderWithIntl(<BlogPostClient post={postWithContent} />);
     await screen.findByRole('heading', { name: 'Test Post Title', level: 1 });
     expect(screen.getByText('Body text')).toBeInTheDocument();
   });

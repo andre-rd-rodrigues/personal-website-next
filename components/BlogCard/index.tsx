@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardBody, CardContainer, CardItem } from '../ui/3d-card';
 import Image from 'next/image';
-import { Post } from '@/app/[locale]/blog/page';
+import type { Post } from '@/types/blog';
 import Button from '../Button';
 import { useTranslations } from 'next-intl';
 import ICONS from '@/constants/icons.constants';

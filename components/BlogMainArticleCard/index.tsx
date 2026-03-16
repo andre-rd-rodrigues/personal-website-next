@@ -1,4 +1,4 @@
-import { Post } from '@/app/[locale]/blog/page';
+import type { Post } from '@/types/blog';
 import ICONS from '@/constants/icons.constants';
 import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
