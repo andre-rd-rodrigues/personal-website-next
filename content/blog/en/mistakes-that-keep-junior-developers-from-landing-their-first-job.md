@@ -5,7 +5,7 @@ publishedDate: '2026-03-16'
 description: 'Avoid these 8 common mistakes that silently sabotage junior developer job searches. Practical, honest advice to help you stand out and land your first role.'
 isTopPick: false
 slug: mistakes-that-keep-junior-developers-from-landing-their-first-job
-coverImage: /images/blog/mistakes-that-keep-junior-developers-from-landing-their-first-job.webp
+coverImage: https://images.unsplash.com/photo-1740339638513-28243c9665de?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 Landing your **first developer job** has never been easy, but the current market has made it genuinely harder. Entry-level postings have dropped significantly over the past few years, and the roles that do exist attract hundreds of applicants. If you've been applying consistently and hearing nothing back, there's a good chance you're making one of these mistakes without realizing it.
