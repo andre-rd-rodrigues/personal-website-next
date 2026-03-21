@@ -8,8 +8,8 @@
   },
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "pnpm run build:images && next build --webpack",
+    "dev": "next dev --turbopack",
+    "build": "pnpm run build:images && next build --turbopack",
     "build:ci": "next build",
     "build:images": "pnpm run tinypng && bash scripts/convert-webp.sh",
     "start": "next start",
