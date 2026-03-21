@@ -3,7 +3,7 @@ title: 'Comece a Sua Jornada como Web Developer: Recursos Online Gratuitos para 
 category: Carreira
 publishedDate: '2023-01-30'
 description: 'Inicie a sua jornada e comece o seu percurso como web developer com a nossa lista de recursos online gratuitos! Aprenda o básico do desenvolvimento web e comece a criar os seus próprios sites hoje.'
-isTopPick: true
+isTopPick: false
 slug: start-your-journey-to-becoming-a-web-developer-free-online-resources-to-learn-from
 coverImage: /images/blog/start-your-journey-to-becoming-a-web-developer.webp
 ---

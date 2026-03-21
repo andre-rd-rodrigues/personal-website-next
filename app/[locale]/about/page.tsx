@@ -62,7 +62,7 @@ const About = () => {
               <div className="relative h-full w-full">
                 <Image
                   src="/images/profile.webp"
-                  alt="André Rodrigues - Web Developer"
+                  alt="André Rodrigo - Web Developer"
                   className="rounded-2xl object-cover"
                   fill
                 />

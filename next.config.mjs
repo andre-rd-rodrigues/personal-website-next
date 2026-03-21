@@ -41,7 +41,7 @@ const nextConfig = {
 };
 
 // Compose the plugins
-let config = withNextIntl(withBundleAnalyzerPlugin(nextConfig));
+const config = withNextIntl(withBundleAnalyzerPlugin(nextConfig));
 
 // Next.js 16: next-intl adds experimental.turbo which is no longer valid (Turbopack is default)
 if (config.experimental?.turbo !== undefined) {

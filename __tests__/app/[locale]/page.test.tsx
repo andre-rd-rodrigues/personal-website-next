@@ -53,7 +53,7 @@ describe('Home page', () => {
     renderWithIntl(<Home />);
     expect(
       screen.getByText(
-        /my name is André Rodrigues and I'm a Software Engineer/i,
+        /my name is André Rodrigo[\s\S]*Senior Software Engineer/i,
       ),
     ).toBeInTheDocument();
   });

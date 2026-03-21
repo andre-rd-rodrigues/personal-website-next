@@ -1,4 +1,4 @@
-# 👨🏽‍💻 Website - André Rodrigues
+# 👨🏽‍💻 Website - André Rodrigo
 
 Welcome to my website! A modern and responsive web application built with Next.js! This project showcases essential pages such as About, Contacts, and Portfolio, where I display my web and mobile projects.
 

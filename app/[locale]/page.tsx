@@ -52,7 +52,7 @@ const Home = () => {
                 width={200}
                 height={200}
                 className="mx-auto md:mx-0"
-                alt="André Rodrigo - Software Engineer"
+                alt="André Rodrigo - Senior Software Engineer"
               />
             </motion.span>
             <motion.h1
@@ -82,7 +82,7 @@ const Home = () => {
             <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
               <Image
                 src="/images/profile_home.webp"
-                alt="André Rodrigues"
+                alt="André Rodrigo"
                 width={600}
                 height={600}
                 className="h-full w-full rounded-2xl object-cover"

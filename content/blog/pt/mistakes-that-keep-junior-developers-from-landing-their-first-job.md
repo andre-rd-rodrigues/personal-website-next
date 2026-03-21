@@ -5,7 +5,7 @@ publishedDate: '2026-03-16'
 description: 'Evite estes 8 erros comuns que sabotam silenciosamente a procura de emprego de programadores juniores. Conselhos práticos e honestos para se destacar e conseguir o primeiro emprego.'
 isTopPick: false
 slug: mistakes-that-keep-junior-developers-from-landing-their-first-job
-coverImage: /images/blog/mistakes-that-keep-junior-developers-from-landing-their-first-job.webp
+coverImage: https://images.unsplash.com/photo-1740339638513-28243c9665de?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 Conseguir o seu **primeiro emprego como programador** nunca foi fácil, mas o mercado atual tornou-o genuinamente mais difícil. As ofertas para posições de entrada diminuíram significativamente nos últimos anos, e as vagas que existem atraem centenas de candidatos. Se tem estado a candidatar-se de forma consistente e não recebe respostas, há uma boa probabilidade de estar a cometer um destes erros sem se aperceber.

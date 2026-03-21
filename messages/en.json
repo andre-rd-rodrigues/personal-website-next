@@ -19,7 +19,7 @@
     },
     "about": {
       "title": "About me",
-      "description": "Hi there!\nMy name is André Rodrigues, a Senior Software Engineer with over 5 years of experience.\nOver the years, I’ve had the privilege of leading teams and partnering with clients across various industries, helping them turn their business goals into high-impact digital solutions. My goal? To create real value for companies and clients by integrating modern cybersecurity practices, process automation, and AI-driven tools that optimize operations and enhance results."
+      "description": "Hi! My name is André Rodrigo. I’m a Senior Software Engineer with over 5 years of experience turning strategic vision into high-performance digital solutions.\n\nI specialize in building bespoke technology — from institutional websites and e-commerce to complex applications — always with one focus: your business profitability. Through automation and AI consulting, I optimize your internal processes so your operation can scale safely."
     },
 
     "rebrand_hero": {
@@ -77,7 +77,7 @@
 
         "Memory": "Prepare to enhance your cognitive skills with the Memory Game web app, a thrilling challenge against friends or the computer. This app features a sophisticated design with multiplayer options and a scoreboard to track your victories.",
 
-        "pipedrive": "Pipedrive is a leading SaaS company in Estonia, where I worked in automation as a Software Engineer using modern tools. I contributed within a multifaceted international environment to improve the interface and optimize internal systems.",
+        "pipedrive": "Pipedrive is a leading SaaS company in Estonia, where I worked in automation as a Senior Software Engineer using modern tools. I contributed within a multifaceted international environment to improve the interface and optimize internal systems.",
 
         "navro": "While working with Navro, I utilized my front-end development skills in React and Next.js to help businesses seamlessly expand into foreign markets. My work focused on improving the user interface of their global payments infrastructure, management tasks and building internal automation tools, providing a unified API experience through modern web technologies.",
 
@@ -85,7 +85,7 @@
 
         "probely": "At Probely, as a Software Engineer, I developed solutions and features leveraging React, TypeScript, Next.js, and other technologies to boost vulnerability scanning and raise the security standards of web applications and APIs used by hundreds of companies.",
 
-        "snyk": "At Snyk, I co-led the Frontend team, guiding planning, release processes, and cross-team initiatives. I led the team through four successful delivery cycles during a major rebranding and a full UI overhaul — we rebuilt the application from the ground up and launched two months ahead of schedule."
+        "snyk": "At Snyk, as a Senior Software Engineer, I co-led the Frontend team for almost a year, guiding planning, release management, working alongside management and cross-team feature initiatives. Currently I'm working in automation projects powered by AI tools to enhance developers productivity and improve the user experience."
       }
     },
     "mobile": {
@@ -154,6 +154,21 @@
     "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
     "title": "Pricing",
     "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
+    "fastTrack": {
+      "badge": "Fast track",
+      "headline": "Your original website, ready in 5 days.",
+      "price": "550 €",
+      "subtitle": "*Base price for agile projects",
+      "description": "Need to go live now? This pack is designed for anyone who can’t wait months. I use an advanced workflow with AI support to deliver a site that looks sharp, stays secure, and is optimized for sales — without the delays of traditional development.",
+      "includes": [
+        "High-conversion landing page or essential structure (up to 3 sections/pages)",
+        "Live within 5 business days",
+        "Responsive, mobile-first design with performance tuned for speed",
+        "Core SEO setup so you can be found on Google",
+        "Quick conversion optimization consulting included"
+      ],
+      "scopeNote": "Ideal for institutional sites, portfolios, or marketing landing pages."
+    },
     "packs": {
       "title": "Packages",
       "description": "Choose a package that grows with your business — fast, secure, and tailored to your needs.",
@@ -312,7 +327,7 @@
     },
     "anaJardim": {
       "details": "Psychologist",
-      "review": "I'm so grateful for André Rodrigues' exceptional work on my psychology website. His care for my vision and professional expertise shine through the minimalist design. A true collaborator who brought my perspectives to life seamlessly. Thank you, André!"
+      "review": "I'm so grateful for André Rodrigo' exceptional work on my psychology website. His care for my vision and professional expertise shine through the minimalist design. A true collaborator who brought my perspectives to life seamlessly. Thank you, André!"
     },
 
     "vlad": {
@@ -352,7 +367,7 @@
       },
       {
         "question": "Why don’t you use tools like WordPress?",
-        "answer": "I prefer not to use WordPress because its templates are quite limited and, in my experience, they don’t offer the flexibility needed for a truly customized website. I work with modern solutions that ensure better performance, scalability, and simpler maintenance. I also have access to high-quality plugins and tools at better cost-benefit, resulting in a more efficient site tailored to your business — without relying on generic systems."
+        "answer": "It depends on the project. For many institutional or marketing sites I prefer not to use WordPress — its templates are often limiting and, in my experience, they don’t offer the flexibility needed for a truly custom build. I default to modern stacks for better performance, scalability, and simpler maintenance. For e-commerce, Shopify is often the right fit: it’s built for selling, payments, and day-to-day store management, so I use it when the project calls for that."
       },
       {
         "question": "Can I edit the content on my website later?",

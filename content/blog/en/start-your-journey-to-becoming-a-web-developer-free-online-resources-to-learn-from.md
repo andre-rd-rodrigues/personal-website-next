@@ -3,7 +3,7 @@ title: 'Start Your Journey to Becoming a Web Developer: Free Online Resources to
 category: Career
 publishedDate: '2023-01-30'
 description: 'Begin your journey and start your web developer career path with our list of free online resources! Learn the basics of web development and start building your own websites today.'
-isTopPick: true
+isTopPick: false
 slug: start-your-journey-to-becoming-a-web-developer-free-online-resources-to-learn-from
 coverImage: /images/blog/start-your-journey-to-becoming-a-web-developer.webp
 ---

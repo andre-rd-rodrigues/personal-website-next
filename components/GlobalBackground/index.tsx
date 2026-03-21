@@ -8,7 +8,7 @@ const GlobalBackground = () => {
     <div className={styles.container}>
       <Image
         src="/images/gauze.webp"
-        alt="André Rodrigues"
+        alt="André Rodrigo"
         fill
         className="object-cover"
       />

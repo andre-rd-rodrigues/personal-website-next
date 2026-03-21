@@ -43,6 +43,41 @@ const Pricing = () => {
         </motion.p>
       </div>
 
+      <motion.div
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="border-[var(--color-primary)]/40 mx-auto mt-12 max-w-3xl rounded-2xl border bg-gray-800/20 p-6 text-left backdrop-blur-2xl md:p-8"
+      >
+        <p className="mb-2 text-sm font-medium uppercase tracking-wide text-[var(--color-primary)]">
+          {t('fastTrack.badge')}
+        </p>
+        <h3 className="mb-3 text-2xl font-light text-white md:text-3xl">
+          {t('fastTrack.headline')}
+        </h3>
+        <div className="mb-4">
+          <div className="text-3xl font-medium text-white">
+            {t('fastTrack.price')}
+          </div>
+          <div className="text-sm text-white/60">{t('fastTrack.subtitle')}</div>
+        </div>
+        <p className="mb-4 text-white/80">{t('fastTrack.description')}</p>
+        <ul className="mb-4 space-y-2 text-white/90">
+          {getTranslationsArray('pricing.fastTrack.includes').map(
+            (item, idx) => (
+              <li key={idx} className="flex items-start">
+                <span className="mr-2 shrink-0 text-lg text-[var(--color-primary)]">
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ),
+          )}
+        </ul>
+        <p className="text-sm text-white/60">{t('fastTrack.scopeNote')}</p>
+      </motion.div>
+
       {/* Pricing Table - Desktop */}
       <motion.div
         variants={fadeInVariant}

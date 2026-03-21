@@ -12,14 +12,14 @@
   },
 
   "homepage": {
-    "subtitle": "Criação de websites, apps e automação",
+    "subtitle": "Criação de websites, apps e automação com IA",
     "cta": "Portfólio",
     "form": {
       "button": "Contactar"
     },
     "about": {
       "title": "Sobre mim",
-      "description": "Olá!\nO meu nome é André Rodrigues, sou Senior Software Engineer com mais de 5 anos de experiência.\nAo longo deste percurso, tive o privilégio de liderar equipas e colaborar com clientes de diversos setores, ajudando-os a transformar os seus objetivos de negócio em soluções digitais de alto impacto.\nO meu objetivo? Criar valor real para empresas e clientes, integrando práticas modernas de cibersegurança, automação de processos e ferramentas baseadas em IA que otimizam operações e potenciam resultados."
+      "description": "Olá! O meu nome é André Rodrigo. Sou Engenheiro de Software Sénior com mais de 5 anos de experiência a transformar visão estratégica em soluções digitais de alta performance.\n\nEspecializei-me em desenvolver tecnologia à medida — desde websites institucionais e e-commerce até aplicações complexas — sempre com um foco: a rentabilidade do seu negócio. Através de consultoria em automação e IA, otimizo os seus processos internos para garantir que a sua operação escala com segurança."
     },
 
     "rebrand_hero": {
@@ -153,6 +153,21 @@
     "heroTitle": "Soluções seguras, rápidas e personalizadas para crescerem contigo.",
     "title": "Preçário",
 
+    "fastTrack": {
+      "badge": "Fast track",
+      "headline": "O seu website original, pronto em 5 dias.",
+      "price": "550 €",
+      "subtitle": "*Valor base para projetos rápidos",
+      "description": "Precisa de lançar já? Este pack foi desenhado para quem não pode esperar meses. Com recurso a ferramentas modernas de IA, criamos um website estético, seguro e otimizado para vendas — sem as demoras do desenvolvimento tradicional.",
+      "includes": [
+        "Website institucional ou de portfólio (até 3 secções/páginas)",
+        "Lançamento online em 5 dias úteis",
+        "Design responsivo 'Mobile-First' e performance otimizada",
+        "Configuração base de SEO para ser encontrado no Google",
+        "Consultoria rápida de otimização de conversão incluída"
+      ],
+      "scopeNote": "Ideal para websites institucionais, portfólios ou landing pages para marketing."
+    },
     "packs": {
       "title": "Pacotes",
       "description": "Escolhe um pacote que cresce com o teu negócio — rápido, seguro e feito à medida",
@@ -403,7 +418,7 @@
       },
       {
         "question": "Usas ferramentas de criação como o WordPress?",
-        "answer": "Prefiro não usar WordPress porque os templates são bastante limitados e, pela minha experiência, não oferecem a flexibilidade necessária para criar um site verdadeiramente personalizado. Além disso, consigo integrar soluções modernas que garantem melhor desempenho, escalabilidade e uma manutenção mais simples."
+        "answer": "Depende do projeto. Para muitos sites institucionais ou de marketing, prefiro não usar WordPress — os templates costumam ser limitados e, pela minha experiência, não oferecem a flexibilidade necessária para um site verdadeiramente à medida. Recorro a stacks modernas para melhor desempenho, escalabilidade e manutenção mais simples. Para e-commerce, o Shopify costuma ser a escolha certa: está pensado para vendas, pagamentos e gestão quotidiana da loja, por isso utilizo-o quando o projeto o exige."
       },
       {
         "question": "Posso editar o conteúdo do meu site posteriormente?",
