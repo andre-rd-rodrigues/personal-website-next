@@ -73,7 +73,7 @@
 
         "barber": "Barber Studio's website, a client draft project, showcases modern barbering artistry. It features a sleek design that reflects the precision of barbering, supported by strategic SEO to enhance its market presence and attract discerning clients.",
 
-        "it": "IT Studios' website, crafted for a client, is designed to attract potential partners and clients by highlighting creative solutions and services through engaging content and strategic SEO.",
+        "paixaomed": "Paixão Med is the website for Dr. Catarina Paixão, a practitioner of Integrative Functional Medicine. The site features an elegant, calming design that reflects her holistic approach to healthcare, with smooth animations and a warm visual identity that conveys trust and professionalism.",
 
         "Memory": "Prepare to enhance your cognitive skills with the Memory Game web app, a thrilling challenge against friends or the computer. This app features a sophisticated design with multiplayer options and a scoreboard to track your victories.",
 
@@ -85,7 +85,9 @@
 
         "probely": "At Probely, as a Software Engineer, I developed solutions and features leveraging React, TypeScript, Next.js, and other technologies to boost vulnerability scanning and raise the security standards of web applications and APIs used by hundreds of companies.",
 
-        "snyk": "At Snyk, as a Senior Software Engineer, I co-led the Frontend team for almost a year, guiding planning, release management, working alongside management and cross-team feature initiatives. Currently I'm working in automation projects powered by AI tools to enhance developers productivity and improve the user experience."
+        "snyk": "At Snyk, I took on responsibility for leading the engineering team, driving planning and cross-team initiatives, release workflows, task allocation, conducting interviews, and digital transformation through AI-powered tooling.",
+
+        "rot": "Reign of Titans is a strategic online card game set in the mythical world of Ereo. I developed the institutional website, delivering an immersive experience with cinematic video backgrounds, smooth animations, and a bold visual identity that matches the game's epic universe."
       }
     },
     "mobile": {

@@ -105,18 +105,29 @@ const PROJECTS = {
       isFreelance: true,
     },
     {
-      imgSrc: '/images/websites/itstudios.webp',
-      label: 'IT Studios',
-      description: 'web.projects.it',
-      video: '/videos/it.webm',
+      imgSrc: '/images/websites/paixaomed.webp',
+      label: 'Paixão Med',
+      description: 'web.projects.paixaomed',
+      isFreelance: true,
       techStack: {
-        frontend: ['HTML5', 'CSS3', 'JavaScript'],
+        frontend: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
       },
       href: {
-        website: 'https://itstudios.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/it-studios',
+        website: 'https://www.paixaomed.com/',
       },
+    },
+    {
+      imgSrc: '/images/websites/rot.webp',
+      label: 'Reign of Titans',
+      video: '/videos/rot.webm',
+      description: 'web.projects.rot',
       isFreelance: true,
+      techStack: {
+        frontend: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
+      },
+      href: {
+        website: 'https://reignoftitans.gg/',
+      },
     },
     {
       isFreelance: false,
@@ -263,20 +274,6 @@ const PROJECTS = {
       href: {
         website: 'https://primetravel-162f2.web.app/',
         github: 'https://github.com/andre-rd-rodrigues/primetravel-app',
-      },
-    },
-    {
-      imgSrc: '/images/websites/curiosity.webp',
-      label: 'Personal Blog',
-      description: 'web.projects.blog',
-      isFreelance: true,
-      techStack: {
-        frontend: ['Next.js', 'GraphQL', 'HTML5', 'CSS3', 'SCSS'],
-        database: ['Hygraph'],
-      },
-      href: {
-        website: 'https://blog.andrerodrigo.com',
-        github: 'https://github.com/andre-rd-rodrigues/curiositygem',
       },
     },
     {
@@ -436,19 +433,6 @@ const PROJECTS = {
         github: 'https://github.com/andre-rd-rodrigues/bb-website',
       },
     },
-
-    {
-      imgSrc: '/images/websites/itstudios.webp',
-      label: 'IT Studios',
-      description: 'web.projects.it',
-      techStack: {
-        frontend: ['HTML5', 'CSS3', 'JavaScript'],
-      },
-      href: {
-        website: 'https://itstudios.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/it-studios',
-      },
-    },
   ],
 };
 
@@ -470,11 +454,11 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     colSpan: 1,
   },
   {
-    title: 'IT Studios',
-    src: '/videos/it.webm',
+    title: 'Paixão Med',
+    src: '/videos/barber.webm',
     ctaText: 'View Project',
-    ctaLink: 'https://itstudios.netlify.app/',
-    content: (t) => <p>{t('projects.web.projects.it')}</p>,
+    ctaLink: 'https://www.paixaomed.com/',
+    content: (t) => <p>{t('projects.web.projects.paixaomed')}</p>,
     colSpan: 1,
   },
   {
@@ -486,11 +470,11 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     colSpan: 2,
   },
   {
-    title: 'Navro',
-    src: '/videos/barber.webm',
+    title: 'Snyk',
+    src: '/videos/snyk.webm',
     ctaText: 'View Project',
-    ctaLink: 'https://www.navro.com',
-    content: (t) => <p>{t('projects.web.projects.navro')}</p>,
+    ctaLink: 'https://www.snyk.io',
+    content: (t) => <p>{t('projects.web.projects.snyk')}</p>,
     colSpan: 1,
   },
 ];
