@@ -1,5 +1,9 @@
 import type { Config } from 'tailwindcss';
-import { BREAKPOINTS, COLORS } from './constants/design-tokens.constants';
+
+// Values from constants/design-tokens.constants.ts, inlined to avoid
+// Turbopack module-resolution issues with tailwind.config.ts.
+const BREAKPOINTS = { sm: 576, md: 768, lg: 992, xl: 1200, xxl: 1400 };
+const COLORS = { white: '#ffffff', dark: '#161616' };
 
 const config: Config = {
   content: [

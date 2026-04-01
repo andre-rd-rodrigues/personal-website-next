@@ -1,6 +1,6 @@
 ---
 title: '8 Erros Que o Impedem de Conseguir o Seu Primeiro Emprego Como Programador'
-category: Tecnologia
+category: Carreira
 publishedDate: '2026-03-16'
 description: 'Evite estes 8 erros comuns que sabotam silenciosamente a procura de emprego de programadores juniores. Conselhos práticos e honestos para se destacar e conseguir o primeiro emprego.'
 isTopPick: false

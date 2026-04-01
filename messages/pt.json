@@ -481,5 +481,10 @@
     "blogDescription": "Dicas, ideias e conteúdos sobre desenvolvimento web, freelance e tecnologia.",
     "pricingDescription": "Consulta os pacotes de serviços e preços para criação de websites e soluções digitais personalizadas.",
     "faqsDescription": "Respostas às perguntas mais frequentes sobre os meus serviços, processos e formas de trabalho."
+  },
+  "blogFilters": {
+    "all": "Todos",
+    "searchPlaceholder": "Pesquisar artigos...",
+    "noResults": "Nenhum artigo encontrado."
   }
 }

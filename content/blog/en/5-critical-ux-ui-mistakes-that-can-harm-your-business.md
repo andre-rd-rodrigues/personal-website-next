@@ -1,6 +1,6 @@
 ---
 title: '5 Critical UX/UI Mistakes That Can Harm Your Business'
-category: Technology
+category: UX/UI
 publishedDate: '2024-01-14'
 description: 'Explore 5 critical UX/UI mistakes that can harm your business and learn how a front-end developer specializing in UX/UI design can help you avoid these pitfalls, enhance user experience, and drive growth.'
 isTopPick: false

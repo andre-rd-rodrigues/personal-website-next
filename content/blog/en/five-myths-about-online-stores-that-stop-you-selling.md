@@ -1,6 +1,6 @@
 ---
 title: '5 Online Store Myths That Stop You Selling (Fixes Inside)'
-category: Technology
+category: E-Commerce
 publishedDate: '2026-03-17'
 description: 'Debunking common online store myths for beginners: traffic, perfection, cost, and social-only selling—plus what to do instead so you can start confidently.'
 isTopPick: false

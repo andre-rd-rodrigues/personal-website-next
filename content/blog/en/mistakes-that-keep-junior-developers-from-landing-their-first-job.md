@@ -1,6 +1,6 @@
 ---
 title: '8 Mistakes Keeping You From Your First Developer Job'
-category: Technology
+category: Career
 publishedDate: '2026-03-16'
 description: 'Avoid these 8 common mistakes that silently sabotage junior developer job searches. Practical, honest advice to help you stand out and land your first role.'
 isTopPick: false

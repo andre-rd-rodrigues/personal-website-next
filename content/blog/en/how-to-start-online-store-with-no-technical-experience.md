@@ -1,6 +1,6 @@
 ---
 title: 'Start an Online Store With No Tech Skills: What to Do First'
-category: Technology
+category: E-Commerce
 publishedDate: '2026-03-12'
 description: 'Step-by-step for non-technical first-time sellers: what to prepare before you build, DIY vs hiring help, and how to launch without drowning in tools or jargon.'
 isTopPick: false

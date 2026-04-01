@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
-import { locales, localePrefix, pathnames } from './navigation';
+import { routing } from './i18n/routing';
 import { NextRequest, NextResponse } from 'next/server';
 
 function setUrlHeader(request: NextRequest) {
@@ -14,12 +14,7 @@ function setUrlHeader(request: NextRequest) {
   });
 }
 
-const intlMiddleware = createMiddleware({
-  defaultLocale: 'pt',
-  localePrefix,
-  locales,
-  pathnames,
-});
+const intlMiddleware = createMiddleware(routing);
 
 export default async function proxy(request: NextRequest) {
   const response = setUrlHeader(request);

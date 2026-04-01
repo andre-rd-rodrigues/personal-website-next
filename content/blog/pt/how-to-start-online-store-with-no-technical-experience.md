@@ -1,6 +1,6 @@
 ---
 title: 'Como começar uma loja online sem competências técnicas: o que fazer primeiro'
-category: Tecnologia
+category: E-Commerce
 publishedDate: '2026-03-12'
 description: 'Passo a passo para vendedores principiantes sem formação técnica: o que preparar antes de construir, DIY vs ajuda profissional e como lançar sem se afogar em ferramentas.'
 isTopPick: false

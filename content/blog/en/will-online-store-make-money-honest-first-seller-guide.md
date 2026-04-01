@@ -1,6 +1,6 @@
 ---
 title: 'Will an Online Store Make Money? Honest Guide for Beginners'
-category: Technology
+category: E-Commerce
 publishedDate: '2026-03-10'
 description: 'First-time seller guide: how online stores actually drive revenue, when a shop is worth it, and what to validate before you invest—without hype or jargon.'
 isTopPick: false

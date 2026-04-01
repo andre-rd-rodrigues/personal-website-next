@@ -1,6 +1,6 @@
 ---
 title: '5 mitos sobre lojas online que o impedem de vender (e soluções práticas)'
-category: Tecnologia
+category: E-Commerce
 publishedDate: '2026-03-17'
 description: 'Desmistificar crenças comuns sobre lojas online para principiantes: tráfego, perfeição, custos e vender só nas redes — e o que fazer em vez disso para avançar com confiança.'
 isTopPick: false

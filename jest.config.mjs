@@ -1,7 +1,6 @@
 import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
-  // Path to your Next.js app to load next.config.mjs and .env files
   dir: './',
 });
 
@@ -11,7 +10,6 @@ const config = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
-    // Use a single React copy in tests to avoid "Invalid hook call" / "older version of React"
     '^react$': '<rootDir>/node_modules/react/index.js',
     '^react-dom$': '<rootDir>/node_modules/react-dom/index.js',
   },
@@ -31,4 +29,17 @@ const config = {
   ],
 };
 
-export default createJestConfig(config);
+async function jestConfig() {
+  const nextConfig = await createJestConfig(config)();
+  // next-intl v4 is ESM-only; its transitive deps (@formatjs/*, use-intl,
+  // intl-messageformat) are too. Override the transform-ignore patterns so
+  // Jest transforms them via SWC instead of choking on bare `export`.
+  nextConfig.transformIgnorePatterns = [
+    '/node_modules/(?!.pnpm)/',
+    '/node_modules/.pnpm/(?!(next-intl|use-intl|intl-messageformat|@formatjs\\+|geist))',
+    '^.+\\.module\\.(css|sass|scss)$',
+  ];
+  return nextConfig;
+}
+
+export default jestConfig;

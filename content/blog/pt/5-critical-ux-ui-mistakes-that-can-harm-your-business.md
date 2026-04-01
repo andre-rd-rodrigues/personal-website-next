@@ -1,6 +1,6 @@
 ---
 title: '5 Erros Críticos de UX/UI Que Podem Prejudicar o Seu Negócio'
-category: Tecnologia
+category: UX/UI
 publishedDate: '2024-01-14'
 description: 'Descubra 5 erros críticos de UX/UI que podem prejudicar o seu negócio e aprenda como um programador front-end especializado pode ajudá-lo a evitá-los, melhorar a experiência do utilizador e impulsionar o crescimento.'
 isTopPick: false

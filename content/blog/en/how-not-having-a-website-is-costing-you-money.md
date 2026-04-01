@@ -1,6 +1,6 @@
 ---
 title: 'How Not Having a Website Is Costing You Money'
-category: Technology
+category: Business
 publishedDate: '2024-01-12'
 description: "By embracing the digital age, investing in a professional website, and partnering with a specialized developer, you're setting the stage for long-term success, growth, and profitability."
 isTopPick: true

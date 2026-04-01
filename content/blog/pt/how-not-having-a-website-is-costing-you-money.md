@@ -1,6 +1,6 @@
 ---
 title: 'Como a Falta de um Website Está a Custar Dinheiro ao Seu Negócio'
-category: Tecnologia
+category: Negócios
 publishedDate: '2024-01-12'
 description: 'Ao abraçar a era digital, investir num website profissional e colaborar com um programador especializado, está a preparar o terreno para o sucesso, crescimento e rentabilidade a longo prazo.'
 isTopPick: true

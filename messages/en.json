@@ -475,5 +475,10 @@
     "blogDescription": "Tips, insights, and content about web development, freelancing, and technology.",
     "pricingDescription": "Check available service packages and pricing for website development and custom digital solutions.",
     "faqsDescription": "Answers to frequently asked questions about my services, process, and how I work."
+  },
+  "blogFilters": {
+    "all": "All",
+    "searchPlaceholder": "Search articles...",
+    "noResults": "No articles found."
   }
 }

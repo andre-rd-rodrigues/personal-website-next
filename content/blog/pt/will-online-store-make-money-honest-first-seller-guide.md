@@ -1,6 +1,6 @@
 ---
 title: 'Uma loja online vai dar-me dinheiro? Guia honesto para principiantes'
-category: Tecnologia
+category: E-Commerce
 publishedDate: '2026-03-10'
 description: 'Guia para quem vende pela primeira vez: como é que uma loja online gera receita, quando compensa investir e o que validar antes de gastar—sem exageros nem jargão.'
 isTopPick: false

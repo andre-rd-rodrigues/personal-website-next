@@ -1,6 +1,6 @@
 ---
 title: 'Transformar Cliques em Receitas: O Poder do SEO para Aumentar as Vendas'
-category: Tecnologia
+category: SEO
 publishedDate: '2024-01-13'
 description: 'Melhore a sua estratégia de SEO e aumente as receitas do seu negócio. Contacte-me para soluções personalizadas e dar o próximo passo para o crescimento digital.'
 isTopPick: false
