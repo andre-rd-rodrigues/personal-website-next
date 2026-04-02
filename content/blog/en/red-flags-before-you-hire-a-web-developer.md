@@ -77,7 +77,7 @@ The right developer will not just tolerate these questions — they will expect 
 
 **How much should I expect to pay for a professional website?**
 
-A professionally built custom website for a small business typically ranges from £2,000 to £10,000 depending on scope, complexity, and the developer's experience. Anything significantly below that range for a custom build is almost always cutting corners somewhere — and you will usually pay for it in rework within 18 months.
+A professionally built custom website for a small business typically ranges from £2,000 to £10,000 depending on scope, complexity, and the developer's experience. Simpler projects (e.g. a landing page) can naturally range from £600 to £800. Anything significantly below that range for a custom build is almost always cutting corners somewhere — and you will usually pay for it in rework within 18 months.
 
 **What questions should I ask before hiring a web developer?**
 

@@ -77,7 +77,7 @@ O desenvolvedor certo não se irá apenas tolerar estas perguntas — irá esper
 
 **Quanto devo esperar pagar por um site profissional?**
 
-Um site personalizado construído profissionalmente para uma pequena empresa situa-se tipicamente entre 2 000 € e 10 000 €, dependendo do âmbito, complexidade e experiência do desenvolvedor. Qualquer valor significativamente abaixo desse intervalo para um projeto personalizado está quase sempre a cortar caminho algures — e normalmente irá pagar por isso em retrabalho dentro de 18 meses.
+Um site personalizado construído para uma empresa situa-se tipicamente entre 2 000 € e 10 000 €, dependendo do âmbito, complexidade e experiência do desenvolvedor. Naturalmente que projetos mais simples (e.g. landing page) podem rondar entre 600 € a 800 €. No entanto, qualquer valor significativamente abaixo desse intervalo para um projeto personalizado está quase sempre a cortar caminho algures — e normalmente irá pagar por isso em retrabalho dentro de 18 meses.
 
 **Que perguntas devo fazer antes de contratar um desenvolvedor web?**
 
