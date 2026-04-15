@@ -14,7 +14,7 @@ Project guidance for AI assistants. See also **AGENTS.md** for stack, scripts, a
 
 - **Voice:** Professional, direct, technically credible — **confident without cold corporate tone**.
 - **Tone:** Clear CTAs, benefit-oriented copy (speed, performance, outcomes where stated in `messages/`).
-- **Three words (inferred):** *Modern · Credible · Approachable*
+- **Three words (inferred):** _Modern · Credible · Approachable_
 
 ### Aesthetic Direction
 
@@ -44,6 +44,6 @@ Project guidance for AI assistants. See also **AGENTS.md** for stack, scripts, a
 
 If any of the below should change, edit this section or tell the assistant in chat:
 
-- **Brand personality** — Are the three words (*Modern · Credible · Approachable*) right?
+- **Brand personality** — Are the three words (_Modern · Credible · Approachable_) right?
 - **References / anti-references** — Any sites or products that should explicitly inspire or **avoid**?
 - **Accessibility** — Target **WCAG 2.1 AA** (or stricter) as a formal requirement?
