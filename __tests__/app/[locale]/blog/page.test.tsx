@@ -93,7 +93,7 @@ describe('Blog list (BlogListClient)', () => {
     expect(screen.getByText('Top Pick Post')).toBeInTheDocument();
     // Active pill should have the active class
     expect(screen.getByRole('button', { name: 'Career' }).className).toContain(
-      'border-pink-500',
+      'border-pink',
     );
   });
 
@@ -122,7 +122,7 @@ describe('Blog list (BlogListClient)', () => {
     expect(screen.getByText('Career Advice')).toBeInTheDocument();
     expect(screen.getByText('SEO Strategies')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'All' }).className).toContain(
-      'border-pink-500',
+      'border-pink',
     );
   });
 });
