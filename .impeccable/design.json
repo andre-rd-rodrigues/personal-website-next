@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-24T15:00:00.000Z",
+  "title": "Design System: André Rodrigo",
+  "extensions": {
+    "colorMeta": {
+      "signature-pink": {
+        "role": "primary",
+        "displayName": "Signature Pink",
+        "canonical": "oklch(72% 0.24 350)",
+        "tonalRamp": [
+          "oklch(20% 0.12 350)",
+          "oklch(30% 0.16 350)",
+          "oklch(40% 0.20 350)",
+          "oklch(50% 0.24 350)",
+          "oklch(60% 0.25 350)",
+          "oklch(72% 0.24 350)",
+          "oklch(83% 0.16 350)",
+          "oklch(93% 0.07 350)"
+        ]
+      },
+      "violet-current": {
+        "role": "secondary",
+        "displayName": "Violet Current",
+        "canonical": "oklch(64% 0.18 285)",
+        "tonalRamp": [
+          "oklch(20% 0.10 285)",
+          "oklch(30% 0.13 285)",
+          "oklch(40% 0.16 285)",
+          "oklch(50% 0.18 285)",
+          "oklch(58% 0.19 285)",
+          "oklch(64% 0.18 285)",
+          "oklch(78% 0.12 285)",
+          "oklch(92% 0.05 285)"
+        ]
+      },
+      "deep-violet": {
+        "role": "secondary",
+        "displayName": "Deep Violet",
+        "canonical": "oklch(56% 0.20 278)",
+        "tonalRamp": [
+          "oklch(18% 0.10 278)",
+          "oklch(28% 0.14 278)",
+          "oklch(38% 0.17 278)",
+          "oklch(48% 0.20 278)",
+          "oklch(56% 0.20 278)",
+          "oklch(66% 0.17 278)",
+          "oklch(80% 0.11 278)",
+          "oklch(92% 0.05 278)"
+        ]
+      },
+      "ink-black": {
+        "role": "neutral",
+        "displayName": "Ink Black",
+        "canonical": "oklch(18% 0 0)",
+        "tonalRamp": [
+          "oklch(14% 0 0)",
+          "oklch(22% 0 0)",
+          "oklch(32% 0 0)",
+          "oklch(44% 0 0)",
+          "oklch(56% 0 0)",
+          "oklch(68% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "glass-slate": {
+        "role": "neutral",
+        "displayName": "Glass Slate",
+        "canonical": "oklch(30% 0.03 250)",
+        "tonalRamp": [
+          "oklch(20% 0.02 250)",
+          "oklch(28% 0.03 250)",
+          "oklch(36% 0.035 250)",
+          "oklch(46% 0.04 250)",
+          "oklch(56% 0.04 250)",
+          "oklch(68% 0.035 250)",
+          "oklch(82% 0.025 250)",
+          "oklch(95% 0.01 250)"
+        ]
+      },
+      "muted-silver": {
+        "role": "neutral",
+        "displayName": "Muted Silver",
+        "canonical": "oklch(85% 0.01 250)",
+        "tonalRamp": [
+          "oklch(30% 0.01 250)",
+          "oklch(42% 0.01 250)",
+          "oklch(54% 0.01 250)",
+          "oklch(64% 0.01 250)",
+          "oklch(74% 0.01 250)",
+          "oklch(85% 0.01 250)",
+          "oklch(92% 0.008 250)",
+          "oklch(97% 0.004 250)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Pure White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(60% 0 0)",
+          "oklch(68% 0 0)",
+          "oklch(76% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(88% 0 0)",
+          "oklch(93% 0 0)",
+          "oklch(97% 0 0)",
+          "oklch(100% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero and page-defining statements. Jost 300 on --fs-xxl."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section headings; light weight, large scale."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles and sub-section headers."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Long-form copy; measure ~65-75ch, line-height 1.6."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Nav links and small UI; slight tracking."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-ambient",
+        "value": "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)",
+        "purpose": "The single resting shadow, lifting the floating nav pill off scrolling content (Tailwind shadow-lg)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-smooth",
+        "value": "cubic-bezier(0.35, 0, 0, 1)",
+        "purpose": "The signature easing for reveals and transitions (--ease-smooth)."
+      },
+      {
+        "name": "blur-reveal",
+        "value": "opacity + filter: blur(20px) -> blur(0), 1.5s",
+        "purpose": "Hero/logo entrance; content fades in from a soft blur."
+      },
+      {
+        "name": "fade-slide",
+        "value": "opacity + translateY(60px) -> 0, 1s ease-smooth",
+        "purpose": "Default scroll-triggered section reveal."
+      },
+      {
+        "name": "stagger",
+        "value": "staggerChildren: 0.2",
+        "purpose": "Sequences children within a container reveal."
+      },
+      {
+        "name": "spin-border",
+        "value": "rotate 0 -> 360deg, 2s linear infinite",
+        "purpose": "The primary button's rotating conic-gradient pink border."
+      }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "380px" },
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "992px" },
+      { "name": "xl", "value": "1200px" },
+      { "name": "xxl", "value": "1400px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button (Spinning Border)",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The signature CTA: solid dark pill wrapped by a rotating conic-gradient pink border. Use for the single primary action on a view.",
+      "html": "<button class=\"ds-btn-primary\"><span class=\"ds-btn-primary__border\" aria-hidden=\"true\"></span><span class=\"ds-btn-primary__inner\">Schedule a call</span></button>",
+      "css": ".ds-btn-primary{position:relative;display:inline-flex;overflow:hidden;border:none;background:transparent;border-radius:9999px;padding:1px;cursor:pointer;transition:transform .2s cubic-bezier(0.35,0,0,1)}.ds-btn-primary__border{position:absolute;inset:-1000%;background:conic-gradient(from 90deg at 50% 50%,transparent 0%,var(--color-primary,#ff56cd) 60%,transparent 100%);animation:ds-spin 2s linear infinite}.ds-btn-primary__inner{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:9999px;background:#0a0a0a;color:#fff;font-family:Jost,sans-serif;font-weight:300;padding:12px 20px;backdrop-filter:blur(40px)}.ds-btn-primary:hover{transform:scale(1.1)}.ds-btn-primary:active{transform:scale(.9)}.ds-btn-primary:focus-visible{outline:2px solid #94a3b8;outline-offset:2px}@keyframes ds-spin{to{transform:rotate(360deg)}}"
+    },
+    {
+      "name": "Minimal Button",
+      "kind": "button",
+      "refersTo": "button-minimal",
+      "description": "The quiet, secondary action: transparent pill with a hairline border and a white fill that slides up on hover.",
+      "html": "<button class=\"ds-btn-minimal\"><span class=\"ds-btn-minimal__fill\" aria-hidden=\"true\"></span><span class=\"ds-btn-minimal__label\">Portfolio</span></button>",
+      "css": ".ds-btn-minimal{position:relative;display:inline-flex;overflow:hidden;border-radius:9999px;border:1px solid #9ca3af;background:transparent;padding:12px 20px;cursor:pointer;transition:transform .3s cubic-bezier(0.25,0.46,0.45,0.94)}.ds-btn-minimal__fill{position:absolute;inset:0;border-radius:9999px;background:rgba(255,255,255,0.1);transform:translateY(100%);transition:transform .5s cubic-bezier(0.35,0,0,1)}.ds-btn-minimal:hover{transform:scale(1.03)}.ds-btn-minimal:hover .ds-btn-minimal__fill{transform:translateY(0)}.ds-btn-minimal__label{position:relative;z-index:1;display:inline-flex;align-items:center;gap:12px;color:#fff;font-family:Jost,sans-serif;font-weight:300}.ds-btn-minimal:focus-visible{outline:2px solid #94a3b8;outline-offset:2px}"
+    },
+    {
+      "name": "Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon",
+      "description": "Icon-only circular action with the same spinning pink border as the primary button.",
+      "html": "<button class=\"ds-btn-icon\" aria-label=\"LinkedIn\"><span class=\"ds-btn-icon__border\" aria-hidden=\"true\"></span><span class=\"ds-btn-icon__inner\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z\"/></svg></span></button>",
+      "css": ".ds-btn-icon{position:relative;display:inline-flex;overflow:hidden;border:none;background:transparent;border-radius:9999px;padding:1px;cursor:pointer;transition:transform .2s cubic-bezier(0.35,0,0,1)}.ds-btn-icon__border{position:absolute;inset:-1000%;background:conic-gradient(from 90deg at 50% 50%,transparent 0%,var(--color-primary,#ff56cd) 60%,transparent 100%);animation:ds-spin 2s linear infinite}.ds-btn-icon__inner{position:relative;display:inline-flex;align-items:center;justify-content:center;border-radius:9999px;background:#0a0a0a;color:#fff;padding:12px;backdrop-filter:blur(40px)}.ds-btn-icon:hover{transform:scale(1.1)}.ds-btn-icon:active{transform:scale(.9)}@keyframes ds-spin{to{transform:rotate(360deg)}}"
+    },
+    {
+      "name": "Glass Card",
+      "kind": "card",
+      "refersTo": "card-glass",
+      "description": "The standard frosted-glass surface: translucent slate tint, backdrop blur, hairline border, generous rounding and padding.",
+      "html": "<div class=\"ds-card-glass\"><h3 class=\"ds-card-glass__title\">Design</h3><p class=\"ds-card-glass__body\">A unique and captivating design, tailored to your business area.</p></div>",
+      "css": ".ds-card-glass{background:rgba(31,41,55,0.1);backdrop-filter:blur(40px);border:1px solid #1f2937;border-radius:16px;padding:48px;color:#fff;font-family:Jost,sans-serif}.ds-card-glass__title{margin:0 0 20px;font-size:2.25rem;font-weight:300;line-height:1.2}.ds-card-glass__body{margin:0;font-size:1.25rem;font-weight:300;line-height:1.6}"
+    },
+    {
+      "name": "Pricing Card",
+      "kind": "card",
+      "refersTo": "card-pricing",
+      "description": "Glass card variant for pricing: title and price set in Signature Pink, features marked with pink check icons.",
+      "html": "<div class=\"ds-card-pricing\"><h2 class=\"ds-card-pricing__title\">Online Presence</h2><p class=\"ds-card-pricing__desc\">Perfect for small businesses and personal websites.</p><p class=\"ds-card-pricing__price\">504 &euro;</p><ul class=\"ds-card-pricing__list\"><li><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg><span>Homepage + up to 3 pages</span></li><li><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg><span>Performance and SEO optimization</span></li></ul></div>",
+      "css": ".ds-card-pricing{background:rgba(31,41,55,0.1);backdrop-filter:blur(40px);border:1px solid #1f2937;border-radius:16px;padding:48px;color:#fff;font-family:Jost,sans-serif}.ds-card-pricing__title{margin:0 0 16px;font-size:1.5rem;font-weight:300;color:var(--color-primary,#ff56cd)}.ds-card-pricing__desc{margin:0;font-size:1rem;font-weight:300;line-height:1.6}.ds-card-pricing__price{margin:28px 0 0;font-size:3rem;font-weight:500;color:var(--color-primary,#ff56cd)}.ds-card-pricing__list{margin:24px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}.ds-card-pricing__list li{display:flex;align-items:flex-start;gap:8px;font-size:1rem;font-weight:300}.ds-card-pricing__list svg{color:var(--color-primary,#ff56cd);flex-shrink:0;margin-top:3px}"
+    },
+    {
+      "name": "Navigation Pill",
+      "kind": "nav",
+      "refersTo": "nav-pill",
+      "description": "Fixed floating navigation: translucent near-black pill with heavy blur and an ambient shadow; active link white, inactive muted silver.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__brand\" href=\"#\">AR</a><div class=\"ds-nav__links\"><a class=\"ds-nav__link ds-nav__link--active\" href=\"#\">Portfolio</a><a class=\"ds-nav__link\" href=\"#\">About</a><a class=\"ds-nav__link\" href=\"#\">Pricing</a><a class=\"ds-nav__link\" href=\"#\">Contacts</a></div></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:40px;height:64px;padding:0 16px;border-radius:9999px;background:rgba(0,0,0,0.1);backdrop-filter:blur(20px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1);font-family:Jost,sans-serif}.ds-nav__brand{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:9999px;background:#0a0a0a;color:#fff;text-decoration:none;font-weight:400}.ds-nav__links{display:flex;align-items:center;gap:4px}.ds-nav__link{padding:8px 12px;border-radius:6px;font-size:1rem;font-weight:400;letter-spacing:0.02em;color:#d1d5db;text-decoration:none;transition:color .3s}.ds-nav__link:hover{color:#fff}.ds-nav__link--active{color:#fff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Neon Atelier",
+    "overview": "A craftsman's workshop rendered in the dark, built in a modern glass style. The surface is a deep, near-black studio (#111111) where the work itself is the light source, and a single magenta signature (#ff56cd) marks the maker's hand. Everything else stays quiet so that emphasis, when it appears, is unmistakable. Modern glass is the defining material, not an occasional decoration: panels, cards, and navigation float as semi-transparent slate layers over the dark ground, softened by backdrop-blur, edged with hairline borders, and generously rounded. Depth is atmospheric, not shadowed, and the blur is what makes the layering read. This is deliberate, restrained glass - clarity and legibility first - never the frosted-everything overload. Type is set in Jost at light weights with airy line-height, so long-form copy stays calm and legible on the glass.",
+    "keyCharacteristics": [
+      "Modern glass as the primary surface language: translucent slate panels with backdrop-blur and hairline borders.",
+      "Dark-first: deep near-black ground, white primary text, magenta used sparingly for emphasis.",
+      "Pill and generously-rounded geometry (rounded-full, rounded-2xl, rounded-3xl).",
+      "Light-weight Jost typography with roomy line-height.",
+      "Purposeful Framer Motion: blur-in reveals, staggered fades, one ease-smooth curve."
+    ],
+    "rules": [
+      {
+        "name": "The One Signature Rule",
+        "body": "Signature Pink appears on <=10% of any screen. It is the maker's mark, not a theme color; if two pink things compete for attention on the same view, one of them is wrong.",
+        "section": "colors"
+      },
+      {
+        "name": "The Glass-Tint Rule",
+        "body": "Surface separation is achieved with a translucent Glass Slate tint plus a hairline border, never with a solid opaque panel. If a panel looks flat and card-like on the dark, add blur and drop the opacity, don't add a shadow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light-Weight Rule",
+        "body": "Headings are light (300), never bold. Hierarchy comes from scale and whitespace. Reaching for weight 600+ to make something pop is prohibited; make it bigger or give it more room instead.",
+        "section": "typography"
+      },
+      {
+        "name": "The Modern Glass Rule",
+        "body": "Every elevated surface is glass, assembled from the same recipe: a translucent Glass Slate fill (~10% opacity), a real backdrop-blur, and a hairline gray-800 border, on generous rounding. This is the house material; a raised surface that isn't glass is off-system.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Blur-Not-Shadow Rule",
+        "body": "Surfaces earn separation through blur, translucency, and a hairline border, not through a dark drop shadow. If a card looks like a 2014 material card, the blur is missing and the shadow is doing work it shouldn't.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Legible-Glass Rule",
+        "body": "Glass serves legibility, never the reverse. Keep enough blur and contrast that text on a glass panel stays readable, and never stack glass on glass until the page turns to mush - restraint is what separates modern glass from the glassmorphism cliche.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do commit to the modern glass style: every elevated surface is a translucent glass panel, not a solid card. It is the primary surface language of the site.",
+      "Do keep the ground deep near-black (#111111) and let white text and crafted glass surfaces carry the design.",
+      "Do reserve Signature Pink (#ff56cd) for a single point of emphasis per view (link, primary CTA, price, active state).",
+      "Do build surfaces from the glass recipe: bg-gray-800/10 + backdrop-blur + hairline gray-800 border, on rounded-2xl/rounded-3xl.",
+      "Do set type in Jost at weights 200-300 and build hierarchy from size and whitespace.",
+      "Do animate with the ease-smooth curve (cubic-bezier(0.35, 0, 0, 1)), whileInView, and staggered children; add a prefers-reduced-motion fallback for heavy reveals.",
+      "Do keep body measure to ~65-75ch and line-height ~1.6 for readable long-form copy on dark."
+    ],
+    "donts": [
+      "Don't produce the generic AI landing page look - Inter on white with cliched purple gradients. This is a named anti-reference.",
+      "Don't produce a cheap template / site-builder aesthetic (generic Wix/Squarespace). The site must never look buildable-in-a-builder.",
+      "Don't replace a glass surface with a flat, opaque panel; solid cards on the dark ground are off-system.",
+      "Don't overload the glass either - no stacking glass on glass, no blur so heavy the content behind turns to mush. Modern glass is restrained and legible, not the glassmorphism cliche.",
+      "Don't use drop shadows to separate surfaces; use blur, translucency, and a hairline border instead.",
+      "Don't bold headings to create emphasis; scale and space do that work.",
+      "Don't let Signature Pink spread across large areas or compete with itself; the accent's power is its scarcity.",
+      "Don't introduce a second geometric sans alongside Jost; contrast only via the serif faces (Blacker / Moniqa).",
+      "Don't break locale parity - English and EU Portuguese must share identical layout, quality, and motion."
+    ]
+  }
+}

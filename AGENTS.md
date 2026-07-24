@@ -276,8 +276,8 @@ The project uses Husky with lint-staged to automatically run:
 - **Import errors**: Check `tsconfig.json` paths configuration
 - **i18n not working**: Verify locale in route; check `i18n/request.ts` and `navigation.ts` for pathnames
 - **Styles not applying**: Check if using CSS modules correctly
-- **Build failures**: Run `bun type-check` to identify TypeScript errors
-- **Lint errors**: Run `bun lint:fix` to auto-fix issues
+- **Build failures**: Run `pnpm type-check` to identify TypeScript errors
+- **Lint errors**: Run `pnpm lint:fix` to auto-fix issues
 
 ### Getting Help
 

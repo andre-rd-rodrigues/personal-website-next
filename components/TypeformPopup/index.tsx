@@ -19,10 +19,10 @@ const TypeformPopupButton = ({
 
   return (
     <PopupButton id={TYPEFORM_ID} size={70}>
-      <span className="relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+      <span className="group relative inline-flex overflow-hidden rounded-full p-[1px] transition-shadow duration-300 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0000_0%,#ff56cd_60%,#0000_100%)]" />
         <span
-          className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full bg-neutral-950 p-3 px-5 font-light text-white backdrop-blur-3xl"
+          className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full border border-white/10 bg-neutral-950/60 p-3 px-5 font-light text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)] backdrop-blur-xl"
           style={{ fontFamily: 'var(--font-jost)' }}
         >
           {icon && <Icon icon={icon} />}
@@ -43,7 +43,7 @@ const TypeformPopupMinimal = ({
   return (
     <PopupButton id={TYPEFORM_ID} size={70}>
       <span
-        className="group relative inline-flex overflow-hidden rounded-full border border-gray-400 px-5 py-3 transition-transform duration-300 hover:scale-[1.03] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        className="group relative inline-flex overflow-hidden rounded-full border border-gray-400/60 bg-white/5 px-5 py-3 backdrop-blur-md transition-[transform,box-shadow,border-color] duration-300 hover:scale-[1.03] hover:border-[#ff56cd]/50 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         style={{
           transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         }}
