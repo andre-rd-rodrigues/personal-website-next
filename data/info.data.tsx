@@ -63,6 +63,20 @@ const PROJECTS = {
   ],
   web: [
     {
+      imgSrc: '/images/websites/filipamarques.webp',
+      label: 'Filipa Marques',
+      video: '/videos/filipamarques.webm',
+      description: 'web.projects.filipaMarques',
+      isFreelance: true,
+      techStack: {
+        frontend: ['Next.js', 'TypeScript', 'TailwindCSS'],
+        backend: ['Integrations'],
+      },
+      href: {
+        website: 'https://www.filipamarques.com/',
+      },
+    },
+    {
       imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Barbizani',
       video: '/videos/bb.webm',
@@ -87,20 +101,6 @@ const PROJECTS = {
       href: {
         website: 'https://acarolinajardim.com',
         github: 'https://github.com/andre-rd-rodrigues/acarolinajardim',
-      },
-      isFreelance: true,
-    },
-    {
-      imgSrc: '/images/websites/barber.webp',
-      label: 'Barber Studio',
-      description: 'web.projects.barber',
-      video: '/videos/barber.webm',
-      techStack: {
-        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
-      },
-      href: {
-        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
       },
       isFreelance: true,
     },
@@ -254,29 +254,6 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/primetravel.webp',
-      isFreelance: true,
-      label: 'PrimeTravel',
-      description: 'web.projects.PrimeTravel',
-      techStack: {
-        frontend: [
-          'React',
-          'Vite.js',
-          'HTML5',
-          'CSS3',
-          'SCSS',
-          'TailwindCSS',
-          'Firebase Authentication',
-        ],
-        backend: ['Firebase'],
-        database: ['Realtime Database', 'Firebase Storage'],
-      },
-      href: {
-        website: 'https://primetravel-162f2.web.app/',
-        github: 'https://github.com/andre-rd-rodrigues/primetravel-app',
-      },
-    },
-    {
       isFreelance: true,
       imgSrc: '/images/websites/memory.webp',
       label: 'Memory Game',
@@ -408,19 +385,6 @@ const PROJECTS = {
       },
     },
     {
-      imgSrc: '/images/websites/barber.webp',
-      label: 'Barber Studio',
-      description: 'web.projects.barber',
-
-      techStack: {
-        frontend: ['Astro', 'Javascript', 'HTML5', 'TailwindCSS'],
-      },
-      href: {
-        website: 'https://strong-cheesecake-3a87ea.netlify.app/',
-        github: 'https://github.com/andre-rd-rodrigues/barberstudio',
-      },
-    },
-    {
       imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Barbizani',
 
@@ -454,11 +418,11 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     colSpan: 1,
   },
   {
-    title: 'Paixão Med',
-    src: '/videos/barber.webm',
+    title: 'Filipa Marques',
+    src: '/videos/filipamarques.webm',
     ctaText: 'View Project',
-    ctaLink: 'https://www.paixaomed.com/',
-    content: (t) => <p>{t('projects.web.projects.paixaomed')}</p>,
+    ctaLink: 'https://www.filipamarques.com/',
+    content: (t) => <p>{t('projects.web.projects.filipaMarques')}</p>,
     colSpan: 1,
   },
   {

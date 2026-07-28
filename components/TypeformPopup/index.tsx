@@ -8,21 +8,27 @@ import React from 'react';
 type Props = {
   label?: string;
   icon?: (typeof ICONS)[keyof typeof ICONS];
+  id?: string;
+  fullWidth?: boolean;
 };
 
 /** Renders the same look as Button.Text but as a span, so PopupButton (a <button>) has no nested button. */
 const TypeformPopupButton = ({
   label = 'send_message',
   icon = ICONS.message,
+  id = TYPEFORM_ID,
+  fullWidth = false,
 }: Props) => {
   const t = useTranslations('buttons');
 
   return (
-    <PopupButton id={TYPEFORM_ID} size={70}>
-      <span className="group relative inline-flex overflow-hidden rounded-full p-[1px] transition-shadow duration-300 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+    <PopupButton id={id} size={70} className={fullWidth ? 'w-full' : undefined}>
+      <span
+        className={`group relative inline-flex overflow-hidden rounded-full p-[1px] transition-shadow duration-300 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ${fullWidth ? 'w-full' : ''}`}
+      >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0000_0%,#ff56cd_60%,#0000_100%)]" />
         <span
-          className="inline-flex cursor-pointer items-center justify-center gap-3 rounded-full border border-white/10 bg-neutral-950/60 p-3 px-5 font-light text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)] backdrop-blur-xl"
+          className={`inline-flex cursor-pointer items-center justify-center gap-3 rounded-full border border-white/10 bg-neutral-950/60 p-3 px-5 font-light text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.12)] backdrop-blur-xl ${fullWidth ? 'w-full' : ''}`}
           style={{ fontFamily: 'var(--font-jost)' }}
         >
           {icon && <Icon icon={icon} />}
@@ -37,13 +43,15 @@ const TypeformPopupButton = ({
 const TypeformPopupMinimal = ({
   label = 'send_message',
   icon = ICONS.message,
+  id = TYPEFORM_ID,
+  fullWidth = false,
 }: Props) => {
   const t = useTranslations('buttons');
 
   return (
-    <PopupButton id={TYPEFORM_ID} size={70}>
+    <PopupButton id={id} size={70} className={fullWidth ? 'w-full' : undefined}>
       <span
-        className="group relative inline-flex overflow-hidden rounded-full border border-gray-400/60 bg-white/5 px-5 py-3 backdrop-blur-md transition-[transform,box-shadow,border-color] duration-300 hover:scale-[1.03] hover:border-[#ff56cd]/50 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        className={`group relative inline-flex overflow-hidden rounded-full border border-gray-400/60 bg-white/5 px-5 py-3 backdrop-blur-md transition-[transform,box-shadow,border-color] duration-300 hover:scale-[1.03] hover:border-[#ff56cd]/50 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ${fullWidth ? 'w-full justify-center' : ''}`}
         style={{
           transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         }}

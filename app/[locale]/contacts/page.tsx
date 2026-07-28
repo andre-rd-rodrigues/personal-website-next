@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import Button from '@/components/Button';
 import PageContainer from '@/components/PageContainer/PageContainer';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import {
@@ -78,8 +79,19 @@ const Contacts = () => {
             <motion.h3 variants={fadeInSlideLeftVariant}>
               {t('reachOut')}
             </motion.h3>
-            <motion.div variants={fadeInSlideInVariant}>
-              <TypeformPopup.Button />
+            <motion.div
+              variants={fadeInSlideInVariant}
+              className="flex flex-wrap items-center gap-4"
+            >
+              <TypeformPopup.Minimal
+                label="send_message"
+                icon={ICONS.message}
+              />
+              <TypeformPopup.Button
+                id={BUDGET_TYPEFORM_ID}
+                label="request_quote"
+                icon={ICONS.budget}
+              />
             </motion.div>
           </motion.div>
         </motion.div>

@@ -1,11 +1,16 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Pricing from '@/app/[locale]/pricing/page';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 
 jest.mock('@/components/Faqs', () => ({
   __esModule: true,
   default: () => React.createElement('div', { 'data-testid': 'faqs-section' }),
 }));
+jest.mock(
+  '@/components/TypeformPopup',
+  () => require('@/__tests__/__mocks__/components/TypeformPopup').default,
+);
 
 describe('Pricing page', () => {
   it('renders without throwing', () => {
@@ -61,14 +66,14 @@ describe('Pricing page', () => {
     expect(screen.getByText('Independent')).toBeInTheDocument();
   });
 
-  it('renders CTA buttons', () => {
+  it('renders budget Typeform CTAs wired to the budget form', () => {
     renderWithIntl(<Pricing />);
-    const getStarted = screen.getAllByRole('button', { name: 'Get started' });
-    expect(getStarted.length).toBeGreaterThan(0);
-    const select = screen.getAllByRole('button', { name: 'Select' });
-    expect(select.length).toBeGreaterThan(0);
-    const sendMessage = screen.getAllByRole('button', { name: 'Send message' });
-    expect(sendMessage.length).toBeGreaterThan(0);
+    const budgetCtas = screen.getAllByTestId('typeform-popup-button');
+    // 4 desktop tier buttons + 4 mobile card buttons (+ the Development Stages CTA)
+    expect(budgetCtas.length).toBeGreaterThanOrEqual(8);
+    budgetCtas.forEach((cta) => {
+      expect(cta).toHaveAttribute('data-form-id', BUDGET_TYPEFORM_ID);
+    });
   });
 
   it('renders Faqs section', () => {

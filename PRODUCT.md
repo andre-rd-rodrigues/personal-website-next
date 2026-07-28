@@ -24,10 +24,10 @@ Fast, secure, custom-built websites and digital solutions that drive real busine
 
 ## Conversion & proof
 
-- Primary CTA: book a free consultation call via the Typeform popup. Secondary CTA, for visitors not yet ready to talk: browse the portfolio and case studies.
+- Primary CTA: request a quote via the dedicated budget Typeform popup ("Request a quote" / "Pedir orçamento"), highlighted across the homepage, pricing, and contact sections. Secondary CTA: book a free consultation call via a second Typeform popup ("Schedule a call"). For visitors not yet ready to talk: browse the portfolio and case studies.
 - The line a visitor remembers after 10 seconds: a senior engineer who builds fast, secure, custom sites that get real results.
 - Belief ladder: first, this is a credible senior engineer with recognizable clients and companies behind him; then, he builds bespoke, high-performance work rather than templates; then, that work translates into real business outcomes such as a reported 300% increase in customer interactions; then, the process is clear and low-risk, with defined stages, transparent pricing, and a free consultation; therefore booking a call is the natural next step.
-- Proof on hand: peer and client testimonials in `constants/testimonials.constants.ts`; a portfolio of client and company projects (CDEFF, Bárbara Barbizani, PrimeTravel, Carolina Jardim, Paixão Med, and others) in `data/info.data.tsx`; and trusted-company logos spanning Snyk, Navro, Pipedrive, Peacock / NBCUniversal, and Probely.
+- Proof on hand: peer and client testimonials in `constants/testimonials.constants.ts`; a portfolio of client and company projects (CDEFF, Bárbara Barbizani, Filipa Marques, Carolina Jardim, Paixão Med, and others) in `data/info.data.tsx`; and trusted-company logos spanning Snyk, Navro, Pipedrive, Peacock / NBCUniversal, and Probely.
 
 ## Brand Personality
 

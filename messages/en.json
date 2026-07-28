@@ -13,7 +13,7 @@
 
   "homepage": {
     "subtitle": "Production of websites, apps and digital presence",
-    "cta": "Portfolio",
+    "cta": "View portfolio",
     "form": {
       "button": "Contact"
     },
@@ -61,17 +61,15 @@
       "description": "I have always strived to create websites that are not only aesthetically pleasing but also intuitive and user-friendly. I believe that the integration of modern technologies and frameworks has allowed me to achieve this goal while also enhancing the performance of the websites that I develop.\nIn this section, you'll find personal and client projects where I've utilized a range of modern technologies such as React, Redux, Next JS, Web basics, Figma, Sketch and Affinity to create visually stunning and functionally-rich websites.\nI hope that you will enjoy the websites as much as I enjoyed developing them!",
       "projects": {
         "title": "Projects",
-        "CDEFF": "The Francisco Franco Sports Club website offers sports enthusiasts in Madeira Island a comprehensive platform with updates on club activities, insightful articles, and tournament details. It combines high performance with a user-friendly experience, delivering a superior online sports interaction.",
+        "filipaMarques": "Filipa Marques is a sports psychology and NLP mental-performance coach who helps athletes master pressure and turn their potential into results. This project is a complete rebranding designed to strengthen her online presence and credibility, presenting her method, services, podcast, and articles through a refined, high-performance interface that inspires trust.",
 
-        "PrimeTravel": "PrimeTravel, my personal project, showcases my Fullstack Developer skills through an advanced travel agency management tool. This initiative features an optimized, intuitive design to demonstrate effective travel business operations in a real-world application.",
+        "CDEFF": "The Francisco Franco Sports Club website offers sports enthusiasts in Madeira Island a comprehensive platform with updates on club activities, insightful articles, and tournament details. It combines high performance with a user-friendly experience, delivering a superior online sports interaction.",
 
         "bb": "The website for attorney Dr. Bárbara Barbizani is part of a rebranding focused on presenting legal services and topics through an intuitive and trustworthy interface. It offers a fluid experience that provides legal support with a personal touch, while ensuring online visibility through tailored SEO strategies.",
 
         "carolina": "The website for psychologist Dr. Carolina Jardim features a soft, minimalist interface that promotes a digital experience that reflects the calm and welcoming atmosphere of a therapy session.",
 
         "blog": "My personal blog acts as a vibrant platform where I share insights into technology, finance, and career development. Equipped with advanced functionalities like search and filtering, it serves as a resource for readers seeking professional growth.",
-
-        "barber": "Barber Studio's website, a client draft project, showcases modern barbering artistry. It features a sleek design that reflects the precision of barbering, supported by strategic SEO to enhance its market presence and attract discerning clients.",
 
         "paixaomed": "Paixão Med is the website for Dr. Catarina Paixão, a practitioner of Integrative Functional Medicine. The site features an elegant, calming design that reflects her holistic approach to healthcare, with smooth animations and a warm visual identity that conveys trust and professionalism.",
 
@@ -450,10 +448,11 @@
     "see_more": "See more",
     "contact": "Contact",
     "send_message": "Send message",
+    "request_quote": "Request a quote",
     "explore": "Explore",
     "about": "About",
     "skills": "Skills",
-    "schedule": "Schedule",
+    "schedule": "Schedule a call",
     "goBack": "Go back",
     "getStarted": "Get started",
     "select": "Select"

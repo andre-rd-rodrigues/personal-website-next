@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Home from '@/app/[locale]/page';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 
 jest.mock(
@@ -131,8 +132,13 @@ describe('Home page', () => {
     expect(screen.getByTestId('testimonials-mock')).toBeInTheDocument();
   });
 
-  it('renders contact CTA with Typeform button', () => {
+  it('renders contact CTAs with a budget Typeform button alongside schedule', () => {
     renderWithIntl(<Home />);
-    expect(screen.getByTestId('typeform-popup-button')).toBeInTheDocument();
+    const ctas = screen.getAllByTestId('typeform-popup-button');
+    expect(ctas.length).toBeGreaterThanOrEqual(2);
+    const budgetCta = ctas.find(
+      (cta) => cta.getAttribute('data-form-id') === BUDGET_TYPEFORM_ID,
+    );
+    expect(budgetCta).toBeDefined();
   });
 });

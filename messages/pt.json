@@ -13,7 +13,7 @@
 
   "homepage": {
     "subtitle": "Criação de websites, apps e automação com IA",
-    "cta": "Portfólio",
+    "cta": "Ver portfólio",
     "form": {
       "button": "Contactar"
     },
@@ -61,17 +61,15 @@
       "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que goste tanto quanto eu gostei de os fazer :)",
       "projects": {
         "title": "Projetos",
-        "CDEFF": "O site do Clube Desportivo Francisco Franco, desenvolvido para um cliente, oferece aos entusiastas do desporto na Ilha da Madeira uma plataforma abrangente com atualizações sobre as atividades do clube, artigos informativos e detalhes de torneios. Combina alto desempenho com uma experiência amigável, proporcionando uma interação desportiva online intuitiva.",
+        "filipaMarques": "A Filipa Marques é coach de performance mental que une a Psicologia do Desporto e a Programação Neurolinguística para ajudar atletas a dominar a pressão e a transformar o seu potencial em resultados. Este projeto é um rebranding completo, pensado para reforçar a sua presença online e credibilidade, apresentando o seu método, serviços, podcast e artigos através de uma interface cuidada e de alto desempenho que transmite confiança.",
 
-        "PrimeTravel": "PrimeTravel, um projeto pessoal, demonstra as minhas habilidades de Fullstack Developer através de uma ferramenta avançada de gestão de agências de viagens. Esta iniciativa possui um design otimizado e intuitivo para demonstrar operações de negócios de viagens eficazes em uma aplicação real.",
+        "CDEFF": "O site do Clube Desportivo Francisco Franco, desenvolvido para um cliente, oferece aos entusiastas do desporto na Ilha da Madeira uma plataforma abrangente com atualizações sobre as atividades do clube, artigos informativos e detalhes de torneios. Combina alto desempenho com uma experiência amigável, proporcionando uma interação desportiva online intuitiva.",
 
         "bb": "O website da Advogada Dra. Bárbara Barbizani faz parte de um rebranding focado na apresentação dos serviços e assuntos legais através de uma interface intuitiva e confiante. Oferece uma experiência fluída, proporcionando apoio jurídico com um toque pessoal, garantindo projeção online através de estratégias personalizadas de SEO.",
 
         "carolina": "O website da Psicóloga Dra. Carolina Jardim, possui uma interface suave e minimalista promovendo uma experiência digitial aproximada ao ambiente de sessão terapeutica.",
 
         "blog": "O meu blog pessoal atua como uma plataforma vibrante onde partilho insights sobre tecnologia, finanças e desenvolvimento de carreira. Equipado com funcionalidades avançadas como pesquisa e filtragem, serve como um recurso para leitores que buscam crescimento profissional.",
-
-        "barber": "O site Barber Studio visa um projeto para cliente final, exibe a arte moderna da barbearia e possui um design elegante que reflete a precisão da barbearia pronto para marcar presença no mercado e atrair novos clientes.",
 
         "paixaomed": "Paixão Med é o website da Dra. Catarina Paixão, médica de Medicina Funcional Integrativa. O site apresenta um design elegante e sereno que reflete a sua abordagem holística à saúde, com animações suaves e uma identidade visual acolhedora que transmite confiança e profissionalismo.",
 
@@ -454,10 +452,11 @@
     "see_more": "Ver mais",
     "contact": "Contactar",
     "send_message": "Enviar mensagem",
+    "request_quote": "Pedir orçamento",
     "explore": "Explorar",
     "about": "Sobre",
     "skills": "Skills",
-    "schedule": "Agendar",
+    "schedule": "Agendar uma chamada",
     "goBack": "Voltar",
     "getStarted": "Começar",
     "select": "Escolher"

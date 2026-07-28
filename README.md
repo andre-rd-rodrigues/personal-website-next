@@ -73,7 +73,7 @@ README.md
 
 - **Home**: The landing page with an introduction and links to other sections.
 - **About**: Information about me and my background.
-- **Contact**: A page with a form to reach out to me.
+- **Contact**: A page to reach out via email, social links, and Typeform popups to send a message or request a quote.
 - **Portfolio**: A showcase of my web and mobile projects, including subcategories for apps and websites.
 - **Not Found**: Custom 404 error page.
 

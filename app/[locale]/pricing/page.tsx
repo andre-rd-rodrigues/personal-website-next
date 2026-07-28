@@ -1,7 +1,9 @@
 'use client';
-import Button from '@/components/Button';
 import Card from '@/components/Card';
 import PageContainer from '@/components/PageContainer/PageContainer';
+import TypeformPopup from '@/components/TypeformPopup';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
+import ICONS from '@/constants/icons.constants';
 import useTranslation from '@/hooks/useTranslation';
 import { useTranslations } from 'next-intl';
 import {
@@ -16,7 +18,6 @@ import Faqs from '@/components/Faqs';
 
 const Pricing = () => {
   const t = useTranslations('pricing');
-  const t_button = useTranslations('buttons');
   const { getTranslationsArray } = useTranslation();
 
   const maintenancePlans = getTranslationsArray('pricing.maintenance.plans');
@@ -241,11 +242,11 @@ const Pricing = () => {
               {/* Action Row */}
               <tr>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <Button.Text
-                    className="w-full"
-                    label={t_button('getStarted')}
+                  <TypeformPopup.Button
+                    id={BUDGET_TYPEFORM_ID}
+                    label="request_quote"
+                    icon={ICONS.budget}
                     fullWidth
-                    hover={false}
                   />
                 </td>
                 <td
@@ -255,27 +256,27 @@ const Pricing = () => {
                     borderBottomRightRadius: '1.5rem',
                   }}
                 >
-                  <Button.Text
-                    className="w-full"
-                    label={t_button('select')}
+                  <TypeformPopup.Button
+                    id={BUDGET_TYPEFORM_ID}
+                    label="request_quote"
+                    icon={ICONS.budget}
                     fullWidth
-                    hover={false}
                   />
                 </td>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <Button.Text
-                    className="w-full"
-                    label={t_button('select')}
+                  <TypeformPopup.Button
+                    id={BUDGET_TYPEFORM_ID}
+                    label="request_quote"
+                    icon={ICONS.budget}
                     fullWidth
-                    hover={false}
                   />
                 </td>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <Button.Text
-                    className="w-full"
-                    label={t_button('send_message')}
+                  <TypeformPopup.Button
+                    id={BUDGET_TYPEFORM_ID}
+                    label="request_quote"
+                    icon={ICONS.budget}
                     fullWidth
-                    hover={false}
                   />
                 </td>
               </tr>
@@ -321,11 +322,11 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <Button.Text
-              className="w-full"
-              label={t_button('getStarted')}
+            <TypeformPopup.Button
+              id={BUDGET_TYPEFORM_ID}
+              label="request_quote"
+              icon={ICONS.budget}
               fullWidth
-              hover={false}
             />
           </div>
         </div>
@@ -370,11 +371,11 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <Button.Text
-              className="w-full"
-              label={t_button('select')}
+            <TypeformPopup.Button
+              id={BUDGET_TYPEFORM_ID}
+              label="request_quote"
+              icon={ICONS.budget}
               fullWidth
-              hover={false}
             />
           </div>
         </div>
@@ -419,11 +420,11 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <Button.Text
-              className="w-full"
-              label={t_button('select')}
+            <TypeformPopup.Button
+              id={BUDGET_TYPEFORM_ID}
+              label="request_quote"
+              icon={ICONS.budget}
               fullWidth
-              hover={false}
             />
           </div>
         </div>
@@ -454,11 +455,11 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <Button.Text
-              className="w-full"
-              label={t_button('send_message')}
+            <TypeformPopup.Button
+              id={BUDGET_TYPEFORM_ID}
+              label="request_quote"
+              icon={ICONS.budget}
               fullWidth
-              hover={false}
             />
           </div>
         </div>

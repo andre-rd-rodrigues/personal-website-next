@@ -16,6 +16,7 @@ import { Compare } from '@/components/ui/compare';
 import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 import { FlipWords } from '@/components/ui/flip-words';
 import WebsiteProcess from '@/components/WebsiteProcess';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import { EXPERTISE, MAIN_PROJECTS } from '@/data/info.data';
@@ -67,13 +68,17 @@ const Home = () => {
             >
               {t('homepage.subtitle')}
             </motion.p>
-            <div className="mt-8 flex w-full items-center justify-center gap-3 md:justify-start">
+            <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-3 md:justify-start">
+              <motion.span variants={fadeInSlideInVariant}>
+                <TypeformPopup.Button
+                  id={BUDGET_TYPEFORM_ID}
+                  label="request_quote"
+                  icon={ICONS.budget}
+                />
+              </motion.span>
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio/web">
-                  <Button.Minimal
-                    label={t('homepage.cta')}
-                    icon={ICONS.arrow}
-                  />
+                  <Button.Minimal label={t('homepage.cta')} />
                 </Link>
               </motion.span>
             </div>
@@ -303,7 +308,14 @@ const Home = () => {
           <HeroSection.Cta
             text={t('homepage.contact.description')}
             cta={
-              <TypeformPopup.Button label="schedule" icon={ICONS.calendar} />
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <TypeformPopup.Button
+                  id={BUDGET_TYPEFORM_ID}
+                  label="request_quote"
+                  icon={ICONS.budget}
+                />
+                <TypeformPopup.Minimal label="schedule" icon={ICONS.calendar} />
+              </div>
             }
           />
         </Section>

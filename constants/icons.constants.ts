@@ -11,6 +11,7 @@ const ICONS = {
   facebook: 'ri:facebook-line',
   menu: 'ri:menu-line',
   calendar: 'clarity:calendar-line',
+  budget: 'tabler:file-invoice',
   close: 'iconamoon:close-thin',
   stack: 'radix-icons:stack',
   drag: 'pepicons-pop:line-x',

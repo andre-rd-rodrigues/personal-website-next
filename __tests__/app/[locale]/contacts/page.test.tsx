@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Contacts from '@/app/[locale]/contacts/page';
+import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 
 jest.mock(
@@ -53,9 +54,14 @@ describe('Contacts page', () => {
     expect(linkedinLink).toHaveAttribute('href', CONTACTS.LINKEDIN);
   });
 
-  it('renders the reach out section with Typeform popup button', () => {
+  it('renders the reach out section with send message and budget Typeform buttons', () => {
     renderWithIntl(<Contacts />);
     expect(screen.getByText('reach out')).toBeInTheDocument();
-    expect(screen.getByTestId('typeform-popup-button')).toBeInTheDocument();
+    const ctas = screen.getAllByTestId('typeform-popup-button');
+    expect(ctas).toHaveLength(2);
+    const budgetCta = ctas.find(
+      (cta) => cta.getAttribute('data-form-id') === BUDGET_TYPEFORM_ID,
+    );
+    expect(budgetCta).toBeDefined();
   });
 });
