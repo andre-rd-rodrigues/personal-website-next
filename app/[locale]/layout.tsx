@@ -14,7 +14,6 @@ import Cookies from '@/components/Cookies';
 
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import GlobalBackground from '@/components/GlobalBackground';
-import PageLoading from '@/components/PageLoading';
 import Analytics from '@/components/Analytics';
 import StructuredData from '@/components/StructuredData';
 
@@ -44,7 +43,6 @@ export function RootLayoutBody({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <StructuredData locale={locale} />
       <GlobalBackground />
-      <PageLoading />
       <Navbar />
       {children}
       <Cookies />

@@ -40,9 +40,8 @@ const Home = () => {
       {/* Title */}
       <motion.div
         variants={containerVariant}
-        whileInView="visible"
-        initial="hidden"
-        viewport={{ once: true }}
+        initial={false}
+        animate="visible"
         className="relative z-10 flex min-h-[100vh] w-full items-center justify-center py-12"
       >
         <Container className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">
@@ -52,6 +51,7 @@ const Home = () => {
                 src="/images/logo_light.webp"
                 width={200}
                 height={200}
+                priority
                 className="mx-auto md:mx-0"
                 alt="André Rodrigo - Senior Software Engineer"
               />
@@ -90,6 +90,8 @@ const Home = () => {
                 alt="André Rodrigo"
                 width={600}
                 height={600}
+                priority
+                sizes="(max-width: 768px) 90vw, 600px"
                 className="h-full w-full rounded-2xl object-cover"
               />
             </div>

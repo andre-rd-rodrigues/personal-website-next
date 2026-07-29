@@ -20,10 +20,6 @@ jest.mock('@/components/GlobalBackground', () => ({
   __esModule: true,
   default: () => null,
 }));
-jest.mock('@/components/PageLoading', () => ({
-  __esModule: true,
-  default: () => null,
-}));
 jest.mock('@/components/Cookies', () => ({
   __esModule: true,
   default: () => null,
