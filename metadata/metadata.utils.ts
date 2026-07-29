@@ -8,7 +8,11 @@ export const getMetadata = async (
   const headersList = await headers();
   const pathname = headersList.get('x-invoke-path') || '';
 
+  const ogImage =
+    options?.src || 'https://i.postimg.cc/kXyC26Dr/opengraph-image.webp';
+
   return {
+    metadataBase: new URL(WEBSITE_DOMAIN_URL),
     title: options.title,
     description: options.description,
     icons: [
@@ -48,13 +52,17 @@ export const getMetadata = async (
       type: 'website',
       images: [
         {
-          url:
-            options?.src ||
-            'https://i.postimg.cc/kXyC26Dr/opengraph-image.webp',
+          url: ogImage,
           width: 1200,
           height: 630,
         },
       ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: options.title!,
+      description: options.description!,
+      images: [ogImage],
     },
   };
 };
