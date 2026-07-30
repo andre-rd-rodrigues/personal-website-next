@@ -12,6 +12,19 @@ const containerVariant = {
   },
 };
 
+const heroContainerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.05,
+    },
+  },
+};
+
 //Work page
 const workPageHeaderContent = {
   hidden: {
@@ -137,6 +150,7 @@ const blurVariant = {
 
 export {
   containerVariant,
+  heroContainerVariant,
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
   fadeInVariant,

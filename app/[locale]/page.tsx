@@ -27,6 +27,7 @@ import {
   fadeInSlideInVariant,
   fadeInSlideLeftVariant,
   fadeInVariant,
+  heroContainerVariant,
 } from '@/motion/motionVariants';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
@@ -39,8 +40,8 @@ const Home = () => {
     <>
       {/* Title */}
       <motion.div
-        variants={containerVariant}
-        initial={false}
+        variants={heroContainerVariant}
+        initial="hidden"
         animate="visible"
         className="relative z-10 flex min-h-[100vh] w-full items-center justify-center py-12"
       >
