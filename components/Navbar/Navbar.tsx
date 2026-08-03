@@ -54,8 +54,9 @@ export default function Navbar() {
                   <Image
                     src="/images/logo.webp"
                     alt="AR"
-                    width={40}
-                    height={40}
+                    fill
+                    sizes="40px"
+                    priority
                     className="object-cover"
                   />
                 </div>

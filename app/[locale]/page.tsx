@@ -53,7 +53,8 @@ const Home = () => {
                 width={200}
                 height={200}
                 priority
-                className="mx-auto md:mx-0"
+                className="mx-auto h-[200px] w-[200px] md:mx-0"
+                style={{ width: 'auto', height: 'auto' }}
                 alt="André Rodrigo - Senior Software Engineer"
               />
             </motion.span>
