@@ -77,6 +77,19 @@ const PROJECTS = {
       },
     },
     {
+      imgSrc: '/images/websites/brenndacastro.webp',
+      label: 'Brennda Castro',
+      description: 'web.projects.brenndaCastro',
+      isFreelance: true,
+      techStack: {
+        frontend: ['Next.js', 'TypeScript', 'TailwindCSS'],
+        backend: ['Integrations'],
+      },
+      href: {
+        website: 'https://www.brenndamassagem.com/',
+      },
+    },
+    {
       imgSrc: '/images/websites/bb.webp',
       label: 'Bárbara Barbizani',
       video: '/videos/bb.webm',
