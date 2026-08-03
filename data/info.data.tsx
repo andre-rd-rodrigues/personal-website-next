@@ -79,6 +79,7 @@ const PROJECTS = {
     {
       imgSrc: '/images/websites/brenndacastro.webp',
       label: 'Brennda Castro',
+      video: '/videos/brenndacastro.webm',
       description: 'web.projects.brenndaCastro',
       isFreelance: true,
       techStack: {
