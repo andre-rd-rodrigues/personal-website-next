@@ -302,22 +302,28 @@
 
   "testimonials": {
     "title": "Testemunhos",
+    "google_reviews": "Ver avaliações no Google",
+    "verified": "Verificado",
     "lets_talk": {
       "title": "O teu pode ser o próximo",
       "cta": "vamos conversar"
     },
-    "cdeff": {
-      "details": "Clube Desportivo",
-      "review": "O André desenvolveu o nosso website e estamos muito satisfeitos com o resultado final. O design é moderno e apelativo, a navegação é intuitiva e o website é responsivo. O André é um excelente profissional, muito dedicado e atento aos detalhes. Recomendamos o seu trabalho!"
+    "cristiano": {
+      "details": "Instrutor de Fitness",
+      "review": "O André é um profissional de excelência. Consegue fazer com que o nosso projeto fique ainda melhor do que tínhamos inicialmente pensado. Tem atenção ao mais pequeno detalhe no seu trabalho. Recomendo!"
     },
     "barbara": {
       "details": "Advogada",
-      "review": "O André desenvolveu o meu website profissional. Aumentei o número de clientes graças ao seu trabalho, a sua linha estética minimalista reflete o que eu pretendia na perfeição. A sua empatia e profissionalismo foram constantes durante todo o processo. Recomendo vivamente o seu trabalho. Muito obrigada André!"
+      "review": "O André não é apenas extremamente atencioso, mas também um profissional impecável que compreende as nossas necessidades e cumpre os prazos. Recomendo-o vivamente."
+    },
+    "brennda": {
+      "details": "Massoterapeuta",
+      "review": "Excelente profissional! O André foi fundamental na criação do meu website de massagens e teve um impacto direto na rentabilidade do meu negócio. Sempre disponível, atento aos detalhes e muito competente. Conseguiu transformar as minhas ideias em resultados muito melhores do que eu tinha imaginado. Recomendo-o sem qualquer hesitação."
     },
 
-    "sofia": {
-      "details": "Coordenação - Unidade de Saúde",
-      "review": "O trabalho desenvolvido pelo André superou as nossas expectativas! A sua empatia e criatividade conquistaram-nos na primeira reunião e desde esse dia que fomos continuamente surpreendidos pela positiva. Agora contamos com ele nas próximas edições do RIMA!"
+    "ema": {
+      "details": "Marketeer",
+      "review": "Excelente profissional, com grande atenção ao detalhe e capacidade de criar soluções funcionais e modernas. Para além da sua competência técnica, está sempre disponível e transmite confiança e compromisso. Recomendo vivamente para qualquer projeto digital."
     },
 
     "ana": {
@@ -474,12 +480,16 @@
     "description": "Criação de websites e apps rápidos e seguros para empresas e marcas em crescimento. Soluções digitais e consultoria feitas à medida.",
     "aboutTitle": "Sobre André Rodrigo • Programador Web Freelancer",
     "portfolioTitle": "Portfólio • Websites e Apps por André Rodrigo",
+    "portfolioWebTitle": "Portfólio Web • Websites em Next.js e React",
+    "portfolioMobileTitle": "Portfólio Mobile • Aplicações em React Native",
     "contactsTitle": "Contactos • Criação de Websites e Apps à Medida",
     "blogTitle": "Blog • Desenvolvimento Web e Tecnologia",
     "pricingTitle": "Preçário • Pacotes de Criação de Websites e Apps",
     "faqsTitle": "Perguntas Frequentes • Criação de Websites e Apps",
     "aboutDescription": "Conhece melhor o meu percurso, a forma como trabalho e os valores que guiam cada projeto.",
     "portfolioDescription": "Projetos recentes de websites, aplicações e soluções digitais criadas para empresas e marcas.",
+    "portfolioWebDescription": "Projetos de websites freelance e corporativos criados com Next.js, React e TypeScript — rebrandings, sites institucionais e aplicações web para clientes de vários setores.",
+    "portfolioMobileDescription": "Projetos de aplicações móveis criados com React Native e Expo, incluindo Giggle!, Random Box e Coolmind — do conceito e design até ao lançamento.",
     "contactsDescription": "Entra em contacto para discutir o teu projeto ou tirar dúvidas. Estou disponível por email ou redes sociais.",
     "blogDescription": "Dicas, ideias e conteúdos sobre desenvolvimento web, freelance e tecnologia.",
     "pricingDescription": "Consulta os pacotes de serviços e preços para criação de websites e soluções digitais personalizadas.",

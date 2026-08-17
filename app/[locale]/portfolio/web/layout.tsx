@@ -10,8 +10,10 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata' });
 
   return await getMetadata({
-    title: t('portfolioTitle'),
-    description: t('portfolioDescription'),
+    title: t('portfolioWebTitle'),
+    description: t('portfolioWebDescription'),
+    locale,
+    pathname: '/portfolio/web',
   });
 }
 

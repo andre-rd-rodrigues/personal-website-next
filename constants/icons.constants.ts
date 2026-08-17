@@ -17,6 +17,7 @@ const ICONS = {
   drag: 'pepicons-pop:line-x',
   check: 'radix-icons:check',
   search: 'simple-line-icons:magnifier',
+  google: 'logos:google-icon',
 };
 
 export default ICONS;

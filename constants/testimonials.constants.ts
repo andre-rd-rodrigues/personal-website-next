@@ -1,10 +1,9 @@
 const TESTIMONIALS = [
   {
-    review: 'cdeff.review',
-    picture_path: '/images/testimonials/cdeff.webp',
-    client_name: 'CDEFF Sports Club',
-    client_details: 'cdeff.details',
-    project_link: 'https://www.cdeff.com',
+    review: 'cristiano.review',
+    picture_path: '/images/testimonials/cristiano.webp',
+    client_name: 'Cristiano Guerreiro',
+    client_details: 'cristiano.details',
   },
   {
     picture_path: '/images/testimonials/anaJardim.webp',
@@ -21,11 +20,16 @@ const TESTIMONIALS = [
     project_link: null,
   },
   {
-    review: 'sofia.review',
-    picture_path: '/images/testimonials/sofia.webp',
-    client_name: 'Sofia Pimenta',
-    client_details: 'sofia.details',
-    project_link: 'https://kaleidoscopic-cheesecake-db7480.netlify.app/',
+    review: 'brennda.review',
+    picture_path: '/images/testimonials/brennda.webp',
+    client_name: 'Brennda Castro',
+    client_details: 'brennda.details',
+  },
+  {
+    review: 'ema.review',
+    picture_path: '/images/testimonials/ema.webp',
+    client_name: 'Ema Rodrigues',
+    client_details: 'ema.details',
   },
   {
     review: 'rafa.review',

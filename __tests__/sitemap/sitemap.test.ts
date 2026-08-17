@@ -1,4 +1,5 @@
 import sitemap from '@/app/sitemap';
+import { getAllPostsMeta } from '@/lib/blog.meta';
 import { locales } from '@/navigation';
 
 function escapeRegExp(str: string): string {
@@ -7,16 +8,27 @@ function escapeRegExp(str: string): string {
 
 const host = 'https://www.andrerodrigo.com';
 
+/** Number of statically configured routes in `routing.pathnames`. */
+const STATIC_PATHNAME_COUNT = 9;
+
+type SitemapEntries = Awaited<ReturnType<typeof sitemap>>;
+
+const isBlogPost = (url: string) => /\/blog\/[^/]+$/.test(url);
+
 describe('sitemap', () => {
+  let entries: SitemapEntries;
+
+  beforeAll(async () => {
+    entries = await sitemap();
+  });
+
   it('returns an array of sitemap entries', () => {
-    const result = sitemap();
-    expect(Array.isArray(result)).toBe(true);
-    expect(result.length).toBeGreaterThan(0);
+    expect(Array.isArray(entries)).toBe(true);
+    expect(entries.length).toBeGreaterThan(0);
   });
 
   it('each entry has url, lastModified and alternates.languages', () => {
-    const result = sitemap();
-    for (const entry of result) {
+    for (const entry of entries) {
       expect(entry).toHaveProperty('url');
       expect(typeof entry.url).toBe('string');
       expect(entry).toHaveProperty('lastModified');
@@ -28,8 +40,7 @@ describe('sitemap', () => {
   });
 
   it('all URLs use the configured host and include locale', () => {
-    const result = sitemap();
-    for (const entry of result) {
+    for (const entry of entries) {
       expect(entry.url.startsWith(host)).toBe(true);
       const withoutHost = entry.url.slice(host.length);
       const hasLocale =
@@ -41,9 +52,11 @@ describe('sitemap', () => {
     }
   });
 
-  it('alternates.languages has an entry for each locale', () => {
-    const result = sitemap();
-    for (const entry of result) {
+  it('static routes expose an alternate for every locale', () => {
+    const staticEntries = entries.filter((e) => !isBlogPost(e.url));
+    expect(staticEntries.length).toBe(STATIC_PATHNAME_COUNT * locales.length);
+
+    for (const entry of staticEntries) {
       const languages = entry.alternates?.languages;
       expect(languages).toBeDefined();
       if (!languages) continue;
@@ -56,25 +69,63 @@ describe('sitemap', () => {
     }
   });
 
+  it('blog posts only advertise alternates for locales that publish them', () => {
+    const blogEntries = entries.filter((e) => isBlogPost(e.url));
+    expect(blogEntries.length).toBeGreaterThan(0);
+
+    for (const entry of blogEntries) {
+      const pairs = Object.entries(entry.alternates?.languages ?? {});
+      expect(pairs.length).toBeGreaterThan(0);
+      for (const [locale, url] of pairs) {
+        expect(locales).toContain(locale);
+        expect(url).toMatch(
+          new RegExp(`^${escapeRegExp(host)}/${locale}/blog/`),
+        );
+      }
+    }
+  });
+
   it('includes homepage URLs for both locales', () => {
-    const result = sitemap();
-    const urls = result.map((e) => e.url);
+    const urls = entries.map((e) => e.url);
     expect(urls).toContain(`${host}/en`);
     expect(urls).toContain(`${host}/pt`);
   });
 
   it('includes localized paths (e.g. /about and /sobre for pt)', () => {
-    const result = sitemap();
-    const urls = result.map((e) => e.url);
-    expect(urls.some((u) => u === `${host}/en/about`)).toBe(true);
-    expect(urls.some((u) => u === `${host}/pt/sobre`)).toBe(true);
-    expect(urls.some((u) => u === `${host}/en/contacts`)).toBe(true);
-    expect(urls.some((u) => u === `${host}/pt/contactos`)).toBe(true);
+    const urls = entries.map((e) => e.url);
+    expect(urls).toContain(`${host}/en/about`);
+    expect(urls).toContain(`${host}/pt/sobre`);
+    expect(urls).toContain(`${host}/en/contacts`);
+    expect(urls).toContain(`${host}/pt/contactos`);
   });
 
-  it('entry count equals pathnames × locales', () => {
-    const result = sitemap();
-    const pathnameCount = 9;
-    expect(result.length).toBe(pathnameCount * locales.length);
+  it('includes every blog post for each locale', async () => {
+    const urls = entries.map((e) => e.url);
+
+    for (const locale of locales) {
+      const posts = await getAllPostsMeta(locale);
+      expect(posts.length).toBeGreaterThan(0);
+      for (const post of posts) {
+        expect(urls).toContain(`${host}/${locale}/blog/${post.slug}`);
+      }
+    }
+  });
+
+  it('blog entries use the post published date as lastModified', async () => {
+    const [post] = await getAllPostsMeta('en');
+    const entry = entries.find((e) => e.url === `${host}/en/blog/${post.slug}`);
+
+    expect(entry?.lastModified).toEqual(new Date(post.publishedDate));
+  });
+
+  it('entry count equals static routes × locales plus every blog post', async () => {
+    const postCounts = await Promise.all(
+      locales.map(async (locale) => (await getAllPostsMeta(locale)).length),
+    );
+    const blogCount = postCounts.reduce((total, count) => total + count, 0);
+
+    expect(entries.length).toBe(
+      STATIC_PATHNAME_COUNT * locales.length + blogCount,
+    );
   });
 });

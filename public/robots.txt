@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://andrerodrigo.com
+Host: https://www.andrerodrigo.com
 
 # Sitemaps
-Sitemap: https://andrerodrigo.com/sitemap.xml
+Sitemap: https://www.andrerodrigo.com/sitemap.xml

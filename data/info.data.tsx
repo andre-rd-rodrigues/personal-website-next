@@ -424,11 +424,11 @@ const MAIN_PROJECTS: ExpandableCard[] = [
     colSpan: 1,
   },
   {
-    title: 'Carolina Jardim',
-    src: '/videos/ana.webm',
+    title: 'Brennda Castro',
+    src: '/videos/brenndacastro.webm',
     ctaText: 'View Project',
-    ctaLink: 'https://acarolinajardim.com',
-    content: (t) => <p>{t('projects.web.projects.carolina')}</p>,
+    ctaLink: 'https://www.brenndamassagem.com/',
+    content: (t) => <p>{t('projects.web.projects.brenndaCastro')}</p>,
     colSpan: 1,
   },
   {

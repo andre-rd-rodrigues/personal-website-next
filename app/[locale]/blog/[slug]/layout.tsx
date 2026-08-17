@@ -12,6 +12,8 @@ export async function generateMetadata({
     title: post?.title ?? 'Blog',
     description: post?.description ?? undefined,
     src: post?.coverPhoto?.url,
+    locale,
+    pathname: slug ? `/blog/${slug}` : '/blog',
   });
 }
 

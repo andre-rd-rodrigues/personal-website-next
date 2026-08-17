@@ -1,15 +1,30 @@
 import { WEBSITE_DOMAIN_URL } from '@/constants/common.constants';
+import { Locale } from '@/locale.types';
+import { buildLocalizedUrl } from '@/utils/url.utils';
 import { Metadata } from 'next';
-import { headers } from 'next/headers';
+
+type GetMetadataOptions = Metadata & {
+  src?: string;
+  /** Active locale, used to build a self-referencing canonical URL. */
+  locale?: Locale;
+  /**
+   * Internal route key (e.g. `/about`) or a fully resolved path (e.g.
+   * `/blog/my-post`). Used together with `locale` to build the canonical URL.
+   */
+  pathname?: string;
+};
 
 export const getMetadata = async (
-  options: Metadata & { src?: string },
+  options: GetMetadataOptions,
 ): Promise<Metadata> => {
-  const headersList = await headers();
-  const pathname = headersList.get('x-invoke-path') || '';
+  const { src, locale, pathname } = options;
 
-  const ogImage =
-    options?.src || 'https://i.postimg.cc/kXyC26Dr/opengraph-image.webp';
+  const ogImage = src || 'https://i.postimg.cc/kXyC26Dr/opengraph-image.webp';
+
+  const canonical =
+    locale && pathname !== undefined
+      ? buildLocalizedUrl(pathname, locale)
+      : undefined;
 
   return {
     metadataBase: new URL(WEBSITE_DOMAIN_URL),
@@ -44,7 +59,7 @@ export const getMetadata = async (
       { url: '/images/favicon/favicon.ico', rel: 'shortcut icon' },
     ],
     alternates: {
-      canonical: `${WEBSITE_DOMAIN_URL}/${pathname}`,
+      canonical,
     },
     openGraph: {
       title: options.title!,

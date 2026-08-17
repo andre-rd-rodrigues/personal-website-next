@@ -8,10 +8,7 @@ import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import type { Locale } from '@/locale.types';
 import type { Post } from '@/types/blog';
-
-function getBlogDir(locale: Locale): string {
-  return path.join(process.cwd(), 'content', 'blog', locale);
-}
+import { getBlogDir } from './blog.meta';
 
 type Frontmatter = {
   title: string;

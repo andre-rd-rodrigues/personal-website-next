@@ -302,22 +302,28 @@
   },
 
   "testimonials": {
-    "title": "testimonials",
+    "title": "Testimonials",
+    "google_reviews": "See reviews on Google",
+    "verified": "Verified",
     "lets_talk": {
       "title": "Yours can be next!",
       "cta": "lets talk"
     },
-    "cdeff": {
-      "details": "Sports Club",
-      "review": "André developed our website and we are very pleased with the final result! The design is modern and appealing, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. We definitely recommend his work!"
+    "cristiano": {
+      "details": "Fitness Instructor",
+      "review": "André is an outstanding professional. He manages to make our project even better than we had initially imagined. He pays attention to the smallest detail in his work. I recommend him!"
     },
     "barbara": {
       "details": "Lawyer",
-      "review": "André developed my website and I couldn't be happier with the result! The design is modern and professional, the navigation is intuitive, and the website is responsive. André is an excellent professional, very dedicated and attentive to details. His work comes with my highest recommendation!"
+      "review": "André is not only extremely attentive but also an impeccable professional who understands our needs and meets deadlines. I highly recommend him."
     },
-    "sofia": {
-      "details": "Coordinator | Doctor",
-      "review": "André created a website for our General and Family Medicine Interns Meeting and it exceeded our expectations! His empathy and creativity won us over in the first meeting and since then we've been continuously positively surprised. Now we count on him for future RIMA editions!"
+    "brennda": {
+      "details": "Massage Therapist",
+      "review": "Excellent professional! André was fundamental in creating my massage website and had a direct impact on the profitability of my business. Always available, attentive to detail, and very competent. He managed to transform my ideas into results far better than I had imagined. I recommend him without any hesitation."
+    },
+    "ema": {
+      "details": "Marketeer",
+      "review": "An excellent professional, with great attention to detail and the ability to create functional, modern solutions. Beyond his technical skill, he is always available and conveys trust and commitment. I highly recommend him for any digital project."
     },
     "ana": {
       "details": "Product Designer",
@@ -468,12 +474,16 @@
     "description": "Freelance web developer building fast, secure websites and apps for growing companies and brands. Tailor-made digital solutions and consulting.",
     "aboutTitle": "About André Rodrigo • Freelance Web Developer",
     "portfolioTitle": "Portfolio • Websites & Apps by André Rodrigo",
+    "portfolioWebTitle": "Web Portfolio • Websites Built with Next.js & React",
+    "portfolioMobileTitle": "Mobile Portfolio • React Native App Projects",
     "contactsTitle": "Contact André Rodrigo • Web & App Development",
     "blogTitle": "Blog • Web Development & Tech by André Rodrigo",
     "pricingTitle": "Pricing • Website & App Development Packages",
     "faqsTitle": "FAQs • Website & App Development by André Rodrigo",
     "aboutDescription": "Get to know more about my background, how I work, and the values that guide every project.",
     "portfolioDescription": "Recent projects including websites, apps, and digital solutions built for companies and brands.",
+    "portfolioWebDescription": "Freelance and corporate website projects built with Next.js, React and TypeScript — rebrandings, institutional sites and web apps for clients across different sectors.",
+    "portfolioMobileDescription": "Mobile app projects built with React Native and Expo, including Giggle!, Random Box and Coolmind — from concept and design through to release.",
     "contactsDescription": "Get in touch to discuss your project or ask questions. Available via email or social media.",
     "blogDescription": "Tips, insights, and content about web development, freelancing, and technology.",
     "pricingDescription": "Check available service packages and pricing for website development and custom digital solutions.",

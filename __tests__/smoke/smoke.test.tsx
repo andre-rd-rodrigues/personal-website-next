@@ -59,7 +59,7 @@ describe('Smoke: next-intl + app shell', () => {
   });
 });
 
-describe('Smoke: Swiper (mocked – manually verify after swiper upgrades)', () => {
+describe('Smoke: Testimonials (mocked)', () => {
   it('Testimonials slot renders without throwing', () => {
     renderWithIntl(<Testimonials />);
     expect(screen.getByTestId('testimonials-mock')).toBeInTheDocument();

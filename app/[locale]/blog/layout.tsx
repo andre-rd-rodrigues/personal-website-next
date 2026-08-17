@@ -12,6 +12,8 @@ export async function generateMetadata({
   return await getMetadata({
     title: t('blogTitle'),
     description: t('blogDescription'),
+    locale,
+    pathname: '/blog',
   });
 }
 
