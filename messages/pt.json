@@ -242,44 +242,42 @@
         {
           "title": "Essencial",
           "price": "10 €",
-          "subtitle": "por mês, 120 € anual, excl. taxas",
-          "description": "Alojamento e monitorização técnica básica.",
+          "subtitle": "por mês, 120 € anual, IVA e custos de serviços externos não incluídos",
+          "description": "Alojamento seguro e manutenção técnica do teu site.",
           "features": [
-            "Monitorização de uptime",
-            "Verificações de disponibilidade",
-            "Manutenção da infraestrutura",
-            "Backups e alertas básicos",
-            "Suporte básico por email",
-            "Alterações limitadas (até 30min/trimestral)"
+            "Monitorização contínua de cibersegurança",
+            "Manutenção preventiva da infraestrutura web",
+            "Verificações periódicas de disponibilidade (uptime)",
+            "Suporte básico por e-mail",
+            "Alterações e atualizações limitadas (até 30 minutos por trimestre)"
           ]
         },
         {
           "title": "Essencial Plus",
           "price": "25 €",
-          "subtitle": "por mês, 300 € anual, excl. taxas",
-          "description": "Ideal para negócios que precisam de um site dinâmico.",
+          "subtitle": "por mês, 300 € anual, IVA e custos de serviços externos não incluídos",
+          "description": "Ideal para negócios que publicam regularmente e querem tudo gerido.",
           "features": [
             "Tudo incluído no plano 'Essencial'",
-            "Gestão de domínio (compra, renovação, DNS, etc.)",
-            "Pequenas alterações mensais (até 30min/mês)",
-            "Updates de conteúdos no CMS",
-            "Apoio contínuo e melhorias regulares"
+            "Gestão de blog e páginas (publicação de artigos e conteúdos)",
+            "Gestão de domínio (compra, renovação e DNS)",
+            "Atualizações de conteúdo no CMS",
+            "Pequenas alterações mensais (até 30 minutos por mês)"
           ]
         },
         {
           "title": "Independente",
           "price": "45 €",
-          "subtitle": "por mês, 540 € anual, excl. taxas",
-          "description": "Perfeito para negócios com lançamentos frequentes e conteúdo atualizado.",
+          "subtitle": "por mês, 540 € anual, IVA e custos de serviços externos não incluídos",
+          "description": "Para negócios com campanhas frequentes que querem crescer.",
           "features": [
             "Tudo incluído no plano 'Essencial Plus'",
             "Criação de landing pages para campanhas de marketing",
-            "Gestão de blog e páginas",
-            "Inclui até 3h/mês de alterações",
+            "Até 3 horas por mês de alterações e melhorias",
+            "Otimização contínua de SEO e performance",
             "Consultoria de performance e UX",
             "Gestão de domínios e subdomínios",
-            "Otimizações contínuas de SEO e performance",
-            "Suporte prioritário e execuções rápidas (resposta em 24h úteis)"
+            "Suporte prioritário (resposta em 24h úteis)"
           ]
         }
       ]
@@ -442,11 +440,11 @@
       },
       {
         "question": "Como funciona a manutenção mensal?",
-        "answer": "Todos os websites incluem um plano básico de manutenção no valor de 10 €/mês. Esse plano garante que o seu site continua rápido, seguro e funcional ao longo do tempo. Inclui monitorização 24/7, backups regulares, pequenas correções e suporte por email. Também pode solicitar pequenas alterações de até 30 minutos por trimestre."
+        "answer": "Todos os websites incluem um plano básico de manutenção no valor de 10 €/mês. Esse plano garante que o seu site continua seguro, disponível e funcional ao longo do tempo. Inclui monitorização contínua de cibersegurança, verificações periódicas de disponibilidade, pequenas correções e suporte por e-mail. Também pode solicitar pequenas alterações de até 30 minutos por trimestre."
       },
       {
         "question": "Preciso de pagar a manutenção mesmo que não peça alterações?",
-        "answer": "Sim. A manutenção cobre muito mais do que alterações visíveis. Garante que o site esteja sempre disponível, atualizado, com cópias de segurança ativas e pronto para responder a qualquer problema técnico inesperado."
+        "answer": "Sim. A manutenção cobre muito mais do que alterações visíveis. Garante que o site se mantém disponível, atualizado e pronto para responder a qualquer problema técnico inesperado."
       },
       {
         "question": "E se precisar de mais alterações do que as incluídas?",

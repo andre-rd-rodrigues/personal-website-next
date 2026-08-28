@@ -243,44 +243,42 @@
         {
           "title": "Essential",
           "price": "10 €",
-          "subtitle": "per month, 120 € annually, excl. taxes",
-          "description": "Hosting and basic technical monitoring.",
+          "subtitle": "per month, 120 € annually, VAT and external service costs not included",
+          "description": "Secure hosting and technical maintenance for your website.",
           "features": [
-            "Uptime monitoring",
-            "Availability checks",
-            "Infrastructure maintenance",
-            "Basic backups and alerts",
+            "Continuous cybersecurity monitoring",
+            "Preventive web infrastructure maintenance",
+            "Periodic availability checks (uptime)",
             "Basic email support",
-            "Limited updates (up to 30min/quarterly)"
+            "Limited changes and updates (up to 30 minutes per quarter)"
           ]
         },
         {
           "title": "Essential Plus",
           "price": "25 €",
-          "subtitle": "per month, 300 € annually, excl. taxes",
-          "description": "Ideal for businesses that need a dynamic website.",
+          "subtitle": "per month, 300 € annually, VAT and external service costs not included",
+          "description": "Ideal for businesses that publish regularly and want everything managed.",
           "features": [
             "Everything in the 'Essential' plan",
-            "Domain management (purchase, renewal, DNS, etc.)",
-            "Small monthly updates (up to 30min/month)",
+            "Blog and page management (publishing articles and content)",
+            "Domain management (purchase, renewal, and DNS)",
             "Content updates in the CMS",
-            "Ongoing support and regular improvements"
+            "Small monthly changes (up to 30 minutes per month)"
           ]
         },
         {
           "title": "Independent",
           "price": "45 €",
-          "subtitle": "per month, 540 € annually, excl. taxes",
-          "description": "Perfect for businesses with frequent launches and updated content.",
+          "subtitle": "per month, 540 € annually, VAT and external service costs not included",
+          "description": "For businesses with frequent campaigns that want to grow.",
           "features": [
             "Everything in the 'Essential Plus' plan",
             "Landing page creation for marketing campaigns",
-            "Blog and page management",
-            "Includes up to 3h/month of updates",
+            "Up to 3 hours per month of changes and improvements",
+            "Ongoing SEO and performance optimization",
             "Performance and UX consulting",
             "Domain and subdomain management",
-            "Ongoing SEO and performance optimization",
-            "Priority support and fast execution (response within 24 business hours)"
+            "Priority support (response within 24 business hours)"
           ]
         }
       ]
@@ -391,11 +389,11 @@
       },
       {
         "question": "How does the monthly maintenance work?",
-        "answer": "All websites include a basic maintenance plan at €10/month. This ensures your site remains fast, secure, and fully functional over time. It includes 24/7 monitoring, regular backups, minor fixes, and email support. You can also request up to 30 minutes of updates per quarter."
+        "answer": "All websites include a basic maintenance plan at €10/month. This ensures your site remains secure, available, and fully functional over time. It includes continuous cybersecurity monitoring, periodic availability checks, minor fixes, and email support. You can also request up to 30 minutes of updates per quarter."
       },
       {
         "question": "Do I need to pay for maintenance even if I don’t request changes?",
-        "answer": "Yes. Maintenance covers much more than visible changes. It ensures your site stays online, secure, backed up, and ready to handle any unexpected technical issues."
+        "answer": "Yes. Maintenance covers much more than visible changes. It ensures your site stays online, secure, up to date, and ready to handle any unexpected technical issues."
       },
       {
         "question": "What if I need more updates than what’s included?",
