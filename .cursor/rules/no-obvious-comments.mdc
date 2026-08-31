@@ -1,0 +1,29 @@
+---
+description: Avoid obvious, redundant, or code-narrating comments
+alwaysApply: true
+---
+
+# No Obvious Comments
+
+Do not add comments that are obvious, already explained by the code, or redundant. Let clear code and good naming speak for itself.
+
+Only add a comment when the code is genuinely not self-explanatory and truly requires very brief context (the "why", a non-obvious trade-off, or a constraint). This should be rare.
+
+```typescript
+// ❌ BAD — narrates what the code already says
+// Import the router
+import { useRouter } from '@/navigation';
+
+// Increment the counter
+count += 1;
+
+// Loop over items
+items.forEach((item) => render(item));
+
+// ✅ GOOD — no comment needed; code is self-explanatory
+count += 1;
+
+// ✅ GOOD — explains a non-obvious "why", kept brief
+// Safari clamps this below 16px, so bump to avoid iOS zoom-on-focus
+fontSize: '16px';
+```
