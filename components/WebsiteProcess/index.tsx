@@ -2,8 +2,6 @@ import { useTranslations } from 'next-intl';
 import ProcessStep from './ProcessStep';
 import useTranslation from '@/hooks/useTranslation';
 import TypeformPopup from '@/components/TypeformPopup';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
-import ICONS from '@/constants/icons.constants';
 import {
   containerVariant,
   fadeInSlideInVariant,
@@ -54,11 +52,7 @@ export default function WebsiteProcess() {
           variants={fadeInSlideInVariant}
           className="mt-16 flex justify-center"
         >
-          <TypeformPopup.Button
-            id={BUDGET_TYPEFORM_ID}
-            label="request_quote"
-            icon={ICONS.budget}
-          />
+          <TypeformPopup.Button intent="quote" />
         </motion.div>
       </motion.div>
     </section>

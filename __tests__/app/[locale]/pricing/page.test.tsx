@@ -17,14 +17,21 @@ describe('Pricing page', () => {
     expect(() => renderWithIntl(<Pricing />)).not.toThrow();
   });
 
-  it('renders packs section title and description', () => {
+  it('renders outcome-led page and package headings', () => {
     renderWithIntl(<Pricing />);
+    expect(
+      screen.getByRole('heading', {
+        name: /choose the right digital solution for your business’s next stage/i,
+        level: 1,
+      }),
+    ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', { name: 'Packages', level: 2 }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/Choose a package that grows with your business/),
+      screen.getByText(/clear starting points for launching/i),
     ).toBeInTheDocument();
+    expect(screen.getByText(/prices are indicative/i)).toBeInTheDocument();
   });
 
   it('renders all four pack titles', () => {
@@ -69,8 +76,8 @@ describe('Pricing page', () => {
   it('renders budget Typeform CTAs wired to the budget form', () => {
     renderWithIntl(<Pricing />);
     const budgetCtas = screen.getAllByTestId('typeform-popup-button');
-    // 4 desktop tier buttons + 4 mobile card buttons (+ the Development Stages CTA)
-    expect(budgetCtas.length).toBeGreaterThanOrEqual(8);
+    // Fast Track + 4 desktop tiers + 4 mobile cards + Development Stages
+    expect(budgetCtas.length).toBeGreaterThanOrEqual(10);
     budgetCtas.forEach((cta) => {
       expect(cta).toHaveAttribute('data-form-id', BUDGET_TYPEFORM_ID);
     });

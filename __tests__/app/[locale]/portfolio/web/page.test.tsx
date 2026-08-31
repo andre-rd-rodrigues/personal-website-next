@@ -27,13 +27,13 @@ describe('Portfolio Web page', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders Freelance and Corporate sections', () => {
+  it('distinguishes client projects from company experience', () => {
     renderWithIntl(<Web />);
     expect(
-      screen.getByRole('heading', { name: /^freelance$/i }),
+      screen.getByRole('heading', { name: /client projects/i }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('heading', { name: /^corporate$/i }),
+      screen.getByRole('heading', { name: /company experience/i }),
     ).toBeInTheDocument();
   });
 
@@ -45,7 +45,7 @@ describe('Portfolio Web page', () => {
 
   it('has link to portfolio mobile page', () => {
     renderWithIntl(<Web />);
-    const nextLink = screen.getByRole('link', { name: /mobile/i });
+    const nextLink = screen.getByRole('link', { name: /apps/i });
     expect(nextLink).toBeInTheDocument();
     expect(nextLink.getAttribute('href')).toMatch(/portfolio\/mobile/);
   });

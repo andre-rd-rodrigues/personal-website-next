@@ -12,19 +12,17 @@ jest.mock(
 );
 
 describe('Skills section (About page)', () => {
-  it('renders Skills heading', () => {
+  it('renders technical expertise heading', () => {
     renderWithIntl(<About />);
     expect(
-      screen.getByRole('heading', { name: /^skills$/i, level: 2 }),
+      screen.getByRole('heading', { name: /technical expertise/i, level: 2 }),
     ).toBeInTheDocument();
   });
 
   it('renders skills description', () => {
     renderWithIntl(<About />);
     expect(
-      screen.getByText(
-        /front-end and back-end development and infrastructure/i,
-      ),
+      screen.getByText(/frontend and backend development, infrastructure/i),
     ).toBeInTheDocument();
   });
 

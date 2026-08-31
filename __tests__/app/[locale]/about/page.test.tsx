@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import About from '@/app/[locale]/about/page';
+import { TYPEFORM_ID } from '@/constants/common.constants';
 
 jest.mock(
   '@/components/RadarChart',
@@ -39,21 +40,21 @@ describe('About page', () => {
   it('renders about me description text', () => {
     renderWithIntl(<About />);
     expect(
-      screen.getByText(/I love this quote by Steve Jobs/i),
+      screen.getByText(/I turned a passion for technology/i),
     ).toBeInTheDocument();
   });
 
-  it('renders Skills section title', () => {
+  it('renders technical expertise section title', () => {
     renderWithIntl(<About />);
     expect(
-      screen.getByRole('heading', { name: /^skills$/i, level: 2 }),
+      screen.getByRole('heading', { name: /technical expertise/i, level: 2 }),
     ).toBeInTheDocument();
   });
 
   it('renders contact section with schedule title', () => {
     renderWithIntl(<About />);
     expect(
-      screen.getByRole('heading', { name: /schedule a meeting/i, level: 2 }),
+      screen.getByRole('heading', { name: /book a consultation/i, level: 2 }),
     ).toBeInTheDocument();
   });
 
@@ -86,8 +87,11 @@ describe('About page', () => {
     expect(charts).toHaveLength(2);
   });
 
-  it('renders contact CTA button (Typeform popup)', () => {
+  it('routes the contact CTA to the consultation form', () => {
     renderWithIntl(<About />);
-    expect(screen.getByTestId('typeform-popup-button')).toBeInTheDocument();
+    expect(screen.getByTestId('typeform-popup-button')).toHaveAttribute(
+      'data-form-id',
+      TYPEFORM_ID,
+    );
   });
 });

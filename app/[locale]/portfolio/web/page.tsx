@@ -18,6 +18,7 @@ import { useTranslations } from 'next-intl';
 
 const Web = () => {
   const t = useTranslations('projects.web');
+  const labels = useTranslations('portfolio.labels');
 
   const projects = PROJECTS.web;
 
@@ -31,7 +32,7 @@ const Web = () => {
       </Section>
 
       <div className="mb-16">
-        <SectionTitle title="Overview" color="primary" />
+        <SectionTitle title={labels('overview')} color="primary" />
         <motion.p
           variants={workPageHeaderContent}
           initial="hidden"
@@ -42,7 +43,7 @@ const Web = () => {
       </div>
 
       <div className="mb-16">
-        <SectionTitle title="Freelance" color="primary" />
+        <SectionTitle title={labels('freelance')} color="primary" />
         <motion.div
           variants={containerVariant}
           initial="hidden"
@@ -60,7 +61,7 @@ const Web = () => {
       </div>
 
       <div className="mb-16">
-        <SectionTitle title="Corporate" color="primary" />
+        <SectionTitle title={labels('corporate')} color="primary" />
         <motion.div
           variants={containerVariant}
           initial="hidden"
@@ -79,8 +80,8 @@ const Web = () => {
 
       {/* Next category button */}
       <Link href={`/portfolio/mobile`} className={styles.nextCategoryContainer}>
-        <p>NEXT</p>
-        <p>Mobile</p>
+        <p>{labels('next')}</p>
+        <p>{labels('mobile')}</p>
         <Icon icon="bi:arrow-right-short" className={styles.arrow} />
       </Link>
     </PageContainer>

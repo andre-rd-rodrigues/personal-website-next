@@ -2,8 +2,6 @@
 import Card from '@/components/Card';
 import PageContainer from '@/components/PageContainer/PageContainer';
 import TypeformPopup from '@/components/TypeformPopup';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
-import ICONS from '@/constants/icons.constants';
 import useTranslation from '@/hooks/useTranslation';
 import { useTranslations } from 'next-intl';
 import {
@@ -24,12 +22,33 @@ const Pricing = () => {
 
   return (
     <PageContainer>
-      <div className="m-auto max-w-2xl text-center">
+      <div className="m-auto max-w-4xl text-center">
+        <motion.h1
+          variants={fadeInSlideLeftVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="text-balance text-4xl font-light leading-tight text-[var(--color-primary)] sm:text-5xl md:text-6xl"
+          viewport={{ once: true }}
+        >
+          {t('heroTitle')}
+        </motion.h1>
+        <motion.p
+          variants={fadeInVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="mx-auto mt-8 max-w-2xl text-pretty text-white/80"
+          viewport={{ once: true }}
+        >
+          {t('description')}
+        </motion.p>
+      </div>
+
+      <div className="mx-auto mt-20 max-w-2xl text-center">
         <motion.h2
           variants={fadeInSlideLeftVariant}
           initial="hidden"
           whileInView="visible"
-          className="mb-10 text-center text-6xl text-[var(--color-primary)]"
+          className="text-4xl font-light text-white md:text-5xl"
           viewport={{ once: true }}
         >
           {t('packs.title')}
@@ -38,9 +57,19 @@ const Pricing = () => {
           variants={fadeInVariant}
           initial="hidden"
           whileInView="visible"
+          className="mt-6 text-pretty text-white/80"
           viewport={{ once: true }}
         >
           {t('packs.description')}
+        </motion.p>
+        <motion.p
+          variants={fadeInVariant}
+          initial="hidden"
+          whileInView="visible"
+          className="mt-3 text-pretty text-sm text-white/60"
+          viewport={{ once: true }}
+        >
+          {t('packs.subtitle')}
         </motion.p>
       </div>
 
@@ -77,6 +106,9 @@ const Pricing = () => {
           )}
         </ul>
         <p className="text-sm text-white/60">{t('fastTrack.scopeNote')}</p>
+        <div className="mt-6">
+          <TypeformPopup.Button intent="quote" />
+        </div>
       </motion.div>
 
       {/* Pricing Table - Desktop */}
@@ -242,12 +274,7 @@ const Pricing = () => {
               {/* Action Row */}
               <tr>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <TypeformPopup.Button
-                    id={BUDGET_TYPEFORM_ID}
-                    label="request_quote"
-                    icon={ICONS.budget}
-                    fullWidth
-                  />
+                  <TypeformPopup.Button intent="quote" fullWidth />
                 </td>
                 <td
                   className="overflow-hidden border-b border-l border-r border-gray-800 bg-gray-800/10 px-4 py-4 text-center md:px-6 md:py-6"
@@ -256,28 +283,13 @@ const Pricing = () => {
                     borderBottomRightRadius: '1.5rem',
                   }}
                 >
-                  <TypeformPopup.Button
-                    id={BUDGET_TYPEFORM_ID}
-                    label="request_quote"
-                    icon={ICONS.budget}
-                    fullWidth
-                  />
+                  <TypeformPopup.Button intent="quote" fullWidth />
                 </td>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <TypeformPopup.Button
-                    id={BUDGET_TYPEFORM_ID}
-                    label="request_quote"
-                    icon={ICONS.budget}
-                    fullWidth
-                  />
+                  <TypeformPopup.Button intent="quote" fullWidth />
                 </td>
                 <td className="px-4 py-4 text-center md:px-6 md:py-6">
-                  <TypeformPopup.Button
-                    id={BUDGET_TYPEFORM_ID}
-                    label="request_quote"
-                    icon={ICONS.budget}
-                    fullWidth
-                  />
+                  <TypeformPopup.Button intent="quote" fullWidth />
                 </td>
               </tr>
             </tbody>
@@ -322,12 +334,7 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <TypeformPopup.Button
-              id={BUDGET_TYPEFORM_ID}
-              label="request_quote"
-              icon={ICONS.budget}
-              fullWidth
-            />
+            <TypeformPopup.Button intent="quote" fullWidth />
           </div>
         </div>
 
@@ -371,12 +378,7 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <TypeformPopup.Button
-              id={BUDGET_TYPEFORM_ID}
-              label="request_quote"
-              icon={ICONS.budget}
-              fullWidth
-            />
+            <TypeformPopup.Button intent="quote" fullWidth />
           </div>
         </div>
 
@@ -420,12 +422,7 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <TypeformPopup.Button
-              id={BUDGET_TYPEFORM_ID}
-              label="request_quote"
-              icon={ICONS.budget}
-              fullWidth
-            />
+            <TypeformPopup.Button intent="quote" fullWidth />
           </div>
         </div>
 
@@ -455,12 +452,7 @@ const Pricing = () => {
             )}
           </ul>
           <div className="mt-6">
-            <TypeformPopup.Button
-              id={BUDGET_TYPEFORM_ID}
-              label="request_quote"
-              icon={ICONS.budget}
-              fullWidth
-            />
+            <TypeformPopup.Button intent="quote" fullWidth />
           </div>
         </div>
       </motion.div>

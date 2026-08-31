@@ -84,7 +84,7 @@ const Portfolio = () => {
       <Section>
         <HeroSection.Cta
           text={t('contact.description')}
-          cta={<TypeformPopup.Button />}
+          cta={<TypeformPopup.Button intent="consultation" />}
         />
       </Section>
     </PageContainer>

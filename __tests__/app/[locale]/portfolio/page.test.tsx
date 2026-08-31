@@ -1,6 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Portfolio from '@/app/[locale]/portfolio/page';
+import { TYPEFORM_ID } from '@/constants/common.constants';
 
 jest.mock('@/components/Testimonials', () => ({
   __esModule: true,
@@ -10,17 +11,10 @@ jest.mock('@/components/Testimonials', () => ({
       'data-testid': 'testimonials-mock',
     }),
 }));
-jest.mock('@/components/TypeformPopup', () => ({
-  __esModule: true,
-  default: {
-    Button: () =>
-      React.createElement(
-        'button',
-        { 'data-testid': 'typeform-popup-button', type: 'button' },
-        'Contact',
-      ),
-  },
-}));
+jest.mock(
+  '@/components/TypeformPopup',
+  () => require('@/__tests__/__mocks__/components/TypeformPopup').default,
+);
 
 describe('Portfolio page', () => {
   it('renders without throwing', () => {
@@ -56,16 +50,14 @@ describe('Portfolio page', () => {
   it('renders hero section with translated title', () => {
     const { container } = renderWithIntl(<Portfolio />);
     expect(container.textContent).toMatch(
-      /helpingyouseamlesslybuildonlinesolutions/i,
+      /digitalsolutionsshapedaroundyourbusinessgoals/i,
     );
   });
 
   it('renders hero section description', () => {
     renderWithIntl(<Portfolio />);
     expect(
-      screen.getByText(
-        /with so many options available, its easy to get overwhelmed/i,
-      ),
+      screen.getByText(/every project starts by understanding the problem/i),
     ).toBeInTheDocument();
   });
 
@@ -82,11 +74,14 @@ describe('Portfolio page', () => {
     ).toBe(true);
   });
 
-  it('renders contact CTA with Typeform button', () => {
+  it('routes the contact CTA to the consultation form', () => {
     const { container } = renderWithIntl(<Portfolio />);
     expect(container.textContent).toMatch(
-      /schedulenowandenjoyafreeconsultationsession/i,
+      /bookafreeconsultationandwe’lldefinethenextstepstogether/i,
     );
-    expect(screen.getByTestId('typeform-popup-button')).toBeInTheDocument();
+    expect(screen.getByTestId('typeform-popup-button')).toHaveAttribute(
+      'data-form-id',
+      TYPEFORM_ID,
+    );
   });
 });

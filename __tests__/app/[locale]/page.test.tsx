@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Home from '@/app/[locale]/page';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
+import { BUDGET_TYPEFORM_ID, TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 
 jest.mock(
@@ -22,23 +22,32 @@ describe('Home page', () => {
     expect(() => renderWithIntl(<Home />)).not.toThrow();
   });
 
-  it('renders hero with name André Rodrigo', () => {
+  it('renders an outcome-led hero with André Rodrigo as supporting identity', () => {
     renderWithIntl(<Home />);
     expect(
-      screen.getByRole('heading', { name: /andré rodrigo/i, level: 1 }),
+      screen.getByRole('heading', {
+        name: /fast, secure digital solutions built for real growth/i,
+        level: 1,
+      }),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/^André Rodrigo$/)).toBeInTheDocument();
+  });
+
+  it('renders the hero benefit statement and authority proof', () => {
+    renderWithIntl(<Home />);
+    expect(
+      screen.getByText(/custom websites, apps, and AI automations/i),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/5\+ years of experience.*15\+ projects/i),
     ).toBeInTheDocument();
   });
 
-  it('renders hero subtitle', () => {
+  it('renders the projects and results CTA link in hero', () => {
     renderWithIntl(<Home />);
-    expect(
-      screen.getByText(/production of websites, apps and digital presence/i),
-    ).toBeInTheDocument();
-  });
-
-  it('renders Portfolio CTA link in hero', () => {
-    renderWithIntl(<Home />);
-    const portfolioLink = screen.getByRole('link', { name: /portfolio/i });
+    const portfolioLink = screen.getByRole('link', {
+      name: /view projects and results/i,
+    });
     expect(portfolioLink).toBeInTheDocument();
     expect(portfolioLink.getAttribute('href')).toMatch(/portfolio/);
   });
@@ -53,9 +62,7 @@ describe('Home page', () => {
   it('renders about description', () => {
     renderWithIntl(<Home />);
     expect(
-      screen.getByText(
-        /my name is André Rodrigo[\s\S]*Senior Software Engineer/i,
-      ),
+      screen.getByText(/I’m André Rodrigo[\s\S]*Senior Software Engineer/i),
     ).toBeInTheDocument();
   });
 
@@ -98,9 +105,11 @@ describe('Home page', () => {
     ).toBeInTheDocument();
   });
 
-  it('renders Skills button linking to about', () => {
+  it('renders expertise button linking to about', () => {
     renderWithIntl(<Home />);
-    const skillsLink = screen.getByRole('link', { name: /skills/i });
+    const skillsLink = screen.getByRole('link', {
+      name: /see competencies|skills/i,
+    });
     expect(skillsLink).toBeInTheDocument();
     expect(skillsLink.getAttribute('href')).toMatch(/about/);
   });
@@ -109,7 +118,7 @@ describe('Home page', () => {
     const { container } = renderWithIntl(<Home />);
     // portfolio_parallax.title may be split across elements
     expect(container.textContent).toMatch(
-      /delivering impactful|solutions to elevate your brand/i,
+      /digital solutions|built for real challenges/i,
     );
   });
 
@@ -132,7 +141,7 @@ describe('Home page', () => {
     expect(screen.getByTestId('testimonials-mock')).toBeInTheDocument();
   });
 
-  it('renders contact CTAs with a budget Typeform button alongside schedule', () => {
+  it('routes consultation and quote CTAs to their dedicated forms', () => {
     renderWithIntl(<Home />);
     const ctas = screen.getAllByTestId('typeform-popup-button');
     expect(ctas.length).toBeGreaterThanOrEqual(2);
@@ -140,5 +149,11 @@ describe('Home page', () => {
       (cta) => cta.getAttribute('data-form-id') === BUDGET_TYPEFORM_ID,
     );
     expect(budgetCta).toBeDefined();
+    const consultationCta = ctas.find(
+      (cta) =>
+        cta.getAttribute('data-form-id') === TYPEFORM_ID &&
+        cta.getAttribute('data-intent') === 'consultation',
+    );
+    expect(consultationCta).toBeDefined();
   });
 });

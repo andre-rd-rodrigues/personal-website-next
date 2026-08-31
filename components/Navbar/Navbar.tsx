@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react';
 import ICONS from '@/constants/icons.constants';
 import { Link } from '@/navigation';
 import LanguageSelector from '../LanguageSelector';
+import TypeformPopup from '../TypeformPopup';
 import { useTranslations } from 'next-intl';
 
 const navItems = [
@@ -62,8 +63,8 @@ export default function Navbar() {
                 </div>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-center">
+            <div className="hidden lg:block">
+              <div className="ml-6 flex items-center">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
@@ -78,15 +79,16 @@ export default function Navbar() {
                     {t(item.label)}
                   </Link>
                 ))}
+                <TypeformPopup.Minimal intent="consultation" />
                 <LanguageSelector />
               </div>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">{t('openMenu')}</span>
                 <Icon
                   icon={ICONS.menu}
                   className="block h-6 w-6"
@@ -106,7 +108,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="mt-2 md:hidden"
+            className="mt-2 lg:hidden"
           >
             <div className="border-1 rounded-lg border-gray-800 bg-gray-800 bg-opacity-10 shadow-lg backdrop-blur-[20px]">
               <div className="space-y-1 px-2 py-4 sm:px-3">
@@ -125,6 +127,12 @@ export default function Navbar() {
                     {t(item.label)}
                   </Link>
                 ))}
+                <div
+                  className="flex justify-end px-3 pt-3"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <TypeformPopup.Minimal intent="consultation" fullWidth />
+                </div>
                 <LanguageSelector className="flex justify-end pt-3" />
               </div>
             </div>

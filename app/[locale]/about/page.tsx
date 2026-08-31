@@ -111,7 +111,7 @@ const About = () => {
         <SectionTitle title={t('contact.title')} color="primary" tag="h2" />
         <HeroSection.Cta
           text={t('contact.description')}
-          cta={<TypeformPopup.Button />}
+          cta={<TypeformPopup.Button intent="consultation" />}
         />
       </Section>
     </PageContainer>

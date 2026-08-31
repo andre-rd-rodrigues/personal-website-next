@@ -19,6 +19,7 @@ import Section from '@/components/Section';
 
 const Mobile = () => {
   const t = useTranslations('projects.mobile');
+  const labels = useTranslations('portfolio.labels');
 
   const projects = PROJECTS.mobile;
 
@@ -32,7 +33,7 @@ const Mobile = () => {
       </Section>
 
       <div className="mb-16">
-        <SectionTitle title="Overview" color="primary" />
+        <SectionTitle title={labels('overview')} color="primary" />
         <motion.p
           variants={workPageHeaderContent}
           initial="hidden"
@@ -57,8 +58,8 @@ const Mobile = () => {
 
       {/* Next category button */}
       <Link href={`/portfolio/web`} className={styles.nextCategoryContainer}>
-        <p>NEXT</p>
-        <p>Web</p>
+        <p>{labels('next')}</p>
+        <p>{labels('web')}</p>
         <Icon icon="bi:arrow-right-short" className={styles.arrow} />
       </Link>
     </PageContainer>

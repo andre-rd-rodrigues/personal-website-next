@@ -418,7 +418,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Bárbara Barbizani',
     src: '/videos/bb.webm',
-    ctaText: 'View Project',
     ctaLink: 'https://www.barbizanicarvalholaw.com/',
     content: (t) => <p>{t('projects.web.projects.bb')}</p>,
     colSpan: 1,
@@ -426,7 +425,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Brennda Castro',
     src: '/videos/brenndacastro.webm',
-    ctaText: 'View Project',
     ctaLink: 'https://www.brenndamassagem.com/',
     content: (t) => <p>{t('projects.web.projects.brenndaCastro')}</p>,
     colSpan: 1,
@@ -434,7 +432,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Filipa Marques',
     src: '/videos/filipamarques.webm',
-    ctaText: 'View Project',
     ctaLink: 'https://www.filipamarques.com/',
     content: (t) => <p>{t('projects.web.projects.filipaMarques')}</p>,
     colSpan: 1,
@@ -442,7 +439,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Pipedrive',
     src: '/videos/pipedrive.webm',
-    ctaText: 'View Project',
     ctaLink: 'https://www.pipedrive.com',
     content: (t) => <p>{t('projects.web.projects.pipedrive')}</p>,
     colSpan: 2,
@@ -450,7 +446,6 @@ const MAIN_PROJECTS: ExpandableCard[] = [
   {
     title: 'Snyk',
     src: '/videos/snyk.webm',
-    ctaText: 'View Project',
     ctaLink: 'https://www.snyk.io',
     content: (t) => <p>{t('projects.web.projects.snyk')}</p>,
     colSpan: 1,

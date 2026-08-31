@@ -30,7 +30,8 @@ const Footer = () => {
         ))}
       </div>
       <div className="mb-0 flex items-center gap-1 text-sm font-extralight">
-        &#169; 2022 by <span className="text-pink">André Rodrigo</span>
+        &#169; {new Date().getFullYear()}{' '}
+        <span className="text-pink">André Rodrigo</span>
       </div>
     </motion.footer>
   );

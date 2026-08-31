@@ -16,7 +16,6 @@ import { Compare } from '@/components/ui/compare';
 import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
 import { FlipWords } from '@/components/ui/flip-words';
 import WebsiteProcess from '@/components/WebsiteProcess';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import { EXPERTISE, MAIN_PROJECTS } from '@/data/info.data';
@@ -58,25 +57,27 @@ const Home = () => {
                 alt="André Rodrigo - Senior Software Engineer"
               />
             </motion.span>
-            <motion.h1
+            <motion.p
               variants={fadeInSlideInVariant}
-              className="w-full py-3 text-center text-2xl font-normal uppercase tracking-wider text-pink sm:text-[25px] md:text-left"
+              className="w-full py-3 text-center text-lg font-normal uppercase tracking-wider text-pink sm:text-xl md:text-left"
             >
               André Rodrigo
+            </motion.p>
+            <motion.h1
+              variants={fadeInSlideInVariant}
+              className="mt-4 w-full max-w-3xl text-balance text-center text-4xl font-light leading-tight sm:text-5xl md:text-left lg:text-6xl"
+            >
+              {t('homepage.title')}
             </motion.h1>
             <motion.p
               variants={fadeInSlideInVariant}
-              className="mt-8 w-full text-center opacity-70 md:text-left"
+              className="mt-6 w-full max-w-2xl text-pretty text-center text-lg text-white/80 md:text-left md:text-xl"
             >
               {t('homepage.subtitle')}
             </motion.p>
             <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-3 md:justify-start">
               <motion.span variants={fadeInSlideInVariant}>
-                <TypeformPopup.Button
-                  id={BUDGET_TYPEFORM_ID}
-                  label="request_quote"
-                  icon={ICONS.budget}
-                />
+                <TypeformPopup.Button intent="consultation" />
               </motion.span>
               <motion.span variants={fadeInSlideInVariant}>
                 <Link href="/portfolio/web">
@@ -84,6 +85,12 @@ const Home = () => {
                 </Link>
               </motion.span>
             </div>
+            <motion.p
+              variants={fadeInSlideInVariant}
+              className="mt-6 max-w-2xl text-pretty text-center text-sm text-white/70 md:text-left"
+            >
+              {t('homepage.authority')}
+            </motion.p>
           </div>
           <div className="flex flex-1 items-center justify-center md:justify-end">
             <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
@@ -114,7 +121,7 @@ const Home = () => {
                 className="col-span-12 flex h-full justify-center sm:col-span-5"
               >
                 <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
-                  <InfoCounter label={t('about.experience.years')} end={4} />
+                  <InfoCounter label={t('about.experience.years')} end={5} />
                   <InfoCounter
                     label={t('about.experience.projects')}
                     end={15}
@@ -169,7 +176,7 @@ const Home = () => {
       {/* Expertise */}
       <Container>
         <Section className="mt-12 md:mt-28">
-          <SectionTitle tag="h2" title="Expertise" />
+          <SectionTitle tag="h2" title={t('homepage.expertiseTitle')} />
           <motion.div
             variants={containerVariant}
             initial="hidden"
@@ -313,12 +320,8 @@ const Home = () => {
             text={t('homepage.contact.description')}
             cta={
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <TypeformPopup.Button
-                  id={BUDGET_TYPEFORM_ID}
-                  label="request_quote"
-                  icon={ICONS.budget}
-                />
-                <TypeformPopup.Minimal label="schedule" icon={ICONS.calendar} />
+                <TypeformPopup.Button intent="quote" />
+                <TypeformPopup.Minimal intent="consultation" />
               </div>
             }
           />

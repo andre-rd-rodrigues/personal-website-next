@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 
 import Button from '@/components/Button';
 import PageContainer from '@/components/PageContainer/PageContainer';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 import ICONS from '@/constants/icons.constants';
 import {
@@ -22,10 +21,9 @@ const Contacts = () => {
     <PageContainer className={styles.container}>
       <div className="flex flex-wrap items-center justify-center gap-10 text-center sm:flex-nowrap sm:justify-start sm:gap-40 sm:text-start">
         <div className="">
-          <h1 className="absolute opacity-0">{t('title')}</h1>
-          <p className="text-6xl font-light sm:font-extralight md:text-8xl">
+          <h1 className="text-6xl font-light sm:font-extralight md:text-8xl">
             {t('title')}
-          </p>
+          </h1>
         </div>
 
         <motion.div
@@ -83,15 +81,8 @@ const Contacts = () => {
               variants={fadeInSlideInVariant}
               className="flex flex-wrap items-center gap-4"
             >
-              <TypeformPopup.Minimal
-                label="send_message"
-                icon={ICONS.message}
-              />
-              <TypeformPopup.Button
-                id={BUDGET_TYPEFORM_ID}
-                label="request_quote"
-                icon={ICONS.budget}
-              />
+              <TypeformPopup.Minimal intent="message" />
+              <TypeformPopup.Button intent="quote" />
             </motion.div>
           </motion.div>
         </motion.div>

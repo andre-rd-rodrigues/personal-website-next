@@ -1,5 +1,10 @@
 import React from 'react';
-import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
+import {
+  act,
+  fireEvent,
+  renderWithIntl,
+  screen,
+} from '@/__tests__/utils/test.utils';
 
 jest.mock(
   '@/components/Testimonials',
@@ -9,12 +14,17 @@ jest.mock(
   '@/components/LanguageSelector',
   () => require('@/__tests__/__mocks__/components/LanguageSelector').default,
 );
+jest.mock(
+  '@/components/TypeformPopup',
+  () => require('@/__tests__/__mocks__/components/TypeformPopup').default,
+);
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import HeroSection from '@/components/Hero';
 import Navbar from '@/components/Navbar/Navbar';
 import SectionTitle from '@/components/SectionTitle';
 import Testimonials from '@/components/Testimonials';
+import { TYPEFORM_ID } from '@/constants/common.constants';
 
 describe('Smoke: core components (no i18n)', () => {
   it('Container renders without throwing', () => {
@@ -53,9 +63,27 @@ describe('Smoke: framer-motion', () => {
 });
 
 describe('Smoke: next-intl + app shell', () => {
-  it('Navbar renders without throwing', () => {
+  it('Navbar renders with consultation CTAs', async () => {
     renderWithIntl(<Navbar />);
     expect(screen.getByRole('navigation')).toBeInTheDocument();
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+
+    const desktopCta = screen.getByTestId('typeform-popup-button');
+    expect(desktopCta).toHaveAttribute('data-intent', 'consultation');
+    expect(desktopCta).toHaveAttribute('data-form-id', TYPEFORM_ID);
+
+    fireEvent.click(screen.getByRole('button', { name: /open main menu/i }));
+
+    const consultationCtas = screen
+      .getAllByTestId('typeform-popup-button')
+      .filter((cta) => cta.getAttribute('data-intent') === 'consultation');
+    expect(consultationCtas).toHaveLength(2);
+    consultationCtas.forEach((cta) => {
+      expect(cta).toHaveAttribute('data-form-id', TYPEFORM_ID);
+    });
   });
 });
 

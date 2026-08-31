@@ -8,23 +8,28 @@
     "testimonials": "Testimonials",
     "skills": "Skills",
     "pricing": "Pricing",
-    "faqs": "FAQs"
+    "faqs": "FAQs",
+    "cta": "Book a free consultation",
+    "openMenu": "Open main menu"
   },
 
   "homepage": {
-    "subtitle": "Production of websites, apps and digital presence",
-    "cta": "View portfolio",
+    "title": "Fast, secure digital solutions built for real growth",
+    "subtitle": "I build custom websites, apps, and AI automations that help businesses attract customers, streamline operations, and scale with confidence.",
+    "authority": "5+ years of experience · 15+ projects · Experience at Snyk, Pipedrive and Peacock",
+    "cta": "View projects and results",
+    "expertiseTitle": "Expertise",
     "form": {
       "button": "Contact"
     },
     "about": {
       "title": "About me",
-      "description": "Hi, I’m André Rodrigo. I turned my passion for technology into a career dedicated to building digital solutions that combine functionality, security, and innovation.\n\nWith over 5 years of experience as a Senior Software Engineer, I help companies turn their strategic vision into high-performance technology. I build bespoke software — from e-commerce ecosystems to complex applications — and integrate Automation and AI consulting with modern Cybersecurity practices.\n\nThe goal is always the same: optimize your operation, protect your ecosystem, and maximize your business profitability."
+      "description": "I’m André Rodrigo, a Senior Software Engineer with more than 5 years of experience. I help businesses turn their goals into fast, secure, and easy-to-use websites, applications, and digital tools.\n\nI combine custom development, AI automation, and modern cybersecurity practices to streamline operations, reduce risk, and create strong foundations for growth."
     },
 
     "rebrand_hero": {
       "title": "Stand out from the competition",
-      "description": "With a new website, my clients experienced a 300% increase in customer interactions. Stand out from the competition.",
+      "description": "For Bárbara Barbizani, the rebrand turned complex legal services into a clearer, more credible digital experience, delivered with close collaboration and on schedule.",
       "flipWords": {
         "part1": "by making your website",
         "words": ["modern", "user-focused", "engaging"]
@@ -32,25 +37,34 @@
     },
 
     "contact": {
-      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
+      "description": "Have a project in mind? Book a free consultation to clarify priorities, scope, and next steps."
     }
   },
 
   "portfolio": {
     "title": "Portfolio",
+    "labels": {
+      "overview": "Overview",
+      "freelance": "Client projects",
+      "corporate": "Company experience",
+      "next": "Next",
+      "web": "Web",
+      "mobile": "Apps",
+      "viewProject": "View project"
+    },
 
     "categories": {
-      "websites": "Creation of modern websites to attract more customers and boost your sales.",
-      "apps": "Development of mobile apps so you can be in your customers' pockets 24/7.",
-      "design": "Innovative and unique designs to help you stand out from the competition."
+      "websites": "Fast, search-optimised websites designed to attract customers and support sales.",
+      "apps": "Intuitive mobile apps that bring your service closer to customers wherever they are.",
+      "design": "Clear, distinctive digital experiences that strengthen your brand’s credibility."
     },
 
     "heroSection": {
-      "title": "Helping you seamlessly build online solutions",
-      "description": "With so many options available, its easy to get overwhelmed. My role is to help you navigate the digital landscape and create long-lasting solutions for your business."
+      "title": "Digital solutions shaped around your business goals",
+      "description": "Every project starts by understanding the problem, setting priorities, and choosing the right solution. The result is custom technology without unnecessary complexity."
     },
     "contact": {
-      "description": "Have a project in mind? Schedule now and enjoy a free consultation session."
+      "description": "Not sure where to start? Book a free consultation and we’ll define the next steps together."
     }
   },
 
@@ -58,7 +72,7 @@
     "web": {
       "heroTitle": "The Internet is becoming the town square for the global village of tomorrow.",
       "heroDescription": "- Bill Gates, Co-founder of Microsoft",
-      "description": "I have always strived to create websites that are not only aesthetically pleasing but also intuitive and user-friendly. I believe that the integration of modern technologies and frameworks has allowed me to achieve this goal while also enhancing the performance of the websites that I develop.\nIn this section, you'll find personal and client projects where I've utilized a range of modern technologies such as React, Redux, Next JS, Web basics, Figma, Sketch and Affinity to create visually stunning and functionally-rich websites.\nI hope that you will enjoy the websites as much as I enjoyed developing them!",
+      "description": "A selection of client projects and company experience. Each case highlights the challenge, the solution delivered, and the value of the work, from business websites to digital products used at global scale.",
       "projects": {
         "title": "Projects",
         "filipaMarques": "Filipa Marques is a sports psychology and NLP mental-performance coach who helps athletes master pressure and turn their potential into results. This project is a complete rebranding designed to strengthen her online presence and credibility, presenting her method, services, podcast, and articles through a refined, high-performance interface that inspires trust.",
@@ -93,7 +107,7 @@
     "mobile": {
       "heroTitle": "Mobile will ultimately be the way you provision most of your services.",
       "heroDescription": "- Sundar Pichai, CEO of Google",
-      "description": "I am excited to showcase some of my personal projects specifically focused on mobile apps! As technology continues to advance, mobile devices have become an essential part of our daily lives, and developing mobile apps has become an increasingly important skill in the tech industry.\nHere you'll find some of my mobile apps projects, where I've utilized modern technologies and frameworks such as React Native.\nSo, take a look around, and please feel free to contact me if you have any questions or feedback. Thank you for visiting!",
+      "description": "Mobile apps designed from concept through implementation in React Native. These projects explore simple, responsive experiences built for everyday use.",
       "projects": {
         "title": "Projects",
         "giggle": "Need a good laugh? Giggle! has got you covered! Dive into a world of endless laughter with our hilarious collection of jokes, puns, and funny stories. Whether you're feeling down or just in need of a pick-me-up, Giggle! is here to brighten your day and leave you smiling from ear to ear. Get ready to LOL your way through the day! ",
@@ -112,11 +126,11 @@
       "main": {
         "design": {
           "title": "Design",
-          "description": "You will have a unique and captivating design, tailored to your business area."
+          "description": "You will receive a distinctive design tailored to your business goals."
         },
         "programming": {
           "title": "Programming",
-          "description": "Develpment of the website and domain of your choice"
+          "description": "Website development and implementation, including support with domain setup."
         },
         "seo": {
           "title": "SEO Optimization",
@@ -124,7 +138,7 @@
         },
         "metrics": {
           "title": "Metrics and Campaigns",
-          "description": "You will have access to complete reports on who visits your website and to conducting online campaigns!"
+          "description": "Use essential metrics to understand visits, evaluate results, and guide campaigns."
         }
       },
 
@@ -132,13 +146,13 @@
         "title": "Extra",
         "branding": {
           "title": "Branding",
-          "description": "Would you also like to create or recreate your brand image? No problem! For an attractive price, we include branding in the package."
+          "description": "Need to create or refresh your brand identity too? Branding can be included according to the agreed project scope."
         }
       }
     },
     "about_me": {
       "title": "About me",
-      "description": "I love this quote by Steve Jobs. This idea has guided me since the day I turned my passion for technology into my career path. I'm all in when it comes to building digital projects and constantly learning new things to keep pushing the envelope, but its so easy to forget the user in the process. That's why I'm big on the little things, dreaming up creative ways to view the world, and diving deep into the details, so I can craft tailor-made solutions that have a true impact on the user experience.\nSince the moment I turned my passion for technology into a career, I’ve been dedicated to developing digital solutions that combine functionality, security, and innovation. My work focuses on creating real value for companies and clients by integrating modern cybersecurity practices, process automation, and AI-driven tools that optimize operations and enhance results.\nWith a meticulous approach, strong attention to detail, and a creative problem-solving mindset, I develop tailored solutions ranging from websites and web apps to internal business tools and systems. Throughout my career, I’ve collaborated with organizations across different sectors, adapting technological strategies to the unique needs of each project.\nMy goal is to build long-term relationships and actively contribute to the development of solid, efficient, and scalable digital products — always with a focus on quality, security, and strategic impact."
+      "description": "I turned a passion for technology into a career focused on solving real problems. I build websites, applications, and internal tools that combine a clear user experience with performance, security, and maintainability.\n\nThroughout my career, I have worked with organisations of different sizes and across multiple sectors. That experience helps me fit the solution to each business context without imposing unnecessary technology or complexity.\n\nI aim to build lasting relationships and dependable digital products through close communication, attention to detail, and a clear focus on outcomes."
     },
     "experience": {
       "title": "Build lasting and meaningful relationships",
@@ -147,21 +161,21 @@
       "years": "Years of experience"
     },
     "contact": {
-      "title": "Schedule a meeting",
-      "description": "Want to know more about my journey or discuss a potential project? I'd love to hear from you! Let's chat."
+      "title": "Book a consultation",
+      "description": "Want to learn more about my experience or discuss a project? Book a free consultation."
     }
   },
 
   "pricing": {
-    "heroTitle": "Safe, fast and personalized solutions that follow your business growth.",
+    "heroTitle": "Choose the right digital solution for your business’s next stage",
     "title": "Pricing",
-    "description": "Choose a package that grows with your business — fast, secure, and custom-built.",
+    "description": "Reference prices, clear scope, and solutions that adapt to your business needs.",
     "fastTrack": {
-      "badge": "Fast track",
+      "badge": "Launch in 5 days",
       "headline": "Your original website, ready in 5 days.",
       "price": "550 €",
       "subtitle": "*Base price for agile projects",
-      "description": "Need to go live now? This pack is designed for anyone who can’t wait months. I use an advanced workflow with AI support to deliver a site that looks sharp, stays secure, and is optimized for sales — without the delays of traditional development.",
+      "description": "Need to launch quickly? I use an efficient, AI-supported process to deliver a polished, secure website optimised for conversion without compromising quality.",
       "includes": [
         "High-conversion landing page or essential structure (up to 3 sections/pages)",
         "Live within 5 business days",
@@ -173,8 +187,8 @@
     },
     "packs": {
       "title": "Packages",
-      "description": "Choose a package that grows with your business — fast, secure, and tailored to your needs.",
-      "subtitle": "Each project is unique, and the final price may vary according to your business needs.",
+      "description": "Clear starting points for launching, refreshing, or expanding your digital presence.",
+      "subtitle": "Prices are indicative. Final scope and cost are confirmed after understanding the project requirements.",
       "starter": {
         "title": "Online Presence",
         "price": "504 €",
@@ -288,15 +302,15 @@
   "skills": {
     "heroTitle": "Knowledge is the eye of desire and the pilot of the soul.",
     "heroDescription": "- Will Durant",
-    "title": "Skills",
-    "description": "Arts and human-behavior had always been a huge part of my life. Through my other passions like theatre, music, and psychology have profoundly shaped my emotional and professional growth, enriching my skills in communication and teamwork.\nThe charts here tho, highlight my expertise in front-end and back-end development and infrastructure. Yet, this is just a glimpse of my capabilities. I'm also experienced in other topics like microservices and event-driven architecture, webpack among others. I'm always eager to learn and adapt to new technologies, so this is just the beginning of my journey."
+    "title": "Technical expertise",
+    "description": "My experience spans frontend and backend development, infrastructure, testing, and software architecture. The charts highlight some of the technologies I use, alongside experience in microservices, event-driven systems, and automation."
   },
 
   "contacts": {
     "title": "Get in touch!",
-    "email": "let's chat",
-    "social": "social network",
-    "reachOut": "reach out"
+    "email": "Email",
+    "social": "Social profiles",
+    "reachOut": "Choose how you would like to start"
   },
 
   "testimonials": {
@@ -304,8 +318,8 @@
     "google_reviews": "See reviews on Google",
     "verified": "Verified",
     "lets_talk": {
-      "title": "Yours can be next!",
-      "cta": "lets talk"
+      "title": "Your project could be next",
+      "cta": "Let’s talk"
     },
     "cristiano": {
       "details": "Fitness Instructor",
@@ -414,8 +428,8 @@
   },
 
   "portfolio_parallax": {
-    "title": "Delivering impactful\nsolutions to elevate your brand",
-    "description": "Take a look at the projects I’ve brought to life—each one crafted using the latest technologies and frameworks."
+    "title": "Digital solutions\nbuilt for real challenges",
+    "description": "Explore client projects and work delivered within product companies. Each example presents the context, solution, and value created."
   },
 
   "trusted": {
@@ -458,7 +472,7 @@
     "explore": "Explore",
     "about": "About",
     "skills": "Skills",
-    "schedule": "Schedule a call",
+    "schedule": "Book a free consultation",
     "goBack": "Go back",
     "getStarted": "Get started",
     "select": "Select"

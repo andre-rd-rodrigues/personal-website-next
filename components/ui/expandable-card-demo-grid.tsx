@@ -15,7 +15,6 @@ import {
 export interface ExpandableCard {
   title: string;
   src: string; // Video URL
-  ctaText: string;
   ctaLink: string;
   content:
     | React.ReactNode
@@ -170,7 +169,7 @@ export default function ExpandableCards({
                     className="font-normal text-[var(--color-primary)]"
                     rel="noreferrer"
                   >
-                    {active.ctaText}
+                    {t('portfolio.labels.viewProject')}
                   </a>
                 </div>
               </div>

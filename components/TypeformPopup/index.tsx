@@ -1,25 +1,39 @@
 import { Icon } from '@iconify/react';
-import { TYPEFORM_ID } from '@/constants/common.constants';
+import { BUDGET_TYPEFORM_ID, TYPEFORM_ID } from '@/constants/common.constants';
 import ICONS from '@/constants/icons.constants';
 import { PopupButton } from '@typeform/embed-react';
 import { useTranslations } from 'next-intl';
 import React from 'react';
 
+type TypeformIntent = 'consultation' | 'message' | 'quote';
+
 type Props = {
-  label?: string;
-  icon?: (typeof ICONS)[keyof typeof ICONS];
-  id?: string;
+  intent: TypeformIntent;
   fullWidth?: boolean;
 };
 
+const INTENT_CONFIG = {
+  consultation: {
+    id: TYPEFORM_ID,
+    label: 'schedule',
+    icon: ICONS.calendar,
+  },
+  message: {
+    id: TYPEFORM_ID,
+    label: 'send_message',
+    icon: ICONS.message,
+  },
+  quote: {
+    id: BUDGET_TYPEFORM_ID,
+    label: 'request_quote',
+    icon: ICONS.budget,
+  },
+} as const;
+
 /** Renders the same look as Button.Text but as a span, so PopupButton (a <button>) has no nested button. */
-const TypeformPopupButton = ({
-  label = 'send_message',
-  icon = ICONS.message,
-  id = TYPEFORM_ID,
-  fullWidth = false,
-}: Props) => {
+const TypeformPopupButton = ({ intent, fullWidth = false }: Props) => {
   const t = useTranslations('buttons');
+  const { id, label, icon } = INTENT_CONFIG[intent];
 
   return (
     <PopupButton id={id} size={70} className={fullWidth ? 'w-full' : undefined}>
@@ -40,13 +54,9 @@ const TypeformPopupButton = ({
 };
 
 /** Renders the same look as Button.Minimal but as a span, so PopupButton (a <button>) has no nested button. */
-const TypeformPopupMinimal = ({
-  label = 'send_message',
-  icon = ICONS.message,
-  id = TYPEFORM_ID,
-  fullWidth = false,
-}: Props) => {
+const TypeformPopupMinimal = ({ intent, fullWidth = false }: Props) => {
   const t = useTranslations('buttons');
+  const { id, label, icon } = INTENT_CONFIG[intent];
 
   return (
     <PopupButton id={id} size={70} className={fullWidth ? 'w-full' : undefined}>

@@ -6,25 +6,30 @@
     "blog": "Blog",
     "brand_label": "Programação",
     "testimonials": "Testemunhos",
-    "skills": "Skills",
+    "skills": "Competências",
     "pricing": "Preçário",
-    "faqs": "FAQs"
+    "faqs": "FAQs",
+    "cta": "Agendar sessão gratuita",
+    "openMenu": "Abrir menu principal"
   },
 
   "homepage": {
-    "subtitle": "Criação de websites, apps e automação com IA",
-    "cta": "Ver portfólio",
+    "title": "Soluções digitais rápidas e seguras para fazer o seu negócio avançar",
+    "subtitle": "Desenvolvo websites, aplicações e automações com IA à medida para atrair clientes, simplificar operações e crescer com confiança.",
+    "authority": "Mais de 5 anos de experiência · Mais de 15 projetos · Experiência na Snyk, Pipedrive e Peacock",
+    "cta": "Ver projetos e resultados",
+    "expertiseTitle": "Competências",
     "form": {
       "button": "Contactar"
     },
     "about": {
       "title": "Sobre mim",
-      "description": "Olá, sou o André Rodrigo. Transformei a minha paixão pela tecnologia numa carreira dedicada a criar soluções digitais que combinam funcionalidade, segurança e inovação.\n\nCom mais de 5 anos de experiência como Engenheiro de Software Sénior, ajudo empresas a transformar a sua visão estratégica em tecnologia de alta performance. Desenvolvo software à medida — desde ecossistemas e-commerce a aplicações complexas — e integro consultoria em Automação e IA com práticas modernas de Cibersegurança.\n\nO objetivo é sempre o mesmo: otimizar a sua operação, proteger o seu ecossistema e maximizar a rentabilidade do seu negócio."
+      "description": "Sou o André Rodrigo, Engenheiro de Software Sénior com mais de 5 anos de experiência. Ajudo empresas a transformar objetivos de negócio em websites, aplicações e ferramentas digitais rápidas, seguras e fáceis de utilizar.\n\nCombino desenvolvimento à medida, automação com IA e práticas modernas de cibersegurança para simplificar operações, reduzir risco e criar bases sólidas para o crescimento."
     },
 
     "rebrand_hero": {
       "title": "Destaque-se da concorrência",
-      "description": "Com um novo website, os meus clientes tiveram um aumento de 300% na interação com os seus clientes.",
+      "description": "Para Bárbara Barbizani, o rebranding transformou serviços jurídicos complexos numa experiência digital mais clara e credível, com acompanhamento próximo e cumprimento dos prazos.",
       "flipWords": {
         "part1": "com um website",
         "words": ["moderno", "profissional", "intuitivo"]
@@ -32,25 +37,34 @@
     },
 
     "contact": {
-      "description": "Tem um projeto em mente? Marque já e tenha uma sessão de consultoria grátis."
+      "description": "Tem um projeto em mente? Agende uma sessão gratuita para clarificar prioridades, âmbito e próximos passos."
     }
   },
 
   "portfolio": {
     "title": "Portfólio",
+    "labels": {
+      "overview": "Visão geral",
+      "freelance": "Projetos para clientes",
+      "corporate": "Experiência em empresas",
+      "next": "Seguinte",
+      "web": "Web",
+      "mobile": "Aplicações",
+      "viewProject": "Ver projeto"
+    },
 
     "categories": {
-      "websites": "Criação de websites modernos, com SEO para atrair mais clientes e aumentar as suas vendas.",
-      "apps": "Criação de aplicações para telemóvel, para que possa estar no bolso dos clientes 24h/7.",
-      "design": "Designs inovadores e únicos para destacá-lo da concorrência."
+      "websites": "Websites rápidos e otimizados para pesquisa, concebidos para atrair clientes e apoiar as vendas.",
+      "apps": "Aplicações móveis intuitivas que aproximam o seu serviço dos clientes, onde quer que estejam.",
+      "design": "Experiências digitais claras e distintivas que reforçam a credibilidade da sua marca."
     },
 
     "heroSection": {
-      "title": "Consultoria na criação de soluções digitais",
-      "description": "Com as inúmeras opções de soluções online, é comum sentir-se afundado em dúvidas. O meu papel é ajudá-lo a navegar no panorama digital com tranquilidade para que possa sentir segurança nas suas decisões."
+      "title": "Soluções digitais orientadas pelos objetivos do seu negócio",
+      "description": "Cada projeto começa por compreender o problema, definir prioridades e escolher a solução certa. O resultado é tecnologia à medida, sem complexidade desnecessária."
     },
     "contact": {
-      "description": "Não sabe por onde começar? Marque já e tenha uma sessão de consultoria grátis."
+      "description": "Não sabe por onde começar? Agende uma sessão gratuita e definimos juntos os próximos passos."
     }
   },
 
@@ -58,7 +72,7 @@
     "web": {
       "heroTitle": "A Internet está a tornar-se a praça da aldeia global do amanhã.",
       "heroDescription": "- Bill Gates, Microsoft Co-founder",
-      "description": "Dedico-me inteiramente à criação de websites esteticamente diferenciadores e intuitivos. Uma experiência de utilização positiva é essencial para o aumento da taxa de retenção e aquisição de novos utilizadores e a integração de novas tecnologias e frameworks permitem-me atingir essa premissa, contribuindo paralelamente para o aumento da performance e escalabilidade.\nNesta secção, encontrarás alguns projetos pessoais e outros de clientes, onde utilizei tecnologias como React, Redux, Next JS, Web basics, Figma, Sketch e Affinity. Ferramentas estas essenciais desde a concepção do design, à criação e implementação do produto final apelativo e funcional.\nEspero que goste tanto quanto eu gostei de os fazer :)",
+      "description": "Uma seleção de projetos para clientes e de experiência em empresas. Cada caso mostra o desafio, a solução entregue e o impacto do trabalho, desde websites institucionais a produtos digitais usados à escala global.",
       "projects": {
         "title": "Projetos",
         "filipaMarques": "A Filipa Marques é coach de performance mental que une a Psicologia do Desporto e a Programação Neurolinguística para ajudar atletas a dominar a pressão e a transformar o seu potencial em resultados. Este projeto é um rebranding completo, pensado para reforçar a sua presença online e credibilidade, apresentando o seu método, serviços, podcast e artigos através de uma interface cuidada e de alto desempenho que transmite confiança.",
@@ -69,7 +83,7 @@
 
         "bb": "O website da Advogada Dra. Bárbara Barbizani faz parte de um rebranding focado na apresentação dos serviços e assuntos legais através de uma interface intuitiva e confiante. Oferece uma experiência fluída, proporcionando apoio jurídico com um toque pessoal, garantindo projeção online através de estratégias personalizadas de SEO.",
 
-        "carolina": "O website da Psicóloga Dra. Carolina Jardim, possui uma interface suave e minimalista promovendo uma experiência digitial aproximada ao ambiente de sessão terapeutica.",
+        "carolina": "O website da psicóloga Carolina Jardim utiliza uma interface suave e minimalista para transmitir online a tranquilidade e a proximidade de uma sessão terapêutica.",
 
         "blog": "O meu blog pessoal atua como uma plataforma vibrante onde partilho insights sobre tecnologia, finanças e desenvolvimento de carreira. Equipado com funcionalidades avançadas como pesquisa e filtragem, serve como um recurso para leitores que buscam crescimento profissional.",
 
@@ -94,8 +108,9 @@
     "mobile": {
       "heroTitle": "O telemóvel acabará por ser a forma de fornecer a maioria dos serviços.",
       "heroDescription": "- Sundar Pichai, Google CEO",
-      "description": "É com entusiasmo que apresento alguns dos meus projetos pessoais, exclusivamente para mobile! A tecnologia continua a progredir e os telemóveis tornaram-me parte integrante das nossas rotinas, a aquisição de conhecimentos sobre o desenvolvimento de apps é muito vantajosa na carreira de programação.\nAqui poderás encontrar algumas das apps que desenvolvi, onde utilizei tecnologias modernas tais como React Native. Espero que gostes tanto quanto eu gostei de as fazer :)",
+      "description": "Aplicações móveis concebidas desde o conceito até à implementação em React Native. Estes projetos exploram experiências simples, rápidas e adequadas ao uso diário no telemóvel.",
       "projects": {
+        "title": "Projetos",
         "giggle": "Precisa de uma boa risada? Giggle tem tudo o que precisa! Mergulhe num mundo de risos intermináveis com a nossa hilariante coleção de piadas, trocadilhos e histórias engraçadas. Esteja a sentir-se em baixo ou apenas a precisar de um incentivo, Giggle! está aqui para alegrar o seu dia e deixá-lo a sorrir de orelha a orelha.",
         "randombox": "Prepare-se para uma montanha de emoção com Random Box! É o gerador de desafios definitivo que traz uma nova emoção até às suas pontas dos dedos todos os dias. De desafios loucos a tarefas peculiares, nunca sabe que surpresa o espera dentro da caixa! Reúna os seus amigos e embarque numa aventura cheia de risos, espontaneidade e diversão sem fim. Fique atenta(o) para o lançamento!",
         "coolmind": "Bem-vindo ao Coolmind, o seu companheiro definitivo para uma mente mais saudável e feliz. Com base científica, o Coolmind guia-a(o) através de exercícios inspiradores, práticas de gratidão e técnicas de mindfulness à serenidade. Aproveite o poder do positivismo e liberte a sua alegria interior! Prepare-se para transformar a sua mente, um sorriso de cada vez!"
@@ -112,32 +127,33 @@
       "main": {
         "design": {
           "title": "Design",
-          "description": "Terás um design exclusivo e cativante, adaptado à tua área de negócio."
+          "description": "Terá um design exclusivo e adaptado aos objetivos do seu negócio."
         },
         "programming": {
           "title": "Programação",
-          "description": "Programação e implementação com domínio à tua escolha."
+          "description": "Desenvolvimento e implementação do website, incluindo apoio na configuração do domínio."
         },
         "seo": {
-          "title": "Optimização de SEO",
-          "description": "Queremos que o teu novo website apareça no topo das pesquisas, portanto tens incluída a optimização de SEO."
+          "title": "Otimização para pesquisa",
+          "description": "O website inclui uma base técnica de SEO para melhorar a visibilidade nos motores de pesquisa."
         },
         "metrics": {
           "title": "Métricas e Campanhas",
-          "description": "Terás acesso a relatórios completos sobre quem visita o teu website e a realizar campanhas online!"
+          "description": "Terá acesso a métricas essenciais para compreender visitas, avaliar resultados e orientar campanhas."
         }
       },
 
       "extra": {
+        "title": "Extra",
         "branding": {
           "title": "Branding",
-          "description": "Gostarias também de criar ou recriar a imagem da tua marca? Sem problema! Por um valor apelativo, incluímos branding no pacote."
+          "description": "Precisa também de criar ou renovar a identidade da sua marca? O branding pode ser integrado no projeto de acordo com o âmbito definido."
         }
       }
     },
     "about_me": {
       "title": "Sobre mim",
-      "description": "Desde o momento em que transformei a minha paixão pela tecnologia numa carreira, tenho-me dedicado ao desenvolvimento de soluções digitais que combinam funcionalidade, segurança e inovação. Trabalho focado em criar valor real para empresas e clientes, integrando práticas modernas de cibersegurança, automação de processos e ferramentas baseadas em inteligência artificial que otimizam operações e ampliam resultados.\nCom uma abordagem meticulosa, atenção ao detalhe e uma visão criativa aplicada à resolução de problemas, desenvolvo soluções personalizadas que vão desde websites e web apps até sistemas e ferramentas internas de apoio ao negócio. Ao longo da minha carreira, colaborei com organizações de diferentes setores, adaptando estratégias tecnológicas às necessidades específicas de cada projeto.\nO meu objetivo é criar relações duradouras e contribuir de forma ativa para o desenvolvimento de produtos digitais sólidos, eficientes e escaláveis — sempre com foco na qualidade, segurança e impacto estratégico."
+      "description": "Transformei a paixão pela tecnologia numa carreira focada em resolver problemas reais. Desenvolvo websites, aplicações e ferramentas internas que combinam uma experiência clara com performance, segurança e facilidade de manutenção.\n\nAo longo da minha carreira, trabalhei com organizações de diferentes dimensões e setores. Essa experiência permite-me adaptar a solução ao contexto de cada negócio, sem impor tecnologia ou complexidade desnecessária.\n\nProcuro criar relações duradouras e produtos digitais sólidos, sempre com comunicação próxima, atenção ao detalhe e foco no resultado."
     },
     "experience": {
       "title": "O segredo está na relação humana",
@@ -146,21 +162,22 @@
       "years": "Anos de experiência"
     },
     "contact": {
-      "title": "marque a sua sessão",
-      "description": "Quer saber mais sobre o meu percuso ou discutir algum projeto? Vamos conversar!"
+      "title": "Agende uma sessão",
+      "description": "Quer conhecer melhor o meu percurso ou discutir um projeto? Agende uma sessão gratuita."
     }
   },
 
   "pricing": {
-    "heroTitle": "Soluções seguras, rápidas e personalizadas para crescerem contigo.",
+    "heroTitle": "Escolha a solução digital certa para a próxima etapa do seu negócio",
     "title": "Preçário",
+    "description": "Preços de referência, âmbito claro e soluções adaptáveis às necessidades do seu negócio.",
 
     "fastTrack": {
-      "badge": "Fast track",
+      "badge": "Lançamento em 5 dias",
       "headline": "O seu website original, pronto em 5 dias.",
       "price": "550 €",
       "subtitle": "*Valor base para projetos rápidos",
-      "description": "Precisa de lançar já? Este pack foi desenhado para quem não pode esperar meses. Com recurso a ferramentas modernas de IA, criamos um website estético, seguro e otimizado para vendas — sem as demoras do desenvolvimento tradicional.",
+      "description": "Precisa de lançar rapidamente? Desenvolvo um website cuidado, seguro e otimizado para conversão através de um processo eficiente apoiado por IA, sem comprometer a qualidade.",
       "includes": [
         "Website institucional ou de portfólio (até 3 secções/páginas)",
         "Lançamento online em 5 dias úteis",
@@ -172,8 +189,8 @@
     },
     "packs": {
       "title": "Pacotes",
-      "description": "Escolhe um pacote que cresce com o teu negócio — rápido, seguro e feito à medida",
-      "subtitle": "Cada projeto é único e o preço final pode variar de acordo com as necessidades do teu negócio.",
+      "description": "Pontos de partida claros para lançar, renovar ou expandir a sua presença digital.",
+      "subtitle": "Os preços são indicativos. O âmbito e o valor final são confirmados depois de compreender as necessidades do projeto.",
       "starter": {
         "title": "Presença Online",
         "price": "504 €",
@@ -183,7 +200,7 @@
           "Homepage + até 3 páginas",
           "Template personalizado",
           "Metadados para redes sociais",
-          "Optimizado para telemóvel",
+          "Otimizado para telemóvel",
           "Otimização de performance e SEO",
           "Formulário de contacto",
           "Alojamento + domínio (aconselhamento e configuração)"
@@ -195,7 +212,7 @@
         "subtitle": "*Valor de referência",
         "description": "Ideal para empresas com foco na expansão e conteúdo dinâmico.",
         "features": [
-          "Tudo do \"Presença Digital\"",
+          "Tudo do \"Presença Online\"",
           "Integração com CMS (Blog)",
           "Até 6 páginas",
           "Política de cookies + Aviso Legal",
@@ -237,13 +254,13 @@
     },
     "maintenance": {
       "title": "Mensalidades",
-      "description": "Garante que o teu site se mantém atualizado, disponível e seguro com um plano contínuo de alojamento e manutenção.",
+      "description": "Mantenha o seu website atualizado, disponível e seguro com um plano contínuo de alojamento e manutenção.",
       "plans": [
         {
           "title": "Essencial",
           "price": "10 €",
           "subtitle": "por mês, 120 € anual, IVA e custos de serviços externos não incluídos",
-          "description": "Alojamento seguro e manutenção técnica do teu site.",
+          "description": "Alojamento seguro e manutenção técnica do seu website.",
           "features": [
             "Monitorização contínua de cibersegurança",
             "Manutenção preventiva da infraestrutura web",
@@ -287,15 +304,15 @@
   "skills": {
     "heroTitle": "O conhecimento é o olho do desejo e o piloto da alma.",
     "heroDescription": "- Will Durant",
-    "title": "introdução",
-    "description": "As artes e o comportamento humano sempre foram uma grande parte da minha vida. As minhas outras paixões, como o teatro, a música e a psicologia, moldaram profundamente o meu crescimento emocional e profissional, enriquecendo as minhas capacidades de comunicação e de trabalho em equipa.\nOs gráficos aqui apresentados destacam a minha experiência em desenvolvimento e infra-estruturas front-end e back-end. No entanto, isto é apenas um vislumbre das minhas capacidades. Também tenho experiência noutros tópicos como microserviços e arquitetura orientada a eventos, webpack entre outros. Estou sempre ansioso por aprender e adaptar-me a novas tecnologias, portanto este é apenas o início da minha jornada."
+    "title": "Competências técnicas",
+    "description": "A minha experiência abrange desenvolvimento frontend e backend, infraestrutura, testes e arquitetura de software. Os gráficos apresentam algumas das tecnologias com que trabalho, complementadas por experiência em microserviços, sistemas orientados a eventos e automação."
   },
 
   "contacts": {
     "title": "Vamos\nconversar?",
-    "email": "email",
-    "social": "redes sociais",
-    "reachOut": "contactar"
+    "email": "Email",
+    "social": "Redes sociais",
+    "reachOut": "Escolha como prefere começar"
   },
 
   "testimonials": {
@@ -303,8 +320,8 @@
     "google_reviews": "Ver avaliações no Google",
     "verified": "Verificado",
     "lets_talk": {
-      "title": "O teu pode ser o próximo",
-      "cta": "vamos conversar"
+      "title": "O seu projeto pode ser o próximo",
+      "cta": "Vamos conversar"
     },
     "cristiano": {
       "details": "Instrutor de Fitness",
@@ -360,18 +377,18 @@
 
   "404": {
     "title": "Página não encontrada",
-    "description": "A página que procuras pode ter sido removida ou o link inserido não corresponde a nenhuma página existente.",
+    "description": "A página que procura pode ter sido removida ou o link introduzido não corresponde a nenhuma página existente.",
     "cta": "VOLTAR"
   },
 
   "analytics_banner": {
-    "description": "Este website utiliza cookies para garantir a melhor experiência de navegação. Ao continuar a navegar, concordas com a política de cookies.",
+    "description": "Este website utiliza cookies para garantir a melhor experiência de navegação. Ao continuar, aceita a política de cookies.",
     "accept": "Concordo"
   },
 
   "portfolio_parallax": {
-    "title": "Desenvolvendo soluções\npara os desafios do seu negócio",
-    "description": "Cada projeto é centrado na resolução dos desafios específicos do negócio. Estas soluções personalizadas impulsionaram o crescimento e a inovação de várias empresas. O seu pode ser o próximo."
+    "title": "Soluções digitais\ncriadas para desafios reais",
+    "description": "Conheça projetos para clientes e trabalho desenvolvido em empresas. Cada exemplo apresenta o contexto, a solução e o valor criado."
   },
 
   "trusted": {
@@ -461,8 +478,8 @@
     "request_quote": "Pedir orçamento",
     "explore": "Explorar",
     "about": "Sobre",
-    "skills": "Skills",
-    "schedule": "Agendar uma chamada",
+    "skills": "Ver competências",
+    "schedule": "Agendar sessão gratuita",
     "goBack": "Voltar",
     "getStarted": "Começar",
     "select": "Escolher"
@@ -488,7 +505,7 @@
     "portfolioDescription": "Projetos recentes de websites, aplicações e soluções digitais criadas para empresas e marcas.",
     "portfolioWebDescription": "Projetos de websites freelance e corporativos criados com Next.js, React e TypeScript — rebrandings, sites institucionais e aplicações web para clientes de vários setores.",
     "portfolioMobileDescription": "Projetos de aplicações móveis criados com React Native e Expo, incluindo Giggle!, Random Box e Coolmind — do conceito e design até ao lançamento.",
-    "contactsDescription": "Entra em contacto para discutir o teu projeto ou tirar dúvidas. Estou disponível por email ou redes sociais.",
+    "contactsDescription": "Entre em contacto para discutir o seu projeto ou esclarecer dúvidas. Estou disponível por email ou redes sociais.",
     "blogDescription": "Dicas, ideias e conteúdos sobre desenvolvimento web, freelance e tecnologia.",
     "pricingDescription": "Consulta os pacotes de serviços e preços para criação de websites e soluções digitais personalizadas.",
     "faqsDescription": "Respostas às perguntas mais frequentes sobre os meus serviços, processos e formas de trabalho."

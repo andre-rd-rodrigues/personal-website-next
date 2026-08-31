@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
 import Contacts from '@/app/[locale]/contacts/page';
-import { BUDGET_TYPEFORM_ID } from '@/constants/common.constants';
+import { BUDGET_TYPEFORM_ID, TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
 
 jest.mock(
@@ -23,7 +23,7 @@ describe('Contacts page', () => {
 
   it('renders the email section with label and mailto link', () => {
     renderWithIntl(<Contacts />);
-    expect(screen.getByText("let's chat")).toBeInTheDocument();
+    expect(screen.getByText('Email')).toBeInTheDocument();
     const emailLink = screen.getByRole('link', { name: CONTACTS.EMAIL });
     expect(emailLink).toBeInTheDocument();
     expect(emailLink).toHaveAttribute('href', `mailto:${CONTACTS.EMAIL}`);
@@ -33,7 +33,7 @@ describe('Contacts page', () => {
 
   it('renders the social section with links to Linktree, Instagram, and LinkedIn', () => {
     renderWithIntl(<Contacts />);
-    expect(screen.getByText('social network')).toBeInTheDocument();
+    expect(screen.getByText('Social profiles')).toBeInTheDocument();
 
     const links = screen.getAllByRole('link');
     const linktreeLink = links.find(
@@ -56,12 +56,20 @@ describe('Contacts page', () => {
 
   it('renders the reach out section with send message and budget Typeform buttons', () => {
     renderWithIntl(<Contacts />);
-    expect(screen.getByText('reach out')).toBeInTheDocument();
+    expect(
+      screen.getByText('Choose how you would like to start'),
+    ).toBeInTheDocument();
     const ctas = screen.getAllByTestId('typeform-popup-button');
     expect(ctas).toHaveLength(2);
     const budgetCta = ctas.find(
       (cta) => cta.getAttribute('data-form-id') === BUDGET_TYPEFORM_ID,
     );
     expect(budgetCta).toBeDefined();
+    const messageCta = ctas.find(
+      (cta) =>
+        cta.getAttribute('data-form-id') === TYPEFORM_ID &&
+        cta.getAttribute('data-intent') === 'message',
+    );
+    expect(messageCta).toBeDefined();
   });
 });
