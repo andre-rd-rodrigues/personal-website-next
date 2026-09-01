@@ -43,14 +43,15 @@ In a competitive market, a blog makes the author a "known quantity." Each articl
 - **Turn the website from a static resume into a living hub of activity** — show continuous learning and engagement with the industry.
 - **Build a recognizable voice and perspective** — consistency in tone and recurring themes create brand recall.
 
-> **For agents**: Reference these principles when evaluating topic briefs (Phase 1), shaping article structure (Phase 2), and crafting SEO metadata (Phase 3). If a draft doesn't clearly serve at least two of the four principles, revise it until it does.
+> **For agents**: Reference these principles when evaluating topic briefs (Phase 1), shaping article structure (Phase 2), revising prose (Phase 3), and crafting SEO metadata (Phase 4). If a draft doesn't clearly serve at least two of the four principles, revise it until it does.
 
 ---
 
 ## Pipeline Overview
 
 ```
-Configure → Research → Write (EN) → SEO → Translate (PT-PT) → Save Files → Generate Cover Images
+Configure → Research → First Draft (EN) → Editorial Revision (EN) → SEO & Evidence Gate
+  → Translate & Naturalize (PT-PT) → Cover Images → File Creation & Validation
 ```
 
 Track progress with this checklist (copy into your response):
@@ -59,12 +60,30 @@ Track progress with this checklist (copy into your response):
 Pipeline Progress:
 - [ ] Phase 0: Configuration
 - [ ] Phase 1: Trend Research
-- [ ] Phase 2: Article Writing (EN)
-- [ ] Phase 3: SEO Optimization
-- [ ] Phase 4: PT-PT Translation
-- [ ] Phase 5: File Creation
+- [ ] Phase 2: First Draft (EN)
+- [ ] Phase 3: Editorial Revision (EN)
+- [ ] Phase 4: SEO & Evidence Gate
+- [ ] Phase 5: PT-PT Translation & Naturalization
 - [ ] Phase 6: Cover Image Generation
+- [ ] Phase 7: File Creation & Validation
 ```
+
+Drafting and revision are deliberately separate phases. Phase 2 optimizes for substance; Phase 3 optimizes for how the prose reads. Trying to do both at once produces the formulaic cadence this pipeline exists to avoid.
+
+**Why this order**: revision runs before SEO because the SEO phase is itself a slop source (keyword padding, manufactured FAQs, added transitions), and before translation because translating first pays the naturalization cost twice and lets the PT version drift from the final EN voice.
+
+**Per-article loop**: run one article fully through Phases 2-4 before starting the next, so cadence judgement is applied to a single article in context. Cover generation is the only phase independent of the prose, so it may run in the background while Phase 5 proceeds.
+
+## Autonomy Contract
+
+The pipeline stops for user input at exactly **two** points:
+
+1. **Topic-brief approval** at the end of Phase 1.
+2. **Cover-image approval** at the end of Phase 6.
+
+Every other phase proceeds without asking, including all revision passes. Do not pause mid-loop for reassurance, and do not ask the user to choose between wording options — apply the rules in this skill and report what was done.
+
+**Scope guard**: these phases apply to articles the pipeline is currently producing. Existing published articles in `content/blog/en/` still contain older patterns; only revise them when the user explicitly asks.
 
 ---
 
@@ -85,12 +104,20 @@ Allow multiple selections. Default: `developers` + `business`.
 
 ### Question 2 — Content Category
 
-| Option       | Label      |
-| ------------ | ---------- |
-| `technology` | Technology |
-| `career`     | Career     |
+These are the categories already published, and they render as filter pills on the blog index.
+
+| Option       | Label (EN) | Label (PT) |
+| ------------ | ---------- | ---------- |
+| `technology` | Technology | Tecnologia |
+| `seo`        | SEO        | SEO        |
+| `ecommerce`  | E-Commerce | E-Commerce |
+| `uxui`       | UX/UI      | UX/UI      |
 
 Single-select. Default: `technology`.
+
+Only `Technology` is translated. `SEO`, `E-Commerce`, and `UX/UI` must stay byte-identical across locales or the filter pills diverge between EN and PT.
+
+If the user asks for a category outside this list, warn that it creates a new filter pill containing a single article, then proceed if they confirm.
 
 ### Question 3 — Content Format
 
@@ -118,7 +145,7 @@ Store the user's selections as **pipeline config** and reference them throughout
 ```
 Pipeline Config:
 - Audience: [selected audiences]
-- Category: [Technology | Career]
+- Category: [Technology | SEO | E-Commerce | UX/UI]
 - Format: [selected format]
 - Count: [1-3]
 ```
@@ -169,11 +196,11 @@ Present the briefs to the user and **wait for approval** before proceeding.
 
 ---
 
-## Phase 2: Article Writing (EN)
+## Phase 2: First Draft (EN)
 
 **Role**: Marketing Content Creator (see `.cursor/rules/marketing-content-creator.md`)
 
-For each approved topic, write a full blog article in **English**, adapting to the **pipeline config**:
+Write the first draft of a full blog article in **English**, adapting to the **pipeline config**. This phase optimizes for **argument, practical depth, worked examples, structure, and sourced evidence**. Rough sentence-level prose is acceptable here — Phase 3 fixes cadence. Do not spend effort polishing individual sentences yet.
 
 1. **Tone**: Conversational-professional, consistent with existing articles in `content/blog/en/`. Adjust depth based on audience:
    - _Developers_: Include code snippets, technical specifics, and tool comparisons.
@@ -208,7 +235,7 @@ For each approved topic, write a full blog article in **English**, adapting to t
 ```yaml
 ---
 title: 'Article Title Here'
-category: Technology # or Career
+category: Technology # Technology | SEO | E-Commerce | UX/UI
 publishedDate: 'YYYY-MM-DD'
 description: 'Compelling 1-2 sentence summary for cards and meta.'
 isTopPick: false
@@ -217,9 +244,51 @@ coverImage: /images/blog/article-slug-here.webp
 ---
 ```
 
+**Save the draft to `content/blog/en/{slug}.md`.** Phases 3 and 4 edit that file in place, and the prose check needs a real file to read. The draft stays uncommitted until Phase 7 validation passes.
+
 ---
 
-## Phase 3: SEO Optimization
+## Phase 3: Editorial Revision (EN)
+
+**Read [EDITORIAL-REVISION.md](EDITORIAL-REVISION.md) before starting this phase.** It contains the measurable rules, the banned-construction list, and the rewrite patterns. Apply them; do not re-derive them from memory.
+
+The draft from Phase 2 reads like AI output because the model defaults to uniform sentence shapes, filler transitions, generic source attributions, injected disclaimers, and restatements of the obvious. This phase rewrites those patterns out.
+
+### Process
+
+1. Read the draft top to bottom as a cold reader, not as its author.
+2. Run the checklist in [EDITORIAL-REVISION.md](EDITORIAL-REVISION.md) against every section.
+3. Rewrite the article in place, applying every fix.
+4. Run the prose check:
+   ```bash
+   node .cursor/skills/blog-content-pipeline/scripts/prose-check.mjs content/blog/en/{slug}.md
+   ```
+5. Address the reported findings, then re-check **once**.
+
+### Bounded loop
+
+Allow a **maximum of two revision passes**. After the second pass, proceed to Phase 4 even if minor cadence issues remain. The script is advisory: a finding is a prompt to look, not a mandatory edit. Never loop indefinitely chasing a clean report.
+
+### Over-editing guard
+
+Before exiting the phase, verify:
+
+- No factual claim was removed.
+- No citation was dropped.
+- No heading was removed without merging its content elsewhere.
+- The article still meets the **800-1500 word** target.
+
+If revision pushes the draft under 800 words, add **substantive practical detail** — a concrete example, a failure mode, a validation step. Never restore filler to hit the count.
+
+### Output contract
+
+Rewrite the **whole article** in the file. Never leave the revision as a diff, a list of suggested edits, or a few isolated sentence swaps — the point is the cadence of the full piece.
+
+Report to the user with a change summary of **at most five bullets** naming the classes of issues fixed (for example: "collapsed repeated Commission attributions into a Sources block"). Do not enumerate every sentence changed, and do not paste the full article into the chat.
+
+---
+
+## Phase 4: SEO & Evidence Gate
 
 **Role**: SEO Specialist (see `.cursor/rules/seo-specialist.mdc`)
 
@@ -236,51 +305,79 @@ Optimize each English article for search, factoring in the **pipeline config** a
 5. **Keyword placement**: Primary keyword in first 100 words, naturally distributed throughout.
 6. **Internal links**: Link to other blog posts in `content/blog/en/` where relevant.
 7. **External links**: Cite authoritative, preferably primary sources for E-E-A-T signals. Every numeric, legal, regulatory, pricing, market-share, and performance claim must have an inline source or be removed/rephrased.
-8. **Content structure**: Add FAQ section at the end if it targets PAA opportunities.
+8. **Content structure**: Add an FAQ section at the end if it targets PAA opportunities. Use an H2 titled exactly `Frequently Asked Questions` with H3 questions — see the FAQ rendering constraints in [EDITORIAL-REVISION.md](EDITORIAL-REVISION.md).
 9. **Slug**: Ensure `slug` in frontmatter is URL-friendly and keyword-rich.
 10. **Lindy-effect optimization**: Favor evergreen phrasing that will stay relevant for years. Avoid date-specific language in headings (e.g., "in 2026") unless the article is explicitly a time-bound roundup. The goal is content that compounds the author's reputation long after publication.
-11. **Authority signals**: Ensure the article positions the author as a practitioner, not a summarizer. First-person experience ("I built…", "We migrated…") and specific technical detail outperform generic overviews for both E-E-A-T and reader trust.
+11. **Authority signals**: Position the author as a practitioner rather than a summarizer, through specific technical detail and visible reasoning. Use first-person experience ("I built…", "We migrated…") **only when the user or source material actually supplies it** — never invent it for E-E-A-T. This rule overrides any SEO benefit.
+
+### Do not undo Phase 3
+
+The SEO phase is the most common place where formulaic prose returns. While optimizing:
+
+- Do not add sections, paragraphs, or sentences purely to increase length or keyword count.
+- Do not manufacture FAQ entries that no reader would search for.
+- Do not reintroduce filler transitions or generic source attributions.
+- Rewrite existing sentences to carry keywords instead of appending new ones.
+
+### Frontmatter revalidation
+
+Verify after every SEO edit:
+
+- `title` — 50-60 characters.
+- `description` — 150-160 characters.
+- `category` — exactly one of `Technology`, `SEO`, `E-Commerce`, `UX/UI`.
+- `slug` — unchanged once assigned in Phase 2.
+- `coverImage` — matches `/images/blog/{slug}.webp`.
+- `publishedDate` — the real creation date.
+
+### Regression check
+
+Re-run the prose check as a regression gate before leaving this phase:
+
+```bash
+node .cursor/skills/blog-content-pipeline/scripts/prose-check.mjs content/blog/en/{slug}.md
+```
+
+Compare against the Phase 3 report. Any **new** finding means the SEO pass reintroduced a pattern — fix it before continuing.
 
 Apply changes directly to the article markdown. Do not create a separate report.
 
 ---
 
-## Phase 4: PT-PT Translation
+## Phase 5: PT-PT Translation & Naturalization
 
 **Role**: PT-PT Localization Specialist (see `.cursor/rules/pt-localization.mdc`)
 
-Translate each SEO-optimized English article to **European Portuguese (PT-PT)**:
+Translate each SEO-optimized English article to **European Portuguese (PT-PT)**. A faithful translation of clean English still reads stiffly if clause order is mirrored, so this phase also naturalizes the result.
 
 1. Translate `title`, `description`, and all body content.
-2. Keep `slug`, `publishedDate`, `isTopPick`, `coverImage`, and `category` identical to EN.
-3. Translate `category` value: Technology → Tecnologia, Career → Carreira.
+2. Keep `slug`, `publishedDate`, `isTopPick`, and `coverImage` identical to EN.
+3. **Category mapping**: translate `Technology` → `Tecnologia`. Keep `SEO`, `E-Commerce`, and `UX/UI` **byte-identical** to EN — these strings drive the per-locale filter pills on the blog index, so any divergence splits the filters between locales.
 4. Use PT-PT vocabulary: "ecrã", "ficheiro", "utilizador", "telemóvel".
 5. Use infinitive gerund style: "estou a fazer" (not "estou fazendo").
 6. Follow the Acordo Ortográfico de 1990.
 7. Preserve all markdown structure, links, code blocks, and image references.
 8. Adapt metaphors that don't work culturally in Portugal.
 
----
+### Naturalization
 
-## Phase 5: File Creation
+Apply the same structural rules from [EDITORIAL-REVISION.md](EDITORIAL-REVISION.md) to the Portuguese text. **Restructure sentences freely** rather than mirroring English clause order — idiomatic PT-PT matters more than structural parity. Section headings, claims, and citations must still correspond one-to-one.
 
-Save the final files to the blog content directories:
+Avoid these PT-specific patterns:
 
-| Language   | Path                        |
-| ---------- | --------------------------- |
-| English    | `content/blog/en/{slug}.md` |
-| Portuguese | `content/blog/pt/{slug}.md` |
+- `É importante notar que` — state the point directly.
+- `Além disso` as a default connector between every paragraph.
+- `No mundo de hoje` and similar scene-setting openers.
+- `do início ao fim` — a narrative crutch; name the actual scope.
+- `Por outro lado` used where no genuine contrast exists.
 
-After writing files:
+Rename the sources heading to `Fontes` if the EN article has a `Sources` section.
 
-1. Confirm EN and PT contain the same slug set and that each new article has its translation.
-2. Extract every internal `/blog/{slug}` link and verify that the target markdown file exists. Never publish a link to a planned article.
-3. For every local `coverImage`, verify that the referenced file exists under `public/`.
-4. Re-check all vendors and time-sensitive claims immediately before publishing.
-5. Run `pnpm test` so the blog content-integrity checks validate locale parity, links, and covers.
-6. Run `pnpm type-check` to verify no TypeScript errors.
-7. Run `pnpm lint` to verify no lint errors.
-8. Confirm the new articles appear in the dev server (`pnpm dev`).
+Write the result to `content/blog/pt/{slug}.md`, then run the prose check on it to catch the PT-specific patterns:
+
+```bash
+node .cursor/skills/blog-content-pipeline/scripts/prose-check.mjs content/blog/pt/{slug}.md
+```
 
 ---
 
@@ -317,10 +414,39 @@ The existing covers fall into two families. The **3D-render / illustration famil
 
 ---
 
+## Phase 7: File Creation & Validation
+
+Both articles were written in Phases 2 and 5, and covers exist by now, so `coverImage` resolves when the integrity checks run.
+
+Confirm the final files are in place:
+
+| Language   | Path                        |
+| ---------- | --------------------------- |
+| English    | `content/blog/en/{slug}.md` |
+| Portuguese | `content/blog/pt/{slug}.md` |
+
+Then validate:
+
+1. Confirm EN and PT contain the same slug set and that each new article has its translation.
+2. Extract every internal `/blog/{slug}` link and verify that the target markdown file exists. Never publish a link to a planned article.
+3. For every local `coverImage`, verify that the referenced file exists under `public/`.
+4. Re-check all vendors and time-sensitive claims immediately before publishing.
+5. Run `pnpm test` so the blog content-integrity checks validate locale parity, links, and covers.
+6. Run `pnpm type-check` to verify no TypeScript errors.
+7. Run `pnpm lint` to verify no lint errors.
+8. Run `pnpm prettier` — markdown content files are covered by the Prettier check.
+9. Confirm the new articles appear in the dev server (`pnpm dev`).
+
+The mandatory gate is `pnpm test`, which runs `__tests__/content/blog-content.test.ts`. The prose check from Phase 3 is advisory and is never wired into `pnpm test`.
+
+---
+
 ## Important Notes
 
-- **Always ask for user approval** after Phase 1 before writing articles.
+- **Two approval gates only**: topic briefs (Phase 1) and cover images (Phase 6). See the Autonomy Contract above.
+- **Draft, then revise**: never merge Phases 2 and 3. The revision pass is what removes the formulaic cadence.
 - **Cover images**: `coverImage` references `/images/blog/{slug}.webp`. Phase 6 generates this image automatically in the blog's house style and places the `.webp` at `public/images/blog/{slug}.webp` — do not leave the path pointing at a non-existent file.
 - **Existing articles**: Compare reader intent and outline—not only keywords—before writing. Consolidate overlapping topics into the strongest existing URL instead of producing a thin cluster.
 - **Consistent voice**: Read 1-2 existing articles to match the writing style before drafting.
 - **No manufactured authority**: If first-party evidence is unavailable, write transparently from cited sources or use a clearly labelled worked example. Never imply client work or personal results that were not provided.
+- **Reference**: [EDITORIAL-REVISION.md](EDITORIAL-REVISION.md) holds the revision rules; `scripts/prose-check.mjs` reports mechanical findings.
