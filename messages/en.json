@@ -26,6 +26,12 @@
       "title": "About me",
       "description": "I’m André Rodrigo, a Senior Software Engineer with more than 5 years of experience. I help businesses turn their goals into fast, secure, and easy-to-use websites, applications, and digital tools.\n\nI combine custom development, AI automation, and modern cybersecurity practices to streamline operations, reduce risk, and create strong foundations for growth."
     },
+    "blogPreview": {
+      "title": "Latest insights",
+      "description": "Practical guides on websites, AI, security, and digital growth, written to help you make better technology decisions.",
+      "viewAll": "View all articles",
+      "readArticle": "Read article"
+    },
 
     "rebrand_hero": {
       "title": "Stand out from the competition",

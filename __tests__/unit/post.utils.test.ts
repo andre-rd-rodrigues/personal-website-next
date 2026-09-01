@@ -1,4 +1,4 @@
-import { injectHeaderIds } from '@/utils/post.utils';
+import { extractArticleFaqs, injectHeaderIds } from '@/utils/post.utils';
 
 describe('injectHeaderIds', () => {
   it('returns html and empty headings for empty input', () => {
@@ -53,5 +53,52 @@ describe('injectHeaderIds', () => {
     expect(result.headings[1].text).toBe('C');
     expect(result.html).toContain('id="a-0"');
     expect(result.html).toContain('id="c-2"');
+  });
+});
+
+describe('extractArticleFaqs', () => {
+  it('extracts heading-based questions and preserves content after the section', () => {
+    const html =
+      '<p>Intro</p><h2>Frequently Asked Questions</h2>' +
+      '<h3>First question?</h3><p>First answer.</p>' +
+      '<h3>Second question?</h3><p>Second answer.</p>' +
+      '<hr><p>Closing call to action.</p>';
+
+    const result = extractArticleFaqs(html);
+
+    expect(result.faqs).toEqual([
+      {
+        question: 'First question?',
+        answerHtml: '<p>First answer.</p>',
+      },
+      {
+        question: 'Second question?',
+        answerHtml: '<p>Second answer.</p>',
+      },
+    ]);
+    expect(result.html).toContain('data-blog-faqs');
+    expect(result.html).not.toContain('<h3>');
+    expect(result.html).toContain('Closing call to action.');
+  });
+
+  it('extracts bold paragraph questions in Portuguese articles', () => {
+    const html =
+      '<h2>Perguntas Frequentes</h2>' +
+      '<p><strong>Quanto custa?</strong></p><p>Depende do projeto.</p>';
+
+    const result = extractArticleFaqs(html);
+
+    expect(result.faqs).toEqual([
+      {
+        question: 'Quanto custa?',
+        answerHtml: '<p>Depende do projeto.</p>',
+      },
+    ]);
+  });
+
+  it('leaves regular article content unchanged when there is no FAQ section', () => {
+    const html = '<h2>Regular section</h2><p>Article copy.</p>';
+
+    expect(extractArticleFaqs(html)).toEqual({ html, faqs: [] });
   });
 });

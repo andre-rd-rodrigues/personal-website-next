@@ -1,8 +1,10 @@
 import React from 'react';
 import { renderWithIntl, screen } from '@/__tests__/utils/test.utils';
-import Home from '@/app/[locale]/page';
+import HomeClient from '@/app/[locale]/HomeClient';
 import { BUDGET_TYPEFORM_ID, TYPEFORM_ID } from '@/constants/common.constants';
 import CONTACTS from '@/constants/contacts.constants';
+import type { Post } from '@/types/blog';
+import { getLatestPosts } from '@/utils/post.utils';
 
 jest.mock(
   '@/components/Testimonials',
@@ -17,7 +19,41 @@ jest.mock('@/components/ui/compare', () => ({
   Compare: () => React.createElement('div', { 'data-testid': 'compare-mock' }),
 }));
 
+const mockPosts: Post[] = [
+  {
+    id: 'latest-article',
+    title: 'A practical technology guide',
+    slug: 'practical-technology-guide',
+    category: 'Technology',
+    publishedDate: '2026-09-01',
+    description: 'Useful guidance for making better technology decisions.',
+    isTopPick: false,
+    content: { html: '<p>Article</p>' },
+    coverPhoto: { url: 'https://example.com/article.jpg' },
+  },
+];
+
+const Home = () => <HomeClient posts={mockPosts} />;
+
 describe('Home page', () => {
+  it('selects the three most recently published articles', () => {
+    const posts = [
+      ...mockPosts,
+      ...['2026-08-31', '2026-08-30', '2026-08-29'].map((publishedDate) => ({
+        ...mockPosts[0],
+        id: publishedDate,
+        slug: publishedDate,
+        publishedDate,
+      })),
+    ];
+
+    expect(getLatestPosts(posts).map((post) => post.publishedDate)).toEqual([
+      '2026-09-01',
+      '2026-08-31',
+      '2026-08-30',
+    ]);
+  });
+
   it('renders without throwing', () => {
     expect(() => renderWithIntl(<Home />)).not.toThrow();
   });
@@ -139,6 +175,20 @@ describe('Home page', () => {
   it('renders Testimonials section', () => {
     renderWithIntl(<Home />);
     expect(screen.getByTestId('testimonials-mock')).toBeInTheDocument();
+  });
+
+  it('renders a latest blog preview with links to the blog and article', () => {
+    renderWithIntl(<Home />);
+
+    expect(
+      screen.getByRole('heading', { name: /latest insights/i }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: /view all articles/i }),
+    ).toHaveAttribute('href', '/en/blog');
+    expect(
+      screen.getByRole('link', { name: /a practical technology guide/i }),
+    ).toHaveAttribute('href', '/en/blog/practical-technology-guide');
   });
 
   it('routes consultation and quote CTAs to their dedicated forms', () => {

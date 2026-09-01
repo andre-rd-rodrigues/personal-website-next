@@ -1,0 +1,334 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+import Button from '@/components/Button';
+import BlogPreview from '@/components/BlogPreview';
+import Card from '@/components/Card';
+import Container from '@/components/Container';
+import HeroSection from '@/components/Hero';
+import InfoCounter from '@/components/InfoCounter';
+import Section from '@/components/Section';
+import SectionTitle from '@/components/SectionTitle';
+import Testimonials from '@/components/Testimonials';
+import TrustedCompanies from '@/components/TrustedCompanies';
+import TypeformPopup from '@/components/TypeformPopup';
+import WebsiteProcess from '@/components/WebsiteProcess';
+import { Compare } from '@/components/ui/compare';
+import ExpandableCards from '@/components/ui/expandable-card-demo-grid';
+import { FlipWords } from '@/components/ui/flip-words';
+import CONTACTS from '@/constants/contacts.constants';
+import ICONS from '@/constants/icons.constants';
+import { EXPERTISE, MAIN_PROJECTS } from '@/data/info.data';
+import useTranslation from '@/hooks/useTranslation';
+import {
+  blurVariant,
+  containerVariant,
+  fadeInSlideInVariant,
+  fadeInSlideLeftVariant,
+  fadeInVariant,
+  heroContainerVariant,
+} from '@/motion/motionVariants';
+import { Link } from '@/navigation';
+import type { Post } from '@/types/blog';
+
+type HomeClientProps = {
+  posts: Post[];
+};
+
+export default function HomeClient({ posts }: HomeClientProps) {
+  const t = useTranslations();
+  const { getTranslationsArray } = useTranslation();
+
+  return (
+    <>
+      <motion.div
+        variants={heroContainerVariant}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 flex min-h-[100vh] w-full items-center justify-center py-12"
+      >
+        <Container className="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-12 lg:gap-16">
+          <div className="flex flex-1 flex-col items-center md:items-start">
+            <motion.span variants={blurVariant}>
+              <Image
+                src="/images/logo_light.webp"
+                width={200}
+                height={200}
+                priority
+                className="mx-auto h-[200px] w-[200px] md:mx-0"
+                style={{ width: 'auto', height: 'auto' }}
+                alt="André Rodrigo - Senior Software Engineer"
+              />
+            </motion.span>
+            <motion.p
+              variants={fadeInSlideInVariant}
+              className="w-full py-3 text-center text-lg font-normal uppercase tracking-wider text-pink sm:text-xl md:text-left"
+            >
+              André Rodrigo
+            </motion.p>
+            <motion.h1
+              variants={fadeInSlideInVariant}
+              className="mt-4 w-full max-w-3xl text-balance text-center text-4xl font-light leading-tight sm:text-5xl md:text-left lg:text-6xl"
+            >
+              {t('homepage.title')}
+            </motion.h1>
+            <motion.p
+              variants={fadeInSlideInVariant}
+              className="mt-6 w-full max-w-2xl text-pretty text-center text-lg text-white/80 md:text-left md:text-xl"
+            >
+              {t('homepage.subtitle')}
+            </motion.p>
+            <div className="mt-8 flex w-full flex-wrap items-center justify-center gap-3 md:justify-start">
+              <motion.span variants={fadeInSlideInVariant}>
+                <TypeformPopup.Button intent="consultation" />
+              </motion.span>
+              <motion.span variants={fadeInSlideInVariant}>
+                <Link href="/portfolio/web">
+                  <Button.Minimal label={t('homepage.cta')} />
+                </Link>
+              </motion.span>
+            </div>
+            <motion.p
+              variants={fadeInSlideInVariant}
+              className="mt-6 max-w-2xl text-pretty text-center text-sm text-white/70 md:text-left"
+            >
+              {t('homepage.authority')}
+            </motion.p>
+          </div>
+          <div className="flex flex-1 items-center justify-center md:justify-end">
+            <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
+              <Image
+                src="/images/profile_home.webp"
+                alt="André Rodrigo"
+                width={600}
+                height={600}
+                priority
+                sizes="(max-width: 768px) 90vw, 600px"
+                className="h-full w-full rounded-2xl object-cover"
+              />
+            </div>
+          </div>
+        </Container>
+      </motion.div>
+
+      <div className="relative z-10 -mt-24 rounded-b-3xl rounded-t-3xl border-t-2 border-gray-800 bg-gray-900/30 backdrop-blur-2xl md:-mt-32">
+        <Container className="!mb-0 !mt-0 pb-6 md:pb-8">
+          <Section className="mb-12 mt-12 md:mb-16 md:mt-28">
+            <div className="grid gap-6 md:grid-cols-12">
+              <motion.div
+                variants={fadeInVariant}
+                viewport={{ once: true }}
+                initial="hidden"
+                whileInView="visible"
+                className="col-span-12 flex h-full justify-center sm:col-span-5"
+              >
+                <div className="mb-24 flex flex-col items-center justify-center gap-11 sm:mb-0 sm:items-start">
+                  <InfoCounter label={t('about.experience.years')} end={5} />
+                  <InfoCounter
+                    label={t('about.experience.projects')}
+                    end={15}
+                  />
+                </div>
+              </motion.div>
+              <div className="col-span-12 sm:col-span-7">
+                <motion.h2
+                  variants={fadeInSlideLeftVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  className="mb-10 text-6xl"
+                  viewport={{ once: true }}
+                >
+                  {t('homepage.about.title')}
+                </motion.h2>
+                <motion.p
+                  variants={fadeInVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  {t('homepage.about.description')}
+                </motion.p>
+                <motion.div
+                  variants={containerVariant}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="mt-9 flex items-end justify-end gap-3"
+                >
+                  <motion.span variants={fadeInSlideInVariant}>
+                    <a href={CONTACTS.LINKEDIN} target="_">
+                      <Button.Icon icon={ICONS.linkedin} />
+                    </a>
+                  </motion.span>
+                  <motion.span variants={fadeInSlideInVariant}>
+                    <Link href="/about">
+                      <Button.Text
+                        label={t('buttons.see_more')}
+                        icon={ICONS.arrow}
+                      />
+                    </Link>
+                  </motion.span>
+                </motion.div>
+              </div>
+            </div>
+          </Section>
+        </Container>
+      </div>
+
+      <Container>
+        <Section className="mt-12 md:mt-28">
+          <SectionTitle tag="h2" title={t('homepage.expertiseTitle')} />
+          <motion.div
+            variants={containerVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mt-20 grid items-baseline gap-6 md:grid-cols-12"
+          >
+            {EXPERTISE.map(({ name, description, src }, i) => (
+              <motion.div
+                variants={fadeInSlideInVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="col-span-12 flex h-full justify-center sm:col-span-12 md:col-span-4"
+                key={i}
+              >
+                <Card.Basic
+                  title={name}
+                  description={t('portfolio.' + description)}
+                  imageUrl={src}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            className="mt-6 text-center"
+            viewport={{ once: true }}
+          >
+            <Link href="/about">
+              <Button.Text
+                className="w-full"
+                label={t('buttons.skills')}
+                icon={ICONS.arrow}
+              />
+            </Link>
+          </motion.div>
+        </Section>
+
+        <Section>
+          <TrustedCompanies />
+        </Section>
+      </Container>
+
+      <Container>
+        <Section>
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mx-auto mb-12 w-full max-w-7xl"
+          >
+            <p className="text-4xl md:text-6xl">
+              {t('portfolio_parallax.title')}
+            </p>
+            <p className="mt-8 max-w-2xl md:text-xl">
+              {t('portfolio_parallax.description')}
+            </p>
+          </motion.div>
+
+          <ExpandableCards cards={MAIN_PROJECTS} />
+
+          <motion.div
+            variants={fadeInSlideInVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mt-6 text-center"
+          >
+            <Link href="/portfolio">
+              <Button.Text
+                className="w-full"
+                label={t('buttons.see_more')}
+                icon={ICONS.arrow}
+              />
+            </Link>
+          </motion.div>
+        </Section>
+      </Container>
+
+      <Container>
+        <Section>
+          <motion.div
+            variants={fadeInSlideLeftVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mb-7 text-5xl md:mb-12 md:text-7xl lg:w-5/6"
+          >
+            <h2 className="text-4xl md:text-6xl">
+              {t('homepage.rebrand_hero.title')}
+              <br />
+              {t('homepage.rebrand_hero.flipWords.part1')}{' '}
+              <FlipWords
+                words={getTranslationsArray(
+                  'homepage.rebrand_hero.flipWords.words',
+                )}
+              />
+            </h2>
+            <p className="mt-9 md:w-4/6 md:text-xl lg:w-3/5">
+              {t('homepage.rebrand_hero.description')}
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInSlideInVariant}
+            whileInView="visible"
+            initial="hidden"
+            viewport={{ once: true }}
+            className="mx-auto flex h-[400px] w-full rounded-3xl border border-gray-800 bg-gray-800 bg-opacity-10 p-5 backdrop-blur-3xl sm:h-[500px] sm:w-4/5"
+          >
+            <Compare
+              firstImage="/images/websites/bb_before.webp"
+              secondImage="/images/websites/bb_after.webp"
+              firstImageClassName="object-cover object-left-top w-full"
+              secondImageClassName="object-cover  w-full"
+              className="h-full w-full rounded-2xl"
+              slideMode="drag"
+            />
+          </motion.div>
+        </Section>
+
+        <WebsiteProcess />
+
+        <Section className="md:my-56">
+          <SectionTitle tag="h2" title={t('testimonials.title')} />
+          <Testimonials />
+        </Section>
+
+        <Section className="md:my-56">
+          <BlogPreview posts={posts} />
+        </Section>
+
+        <Section className="md:my-56">
+          <HeroSection.Cta
+            text={t('homepage.contact.description')}
+            cta={
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <TypeformPopup.Button intent="quote" />
+                <TypeformPopup.Minimal intent="consultation" />
+              </div>
+            }
+          />
+        </Section>
+      </Container>
+    </>
+  );
+}

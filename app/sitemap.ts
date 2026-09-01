@@ -18,17 +18,19 @@ const getBlogPostUrl = (slug: string, locale: Locale): string =>
   `${buildLocalizedUrl('/blog', locale)}/${slug}`;
 
 function getStaticEntries(): MetadataRoute.Sitemap {
-  return Object.keys(pathnames).flatMap((pathname) =>
-    locales.map((locale) => ({
-      url: buildLocalizedUrl(pathname, locale),
-      lastModified: new Date(),
-      alternates: {
-        languages: getLanguageAlternates((loc) =>
-          buildLocalizedUrl(pathname, loc),
-        ),
-      },
-    })),
-  );
+  return Object.keys(pathnames)
+    .filter((pathname) => !pathname.includes('['))
+    .flatMap((pathname) =>
+      locales.map((locale) => ({
+        url: buildLocalizedUrl(pathname, locale),
+        lastModified: new Date(),
+        alternates: {
+          languages: getLanguageAlternates((loc) =>
+            buildLocalizedUrl(pathname, loc),
+          ),
+        },
+      })),
+    );
 }
 
 function getLastModified(publishedDate: string): Date {

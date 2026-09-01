@@ -2,106 +2,136 @@
 title: 'Your Slow Website Is Quietly Losing You Revenue'
 category: Technology
 publishedDate: '2026-04-01'
-description: 'Every second your website takes to load costs you conversions. Here is the exact financial impact of a slow website and what to do about it.'
-isTopPick: false
+description: 'A slow website adds friction to every visit. Learn how to measure real Core Web Vitals, connect performance to revenue, and prioritize effective fixes.'
+isTopPick: true
 slug: slow-website-costing-you-money
 coverImage: https://plus.unsplash.com/premium_photo-1722036566546-a68f84177292?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
-Most business owners treat website speed the same way they treat changing the oil in their car: something to deal with eventually, when there is time. It feels like background noise — a technical concern, not a business one.
+Website speed is often treated as technical housekeeping: something to improve after the design, content, and campaigns are finished. That order is backwards.
 
-Here is the uncomfortable truth: every extra second your slow website takes to load is quietly turning away the customers you already paid to attract. This is not a technical problem. It is a revenue problem — and it has a precise number attached to it.
+Performance shapes the experience of every visitor you worked or paid to attract. It affects when they see the offer, whether controls respond, whether the page moves while they are reading, and whether the checkout feels reliable. A slow website does not guarantee a lost sale, but it adds friction to every opportunity.
 
-## The Number That Should Change How You Think About Your Website
+The useful approach is not to repeat a universal “one second equals this much revenue” statistic. It is to measure your visitors, your pages, and your conversion path.
 
-A 1-second delay in page load time reduces conversions by 7%. Amazon has estimated that a 100-millisecond delay costs 1% in sales. BBC loses 10% of their users for every additional second their pages take to load. Walmart found that every 1-second improvement in load time increased conversions by 2%.
+## Measure Experience, Not Just a Speed Score
 
-These are not startups experimenting. These are some of the most data-driven companies on the planet, and they all arrived at the same conclusion: speed is a revenue dial.
+Google's Core Web Vitals cover three parts of real user experience:
 
-For a small business generating £10,000 a month from website enquiries, a 2-second delay can conservatively cost £1,400 per month. Not because visitors leave in frustration — though they do — but because slower pages compound every other metric: bounce rate, time on page, form completions, trust signals.
+- **Largest Contentful Paint (LCP)** measures when the main visible content appears.
+- **Interaction to Next Paint (INP)** measures how quickly the page responds to an interaction.
+- **Cumulative Layout Shift (CLS)** measures unexpected visual movement.
 
-## How the Numbers Break Down
+Google's published “good” thresholds are:
 
-The conversion drop-off from a slow website is non-linear and accelerates sharply. Based on current benchmarks:
+- LCP of **2.5 seconds or less**.
+- INP of **200 milliseconds or less**.
+- CLS of **0.1 or less**.
 
-- **1 second**: baseline conversion rate
-- **2 seconds**: 11% fewer conversions
-- **3 seconds**: 27% fewer conversions
-- **4 seconds**: 40% fewer conversions
-- **5 seconds**: 53% fewer conversions
+These targets are assessed at the 75th percentile, split between mobile and desktop. In other words, a passing average is not enough; the experience should be good for most visits. The definitions and thresholds are documented in the official [Web Vitals guidance](https://web.dev/articles/vitals).
 
-And 47% of users expect a page to load in 2 seconds or less. If you are over that threshold, almost half your visitors arrive already frustrated — before they have read a single word about your business.
+## Understand Field Data and Lab Data
 
-## A Real Business, a Concrete Result
+[PageSpeed Insights](https://pagespeed.web.dev/) can show two different kinds of evidence.
 
-An HVAC company with a perfectly normal website — nothing obviously wrong with it — had a conversion rate sitting at 2.1%. After 8 hours of speed optimisation (no redesign, no new copy, no extra ad spend), their conversion rate jumped to 3.8%. That translated to 53 additional leads per month from exactly the same traffic.
+**Field data** comes from eligible real Chrome visits in the Chrome User Experience Report. It reflects actual devices, networks, and interactions over a rolling period.
 
-53 leads. From the same budget. Just by making the website faster.
+**Lab data** runs a controlled Lighthouse test. It is useful for diagnosis and repeatable comparisons, but it is not a recording of every customer's experience.
 
-This is what makes a slow website particularly painful as a business problem: the fix is almost always cheaper than the loss it is causing.
+Use field data to understand whether real users have a problem. Use lab data to investigate likely causes and test improvements. If a page does not have enough traffic for URL-level field data, check the origin-level result and add privacy-conscious real-user monitoring where appropriate.
 
-## Why Your Website Is Probably Slower Than You Think
+## Connect Performance to Business Outcomes
 
-Most business owners have no idea how slow their site is in practice, because they use it regularly and their browser has everything cached. The experience you have loading your homepage is not the experience a first-time visitor has.
+Performance has a cost when it interrupts a valuable journey. Map that journey before estimating the opportunity.
 
-The usual culprits are predictable:
+1. Identify the pages that receive commercial traffic.
+2. Record the actions that matter: product view, form start, booking, checkout, or purchase.
+3. Segment results by device, source, and performance where the data volume is sufficient.
+4. Look for pages where slow experiences coincide with abandonment or lower completion.
+5. Improve one bottleneck and compare a meaningful period before and after.
 
-- **Unoptimised images** — A hero image exported at 4MB instead of 150KB adds 3–4 seconds on its own on a standard mobile connection.
-- **No caching strategy** — Every visit re-downloads the same files rather than pulling them from local storage.
-- **Bloated themes and plugins** — Most WordPress templates load dozens of scripts and stylesheets for features that are not even in use.
-- **Shared hosting** — Budget hosting shares server resources with hundreds of other sites. When they spike, you slow down.
-- **No CDN** — Without a content delivery network, users far from your server wait longer for every file to travel across the wire.
+A simple opportunity model is:
 
-Page builders like Wix, Squarespace, and off-the-shelf WordPress themes make this considerably worse. They are engineered for ease of setup, not performance. The code they output is heavy, generic, and optimised for no specific use case.
+**Affected visits × current conversion rate × expected improvement × value per conversion**
 
-## Speed Is Not an Optional Polish Step
+The “expected improvement” must be a hypothesis, not a borrowed industry guarantee. Use a range and test it. This produces a decision model grounded in your business instead of an impressive number taken from a different company, audience, and decade.
 
-There is a common misconception that speed is something you address after the design is done — a final round of tweaks before launch. But speed and design are not separate phases. They are the same decision, made at the point of architecture.
+## Why Your Own Website May Feel Faster Than It Is
 
-A website that loads in 6 seconds is a bad website, regardless of how it looks in a screenshot. Getting speed right means choosing the right framework, handling images correctly from the start, loading scripts in the right order, and using the right hosting infrastructure from day one. Retrofitting speed onto a badly architected site is possible, but it is always more expensive than building it correctly.
+Owners and developers often load the same pages repeatedly on good devices and reliable connections. Their browser caches files, their account may bypass consent or marketing flows, and they know exactly where to click.
 
-If you are already seeing this problem, the [5 critical UX/UI mistakes that harm businesses](https://www.andrerodrigo.com/blog/5-critical-ux-ui-mistakes-that-can-harm-your-business) are worth reviewing alongside speed — they frequently compound each other.
+A first-time visitor may arrive on a mid-range phone, through a mobile network, with an empty cache and several third-party scripts competing for resources. Test that experience.
 
-## How to Diagnose the Problem
+## Common Causes of Poor Core Web Vitals
 
-You do not need to be technical to get a clear picture of where you stand. [Google PageSpeed Insights](https://pagespeed.web.dev/) is free, takes 30 seconds to run, and gives your site a score out of 100 with a breakdown of exactly what is causing the slowdown.
+### Oversized or poorly prioritized images
 
-Run it on your homepage on mobile. If you are scoring below 80, there are almost certainly quick wins available. If you are below 50, your site has a meaningful performance problem that is actively costing you traffic and conversions.
+A large hero image can delay LCP when it is downloaded at a larger size than the device needs or discovered too late. Use modern formats, responsive sizes, sensible compression, and explicit dimensions. Do not lazy-load the image likely to become LCP.
 
-Common fixes that reliably deliver results:
+### Render-blocking resources
 
-- **Image compression and WebP conversion** — Switching to modern image formats and compressing on export. One change, significant impact.
-- **Lazy loading** — Images and videos below the fold do not need to load until the user scrolls to them.
-- **Script deferral** — Analytics, chat widgets, and social embeds should load after the page is usable, not before.
-- **Caching headers** — Telling browsers to remember files they have already downloaded, so return visitors load instantly.
-- **Hosting upgrade or CDN** — Moving from shared to managed hosting, or adding a CDN layer, can cut load times by 40–60%.
+Styles, fonts, and scripts needed before the page can render may delay the main content. Remove unused code, load only necessary font variants, and prioritize critical resources.
 
-None of these require rebuilding your website from scratch. They require someone who knows where to look.
+### Third-party scripts
 
-## The Compounding Effect on SEO
+Analytics, advertising, chat, video, and social embeds can consume network and main-thread time. Load them according to purpose and consent, delay non-essential work, and remove tools whose business value does not justify their performance cost.
 
-Website speed does not just affect conversions today. It affects how many visitors reach you tomorrow. Google's Core Web Vitals — which include Largest Contentful Paint (LCP) as a key metric — are direct ranking signals. A slow site is suppressed in search results, which means fewer visitors, which means fewer conversions, which compounds the revenue loss month over month.
+### Heavy client-side rendering
 
-Fixing speed delivers returns on two fronts simultaneously: more visitors from improved rankings and a higher percentage of those visitors converting. That is not a common combination in marketing — most improvements trade one for the other.
+Large JavaScript bundles take time to download, parse, and execute. Render stable content on the server where appropriate, reduce hydration work, and split interactive features so the whole page does not pay for one component.
+
+### Slow server responses and uncached data
+
+The browser cannot render content it has not received. Review backend latency, database calls, cache behaviour, geographic distance, and whether personalized work is blocking content that could be shared.
+
+### Layout instability
+
+Images without dimensions, late-loading banners, injected advertisements, and font swaps can move content after it appears. Reserve space and avoid inserting interface elements above what the visitor is already using.
+
+## Fix the Bottleneck, Not the Longest Audit List
+
+Performance reports can produce dozens of recommendations. Prioritize the item connected to the failing metric and important template.
+
+- Poor LCP: inspect the LCP element, server response, resource discovery, image delivery, and blocking styles.
+- Poor INP: find long tasks, excessive client-side work, and handlers that perform too much before updating the screen.
+- Poor CLS: identify elements moving without reserved space.
+
+Start with a high-traffic page or shared template so the improvement reaches meaningful journeys. Re-test after each group of changes; an optimization that does not move field or lab evidence is not automatically valuable.
+
+## Performance Is an Architecture Decision
+
+Speed is influenced by decisions made before the first visual review: rendering strategy, content model, image pipeline, third-party policy, caching, hosting, and component boundaries.
+
+Existing sites can often improve without a redesign. Image handling, script loading, caching, font delivery, and dependency cleanup may produce substantial gains. But a platform or theme that sends unnecessary work on every page can make each later fix more expensive.
+
+This is why performance belongs in requirements and acceptance criteria, not in a final “polish” ticket.
+
+## The SEO Impact Needs Proper Context
+
+Core Web Vitals contribute to Google's page-experience systems, but performance is not a shortcut that overrides relevance, usefulness, or other ranking factors. A faster page is not guaranteed to move above a more relevant result.
+
+The stronger case is broader: performance improves the experience after a search click, makes crawling and rendering more efficient in some situations, and removes friction from the actions that organic traffic is meant to produce. Treat it as one part of a technically sound site, alongside semantic content, indexability, and useful information.
 
 ## Frequently Asked Questions
 
-**How do I know if my website is too slow?**
+### What is a good website speed?
 
-Run your website through [Google PageSpeed Insights](https://pagespeed.web.dev/) on mobile. A score below 80 indicates performance problems worth addressing. Focus on the mobile score specifically — that is where most of your visitors are, and where the gap between fast and slow sites is widest.
+Use the Core Web Vitals thresholds: LCP at or below 2.5 seconds, INP at or below 200 milliseconds, and CLS at or below 0.1 at the 75th percentile. Also measure the complete business journey; a passing homepage does not prove the checkout is fast.
 
-**What is a good website load time?**
+### Is a PageSpeed score below 100 a problem?
 
-Under 2.5 seconds for Largest Contentful Paint (LCP) is Google's threshold for a "good" score. Practically, aiming for a page that is interactive in under 2 seconds on a mid-range mobile device is a reliable target.
+Not by itself. The Lighthouse score is a diagnostic summary from a controlled test. Prioritize real Core Web Vitals, important journeys, and the specific opportunities behind the score.
 
-**Can I improve my website speed without a full redesign?**
+### Can performance improve without a redesign?
 
-In most cases, yes. Image compression, lazy loading, script deferral, and caching improvements can be applied to an existing site without touching its design. The improvement from these changes alone is often significant.
+Often, yes. Image delivery, script loading, caching, fonts, third-party tools, and server response can be improved independently of the visual design.
 
-**How does website speed affect SEO?**
+### How should I prove that a speed change helped revenue?
 
-Google uses Core Web Vitals, which include speed-related metrics, as ranking signals. Slow sites rank lower, which reduces organic traffic. Improving speed improves rankings, which compounds the conversion gains from a faster site.
+Record a baseline, make a defined change, and compare performance and conversion evidence for the same page and audience. Account for campaign, seasonality, and device mix before attributing the result.
 
----
+## Conclusion
 
-If you want to understand exactly what is holding your site back and what fixing it would involve, [get in touch](https://www.andrerodrigo.com/contacts). I am happy to run a quick audit and talk through the options without any pressure.
+A slow website costs opportunities by adding friction, not by following one universal conversion formula. Measure real Core Web Vitals, connect them to important journeys, fix the dominant bottleneck, and verify the result.
+
+If you want a performance audit that connects technical findings to the pages that generate enquiries or sales, [get in touch](https://www.andrerodrigo.com/contacts). I can identify the work that matters before you pay for a list of optimizations that does not.

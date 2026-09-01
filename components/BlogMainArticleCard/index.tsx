@@ -15,8 +15,9 @@ const BlogMainArticleCard = ({ post }: Props) => {
     post;
 
   return (
-    <div
-      className={`rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
+    <Link
+      href={{ pathname: '/blog/[slug]', params: { slug } }}
+      className="block rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px] focus:outline-none focus:ring-2 focus:ring-slate-400"
     >
       <div>
         <div className="group/card border-1 relative flex flex-wrap gap-10 rounded-lg p-8 md:flex-nowrap md:p-12">
@@ -41,10 +42,11 @@ const BlogMainArticleCard = ({ post }: Props) => {
               </div>
               <div className="text-slate-300">{description}</div>
               <div className="mt-7 w-full text-right">
-                {/*  @ts-expect-error href does not have the type  */}
-                <Link href={`/blog/${slug}`}>
-                  <Button.Text icon={ICONS.arrow} label={t('readMore')} />
-                </Link>
+                <Button.Text
+                  as="span"
+                  icon={ICONS.arrow}
+                  label={t('readMore')}
+                />
               </div>
             </div>
           </div>
@@ -59,7 +61,7 @@ const BlogMainArticleCard = ({ post }: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

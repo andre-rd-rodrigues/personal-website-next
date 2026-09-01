@@ -50,7 +50,7 @@ In a competitive market, a blog makes the author a "known quantity." Each articl
 ## Pipeline Overview
 
 ```
-Configure → Research → Write (EN) → SEO → Translate (PT-PT) → Save Files
+Configure → Research → Write (EN) → SEO → Translate (PT-PT) → Save Files → Generate Cover Images
 ```
 
 Track progress with this checklist (copy into your response):
@@ -63,6 +63,7 @@ Pipeline Progress:
 - [ ] Phase 3: SEO Optimization
 - [ ] Phase 4: PT-PT Translation
 - [ ] Phase 5: File Creation
+- [ ] Phase 6: Cover Image Generation
 ```
 
 ---
@@ -137,7 +138,9 @@ Using the **pipeline config** from Phase 0, search the web for current trends in
    - _Career Changers_: Learning roadmaps, entry-level opportunities, skill gaps.
 2. **Format fit**: Prioritize topics that naturally suit the selected content format (tutorial, opinion, listicle, or case study).
 3. **Timeliness**: Prioritize trends from the last 1-3 months.
-4. **Content gap**: Avoid topics already covered in `content/blog/en/`.
+4. **Content gap and search intent**: Inventory existing titles, slugs, headings, and target queries in `content/blog/en/`. Reject a topic when it would answer the same reader question as an existing article. A different title is not a content gap.
+5. **Distinctive evidence**: Prefer topics that can include a real implementation, architecture, decision log, screenshot, code/configuration, measured result, or clearly labelled worked example. If none is available, narrow the topic until the author can add something a generic summary cannot.
+6. **Source and vendor currency**: Verify time-sensitive tools, products, regulations, and benchmarks against current primary sources. Do not recommend a vendor from a secondary roundup without confirming that the product and relevant feature still exist.
 
 Generate exactly the number of briefs specified in the config's **Count**.
 
@@ -193,6 +196,12 @@ For each approved topic, write a full blog article in **English**, adapting to t
 6. Include practical examples and links to external resources.
 7. Target **800-1500 words** per article.
 8. End with a conclusion and a call-to-action linking to `https://www.andrerodrigo.com/contacts`.
+9. **Evidence and honesty**:
+   - Link every statistic, benchmark, market count, price range, regulatory claim, and attributed result to a credible source close to the claim.
+   - Never invent client stories, personal experience, survey findings, anonymous case studies, or first-person claims to create authority.
+   - When using hypothetical numbers or workflows, label them explicitly as illustrative.
+   - Do not claim a result is typical, guaranteed, or caused by one change unless the cited evidence supports that conclusion.
+10. **Practitioner standard**: At least one substantial section must demonstrate implementation-level reasoning—trade-offs, failure modes, validation, architecture, code/configuration, or an evidence-backed decision process. Tool lists and generic advice do not satisfy this requirement.
 
 **Output format** — markdown with frontmatter matching the blog schema:
 
@@ -226,7 +235,7 @@ Optimize each English article for search, factoring in the **pipeline config** a
    - _Career Changers_: Beginner modifiers ("for beginners", "getting started", "roadmap").
 5. **Keyword placement**: Primary keyword in first 100 words, naturally distributed throughout.
 6. **Internal links**: Link to other blog posts in `content/blog/en/` where relevant.
-7. **External links**: Cite authoritative sources for E-E-A-T signals.
+7. **External links**: Cite authoritative, preferably primary sources for E-E-A-T signals. Every numeric, legal, regulatory, pricing, market-share, and performance claim must have an inline source or be removed/rephrased.
 8. **Content structure**: Add FAQ section at the end if it targets PAA opportunities.
 9. **Slug**: Ensure `slug` in frontmatter is URL-friendly and keyword-rich.
 10. **Lindy-effect optimization**: Favor evergreen phrasing that will stay relevant for years. Avoid date-specific language in headings (e.g., "in 2026") unless the article is explicitly a time-bound roundup. The goal is content that compounds the author's reputation long after publication.
@@ -264,15 +273,54 @@ Save the final files to the blog content directories:
 
 After writing files:
 
-1. Run `pnpm type-check` to verify no TypeScript errors.
-2. Run `pnpm lint` to verify no lint errors.
-3. Confirm the new articles appear in the dev server (`pnpm dev`).
+1. Confirm EN and PT contain the same slug set and that each new article has its translation.
+2. Extract every internal `/blog/{slug}` link and verify that the target markdown file exists. Never publish a link to a planned article.
+3. For every local `coverImage`, verify that the referenced file exists under `public/`.
+4. Re-check all vendors and time-sensitive claims immediately before publishing.
+5. Run `pnpm test` so the blog content-integrity checks validate locale parity, links, and covers.
+6. Run `pnpm type-check` to verify no TypeScript errors.
+7. Run `pnpm lint` to verify no lint errors.
+8. Confirm the new articles appear in the dev server (`pnpm dev`).
+
+---
+
+## Phase 6: Cover Image Generation
+
+Generate a custom cover image for each article that matches the blog's established visual identity. The `coverImage` frontmatter field must point to `/images/blog/{slug}.webp`, and the file must exist at `public/images/blog/{slug}.webp`.
+
+### The Blog Cover "Vibe" (Extracted Style Guide)
+
+The existing covers fall into two families. The **3D-render / illustration family** is the reproducible house style — always generate in this style so the blog stays cohesive.
+
+**House style — playful modern concept illustration:**
+
+- **Rendering:** Glossy 3D "clay" render _or_ clean isometric flat-vector illustration. Smooth plastic finish, soft studio lighting, gentle drop shadows, objects floating with generous negative space.
+- **Background:** One solid, soft, single-color backdrop. Rotate across the series to keep variety while staying in-family: pastel pink, coral, warm beige, or periwinkle/sky blue.
+- **Palette:** Candy-pop accents on the neutral backdrop — magenta-pink (align with brand `--color-primary` `#ff56cd`), indigo/purple (`#8b5afe`), coral-orange, sunny yellow, mint green, plus white. Keep it bright and friendly.
+- **Composition:** ONE central concept object or a tiny scene (2–4 objects max). Landscape orientation. Uncluttered. Lots of breathing room.
+- **Recurring motifs:** browser windows, mouse cursors/pointers, chat bubbles, robots, shopping baskets, padlocks/shields, dashboards, connected app tiles/nodes — pick what fits the article topic.
+- **Mood:** Modern · Credible · Approachable. Clean, optimistic, tech/business themed.
+- **Avoid:** text inside the image (AI text rendering is unreliable — at most one very short label), realistic human faces, dark/gritty/moody photos, cluttered scenes, generic corporate stock-photo clichés, cliché purple AI-gradient blobs.
+
+### Process
+
+1. **Derive a concept** from the article's core idea (e.g. customer-service AI → friendly robot with a headset and chat bubbles; data privacy → browser window with a padlock and shield; tool stack → connected stack of app tiles).
+2. **Pick a background color** for each article, rotating through the palette so a batch of articles isn't all the same color.
+3. **Generate** using the image generation tool with `aspect_ratio: "16:9"`. Pass 1–3 existing 3D-render covers as `reference_image_paths` to anchor the house style (e.g. `public/images/blog/how-to-add-ai-chatbot-to-your-website.webp` for the isometric look). Write a detailed prompt following the style guide above.
+4. **Convert to WebP** and place at the final path. The generation tool outputs PNG/JPG; convert with `cwebp -q 82 <input> -o public/images/blog/{slug}.webp` (fall back to `magick`/`sips` if `cwebp` is unavailable). Remove the temporary source file.
+5. **Verify** the file exists at `public/images/blog/{slug}.webp` and that the `coverImage` frontmatter in both the EN and PT files matches exactly.
+6. **Present** the generated covers to the user for approval; regenerate any they want changed.
+
+### Prompt Template
+
+> A playful, modern 3D clay-render illustration on a solid soft {BACKGROUND} background with generous negative space, landscape composition. Center: {CONCEPT OBJECT/SCENE}, glossy smooth plastic finish with soft drop shadows, floating slightly. A few small floating accent objects: {2–3 SUPPORTING ICONS}. Bright candy-pop palette (magenta-pink, indigo/purple, coral, yellow, mint) with white, soft studio lighting, clean and uncluttered, no text, friendly and approachable tech vibe.
 
 ---
 
 ## Important Notes
 
 - **Always ask for user approval** after Phase 1 before writing articles.
-- **Cover images**: `coverImage` references `/images/blog/{slug}.webp`. After file creation, offer to generate a cover image prompt for the user.
-- **Existing articles**: Check `content/blog/en/` before writing to avoid duplicate topics.
+- **Cover images**: `coverImage` references `/images/blog/{slug}.webp`. Phase 6 generates this image automatically in the blog's house style and places the `.webp` at `public/images/blog/{slug}.webp` — do not leave the path pointing at a non-existent file.
+- **Existing articles**: Compare reader intent and outline—not only keywords—before writing. Consolidate overlapping topics into the strongest existing URL instead of producing a thin cluster.
 - **Consistent voice**: Read 1-2 existing articles to match the writing style before drafting.
+- **No manufactured authority**: If first-party evidence is unavailable, write transparently from cited sources or use a clearly labelled worked example. Never imply client work or personal results that were not provided.

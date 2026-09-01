@@ -26,6 +26,12 @@
       "title": "Sobre mim",
       "description": "Sou o André Rodrigo, Engenheiro de Software Sénior com mais de 5 anos de experiência. Ajudo empresas a transformar objetivos de negócio em websites, aplicações e ferramentas digitais rápidas, seguras e fáceis de utilizar.\n\nCombino desenvolvimento à medida, automação com IA e práticas modernas de cibersegurança para simplificar operações, reduzir risco e criar bases sólidas para o crescimento."
     },
+    "blogPreview": {
+      "title": "Artigos mais recentes",
+      "description": "Guias práticos sobre websites, IA, segurança e crescimento digital para ajudar a tomar melhores decisões tecnológicas.",
+      "viewAll": "Ver todos os artigos",
+      "readArticle": "Ler artigo"
+    },
 
     "rebrand_hero": {
       "title": "Destaque-se da concorrência",

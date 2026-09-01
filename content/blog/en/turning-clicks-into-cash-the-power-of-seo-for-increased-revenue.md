@@ -16,7 +16,9 @@ At its core, SEO aims to enhance your website's visibility on search engines lik
 
 ### How SEO Works: The Essentials
 
-Search engines use **algorithms** known as **web crawlers** to analyze websites and determine their relevance to specific search queries. By optimizing your website's content, structure, and performance, you can improve its ranking and visibility, attracting more visitors and potential customers.
+Search engines use **crawlers** to discover and fetch pages, indexing systems to understand and store information, and ranking systems to decide which indexed results best answer a query. Crawlers are not ranking algorithms. Google's overview of [how search works](https://developers.google.com/search/docs/fundamentals/how-search-works) explains these separate stages.
+
+SEO therefore starts with three different questions: can the page be discovered, can its content be understood and indexed, and is it a useful result for the intended search? Content, HTML structure, internal links, metadata, performance, and authority contribute at different stages.
 
 ## Practical Tips: Enhancing Your SEO Strategy
 
@@ -40,7 +42,7 @@ SEO is highly about programming too. Web crawlers meticulously navigate through 
 
 ### 4. Mobile Optimization
 
-Ensure your website is mobile-friendly and responsive across various devices and screen sizes. Mobile optimization is crucial for providing a seamless user experience and improving your website's ranking on mobile search results. Google is enforcing responsiveness as a key factor for ranking since around [64% of searches occur with mobile](https://www.sistrix.com/blog/the-proportion-of-mobile-searches-is-more-than-you-think-what-you-need-to-know/).
+Ensure your website is usable across devices and screen sizes. Google predominantly uses the mobile version of a site's content for crawling and indexing, so important content, structured data, and metadata must remain equivalent. Responsive design is one reliable way to maintain that consistency, but it does not replace relevant content or a sound page experience. See Google's [mobile-first indexing guidance](https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing).
 
 **Example**: Ensure your website is responsive and user-friendly on mobile devices. Test its functionality, layout, and load speed on various devices to provide a seamless user experience, encouraging visitors to explore your offerings and make purchases.
 

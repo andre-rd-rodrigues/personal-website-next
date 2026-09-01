@@ -9,6 +9,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   onClick?: () => void;
   hover?: boolean;
+  as?: 'button' | 'span';
 }
 
 const ButtonWithText: FC<ButtonProps> = ({
@@ -17,9 +18,12 @@ const ButtonWithText: FC<ButtonProps> = ({
   fullWidth,
   onClick,
   hover = true,
+  as = 'button',
 }) => {
+  const Component = as === 'span' ? motion.span : motion.button;
+
   return (
-    <motion.button
+    <Component
       style={{ width: fullWidth ? '100%' : 'auto' }}
       className="relative inline-flex overflow-hidden rounded-full p-[1px] transition-shadow duration-300 hover:shadow-[0_0_24px_-4px_rgba(255,86,205,0.45)] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
       onClick={onClick}
@@ -37,7 +41,7 @@ const ButtonWithText: FC<ButtonProps> = ({
         {icon && <Icon icon={icon} />}
         {label}
       </span>
-    </motion.button>
+    </Component>
   );
 };
 

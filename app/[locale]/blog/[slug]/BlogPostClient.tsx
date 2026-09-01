@@ -13,10 +13,20 @@ import { motion } from 'framer-motion';
 import { fadeInVariant } from '@/motion/motionVariants';
 import { IMAGE_DATA_BLUR_URL } from '@/constants/common.constants';
 import { useEffect, useState } from 'react';
-import { injectHeaderIds } from '@/utils/post.utils';
+import {
+  extractArticleFaqs,
+  injectHeaderIds,
+  type ArticleFaq,
+} from '@/utils/post.utils';
 import ContentNavigator from '@/components/ContentNavigator';
+import { FAQItem } from '@/components/Faqs';
 
 export type Heading = { text: string | null; id: string; level: number };
+
+type HtmlParserNode = {
+  type?: string;
+  attribs?: Record<string, string>;
+};
 
 type BlogPostClientProps = {
   post: Post;
@@ -26,6 +36,7 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
   const [enhancedPost, setEnhancedPost] = useState<{
     html: string;
     headings: Heading[];
+    faqs: ArticleFaq[];
   } | null>(null);
 
   const { title, publishedDate, content, coverPhoto, category } = post;
@@ -33,8 +44,11 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
 
   useEffect(() => {
     if (!content?.html) return;
-    const { html, headings } = injectHeaderIds(content.html);
-    const update = () => setEnhancedPost({ html, headings });
+    const { html: htmlWithFaqPlaceholder, faqs } = extractArticleFaqs(
+      content.html,
+    );
+    const { html, headings } = injectHeaderIds(htmlWithFaqPlaceholder);
+    const update = () => setEnhancedPost({ html, headings, faqs });
     queueMicrotask(update);
   }, [content?.html]);
 
@@ -97,7 +111,30 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
             </p>
             <p className="text-sm font-normal opacity-80">{publishedDate}</p>
           </div>
-          <div className={styles.content}>{parser(enhancedPost.html)}</div>
+          <div className={styles.content}>
+            {parser(enhancedPost.html, {
+              transform: (node: HtmlParserNode, index: number) => {
+                if (
+                  node.type !== 'tag' ||
+                  node.attribs?.['data-blog-faqs'] === undefined
+                ) {
+                  return undefined;
+                }
+
+                return (
+                  <div key={`article-faqs-${index}`} className="mt-8">
+                    {enhancedPost.faqs.map((faq) => (
+                      <FAQItem
+                        key={faq.question}
+                        question={faq.question}
+                        answer={parser(faq.answerHtml)}
+                      />
+                    ))}
+                  </div>
+                );
+              },
+            })}
+          </div>
         </TracingBeam>
         <ContentNavigator headings={enhancedPost.headings} />
       </motion.div>

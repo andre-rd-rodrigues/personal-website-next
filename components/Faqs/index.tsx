@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { type ReactNode, useId, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import useTranslation from '@/hooks/useTranslation';
 import { Link } from '@/navigation';
@@ -12,16 +12,19 @@ export function FAQItem({
   answer,
 }: {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
+  const answerId = useId();
 
   return (
     <>
       <div>
         <button
           className="flex w-full items-center justify-between text-left"
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen((isOpen) => !isOpen)}
+          aria-expanded={open}
+          aria-controls={answerId}
         >
           <span className="text-lg font-normal">{question}</span>
           <Icon
@@ -34,6 +37,8 @@ export function FAQItem({
         </button>
 
         <motion.div
+          id={answerId}
+          aria-hidden={!open}
           initial={false}
           animate={{
             height: open ? 'auto' : 0,
@@ -42,7 +47,11 @@ export function FAQItem({
           transition={{ duration: 0.3 }}
           className="overflow-hidden"
         >
-          <p className="mt-4 text-base">{answer}</p>
+          {typeof answer === 'string' ? (
+            <p className="mt-4 text-base">{answer}</p>
+          ) : (
+            <div className="mt-4 text-base">{answer}</div>
+          )}
         </motion.div>
       </div>
       <hr className="my-5 border-zinc-700" />

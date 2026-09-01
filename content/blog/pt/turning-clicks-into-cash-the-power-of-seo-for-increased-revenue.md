@@ -16,7 +16,9 @@ Na sua essência, o SEO visa aumentar a visibilidade do seu website nos motores 
 
 ### Como Funciona o SEO: O Essencial
 
-Os motores de pesquisa utilizam **algoritmos** conhecidos como **web crawlers** para analisar websites e determinar a sua relevância face a consultas de pesquisa específicas. Ao otimizar o conteúdo, a estrutura e o desempenho do seu website, pode melhorar a sua posição e visibilidade, atraindo mais visitantes e potenciais clientes.
+Os motores de pesquisa usam **rastreadores** para descobrir e obter páginas, sistemas de indexação para compreender e guardar informação, e sistemas de posicionamento para decidir que resultados indexados respondem melhor a uma pesquisa. Os rastreadores não são algoritmos de posicionamento. A explicação da Google sobre [como funciona a pesquisa](https://developers.google.com/search/docs/fundamentals/how-search-works) descreve estas fases separadas.
+
+Por isso, o SEO começa com três perguntas diferentes: a página pode ser descoberta, o conteúdo pode ser compreendido e indexado, e é um resultado útil para a pesquisa pretendida? O conteúdo, a estrutura HTML, as ligações internas, os metadados, o desempenho e a autoridade contribuem em fases diferentes.
 
 ## Dicas Práticas: Melhorar a Sua Estratégia de SEO
 
@@ -40,7 +42,7 @@ O SEO está também muito ligado à programação. Os web crawlers navegam metic
 
 ### 4. Otimização para Telemóvel
 
-Certifique-se de que o seu website é compatível com telemóvel e responsivo em vários dispositivos e tamanhos de ecrã. A otimização para telemóvel é crucial para proporcionar uma experiência de utilizador fluida e melhorar a posição do seu website nos resultados de pesquisa em dispositivos móveis. O Google está a impor a responsividade como um fator chave para o posicionamento, uma vez que [cerca de 64% das pesquisas são feitas em telemóvel](https://www.sistrix.com/blog/the-proportion-of-mobile-searches-is-more-than-you-think-what-you-need-to-know/).
+Certifique-se de que o website é utilizável em diferentes dispositivos e tamanhos de ecrã. A Google usa predominantemente a versão móvel do conteúdo para o rastreio e indexação, pelo que o conteúdo importante, os dados estruturados e os metadados devem manter-se equivalentes. O design responsivo é uma forma fiável de garantir essa consistência, mas não substitui conteúdo relevante nem uma boa experiência. Consulte a [orientação da Google sobre indexação mobile-first](https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing).
 
 **Exemplo**: Certifique-se de que o seu website é responsivo e fácil de utilizar em dispositivos móveis. Teste a funcionalidade, o layout e a velocidade de carregamento em vários dispositivos para proporcionar uma experiência fluida, incentivando os visitantes a explorar a sua oferta e a efetuar compras.
 
@@ -54,4 +56,4 @@ Para o conseguir, **monitorize** regularmente o **desempenho** do seu website, *
 
 Navegar pelas complexidades do SEO exige conhecimento, competências e experiência especializados. Trabalhar com um programador especializado pode proporcionar-lhe a experiência e o apoio necessários para implementar estratégias de SEO eficazes e maximizar o potencial das suas receitas.
 
-Como programador web especializado com vasta experiência em SEO, compreendo as nuances dos algoritmos dos motores de pesquisa, do comportamento do utilizador e da otimização de conteúdo. Ofereço soluções personalizadas, orientação estratégica e apoio contínuo para o ajudar a navegar no panorama digital em constante mudança e a alcançar os objetivos do seu negócio. Não hesite em [contactar-me](https://www.andrerodrigo.com/pt/contacts)!
+Como programador web especializado com vasta experiência em SEO, compreendo as nuances dos algoritmos dos motores de pesquisa, do comportamento do utilizador e da otimização de conteúdo. Ofereço soluções personalizadas, orientação estratégica e apoio contínuo para o ajudar a navegar no panorama digital em constante mudança e a alcançar os objetivos do seu negócio. Não hesite em [contactar-me](https://www.andrerodrigo.com/pt/contactos)!

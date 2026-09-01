@@ -67,6 +67,18 @@ describe('Blog list (BlogListClient)', () => {
     expect(screen.getByText('SEO Strategies')).toBeInTheDocument();
   });
 
+  it('links the full featured and regular cards to their articles', () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />);
+
+    expect(screen.getByRole('link', { name: /Top Pick Post/ })).toHaveAttribute(
+      'href',
+      '/en/blog/top-pick',
+    );
+    expect(
+      screen.getByRole('link', { name: /Regular Tech Post/ }),
+    ).toHaveAttribute('href', '/en/blog/regular-tech');
+  });
+
   it('renders category filter pills', () => {
     renderWithIntl(<BlogListClient posts={mockPosts} />);
     expect(screen.getByRole('button', { name: 'All' })).toBeInTheDocument();

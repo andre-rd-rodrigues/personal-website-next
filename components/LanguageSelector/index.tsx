@@ -2,6 +2,7 @@ import { useLocale } from 'next-intl';
 import styles from './language.module.scss';
 import { usePathname, useRouter } from '@/navigation';
 import { ChangeEvent } from 'react';
+import { useParams } from 'next/navigation';
 
 const GlobeIcon = () => (
   <svg
@@ -22,9 +23,22 @@ const LanguageSelector = ({ className }: { className?: string }) => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const params = useParams();
 
   const handleChangeLanguage = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedLanguage = e.target.value;
+
+    if (pathname === '/blog/[slug]') {
+      router.push(
+        {
+          pathname,
+          params: { slug: params.slug as string },
+        },
+        { locale: selectedLanguage },
+      );
+      return;
+    }
+
     router.push(pathname, { locale: selectedLanguage });
   };
 

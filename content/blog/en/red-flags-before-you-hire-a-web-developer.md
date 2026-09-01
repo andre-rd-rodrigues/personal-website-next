@@ -10,7 +10,7 @@ coverImage: https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=
 
 Hiring a web developer is one of the most impactful decisions a small business owner makes — and one of the hardest to evaluate. You are paying for expertise you cannot fully verify, trusting someone to build an asset that will either generate or kill revenue for years.
 
-Most business owners only discover they hired the wrong web developer after the project ends: the site runs over budget, breaks six months later, or they end up locked out of their own domain and have to start again. A 2023 survey found that 68% of small business owners who went with the cheapest option had to rebuild their website within 18 months.
+Most business owners only discover they hired the wrong web developer after the project ends: the site runs over budget, breaks six months later, or they end up locked out of their own domain and have to start again.
 
 The warning signs are almost always present before you sign anything. You just need to know what to look for.
 
@@ -38,7 +38,7 @@ Proper scoping takes time. It involves asking uncomfortable questions about budg
 
 Vague contracts protect the developer, not you. Watch for language like "website design and development" with no further detail. What pages exactly? How many revision rounds? Who owns the code at the end? What happens if a deadline is missed? What are payment milestones tied to?
 
-Every deliverable should be named. Every milestone should have a date. Payment should be tied to the completion of specific items, not to arbitrary time periods. According to the Project Management Institute, 70% of IT projects experience scope creep — and the warning signs are almost always visible in the contract before coding starts. If a developer resists specificity in writing, that is the single biggest red flag on this list.
+Every deliverable should be named. Every milestone should have a date. Payment should be tied to the completion of specific items, not to arbitrary time periods. Scope changes are normal; unidentified scope and an undefined change process are not. If a developer resists specificity in writing, that is the single biggest red flag on this list.
 
 ## 5. They Never Mention Post-Launch Support
 
@@ -50,15 +50,15 @@ Before signing, ask directly: What does the handover include? Will I have full a
 
 The way a developer communicates during the sales process is the best available preview of how they will behave during the project. If they take days to answer an initial enquiry, send short replies to detailed questions, or require you to chase them for basic information, that pattern does not improve once they have your deposit.
 
-Research consistently shows that 67% of project delays trace back to miscommunication between developers and clients, not technical problems. The code is almost never what sends a project sideways. The relationship is.
+The code is rarely the only thing that sends a project sideways. Decisions, dependencies, feedback, and risks need to be communicated early enough for both sides to act.
 
-## 7. They Never Ask Who Your Customers Are
+## 7. They Cannot Explain Ownership, Security, or Handover
 
-A developer's job is not just to build something that looks good. It is to build something that works for the specific people who will use it. That means understanding your audience before making any design or technology decision.
+A website is a business asset, but some projects leave the client dependent on an account, plugin licence, domain, or hosting setup they do not control.
 
-If a developer does not ask about your customers — their typical age range, what device they are on, what they are trying to accomplish, what would make them trust you — they are building for themselves, not for your business. The result is a website that performs well in a portfolio screenshot and underperforms in real traffic.
+Ask who will own the domain, hosting account, source code, design files, analytics, third-party licences, and deployment access. Ask how credentials are transferred, how secrets are stored, how dependencies receive security updates, and what documentation is included.
 
-This connects directly to the [UX and design mistakes that quietly cost businesses](https://www.andrerodrigo.com/blog/5-critical-ux-ui-mistakes-that-can-harm-your-business). Many of the most common ones stem from developers who skip this question entirely.
+“You will own the website” is not a complete answer. Ownership and access should be explicit in the contract and verified during handover, before the final supplier account is removed.
 
 ## How to Protect Yourself Before Signing Anything
 
@@ -77,7 +77,7 @@ The right developer will not just tolerate these questions — they will expect 
 
 **How much should I expect to pay for a professional website?**
 
-A professionally built custom website for a small business typically ranges from £2,000 to £10,000 depending on scope, complexity, and the developer's experience. Simpler projects (e.g. a landing page) can naturally range from £600 to £800. Anything significantly below that range for a custom build is almost always cutting corners somewhere — and you will usually pay for it in rework within 18 months.
+There is no responsible universal price. Scope, content, integrations, design, compliance, and post-launch support all change the work involved. Compare proposals by deliverables, assumptions, ownership, and support—not just the total. A low price is a risk when the proposal cannot explain what has been excluded.
 
 **What questions should I ask before hiring a web developer?**
 

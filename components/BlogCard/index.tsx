@@ -14,8 +14,9 @@ const BlogCard = ({ post }: { post: Post }) => {
     post;
 
   return (
-    <div
-      className={`rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px]`}
+    <Link
+      href={{ pathname: '/blog/[slug]', params: { slug } }}
+      className="block rounded-lg border border-gray-800 bg-gray-800 bg-opacity-10 backdrop-blur-[40px] focus:outline-none focus:ring-2 focus:ring-slate-400"
     >
       <CardContainer className="inter-var">
         <CardBody className="group/card border-1 relative h-auto w-auto rounded-lg p-8 md:p-12 md:text-left">
@@ -50,15 +51,12 @@ const BlogCard = ({ post }: { post: Post }) => {
               {description}
             </CardItem>
             <CardItem translateZ="60" className="mt-7 w-full text-right">
-              {/*  @ts-expect-error href does not have the type  */}
-              <Link href={`/blog/${slug}`}>
-                <Button.Text icon={ICONS.arrow} label={t('readMore')} />
-              </Link>
+              <Button.Text as="span" icon={ICONS.arrow} label={t('readMore')} />
             </CardItem>
           </div>
         </CardBody>
       </CardContainer>
-    </div>
+    </Link>
   );
 };
 
