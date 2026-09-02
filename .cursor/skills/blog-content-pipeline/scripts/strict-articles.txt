@@ -2,3 +2,4 @@
 # New pipeline articles add their slug here once cleaned in Phase 3.
 # Published articles and pre-rule drafts are intentionally omitted.
 ai-wont-tell-you-wrong-tech-stack
+how-much-does-a-mobile-app-cost-in-portugal
