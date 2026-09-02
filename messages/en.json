@@ -16,7 +16,6 @@
   "homepage": {
     "title": "Fast, secure digital solutions built for real growth",
     "subtitle": "I build custom websites, apps, and AI automations that help businesses attract customers, streamline operations, and scale with confidence.",
-    "authority": "5+ years of experience · 15+ projects · Experience at Snyk, Pipedrive and Peacock",
     "cta": "View projects and results",
     "expertiseTitle": "Expertise",
     "form": {
@@ -509,6 +508,8 @@
   },
   "blogFilters": {
     "all": "All",
+    "filterByCategory": "Filter articles by {category}",
+    "loadMore": "Load more",
     "searchPlaceholder": "Search articles...",
     "noResults": "No articles found."
   }

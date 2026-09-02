@@ -1,4 +1,4 @@
-export type Post = {
+export type PostSummary = {
   id: string;
   title: string;
   category: string;
@@ -6,10 +6,13 @@ export type Post = {
   description: string;
   isTopPick: boolean;
   slug: string;
-  content: {
-    html: string;
-  };
   coverPhoto: {
     url: string;
+  };
+};
+
+export type Post = PostSummary & {
+  content: {
+    html: string;
   };
 };

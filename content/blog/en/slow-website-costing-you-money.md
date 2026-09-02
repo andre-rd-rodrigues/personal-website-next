@@ -1,6 +1,6 @@
 ---
-title: 'Your Slow Website Is Quietly Losing You Revenue'
-category: Technology
+title: 'Your slow website is quietly losing you revenue'
+category: Websites
 publishedDate: '2026-04-01'
 description: 'A slow website adds friction to every visit. Learn how to measure real Core Web Vitals, connect performance to revenue, and prioritize effective fixes.'
 isTopPick: true
@@ -12,9 +12,9 @@ Website speed is often treated as technical housekeeping: something to improve a
 
 Performance shapes the experience of every visitor you worked or paid to attract. It affects when they see the offer, whether controls respond, whether the page moves while they are reading, and whether the checkout feels reliable. A slow website does not guarantee a lost sale, but it adds friction to every opportunity.
 
-The useful approach is not to repeat a universal “one second equals this much revenue” statistic. It is to measure your visitors, your pages, and your conversion path.
+Forget the universal “one second equals this much revenue” statistic. Measure your own visitors, your own pages, and your own conversion path instead.
 
-## Measure Experience, Not Just a Speed Score
+## Measure experience, not just a speed score
 
 Google's Core Web Vitals cover three parts of real user experience:
 
@@ -22,25 +22,25 @@ Google's Core Web Vitals cover three parts of real user experience:
 - **Interaction to Next Paint (INP)** measures how quickly the page responds to an interaction.
 - **Cumulative Layout Shift (CLS)** measures unexpected visual movement.
 
-Google's published “good” thresholds are:
+Google's thresholds for a good rating, [documented in the official Web Vitals guidance](https://web.dev/articles/vitals), are:
 
 - LCP of **2.5 seconds or less**.
 - INP of **200 milliseconds or less**.
 - CLS of **0.1 or less**.
 
-These targets are assessed at the 75th percentile, split between mobile and desktop. In other words, a passing average is not enough; the experience should be good for most visits. The definitions and thresholds are documented in the official [Web Vitals guidance](https://web.dev/articles/vitals).
+These targets are assessed at the 75th percentile, split between mobile and desktop. A passing average is not enough; the experience has to hold up for most real visits.
 
-## Understand Field Data and Lab Data
+## Understand field data and lab data
 
 [PageSpeed Insights](https://pagespeed.web.dev/) can show two different kinds of evidence.
 
 **Field data** comes from eligible real Chrome visits in the Chrome User Experience Report. It reflects actual devices, networks, and interactions over a rolling period.
 
-**Lab data** runs a controlled Lighthouse test. It is useful for diagnosis and repeatable comparisons, but it is not a recording of every customer's experience.
+**Lab data** runs a controlled Lighthouse test. It is useful for diagnosis and repeatable comparisons, though it cannot capture what every real customer experiences.
 
 Use field data to understand whether real users have a problem. Use lab data to investigate likely causes and test improvements. If a page does not have enough traffic for URL-level field data, check the origin-level result and add privacy-conscious real-user monitoring where appropriate.
 
-## Connect Performance to Business Outcomes
+## Connect performance to business outcomes
 
 Performance has a cost when it interrupts a valuable journey. Map that journey before estimating the opportunity.
 
@@ -54,15 +54,15 @@ A simple opportunity model is:
 
 **Affected visits × current conversion rate × expected improvement × value per conversion**
 
-The “expected improvement” must be a hypothesis, not a borrowed industry guarantee. Use a range and test it. This produces a decision model grounded in your business instead of an impressive number taken from a different company, audience, and decade.
+That expected-improvement figure must be a hypothesis you test, never a borrowed industry guarantee. Use a range. The result is a decision grounded in your business rather than an impressive number lifted from a different company, audience, and decade.
 
-## Why Your Own Website May Feel Faster Than It Is
+## Why your site feels faster than it is
 
 Owners and developers often load the same pages repeatedly on good devices and reliable connections. Their browser caches files, their account may bypass consent or marketing flows, and they know exactly where to click.
 
 A first-time visitor may arrive on a mid-range phone, through a mobile network, with an empty cache and several third-party scripts competing for resources. Test that experience.
 
-## Common Causes of Poor Core Web Vitals
+## Common causes of poor Core Web Vitals
 
 ### Oversized or poorly prioritized images
 
@@ -88,7 +88,7 @@ The browser cannot render content it has not received. Review backend latency, d
 
 Images without dimensions, late-loading banners, injected advertisements, and font swaps can move content after it appears. Reserve space and avoid inserting interface elements above what the visitor is already using.
 
-## Fix the Bottleneck, Not the Longest Audit List
+## Fix the bottleneck, not the longest audit list
 
 Performance reports can produce dozens of recommendations. Prioritize the item connected to the failing metric and important template.
 
@@ -96,23 +96,23 @@ Performance reports can produce dozens of recommendations. Prioritize the item c
 - Poor INP: find long tasks, excessive client-side work, and handlers that perform too much before updating the screen.
 - Poor CLS: identify elements moving without reserved space.
 
-Start with a high-traffic page or shared template so the improvement reaches meaningful journeys. Re-test after each group of changes; an optimization that does not move field or lab evidence is not automatically valuable.
+Start with a high-traffic page or shared template so the improvement reaches meaningful journeys. Re-test after each group of changes; an optimization that moves neither field nor lab evidence has not earned its place.
 
-## Performance Is an Architecture Decision
+## Performance is an architecture decision
 
 Speed is influenced by decisions made before the first visual review: rendering strategy, content model, image pipeline, third-party policy, caching, hosting, and component boundaries.
 
 Existing sites can often improve without a redesign. Image handling, script loading, caching, font delivery, and dependency cleanup may produce substantial gains. But a platform or theme that sends unnecessary work on every page can make each later fix more expensive.
 
-This is why performance belongs in requirements and acceptance criteria, not in a final “polish” ticket.
+Put performance in the requirements and acceptance criteria so it is budgeted from the start, rather than bolted on through a final polish ticket.
 
-## The SEO Impact Needs Proper Context
+## The SEO impact needs proper context
 
-Core Web Vitals contribute to Google's page-experience systems, but performance is not a shortcut that overrides relevance, usefulness, or other ranking factors. A faster page is not guaranteed to move above a more relevant result.
+Core Web Vitals feed Google's page-experience systems, but speed does not override relevance, usefulness, or the other ranking factors. A faster page will not outrank a more relevant one on speed alone.
 
-The stronger case is broader: performance improves the experience after a search click, makes crawling and rendering more efficient in some situations, and removes friction from the actions that organic traffic is meant to produce. Treat it as one part of a technically sound site, alongside semantic content, indexability, and useful information.
+The broader case is stronger: performance improves the experience after a search click, makes crawling and rendering more efficient in some cases, and removes friction from the actions organic traffic is meant to produce. It earns its place alongside semantic content, indexability, and useful information.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### What is a good website speed?
 
@@ -134,4 +134,4 @@ Record a baseline, make a defined change, and compare performance and conversion
 
 A slow website costs opportunities by adding friction, not by following one universal conversion formula. Measure real Core Web Vitals, connect them to important journeys, fix the dominant bottleneck, and verify the result.
 
-If you want a performance audit that connects technical findings to the pages that generate enquiries or sales, [get in touch](https://www.andrerodrigo.com/contacts). I can identify the work that matters before you pay for a list of optimizations that does not.
+If PageSpeed produces a long list and you are unsure what affects enquiries or sales, [send me your site](https://www.andrerodrigo.com/contacts). I can help turn the report into a short, prioritized plan.

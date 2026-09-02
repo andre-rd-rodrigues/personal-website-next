@@ -16,7 +16,6 @@
   "homepage": {
     "title": "Soluções digitais rápidas e seguras para fazer o seu negócio avançar",
     "subtitle": "Desenvolvo websites, aplicações e automações com IA à medida para atrair clientes, simplificar operações e crescer com confiança.",
-    "authority": "Mais de 5 anos de experiência · Mais de 15 projetos · Experiência na Snyk, Pipedrive e Peacock",
     "cta": "Ver projetos e resultados",
     "expertiseTitle": "Competências",
     "form": {
@@ -518,6 +517,8 @@
   },
   "blogFilters": {
     "all": "Todos",
+    "filterByCategory": "Filtrar artigos por {category}",
+    "loadMore": "Carregar mais",
     "searchPlaceholder": "Pesquisar artigos...",
     "noResults": "Nenhum artigo encontrado."
   }

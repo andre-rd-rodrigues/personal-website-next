@@ -69,13 +69,10 @@ describe('Home page', () => {
     expect(screen.getByText(/^André Rodrigo$/)).toBeInTheDocument();
   });
 
-  it('renders the hero benefit statement and authority proof', () => {
+  it('renders the hero benefit statement', () => {
     renderWithIntl(<Home />);
     expect(
       screen.getByText(/custom websites, apps, and AI automations/i),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(/5\+ years of experience.*15\+ projects/i),
     ).toBeInTheDocument();
   });
 

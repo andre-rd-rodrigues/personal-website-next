@@ -1,6 +1,6 @@
 ---
-title: 'How to Add an AI Chatbot to Your Website Safely'
-category: Technology
+title: 'How to add an AI chatbot to your website safely'
+category: AI
 publishedDate: '2026-03-16'
 description: 'Plan and add an AI chatbot to your website with a reliable knowledge base, limited permissions, human handoff, privacy controls, and practical tests.'
 isTopPick: false
@@ -14,7 +14,7 @@ A useful chatbot should answer a narrow set of questions consistently and transf
 
 This guide explains how to choose the right level of automation, structure the system, test it, and launch without treating customer conversations as an uncontrolled experiment.
 
-## Decide What the Chatbot Is Allowed to Do
+## Decide what the chatbot is allowed to do
 
 Start with the business outcome, not the platform.
 
@@ -29,7 +29,7 @@ Frequently asked questions, appointment availability, order status, and ticket r
 
 The safest first release answers questions only. Add actions after the knowledge and handoff paths work reliably.
 
-## Understand Chatbots and Agents
+## Understand chatbots and agents
 
 A chatbot returns information. An agent can use tools to change something in another system.
 
@@ -40,9 +40,9 @@ For example:
 
 That second flow is more useful, but it also touches identity, business rules, and external data. It needs authentication, constrained permissions, validation, audit logs, and a fallback when any step fails.
 
-Calling both products “chatbots” hides an important architecture decision. Define whether the website assistant can **read**, **recommend**, or **act** before selecting a tool.
+Labelling both products the same way hides an important architecture decision. Define whether the website assistant can **read**, **recommend**, or **act** before selecting a tool.
 
-## A Reliable Website Chatbot Architecture
+## A reliable website chatbot architecture
 
 A production-ready setup has several separate layers:
 
@@ -56,7 +56,7 @@ A production-ready setup has several separate layers:
 
 Keeping these responsibilities separate matters. The language model can propose an action, but your application should decide whether that action is valid.
 
-## Worked Example: Rescheduling an Appointment
+## How to reschedule an appointment
 
 Appointment changes are a good first agent workflow because the rules can be explicit and the action is normally reversible.
 
@@ -86,7 +86,7 @@ Save the action result, send confirmation through the normal booking channel, an
 
 This pattern applies beyond appointments: narrow tool, external validation, explicit confirmation, auditable result.
 
-## Choose the Smallest Stack That Fits
+## Choose the smallest stack that fits
 
 There is no universal five-tool stack. Choose components according to the job and the systems already in use.
 
@@ -108,7 +108,7 @@ A custom service is justified when identity, permissions, business rules, perfor
 
 Before adding another subscription, check whether a system you already pay for provides the required feature and whether it integrates with the source of truth.
 
-## Build the Knowledge Base
+## Build the knowledge base
 
 The assistant can only be as reliable as the information it receives.
 
@@ -124,7 +124,7 @@ Remove duplicate and contradictory documents. Assign an owner who reviews the co
 
 Where possible, show links to the source pages in answers. This lets customers verify important information and makes outdated content easier to identify.
 
-## Limit Permissions From Day One
+## Limit permissions from day one
 
 Least privilege means each tool can do only the minimum required operation.
 
@@ -138,7 +138,7 @@ Least privilege means each tool can do only the minimum required operation.
 
 Prompt instructions are not a security boundary. [OWASP's guidance on prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) explains why untrusted text can manipulate model behaviour. Permissions and validation must be enforced by the surrounding application.
 
-## Test Before Showing It to Customers
+## Test before showing it to customers
 
 Create a test set from real questions, including awkward and hostile inputs.
 
@@ -156,7 +156,7 @@ Check whether the assistant:
 
 Also test prompt-injection attempts such as instructions embedded in uploaded text or a customer message asking the assistant to ignore its rules. The goal is not to prove the model can never fail; it is to make failure contained, visible, and recoverable.
 
-## Add the Widget Without Damaging the Website
+## Add the widget without damaging the website
 
 Managed platforms normally provide an official plugin, application, tag manager integration, or script. Use the supported integration rather than editing a production theme without a rollback plan.
 
@@ -172,7 +172,7 @@ The widget also needs:
 
 If third-party scripts are already slowing the page, address [website performance](/blog/slow-website-costing-you-money) before adding another one.
 
-## Handle Privacy and Consent
+## Handle privacy and consent
 
 Document what conversation data is collected, why it is needed, where it is processed, who can access it, and how long it is retained. Avoid asking customers to share sensitive information in an open chat.
 
@@ -180,7 +180,7 @@ Check the provider's data-processing terms and whether conversations are used to
 
 For higher-risk uses, use the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) as a practical reference for governing, mapping, measuring, and managing AI risk.
 
-## Launch Narrowly and Monitor Real Failures
+## Launch narrowly and monitor real failures
 
 Release one use case first. Review:
 
@@ -191,9 +191,9 @@ Release one use case first. Review:
 - Requests handed to people and the reason for handoff.
 - Performance impact on the website.
 
-Use those findings to improve documentation and rules before adding another workflow. A low handoff rate is not automatically success; it may mean the assistant is answering confidently when it should escalate.
+Use those findings to improve documentation and rules before adding another workflow. A low handoff rate does not prove success; it may mean the assistant is answering confidently when it should escalate.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Do I need code to add an AI chatbot?
 
@@ -215,4 +215,4 @@ Only if the use case requires it, and then only through narrowly scoped operatio
 
 A website chatbot is valuable when it handles a defined job, uses approved information, operates with limited permissions, and knows when to stop. The widget is the visible part; the knowledge, validation, monitoring, privacy, and handoff layers determine whether customers can trust it.
 
-If you want to design or integrate a chatbot without exposing more data or permissions than the job requires, [get in touch](https://www.andrerodrigo.com/contacts). I can help define the smallest safe architecture before the tool choices lock you in.
+Have a chatbot use case in mind? [Tell me what it should answer or change](https://www.andrerodrigo.com/contacts). I can help define a safe boundary and the simplest integration that supports it.

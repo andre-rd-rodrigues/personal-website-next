@@ -3,6 +3,7 @@ import {
   renderWithIntl,
   screen,
   fireEvent,
+  waitFor,
 } from '@/__tests__/utils/test.utils';
 import BlogListClient from '@/app/[locale]/blog/BlogListClient';
 import type { Post } from '@/types/blog';
@@ -52,6 +53,26 @@ const mockPosts: Post[] = [
     content: { html: '<p>SEO</p>' },
     coverPhoto: { url: 'https://example.com/4.jpg' },
   },
+  ...Array.from({ length: 6 }, (_, index): Post => {
+    const number = index + 1;
+    const id = index + 5;
+
+    return {
+      id: String(id),
+      title:
+        number === 6 ? 'Hidden Performance Guide' : `Additional Tech ${number}`,
+      slug: `additional-tech-${number}`,
+      category: 'Technology',
+      publishedDate: `2024-01-${String(id).padStart(2, '0')}`,
+      description:
+        number === 6
+          ? 'Performance advice beyond the initial batch'
+          : `Additional technology article ${number}`,
+      isTopPick: false,
+      content: { html: `<p>Additional article ${number}</p>` },
+      coverPhoto: { url: `https://example.com/${id}.jpg` },
+    };
+  }),
 ];
 
 describe('Blog list (BlogListClient)', () => {
@@ -96,6 +117,31 @@ describe('Blog list (BlogListClient)', () => {
     ).toBeInTheDocument();
   });
 
+  it('localizes the load more control', () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />, { locale: 'pt' });
+
+    expect(
+      screen.getByRole('button', { name: 'Carregar mais' }),
+    ).toBeInTheDocument();
+  });
+
+  it('renders six regular posts initially and loads the remaining posts', () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />);
+
+    expect(screen.getAllByRole('article')).toHaveLength(7);
+    expect(
+      screen.queryByText('Hidden Performance Guide'),
+    ).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Load more' }));
+
+    expect(screen.getAllByRole('article')).toHaveLength(10);
+    expect(screen.getByText('Hidden Performance Guide')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: 'Load more' }),
+    ).not.toBeInTheDocument();
+  });
+
   it('filters posts by category', () => {
     renderWithIntl(<BlogListClient posts={mockPosts} />);
     fireEvent.click(screen.getByRole('button', { name: 'Career' }));
@@ -109,12 +155,55 @@ describe('Blog list (BlogListClient)', () => {
     );
   });
 
+  it('filters posts when a card category is clicked', async () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />);
+    fireEvent.click(
+      screen.getByRole('button', { name: 'Filter articles by Career' }),
+    );
+
+    expect(screen.getByText('Career Advice')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText('Regular Tech Post')).not.toBeInTheDocument();
+      expect(screen.queryByText('SEO Strategies')).not.toBeInTheDocument();
+    });
+    expect(screen.getByRole('button', { name: 'Career' }).className).toContain(
+      'border-pink',
+    );
+  });
+
   it('filters posts by search query', () => {
     renderWithIntl(<BlogListClient posts={mockPosts} />);
     const searchInput = screen.getByPlaceholderText('Search articles...');
     fireEvent.change(searchInput, { target: { value: 'rankings' } });
 
     expect(screen.getByText('SEO Strategies')).toBeInTheDocument();
+  });
+
+  it('searches posts beyond the initial batch', () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />);
+    const searchInput = screen.getByPlaceholderText('Search articles...');
+
+    fireEvent.change(searchInput, {
+      target: { value: 'beyond the initial batch' },
+    });
+
+    expect(screen.getByText('Hidden Performance Guide')).toBeInTheDocument();
+  });
+
+  it('resets the visible count when the category changes', async () => {
+    renderWithIntl(<BlogListClient posts={mockPosts} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Load more' }));
+
+    fireEvent.click(screen.getByRole('button', { name: 'Technology' }));
+
+    await waitFor(() => {
+      expect(
+        screen.queryByText('Hidden Performance Guide'),
+      ).not.toBeInTheDocument();
+    });
+    expect(
+      screen.getByRole('button', { name: 'Load more' }),
+    ).toBeInTheDocument();
   });
 
   it('shows no results message when no posts match', () => {

@@ -1,6 +1,6 @@
 ---
-title: 'O Seu Website Lento Está a Fazê-lo Perder Receita'
-category: Tecnologia
+title: 'O seu website lento está a fazê-lo perder dinheiro'
+category: Websites
 publishedDate: '2026-04-01'
 description: 'Um website lento acrescenta fricção a cada visita. Saiba medir Core Web Vitals reais, ligar o desempenho à receita e priorizar correções eficazes.'
 isTopPick: true
@@ -12,9 +12,9 @@ A velocidade de um website é frequentemente tratada como manutenção técnica:
 
 O desempenho molda a experiência de cada visitante que trabalhou ou pagou para atrair. Afeta o momento em que vê a oferta, a rapidez com que os controlos respondem, a estabilidade da página durante a leitura e a confiança transmitida pelo checkout. Um website lento não garante uma venda perdida, mas acrescenta fricção a todas as oportunidades.
 
-A abordagem útil não é repetir uma estatística universal de que «um segundo equivale a esta receita». É medir os seus visitantes, páginas e percurso de conversão.
+Esqueça a estatística universal de que «um segundo equivale a esta receita». Meça antes os seus próprios visitantes, as suas páginas e o seu percurso de conversão.
 
-## Meça a Experiência, Não Apenas Uma Pontuação
+## Meça a experiência, não apenas uma pontuação
 
 Os Core Web Vitals da Google abrangem três partes da experiência real:
 
@@ -22,25 +22,25 @@ Os Core Web Vitals da Google abrangem três partes da experiência real:
 - **Interaction to Next Paint (INP)** mede a rapidez de resposta da página a uma interação.
 - **Cumulative Layout Shift (CLS)** mede movimentos visuais inesperados.
 
-Os limites publicados pela Google para uma experiência «boa» são:
+Os limites da Google para uma classificação boa, [documentados na orientação oficial sobre Web Vitals](https://web.dev/articles/vitals), são:
 
 - LCP de **2,5 segundos ou menos**.
 - INP de **200 milissegundos ou menos**.
 - CLS de **0,1 ou menos**.
 
-Estes objetivos são avaliados no percentil 75, separando dispositivos móveis e computadores. Por outras palavras, uma média positiva não chega; a experiência deve ser boa na maioria das visitas. As definições e os limites estão documentados na orientação oficial sobre [Web Vitals](https://web.dev/articles/vitals).
+Estes objetivos são avaliados no percentil 75, separando dispositivos móveis e computadores. Uma média positiva não chega; a experiência tem de aguentar-se na maioria das visitas reais.
 
-## Distinga Dados Reais de Testes de Laboratório
+## Distinga dados reais de testes de laboratório
 
 O [PageSpeed Insights](https://pagespeed.web.dev/) pode apresentar dois tipos de evidência.
 
 Os **dados de campo** resultam de visitas reais elegíveis no Chrome User Experience Report. Refletem dispositivos, redes e interações reais ao longo de um período móvel.
 
-Os **dados de laboratório** resultam de um teste controlado do Lighthouse. São úteis para diagnóstico e comparações repetíveis, mas não registam a experiência de todos os clientes.
+Os **dados de laboratório** resultam de um teste controlado do Lighthouse. São úteis para diagnóstico e comparações repetíveis, embora não captem o que cada cliente real experimenta.
 
 Use dados de campo para perceber se os utilizadores reais têm um problema. Use dados de laboratório para investigar causas prováveis e testar melhorias. Se uma página não tiver tráfego suficiente para dados de campo ao nível do URL, consulte o resultado do domínio e considere monitorização de utilizadores reais que respeite a privacidade.
 
-## Ligue o Desempenho Aos Resultados do Negócio
+## Ligue o desempenho aos resultados do negócio
 
 O desempenho tem um custo quando interrompe um percurso importante. Mapeie esse percurso antes de estimar a oportunidade.
 
@@ -54,15 +54,15 @@ Um modelo simples da oportunidade é:
 
 **Visitas afetadas × taxa de conversão atual × melhoria esperada × valor por conversão**
 
-A «melhoria esperada» deve ser uma hipótese, não uma garantia emprestada de outra empresa. Use um intervalo e teste-o. Assim, a decisão fica assente no seu negócio, em vez de num número impressionante retirado de outra empresa, público e época.
+Esse valor de melhoria esperada deve ser uma hipótese que testa, nunca uma garantia emprestada de outra empresa. Use um intervalo. O resultado é uma decisão assente no seu negócio, em vez de um número impressionante retirado de outra empresa, público e época.
 
-## Porque o Seu Próprio Website Pode Parecer Mais Rápido
+## Porque o seu site parece mais rápido
 
 Proprietários e programadores carregam repetidamente as mesmas páginas em bons dispositivos e ligações estáveis. O navegador guarda ficheiros em cache, a conta pode contornar fluxos de consentimento ou marketing e a pessoa já sabe onde clicar.
 
 Um novo visitante pode chegar num telemóvel de gama média, através de uma rede móvel, sem cache e com vários scripts externos a disputar recursos. É essa experiência que deve testar.
 
-## Causas Comuns de Core Web Vitals Fracos
+## Causas comuns de Core Web Vitals fracos
 
 ### Imagens demasiado grandes ou mal priorizadas
 
@@ -88,7 +88,7 @@ O navegador não consegue apresentar conteúdo que ainda não recebeu. Reveja a 
 
 Imagens sem dimensões, banners carregados tarde, publicidade inserida e mudanças de tipo de letra podem deslocar conteúdo depois de aparecer. Reserve espaço e evite inserir elementos acima da interface que o visitante já está a usar.
 
-## Corrija o Estrangulamento, Não a Maior Lista de Auditoria
+## Corrija o estrangulamento, não a maior lista de auditoria
 
 Os relatórios de desempenho podem produzir dezenas de recomendações. Dê prioridade ao elemento ligado à métrica em falha e ao modelo de página importante.
 
@@ -96,23 +96,23 @@ Os relatórios de desempenho podem produzir dezenas de recomendações. Dê prio
 - INP fraco: procure tarefas longas, trabalho excessivo no cliente e operações que fazem demasiado antes de atualizar o ecrã.
 - CLS fraco: identifique elementos que se deslocam sem espaço reservado.
 
-Comece por uma página com muito tráfego ou um modelo partilhado para a melhoria chegar a percursos relevantes. Volte a testar depois de cada grupo de alterações; uma otimização que não altera as evidências de campo ou laboratório não é automaticamente valiosa.
+Comece por uma página com muito tráfego ou um modelo partilhado para a melhoria chegar a percursos relevantes. Volte a testar depois de cada grupo de alterações; uma otimização que não altera as evidências de campo nem de laboratório ainda não provou o seu valor.
 
-## O Desempenho É Uma Decisão de Arquitetura
+## O desempenho é uma decisão de arquitetura
 
 A velocidade é influenciada por decisões tomadas antes da primeira revisão visual: estratégia de renderização, modelo de conteúdo, tratamento de imagens, política de terceiros, cache, alojamento e fronteiras entre componentes.
 
 Muitos websites existentes podem melhorar sem um novo design. O tratamento de imagens, carregamento de scripts, cache, tipos de letra e limpeza de dependências podem produzir ganhos importantes. No entanto, uma plataforma ou tema que envia trabalho desnecessário em todas as páginas torna cada correção posterior mais dispendiosa.
 
-É por isso que o desempenho deve estar nos requisitos e critérios de aceitação, não num pedido final de «polimento».
+Coloque o desempenho nos requisitos e critérios de aceitação, para ficar previsto desde o início em vez de acrescentado num pedido final de afinação.
 
-## O Impacto no SEO Precisa de Contexto
+## O impacto no SEO precisa de contexto
 
-Os Core Web Vitals contribuem para os sistemas de experiência de página da Google, mas o desempenho não é um atalho que supera a relevância, utilidade ou outros fatores de posicionamento. Uma página mais rápida não tem garantia de ultrapassar um resultado mais relevante.
+Os Core Web Vitals alimentam os sistemas de experiência de página da Google, mas a velocidade não substitui a relevância, a utilidade nem os restantes fatores de posicionamento. Uma página mais rápida não ultrapassa uma mais relevante só pela velocidade.
 
-O argumento mais forte é abrangente: o desempenho melhora a experiência depois do clique, torna o rastreio e a renderização mais eficientes em algumas situações e remove fricção das ações que o tráfego orgânico deve produzir. Trate-o como uma parte de um site tecnicamente sólido, juntamente com conteúdo semântico, indexação e informação útil.
+O argumento abrangente é mais forte: o desempenho melhora a experiência depois do clique, torna o rastreio e a renderização mais eficientes em alguns casos e remove fricção das ações que o tráfego orgânico deve produzir. Ganha o seu lugar ao lado do conteúdo semântico, da indexação e da informação útil.
 
-## Perguntas Frequentes
+## Perguntas frequentes
 
 ### Qual é uma boa velocidade para um website?
 
@@ -134,4 +134,4 @@ Registe um ponto de partida, faça uma alteração definida e compare o desempen
 
 Um website lento custa oportunidades ao acrescentar fricção, não por seguir uma fórmula universal de conversão. Meça Core Web Vitals reais, ligue-os a percursos importantes, corrija o principal estrangulamento e confirme o resultado.
 
-Se quiser uma auditoria de desempenho que ligue conclusões técnicas às páginas que geram contactos ou vendas, [entre em contacto](https://www.andrerodrigo.com/pt/contactos). Posso identificar o trabalho que importa antes de pagar por uma lista de otimizações que não o faz.
+Se o PageSpeed apresenta uma lista extensa e não sabe o que está a afetar os contactos ou as vendas, [envie-me o seu site](https://www.andrerodrigo.com/pt/contactos). Posso ajudar a transformar o relatório num plano curto e organizado por prioridades.

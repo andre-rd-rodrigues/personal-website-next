@@ -31,8 +31,8 @@ export const CardContainer = ({
     if (!containerRef.current) return;
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 50;
-    const y = (e.clientY - top - height / 2) / 50;
+    const x = (e.clientX - left - width / 2) / 150;
+    const y = (e.clientY - top - height / 2) / 150;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
@@ -51,7 +51,7 @@ export const CardContainer = ({
       <div
         className={cn('flex items-center justify-center', containerClassName)}
         style={{
-          perspective: '1000px',
+          perspective: '1333px',
         }}
       >
         <div

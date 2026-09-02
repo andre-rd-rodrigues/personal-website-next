@@ -94,7 +94,7 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
             className="rotate-180 cursor-pointer opacity-50"
             onClick={() => router.back()}
           />
-          <h1 className="my-8 text-5xl">{title}</h1>
+          <h1 className="my-8 text-5xl font-light">{title}</h1>
           <div className={styles.headerImage}>
             <Image
               src={coverPhoto?.url ?? ''}

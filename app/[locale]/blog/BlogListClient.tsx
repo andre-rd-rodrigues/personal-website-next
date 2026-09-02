@@ -1,11 +1,12 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import BlogCard from '@/components/BlogCard';
 import BlogFilters from '@/components/BlogFilters';
 import Container from '@/components/Container';
 import BlogMainArticleCard from '@/components/BlogMainArticleCard';
-import type { Post } from '@/types/blog';
+import Button from '@/components/Button';
+import type { PostSummary } from '@/types/blog';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import {
@@ -15,20 +16,51 @@ import {
 } from '@/motion/motionVariants';
 
 type BlogListClientProps = {
-  posts: Post[];
+  posts: PostSummary[];
 };
+
+const POSTS_PER_PAGE = 6;
 
 export default function BlogListClient({ posts }: BlogListClientProps) {
   const t = useTranslations('blogFilters');
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const filtersRef = useRef<HTMLDivElement>(null);
 
-  const mainArticle = posts.filter((post) => post.isTopPick)[0];
-  const regularPosts = posts.filter((post) => !post.isTopPick);
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setVisibleCount(POSTS_PER_PAGE);
+  };
+
+  const handleSearchChange = (query: string) => {
+    setSearchQuery(query);
+    setVisibleCount(POSTS_PER_PAGE);
+  };
+
+  const handleCategoryFromCard = (category: string) => {
+    handleCategoryChange(category);
+    const prefersReducedMotion = window.matchMedia?.(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+    filtersRef.current?.scrollIntoView?.({
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      block: 'start',
+    });
+  };
+
+  const mainArticle = useMemo(
+    () => posts.find((post) => post.isTopPick),
+    [posts],
+  );
+  const regularPosts = useMemo(
+    () => posts.filter((post) => !post.isTopPick),
+    [posts],
+  );
 
   const categories = useMemo(
-    () => [...new Set(regularPosts.map((p) => p.category))].sort(),
-    [regularPosts],
+    () => [...new Set(posts.map((p) => p.category))].sort(),
+    [posts],
   );
 
   const filteredPosts = useMemo(() => {
@@ -50,6 +82,9 @@ export default function BlogListClient({ posts }: BlogListClientProps) {
     return result;
   }, [regularPosts, activeCategory, searchQuery]);
 
+  const visiblePosts = filteredPosts.slice(0, visibleCount);
+  const hasMorePosts = visibleCount < filteredPosts.length;
+
   return (
     <Container className="min-h-[95vh] max-w-full px-0">
       {!!mainArticle && (
@@ -60,21 +95,26 @@ export default function BlogListClient({ posts }: BlogListClientProps) {
           variants={fadeInSlideLeftVariant}
           className="mx-auto mb-12 max-w-full lg:max-w-[1420px]"
         >
-          <BlogMainArticleCard post={mainArticle} />
+          <BlogMainArticleCard
+            post={mainArticle}
+            onCategoryClick={handleCategoryFromCard}
+          />
         </motion.div>
       )}
 
       <motion.div
+        ref={filtersRef}
         initial="hidden"
         animate="visible"
         variants={fadeInSlideInVariant}
+        className="scroll-mt-24"
       >
         <BlogFilters
           categories={categories}
           activeCategory={activeCategory}
           searchQuery={searchQuery}
-          onCategoryChange={setActiveCategory}
-          onSearchChange={setSearchQuery}
+          onCategoryChange={handleCategoryChange}
+          onSearchChange={handleSearchChange}
         />
       </motion.div>
 
@@ -86,7 +126,7 @@ export default function BlogListClient({ posts }: BlogListClientProps) {
       >
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-0 md:grid-cols-2 md:gap-6">
           <AnimatePresence mode="popLayout">
-            {filteredPosts.map((post) => (
+            {visiblePosts.map((post) => (
               <motion.div
                 variants={fadeInSlideInVariant}
                 key={post.id}
@@ -96,11 +136,23 @@ export default function BlogListClient({ posts }: BlogListClientProps) {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
               >
-                <BlogCard post={post} />
+                <BlogCard
+                  post={post}
+                  onCategoryClick={handleCategoryFromCard}
+                />
               </motion.div>
             ))}
           </AnimatePresence>
         </div>
+
+        {hasMorePosts && (
+          <div className="mt-10 flex justify-center">
+            <Button.Minimal
+              label={t('loadMore')}
+              onClick={() => setVisibleCount((count) => count + POSTS_PER_PAGE)}
+            />
+          </div>
+        )}
 
         {filteredPosts.length === 0 && (
           <p className="mt-10 text-center text-gray-400">{t('noResults')}</p>

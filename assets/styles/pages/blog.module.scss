@@ -3,6 +3,21 @@
 .container {
   font-weight: 300;
 
+  a {
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+.content {
+  position: relative;
+  max-width: 840px;
+  margin: 60px auto 0;
+
   h1,
   h2,
   h3 {
@@ -21,21 +36,6 @@
     font-weight: 400;
     margin: 40px 0 10px;
   }
-
-  a {
-    color: var(--color-primary);
-    font-weight: 500;
-  }
-
-  strong {
-    font-weight: 500;
-  }
-}
-
-.content {
-  position: relative;
-  max-width: 840px;
-  margin: 60px auto 0;
 
   p {
     margin-bottom: 1.25rem;

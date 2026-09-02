@@ -1,6 +1,6 @@
 ---
-title: '7 Website Privacy Checks for Small Businesses'
-category: Technology
+title: '7 website privacy checks for small businesses'
+category: Websites
 publishedDate: '2026-09-01'
 description: 'Use this practical GDPR-focused website privacy checklist to review notices, cookies, forms, access, retention, security, and breach preparation.'
 isTopPick: false
@@ -8,13 +8,13 @@ slug: data-privacy-rules-your-website-might-break
 coverImage: /images/blog/data-privacy-rules-your-website-might-break.webp
 ---
 
-If a website has a contact form, analytics, embedded media, or a checkout, it probably processes personal data. The important question is not whether the business feels “large enough” for privacy rules. It is what data the business processes, why it needs that data, and what risks the activity creates.
+If a website has a contact form, analytics, embedded media, or a checkout, it probably processes personal data. Privacy obligations follow that data, not the size of the company behind it. What you collect, why you need it, and what could go wrong matter far more than headcount.
 
-For businesses established in the EU—or processing personal data covered by EU rules—the GDPR applies according to the nature of the processing, not simply company size. Some obligations vary for smaller organisations, but “we are an SME” is not a general exemption. The [European Commission's SME guidance](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/application-regulation/do-rules-apply-smes_en) explains those distinctions.
+For businesses established in the EU, or processing personal data covered by EU rules, the GDPR applies according to the nature of the processing rather than company size. Being a smaller organisation reduces some duties, as the [European Commission's SME guidance](https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/application-regulation/do-rules-apply-smes_en) sets out, but it grants no blanket exemption from the core rules.
 
-This checklist is a technical and operational starting point, not legal advice. Use it to find questions that need a privacy professional, not to replace one.
+Treat this as a technical checklist for spotting issues to raise with a privacy professional, not as legal advice.
 
-## 1. Make the Privacy Notice Match the Website
+## 1. Make the privacy notice match the website
 
 A privacy notice should describe what the website actually does—not what a template assumes it does.
 
@@ -29,23 +29,23 @@ For each form, analytics service, payment provider, embedded video, newsletter, 
 
 The European Commission lists the [information organisations must provide when collecting personal data](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/principles-gdpr/what-information-must-be-given-individuals-whose-data-collected_en). Keep the notice concise and understandable, then review it whenever a new third-party tool is added.
 
-## 2. Do Not Load Optional Tracking Before the Required Choice
+## 2. Do not load optional tracking before the required choice
 
-A banner that appears after analytics and advertising scripts have already run is not controlling anything.
+A consent banner must load before the scripts it controls. If analytics and advertising fire first, consent changes nothing.
 
 Map every cookie and browser-storage item to its purpose. Keep strictly necessary functionality separate from optional analytics, personalisation, and advertising. Where consent is the applicable legal basis, do not load the optional category until the visitor has made the required choice, and make withdrawal as accessible as acceptance.
 
 Embedded media and chat widgets can also set cookies or contact third parties. Test the page in a clean browser session rather than relying on the banner's settings screen.
 
-## 3. Collect Only What the Task Requires
+## 3. Collect only what the task requires
 
 Every form field creates information that must be protected, retained, and eventually deleted.
 
 If a contact form only needs a name, reply address, and message, do not ask for company size, telephone number, job title, or budget by habit. If a field is useful only occasionally, ask for it later when it becomes necessary.
 
-This follows the GDPR principles of purpose limitation and data minimisation. The Commission's overview of [data-protection obligations](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/obligations_en) also explains protection by design and by default.
+This reflects the GDPR principles of purpose limitation and data minimisation, set out in the Commission's [data-protection obligations](https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/obligations_en), which also cover protection by design and by default.
 
-## 4. Secure the Full Data Path
+## 4. Secure the full data path
 
 HTTPS protects data while it travels between the browser and the website, but the path does not end there.
 
@@ -60,17 +60,17 @@ Review:
 
 Use role-based access and remove accounts that no longer require access. MFA is good baseline security for email, hosting, payment, and administration accounts.
 
-PCI DSS has a more specific scope: Requirement 8.4.2 requires MFA for access into the cardholder data environment. It does not automatically make every business email inbox or hosting account part of that environment. The [PCI Security Standards Council clarification](https://www.pcisecuritystandards.org/faqs/why-do-requirements-8-3-9-and-8-3-10-1-focus-on-passwords-passphrases-used-for-single-factor-authentication-when-multi-factor-authentication-is-required-for-all-access-into-the-cde/) is the source to use when assessing PCI scope.
+PCI DSS has a narrower scope: Requirement 8.4.2 mandates MFA for access into the cardholder data environment, as the [PCI Security Standards Council](https://www.pcisecuritystandards.org/faqs/why-do-requirements-8-3-9-and-8-3-10-1-focus-on-passwords-passphrases-used-for-single-factor-authentication-when-multi-factor-authentication-is-required-for-all-access-into-the-cde/) sets out. That requirement does not pull every business inbox or hosting account into scope.
 
-## 5. Give Every Data Type a Retention Rule
+## 5. Give every data type a retention rule
 
-“Keep it forever in case we need it” is not a retention policy.
+Storing data indefinitely just in case is a liability, not a policy. Give each type of data a defined lifespan.
 
 Define a period or review trigger for contact enquiries, customer accounts, invoices, support conversations, analytics identifiers, backups, and failed submissions. Legal, contractual, and operational needs may differ by category.
 
-Deletion must cover the systems where copies exist, including exports and connected tools—not just the visible website database. Document exceptions where records must be retained for a legal reason.
+Deletion must reach every copy, including exports, connected tools, and backups beyond the visible website database. Document exceptions where records must be retained for a legal reason.
 
-## 6. Make Rights Requests Operational
+## 6. Make rights requests operational
 
 A privacy notice can promise access, correction, or deletion, but someone still needs to fulfil the request.
 
@@ -84,15 +84,15 @@ Document:
 
 Run a test request internally. It will reveal data copied into inboxes, spreadsheets, marketing systems, and backups that the website documentation missed.
 
-## 7. Prepare for a Breach Before It Happens
+## 7. Prepare for a breach before it happens
 
-An incident plan does not need to be long. It needs to be usable.
+Keep the incident plan short enough to follow under pressure.
 
 Record who can secure the affected system, preserve evidence, assess the data and people involved, contact providers, obtain legal guidance, and decide whether regulatory or individual notification is required.
 
-Keep provider contacts, system owners, and access-recovery procedures current. A plan stored only inside a compromised account is not a useful plan.
+Keep provider contacts, system owners, and access-recovery procedures current, and store them outside the systems they protect.
 
-## A Practical Website Privacy Audit
+## A practical website privacy audit
 
 Work through the website from the visitor's perspective:
 
@@ -106,7 +106,7 @@ Work through the website from the visitor's perspective:
 
 The [European Data Protection Board's SME resources](https://www.edpb.europa.eu/sme-data-protection-guide/practical-resources-for-smes_en) provide additional checklists and material from European supervisory authorities.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the GDPR apply to every small business?
 
@@ -128,4 +128,4 @@ Yes, especially for email, hosting, administration, payments, and systems contai
 
 Privacy compliance starts with understanding the data path: what the website collects, why, where it goes, who can access it, and when it is removed. A smaller data footprint, accurate notice, controlled tracking, limited access, and tested response processes reduce both compliance and security risk.
 
-If you want a technical review of what your website collects and where it sends it, [get in touch](https://www.andrerodrigo.com/contacts). I can map the implementation and identify where specialist legal guidance is still required.
+Unsure what your forms, analytics, or third-party widgets collect? [Send me your site](https://www.andrerodrigo.com/contacts). I can map the data flow and flag where specialist legal guidance is still needed.

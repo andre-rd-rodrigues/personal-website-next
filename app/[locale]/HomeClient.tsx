@@ -91,12 +91,6 @@ export default function HomeClient({ posts }: HomeClientProps) {
                 </Link>
               </motion.span>
             </div>
-            <motion.p
-              variants={fadeInSlideInVariant}
-              className="mt-6 max-w-2xl text-pretty text-center text-sm text-white/70 md:text-left"
-            >
-              {t('homepage.authority')}
-            </motion.p>
           </div>
           <div className="flex flex-1 items-center justify-center md:justify-end">
             <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">

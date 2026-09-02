@@ -1,6 +1,6 @@
 ---
-title: 'Como Adicionar um Chatbot com IA ao Website em Segurança'
-category: Tecnologia
+title: 'Como adicionar um chatbot com IA ao website em segurança'
+category: IA
 publishedDate: '2026-03-16'
 description: 'Planeie e adicione um chatbot com IA ao website usando uma base de conhecimento fiável, permissões limitadas, apoio humano, privacidade e testes práticos.'
 isTopPick: false
@@ -14,7 +14,7 @@ Um chatbot útil deve responder de forma consistente a um conjunto limitado de p
 
 Este guia explica como escolher o nível certo de automação, estruturar o sistema, testá-lo e lançá-lo sem transformar as conversas dos clientes numa experiência sem controlo.
 
-## Decida O Que o Chatbot Pode Fazer
+## Decida o que o chatbot pode fazer
 
 Comece pelo resultado para o negócio, não pela plataforma.
 
@@ -29,7 +29,7 @@ Perguntas frequentes, disponibilidade de marcações, estado de encomendas e enc
 
 A primeira versão mais segura limita-se a responder a perguntas. Adicione ações depois de a informação e os percursos de transferência para apoio humano funcionarem de forma fiável.
 
-## Perceba a Diferença Entre Chatbots e Agentes
+## Perceba a diferença entre chatbots e agentes
 
 Um chatbot devolve informação. Um agente pode usar ferramentas para alterar algo noutro sistema.
 
@@ -40,9 +40,9 @@ Por exemplo:
 
 O segundo fluxo é mais útil, mas também envolve identidade, regras do negócio e dados externos. Precisa de autenticação, permissões limitadas, validação, registos de auditoria e uma alternativa quando algum passo falha.
 
-Chamar «chatbot» aos dois produtos esconde uma decisão de arquitetura importante. Defina se o assistente do website pode **ler**, **recomendar** ou **agir** antes de escolher uma ferramenta.
+Rotular os dois produtos da mesma forma esconde uma decisão de arquitetura importante. Defina se o assistente do website pode **ler**, **recomendar** ou **agir** antes de escolher uma ferramenta.
 
-## Uma Arquitetura Fiável Para Um Chatbot no Website
+## Uma arquitetura fiável para um chatbot no website
 
 Uma configuração preparada para produção tem várias camadas distintas:
 
@@ -56,7 +56,7 @@ Uma configuração preparada para produção tem várias camadas distintas:
 
 Separar estas responsabilidades é importante. O modelo de linguagem pode propor uma ação, mas a aplicação deve decidir se essa ação é válida.
 
-## Exemplo Prático: Reagendar Uma Marcação
+## Como reagendar uma marcação
 
 Alterar marcações é um bom primeiro fluxo para um agente porque as regras podem ser explícitas e a ação costuma ser reversível.
 
@@ -86,7 +86,7 @@ Guarde o resultado, envie a confirmação através do canal habitual e apresente
 
 Este padrão aplica-se a outros casos: ferramenta limitada, validação externa, confirmação explícita e resultado auditável.
 
-## Escolha a Stack Mais Simples Que Serve
+## Escolha a stack mais simples que serve
 
 Não existe uma pilha universal de cinco ferramentas. Escolha os componentes de acordo com a tarefa e os sistemas já utilizados.
 
@@ -108,7 +108,7 @@ Um serviço à medida justifica-se quando a identidade, as permissões, as regra
 
 Antes de adicionar outra subscrição, confirme se um sistema que já paga oferece a funcionalidade necessária e se consegue integrar-se com a fonte de informação principal.
 
-## Construa a Base de Conhecimento
+## Construa a base de conhecimento
 
 O assistente só pode ser tão fiável quanto a informação que recebe.
 
@@ -124,7 +124,7 @@ Remova documentos duplicados e contraditórios. Atribua um responsável por reve
 
 Sempre que possível, apresente ligações para as páginas de origem nas respostas. Assim, os clientes podem confirmar informação importante e o conteúdo desatualizado torna-se mais fácil de identificar.
 
-## Limite as Permissões Desde o Primeiro Dia
+## Limite as permissões desde o primeiro dia
 
 O princípio do privilégio mínimo significa que cada ferramenta só pode executar a operação indispensável.
 
@@ -138,7 +138,7 @@ O princípio do privilégio mínimo significa que cada ferramenta só pode execu
 
 As instruções dadas ao modelo não são uma barreira de segurança. A [orientação da OWASP sobre prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) explica como texto não fiável pode manipular o comportamento do modelo. As permissões e a validação têm de ser aplicadas pela aplicação envolvente.
 
-## Teste Antes de Mostrar Aos Clientes
+## Teste antes de mostrar aos clientes
 
 Crie um conjunto de testes a partir de perguntas reais, incluindo pedidos ambíguos e hostis.
 
@@ -156,7 +156,7 @@ Confirme se o assistente:
 
 Teste também tentativas de prompt injection, como instruções dentro de documentos carregados ou uma mensagem que peça ao assistente para ignorar as regras. O objetivo não é provar que o modelo nunca falha; é tornar a falha limitada, visível e recuperável.
 
-## Adicione o Widget Sem Prejudicar o Website
+## Adicione o widget sem prejudicar o website
 
 As plataformas geridas costumam disponibilizar um plugin oficial, uma aplicação, integração com um gestor de etiquetas ou um script. Use a integração suportada em vez de editar um tema em produção sem possibilidade de reversão.
 
@@ -172,7 +172,7 @@ O widget também precisa de:
 
 Se os scripts de terceiros já estiverem a tornar a página lenta, corrija o [desempenho do website](/blog/slow-website-costing-you-money) antes de adicionar outro.
 
-## Trate da Privacidade e do Consentimento
+## Trate da privacidade e do consentimento
 
 Documente que dados da conversa são recolhidos, porque são necessários, onde são processados, quem lhes pode aceder e durante quanto tempo são guardados. Evite pedir aos clientes que partilhem informação sensível num chat aberto.
 
@@ -180,7 +180,7 @@ Verifique os termos de tratamento de dados do fornecedor e se as conversas são 
 
 Para utilizações de maior risco, o [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) é uma referência prática para governar, mapear, medir e gerir o risco de IA.
 
-## Lance Um Âmbito Limitado e Monitorize Falhas Reais
+## Lance um âmbito limitado e monitorize falhas reais
 
 Lance primeiro um único caso de utilização. Reveja:
 
@@ -191,9 +191,9 @@ Lance primeiro um único caso de utilização. Reveja:
 - Pedidos transferidos para pessoas e o motivo.
 - Impacto no desempenho do website.
 
-Use estas conclusões para melhorar a documentação e as regras antes de adicionar outro fluxo. Uma taxa de transferência baixa não significa automaticamente sucesso; pode indicar que o assistente está a responder com confiança quando devia encaminhar o pedido.
+Use estas conclusões para melhorar a documentação e as regras antes de adicionar outro fluxo. Uma taxa de transferência baixa não prova que há sucesso; pode indicar que o assistente está a responder com confiança quando devia encaminhar o pedido.
 
-## Perguntas Frequentes
+## Perguntas frequentes
 
 ### Preciso de programar para adicionar um chatbot com IA?
 
@@ -215,4 +215,4 @@ Apenas se o caso de utilização o exigir e, ainda assim, através de operaçõe
 
 Um chatbot no website é valioso quando trata uma tarefa definida, usa informação aprovada, funciona com permissões limitadas e sabe quando parar. O widget é a parte visível; a base de conhecimento, validação, monitorização, privacidade e transferência para apoio humano determinam se os clientes podem confiar nele.
 
-Se quiser desenhar ou integrar um chatbot sem expor mais dados ou permissões do que a tarefa exige, [entre em contacto](https://www.andrerodrigo.com/pt/contactos). Posso ajudar a definir a arquitetura segura mais simples antes de as escolhas de ferramentas criarem dependência.
+Tem um caso de uso para um chatbot? [Diga-me a que perguntas deve responder ou que ações deve executar](https://www.andrerodrigo.com/pt/contactos). Posso ajudar a definir limites seguros e a integração mais simples que os respeite.
