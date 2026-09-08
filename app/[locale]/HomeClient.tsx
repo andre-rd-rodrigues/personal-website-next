@@ -55,11 +55,11 @@ export default function HomeClient({ posts }: HomeClientProps) {
             <motion.span variants={blurVariant}>
               <Image
                 src="/images/logo_light.webp"
-                width={200}
-                height={200}
+                width={170}
+                height={170}
                 priority
-                className="mx-auto h-[200px] w-[200px] md:mx-0"
-                style={{ width: 'auto', height: 'auto' }}
+                className="mx-auto w-[170px] md:mx-0"
+                style={{ height: 'auto' }}
                 alt="André Rodrigo - Senior Software Engineer"
               />
             </motion.span>
@@ -94,14 +94,17 @@ export default function HomeClient({ posts }: HomeClientProps) {
           </div>
           <div className="flex flex-1 items-center justify-center md:justify-end">
             <div className="h-full w-full max-w-md overflow-hidden rounded-3xl border border-white/20 bg-white/5 p-3 backdrop-blur-sm md:max-w-lg lg:max-w-xl">
-              <Image
-                src="/images/profile_home.webp"
-                alt="André Rodrigo"
+              <video
+                src="/videos/profile_home.webm"
+                poster="/images/profile_home.webp"
                 width={600}
                 height={600}
-                priority
-                sizes="(max-width: 768px) 90vw, 600px"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="h-full w-full rounded-2xl object-cover"
+                aria-label="André Rodrigo"
               />
             </div>
           </div>
